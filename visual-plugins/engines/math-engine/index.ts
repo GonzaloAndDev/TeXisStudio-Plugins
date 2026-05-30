@@ -1,4 +1,6 @@
 export type { MathMode, MatrixDelimiter, MathNode, MathEngineDocument, MatrixDocument, SystemDocument } from "./types.js";
+export { MathEngine } from "./engine.js";
+export { serializeNode, wrapInEnvironment } from "./serializer.js";
 
 export const MATH_ENGINE_ID = "math-engine" as const;
 
