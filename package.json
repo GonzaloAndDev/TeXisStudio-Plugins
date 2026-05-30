@@ -1,0 +1,28 @@
+{
+  "name": "@texisstudio/plugins",
+  "version": "0.1.0",
+  "description": "Visual editor plugins for TeXisStudio — domain-specific tools that generate publication-quality LaTeX",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "visual-plugins/engines/*",
+    "visual-plugins/catalog-core/*",
+    "visual-plugins/catalog-extended/*",
+    "visual-plugins/catalog-experimental/*"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "test": "vitest run",
+    "test:compile": "vitest run tests/visual-plugins/compile-tests",
+    "test:manifest": "vitest run tests/visual-plugins/manifest-tests",
+    "test:export": "vitest run tests/visual-plugins/export-tests",
+    "lint": "eslint visual-plugins tests",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0",
+    "@types/node": "^20.0.0",
+    "eslint": "^9.0.0"
+  }
+}

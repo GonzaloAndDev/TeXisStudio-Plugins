@@ -1,0 +1,19 @@
+{
+  "id": "fig_0001",
+  "pluginId": "circuit-basic",
+  "pluginVersion": "1.0.0",
+  "engineId": "circuitikz-engine",
+  "title": "Circuito equivalente",
+  "preferredOutput": "latex",
+  "sourceFile": "source.json",
+  "latexFile": "output.tex",
+  "pdfFile": "output.pdf",
+  "svgFile": null,
+  "previewFile": "preview.png",
+  "requiredPackages": ["circuitikz"],
+  "createdAt": "2026-05-30T00:00:00Z",
+  "updatedAt": "2026-05-30T00:00:00Z",
+  "qualityLevel": "official-core",
+  "editable": true,
+  "warnings": []
+}
