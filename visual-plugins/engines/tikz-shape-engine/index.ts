@@ -1,4 +1,6 @@
 export type { ShapeType, LineStyle, Coordinate, TikzShape, TikzShapeDocument } from "./types.js";
+export { TikzShapeEngine } from "./engine.js";
+export { serializeShape, wrapInTikzPicture } from "./serializer.js";
 
 export const TIKZ_SHAPE_ENGINE_ID = "tikz-shape-engine" as const;
 

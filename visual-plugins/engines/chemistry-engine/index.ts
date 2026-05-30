@@ -1,4 +1,6 @@
 export type { ChemOutputMode, ReactionArrow, ChemFormula, ChemReaction, ChemStructure, ChemElement, ChemEngineDocument } from "./types.js";
+export { ChemistryEngine } from "./engine.js";
+export { serializeFormula, serializeReaction, serializeElements } from "./serializer.js";
 
 export const CHEMISTRY_ENGINE_ID = "chemistry-engine" as const;
 
