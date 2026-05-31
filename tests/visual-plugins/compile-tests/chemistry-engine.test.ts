@@ -40,7 +40,8 @@ describe("serializeReaction", () => {
       arrow: "<=>",
       conditionsAbove: "450 °C",
     });
-    expect(result).toContain("->[450 ^{\\circ}C]");
+    // Degree symbol is wrapped in inline math so it compiles in mhchem's text-mode arrow label.
+    expect(result).toContain("->[450 $^{\\circ}$C]");
   });
 
   it("normalizes LaTeX degree commands for mhchem labels", () => {
@@ -52,7 +53,8 @@ describe("serializeReaction", () => {
       conditionsAbove: "Fe cat., 400\\,\\textdegree C",
       conditionsBelow: "200\\,atm",
     });
-    expect(result).toContain("400\\,^{\\circ}C");
+    // \textdegree is normalized to inline-math degree so the arrow label compiles.
+    expect(result).toContain("400\\,$^{\\circ}$C");
     expect(result).not.toContain("\\textdegree");
   });
 });

@@ -1,11 +1,13 @@
 import type { TimelineGanttDocument, TimelineTask, TimelineGroup } from "./types.js";
 
-/** Escape LaTeX special characters in timeline/Gantt labels. */
+/** Escape LaTeX special characters in timeline/Gantt labels.
+ *  Uses a negative lookbehind so already-escaped characters (e.g. "\&" coming
+ *  from a plugin author) are not double-escaped into "\\&". */
 function sanitizeLabel(label: string): string {
   return label
-    .replace(/&/g, "\\&")
-    .replace(/%/g, "\\%")
-    .replace(/#/g, "\\#");
+    .replace(/(?<!\\)&/g, "\\&")
+    .replace(/(?<!\\)%/g, "\\%")
+    .replace(/(?<!\\)#/g, "\\#");
 }
 
 function sanitizeId(id: string): string {

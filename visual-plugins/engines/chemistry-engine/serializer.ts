@@ -8,10 +8,13 @@ export function serializeFormula(f: ChemFormula): string {
 }
 
 function sanitizeCondition(condition: string): string {
+  // mhchem renders the text above/below an arrow (->[...]) in text mode, so a
+  // superscript like ^{\circ} must be wrapped in inline math, otherwise pdfLaTeX
+  // raises "Missing $ inserted".
   return condition
-    .replace(/\\textdegree\{\}\s*C/g, "^{\\circ}C")
-    .replace(/\\textdegree\s*C/g, "^{\\circ}C")
-    .replace(/°\s*C/g, "^{\\circ}C");
+    .replace(/\\textdegree\{\}\s*C/g, "$^{\\circ}$C")
+    .replace(/\\textdegree\s*C/g, "$^{\\circ}$C")
+    .replace(/°\s*C/g, "$^{\\circ}$C");
 }
 
 export function serializeReaction(r: ChemReaction): string {
