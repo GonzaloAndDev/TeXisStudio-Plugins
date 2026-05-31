@@ -1,5 +1,4 @@
-import type { VisualDiagramPlugin, VisualFigureResult, ValidationResult } from "../../common/contracts/index.js";
-import { buildLatexInputBlock } from "../../common/export/latex-block.js";
+import { BasePlugin } from "../../common/plugin-base/index.js";
 import { TreeForestEngine } from "../../engines/tree-forest-engine/engine.js";
 import { GraphNodeEngine } from "../../engines/graph-node-engine/engine.js";
 import { TikzShapeEngine } from "../../engines/tikz-shape-engine/engine.js";
@@ -7,44 +6,32 @@ import type { TreeForestDocument } from "../../engines/tree-forest-engine/types.
 import type { GraphNodeDocument } from "../../engines/graph-node-engine/types.js";
 import type { TikzShapeDocument } from "../../engines/tikz-shape-engine/types.js";
 
+// ── Shared engine instances ────────────────────────────────────────
 const treeEngine  = new TreeForestEngine();
 const graphEngine = new GraphNodeEngine();
 const tikzEngine  = new TikzShapeEngine();
 
-function fid(): string { return `fig_${Math.floor(Math.random() * 9000) + 1000}`; }
+// ── Plugin 28 — Phylogenetic Trees ────────────────────────────────
 
-async function treeResult(id: string, pluginId: string, doc: TreeForestDocument, caption: string, label: string): Promise<VisualFigureResult> {
-  const exp = await treeEngine.export(doc, "latex");
-  const texPath = `texisstudio-assets/figures/${id}/output.tex`;
-  return { figureId: id, pluginId, engineId: "tree-forest-engine", latexBlock: buildLatexInputBlock({ figureId: id, inputPath: texPath, caption, label }), requiredPackages: exp.requiredPackages, sourcePath: `texisstudio-assets/figures/${id}/source.json`, outputPaths: { tex: texPath }, warnings: [] };
-}
+export class PhylogeneticTreesPlugin extends BasePlugin<TreeForestDocument> {
+  constructor() {
+    super(treeEngine, {
+      pluginId:        "phylogenetic-trees",
+      displayName:     "Simple Phylogenetic Trees",
+      description:     "Build phylogenetic and taxonomic trees with labeled nodes and branch lengths.",
+      category:        "biology-medicine",
+      engineId:        "tree-forest-engine",
+      qualityLevel:    "official-core",
+      requiredPackages: ["forest"],
+      scopeWarning:    "Suitable for simplified phylogenies in theses. For complex phylogenetics with statistical support, use FigTree/iTOL and import as PDF.",
+      blockKind:       "input",
+      defaultCaption:  "Simplified phylogenetic tree.",
+      defaultLabel:    "fig:phylogeny",
+    });
+  }
 
-async function graphResult(id: string, pluginId: string, doc: GraphNodeDocument, caption: string, label: string): Promise<VisualFigureResult> {
-  const exp = await graphEngine.export(doc, "latex");
-  const texPath = `texisstudio-assets/figures/${id}/output.tex`;
-  return { figureId: id, pluginId, engineId: "graph-node-engine", latexBlock: buildLatexInputBlock({ figureId: id, inputPath: texPath, caption, label }), requiredPackages: exp.requiredPackages, sourcePath: `texisstudio-assets/figures/${id}/source.json`, outputPaths: { tex: texPath }, warnings: [] };
-}
-
-async function tikzResult(id: string, pluginId: string, doc: TikzShapeDocument, caption: string, label: string): Promise<VisualFigureResult> {
-  const exp = await tikzEngine.export(doc, "latex");
-  const texPath = `texisstudio-assets/figures/${id}/output.tex`;
-  return { figureId: id, pluginId, engineId: "tikz-shape-engine", latexBlock: buildLatexInputBlock({ figureId: id, inputPath: texPath, caption, label }), requiredPackages: exp.requiredPackages, sourcePath: `texisstudio-assets/figures/${id}/source.json`, outputPaths: { tex: texPath }, warnings: [] };
-}
-
-// Plugin 28 — Phylogenetic trees
-export class PhylogeneticTreesPlugin implements VisualDiagramPlugin {
-  readonly pluginId = "phylogenetic-trees";
-  readonly displayName = "Simple Phylogenetic Trees";
-  readonly description = "Build phylogenetic and taxonomic trees with labeled nodes and branch lengths.";
-  readonly category = "biology-medicine" as const;
-  readonly engineId = "tree-forest-engine";
-  readonly qualityLevel = "official-core" as const;
-  readonly requiredPackages = ["forest"] as const;
-  readonly scopeWarning = "Suitable for simplified phylogenies in theses. For complex phylogenetics with statistical support, use FigTree/iTOL and import as PDF.";
-
-  async create(): Promise<VisualFigureResult> {
-    const id = fid();
-    const doc: TreeForestDocument = {
+  protected buildDefaultDocument(): TreeForestDocument {
+    return {
       engineId: "tree-forest-engine", version: "1.0.0",
       style: "phylogenetic", growth: "south",
       root: {
@@ -60,28 +47,30 @@ export class PhylogeneticTreesPlugin implements VisualDiagramPlugin {
         ],
       },
     };
-    return treeResult(id, this.pluginId, doc, "Simplified phylogenetic tree.", "fig:phylogeny");
   }
-
-  async edit(_p: string): Promise<VisualFigureResult> { return this.create(); }
-  async validate(_r: VisualFigureResult): Promise<ValidationResult> { return { valid: true, issues: [] }; }
-  exportLatexBlock(r: VisualFigureResult): string { return r.latexBlock; }
 }
 
-// Plugin 29 — DNA/RNA sequences
-export class SequencesPlugin implements VisualDiagramPlugin {
-  readonly pluginId = "dna-rna-sequences";
-  readonly displayName = "DNA / RNA / Protein Sequences";
-  readonly description = "Display biological sequences with annotations, highlights, and alignment marks.";
-  readonly category = "biology-medicine" as const;
-  readonly engineId = "tikz-shape-engine";
-  readonly qualityLevel = "official-core" as const;
-  readonly requiredPackages = ["tikz"] as const;
+// ── Plugin 29 — DNA / RNA / Protein Sequences ─────────────────────
 
-  async create(): Promise<VisualFigureResult> {
-    const id = fid();
+export class SequencesPlugin extends BasePlugin<TikzShapeDocument> {
+  constructor() {
+    super(tikzEngine, {
+      pluginId:        "dna-rna-sequences",
+      displayName:     "DNA / RNA / Protein Sequences",
+      description:     "Display biological sequences with annotations, highlights, and alignment marks.",
+      category:        "biology-medicine",
+      engineId:        "tikz-shape-engine",
+      qualityLevel:    "official-core",
+      requiredPackages: ["tikz"],
+      blockKind:       "input",
+      defaultCaption:  "DNA sequence.",
+      defaultLabel:    "fig:dna-sequence",
+    });
+  }
+
+  protected buildDefaultDocument(): TikzShapeDocument {
     const seq = "ATGCGATCGATCG";
-    const doc: TikzShapeDocument = {
+    return {
       engineId: "tikz-shape-engine", version: "1.0.0",
       shapes: seq.split("").map((base, i) => ({
         id: `b${i}`, type: "label" as const,
@@ -92,33 +81,35 @@ export class SequencesPlugin implements VisualDiagramPlugin {
       viewBox: { width: seq.length * 0.45, height: 1, unit: "cm" },
       tikzLibraries: [],
     };
-    return tikzResult(id, this.pluginId, doc, "DNA sequence.", "fig:dna-sequence");
   }
-
-  async edit(_p: string): Promise<VisualFigureResult> { return this.create(); }
-  async validate(_r: VisualFigureResult): Promise<ValidationResult> { return { valid: true, issues: [] }; }
-  exportLatexBlock(r: VisualFigureResult): string { return r.latexBlock; }
 }
 
-// Plugin 30 — Biomedical flow diagrams
-export class BiomedicalFlowPlugin implements VisualDiagramPlugin {
-  readonly pluginId = "biomedical-flow";
-  readonly displayName = "Biomedical Flow Diagrams";
-  readonly description = "Biological and clinical process flows — signaling pathways, metabolic steps, treatment algorithms.";
-  readonly category = "biology-medicine" as const;
-  readonly engineId = "graph-node-engine";
-  readonly qualityLevel = "official-core" as const;
-  readonly requiredPackages = ["tikz"] as const;
+// ── Plugin 30 — Biomedical Flow Diagrams ──────────────────────────
 
-  async create(): Promise<VisualFigureResult> {
-    const id = fid();
-    const doc: GraphNodeDocument = {
+export class BiomedicalFlowPlugin extends BasePlugin<GraphNodeDocument> {
+  constructor() {
+    super(graphEngine, {
+      pluginId:        "biomedical-flow",
+      displayName:     "Biomedical Flow Diagrams",
+      description:     "Biological and clinical process flows — signaling pathways, metabolic steps, treatment algorithms.",
+      category:        "biology-medicine",
+      engineId:        "graph-node-engine",
+      qualityLevel:    "official-core",
+      requiredPackages: ["tikz"],
+      blockKind:       "input",
+      defaultCaption:  "Cell signaling pathway.",
+      defaultLabel:    "fig:signaling",
+    });
+  }
+
+  protected buildDefaultDocument(): GraphNodeDocument {
+    return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        { id: "signal",   label: "Signal",         shape: "ellipse",    position: { x: 0, y: 4 } },
-        { id: "receptor", label: "Receptor",        shape: "rectangle",  position: { x: 0, y: 2.5 } },
-        { id: "cascade",  label: "Kinase cascade",  shape: "rectangle",  position: { x: 0, y: 1 } },
-        { id: "response", label: "Gene expression", shape: "rectangle",  position: { x: 0, y: -0.5 } },
+        { id: "signal",   label: "Signal",         shape: "ellipse",   position: { x: 0, y: 4 } },
+        { id: "receptor", label: "Receptor",        shape: "rectangle", position: { x: 0, y: 2.5 } },
+        { id: "cascade",  label: "Kinase cascade",  shape: "rectangle", position: { x: 0, y: 1 } },
+        { id: "response", label: "Gene expression", shape: "rectangle", position: { x: 0, y: -0.5 } },
       ],
       edges: [
         { id: "e1", from: "signal",   to: "receptor", type: "directed" },
@@ -127,36 +118,38 @@ export class BiomedicalFlowPlugin implements VisualDiagramPlugin {
       ],
       layout: "manual", tikzLibraries: ["arrows.meta"], directed: true,
     };
-    return graphResult(id, this.pluginId, doc, "Cell signaling pathway.", "fig:signaling");
   }
-
-  async edit(_p: string): Promise<VisualFigureResult> { return this.create(); }
-  async validate(_r: VisualFigureResult): Promise<ValidationResult> { return { valid: true, issues: [] }; }
-  exportLatexBlock(r: VisualFigureResult): string { return r.latexBlock; }
 }
 
-// Plugin 31 — CONSORT flow
-export class CONSORTFlowPlugin implements VisualDiagramPlugin {
-  readonly pluginId = "consort-flow";
-  readonly displayName = "CONSORT / Clinical Trial Flow";
-  readonly description = "CONSORT-style flow diagrams for randomized clinical trials — enrollment, allocation, follow-up, analysis.";
-  readonly category = "biology-medicine" as const;
-  readonly engineId = "graph-node-engine";
-  readonly qualityLevel = "official-core" as const;
-  readonly requiredPackages = ["tikz"] as const;
+// ── Plugin 31 — CONSORT / Clinical Trial Flow ─────────────────────
 
-  async create(): Promise<VisualFigureResult> {
-    const id = fid();
-    const doc: GraphNodeDocument = {
+export class CONSORTFlowPlugin extends BasePlugin<GraphNodeDocument> {
+  constructor() {
+    super(graphEngine, {
+      pluginId:        "consort-flow",
+      displayName:     "CONSORT / Clinical Trial Flow",
+      description:     "CONSORT-style flow diagrams for randomized clinical trials — enrollment, allocation, follow-up, analysis.",
+      category:        "biology-medicine",
+      engineId:        "graph-node-engine",
+      qualityLevel:    "official-core",
+      requiredPackages: ["tikz"],
+      blockKind:       "input",
+      defaultCaption:  "CONSORT flow diagram.",
+      defaultLabel:    "fig:consort",
+    });
+  }
+
+  protected buildDefaultDocument(): GraphNodeDocument {
+    return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        { id: "enroll",  label: "Enrollment\\\\n=200",       shape: "rectangle", position: { x: 0, y: 6 } },
-        { id: "excl",    label: "Excluded\\\\n=50",          shape: "rectangle", position: { x: 3, y: 5 } },
-        { id: "rand",    label: "Randomized\\\\n=150",       shape: "rectangle", position: { x: 0, y: 4 } },
-        { id: "groupA",  label: "Group A\\\\n=75",           shape: "rectangle", position: { x: -2, y: 2.5 } },
-        { id: "groupB",  label: "Group B\\\\n=75",           shape: "rectangle", position: { x: 2, y: 2.5 } },
-        { id: "analysisA", label: "Analysed\\\\n=72",        shape: "rectangle", position: { x: -2, y: 0.5 } },
-        { id: "analysisB", label: "Analysed\\\\n=70",        shape: "rectangle", position: { x: 2, y: 0.5 } },
+        { id: "enroll",    label: "Enrollment\\n=200",  shape: "rectangle", position: { x: 0,  y: 6 } },
+        { id: "excl",      label: "Excluded\\n=50",     shape: "rectangle", position: { x: 3,  y: 5 } },
+        { id: "rand",      label: "Randomized\\n=150",  shape: "rectangle", position: { x: 0,  y: 4 } },
+        { id: "groupA",    label: "Group A\\n=75",      shape: "rectangle", position: { x: -2, y: 2.5 } },
+        { id: "groupB",    label: "Group B\\n=75",      shape: "rectangle", position: { x: 2,  y: 2.5 } },
+        { id: "analysisA", label: "Analysed\\n=72",     shape: "rectangle", position: { x: -2, y: 0.5 } },
+        { id: "analysisB", label: "Analysed\\n=70",     shape: "rectangle", position: { x: 2,  y: 0.5 } },
       ],
       edges: [
         { id: "e1", from: "enroll", to: "excl",      type: "directed" },
@@ -168,46 +161,43 @@ export class CONSORTFlowPlugin implements VisualDiagramPlugin {
       ],
       layout: "manual", tikzLibraries: ["arrows.meta"], directed: true,
     };
-    return graphResult(id, this.pluginId, doc, "CONSORT flow diagram.", "fig:consort");
   }
-
-  async edit(_p: string): Promise<VisualFigureResult> { return this.create(); }
-  async validate(_r: VisualFigureResult): Promise<ValidationResult> { return { valid: true, issues: [] }; }
-  exportLatexBlock(r: VisualFigureResult): string { return r.latexBlock; }
 }
 
-// Plugin 32 — Schematic biological pathways
-export class BiologicalPathwaysPlugin implements VisualDiagramPlugin {
-  readonly pluginId = "biological-pathways";
-  readonly displayName = "Schematic Biological Pathways";
-  readonly description = "Simplified metabolic and signaling pathway schemes for thesis figures.";
-  readonly category = "biology-medicine" as const;
-  readonly engineId = "graph-node-engine";
-  readonly qualityLevel = "official-core" as const;
-  readonly requiredPackages = ["tikz"] as const;
-  readonly scopeWarning = "Suitable for simplified pathway diagrams in theses and reports. Not a substitute for KEGG, Reactome, or professional pathway visualization tools.";
+// ── Plugin 32 — Schematic Biological Pathways ─────────────────────
 
-  async create(): Promise<VisualFigureResult> {
-    const id = fid();
-    const doc: GraphNodeDocument = {
+export class BiologicalPathwaysPlugin extends BasePlugin<GraphNodeDocument> {
+  constructor() {
+    super(graphEngine, {
+      pluginId:        "biological-pathways",
+      displayName:     "Schematic Biological Pathways",
+      description:     "Simplified metabolic and signaling pathway schemes for thesis figures.",
+      category:        "biology-medicine",
+      engineId:        "graph-node-engine",
+      qualityLevel:    "official-core",
+      requiredPackages: ["tikz"],
+      scopeWarning:    "Suitable for simplified pathway diagrams in theses and reports. Not a substitute for KEGG, Reactome, or professional pathway visualization tools.",
+      blockKind:       "input",
+      defaultCaption:  "Simplified glycolysis pathway.",
+      defaultLabel:    "fig:glycolysis",
+    });
+  }
+
+  protected buildDefaultDocument(): GraphNodeDocument {
+    return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        { id: "glucose",   label: "Glucose",        shape: "rectangle", position: { x: 0, y: 4 } },
-        { id: "g6p",       label: "G6P",            shape: "rectangle", position: { x: 0, y: 2.5 } },
-        { id: "pyruvate",  label: "Pyruvate",       shape: "rectangle", position: { x: 0, y: 1 } },
-        { id: "acetylcoa", label: "Acetyl-CoA",     shape: "rectangle", position: { x: 0, y: -0.5 } },
+        { id: "glucose",   label: "Glucose",    shape: "rectangle", position: { x: 0, y: 4 } },
+        { id: "g6p",       label: "G6P",        shape: "rectangle", position: { x: 0, y: 2.5 } },
+        { id: "pyruvate",  label: "Pyruvate",   shape: "rectangle", position: { x: 0, y: 1 } },
+        { id: "acetylcoa", label: "Acetyl-CoA", shape: "rectangle", position: { x: 0, y: -0.5 } },
       ],
       edges: [
-        { id: "e1", from: "glucose",   to: "g6p",       type: "directed", label: "Hexokinase" },
-        { id: "e2", from: "g6p",       to: "pyruvate",  type: "directed", label: "Glycolysis" },
-        { id: "e3", from: "pyruvate",  to: "acetylcoa", type: "directed", label: "PDH" },
+        { id: "e1", from: "glucose",  to: "g6p",      type: "directed", label: "Hexokinase" },
+        { id: "e2", from: "g6p",      to: "pyruvate", type: "directed", label: "Glycolysis" },
+        { id: "e3", from: "pyruvate", to: "acetylcoa",type: "directed", label: "PDH" },
       ],
       layout: "manual", tikzLibraries: ["arrows.meta"], directed: true,
     };
-    return graphResult(id, this.pluginId, doc, "Simplified glycolysis pathway.", "fig:glycolysis");
   }
-
-  async edit(_p: string): Promise<VisualFigureResult> { return this.create(); }
-  async validate(_r: VisualFigureResult): Promise<ValidationResult> { return { valid: true, issues: [] }; }
-  exportLatexBlock(r: VisualFigureResult): string { return r.latexBlock; }
 }
