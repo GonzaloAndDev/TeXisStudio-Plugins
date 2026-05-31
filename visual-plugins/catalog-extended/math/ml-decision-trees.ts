@@ -293,22 +293,30 @@ export class CausalDAGPlugin extends BasePlugin<GraphNodeDocument> {
   }
 
   protected buildDefaultDocument(): GraphNodeDocument {
+    // Education + Income → Health outcome, with mediation through healthcare access.
+    // Bidirectional confounding by SES and age. Realistic epidemiological DAG.
     return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        { id: "X",  label: "Exposure ($X$)",     shape: "ellipse",   position: { x: 0, y: 0 } },
-        { id: "Y",  label: "Outcome ($Y$)",       shape: "ellipse",   position: { x: 4, y: 0 } },
-        { id: "M",  label: "Mediator ($M$)",      shape: "ellipse",   position: { x: 2, y: 0 } },
-        { id: "C1", label: "Confounder ($C_1$)",  shape: "rectangle", position: { x: 0, y: 2 } },
-        { id: "C2", label: "Confounder ($C_2$)",  shape: "rectangle", position: { x: 4, y: 2 } },
+        { id: "edu",  label: "Education",        shape: "ellipse",   position: { x: 0,   y: 0 } },
+        { id: "inc",  label: "Income",           shape: "ellipse",   position: { x: 0,   y: -2 } },
+        { id: "hca",  label: "Healthcare\\naccess", shape: "rectangle", position: { x: 3, y: -1 } },
+        { id: "hlth", label: "Health outcome",   shape: "ellipse",   position: { x: 6,   y: -1 } },
+        { id: "ses",  label: "SES",              shape: "rectangle", position: { x: -2,  y: -1 } },
+        { id: "age",  label: "Age",              shape: "rectangle", position: { x: 3,   y: 1.5 } },
       ],
       edges: [
-        { id: "e1", from: "X",  to: "M",  type: "directed" },
-        { id: "e2", from: "M",  to: "Y",  type: "directed" },
-        { id: "e3", from: "X",  to: "Y",  type: "directed", label: "direct" },
-        { id: "e4", from: "C1", to: "X",  type: "directed" },
-        { id: "e5", from: "C1", to: "Y",  type: "directed" },
-        { id: "e6", from: "C2", to: "Y",  type: "directed" },
+        // Causal paths
+        { id: "e1", from: "edu",  to: "inc",  type: "directed" },
+        { id: "e2", from: "edu",  to: "hca",  type: "directed" },
+        { id: "e3", from: "inc",  to: "hca",  type: "directed" },
+        { id: "e4", from: "hca",  to: "hlth", type: "directed", label: "mediation" },
+        { id: "e5", from: "edu",  to: "hlth", type: "directed", label: "direct" },
+        // Confounders
+        { id: "e6", from: "ses",  to: "edu",  type: "directed" },
+        { id: "e7", from: "ses",  to: "inc",  type: "directed" },
+        { id: "e8", from: "age",  to: "hlth", type: "directed" },
+        { id: "e9", from: "age",  to: "hca",  type: "directed" },
       ],
       layout: "manual", tikzLibraries: ["arrows.meta"], directed: true,
     };

@@ -116,21 +116,31 @@ export class GenealogyPlugin extends BasePlugin<TreeForestDocument> {
   }
 
   protected buildDefaultDocument(): TreeForestDocument {
+    // Hapsburg dynasty excerpt — 4 generations, known to anthropologists and historians.
+    // Also works as a generic royal lineage for humanities theses.
     return {
       engineId: "tree-forest-engine", version: "1.0.0",
       style: "genealogy", growth: "south",
       root: {
-        id: "g0", label: "\\textbf{Generation I}", children: [
+        id: "maxI", label: "Maximilian I (1459--1519)", children: [
           {
-            id: "p1", label: "John (1920--1995)", children: [
-              { id: "c1", label: "Mary (1948)", children: [
-                { id: "gc1", label: "Alice (1975)", children: [] },
-                { id: "gc2", label: "Bob (1978)", children: [] },
-              ]},
-              { id: "c2", label: "Peter (1951)", children: [
-                { id: "gc3", label: "Carol (1980)", children: [] },
-              ]},
+            id: "philI", label: "Philip I (1478--1506)", children: [
+              {
+                id: "charlesV", label: "Charles V (1500--1558)", children: [
+                  { id: "philII",  label: "Philip II (1527--1598)",  children: [] },
+                  { id: "maria_a", label: "Maria (1528--1603)",      children: [] },
+                ],
+              },
+              {
+                id: "ferd_I", label: "Ferdinand I (1503--1564)", children: [
+                  { id: "maxII",  label: "Maximilian II (1527--1576)", children: [] },
+                  { id: "anna_f", label: "Anna (1528--1590)",          children: [] },
+                ],
+              },
             ],
+          },
+          {
+            id: "margarita", label: "Margaret (1480--1530)", children: [],
           },
         ],
       },
@@ -225,26 +235,72 @@ export class EnergyBandPlugin extends BasePlugin<PGFPlotsDocument> {
   }
 
   protected buildDefaultDocument(): PGFPlotsDocument {
+    // p-n junction in equilibrium: band bending near the depletion region.
+    // x<0 = p-type, x>0 = n-type; depletion region ≈ [-1, 1]
+    // Ec bends smoothly; Ef is flat (no current flow in equilibrium).
     return {
       engineId: "pgfplots-engine", version: "1.0.0",
       series: [
+        // Conduction band Ec — flat in bulk, bends in depletion
         {
-          id: "ec",  label: "Conduction band ($E_c$)",
-          plotType: "function2d", expression: "1.1", domain: [0, 4], color: "blue",
+          id: "ec", label: "$E_c$ (conduction band)",
+          plotType: "scatter",
+          data: [
+            { x:-3, y: 1.12 }, { x:-1, y: 1.12 },
+            { x:-0.5, y: 0.95 }, { x: 0, y: 0.68 },
+            { x: 0.5, y: 0.41 }, { x: 1, y: 0.24 },
+            { x: 3, y: 0.24 },
+          ],
+          color: "blue", mark: "none",
         },
+        // Valence band Ev — offset by band gap (Si: 1.12 eV)
         {
-          id: "ev",  label: "Valence band ($E_v$)",
-          plotType: "function2d", expression: "0.0", domain: [0, 4], color: "blue",
+          id: "ev", label: "$E_v$ (valence band)",
+          plotType: "scatter",
+          data: [
+            { x:-3, y: 0.00 }, { x:-1, y: 0.00 },
+            { x:-0.5, y:-0.17 }, { x: 0, y:-0.44 },
+            { x: 0.5, y:-0.71 }, { x: 1, y:-0.88 },
+            { x: 3, y:-0.88 },
+          ],
+          color: "blue", mark: "none",
         },
+        // Fermi level Ef — flat in equilibrium
         {
-          id: "ef",  label: "Fermi level ($E_f$)",
-          plotType: "function2d", expression: "0.55", domain: [0, 4], color: "red",
+          id: "ef", label: "$E_F$ (Fermi level)",
+          plotType: "scatter",
+          data: [{ x:-3, y: 0.19 }, { x: 3, y: 0.19 }],
+          color: "red", mark: "none",
+        },
+        // Vacuum level (optional reference)
+        {
+          id: "eint", label: "$E_i$ (intrinsic level)",
+          plotType: "scatter",
+          data: [
+            { x:-3, y: 0.56 }, { x:-1, y: 0.56 },
+            { x: 0, y: 0.12 }, { x: 1, y:-0.32 },
+            { x: 3, y:-0.32 },
+          ],
+          color: "gray", mark: "none",
         },
       ],
-      xLabel: "Position", yLabel: "Energy (eV)",
-      xScale: "linear", yScale: "linear",
-      showLegend: true, grid: false,
-      pgfplotsOptions: "ymin=-0.3, ymax=1.5, xtick=\\empty",
+      xLabel: "Position ($x$)",
+      yLabel: "Energy (eV)",
+      xScale: "linear",
+      yScale: "linear",
+      showLegend: true,
+      grid: false,
+      pgfplotsOptions: [
+        "ymin=-1.1, ymax=1.4",
+        "xmin=-3, xmax=3",
+        "xtick={-3,-1,0,1,3}",
+        "xticklabels={$-W$, $-x_p$, 0, $x_n$, $W$}",
+        "legend pos=outer north east",
+        "legend style={font=\\small}",
+        // Depletion region shade
+        "extra x ticks={-1, 1}",
+        "extra x tick style={grid=major, grid style={gray!40, dashed}}",
+      ].join(",\n      "),
     };
   }
 }
