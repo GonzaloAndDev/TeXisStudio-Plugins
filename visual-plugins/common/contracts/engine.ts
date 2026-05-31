@@ -7,10 +7,15 @@ import type {
   EditableSource,
 } from "./types.js";
 
+/**
+ * Base shape every engine document shares. Concrete engine documents
+ * (MathEngineDocument, CircuiTikZDocument, ...) extend this with their
+ * own fields. The editable, serializable payload lives in the document
+ * itself; `EditableSource.data` wraps the whole document for persistence.
+ */
 export interface EngineDocument {
   readonly engineId: string;
   readonly version: string;
-  readonly data: unknown;
 }
 
 export interface VisualEngine {

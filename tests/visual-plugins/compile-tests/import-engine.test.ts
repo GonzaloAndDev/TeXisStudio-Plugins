@@ -37,7 +37,7 @@ describe("ImportTraceabilityEngine.analyzeFile", () => {
 describe("ImportTraceabilityEngine validate", () => {
   it("rejects absolute project paths", async () => {
     const doc = await eng.createDocument();
-    (doc as { projectRelativePath: string }).projectRelativePath = "/absolute/path.pdf";
+    (doc as unknown as { projectRelativePath: string }).projectRelativePath = "/absolute/path.pdf";
     const result = await eng.validate(doc);
     expect(result.valid).toBe(false);
   });

@@ -10,7 +10,7 @@ abstract class ExperimentalPluginBase implements VisualDiagramPlugin {
   abstract readonly displayName: string;
   abstract readonly description: string;
   abstract readonly scopeWarning: string;
-  readonly category = "biology-medicine" as const;
+  abstract readonly category: import("../common/contracts/types.js").PluginCategory;
   readonly engineId = "external-vector-engine";
   readonly qualityLevel = "experimental" as const;
   readonly requiredPackages: readonly string[] = ["graphicx"];

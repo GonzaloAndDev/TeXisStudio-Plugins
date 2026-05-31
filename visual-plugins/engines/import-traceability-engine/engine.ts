@@ -84,12 +84,14 @@ export class ImportTraceabilityEngine implements VisualEngine {
       warnings.push({ code: "ABSOLUTE_PATH", message: "Path is absolute. Use a relative path to ensure portability." });
     }
 
-    return {
+    const doc: ImportTraceabilityDocument = {
       engineId: "import-traceability-engine", version: "1.0.0",
       originalPath: filePath, projectRelativePath: "",
-      fileType, isVector,
-      widthPx: opts?.widthPx, heightPx: opts?.heightPx, dpi: opts?.dpi,
-      warnings,
+      fileType, isVector, warnings,
     };
+    if (opts?.widthPx !== undefined) doc.widthPx = opts.widthPx;
+    if (opts?.heightPx !== undefined) doc.heightPx = opts.heightPx;
+    if (opts?.dpi !== undefined) doc.dpi = opts.dpi;
+    return doc;
   }
 }

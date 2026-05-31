@@ -56,3 +56,15 @@ export function buildDisplayMathBlock(figureId: string, latex: string): string {
     `% /texisstudio-figure-id`,
   ].join("\n");
 }
+
+/**
+ * Wraps already-complete LaTeX (e.g. an mhchem line or a full environment)
+ * in ID markers without adding any surrounding environment.
+ */
+export function buildRawBlock(figureId: string, latex: string): string {
+  return [
+    `% texisstudio-figure-id: ${figureId}`,
+    latex,
+    `% /texisstudio-figure-id`,
+  ].join("\n");
+}

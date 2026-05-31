@@ -17,22 +17,33 @@ function seriesOptions(s: DataSeries): string {
   if (s.color) parts.push(`color=${s.color}`);
   const mark = seriesMark(s);
   if (mark !== "none") parts.push(`mark=${mark}`);
-  if (s.label) parts.push(`legend entry={${s.label}}`);
+  // NOTE: legend entry is NOT a valid \addplot option — labels are added via
+  // \addlegendentry{} after the plot command (see seriesCoords).
   return parts.join(", ");
 }
 
 function seriesCoords(s: DataSeries): string {
+  const lines: string[] = [];
+
   if (s.expression) {
     const domain = s.domain ? `domain=${s.domain[0]}:${s.domain[1]}, ` : "";
     const opts = seriesOptions(s);
-    return `  \\addplot[${domain}${opts}] {${s.expression}};`;
-  }
-  if (s.data && s.data.length > 0) {
+    const optStr = (domain + opts).replace(/,\s*$/, "").trim();
+    lines.push(`  \\addplot${optStr ? `[${optStr}]` : ""} {${s.expression}};`);
+  } else if (s.data && s.data.length > 0) {
     const opts = seriesOptions(s);
     const coords = s.data.map(d => `(${d.x}, ${d.y})`).join(" ");
-    return `  \\addplot[${opts}] coordinates { ${coords} };`;
+    lines.push(`  \\addplot${opts ? `[${opts}]` : ""} coordinates { ${coords} };`);
+  } else {
+    lines.push("  % no data or expression provided");
   }
-  return "  % no data or expression provided";
+
+  // Correct way to add a legend entry in pgfplots:
+  if (s.label) {
+    lines.push(`  \\addlegendentry{${s.label}}`);
+  }
+
+  return lines.join("\n");
 }
 
 export function serializePGFPlots(doc: PGFPlotsDocument): string {

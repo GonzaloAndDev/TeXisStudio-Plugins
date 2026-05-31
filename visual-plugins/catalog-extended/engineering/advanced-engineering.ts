@@ -34,6 +34,7 @@ export class ERDiagramPlugin implements VisualDiagramPlugin {
   readonly engineId = "graph-node-engine";
   readonly qualityLevel = "official-extended" as const;
   readonly requiredPackages = ["tikz"] as const;
+  readonly scopeWarning = "Suitable for standard ER diagrams in theses. Complex schemas with many entities may benefit from a dedicated tool (e.g. draw.io) exported as PDF.";
 
   async create(): Promise<VisualFigureResult> {
     const id = fid();
@@ -71,6 +72,7 @@ export class StateMachinePlugin implements VisualDiagramPlugin {
   readonly engineId = "graph-node-engine";
   readonly qualityLevel = "official-extended" as const;
   readonly requiredPackages = ["tikz"] as const;
+  readonly scopeWarning = "Suitable for DFA/NFA diagrams in theses. Self-loops and complex curved transitions may need manual TikZ adjustment.";
 
   async create(): Promise<VisualFigureResult> {
     const id = fid();
@@ -106,6 +108,7 @@ export class MarkovChainsPlugin implements VisualDiagramPlugin {
   readonly engineId = "graph-node-engine";
   readonly qualityLevel = "official-extended" as const;
   readonly requiredPackages = ["tikz"] as const;
+  readonly scopeWarning = "Suitable for illustrative Markov chains in theses. For inference or simulation, use dedicated tools (R, Python) and import results as figures.";
 
   async create(): Promise<VisualFigureResult> {
     const id = fid();
@@ -142,6 +145,7 @@ export class BodeNyquistPlugin implements VisualDiagramPlugin {
   readonly engineId = "pgfplots-engine";
   readonly qualityLevel = "official-extended" as const;
   readonly requiredPackages = ["pgfplots", "tikz"] as const;
+  readonly scopeWarning = "Suitable for standard Bode and Nyquist diagrams in theses. Requires manual entry of the transfer function expression.";
 
   async create(): Promise<VisualFigureResult> {
     const id = fid();

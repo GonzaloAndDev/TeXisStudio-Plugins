@@ -26,11 +26,29 @@ const COMPONENT_MAP: Record<string, string> = {
 
 function componentStr(c: CircuitComponent): string {
   const tikzComp = COMPONENT_MAP[c.type] ?? c.type;
-  const labelParts: string[] = [];
-  if (c.label) labelParts.push(`l=${c.label}`);
-  if (c.value) labelParts.push(`v=${c.value}`);
-  const opts = labelParts.length > 0 ? `[${labelParts.join(", ")}]` : "";
-  return `  \\draw (${c.from}) to[${tikzComp}${opts}] (${c.to});`;
+
+  // Special single-node components that attach to a single node, not a wire.
+  if (c.type === "ground") {
+    return `  \\draw (${c.from}) node[ground] {};`;
+  }
+  if (c.type === "antenna") {
+    return `  \\draw (${c.from}) node[antenna] {};`;
+  }
+
+  // CircuiTikZ syntax: \draw (from) to[component, l=label, v=value] (to);
+  // Ensure math-mode wrapping: if the string already has $…$, keep it;
+  // if it contains LaTeX commands (\cmd) or subscripts/superscripts, wrap it;
+  // otherwise pass plain text as-is (circuitikz renders l= in math mode in
+  // modern versions, but explicit wrapping ensures compatibility).
+  const ensureMath = (s: string): string => {
+    if (/^\$.*\$$/.test(s)) return s;      // already wrapped
+    if (/[\\_{^]/.test(s)) return `$${s}$`; // needs math mode
+    return s;                               // plain text/number
+  };
+  const optParts: string[] = [tikzComp];
+  if (c.label) optParts.push(`l={${ensureMath(c.label)}}`);
+  if (c.value) optParts.push(`v={${ensureMath(c.value)}}`);
+  return `  \\draw (${c.from}) to[${optParts.join(", ")}] (${c.to});`;
 }
 
 function nodeStr(n: CircuitNode): string {

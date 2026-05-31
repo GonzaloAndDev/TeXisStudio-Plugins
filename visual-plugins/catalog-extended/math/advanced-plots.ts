@@ -49,6 +49,7 @@ export class PhaseDiagramsPlugin implements VisualDiagramPlugin {
   readonly engineId = "pgfplots-engine";
   readonly qualityLevel = "official-extended" as const;
   readonly requiredPackages = ["pgfplots", "tikz"] as const;
+  readonly scopeWarning = "Suitable for 2D phase planes and simple nullcline plots. Complex vector field flows may need manual pgfplots adjustments.";
 
   async create(): Promise<VisualFigureResult> {
     const id = fid();

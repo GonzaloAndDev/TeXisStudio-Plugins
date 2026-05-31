@@ -14,11 +14,11 @@ export interface ImportTraceabilityDocument {
   projectRelativePath: string;
   fileType: ImportedFileType;
   isVector: boolean;
-  widthPx?: number;
-  heightPx?: number;
-  dpi?: number;
-  origin?: string;
-  license?: LicenseType;
-  licenseNote?: string;
+  widthPx?: number | undefined;
+  heightPx?: number | undefined;
+  dpi?: number | undefined;
+  origin?: string | undefined;
+  license?: LicenseType | undefined;
+  licenseNote?: string | undefined;
   warnings: ImportWarning[];
 }
