@@ -16,13 +16,44 @@ function optStr(shape: TikzShape): string {
   return parts.length > 0 ? `[${parts.join(", ")}]` : "";
 }
 
+/**
+ * Compute the best label placement for a vector/arrow given its direction.
+ * - Horizontal edges  → label above/below (midway, above)
+ * - Vertical edges    → label to the right (midway, right)
+ * - Diagonal edges    → label above (midway, above, sloped)
+ */
+function vectorLabelPos(from: Coordinate, to: Coordinate): string {
+  const dx = (to.x ?? 0) - (from.x ?? 0);
+  const dy = (to.y ?? 0) - (from.y ?? 0);
+  const adx = Math.abs(dx);
+  const ady = Math.abs(dy);
+
+  if (ady > adx * 2) {
+    // Mostly vertical → place right
+    return "midway, right, font=\\small";
+  }
+  if (adx > ady * 2) {
+    // Mostly horizontal → place above
+    return "midway, above, font=\\small";
+  }
+  // Diagonal → sloped is acceptable
+  return "midway, above, sloped, font=\\small";
+}
+
 export function serializeShape(shape: TikzShape): string {
   const opts = optStr(shape);
   const coords = shape.coords;
 
   switch (shape.type) {
-    case "point":
-      return `\\filldraw${opts} ${coordStr(coords[0] ?? { x: 0, y: 0 })} circle (1.5pt);`;
+    case "point": {
+      const pos = coordStr(coords[0] ?? { x: 0, y: 0 });
+      const fillOpt = opts || "[fill=black]";
+      const labelStr = shape.label
+        ? ` node[above right, font=\\small] {${shape.label}}`
+        : "";
+      // filldraw the dot + optional label node
+      return `\\filldraw${fillOpt} ${pos} circle (2pt)${labelStr};`;
+    }
 
     case "line": {
       const pts = coords.map(coordStr).join(" -- ");
@@ -33,7 +64,10 @@ export function serializeShape(shape: TikzShape): string {
       const from = coordStr(coords[0] ?? { x: 0, y: 0 });
       const to   = coordStr(coords[1] ?? { x: 1, y: 0 });
       const arrowOpts = opts || "[-stealth]";
-      return `\\draw${arrowOpts} ${from} -- ${to};`;
+      const labelStr = shape.label
+        ? ` node[${vectorLabelPos(coords[0] ?? { x:0,y:0 }, coords[1] ?? { x:1,y:0 })}] {$${shape.label}$}`
+        : "";
+      return `\\draw${arrowOpts} ${from} -- ${to}${labelStr};`;
     }
 
     case "rectangle": {
@@ -57,8 +91,15 @@ export function serializeShape(shape: TikzShape): string {
 
     case "label": {
       const pos = coordStr(coords[0] ?? { x: 0, y: 0 });
-      const anchor = shape.options ?? "center";
-      return `\\node[anchor=${anchor}] at ${pos} {${shape.label ?? ""}};`;
+      const opt = shape.options ?? "center";
+      // Positional shorthand words → anchor values (PGF math can't parse 'right' as anchor)
+      const ANCHOR_MAP: Record<string, string> = {
+        right: "west", left: "east", above: "south", below: "north",
+        "above right": "south west", "above left": "south east",
+        "below right": "north west", "below left": "north east",
+      };
+      const anchor = ANCHOR_MAP[opt] ?? opt;
+      return `\\node[anchor=${anchor}, font=\\small] at ${pos} {${shape.label ?? ""}};`;
     }
 
     case "axis": {
@@ -72,19 +113,27 @@ export function serializeShape(shape: TikzShape): string {
     }
 
     case "vector": {
-      const from = coordStr(coords[0] ?? { x: 0, y: 0 });
-      const to   = coordStr(coords[1] ?? { x: 1, y: 1 });
-      const label = shape.label ? ` node[midway, above] {$${shape.label}$}` : "";
-      return `\\draw[-stealth, thick] ${from} -- ${to}${label};`;
+      const from = coords[0] ?? { x: 0, y: 0 };
+      const to   = coords[1] ?? { x: 1, y: 1 };
+      const labelPos = vectorLabelPos(from, to);
+      const labelStr = shape.label ? ` node[${labelPos}] {$${shape.label}$}` : "";
+      return `\\draw[-stealth, thick] ${coordStr(from)} -- ${coordStr(to)}${labelStr};`;
     }
 
     case "angle": {
-      const vertex = coordStr(coords[0] ?? { x: 0, y: 0 });
-      const a = coords[1]?.x ?? 0;
-      const b = coords[1]?.y ?? 45;
-      const r = coords[2]?.x ?? 0.5;
+      // Draw an arc at the vertex between angle a and b at radius r.
+      // Uses \pic for a clean angle mark with optional label.
+      const v   = coords[0] ?? { x: 0, y: 0 };
+      const a   = coords[1]?.x ?? 0;
+      const b   = coords[1]?.y ?? 45;
+      const r   = coords[2]?.x ?? 0.5;
       const label = shape.label ?? "";
-      return `\\draw ${vertex} ++(${a}:${r}cm) arc (${a}:${b}:${r}cm) node[midway] {$${label}$};`;
+      // Generate two named helper coordinates, then use arc
+      const vStr = coordStr(v);
+      return [
+        `\\draw ${vStr} ++(${a}:${r}cm) arc (${a}:${b}:${r}cm);`,
+        ...(label ? [`\\node at ${coordStr({ x: v.x + r * 0.65 * Math.cos(((a + b) / 2) * Math.PI / 180), y: v.y + r * 0.65 * Math.sin(((a + b) / 2) * Math.PI / 180) })} {$${label}$};`] : []),
+      ].join("\n  ");
     }
 
     case "polygon": {
@@ -107,12 +156,14 @@ export function serializeShape(shape: TikzShape): string {
     }
 
     default:
-      return `% unknown shape type: ${shape.type}`;
+      return `% unknown shape type: ${(shape as { type: string }).type}`;
   }
 }
 
 export function wrapInTikzPicture(lines: string[], libraries: string[] = []): string {
-  const libStr = libraries.length > 0 ? `\\usetikzlibrary{${libraries.join(",")}}\n` : "";
+  // Always include calc for angle label positioning — added after user-supplied libs
+  const allLibs = [...new Set([...libraries, "calc"])];
+  const libStr = `\\usetikzlibrary{${allLibs.join(",")}}\n`;
   return [
     `${libStr}\\begin{tikzpicture}`,
     ...lines.map(l => `  ${l}`),

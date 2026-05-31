@@ -4,7 +4,6 @@ import { GraphNodeEngine } from "../../engines/graph-node-engine/engine.js";
 import type { CircuiTikZDocument } from "../../engines/circuitikz-engine/types.js";
 import type { GraphNodeDocument } from "../../engines/graph-node-engine/types.js";
 
-// ── Shared engine instances ────────────────────────────────────────
 const circEngine  = new CircuiTikZEngine();
 const graphEngine = new GraphNodeEngine();
 
@@ -21,24 +20,38 @@ export class BasicCircuitsPlugin extends BasePlugin<CircuiTikZDocument> {
       qualityLevel:    "official-core",
       requiredPackages: ["circuitikz"],
       blockKind:       "input",
-      defaultCaption:  "Basic resistive circuit.",
-      defaultLabel:    "fig:circuit-basic",
+      defaultCaption:  "RC low-pass filter circuit with voltage divider.",
+      defaultLabel:    "fig:circuit-rc",
     });
   }
 
   protected buildDefaultDocument(): CircuiTikZDocument {
+    // RC low-pass filter — canonical circuit in electronics/signals theses
     return {
       engineId: "circuitikz-engine", version: "1.0.0",
       nodes: [
-        { id: "A", x: 0, y: 2 }, { id: "B", x: 3, y: 2 },
-        { id: "C", x: 3, y: 0 }, { id: "D", x: 0, y: 0 },
+        { id: "A",  x: 0, y: 3 }, { id: "B",  x: 3, y: 3 },
+        { id: "C",  x: 6, y: 3 }, { id: "D",  x: 6, y: 0 },
+        { id: "E",  x: 3, y: 0 }, { id: "F",  x: 0, y: 0 },
       ],
       components: [
-        { id: "R1", type: "resistor",       from: "A", to: "B", direction: "right", label: "$R_1$", value: "10\\,\\Omega" },
-        { id: "V1", type: "voltage-source", from: "D", to: "A", direction: "up",    label: "$V_s$", value: "12\\,V" },
-        { id: "W1", type: "ground",         from: "D", to: "D", direction: "down" },
+        // Source
+        { id: "Vs", type: "voltage-source", from: "F",  to: "A",  direction: "up",    label: "$V_{in}$",  value: "AC" },
+        // Series resistor
+        { id: "R1", type: "resistor",       from: "A",  to: "B",  direction: "right",  label: "$R_1$",     value: "1\\,k\\Omega" },
+        // Shunt capacitor
+        { id: "C1", type: "capacitor",      from: "B",  to: "E",  direction: "down",   label: "$C_1$",     value: "100\\,nF" },
+        // Output load
+        { id: "RL", type: "resistor",       from: "C",  to: "D",  direction: "down",   label: "$R_L$",     value: "10\\,k\\Omega" },
+        // Ground
+        { id: "G1", type: "ground",         from: "F",  to: "F",  direction: "down" },
+        { id: "G2", type: "ground",         from: "D",  to: "D",  direction: "down" },
       ],
-      connections: [{ from: "B", to: "C" }, { from: "C", to: "D" }],
+      connections: [
+        { from: "B", to: "C" },
+        { from: "E", to: "D" },
+        { from: "F", to: "D" },
+      ],
       americanStyle: true,
     };
   }
@@ -57,27 +70,30 @@ export class BlockDiagramPlugin extends BasePlugin<GraphNodeDocument> {
       qualityLevel:    "official-core",
       requiredPackages: ["tikz"],
       blockKind:       "input",
-      defaultCaption:  "Closed-loop control system.",
-      defaultLabel:    "fig:block-control",
+      defaultCaption:  "PID closed-loop control system block diagram.",
+      defaultLabel:    "fig:pid-control",
     });
   }
 
   protected buildDefaultDocument(): GraphNodeDocument {
+    // PID controller — standard in control engineering theses
     return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        { id: "R",   label: "$R(s)$",    shape: "none",      position: { x: 0, y: 0 } },
-        { id: "sum", label: "$\\Sigma$",  shape: "circle",    position: { x: 2, y: 0 } },
-        { id: "G",   label: "$G(s)$",    shape: "rectangle", position: { x: 4, y: 0 } },
-        { id: "Y",   label: "$Y(s)$",    shape: "none",      position: { x: 6, y: 0 } },
-        { id: "H",   label: "$H(s)$",    shape: "rectangle", position: { x: 4, y: -1.5 } },
+        { id: "ref",  label: "$r(t)$",         shape: "none",      position: { x: -1.5, y: 0 } },
+        { id: "sum",  label: "$\\Sigma$",       shape: "circle",    position: { x: 0,    y: 0 } },
+        { id: "pid",  label: "PID Controller",  shape: "rectangle", position: { x: 2.2,  y: 0 } },
+        { id: "plant",label: "Plant $G(s)$",    shape: "rectangle", position: { x: 4.8,  y: 0 } },
+        { id: "out",  label: "$y(t)$",          shape: "none",      position: { x: 6.5,  y: 0 } },
+        { id: "sens", label: "Sensor $H(s)$",   shape: "rectangle", position: { x: 4.8,  y: -1.5 } },
       ],
       edges: [
-        { id: "e1", from: "R",   to: "sum", type: "directed" },
-        { id: "e2", from: "sum", to: "G",   type: "directed" },
-        { id: "e3", from: "G",   to: "Y",   type: "directed" },
-        { id: "e4", from: "Y",   to: "H",   type: "directed" },
-        { id: "e5", from: "H",   to: "sum", type: "directed" },
+        { id: "e1", from: "ref",   to: "sum",   type: "directed" },
+        { id: "e2", from: "sum",   to: "pid",   type: "directed", label: "$e(t)$" },
+        { id: "e3", from: "pid",   to: "plant", type: "directed", label: "$u(t)$" },
+        { id: "e4", from: "plant", to: "out",   type: "directed" },
+        { id: "e5", from: "out",   to: "sens",  type: "directed" },
+        { id: "e6", from: "sens",  to: "sum",   type: "directed" },
       ],
       layout: "manual", tikzLibraries: ["arrows.meta"], directed: true,
     };
@@ -97,27 +113,36 @@ export class FlowchartPlugin extends BasePlugin<GraphNodeDocument> {
       qualityLevel:    "official-core",
       requiredPackages: ["tikz"],
       blockKind:       "input",
-      defaultCaption:  "Process flowchart.",
-      defaultLabel:    "fig:flowchart",
+      defaultCaption:  "Research methodology flowchart.",
+      defaultLabel:    "fig:methodology",
     });
   }
 
   protected buildDefaultDocument(): GraphNodeDocument {
+    // Research methodology — the most universally used flowchart in any thesis
     return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        { id: "start", label: "Start",      shape: "rounded-rectangle", position: { x: 0, y: 4 } },
-        { id: "proc1", label: "Process 1",  shape: "rectangle",         position: { x: 0, y: 2.5 } },
-        { id: "dec1",  label: "Condition?", shape: "diamond",           position: { x: 0, y: 1 } },
-        { id: "proc2", label: "Process 2",  shape: "rectangle",         position: { x: 2, y: 1 } },
-        { id: "end",   label: "End",        shape: "rounded-rectangle", position: { x: 0, y: -0.5 } },
+        { id: "start",   label: "Start",                    shape: "rounded-rectangle", position: { x: 0, y: 6 } },
+        { id: "rq",      label: "Define Research Question",  shape: "rectangle",         position: { x: 0, y: 4.5 } },
+        { id: "litrev",  label: "Literature Review",         shape: "rectangle",         position: { x: 0, y: 3 } },
+        { id: "gap",     label: "Research gap\\nidentified?",shape: "diamond",           position: { x: 0, y: 1.5 } },
+        { id: "refine",  label: "Refine Research Question",  shape: "rectangle",         position: { x: 3, y: 1.5 } },
+        { id: "method",  label: "Design Methodology",        shape: "rectangle",         position: { x: 0, y: 0 } },
+        { id: "collect", label: "Data Collection",           shape: "rectangle",         position: { x: 0, y: -1.5 } },
+        { id: "analyse", label: "Analysis",                  shape: "rectangle",         position: { x: 0, y: -3 } },
+        { id: "end",     label: "Conclusions",               shape: "rounded-rectangle", position: { x: 0, y: -4.5 } },
       ],
       edges: [
-        { id: "e1", from: "start", to: "proc1", type: "directed" },
-        { id: "e2", from: "proc1", to: "dec1",  type: "directed" },
-        { id: "e3", from: "dec1",  to: "proc2", type: "directed", label: "Yes" },
-        { id: "e4", from: "dec1",  to: "end",   type: "directed", label: "No" },
-        { id: "e5", from: "proc2", to: "end",   type: "directed" },
+        { id: "e1", from: "start",   to: "rq",      type: "directed" },
+        { id: "e2", from: "rq",      to: "litrev",  type: "directed" },
+        { id: "e3", from: "litrev",  to: "gap",     type: "directed" },
+        { id: "e4", from: "gap",     to: "method",  type: "directed", label: "Yes" },
+        { id: "e5", from: "gap",     to: "refine",  type: "directed", label: "No" },
+        { id: "e6", from: "refine",  to: "litrev",  type: "directed" },
+        { id: "e7", from: "method",  to: "collect", type: "directed" },
+        { id: "e8", from: "collect", to: "analyse", type: "directed" },
+        { id: "e9", from: "analyse", to: "end",     type: "directed" },
       ],
       layout: "manual", tikzLibraries: ["arrows.meta", "shapes.geometric"], directed: true,
     };
@@ -138,7 +163,7 @@ export class SoftwareArchitecturePlugin extends BasePlugin<GraphNodeDocument> {
       requiredPackages: ["tikz"],
       scopeWarning:    "Suitable for standard architecture overviews. For complex UML or deployment diagrams, use Draw.io and import as PDF.",
       blockKind:       "input",
-      defaultCaption:  "System architecture.",
+      defaultCaption:  "Three-tier web application architecture.",
       defaultLabel:    "fig:architecture",
     });
   }
@@ -147,15 +172,21 @@ export class SoftwareArchitecturePlugin extends BasePlugin<GraphNodeDocument> {
     return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        { id: "ui",  label: "UI Layer",  shape: "rectangle", position: { x: 0, y: 3 } },
-        { id: "api", label: "API Layer", shape: "rectangle", position: { x: 0, y: 1.5 } },
-        { id: "db",  label: "Database",  shape: "rectangle", position: { x: 0, y: 0 } },
+        // Tier labels
+        { id: "client",  label: "Client Tier\\n(Browser / App)",  shape: "rectangle", position: { x: 0,  y: 4 } },
+        { id: "server",  label: "Application Tier\\n(REST API)",   shape: "rectangle", position: { x: 0,  y: 2 } },
+        { id: "db",      label: "Data Tier\\n(Database / Cache)",  shape: "rectangle", position: { x: 0,  y: 0 } },
+        // Side components
+        { id: "auth",    label: "Auth Service",  shape: "ellipse", position: { x: 3, y: 2 } },
+        { id: "queue",   label: "Message Queue", shape: "ellipse", position: { x: 3, y: 0 } },
       ],
       edges: [
-        { id: "e1", from: "ui",  to: "api", type: "directed" },
-        { id: "e2", from: "api", to: "db",  type: "directed" },
+        { id: "e1", from: "client", to: "server",  type: "directed",   label: "HTTPS" },
+        { id: "e2", from: "server", to: "db",      type: "directed",   label: "SQL/NoSQL" },
+        { id: "e3", from: "server", to: "auth",    type: "bidirected", label: "OAuth 2.0" },
+        { id: "e4", from: "server", to: "queue",   type: "directed",   label: "async" },
       ],
-      layout: "manual", tikzLibraries: [], directed: true,
+      layout: "manual", tikzLibraries: ["arrows.meta"], directed: true,
     };
   }
 }

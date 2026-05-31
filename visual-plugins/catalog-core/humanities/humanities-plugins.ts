@@ -30,18 +30,20 @@ export class ProbabilityTreesPlugin extends BasePlugin<TreeForestDocument> {
   }
 
   protected buildDefaultDocument(): TreeForestDocument {
+    // Medical screening test — Bayes theorem in action: P(disease)=0.01, sensitivity=0.99, specificity=0.95
+    // This is the canonical probability tree in statistics and medical research theses
     return {
       engineId: "tree-forest-engine", version: "1.0.0",
       style: "probability", growth: "east",
       root: {
         id: "root", label: "", children: [
-          { id: "H", label: "H", edgeLabel: "0.5", probability: 0.5, children: [
-            { id: "HH", label: "HH", edgeLabel: "0.5", probability: 0.5, children: [] },
-            { id: "HT", label: "HT", edgeLabel: "0.5", probability: 0.5, children: [] },
+          { id: "D",  label: "Disease ($P{=}0.01$)",  edgeLabel: "0.01",  probability: 0.01,  children: [
+            { id: "D_pos", label: "Test $+$ ($P{=}0.99$)", edgeLabel: "0.99", probability: 0.99, children: [] },
+            { id: "D_neg", label: "Test $-$ ($P{=}0.01$)", edgeLabel: "0.01", probability: 0.01, children: [] },
           ]},
-          { id: "T", label: "T", edgeLabel: "0.5", probability: 0.5, children: [
-            { id: "TH", label: "TH", edgeLabel: "0.5", probability: 0.5, children: [] },
-            { id: "TT", label: "TT", edgeLabel: "0.5", probability: 0.5, children: [] },
+          { id: "H",  label: "Healthy ($P{=}0.99$)",  edgeLabel: "0.99",  probability: 0.99,  children: [
+            { id: "H_pos", label: "Test $+$ ($P{=}0.05$)", edgeLabel: "0.05", probability: 0.05, children: [] },
+            { id: "H_neg", label: "Test $-$ ($P{=}0.95$)", edgeLabel: "0.95", probability: 0.95, children: [] },
           ]},
         ],
       },
@@ -145,20 +147,26 @@ export class ConceptMapsPlugin extends BasePlugin<GraphNodeDocument> {
   }
 
   protected buildDefaultDocument(): GraphNodeDocument {
+    // Academic concept map: Climate Change as central concept — relevant across disciplines
     return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        { id: "central", label: "Central concept", shape: "ellipse",   position: { x: 0,  y: 0 } },
-        { id: "a",       label: "Related idea A",  shape: "rectangle", position: { x: -3, y: 1.5 } },
-        { id: "b",       label: "Related idea B",  shape: "rectangle", position: { x: 3,  y: 1.5 } },
-        { id: "c",       label: "Sub-concept",     shape: "rectangle", position: { x: 0,  y: -2 } },
-        { id: "d",       label: "Example",         shape: "rectangle", position: { x: -3, y: -1.5 } },
+        { id: "cc",     label: "Climate Change",          shape: "ellipse",   position: { x: 0,   y: 0 } },
+        { id: "ghg",    label: "Greenhouse Gases",        shape: "rectangle", position: { x: -3.5,y: 1.5 } },
+        { id: "temp",   label: "Rising Temperature",      shape: "rectangle", position: { x: 0,   y: 2.5 } },
+        { id: "sea",    label: "Sea-level Rise",          shape: "rectangle", position: { x: 3.5, y: 1.5 } },
+        { id: "fossil", label: "Fossil Fuels",            shape: "ellipse",   position: { x: -3.5,y: -1.5 } },
+        { id: "defor",  label: "Deforestation",           shape: "ellipse",   position: { x: 0,   y: -2.5 } },
+        { id: "policy", label: "Climate Policy",          shape: "rectangle", position: { x: 3.5, y: -1.5 } },
       ],
       edges: [
-        { id: "e1", from: "central", to: "a", type: "directed", label: "includes" },
-        { id: "e2", from: "central", to: "b", type: "directed", label: "leads to" },
-        { id: "e3", from: "central", to: "c", type: "directed", label: "requires" },
-        { id: "e4", from: "c",       to: "d", type: "directed", label: "e.g." },
+        { id: "e1", from: "ghg",    to: "cc",     type: "directed", label: "amplifies" },
+        { id: "e2", from: "cc",     to: "temp",   type: "directed", label: "causes" },
+        { id: "e3", from: "cc",     to: "sea",    type: "directed", label: "causes" },
+        { id: "e4", from: "fossil", to: "ghg",    type: "directed", label: "emits" },
+        { id: "e5", from: "defor",  to: "ghg",    type: "directed", label: "reduces sink" },
+        { id: "e6", from: "policy", to: "cc",     type: "directed", label: "mitigates" },
+        { id: "e7", from: "temp",   to: "sea",    type: "directed", label: "contributes" },
       ],
       layout: "manual", tikzLibraries: ["arrows.meta"], directed: true,
     };

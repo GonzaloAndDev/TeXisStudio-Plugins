@@ -184,18 +184,30 @@ export class BiologicalPathwaysPlugin extends BasePlugin<GraphNodeDocument> {
   }
 
   protected buildDefaultDocument(): GraphNodeDocument {
+    // Simplified central carbon metabolism — glycolysis + TCA entry
     return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        { id: "glucose",   label: "Glucose",    shape: "rectangle", position: { x: 0, y: 4 } },
-        { id: "g6p",       label: "G6P",        shape: "rectangle", position: { x: 0, y: 2.5 } },
-        { id: "pyruvate",  label: "Pyruvate",   shape: "rectangle", position: { x: 0, y: 1 } },
-        { id: "acetylcoa", label: "Acetyl-CoA", shape: "rectangle", position: { x: 0, y: -0.5 } },
+        { id: "glc",   label: "Glucose",        shape: "rectangle", position: { x: 0,  y: 6 } },
+        { id: "g6p",   label: "G-6-P",          shape: "rectangle", position: { x: 0,  y: 4.5 } },
+        { id: "f16bp", label: "F-1,6-BP",       shape: "rectangle", position: { x: 0,  y: 3 } },
+        { id: "g3p",   label: "G-3-P (×2)",     shape: "rectangle", position: { x: 0,  y: 1.5 } },
+        { id: "pyr",   label: "Pyruvate (×2)",  shape: "rectangle", position: { x: 0,  y: 0 } },
+        { id: "aca",   label: "Acetyl-CoA (×2)",shape: "rectangle", position: { x: 0,  y: -1.5 } },
+        // Side products
+        { id: "atp1",  label: "2 ATP",          shape: "ellipse",   position: { x: 2.5, y: 3 } },
+        { id: "nadh",  label: "2 NADH",         shape: "ellipse",   position: { x: 2.5, y: 0 } },
+        { id: "co2",   label: "2 CO$_2$",               shape: "ellipse", position: { x: 2.5, y: -1.5 } },
       ],
       edges: [
-        { id: "e1", from: "glucose",  to: "g6p",      type: "directed", label: "Hexokinase" },
-        { id: "e2", from: "g6p",      to: "pyruvate", type: "directed", label: "Glycolysis" },
-        { id: "e3", from: "pyruvate", to: "acetylcoa",type: "directed", label: "PDH" },
+        { id: "e1", from: "glc",   to: "g6p",   type: "directed", label: "Hexokinase" },
+        { id: "e2", from: "g6p",   to: "f16bp", type: "directed", label: "PFK-1" },
+        { id: "e3", from: "f16bp", to: "g3p",   type: "directed", label: "Aldolase" },
+        { id: "e4", from: "g3p",   to: "pyr",   type: "directed", label: "Glycolysis" },
+        { id: "e5", from: "pyr",   to: "aca",   type: "directed", label: "PDH complex" },
+        { id: "e6", from: "f16bp", to: "atp1",  type: "directed" },
+        { id: "e7", from: "g3p",   to: "nadh",  type: "directed" },
+        { id: "e8", from: "pyr",   to: "co2",   type: "directed" },
       ],
       layout: "manual", tikzLibraries: ["arrows.meta"], directed: true,
     };

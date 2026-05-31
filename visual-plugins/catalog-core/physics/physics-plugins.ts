@@ -71,7 +71,8 @@ export class InclinedPlanePlugin extends BasePlugin<TikzShapeDocument> {
       requiredPackages: ["tikz"],
       scopeWarning: "Generates accurate schematic diagrams. Highly complex multi-pulley systems may need manual TikZ adjustments.",
       blockKind: "input",
-      defaultCaption: "Inclined plane.", defaultLabel: "fig:inclined-plane",
+      defaultCaption: "Free-body diagram on inclined plane (angle $\\theta$).",
+      defaultLabel: "fig:inclined-plane",
     }, store);
   }
 
@@ -79,12 +80,27 @@ export class InclinedPlanePlugin extends BasePlugin<TikzShapeDocument> {
     return {
       engineId: "tikz-shape-engine", version: "1.0.0",
       shapes: [
-        { id: "plane",  type: "polygon", coords: [{ x: 0, y: 0 }, { x: 4, y: 0 }, { x: 4, y: 2.3 }] },
-        { id: "block",  type: "rectangle", coords: [{ x: 2.2, y: 1.0 }, { x: 3.0, y: 1.6 }], fill: "blue!30" },
-        { id: "angle",  type: "angle", coords: [{ x: 0, y: 0 }, { x: 0, y: 30 }, { x: 0.8, y: 0 }], label: "\\theta" },
-        { id: "weight", type: "vector", coords: [{ x: 2.6, y: 1.3 }, { x: 2.6, y: -0.2 }], label: "W" },
+        // Inclined surface
+        { id: "plane",   type: "polygon",   coords: [{ x: 0, y: 0 }, { x: 5, y: 0 }, { x: 5, y: 2.5 }], fill: "gray!20" },
+        // Ground hatching lines (decorative)
+        { id: "g1", type: "line", coords: [{ x: 0, y: 0 }, { x: 5, y: 0 }], lineWidth: "1.5pt" },
+        // Block on slope
+        { id: "block",   type: "rectangle", coords: [{ x: 2.5, y: 1.05 }, { x: 3.4, y: 1.8 }], fill: "blue!35" },
+        // Angle arc and label
+        { id: "angle",   type: "angle",     coords: [{ x: 0, y: 0 }, { x: 0, y: 26.57 }, { x: 0.9, y: 0 }], label: "\\theta" },
+        // Weight vector W (straight down)
+        { id: "weight",  type: "vector",    coords: [{ x: 2.95, y: 1.43 }, { x: 2.95, y: 0.2 }], label: "W", color: "red" },
+        // Normal force N (perpendicular to surface)
+        { id: "normal",  type: "vector",    coords: [{ x: 2.95, y: 1.43 }, { x: 2.48, y: 2.35 }], label: "N", color: "blue" },
+        // Friction force f (along surface, opposing motion)
+        { id: "friction",type: "vector",    coords: [{ x: 2.5, y: 1.05 }, { x: 1.7,  y: 0.65 }], label: "f", color: "green!60!black" },
+        // Component W_x (along incline)
+        { id: "wx", type: "vector", coords: [{ x: 2.95, y: 1.43 }, { x: 3.75, y: 1.83 }], label: "W_x", lineStyle: "dashed", color: "red" },
+        // Component W_y (perpendicular to incline)
+        { id: "wy", type: "vector", coords: [{ x: 2.95, y: 1.43 }, { x: 2.48, y: 0.5 }], label: "W_y", lineStyle: "dashed", color: "red" },
       ],
-      viewBox: { width: 6, height: 4, unit: "cm" }, tikzLibraries: [],
+      viewBox: { width: 7, height: 4.5, unit: "cm" },
+      tikzLibraries: [],
     };
   }
 }
@@ -159,21 +175,46 @@ export class GeometricOpticsPlugin extends BasePlugin<TikzShapeDocument> {
       requiredPackages: ["tikz"],
       scopeWarning: "Suitable for standard ray diagrams. Complex optical systems with multiple elements may need manual adjustment.",
       blockKind: "input",
-      defaultCaption: "Converging lens ray diagram.", defaultLabel: "fig:optics",
+      defaultCaption: "Converging thin lens — three principal ray construction.",
+      defaultLabel: "fig:optics",
     }, store);
   }
 
   protected buildDefaultDocument(): TikzShapeDocument {
+    // Standard thin lens diagram:
+    //   f = 2 (focal length)
+    //   Object at x = -3 (height = 1.2)
+    //   Image at x = +6 (height = -2.4) by 1/v - 1/u = 1/f, u=-3, f=2 → v=6
     return {
       engineId: "tikz-shape-engine", version: "1.0.0",
       shapes: [
-        { id: "axis",  type: "line",  coords: [{ x: -3, y: 0 }, { x: 3, y: 0 }], lineStyle: "dashed" },
-        { id: "lens",  type: "line",  coords: [{ x: 0, y: -1.5 }, { x: 0, y: 1.5 }], lineWidth: "1.5pt" },
-        { id: "ray1",  type: "arrow", coords: [{ x: -3, y: 1 }, { x: 0, y: 1 }] },
-        { id: "ray1b", type: "arrow", coords: [{ x: 0, y: 1 }, { x: 2, y: 0 }] },
-        { id: "focus", type: "point", coords: [{ x: 2, y: 0 }], label: "$F'$" },
+        // Principal axis
+        { id: "axis",   type: "line",    coords: [{ x: -4, y: 0 }, { x: 7, y: 0 }], lineStyle: "dashed" },
+        // Lens (biconvex representation as vertical line with arrows)
+        { id: "lens",   type: "line",    coords: [{ x: 0, y: -2 }, { x: 0, y: 2 }], lineWidth: "1.5pt" },
+        { id: "ltop",   type: "arrow",   coords: [{ x: 0, y: 1.8 }, { x: 0, y: 2 }] },
+        { id: "lbot",   type: "arrow",   coords: [{ x: 0, y: -1.8 }, { x: 0, y: -2 }] },
+        // Object (upright arrow)
+        { id: "obj",    type: "vector",  coords: [{ x: -3, y: 0 }, { x: -3, y: 1.2 }], color: "black" },
+        { id: "olbl",   type: "label",   coords: [{ x: -3.3, y: 0.6 }], label: "$O$", options: "right" },
+        // Image (inverted arrow)
+        { id: "img",    type: "vector",  coords: [{ x: 6, y: 0 }, { x: 6, y: -2.4 }], color: "gray" },
+        { id: "ilbl",   type: "label",   coords: [{ x: 6.2, y: -1.2 }], label: "$I$", options: "left" },
+        // Focal points
+        { id: "f1",     type: "point",   coords: [{ x: -2, y: 0 }], label: "$F$" },
+        { id: "f2",     type: "point",   coords: [{ x: 2,  y: 0 }], label: "$F'$" },
+        // Ray 1: parallel to axis → through F' after lens
+        { id: "r1a",  type: "arrow", coords: [{ x: -3, y: 1.2 }, { x: 0,  y: 1.2 }], color: "blue" },
+        { id: "r1b",  type: "arrow", coords: [{ x: 0,  y: 1.2 }, { x: 6, y: -2.4 }], color: "blue" },
+        // Ray 2: through optical centre, undeviated
+        { id: "r2",   type: "arrow", coords: [{ x: -3, y: 1.2 }, { x: 6, y: -2.4 }], color: "red" },
+        // Ray 3: through F → parallel after lens
+        { id: "r3a",  type: "arrow", coords: [{ x: -3, y: 1.2 }, { x: 0, y: 0.4 }], color: "green!60!black" },
+        { id: "r3b",  type: "arrow", coords: [{ x: 0,  y: 0.4 }, { x: 6, y: 0.4 }], color: "green!60!black", lineStyle: "dashed" },
+        { id: "r3c",  type: "arrow", coords: [{ x: 6,  y: 0.4 }, { x: 6, y: -2.4 }], color: "green!60!black" },
       ],
-      viewBox: { width: 8, height: 4, unit: "cm" }, tikzLibraries: [],
+      viewBox: { width: 13, height: 5.5, unit: "cm" },
+      tikzLibraries: [],
     };
   }
 }

@@ -16,15 +16,22 @@ export class ChemicalFormulasPlugin extends BasePlugin<ChemEngineDocument> {
       qualityLevel: "official-core",
       requiredPackages: ["mhchem"],
       blockKind: "raw",
-      defaultCaption: "Chemical formula.",
+      defaultCaption: "Selected inorganic formulas with oxidation states and phases.",
       defaultLabel: "eq:formula",
     }, store);
   }
 
   protected buildDefaultDocument(): ChemEngineDocument {
+    // Multiple formulas showing different features: ionic charges, states, complex ions
     return {
       engineId: "chemistry-engine", version: "1.0.0",
-      elements: [{ type: "formula", text: "H2O", state: "l" }],
+      elements: [
+        { type: "formula", text: "H2SO4",   state: "aq"  },
+        { type: "formula", text: "CaCO3",   state: "s"   },
+        { type: "formula", text: "Cu^{2+}", state: "aq"  },
+        { type: "formula", text: "OH",      charge: "-", state: "aq" },
+        { type: "formula", text: "NH4",     charge: "+", state: "aq" },
+      ],
       preferredOutput: "mhchem",
     };
   }
@@ -41,7 +48,7 @@ export class ChemicalReactionsPlugin extends BasePlugin<ChemEngineDocument> {
       qualityLevel: "official-core",
       requiredPackages: ["mhchem"],
       blockKind: "raw",
-      defaultCaption: "Chemical reaction.",
+      defaultCaption: "Acid--base neutralisation and combustion reactions.",
       defaultLabel: "eq:reaction",
     }, store);
   }
@@ -49,12 +56,35 @@ export class ChemicalReactionsPlugin extends BasePlugin<ChemEngineDocument> {
   protected buildDefaultDocument(): ChemEngineDocument {
     return {
       engineId: "chemistry-engine", version: "1.0.0",
-      elements: [{
-        type: "reaction",
-        reactants: [{ type: "formula", text: "2H2", state: "g" }, { type: "formula", text: "O2", state: "g" }],
-        products: [{ type: "formula", text: "2H2O", state: "l" }],
-        arrow: "->",
-      }],
+      elements: [
+        // Acid-base neutralisation
+        {
+          type: "reaction",
+          reactants: [
+            { type: "formula", text: "HCl", state: "aq" },
+            { type: "formula", text: "NaOH", state: "aq" },
+          ],
+          products: [
+            { type: "formula", text: "NaCl", state: "aq" },
+            { type: "formula", text: "H2O", state: "l" },
+          ],
+          arrow: "->",
+        },
+        // Methane combustion
+        {
+          type: "reaction",
+          reactants: [
+            { type: "formula", text: "CH4", state: "g" },
+            { type: "formula", text: "2O2", state: "g" },
+          ],
+          products: [
+            { type: "formula", text: "CO2", state: "g" },
+            { type: "formula", text: "2H2O", state: "g" },
+          ],
+          arrow: "->",
+          conditionsAbove: "\\Delta",
+        },
+      ],
       preferredOutput: "mhchem",
     };
   }
@@ -71,7 +101,7 @@ export class ReactionEquilibriaPlugin extends BasePlugin<ChemEngineDocument> {
       qualityLevel: "official-core",
       requiredPackages: ["mhchem"],
       blockKind: "raw",
-      defaultCaption: "Equilibrium reaction.",
+      defaultCaption: "Haber process and esterification equilibria.",
       defaultLabel: "eq:equilibrium",
     }, store);
   }
@@ -79,14 +109,25 @@ export class ReactionEquilibriaPlugin extends BasePlugin<ChemEngineDocument> {
   protected buildDefaultDocument(): ChemEngineDocument {
     return {
       engineId: "chemistry-engine", version: "1.0.0",
-      elements: [{
-        type: "reaction",
-        reactants: [{ type: "formula", text: "N2" }, { type: "formula", text: "3H2" }],
-        products: [{ type: "formula", text: "2NH3" }],
-        arrow: "<=>",
-        conditionsAbove: "Fe",
-        conditionsBelow: "high P",
-      }],
+      elements: [
+        // Haber process (with catalyst and conditions)
+        {
+          type: "reaction",
+          reactants: [{ type: "formula", text: "N2", state: "g" }, { type: "formula", text: "3H2", state: "g" }],
+          products:  [{ type: "formula", text: "2NH3", state: "g" }],
+          arrow: "<=>",
+          conditionsAbove: "Fe cat., 400\\,\\textdegree C",
+          conditionsBelow: "200\\,atm",
+        },
+        // Esterification
+        {
+          type: "reaction",
+          reactants: [{ type: "formula", text: "CH3COOH" }, { type: "formula", text: "C2H5OH" }],
+          products:  [{ type: "formula", text: "CH3COOC2H5" }, { type: "formula", text: "H2O" }],
+          arrow: "<=>",
+          conditionsAbove: "H2SO4 (cat.)",
+        },
+      ],
       preferredOutput: "mhchem",
     };
   }
@@ -97,22 +138,32 @@ export class ChemicalStructuresPlugin extends BasePlugin<ChemEngineDocument> {
     super(engine, {
       pluginId: "chemical-structures",
       displayName: "Chemical Structures",
-      description: "Simple organic structures and ring systems using ChemFig. Complex structures require manual review.",
+      description: "Simple organic structures and ring systems using ChemFig. Benzene, functional groups, ring compounds.",
       category: "chemistry",
       engineId: "chemistry-engine",
       qualityLevel: "official-core",
       requiredPackages: ["chemfig", "mhchem"],
       scopeWarning: "Suitable for simple organic structures in theses. Complex multi-ring systems may need manual ChemFig adjustment. For full structural chemistry, use ChemDraw and import as PDF/SVG.",
       blockKind: "raw",
-      defaultCaption: "Chemical structure.",
+      defaultCaption: "Aspirin (acetylsalicylic acid) structural formula.",
       defaultLabel: "fig:structure",
     }, store);
   }
 
   protected buildDefaultDocument(): ChemEngineDocument {
+    // Aspirin — a recognizable, non-trivial molecule present in many organic chemistry theses.
+    // Benzene ring + carboxylic acid + ester group.
     return {
       engineId: "chemistry-engine", version: "1.0.0",
-      elements: [{ type: "structure", chemfigSource: "\\chemfig{H-C(-[2]H)(-[6]H)-H}", description: "Methane" }],
+      elements: [{
+        type: "structure",
+        chemfigSource: [
+          "\\chemfig{",
+          "  *6(-=-(-C(=[1]O)-OH)=-(-O-C(=[1]O)-CH_3)=)",
+          "}",
+        ].join(""),
+        description: "Aspirin (acetylsalicylic acid)",
+      }],
       preferredOutput: "chemfig",
     };
   }

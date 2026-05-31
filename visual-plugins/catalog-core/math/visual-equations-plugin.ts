@@ -16,13 +16,22 @@ export class VisualEquationsPlugin extends BasePlugin<MathEngineDocument> {
       qualityLevel: "official-core",
       requiredPackages: ["amsmath", "amssymb"],
       blockKind: "raw",
-      defaultCaption: "Equation.",
+      defaultCaption: "Quadratic formula and quadratic form.",
       defaultLabel: "eq:equation",
     }, store);
   }
 
   protected buildDefaultDocument(): MathEngineDocument {
-    return { engineId: "math-engine", version: "1.0.0", mode: "equation", numbered: true, tree: [{ type: "symbol", content: "E = mc^2" }] };
+    // Quadratic formula — recognizable, appears in almost every quantitative thesis
+    return {
+      engineId: "math-engine", version: "1.0.0",
+      mode: "align",
+      numbered: true,
+      tree: [
+        { type: "symbol", content: "x &= \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}" },
+        { type: "symbol", content: "\\Delta &= b^2 - 4ac" },
+      ],
+    };
   }
 }
 
@@ -37,15 +46,22 @@ export class MatricesPlugin extends BasePlugin<MatrixDocument> {
       qualityLevel: "official-core",
       requiredPackages: ["amsmath"],
       blockKind: "raw",
-      defaultCaption: "Matrix.",
+      defaultCaption: "3D rotation matrix around the $z$-axis by angle $\\theta$.",
       defaultLabel: "eq:matrix",
     }, store);
   }
 
   protected buildDefaultDocument(): MatrixDocument {
+    // 3×3 rotation matrix — appears in robotics, biomechanics, computer vision theses
     return {
-      engineId: "math-engine", version: "1.0.0", mode: "matrix", numbered: false, tree: [],
-      rows: 2, cols: 2, delimiter: "paren", cells: [["a", "b"], ["c", "d"]],
+      engineId: "math-engine", version: "1.0.0",
+      mode: "matrix", numbered: true, tree: [],
+      rows: 3, cols: 3, delimiter: "paren",
+      cells: [
+        ["\\cos\\theta", "-\\sin\\theta", "0"],
+        ["\\sin\\theta",  "\\cos\\theta",  "0"],
+        ["0",             "0",             "1"],
+      ],
     };
   }
 }
@@ -61,15 +77,22 @@ export class SystemOfEquationsPlugin extends BasePlugin<SystemDocument> {
       qualityLevel: "official-core",
       requiredPackages: ["amsmath"],
       blockKind: "raw",
-      defaultCaption: "System of equations.",
+      defaultCaption: "System of three linear equations (fluid flow balance).",
       defaultLabel: "eq:system",
     }, store);
   }
 
   protected buildDefaultDocument(): SystemDocument {
+    // 3×3 system — typical in structural analysis, network flow, circuit analysis
     return {
-      engineId: "math-engine", version: "1.0.0", mode: "system", numbered: false, tree: [],
-      equations: ["2x + 3y &= 7", "x - y &= 1"], variables: ["x", "y"],
+      engineId: "math-engine", version: "1.0.0",
+      mode: "system", numbered: true, tree: [],
+      equations: [
+        "2x_1 + 3x_2 - x_3  &= 4",
+        "x_1 - x_2 + 2x_3   &= 1",
+        "3x_1 + x_2 + x_3   &= 7",
+      ],
+      variables: ["x_1", "x_2", "x_3"],
     };
   }
 }
@@ -85,19 +108,21 @@ export class PiecewiseFunctionsPlugin extends BasePlugin<MathEngineDocument> {
       qualityLevel: "official-core",
       requiredPackages: ["amsmath"],
       blockKind: "raw",
-      defaultCaption: "Piecewise function.",
+      defaultCaption: "Heaviside step function and ReLU activation function.",
       defaultLabel: "eq:piecewise",
     }, store);
   }
 
   protected buildDefaultDocument(): MathEngineDocument {
+    // ReLU activation (deep learning) — more relevant than abs value in modern theses
     return {
-      engineId: "math-engine", version: "1.0.0", mode: "equation", numbered: false,
+      engineId: "math-engine", version: "1.0.0",
+      mode: "equation", numbered: true,
       tree: [
-        { type: "symbol", content: "|x| =" },
+        { type: "symbol", content: "\\text{ReLU}(x) =" },
         { type: "cases", content: "", options: { cases: [
-          { expr: "x", cond: "\\text{if } x \\geq 0" },
-          { expr: "-x", cond: "\\text{if } x < 0" },
+          { expr: "x",   cond: "\\text{if } x > 0" },
+          { expr: "0",   cond: "\\text{otherwise}" },
         ] } },
       ],
     };
