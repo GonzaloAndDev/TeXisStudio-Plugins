@@ -28,8 +28,17 @@ function seriesCoords(s: DataSeries): string {
   if (s.expression) {
     const domain = s.domain ? `domain=${s.domain[0]}:${s.domain[1]}, ` : "";
     const opts = seriesOptions(s);
-    const optStr = (domain + opts).replace(/,\s*$/, "").trim();
-    lines.push(`  \\addplot${optStr ? `[${optStr}]` : ""} {${s.expression}};`);
+
+    if (s.plotType === "parametric") {
+      // Parametric: \addplot[variable=x, samples=80, domain=...] (<x-expr>,<y-expr>);
+      // Expression must be a bare coordinate pair (x-expr,y-expr), NOT wrapped in {}.
+      // variable=x so expressions like ({cos(deg(x))},{sin(deg(x))}) work directly.
+      const optStr = (`variable=x, samples=80, ${domain}${opts}`).replace(/,\s*$/, "").trim();
+      lines.push(`  \\addplot${optStr ? `[${optStr}]` : ""} ${s.expression};`);
+    } else {
+      const optStr = (domain + opts).replace(/,\s*$/, "").trim();
+      lines.push(`  \\addplot${optStr ? `[${optStr}]` : ""} {${s.expression}};`);
+    }
   } else if (s.data && s.data.length > 0) {
     const opts = seriesOptions(s);
     const coords = s.data.map(d => `(${d.x}, ${d.y})`).join(" ");

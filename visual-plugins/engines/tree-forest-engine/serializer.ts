@@ -6,7 +6,8 @@ function stylePreset(style: TreeStyle): string {
       return "for tree={font=\\small, grow'=0, l sep=2em, s sep=1em}";
     case "taxonomic":
     case "phylogenetic":
-      return "for tree={font=\\small, grow=south, l sep=1.5em, s sep=1em, edge path={\\noexpand\\path[\\forestoption{edge}] (!u.south) -- (.north)\\forestoption{edge label};}}}";
+      // edge path uses {{}..{}} — exactly two closing braces: one for edge path, one for for tree
+      return "for tree={font=\\small, grow=south, l sep=1.5em, s sep=1em, edge path={\\noexpand\\path[\\forestoption{edge}] (!u.south) -- (.north)\\forestoption{edge label};}}";
     case "genealogy":
       return "for tree={font=\\small, grow=south, l sep=2em, s sep=2em}";
     case "decision":
@@ -38,11 +39,14 @@ export function serializeForest(doc: TreeForestDocument): string {
   const preset = stylePreset(doc.style);
   const isProbability = doc.style === "probability";
   const tree = serializeNode(doc.root, isProbability);
-  const growthOpt = `grow'=${doc.growth === "north" ? "0" : doc.growth === "east" ? "90" : doc.growth === "west" ? "270" : "180"}`;
+
+  // forest preamble: options appear BEFORE the tree, NOT wrapped in [].
+  // [for tree={...}] would create a literal node; bare "for tree={...}" sets global style.
+  const preamble = `${preset}${doc.forestOptions ? `, ${doc.forestOptions}` : ""}`;
 
   return [
     `\\begin{forest}`,
-    `  [${preset}${doc.forestOptions ? `, ${doc.forestOptions}` : ""}]`,
+    `  ${preamble}`,
     `  ${tree}`,
     `\\end{forest}`,
   ].join("\n");
