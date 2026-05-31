@@ -16,11 +16,12 @@ import {
   SyntaxTreesPlugin, ConceptMapsPlugin,
 } from "./catalog-core/index.js";
 
-// Extended (16 implemented)
+// Extended (21 implemented)
 import {
   Plots3DPlugin, PhaseDiagramsPlugin, HeatMapsPlugin,
   BarChartsPlugin, BoxViolinPlotsPlugin, ScatterRegressionPlugin,
   SupplyDemandPlugin, UMLClassDiagramPlugin,
+  DecisionTreePlugin, ROCCurvePlugin, PopulationPyramidPlugin, ErrorBarsPlugin, CausalDAGPlugin,
   ERDiagramPlugin, StateMachinePlugin, MarkovChainsPlugin, BodeNyquistPlugin,
   OrganicChemistryPlugin, ReactionMechanismsPlugin,
   KaplanMeierPlugin, NetworkGraphPlugin,
@@ -88,6 +89,11 @@ export const PLUGIN_REGISTRY: PluginRegistryEntry[] = [
   { plugin: BodeNyquistPlugin,          category: "engineering-cs",    qualityLevel: "official-extended" },
   { plugin: SupplyDemandPlugin,          category: "humanities-social", qualityLevel: "official-extended" },
   { plugin: UMLClassDiagramPlugin,      category: "engineering-cs",    qualityLevel: "official-extended" },
+  { plugin: DecisionTreePlugin,         category: "mathematics",       qualityLevel: "official-extended" },
+  { plugin: ROCCurvePlugin,             category: "mathematics",       qualityLevel: "official-extended" },
+  { plugin: PopulationPyramidPlugin,    category: "humanities-social", qualityLevel: "official-extended" },
+  { plugin: ErrorBarsPlugin,            category: "mathematics",       qualityLevel: "official-extended" },
+  { plugin: CausalDAGPlugin,            category: "humanities-social", qualityLevel: "official-extended" },
   { plugin: OrganicChemistryPlugin,     category: "chemistry",         qualityLevel: "official-extended" },
   { plugin: ReactionMechanismsPlugin,   category: "chemistry",         qualityLevel: "official-extended" },
   { plugin: KaplanMeierPlugin,          category: "biology-medicine",  qualityLevel: "official-extended" },
