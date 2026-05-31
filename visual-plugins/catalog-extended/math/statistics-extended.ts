@@ -4,22 +4,23 @@ import type { PGFPlotsDocument } from "../../engines/pgfplots-engine/types.js";
 
 const engine = new PGFPlotsEngine();
 
-// ── Plugin 41 — Bar Charts & Grouped Bar Charts ───────────────────
-// One of the most common figure types in any thesis.
+// ── Plugin 41 — Bar Charts & Histograms ──────────────────────────────────────
+// Stacked percentage bar chart — shows composition across groups.
+// More informative than plain grouped bars for part-whole relationships.
 
 export class BarChartsPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(engine, {
       pluginId:        "bar-charts",
       displayName:     "Bar Charts & Histograms",
-      description:     "Grouped and stacked bar charts, frequency histograms. Essential for descriptive statistics in any thesis.",
+      description:     "Grouped and stacked bar charts, frequency histograms for descriptive statistics.",
       category:        "mathematics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "Enter values manually in the plugin configuration. For charts from large datasets, generate the figure in R/Python and import as PDF.",
+      scopeWarning:    "Enter values manually. For charts from large datasets, generate in R/Python and import as PDF.",
       blockKind:       "input",
-      defaultCaption:  "Grouped bar chart.",
+      defaultCaption:  "Grouped bar chart — mean response by condition and time point ($\\pm$\\,SD).",
       defaultLabel:    "fig:bar-chart",
     });
   }
@@ -29,112 +30,192 @@ export class BarChartsPlugin extends BasePlugin<PGFPlotsDocument> {
       engineId: "pgfplots-engine", version: "1.0.0",
       series: [
         {
-          id: "s1", label: "Group A",
+          id: "ctrl", label: "Control",
           plotType: "bar",
-          data: [{ x: 1, y: 42 }, { x: 2, y: 58 }, { x: 3, y: 37 }, { x: 4, y: 51 }],
-          color: "blue",
+          data: [
+            { x: 1, y: 38.4 }, { x: 2, y: 41.2 },
+            { x: 3, y: 44.8 }, { x: 4, y: 43.5 },
+          ],
+          color: "blue!60",
         },
         {
-          id: "s2", label: "Group B",
+          id: "low",  label: "Low dose",
           plotType: "bar",
-          data: [{ x: 1, y: 35 }, { x: 2, y: 64 }, { x: 3, y: 49 }, { x: 4, y: 43 }],
-          color: "red",
+          data: [
+            { x: 1, y: 47.3 }, { x: 2, y: 54.1 },
+            { x: 3, y: 58.6 }, { x: 4, y: 55.9 },
+          ],
+          color: "orange!70",
+        },
+        {
+          id: "high", label: "High dose",
+          plotType: "bar",
+          data: [
+            { x: 1, y: 51.8 }, { x: 2, y: 63.4 },
+            { x: 3, y: 71.2 }, { x: 4, y: 67.0 },
+          ],
+          color: "red!60",
         },
       ],
-      xLabel: "Category", yLabel: "Frequency",
-      xScale: "linear", yScale: "linear",
-      showLegend: true, grid: "major",
-      pgfplotsOptions: "ybar, bar width=0.35cm, enlarge x limits=0.15",
+      xLabel: "Week",
+      yLabel: "Mean response (a.u.)",
+      xScale: "linear",
+      yScale: "linear",
+      showLegend: true,
+      grid: "major",
+      pgfplotsOptions: [
+        "ybar, bar width=0.28cm",
+        "enlarge x limits=0.18",
+        "xtick={1,2,3,4}",
+        "xticklabels={2, 4, 8, 12}",
+        "ymin=0",
+        "legend pos=north west",
+        "legend style={font=\\small}",
+      ].join(",\n      "),
     };
   }
 }
 
-// ── Plugin 42 — Box Plots & Violin Plots ─────────────────────────
-// Critical for presenting distribution comparisons in biomedical, social, and CS theses.
+// ── Plugin 42 — Box Plots ─────────────────────────────────────────────────────
+// Three-group comparison with pre-computed quartiles.
+// Standard for clinical and experimental theses comparing distributions.
 
 export class BoxViolinPlotsPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(engine, {
       pluginId:        "box-violin-plots",
       displayName:     "Box Plots & Distribution Comparisons",
-      description:     "Box plots with whiskers, outliers, and median marks for comparing distributions across groups.",
+      description:     "Box-and-whisker plots with medians, quartiles, and outliers for comparing distributions.",
       category:        "mathematics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "Box plots show precomputed statistics (Q1, median, Q3, whiskers). Compute these in R/Python/Excel and enter manually. For raw-data violin plots, import from R.",
+      scopeWarning:    "Enter pre-computed statistics (median, Q1, Q3) from R/Python. Each data point encodes: x=group position, y=median, error=IQR half-range.",
       blockKind:       "input",
-      defaultCaption:  "Box plot comparison across groups.",
+      defaultCaption:  "Distribution of test scores across three teaching conditions (box: Q1--Q3; whiskers: 1.5$\\times$IQR).",
       defaultLabel:    "fig:boxplot",
     });
   }
 
   protected buildDefaultDocument(): PGFPlotsDocument {
+    // Three groups: Traditional, Blended, Online teaching
+    // Statistics: x=position, y=median, error=half-IQR (Q3-Q1)/2
     return {
       engineId: "pgfplots-engine", version: "1.0.0",
       series: [
         {
-          id: "g1", label: "Group A",
+          id: "trad",    label: "Traditional ($n{=}42$)",
           plotType: "boxplot",
-          // data encodes: x=position, y=median, error=IQR (Q1–Q3 half-range)
-          data: [{ x: 1, y: 52, error: 12 }, { x: 2, y: 61, error: 8 }, { x: 3, y: 44, error: 15 }],
+          data: [{ x: 1, y: 68, error: 12 }],
           color: "blue",
         },
+        {
+          id: "blend",   label: "Blended ($n{=}44$)",
+          plotType: "boxplot",
+          data: [{ x: 2, y: 74, error: 9 }],
+          color: "orange",
+        },
+        {
+          id: "online",  label: "Online ($n{=}38$)",
+          plotType: "boxplot",
+          data: [{ x: 3, y: 71, error: 14 }],
+          color: "green!60!black",
+        },
       ],
-      xLabel: "Group", yLabel: "Score",
-      xScale: "linear", yScale: "linear",
-      showLegend: false, grid: "major",
-      pgfplotsOptions: "boxplot/draw direction=y",
+      xLabel: "Teaching condition",
+      yLabel: "Score (0--100)",
+      xScale: "linear",
+      yScale: "linear",
+      showLegend: true,
+      grid: "major",
+      pgfplotsOptions: [
+        "ymin=20, ymax=105",
+        "xtick={1,2,3}",
+        "xticklabels={Traditional, Blended, Online}",
+        "xticklabel style={font=\\small}",
+        "legend pos=north east",
+      ].join(",\n      "),
     };
   }
 }
 
-// ── Plugin 43 — Scatter Plots with Regression ─────────────────────
-// Essential for empirical chapters: shows raw data + trend line + R² annotation.
+// ── Plugin 43 — Scatter Plots with Regression ────────────────────────────────
+// Scatter + regression line + 95% CI band — standard in quantitative chapters.
+// Example: BMI vs systolic blood pressure (classic epidemiological relationship).
 
 export class ScatterRegressionPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(engine, {
       pluginId:        "scatter-regression",
       displayName:     "Scatter Plots with Regression",
-      description:     "Scatter plots with optional linear regression trend line and R² annotation. Perfect for correlation and regression chapters.",
+      description:     "Scatter plot with linear regression line and optional confidence band.",
       category:        "mathematics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "Regression line is specified as a function expression. Compute slope/intercept in your statistical software first.",
+      scopeWarning:    "Compute slope, intercept, and CI band in your statistical software. Enter the values here for publication-quality rendering.",
       blockKind:       "input",
-      defaultCaption:  "Scatter plot with linear regression ($R^2 = 0.87$).",
+      defaultCaption:  "BMI vs systolic blood pressure: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$).",
       defaultLabel:    "fig:scatter-regression",
     });
   }
 
   protected buildDefaultDocument(): PGFPlotsDocument {
+    // Realistic blood pressure vs BMI data (simulated from typical values)
     return {
       engineId: "pgfplots-engine", version: "1.0.0",
       series: [
+        // 95% CI band (upper and lower bounds as shaded area)
         {
-          id: "data", label: "Observations",
+          id: "ci_upper", label: "",
+          plotType: "function2d",
+          expression: "89.4 + 1.83*x + 8.5",
+          domain: [17, 40],
+          color: "blue!20",
+        },
+        {
+          id: "ci_lower", label: "",
+          plotType: "function2d",
+          expression: "89.4 + 1.83*x - 8.5",
+          domain: [17, 40],
+          color: "blue!20",
+        },
+        // Regression line
+        {
+          id: "fit",
+          label: "$\\hat{y} = 89.4 + 1.83x$\\quad($R^2{=}0.74$)",
+          plotType: "function2d",
+          expression: "89.4 + 1.83*x",
+          domain: [17, 40],
+          color: "blue",
+        },
+        // Observed data points
+        {
+          id: "data", label: "Observed ($n{=}120$)",
           plotType: "scatter",
           data: [
-            { x: 1,  y: 2.1  }, { x: 2,  y: 3.8  }, { x: 3,  y: 5.0  },
-            { x: 4,  y: 7.2  }, { x: 5,  y: 8.9  }, { x: 6,  y: 10.5 },
-            { x: 7,  y: 12.1 }, { x: 8,  y: 14.3 }, { x: 9,  y: 15.8 },
-            { x: 10, y: 18.2 },
+            { x: 18.2, y: 122 }, { x: 19.5, y: 118 }, { x: 20.1, y: 128 }, { x: 21.0, y: 124 },
+            { x: 21.8, y: 130 }, { x: 22.4, y: 126 }, { x: 23.1, y: 135 }, { x: 23.8, y: 130 },
+            { x: 24.5, y: 138 }, { x: 25.2, y: 140 }, { x: 25.9, y: 136 }, { x: 26.6, y: 143 },
+            { x: 27.3, y: 147 }, { x: 28.0, y: 142 }, { x: 28.7, y: 150 }, { x: 29.4, y: 155 },
+            { x: 30.1, y: 148 }, { x: 31.0, y: 158 }, { x: 32.5, y: 162 }, { x: 34.0, y: 170 },
           ],
-          color: "blue", mark: "*",
-        },
-        {
-          id: "fit", label: "Linear fit: $\\hat{y} = 1.84x + 0.31$",
-          plotType: "function2d",
-          expression: "1.84*x + 0.31",
-          domain: [0, 11],
-          color: "red",
+          color: "blue", mark: "o",
         },
       ],
-      xLabel: "Independent variable", yLabel: "Dependent variable",
-      xScale: "linear", yScale: "linear",
-      showLegend: true, grid: "major",
+      xLabel: "BMI (kg/m$^2$)",
+      yLabel: "Systolic BP (mmHg)",
+      xScale: "linear",
+      yScale: "linear",
+      showLegend: true,
+      grid: "major",
+      pgfplotsOptions: [
+        "xmin=16, xmax=41",
+        "ymin=110, ymax=180",
+        "legend pos=north west",
+        "legend style={font=\\small}",
+        "fill opacity=0.25",
+      ].join(",\n      "),
     };
   }
 }

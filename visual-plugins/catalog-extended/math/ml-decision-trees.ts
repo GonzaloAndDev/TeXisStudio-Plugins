@@ -75,32 +75,65 @@ export class ROCCurvePlugin extends BasePlugin<PGFPlotsDocument> {
   }
 
   protected buildDefaultDocument(): PGFPlotsDocument {
+    // Three classifiers comparison: Random Forest, Logistic Regression, SVM
+    // Pre-computed from a typical clinical prediction problem
     return {
       engineId: "pgfplots-engine", version: "1.0.0",
       series: [
+        // Random Forest — best performer
         {
-          id: "model_a", label: "Model A (AUC = 0.89)",
+          id: "rf", label: "Random Forest (AUC = 0.94)",
           plotType: "scatter",
           data: [
-            { x: 0.00, y: 0.00 }, { x: 0.05, y: 0.40 }, { x: 0.10, y: 0.62 },
-            { x: 0.20, y: 0.78 }, { x: 0.30, y: 0.87 }, { x: 0.50, y: 0.93 },
-            { x: 0.80, y: 0.97 }, { x: 1.00, y: 1.00 },
+            { x:0.00, y:0.00 }, { x:0.02, y:0.48 }, { x:0.05, y:0.69 },
+            { x:0.08, y:0.78 }, { x:0.12, y:0.85 }, { x:0.18, y:0.90 },
+            { x:0.25, y:0.93 }, { x:0.40, y:0.96 }, { x:0.60, y:0.98 },
+            { x:0.80, y:0.99 }, { x:1.00, y:1.00 },
           ],
-          color: "blue", mark: "*",
+          color: "blue!80", mark: "*",
         },
+        // Logistic Regression
         {
-          id: "baseline", label: "Random classifier",
+          id: "lr", label: "Logistic Regression (AUC = 0.85)",
+          plotType: "scatter",
+          data: [
+            { x:0.00, y:0.00 }, { x:0.05, y:0.35 }, { x:0.10, y:0.55 },
+            { x:0.15, y:0.65 }, { x:0.22, y:0.74 }, { x:0.30, y:0.81 },
+            { x:0.45, y:0.88 }, { x:0.60, y:0.92 }, { x:0.80, y:0.96 },
+            { x:1.00, y:1.00 },
+          ],
+          color: "orange!80", mark: "square*",
+        },
+        // SVM
+        {
+          id: "svm", label: "SVM (AUC = 0.82)",
+          plotType: "scatter",
+          data: [
+            { x:0.00, y:0.00 }, { x:0.07, y:0.30 }, { x:0.13, y:0.48 },
+            { x:0.20, y:0.62 }, { x:0.30, y:0.72 }, { x:0.42, y:0.82 },
+            { x:0.60, y:0.90 }, { x:0.80, y:0.95 }, { x:1.00, y:1.00 },
+          ],
+          color: "red!70", mark: "triangle*",
+        },
+        // Random baseline
+        {
+          id: "rand", label: "Random (AUC = 0.50)",
           plotType: "function2d",
           expression: "x",
           domain: [0, 1],
-          color: "gray",
+          color: "gray", mark: "none",
         },
       ],
-      xLabel: "False positive rate (1 - Specificity)",
-      yLabel: "True positive rate (Sensitivity)",
+      xLabel: "1 -- Specificity (FPR)",
+      yLabel: "Sensitivity (TPR)",
       xScale: "linear", yScale: "linear",
       showLegend: true, grid: "major",
-      pgfplotsOptions: "xmin=0, ymin=0, xmax=1, ymax=1",
+      pgfplotsOptions: [
+        "xmin=0, ymin=0, xmax=1, ymax=1",
+        "legend pos=south east",
+        "legend style={font=\\small}",
+        "width=7cm, height=7cm",
+      ].join(", "),
     };
   }
 }
@@ -126,33 +159,44 @@ export class PopulationPyramidPlugin extends BasePlugin<PGFPlotsDocument> {
   }
 
   protected buildDefaultDocument(): PGFPlotsDocument {
+    // Mexico 2020 age structure (INEGI approximation) — useful for Latin American studies
     return {
       engineId: "pgfplots-engine", version: "1.0.0",
       series: [
         {
           id: "male", label: "Male",
           plotType: "bar",
-          // Negative values = left side (male)
           data: [
-            { x: 1, y: -8.2 }, { x: 2, y: -9.1 }, { x: 3, y: -10.4 },
-            { x: 4, y: -9.8 }, { x: 5, y: -8.5 }, { x: 6, y: -7.1 },
+            { x:1, y:-9.8 }, { x:2, y:-9.1 }, { x:3, y:-8.6 }, { x:4, y:-8.3 },
+            { x:5, y:-7.9 }, { x:6, y:-7.4 }, { x:7, y:-6.2 }, { x:8, y:-4.5 },
+            { x:9, y:-3.0 }, { x:10,y:-1.8 },
           ],
-          color: "blue",
+          color: "blue!65",
         },
         {
           id: "female", label: "Female",
           plotType: "bar",
           data: [
-            { x: 1, y: 7.8 }, { x: 2, y: 8.9 }, { x: 3, y: 9.8 },
-            { x: 4, y: 9.5 }, { x: 5, y: 8.9 }, { x: 6, y: 7.6 },
+            { x:1, y:9.5 }, { x:2, y:8.8 }, { x:3, y:8.4 }, { x:4, y:8.1 },
+            { x:5, y:7.8 }, { x:6, y:7.6 }, { x:7, y:6.5 }, { x:8, y:5.0 },
+            { x:9, y:3.5 }, { x:10,y:2.2 },
           ],
-          color: "red",
+          color: "red!55",
         },
       ],
-      xLabel: "Age group", yLabel: "Population (\\%)",
+      xLabel: "Population (\\%)",
+      yLabel: "Age group",
       xScale: "linear", yScale: "linear",
       showLegend: true, grid: "major",
-      pgfplotsOptions: "xbar, bar width=0.5cm, xmin=-12, xmax=12, ytick={1,2,3,4,5,6}, yticklabels={0--14, 15--29, 30--44, 45--59, 60--74, 75+}",
+      pgfplotsOptions: [
+        "xbar, bar width=0.38cm",
+        "xmin=-12, xmax=12",
+        "ytick={1,2,3,4,5,6,7,8,9,10}",
+        "yticklabels={0--9, 10--19, 20--29, 30--39, 40--49, 50--59, 60--69, 70--79, 80--89, 90+}",
+        "yticklabel style={font=\\small}",
+        "legend pos=north east",
+        "legend style={font=\\small}",
+      ].join(",\n      "),
     };
   }
 }
@@ -178,35 +222,52 @@ export class ErrorBarsPlugin extends BasePlugin<PGFPlotsDocument> {
   }
 
   protected buildDefaultDocument(): PGFPlotsDocument {
+    // Drug efficacy over time: control vs treatment (mean ± 95% CI)
+    // Typical in pharmacology, physiology, and clinical research theses
     return {
       engineId: "pgfplots-engine", version: "1.0.0",
       series: [
         {
-          id: "group_a", label: "Condition A",
+          id: "placebo", label: "Placebo ($n{=}45$)",
           plotType: "errorbar",
           data: [
-            { x: 1, y: 24.5, error: 3.2 },
-            { x: 2, y: 31.2, error: 2.8 },
-            { x: 3, y: 28.7, error: 4.1 },
-            { x: 4, y: 35.9, error: 3.5 },
+            { x:0, y:52.1, error:4.2 }, { x:4, y:53.8, error:3.9 },
+            { x:8, y:51.4, error:4.7 }, { x:12,y:54.2, error:4.1 },
+            { x:24,y:53.1, error:4.8 },
           ],
-          color: "blue", mark: "*",
+          color: "gray!70", mark: "o",
         },
         {
-          id: "group_b", label: "Condition B",
+          id: "low_dose", label: "Low dose 10\\,mg ($n{=}47$)",
           plotType: "errorbar",
           data: [
-            { x: 1, y: 19.1, error: 2.9 },
-            { x: 2, y: 26.8, error: 3.3 },
-            { x: 3, y: 33.4, error: 3.8 },
-            { x: 4, y: 29.2, error: 2.6 },
+            { x:0, y:51.6, error:4.0 }, { x:4, y:61.3, error:3.5 },
+            { x:8, y:67.8, error:3.2 }, { x:12,y:71.4, error:2.9 },
+            { x:24,y:69.2, error:3.4 },
           ],
-          color: "red", mark: "square*",
+          color: "blue!70", mark: "*",
+        },
+        {
+          id: "high_dose", label: "High dose 20\\,mg ($n{=}46$)",
+          plotType: "errorbar",
+          data: [
+            { x:0, y:52.4, error:3.8 }, { x:4, y:68.1, error:3.1 },
+            { x:8, y:76.5, error:2.8 }, { x:12,y:80.3, error:2.5 },
+            { x:24,y:77.8, error:2.9 },
+          ],
+          color: "red!70", mark: "square*",
         },
       ],
-      xLabel: "Time point", yLabel: "Measured value",
+      xLabel: "Time (weeks)",
+      yLabel: "Efficacy score (0--100)",
       xScale: "linear", yScale: "linear",
       showLegend: true, grid: "major",
+      pgfplotsOptions: [
+        "xtick={0,4,8,12,24}",
+        "ymin=40, ymax=90",
+        "legend pos=north west",
+        "legend style={font=\\small}",
+      ].join(",\n      "),
     };
   }
 }

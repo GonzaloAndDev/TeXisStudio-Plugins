@@ -105,19 +105,31 @@ export class MarkovChainsPlugin extends BasePlugin<GraphNodeDocument> {
   }
 
   protected buildDefaultDocument(): GraphNodeDocument {
+    // Weather model: Sunny / Cloudy / Rainy — classic 3-state Markov chain
+    // Transition probabilities (rows sum to 1):
+    //   Sunny→Sunny 0.7, Sunny→Cloudy 0.2, Sunny→Rainy 0.1
+    //   Cloudy→Sunny 0.4, Cloudy→Cloudy 0.4, Cloudy→Rainy 0.2
+    //   Rainy→Sunny 0.2, Rainy→Cloudy 0.3, Rainy→Rainy 0.5
     return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        { id: "s1", label: "$S_1$", shape: "circle", position: { x: 0,   y: 0 } },
-        { id: "s2", label: "$S_2$", shape: "circle", position: { x: 3,   y: 0 } },
-        { id: "s3", label: "$S_3$", shape: "circle", position: { x: 1.5, y: -2 } },
+        { id: "S", label: "Sunny",  shape: "circle", position: { x: 0,   y: 2 } },
+        { id: "C", label: "Cloudy", shape: "circle", position: { x: -2,  y: -1 } },
+        { id: "R", label: "Rainy",  shape: "circle", position: { x: 2,   y: -1 } },
       ],
       edges: [
-        { id: "e1", from: "s1", to: "s2", type: "directed", label: "0.6" },
-        { id: "e2", from: "s2", to: "s3", type: "directed", label: "0.4" },
-        { id: "e3", from: "s3", to: "s1", type: "directed", label: "0.7" },
-        { id: "e4", from: "s1", to: "s1", type: "directed", label: "0.4" },
-        { id: "e5", from: "s2", to: "s2", type: "directed", label: "0.6" },
+        // From Sunny
+        { id: "ss", from: "S", to: "S", type: "directed", label: "0.70" },
+        { id: "sc", from: "S", to: "C", type: "directed", label: "0.20" },
+        { id: "sr", from: "S", to: "R", type: "directed", label: "0.10" },
+        // From Cloudy
+        { id: "cs", from: "C", to: "S", type: "directed", label: "0.40" },
+        { id: "cc", from: "C", to: "C", type: "directed", label: "0.40" },
+        { id: "cr", from: "C", to: "R", type: "directed", label: "0.20" },
+        // From Rainy
+        { id: "rs", from: "R", to: "S", type: "directed", label: "0.20" },
+        { id: "rc", from: "R", to: "C", type: "directed", label: "0.30" },
+        { id: "rr", from: "R", to: "R", type: "directed", label: "0.50" },
       ],
       layout: "manual", tikzLibraries: ["arrows.meta"], directed: true,
     };
