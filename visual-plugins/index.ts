@@ -8,3 +8,4 @@ export type {
   PluginCategory,
   QualityLevel,
 } from "./common/contracts/index.js";
+export { buildLatexInputBlock } from "./common/export/latex-block.js";
