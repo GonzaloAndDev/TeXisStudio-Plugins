@@ -1,113 +1,130 @@
 # TeXisStudio Plugins
 
-> 69 plugins de figuras académicas — LaTeX de publicación sin escribir una línea de código.
+> **ES** — 69 plugins de figuras académicas. LaTeX de publicación sin escribir código.  
+> **EN** — 69 academic figure plugins. Publication-quality LaTeX without writing code.
 
-Parte del ecosistema **[TeXisStudio](../TeXisStudio/README.md)**.
+Part of / Parte del ecosistema **[TeXisStudio](../TeXisStudio/README.md)**.  
+Also see / También: [TeXisStudio-Languages](../TeXisStudio-Languages/README.md) · [TeXisStudio-Profiles](../TeXisStudio-Profiles/README.md)
 
 ---
 
-## ¿Qué es esto?
+## ES — ¿Qué es?
 
-Catálogo de plugins especializados que se integran con TeXisStudio para generar figuras académicas directamente desde los engines LaTeX nativos. El usuario describe *qué quiere*; el plugin produce código LaTeX perfecto.
+Catálogo de plugins especializados que genera figuras académicas directamente desde los engines LaTeX nativos. El usuario describe *qué quiere*; el plugin produce código LaTeX perfecto.
 
-**Ejemplo:**
 ```
-El usuario selecciona "ROC Curves" → indica 3 modelos y sus valores AUC
+Usuario selecciona "ROC Curves" → indica 3 modelos con valores AUC
         ↓
 El plugin llama al PGFPlotsEngine
         ↓
-Se genera \addplot[...] con los 3 clasificadores, la línea base y la leyenda
+Se genera \addplot[...] con clasificadores, línea base y leyenda
         ↓
-El PDF contiene una figura vectorial idéntica a las de artículos publicados
+PDF con figura vectorial idéntica a la de artículos publicados
 ```
 
-## ¿Qué no es?
+## EN — What is it?
 
-No reemplaza BioRender, ChemDraw, QGIS ni otras herramientas especializadas.  
+A catalog of specialised plugins that generates academic figures directly from native LaTeX engines. The user describes *what they want*; the plugin produces perfect LaTeX.
+
+```
+User selects "ROC Curves" → enters 3 models with AUC values
+        ↓
+Plugin calls PGFPlotsEngine
+        ↓
+Generates \addplot[...] with classifiers, baseline and legend
+        ↓
+PDF with a vector figure identical to published papers
+```
+
+## ES — ¿Qué no es? / EN — What it is not
+
+No reemplaza BioRender, ChemDraw, QGIS ni herramientas especializadas.  
+Not a replacement for BioRender, ChemDraw, QGIS or other specialised tools.
+
 El alcance es: **figuras que LaTeX puede representar excelentemente**.  
-Para lo demás existen los plugins de tipo *import-bridge* que guían al usuario a la herramienta correcta y le dan el entorno `\begin{figure}` compilable.
+The scope is: **figures that LaTeX can represent excellently**.
 
 ---
 
-## Catálogo de plugins (69 total)
+## Plugin catalog / Catálogo de plugins (69 total)
 
 ### Official-Core — 35 plugins
-Defaults probados con `latexmk`, resultados de calidad publicación.
+Defaults tested with `latexmk`. Publication-quality results guaranteed.  
+Defaults probados con `latexmk`. Resultados de calidad publicación.
 
-| Categoría | Plugins |
+| Category / Categoría | Plugins |
 |---|---|
-| **Matemáticas** (12) | Ecuaciones (quadratic formula, align), Matrices (rotación 3D), Sistemas, Funciones por partes, Diagramas de Venn, Geometría plana (Pitágoras+altitud), Geometría analítica (parábola+tangente), Plots 2D (sin/cos), Paramétrico/polar (Lissajous), Estadística básica (barras comparativas), Distribuciones (normal+CI sombreado), Árboles de probabilidad (test diagnóstico Bayes) |
-| **Física** (5) | Vectores (ley del paralelogramo), Diagramas de cuerpo libre (fuerza en ángulo), Plano inclinado (W+N+f+componentes), Ondas/oscilaciones (Gaussiana amortiguada), Óptica geométrica (3 rayos principales) |
-| **Ingeniería/CS** (5) | Circuitos eléctricos (filtro RC), Diagramas de bloque (PID), Flujogramas (metodología de investigación), Arquitectura de software (3-tier), Gantt (cronograma doctoral 27 meses) |
-| **Química** (5) | Fórmulas (H₂SO₄, iones, estados), Reacciones (neutralización + combustión), Equilibrios (Haber + esterificación), Estructuras (aspirina ChemFig), Montajes de laboratorio (titulación ácido-base) |
-| **Biología/Medicina** (5) | Árboles filogenéticos (vertebrados), Secuencias ADN/ARN (codones coloreados), Flujos biomédicos (MAPK/ERK + feedback), CONSORT 2010 (ensayo clínico), Vías biológicas (glucólisis → TCA) |
-| **Humanidades** (3) | Líneas de tiempo (hitos biología molecular 1944–2003), Árboles sintácticos (cláusula relativa compleja), Mapas conceptuales (cambio climático) |
+| **Mathematics / Matemáticas** (12) | Visual Equations (quadratic formula + align), Matrices (3D rotation), Systems of Equations, Piecewise Functions (ReLU), Venn Diagrams (3-set), Plane Geometry (Pythagorean theorem with altitude), Analytic Geometry (parabola + tangent), 2D Plots (sin/cos with π ticks), Parametric/Polar (Lissajous), Basic Statistics (grouped bar chart), Statistical Distributions (normal + 95% CI shaded), Probability Trees (medical diagnostic test via Bayes) |
+| **Physics / Física** (5) | Vectors (parallelogram law A+B=R), Free Body Diagrams (force at angle α with components), Inclined Planes (W+N+f+Wx+Wy), Wave & Oscillations (damped Gaussian), Geometric Optics (3-ray lens construction) |
+| **Engineering-CS / Ingeniería** (5) | Electrical Circuits (RC low-pass filter), Block Diagrams (PID controller), Flowcharts (research methodology), Software Architecture (3-tier + services), Gantt Charts (doctoral schedule 27 months) |
+| **Chemistry / Química** (5) | Chemical Formulas (H₂SO₄, ions, phases), Reactions (neutralisation + combustion), Equilibria (Haber process + esterification), Structures (aspirin ChemFig), Lab Setups (acid-base titration) |
+| **Biology-Medicine / Biología** (5) | Phylogenetic Trees (vertebrate phylogeny), Sequences (colour-coded DNA codons), Biomedical Flows (MAPK/ERK + negative feedback), CONSORT 2010 (clinical trial), Biological Pathways (glycolysis → TCA) |
+| **Humanities / Humanidades** (3) | Timelines (molecular biology milestones 1944–2003), Syntax Trees (relative clause), Concept Maps (climate change) |
 
 ### Official-Extended — 25 plugins
-Casos de uso más especializados, todos con `scopeWarning` documentado.
+More specialised use cases, all with documented `scopeWarning`.  
+Casos más especializados, todos con `scopeWarning` documentado.
 
-| Categoría | Plugins |
+| Category / Categoría | Plugins |
 |---|---|
-| **Matemáticas** (13) | Plots 3D (Gaussiana bivariada), Phase portraits (Lotka-Volterra), Heatmaps (matriz de correlación 4×4), Barras agrupadas, Box plots (3 grupos), Scatter+regresión (BMI vs SBP + banda CI), Árboles de decisión (CART), ROC curves (3 clasificadores), Error bars (3 dosis × 5 time points), Series temporales (CO₂ Mauna Loa), Coordenadas paralelas, Pirámide poblacional (México 2020), Cadenas de Markov (modelo clima) |
-| **Ingeniería/CS** (5) | ER Diagrams (sistema universitario 4 entidades), FSMs (semáforo timer-driven), Bode/Nyquist (2do orden G(s)), UML Class (Repository+Observer pattern), Redes (co-autoría ML vs Stats) |
-| **Ciencias Sociales** (4) | Supply & Demand (equilibrio + excedentes + shift), DAG causal (Education→Health con mediadores), Genealogía (Habsburgo 4 generaciones), Pirámide poblacional |
-| **Química** (2) | Química orgánica extendida (cafeína ChemFig), Mecanismos de reacción (condensación aldólica 3 pasos) |
-| **Biología/Física** (2) | Kaplan-Meier (2 brazos RCT con log-rank), Diagramas de bandas energéticas (unión p-n con band bending) |
+| **Mathematics** (13) | 3D Plots (bivariate Gaussian), Phase Portraits (Lotka-Volterra), Heatmaps (4×4 correlation matrix), Grouped Bar Charts (3 doses × 4 time points), Box Plots (3 pedagogical conditions), Scatter + Regression (BMI vs SBP + CI band), Decision Trees (CART), ROC Curves (3 classifiers), Error Bars (3 doses × 5 time points), Time Series (CO₂ Mauna Loa), Parallel Coordinates (5 alternatives × 4 criteria), Population Pyramid (Mexico 2020), Markov Chains (weather model) |
+| **Engineering-CS** (5) | ER Diagrams (university schema 4 entities), FSMs (traffic light timer-driven), Bode/Nyquist (2nd-order G(s)), UML Class (Repository + Observer pattern), Network Graphs (co-authorship: ML vs Statistics clusters) |
+| **Humanities-Social** (4) | Supply & Demand (equilibrium + surplus areas + demand shift), Causal DAG (Education→Health mediation), Genealogy (Habsburg dynasty 4 generations), Population Pyramid |
+| **Chemistry** (2) | Extended Organic Chemistry (caffeine ChemFig), Reaction Mechanisms (aldol condensation 3 steps) |
+| **Biology-Physics** (2) | Kaplan-Meier (2-arm RCT with log-rank), Energy Band Diagrams (p-n junction with band bending) |
 
 ### Experimental — 10 plugins
-5 con implementación real (BasePlugin) · 5 import-bridges (placeholder compilable).
+5 with full BasePlugin implementation · 5 import-bridges (compilable placeholders).  
+5 con implementación real BasePlugin · 5 import-bridges (placeholder compilable).
 
-| Plugin | Tipo | Descripción |
+| Plugin | Type / Tipo | Description / Descripción |
 |---|---|---|
-| Bayesian Networks | Real | DAG COVID-19: síntomas observados + causas latentes con probabilidades |
-| SEM / Path Diagrams | Real | Technology Acceptance Model (TAM) — 3 constructos + 8 indicadores |
-| Economic Causal | Real | Espiral salarios-precios con bucles R y B anotados |
-| Legal / Procedural | Real | Proceso penal completo (queja → juicio → apelación) |
-| Pedagogical | Real | Taxonomía de Bloom revisada (Anderson & Krathwohl 2001) |
+| Bayesian Networks | Real | COVID-19 diagnosis DAG with conditional probabilities |
+| SEM / Path Diagrams | Real | Technology Acceptance Model (TAM) |
+| Economic Causal | Real | Wage-price spiral with R and B feedback loops |
+| Legal / Procedural | Real | Criminal procedure flowchart (complaint → appeal) |
+| Pedagogical Diagrams | Real | Revised Bloom's Taxonomy (Anderson & Krathwohl 2001) |
 | Anatomical Diagrams | Bridge | → BioRender / Servier Medical Art |
 | Biomedical Illustration | Bridge | → BioRender |
 | Cell Diagrams | Bridge | → BioRender |
 | Geographic Maps | Bridge | → QGIS / R sf+tmap |
-| LilyPond Scores | Bridge | → LilyPond (notación musical) |
+| LilyPond Scores | Bridge | → LilyPond (music notation) |
 
 ---
 
-## Arquitectura
+## Architecture / Arquitectura
 
 ```
 visual-plugins/
   common/
-    contracts/          Interfaces: VisualDiagramPlugin, VisualEngine, VisualFigureResult
-    plugin-base/        BasePlugin<TDoc> — create/edit/editWithSource/validate reutilizables
-    persistence/        FigureStore (Node.js) + patrón browser-safe
+    contracts/          VisualDiagramPlugin, VisualEngine, VisualFigureResult interfaces
+    plugin-base/        BasePlugin<TDoc> — reusable create/edit/editWithSource/validate
+    persistence/        FigureStore (Node.js) + browser-safe pattern
     export/             buildLatexInputBlock, buildDisplayMathBlock…
     latex/              structural-validator, compiler (latexmk wrapper)
     manifest/           FigureManifest schema + validator
-    preamble/           PreambleManager
-    security/           Plugin permission checks
 
-  engines/              12 motores de renderizado
-    math-engine/        Ecuaciones, matrices, sistemas, funciones por partes
-    tikz-shape-engine/  Formas TikZ (polígonos, vectores, ángulos, óptica…)
-    pgfplots-engine/    Plots 2D/3D, histogramas, box plots, heatmaps, series temporales
-    graph-node-engine/  Grafos dirigidos/no dirigidos (DAGs, FSMs, redes, SEM…)
-    circuitikz-engine/  Circuitos eléctricos (CircuiTikZ)
-    chemistry-engine/   Fórmulas mhchem + estructuras ChemFig
-    tree-forest-engine/ Árboles (forest package): sintácticos, filogenéticos, taxonomías
-    timeline-gantt-engine/ Gantt (pgfgantt) + timelines TikZ
-    math-engine/        (+ 4 engines adicionales)
+  engines/              12 rendering engines / 12 motores de renderizado
+    math-engine/        Equations, matrices, systems, piecewise functions
+    tikz-shape-engine/  TikZ shapes (polygons, vectors, angles, optics…)
+    pgfplots-engine/    2D/3D plots, bar/box charts, heatmaps, time series
+    graph-node-engine/  Directed/undirected graphs (DAGs, FSMs, networks, SEM…)
+    circuitikz-engine/  Electrical circuits
+    chemistry-engine/   mhchem formulas + ChemFig structures
+    tree-forest-engine/ Forest trees (syntactic, phylogenetic, Bloom…)
+    timeline-gantt-engine/ Gantt (pgfgantt) + TikZ timelines
+    (+ 4 more)
 
-  catalog-core/         35 plugins (math, geometry, statistics, physics, chemistry…)
-  catalog-extended/     25 plugins (análisis avanzado, ingeniería, ciencias sociales…)
-  catalog-experimental/ 10 plugins (5 reales + 5 bridges)
+  catalog-core/         35 plugins
+  catalog-extended/     25 plugins
+  catalog-experimental/ 10 plugins (5 real + 5 bridges)
 
-  plugin-registry.ts    Registro central: 69 entradas con pluginId, category, qualityLevel
-  index.ts              Punto de entrada público
+  plugin-registry.ts    Central registry: 69 entries
+  index.ts              Public entry point
 ```
 
-### Contrato del plugin
+### Plugin contract / Contrato del plugin
 
-Todo plugin implementa `VisualDiagramPlugin`:
 ```typescript
 interface VisualDiagramPlugin {
   readonly pluginId: string;
@@ -115,106 +132,97 @@ interface VisualDiagramPlugin {
   readonly category: PluginCategory;
   readonly qualityLevel: "official-core" | "official-extended" | "experimental";
   readonly requiredPackages: readonly string[];
-  readonly scopeWarning?: string;
+  readonly scopeWarning?: string;          // mandatory for non-core plugins
 
   create(): Promise<VisualFigureResult>;
   edit(existingFigurePath: string): Promise<VisualFigureResult>;
-  editWithSource?(figureId: string, sourceJson: string, caption?, label?): Promise<VisualFigureResult>;
+  editWithSource?(figureId, sourceJson, caption?, label?): Promise<VisualFigureResult>;
   validate(result: VisualFigureResult): Promise<ValidationResult>;
   exportLatexBlock(result: VisualFigureResult): string;
 }
 ```
 
-`BasePlugin<TDoc>` implementa todo excepto `buildDefaultDocument()`.  
-Los plugins concretos solo definen su documento por defecto.
+`BasePlugin<TDoc>` implements everything except `buildDefaultDocument()`.  
+`BasePlugin<TDoc>` implementa todo excepto `buildDefaultDocument()`.
 
-### Resultado de la creación
+### Create result / Resultado de la creación
 
 ```typescript
 interface VisualFigureResult {
-  figureId: string;         // fig_XXXX
+  figureId: string;           // fig_XXXX
   pluginId: string;
   engineId: string;
-  latexBlock: string;       // LaTeX completo listo para insertar
-  requiredPackages: string[]; // se inyectan en el preámbulo automáticamente
-  sourcePath: string;       // path relativo para persistencia
-  sourceJson?: string;      // JSON del documento del engine — para re-edición
+  latexBlock: string;         // complete LaTeX ready to insert / LaTeX completo
+  requiredPackages: string[]; // auto-injected into preamble / auto-inyectados
+  sourcePath: string;
+  sourceJson?: string;        // engine document JSON for re-editing / para re-edición
   warnings: string[];
 }
 ```
 
 ---
 
-## Motores disponibles
+## Rendering engines / Motores de renderizado
 
-| Engine | LaTeX packages | Usos típicos |
+| Engine | Packages / Paquetes | Typical use / Usos típicos |
 |---|---|---|
-| `math-engine` | amsmath, amssymb | Ecuaciones, matrices, sistemas, funciones por partes |
-| `tikz-shape-engine` | tikz | Formas geométricas, vectores, diagramas de cuerpo libre |
-| `pgfplots-engine` | pgfplots, tikz | Plots 2D/3D, estadística, series temporales, heatmaps |
-| `graph-node-engine` | tikz | DAGs, redes, FSMs, UML, SEM, causal loops |
-| `circuitikz-engine` | circuitikz | Circuitos eléctricos RC/RLC/op-amp |
-| `chemistry-engine` | chemfig, mhchem | Estructuras orgánicas, reacciones, mecanismos |
-| `tree-forest-engine` | forest | Árboles sintácticos, filogenéticos, Bloom |
-| `timeline-gantt-engine` | pgfgantt, tikz | Gantt de investigación, líneas de tiempo históricas |
-| `notation-engine` | amsthm, algorithm2e | Teoremas, pseudocódigo, glosarios |
-| `table-data-engine` | booktabs | Tablas con formato académico |
-| `external-vector-engine` | graphicx | Import-bridges para herramientas externas |
+| `math-engine` | amsmath, amssymb | Equations, matrices, systems / Ecuaciones, matrices |
+| `tikz-shape-engine` | tikz | Shapes, vectors, optics / Formas, vectores, óptica |
+| `pgfplots-engine` | pgfplots, tikz | 2D/3D plots, statistics / Gráficas, estadística |
+| `graph-node-engine` | tikz | DAGs, networks, FSMs, UML / Grafos, redes, autómatas |
+| `circuitikz-engine` | circuitikz | Electrical circuits / Circuitos eléctricos |
+| `chemistry-engine` | chemfig, mhchem | Organic structures, reactions / Estructuras, reacciones |
+| `tree-forest-engine` | forest | Syntactic, phylogenetic trees / Árboles sintácticos |
+| `timeline-gantt-engine` | pgfgantt, tikz | Gantt charts, timelines / Gantt, líneas de tiempo |
 
 ---
 
 ## Tests
 
 ```bash
-# Suite completa (103 tests unitarios + 3 stress tests de compilación)
+# Full suite — 173 tests (103 unit + 70 compile with real latexmk)
+# Suite completa — 173 tests (103 unitarios + 70 compilación real)
 npm test
 
-# Solo tests base (sin compilación real)
-npx vitest run --exclude "tests/visual-plugins/compile-tests/*stress*"
-
-# Stress test core: 35 plugins × create+validate + latexmk
+# Core: 35 plugins × create+validate + latexmk compilation
 npx vitest run tests/visual-plugins/compile-tests/core-plugins-stress.test.ts
 
-# Stress test extended math: 12 plugins × compilación
+# Extended math: 12 plugins × compilation
 npx vitest run tests/visual-plugins/compile-tests/extended-math-stress.test.ts
 
-# Stress test extended non-math: 13 plugins × compilación
+# Extended non-math: 13 plugins × compilation
 npx vitest run tests/visual-plugins/compile-tests/extended-other-stress.test.ts
 
-# Stress test experimental: 10 plugins × compilación
+# Experimental: 10 plugins × compilation
 npx vitest run tests/visual-plugins/compile-tests/experimental-stress.test.ts
 ```
 
-**Resultados:** 173/173 tests pasan · 70/70 compilaciones con latexmk reales.
+**Results / Resultados:** 173/173 tests pass · 70/70 real latexmk compilations.
 
 ---
 
-## Catálogos PDF
+## PDF catalogs / Catálogos PDF
 
-Los catálogos completos (generados con `npx tsx scripts/generate-*-catalog.ts`) están en:
+Generated with / Generados con `npx tsx scripts/generate-*-catalog.ts`:
 
 ```
-../catalogo-core-plugins/catalogo.pdf          (356 KB — 35 figuras)
-../catalogo-extended-plugins/catalogo.pdf      (313 KB — 25 figuras)
-../catalogo-experimental-plugins/catalogo.pdf  (267 KB — 10 figuras)
+../catalogo-core-plugins/catalogo.pdf         (356 KB — 35 figures / figuras)
+../catalogo-extended-plugins/catalogo.pdf     (313 KB — 25 figures / figuras)
+../catalogo-experimental-plugins/catalogo.pdf (267 KB — 10 figures / figuras)
 ```
 
 ---
 
-## Integración con TeXisStudio
-
-El catálogo se importa como módulo TypeScript en el frontend de la app:
+## Integration with TeXisStudio / Integración
 
 ```typescript
+// Imported via Vite alias — no pre-build needed
+// Importado via alias Vite — sin necesidad de compilar
 import { PLUGIN_REGISTRY, buildLatexInputBlock } from "@texisstudio/plugins";
 ```
 
-El alias `@texisstudio/plugins` apunta al source TypeScript directamente  
-(sin pre-compilación) vía `vite.config.ts`. Vite + esbuild transpilan  
-los archivos `.ts` del catálogo al vuelo.
-
-Los módulos Node.js incompatibles con browser (`FigureStore` usa `node:fs`)  
-son stubeados por Vite:
+Node.js-only modules (`FigureStore` uses `node:fs`) are stubbed by Vite:  
+Los módulos Node.js incompatibles con browser son stubeados:
 ```typescript
 // vite.config.ts
 alias: {
@@ -225,41 +233,40 @@ alias: {
 
 ---
 
-## Agregar un plugin
+## Adding a plugin / Agregar un plugin
 
 ```typescript
-// catalog-core/mi-disciplina/mi-plugin.ts
-export class MiPlugin extends BasePlugin<PGFPlotsDocument> {
+export class MyPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(pgfEngine, {
-      pluginId:        "mi-plugin",
-      displayName:     "Mi figura",
-      description:     "Descripción del tipo de figura.",
-      category:        "mathematics",
-      engineId:        "pgfplots-engine",
-      qualityLevel:    "official-core",
+      pluginId:         "my-plugin",
+      displayName:      "My Figure / Mi Figura",
+      category:         "mathematics",
+      engineId:         "pgfplots-engine",
+      qualityLevel:     "official-core",
       requiredPackages: ["pgfplots", "tikz"],
-      blockKind:       "input",
-      defaultCaption:  "Figura de ejemplo.",
-      defaultLabel:    "fig:ejemplo",
+      scopeWarning:     "Required for official-extended/experimental.",
+      blockKind:        "input",
+      defaultCaption:   "Example figure.",
+      defaultLabel:     "fig:example",
     });
   }
 
   protected buildDefaultDocument(): PGFPlotsDocument {
-    return { /* documento por defecto */ };
+    return { /* realistic default that compiles on first use */ };
   }
 }
 ```
 
-Luego registrar en `plugin-registry.ts` y exportar desde el `index.ts` del catálogo.
+Register in / Registrar en `plugin-registry.ts` and export from the catalog `index.ts`.
 
 ---
 
-## Desarrollo
+## Development / Desarrollo
 
 ```bash
 npm install
-npm run build       # TypeScript check
-npm test            # Suite completa (requiere latexmk para stress tests)
-npm run typecheck   # Solo verificación de tipos
+npm run build       # TypeScript check / verificación de tipos
+npm test            # Full suite (requires latexmk for stress tests)
+npm run typecheck   # Type check only / solo tipos
 ```
