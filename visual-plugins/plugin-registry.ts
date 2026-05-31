@@ -16,12 +16,14 @@ import {
   SyntaxTreesPlugin, ConceptMapsPlugin,
 } from "./catalog-core/index.js";
 
-// Extended (12 implemented)
+// Extended (16 implemented)
 import {
   Plots3DPlugin, PhaseDiagramsPlugin, HeatMapsPlugin,
   BarChartsPlugin, BoxViolinPlotsPlugin, ScatterRegressionPlugin,
+  SupplyDemandPlugin, UMLClassDiagramPlugin,
   ERDiagramPlugin, StateMachinePlugin, MarkovChainsPlugin, BodeNyquistPlugin,
   OrganicChemistryPlugin, ReactionMechanismsPlugin,
+  KaplanMeierPlugin, NetworkGraphPlugin,
 } from "./catalog-extended/index.js";
 
 // Experimental
@@ -84,8 +86,12 @@ export const PLUGIN_REGISTRY: PluginRegistryEntry[] = [
   { plugin: StateMachinePlugin,         category: "engineering-cs",    qualityLevel: "official-extended" },
   { plugin: MarkovChainsPlugin,         category: "mathematics",       qualityLevel: "official-extended" },
   { plugin: BodeNyquistPlugin,          category: "engineering-cs",    qualityLevel: "official-extended" },
+  { plugin: SupplyDemandPlugin,          category: "humanities-social", qualityLevel: "official-extended" },
+  { plugin: UMLClassDiagramPlugin,      category: "engineering-cs",    qualityLevel: "official-extended" },
   { plugin: OrganicChemistryPlugin,     category: "chemistry",         qualityLevel: "official-extended" },
   { plugin: ReactionMechanismsPlugin,   category: "chemistry",         qualityLevel: "official-extended" },
+  { plugin: KaplanMeierPlugin,          category: "biology-medicine",  qualityLevel: "official-extended" },
+  { plugin: NetworkGraphPlugin,         category: "engineering-cs",    qualityLevel: "official-extended" },
   // ── experimental ────────────────────────────────────────────
   { plugin: AnatomicalDiagramsPlugin,   category: "biology-medicine",  qualityLevel: "experimental" },
   { plugin: BiomedicalIllustrationPlugin, category: "biology-medicine", qualityLevel: "experimental" },
