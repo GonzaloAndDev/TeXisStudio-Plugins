@@ -1,4 +1,4 @@
-import type { TimelineGanttDocument, TimelineTask, TimelineGroup, TimelineMode } from "./types.js";
+import type { TimelineGanttDocument, TimelineTask, TimelineGroup } from "./types.js";
 
 /** Escape LaTeX special characters in a Gantt label (& is the most common culprit). */
 function sanitizeGanttLabel(label: string): string {
@@ -35,8 +35,6 @@ export function serializeGantt(doc: TimelineGanttDocument): string {
 
   const totalStart = allTasks[0]?.start ?? "1";
   const totalEnd   = allTasks[allTasks.length - 1]?.end ?? "10";
-  const unit = doc.unit === "week" ? "week" : doc.unit === "month" ? "month" : "day";
-
   const header = [
     `\\begin{ganttchart}[`,
     `  hgrid, vgrid,`,

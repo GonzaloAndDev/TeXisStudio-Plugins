@@ -1,13 +1,10 @@
 import { BasePlugin } from "../../common/plugin-base/index.js";
 import { PGFPlotsEngine } from "../../engines/pgfplots-engine/engine.js";
-import { GraphNodeEngine } from "../../engines/graph-node-engine/engine.js";
 import { TreeForestEngine } from "../../engines/tree-forest-engine/engine.js";
 import type { PGFPlotsDocument } from "../../engines/pgfplots-engine/types.js";
-import type { GraphNodeDocument } from "../../engines/graph-node-engine/types.js";
 import type { TreeForestDocument } from "../../engines/tree-forest-engine/types.js";
 
 const pgfEng   = new PGFPlotsEngine();
-const graphEng = new GraphNodeEngine();
 const treeEng  = new TreeForestEngine();
 
 // ── Plugin 67 — Time Series Plots ─────────────────────────────────
