@@ -1,4 +1,6 @@
 export type { TreeStyle, TreeGrowth, TreeNode, TreeForestDocument } from "./types.js";
+export { TreeForestEngine } from "./engine.js";
+export { serializeForest } from "./serializer.js";
 
 export const TREE_FOREST_ENGINE_ID = "tree-forest-engine" as const;
 

@@ -1,4 +1,5 @@
 export type { NotationType, NotationDocument } from "./types.js";
+export { NotationEngine } from "./engine.js";
 
 export const NOTATION_ENGINE_ID = "notation-engine" as const;
 

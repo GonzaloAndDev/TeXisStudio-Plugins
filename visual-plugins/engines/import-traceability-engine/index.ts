@@ -1,4 +1,5 @@
 export type { ImportedFileType, LicenseType, ImportWarning, ImportTraceabilityDocument } from "./types.js";
+export { ImportTraceabilityEngine } from "./engine.js";
 
 export const IMPORT_TRACEABILITY_ENGINE_ID = "import-traceability-engine" as const;
 
