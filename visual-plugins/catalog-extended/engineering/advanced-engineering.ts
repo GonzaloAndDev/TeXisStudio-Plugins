@@ -1,51 +1,40 @@
-import type { VisualDiagramPlugin, VisualFigureResult, ValidationResult } from "../../common/contracts/index.js";
-import { buildLatexInputBlock } from "../../common/export/latex-block.js";
+import { BasePlugin } from "../../common/plugin-base/index.js";
 import { GraphNodeEngine } from "../../engines/graph-node-engine/engine.js";
-import { CircuiTikZEngine } from "../../engines/circuitikz-engine/engine.js";
 import { PGFPlotsEngine } from "../../engines/pgfplots-engine/engine.js";
 import type { GraphNodeDocument } from "../../engines/graph-node-engine/types.js";
-import type { CircuiTikZDocument } from "../../engines/circuitikz-engine/types.js";
 import type { PGFPlotsDocument } from "../../engines/pgfplots-engine/types.js";
 
 const graphEng = new GraphNodeEngine();
-const circEng  = new CircuiTikZEngine();
 const pgfEng   = new PGFPlotsEngine();
 
-function fid(): string { return `fig_${Math.floor(Math.random() * 9000) + 1000}`; }
+// ── Plugin 44 — ER Diagrams ───────────────────────────────────────
 
-async function gR(id: string, pid: string, doc: GraphNodeDocument, caption: string, label: string): Promise<VisualFigureResult> {
-  const exp = await graphEng.export(doc, "latex");
-  const tex = `texisstudio-assets/figures/${id}/output.tex`;
-  return { figureId: id, pluginId: pid, engineId: "graph-node-engine", latexBlock: buildLatexInputBlock({ figureId: id, inputPath: tex, caption, label }), requiredPackages: exp.requiredPackages, sourcePath: `texisstudio-assets/figures/${id}/source.json`, outputPaths: { tex }, warnings: [] };
-}
+export class ERDiagramPlugin extends BasePlugin<GraphNodeDocument> {
+  constructor() {
+    super(graphEng, {
+      pluginId:        "er-diagrams",
+      displayName:     "ER Diagrams",
+      description:     "Entity-relationship diagrams for database design. TikZ native.",
+      category:        "engineering-cs",
+      engineId:        "graph-node-engine",
+      qualityLevel:    "official-extended",
+      requiredPackages: ["tikz"],
+      scopeWarning:    "Suitable for standard ER diagrams in theses. Complex schemas with many entities benefit from Draw.io exported as PDF.",
+      blockKind:       "input",
+      defaultCaption:  "Entity-relationship diagram.",
+      defaultLabel:    "fig:er-diagram",
+    });
+  }
 
-async function pgfR(id: string, pid: string, doc: PGFPlotsDocument, caption: string, label: string): Promise<VisualFigureResult> {
-  const exp = await pgfEng.export(doc, "latex");
-  const tex = `texisstudio-assets/figures/${id}/output.tex`;
-  return { figureId: id, pluginId: pid, engineId: "pgfplots-engine", latexBlock: buildLatexInputBlock({ figureId: id, inputPath: tex, caption, label }), requiredPackages: exp.requiredPackages, sourcePath: `texisstudio-assets/figures/${id}/source.json`, outputPaths: { tex }, warnings: [] };
-}
-
-// Plugin 44 — ER diagrams
-export class ERDiagramPlugin implements VisualDiagramPlugin {
-  readonly pluginId = "er-diagrams";
-  readonly displayName = "ER Diagrams";
-  readonly description = "Entity-relationship diagrams for database design. TikZ native.";
-  readonly category = "engineering-cs" as const;
-  readonly engineId = "graph-node-engine";
-  readonly qualityLevel = "official-extended" as const;
-  readonly requiredPackages = ["tikz"] as const;
-  readonly scopeWarning = "Suitable for standard ER diagrams in theses. Complex schemas with many entities may benefit from a dedicated tool (e.g. draw.io) exported as PDF.";
-
-  async create(): Promise<VisualFigureResult> {
-    const id = fid();
-    const doc: GraphNodeDocument = {
+  protected buildDefaultDocument(): GraphNodeDocument {
+    return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        { id: "student",  label: "Student",   shape: "rectangle", position: { x: 0, y: 0 } },
-        { id: "course",   label: "Course",    shape: "rectangle", position: { x: 4, y: 0 } },
-        { id: "enroll",   label: "Enrolls",   shape: "diamond",   position: { x: 2, y: 0 } },
-        { id: "sid",      label: "StudentID", shape: "ellipse",   position: { x: -1, y: -1.5 } },
-        { id: "cid",      label: "CourseID",  shape: "ellipse",   position: { x: 5, y: -1.5 } },
+        { id: "student", label: "Student",   shape: "rectangle", position: { x: 0, y: 0 } },
+        { id: "course",  label: "Course",    shape: "rectangle", position: { x: 4, y: 0 } },
+        { id: "enroll",  label: "Enrolls",   shape: "diamond",   position: { x: 2, y: 0 } },
+        { id: "sid",     label: "StudentID", shape: "ellipse",   position: { x: -1, y: -1.5 } },
+        { id: "cid",     label: "CourseID",  shape: "ellipse",   position: { x: 5,  y: -1.5 } },
       ],
       edges: [
         { id: "e1", from: "student", to: "enroll",  type: "undirected" },
@@ -55,28 +44,30 @@ export class ERDiagramPlugin implements VisualDiagramPlugin {
       ],
       layout: "manual", tikzLibraries: ["shapes.geometric"], directed: false,
     };
-    return gR(id, this.pluginId, doc, "Entity-relationship diagram.", "fig:er-diagram");
   }
-
-  async edit(_p: string): Promise<VisualFigureResult> { return this.create(); }
-  async validate(_r: VisualFigureResult): Promise<ValidationResult> { return { valid: true, issues: [] }; }
-  exportLatexBlock(r: VisualFigureResult): string { return r.latexBlock; }
 }
 
-// Plugin 47 — State machines
-export class StateMachinePlugin implements VisualDiagramPlugin {
-  readonly pluginId = "state-machines";
-  readonly displayName = "State Machines";
-  readonly description = "Finite state machines and automata with states, transitions, and labels.";
-  readonly category = "engineering-cs" as const;
-  readonly engineId = "graph-node-engine";
-  readonly qualityLevel = "official-extended" as const;
-  readonly requiredPackages = ["tikz"] as const;
-  readonly scopeWarning = "Suitable for DFA/NFA diagrams in theses. Self-loops and complex curved transitions may need manual TikZ adjustment.";
+// ── Plugin 47 — State Machines ────────────────────────────────────
 
-  async create(): Promise<VisualFigureResult> {
-    const id = fid();
-    const doc: GraphNodeDocument = {
+export class StateMachinePlugin extends BasePlugin<GraphNodeDocument> {
+  constructor() {
+    super(graphEng, {
+      pluginId:        "state-machines",
+      displayName:     "State Machines",
+      description:     "Finite state machines and automata with states, transitions, and labels.",
+      category:        "engineering-cs",
+      engineId:        "graph-node-engine",
+      qualityLevel:    "official-extended",
+      requiredPackages: ["tikz"],
+      scopeWarning:    "Suitable for DFA/NFA diagrams in theses. Self-loops and complex curved transitions may need manual TikZ adjustment.",
+      blockKind:       "input",
+      defaultCaption:  "Finite state machine.",
+      defaultLabel:    "fig:fsm",
+    });
+  }
+
+  protected buildDefaultDocument(): GraphNodeDocument {
+    return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
         { id: "q0", label: "$q_0$", shape: "circle", position: { x: 0, y: 0 }, style: "initial" },
@@ -91,32 +82,34 @@ export class StateMachinePlugin implements VisualDiagramPlugin {
       ],
       layout: "manual", tikzLibraries: ["automata", "arrows.meta"], directed: true,
     };
-    return gR(id, this.pluginId, doc, "Finite state machine.", "fig:fsm");
   }
-
-  async edit(_p: string): Promise<VisualFigureResult> { return this.create(); }
-  async validate(_r: VisualFigureResult): Promise<ValidationResult> { return { valid: true, issues: [] }; }
-  exportLatexBlock(r: VisualFigureResult): string { return r.latexBlock; }
 }
 
-// Plugin 49 — Markov chains
-export class MarkovChainsPlugin implements VisualDiagramPlugin {
-  readonly pluginId = "markov-chains";
-  readonly displayName = "Markov Chains";
-  readonly description = "Markov chain diagrams with states and transition probabilities.";
-  readonly category = "mathematics" as const;
-  readonly engineId = "graph-node-engine";
-  readonly qualityLevel = "official-extended" as const;
-  readonly requiredPackages = ["tikz"] as const;
-  readonly scopeWarning = "Suitable for illustrative Markov chains in theses. For inference or simulation, use dedicated tools (R, Python) and import results as figures.";
+// ── Plugin 49 — Markov Chains ─────────────────────────────────────
 
-  async create(): Promise<VisualFigureResult> {
-    const id = fid();
-    const doc: GraphNodeDocument = {
+export class MarkovChainsPlugin extends BasePlugin<GraphNodeDocument> {
+  constructor() {
+    super(graphEng, {
+      pluginId:        "markov-chains",
+      displayName:     "Markov Chains",
+      description:     "Markov chain diagrams with states and transition probabilities.",
+      category:        "mathematics",
+      engineId:        "graph-node-engine",
+      qualityLevel:    "official-extended",
+      requiredPackages: ["tikz"],
+      scopeWarning:    "Suitable for illustrative Markov chains in theses. For inference or simulation, use R/Python and import results as figures.",
+      blockKind:       "input",
+      defaultCaption:  "Markov chain.",
+      defaultLabel:    "fig:markov",
+    });
+  }
+
+  protected buildDefaultDocument(): GraphNodeDocument {
+    return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        { id: "s1", label: "$S_1$", shape: "circle", position: { x: 0, y: 0 } },
-        { id: "s2", label: "$S_2$", shape: "circle", position: { x: 3, y: 0 } },
+        { id: "s1", label: "$S_1$", shape: "circle", position: { x: 0,   y: 0 } },
+        { id: "s2", label: "$S_2$", shape: "circle", position: { x: 3,   y: 0 } },
         { id: "s3", label: "$S_3$", shape: "circle", position: { x: 1.5, y: -2 } },
       ],
       edges: [
@@ -128,40 +121,41 @@ export class MarkovChainsPlugin implements VisualDiagramPlugin {
       ],
       layout: "manual", tikzLibraries: ["arrows.meta"], directed: true,
     };
-    return gR(id, this.pluginId, doc, "Markov chain.", "fig:markov");
   }
-
-  async edit(_p: string): Promise<VisualFigureResult> { return this.create(); }
-  async validate(_r: VisualFigureResult): Promise<ValidationResult> { return { valid: true, issues: [] }; }
-  exportLatexBlock(r: VisualFigureResult): string { return r.latexBlock; }
 }
 
-// Plugin 55 — Bode/Nyquist
-export class BodeNyquistPlugin implements VisualDiagramPlugin {
-  readonly pluginId = "bode-nyquist";
-  readonly displayName = "Bode / Nyquist Diagrams";
-  readonly description = "Frequency response diagrams: Bode magnitude/phase and Nyquist plots.";
-  readonly category = "engineering-cs" as const;
-  readonly engineId = "pgfplots-engine";
-  readonly qualityLevel = "official-extended" as const;
-  readonly requiredPackages = ["pgfplots", "tikz"] as const;
-  readonly scopeWarning = "Suitable for standard Bode and Nyquist diagrams in theses. Requires manual entry of the transfer function expression.";
+// ── Plugin 55 — Bode / Nyquist Diagrams ──────────────────────────
 
-  async create(): Promise<VisualFigureResult> {
-    const id = fid();
-    const doc: PGFPlotsDocument = {
+export class BodeNyquistPlugin extends BasePlugin<PGFPlotsDocument> {
+  constructor() {
+    super(pgfEng, {
+      pluginId:        "bode-nyquist",
+      displayName:     "Bode / Nyquist Diagrams",
+      description:     "Frequency response diagrams: Bode magnitude/phase and Nyquist plots.",
+      category:        "engineering-cs",
+      engineId:        "pgfplots-engine",
+      qualityLevel:    "official-extended",
+      requiredPackages: ["pgfplots", "tikz"],
+      scopeWarning:    "Suitable for standard Bode and Nyquist diagrams in theses. Requires manual entry of the transfer function expression.",
+      blockKind:       "input",
+      defaultCaption:  "Bode magnitude plot.",
+      defaultLabel:    "fig:bode",
+    });
+  }
+
+  protected buildDefaultDocument(): PGFPlotsDocument {
+    return {
       engineId: "pgfplots-engine", version: "1.0.0",
-      series: [{ id: "mag", label: "Magnitude (dB)", plotType: "function2d", expression: "-20*log10(sqrt(1+x^2))", domain: [0.01, 100], color: "blue" }],
+      series: [{
+        id: "mag", label: "Magnitude (dB)",
+        plotType: "function2d",
+        expression: "-20*log10(sqrt(1+x^2))",
+        domain: [0.01, 100],
+        color: "blue",
+      }],
       xLabel: "$\\omega$ (rad/s)", yLabel: "Magnitude (dB)",
       xScale: "log", yScale: "linear",
       showLegend: true, grid: "both",
     };
-    return pgfR(id, this.pluginId, doc, "Bode magnitude plot.", "fig:bode");
   }
-
-  async edit(_p: string): Promise<VisualFigureResult> { return this.create(); }
-  async validate(_r: VisualFigureResult): Promise<ValidationResult> { return { valid: true, issues: [] }; }
-  exportLatexBlock(r: VisualFigureResult): string { return r.latexBlock; }
 }
-
-export { };

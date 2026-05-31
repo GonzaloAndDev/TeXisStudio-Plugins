@@ -2,5 +2,6 @@
 // Plugins 36–60: good output with documented limits
 
 export { Plots3DPlugin, PhaseDiagramsPlugin, HeatMapsPlugin } from "./math/advanced-plots.js";
+export { BarChartsPlugin, BoxViolinPlotsPlugin, ScatterRegressionPlugin } from "./math/statistics-extended.js";
 export { ERDiagramPlugin, StateMachinePlugin, MarkovChainsPlugin, BodeNyquistPlugin } from "./engineering/advanced-engineering.js";
 export { OrganicChemistryPlugin, ReactionMechanismsPlugin } from "./chemistry/advanced-chemistry.js";

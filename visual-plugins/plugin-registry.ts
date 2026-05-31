@@ -16,9 +16,10 @@ import {
   SyntaxTreesPlugin, ConceptMapsPlugin,
 } from "./catalog-core/index.js";
 
-// Extended (sample — remainder added as implemented)
+// Extended (12 implemented)
 import {
   Plots3DPlugin, PhaseDiagramsPlugin, HeatMapsPlugin,
+  BarChartsPlugin, BoxViolinPlotsPlugin, ScatterRegressionPlugin,
   ERDiagramPlugin, StateMachinePlugin, MarkovChainsPlugin, BodeNyquistPlugin,
   OrganicChemistryPlugin, ReactionMechanismsPlugin,
 } from "./catalog-extended/index.js";
@@ -76,6 +77,9 @@ export const PLUGIN_REGISTRY: PluginRegistryEntry[] = [
   { plugin: Plots3DPlugin,              category: "mathematics",       qualityLevel: "official-extended" },
   { plugin: PhaseDiagramsPlugin,        category: "mathematics",       qualityLevel: "official-extended" },
   { plugin: HeatMapsPlugin,             category: "mathematics",       qualityLevel: "official-extended" },
+  { plugin: BarChartsPlugin,            category: "mathematics",       qualityLevel: "official-extended" },
+  { plugin: BoxViolinPlotsPlugin,       category: "mathematics",       qualityLevel: "official-extended" },
+  { plugin: ScatterRegressionPlugin,    category: "mathematics",       qualityLevel: "official-extended" },
   { plugin: ERDiagramPlugin,            category: "engineering-cs",    qualityLevel: "official-extended" },
   { plugin: StateMachinePlugin,         category: "engineering-cs",    qualityLevel: "official-extended" },
   { plugin: MarkovChainsPlugin,         category: "mathematics",       qualityLevel: "official-extended" },
