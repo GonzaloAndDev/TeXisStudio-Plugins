@@ -13,7 +13,7 @@ import type { FigureManifest } from "../manifest/schema.js";
 import { figurePath } from "../manifest/schema.js";
 import { buildLatexInputBlock, buildInlineEquationBlock, buildDisplayMathBlock, buildRawBlock } from "../export/latex-block.js";
 import { validateLatexStructure } from "../latex/structural-validator.js";
-import { FigureStore } from "../persistence/figure-store.js";
+import type { FigureStore } from "../persistence/figure-store.js";
 
 export type BlockKind = "input" | "inline-equation" | "display-math" | "raw";
 
@@ -99,13 +99,28 @@ export abstract class BasePlugin<TDoc extends EngineDocument> implements VisualD
       if (loaded) {
         const doc = loaded.source.data as TDoc;
         const caption = loaded.manifest.title || this.config.defaultCaption;
-        // Preserve label by reading it back from the persisted block if present.
         const label = this.extractLabel(loaded.tex) ?? this.qualifiedLabel();
         return this.materialize(figureId, doc, caption, label);
       }
     }
-    // No persisted source available — start from default but keep the id.
     return this.materialize(figureId, this.buildDefaultDocument(), this.config.defaultCaption, this.qualifiedLabel());
+  }
+
+  /** Browser-safe edit path: accepts previously-persisted sourceJson instead of
+   *  reading from disk. Used by the Tauri frontend integration. */
+  async editWithSource(figureId: string, sourceJson: string, caption?: string, label?: string): Promise<VisualFigureResult> {
+    try {
+      const parsed = JSON.parse(sourceJson) as { data?: TDoc };
+      const doc: TDoc = (parsed.data ?? parsed) as TDoc;
+      return this.materialize(
+        figureId,
+        doc,
+        caption ?? this.config.defaultCaption,
+        label ?? this.qualifiedLabel(),
+      );
+    } catch {
+      return this.materialize(figureId, this.buildDefaultDocument(), caption ?? this.config.defaultCaption, label ?? this.qualifiedLabel());
+    }
   }
 
   async validate(result: VisualFigureResult): Promise<ValidationResult> {
@@ -149,6 +164,7 @@ export abstract class BasePlugin<TDoc extends EngineDocument> implements VisualD
       sourcePath: `${figurePath(figureId)}/source.json`,
       outputPaths: { tex: texPath },
       warnings: [...exported.warnings, ...(this.scopeWarning ? [this.scopeWarning] : [])],
+      sourceJson: JSON.stringify(source),
     };
 
     if (this.store) {

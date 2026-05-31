@@ -18,6 +18,9 @@ export interface VisualFigureResult {
     preview?: string;
   };
   warnings: string[];
+  /** Serialized JSON of the engine document — always populated by BasePlugin.
+   *  Persist this alongside the figure so the user can re-open and edit later. */
+  sourceJson?: string;
 }
 
 export interface VisualDiagramPlugin {
@@ -32,6 +35,8 @@ export interface VisualDiagramPlugin {
 
   create(): Promise<VisualFigureResult>;
   edit(existingFigurePath: string): Promise<VisualFigureResult>;
+  /** Re-edit a figure using previously-persisted source data (browser-safe path). */
+  editWithSource?(figureId: string, sourceJson: string, caption?: string, label?: string): Promise<VisualFigureResult>;
   validate(result: VisualFigureResult): Promise<ValidationResult>;
   exportLatexBlock(result: VisualFigureResult): string;
 }
