@@ -1,4 +1,6 @@
 export type { PlotType, AxisScale, DataSeries, PGFPlotsDocument } from "./types.js";
+export { PGFPlotsEngine } from "./engine.js";
+export { serializePGFPlots } from "./serializer.js";
 
 export const PGFPLOTS_ENGINE_ID = "pgfplots-engine" as const;
 

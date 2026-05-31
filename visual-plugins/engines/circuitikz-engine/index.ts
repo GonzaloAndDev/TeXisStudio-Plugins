@@ -1,4 +1,6 @@
 export type { ComponentType, Direction, CircuitNode, CircuitComponent, CircuitConnection, CircuiTikZDocument } from "./types.js";
+export { CircuiTikZEngine } from "./engine.js";
+export { serializeCircuit } from "./serializer.js";
 
 export const CIRCUITIKZ_ENGINE_ID = "circuitikz-engine" as const;
 
