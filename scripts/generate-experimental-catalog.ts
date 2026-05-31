@@ -90,7 +90,13 @@ for (const entry of entries) {
 }
 console.log(`\n  ✓ ${ok} OK, ✗ ${fail} errores\n`);
 
-const pkgLines = [...allPkgs].filter(p => !p.startsWith("pgfplotsset")).map(p => `\\usepackage{${p}}`).join("\n");
+function packageLine(pkg: string): string {
+  return pkg === "mhchem"
+    ? "\\usepackage[version=4]{mhchem}"
+    : `\\usepackage{${pkg}}`;
+}
+
+const pkgLines = [...allPkgs].filter(p => !p.startsWith("pgfplotsset")).map(packageLine).join("\n");
 
 const sections: string[] = [];
 let n = 0;
@@ -123,9 +129,9 @@ const latex = `% TeXisStudio — Catálogo Experimental (${n} plugins)
 \\usepackage{hyperref}\\hypersetup{colorlinks=true,linkcolor=blue!70!black}
 \\usepackage{float}\\usepackage{caption}\\usepackage{tcolorbox}\\usepackage{fancyhdr}
 ${pkgLines}
-${allPkgs.has("pgfplots") ? "\\\\pgfplotsset{compat=1.18}" : ""}
+${allPkgs.has("pgfplots") ? "\\pgfplotsset{compat=1.18}" : ""}
 \\usetikzlibrary{shapes.geometric,arrows.meta,positioning,calc}
-\\pagestyle{fancy}\\fancyhf{}
+\\pagestyle{fancy}\\setlength{\\headheight}{14pt}\\fancyhf{}
 \\rhead{\\small TeXisStudio — Experimental}\\lhead{\\small \\leftmark}\\cfoot{\\thepage}
 \\captionsetup{font=small,labelfont=bf}
 \\title{{\\Large\\textbf{TeXisStudio}}\\\\[0.4em]

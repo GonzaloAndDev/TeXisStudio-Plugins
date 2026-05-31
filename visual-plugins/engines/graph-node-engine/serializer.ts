@@ -21,9 +21,27 @@ function nodeStyle(node: GraphNode): string {
   return parts.join(", ");
 }
 
-// Sanitize a label for LaTeX: strip literal \n and normalise whitespace
+function escapeLatexText(text: string): string {
+  return text
+    .replace(/\\/g, "\\textbackslash{}")
+    .replace(/&/g, "\\&")
+    .replace(/%/g, "\\%")
+    .replace(/#/g, "\\#")
+    .replace(/_/g, "\\_");
+}
+
+function escapeLatexOutsideMath(label: string): string {
+  return label
+    .split(/(\$[^$]*\$)/g)
+    .map(part => part.startsWith("$") && part.endsWith("$") ? part : escapeLatexText(part))
+    .join("");
+}
+
+// Sanitize a label for LaTeX: strip literal \n, normalise whitespace, and escape
+// text-mode specials while preserving simple inline math fragments.
 function sanitizeLabel(label: string): string {
-  return label.replace(/\\n/g, " ").replace(/\n/g, " ").replace(/\s{2,}/g, " ").trim();
+  const normalized = label.replace(/\\n/g, " ").replace(/\n/g, " ").replace(/\s{2,}/g, " ").trim();
+  return escapeLatexOutsideMath(normalized);
 }
 
 /**
@@ -74,6 +92,12 @@ function edgeStyle(edge: GraphEdge): string {
 
 function serializeEdge(edge: GraphEdge, nodePositions: Map<string, { x: number; y: number }>): string {
   const style = edgeStyle(edge);
+  if (edge.from === edge.to) {
+    const labelStr = edge.label
+      ? ` node[above, fill=white, font=\\scriptsize, inner sep=1pt] {${sanitizeLabel(edge.label)}}`
+      : "";
+    return `  \\draw${style} (${edge.from}) edge[loop above]${labelStr} (${edge.to});`;
+  }
   const fromPos = nodePositions.get(edge.from);
   const toPos   = nodePositions.get(edge.to);
   const labelPos = edgeLabelPos(fromPos, toPos);

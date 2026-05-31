@@ -7,12 +7,19 @@ export function serializeFormula(f: ChemFormula): string {
   return out;
 }
 
+function sanitizeCondition(condition: string): string {
+  return condition
+    .replace(/\\textdegree\{\}\s*C/g, "^{\\circ}C")
+    .replace(/\\textdegree\s*C/g, "^{\\circ}C")
+    .replace(/°\s*C/g, "^{\\circ}C");
+}
+
 export function serializeReaction(r: ChemReaction): string {
   const reactants = r.reactants.map(serializeFormula).join(" + ");
   const products  = r.products.map(serializeFormula).join(" + ");
 
-  const above = r.conditionsAbove ?? r.catalyst ?? "";
-  const below  = r.conditionsBelow ?? "";
+  const above = sanitizeCondition(r.conditionsAbove ?? r.catalyst ?? "");
+  const below  = sanitizeCondition(r.conditionsBelow ?? "");
 
   if (above || below) {
     return `\\ce{${reactants} ->[${above}][${below}] ${products}}`;

@@ -80,7 +80,10 @@ export class MathEngine implements VisualEngine {
       return this.generateSystemLatex(doc as SystemDocument);
     }
 
-    const body = doc.tree.map(serializeNode).join(" ");
+    const separator = doc.mode === "align" || doc.mode === "gather"
+      ? " \\\\\n  "
+      : " ";
+    const body = doc.tree.map(serializeNode).join(separator);
     return wrapInEnvironment(body, doc.mode, doc.numbered, doc.label);
   }
 

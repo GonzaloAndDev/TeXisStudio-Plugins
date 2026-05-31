@@ -1,20 +1,24 @@
 import type { TimelineGanttDocument, TimelineTask, TimelineGroup } from "./types.js";
 
-/** Escape LaTeX special characters in a Gantt label (& is the most common culprit). */
-function sanitizeGanttLabel(label: string): string {
+/** Escape LaTeX special characters in timeline/Gantt labels. */
+function sanitizeLabel(label: string): string {
   return label
     .replace(/&/g, "\\&")
     .replace(/%/g, "\\%")
-    .replace(/#/g, "\\#")
-    .replace(/\$/g, "\\$");
+    .replace(/#/g, "\\#");
+}
+
+function sanitizeId(id: string): string {
+  return id.replace(/[^A-Za-z0-9_-]/g, "_");
 }
 
 function ganttBar(task: TimelineTask): string {
-  const label = sanitizeGanttLabel(task.label);
+  const label = sanitizeLabel(task.label);
+  const name = sanitizeId(task.id);
   if (task.milestone) {
-    return `  \\ganttmilestone{${label}}{${task.start}}`;
+    return `  \\ganttmilestone[name=${name}]{${label}}{${task.start}}`;
   }
-  return `  \\ganttbar{${label}}{${task.start}}{${task.end}}`;
+  return `  \\ganttbar[name=${name}]{${label}}{${task.start}}{${task.end}}`;
 }
 
 function ganttGroup(group: TimelineGroup, tasks: TimelineTask[]): string {
@@ -23,7 +27,7 @@ function ganttGroup(group: TimelineGroup, tasks: TimelineTask[]): string {
   const first = groupTasks[0]!;
   const last  = groupTasks[groupTasks.length - 1]!;
   const lines = [
-    `  \\ganttgroup{${group.label}}{${first.start}}{${last.end}}`,
+    `  \\ganttgroup{${sanitizeLabel(group.label)}}{${first.start}}{${last.end}}`,
     ...groupTasks.map(ganttBar),
   ];
   return lines.join(" \\\\\n");
@@ -58,7 +62,7 @@ export function serializeGantt(doc: TimelineGanttDocument): string {
   const deps: string[] = [];
   for (const task of allTasks) {
     for (const dep of task.dependsOn ?? []) {
-      deps.push(`  \\ganttlink{${dep}}{${task.id}}`);
+      deps.push(`  \\ganttlink{${sanitizeId(dep)}}{${sanitizeId(task.id)}}`);
     }
   }
 
@@ -74,8 +78,8 @@ export function serializeTimeline(doc: TimelineGanttDocument): string {
   events.forEach((ev, i) => {
     const x = i + 1;
     lines.push(`  \\draw (${x}cm, 3pt) -- (${x}cm, -3pt);`);
-    lines.push(`  \\node[above, font=\\tiny, align=center] at (${x}cm, 6pt) {${ev.start}};`);
-    lines.push(`  \\node[below, font=\\small, align=center, text width=1.5cm] at (${x}cm, -10pt) {${ev.label}};`);
+    lines.push(`  \\node[above, font=\\tiny, align=center] at (${x}cm, 6pt) {${sanitizeLabel(ev.start)}};`);
+    lines.push(`  \\node[below, font=\\small, align=center, text width=1.5cm] at (${x}cm, -10pt) {${sanitizeLabel(ev.label)}};`);
   });
   lines.push(`\\end{tikzpicture}`);
   return lines.join("\n");

@@ -80,7 +80,7 @@ export class StateMachinePlugin extends BasePlugin<GraphNodeDocument> {
       engineId:        "graph-node-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Suitable for DFA/NFA and reactive system diagrams in theses. Self-loops may need manual TikZ curves.",
+      scopeWarning:    "Suitable for DFA/NFA and reactive system diagrams in theses. For large automata, generate from Graphviz/PlantUML and import as PDF.",
       blockKind:       "input",
       defaultCaption:  "Traffic-light finite state machine (timer-driven).",
       defaultLabel:    "fig:fsm",

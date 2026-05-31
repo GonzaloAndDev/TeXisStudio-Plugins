@@ -57,6 +57,23 @@ describe("TimelineGanttEngine", () => {
     expect(result.requiredPackages).toContain("pgfgantt");
   });
 
+  it("names Gantt tasks so dependencies can link reliably", async () => {
+    const doc: TimelineGanttDocument = {
+      engineId: "timeline-gantt-engine", version: "1.0.0",
+      mode: "gantt", unit: "week",
+      groups: [{ id: "g1", label: "Phase 1 & setup" }],
+      tasks: [
+        { id: "task.1", label: "Literature & scope", start: "1", end: "3", group: "g1" },
+        { id: "task.2", label: "Draft #1", start: "4", end: "5", group: "g1", dependsOn: ["task.1"] },
+      ],
+    };
+    const result = await ganttEng.export(doc, "latex");
+    expect(result.content).toContain("\\ganttgroup{Phase 1 \\& setup}");
+    expect(result.content).toContain("\\ganttbar[name=task_1]{Literature \\& scope}");
+    expect(result.content).toContain("\\ganttbar[name=task_2]{Draft \\#1}");
+    expect(result.content).toContain("\\ganttlink{task_1}{task_2}");
+  });
+
   it("generates tikzpicture for timeline mode", async () => {
     const doc: TimelineGanttDocument = {
       engineId: "timeline-gantt-engine", version: "1.0.0",

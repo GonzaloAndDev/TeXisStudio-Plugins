@@ -39,6 +39,19 @@ describe("MathEngine — equation mode", () => {
     expect(result.content).toBe("$x^2$");
   });
 
+  it("places multiple align rows on separate lines", async () => {
+    const doc: MathEngineDocument = {
+      engineId: "math-engine", version: "1.0.0",
+      mode: "align", numbered: false,
+      tree: [
+        { type: "symbol", content: "x &= 1" },
+        { type: "symbol", content: "y &= 2" },
+      ],
+    };
+    const result = await engine.export(doc, "latex");
+    expect(result.content).toContain("x &= 1 \\\\\n  y &= 2");
+  });
+
   it("generates fraction", async () => {
     const doc: MathEngineDocument = {
       engineId: "math-engine", version: "1.0.0",

@@ -40,7 +40,20 @@ describe("serializeReaction", () => {
       arrow: "<=>",
       conditionsAbove: "450 °C",
     });
-    expect(result).toContain("->[450 °C]");
+    expect(result).toContain("->[450 ^{\\circ}C]");
+  });
+
+  it("normalizes LaTeX degree commands for mhchem labels", () => {
+    const result = serializeReaction({
+      type: "reaction",
+      reactants: [{ type: "formula", text: "N2" }, { type: "formula", text: "3H2" }],
+      products: [{ type: "formula", text: "2NH3" }],
+      arrow: "->",
+      conditionsAbove: "Fe cat., 400\\,\\textdegree C",
+      conditionsBelow: "200\\,atm",
+    });
+    expect(result).toContain("400\\,^{\\circ}C");
+    expect(result).not.toContain("\\textdegree");
   });
 });
 

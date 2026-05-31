@@ -174,6 +174,20 @@ describe("LaTeX compile — PGFPlotsEngine", () => {
     if (skip(result, "PGFPlots normal dist")) return;
     expect(result.ok, result.errors.join("\n")).toBe(true);
   });
+
+  it("serializes 3D surface options without empty PGFPlots options", async () => {
+    const doc: PGFPlotsDocument = {
+      engineId: "pgfplots-engine", version: "1.0.0",
+      series: [{ id: "surf", label: "", plotType: "surface",
+        expression: "{exp(-0.5*(x^2+y^2))/(2*pi)}", domain: [-3, 3] }],
+      xLabel: "$x$", yLabel: "$y$", xScale: "linear", yScale: "linear",
+      showLegend: false, grid: "major",
+      pgfplotsOptions: "view={45}{35}",
+    };
+    const { content } = await eng.export(doc, "latex");
+    expect(content).toContain("\\addplot3[surf, samples=20, domain=-3:3, domain y=-3:3]");
+    expect(content).not.toContain(", ,");
+  });
 });
 
 // ── Graph-Node Engine ────────────────────────────────────────────────────────
@@ -201,6 +215,34 @@ describe("LaTeX compile — GraphNodeEngine", () => {
     const result = compileLatexFragment(content as string, { packages: ["tikz"] });
     if (skip(result, "GraphNode flowchart")) return;
     expect(result.ok, result.errors.join("\n")).toBe(true);
+  });
+
+  it("escapes text labels while preserving inline math", async () => {
+    const doc: GraphNodeDocument = {
+      engineId: "graph-node-engine", version: "1.0.0",
+      nodes: [
+        { id: "a", label: "Data_1 & model $G(s)$", shape: "rectangle", position: { x: 0, y: 0 } },
+        { id: "b", label: "Output #1", shape: "rectangle", position: { x: 3, y: 0 } },
+      ],
+      edges: [{ id: "e1", from: "a", to: "b", type: "directed", label: "95% CI & $p<.05$" }],
+      layout: "manual", tikzLibraries: [], directed: true,
+    };
+    const { content } = await eng.export(doc, "latex");
+    expect(content).toContain("Data\\_1 \\& model $G(s)$");
+    expect(content).toContain("Output \\#1");
+    expect(content).toContain("95\\% CI \\& $p<.05$");
+  });
+
+  it("serializes self-loops as TikZ loop edges", async () => {
+    const doc: GraphNodeDocument = {
+      engineId: "graph-node-engine", version: "1.0.0",
+      nodes: [{ id: "S", label: "State", shape: "circle", position: { x: 0, y: 0 } }],
+      edges: [{ id: "stay", from: "S", to: "S", type: "directed", label: "0.8" }],
+      layout: "manual", tikzLibraries: [], directed: true,
+    };
+    const { content } = await eng.export(doc, "latex");
+    expect(content).toContain("(S) edge[loop above]");
+    expect(content).not.toContain("(S) -- (S)");
   });
 });
 

@@ -127,9 +127,15 @@ function sanitizeTex(s: string): string {
     .replace(/[&#]/g, "\\$&");
 }
 
+function packageLine(pkg: string): string {
+  return pkg === "mhchem"
+    ? "\\usepackage[version=4]{mhchem}"
+    : `\\usepackage{${pkg}}`;
+}
+
 const pkgLines = [...allPackages]
   .filter(p => !p.startsWith("pgfplotsset"))
-  .map(p => `\\usepackage{${p}}`)
+  .map(packageLine)
   .join("\n");
 
 const sectionBlocks: string[] = [];
@@ -187,6 +193,7 @@ ${pkgLines}
 
 % ── Estilo ────────────────────────────────────────────────────────
 \\pagestyle{fancy}
+\\setlength{\\headheight}{14pt}
 \\fancyhf{}
 \\rhead{\\small TeXisStudio — Catálogo Core}
 \\lhead{\\small \\leftmark}

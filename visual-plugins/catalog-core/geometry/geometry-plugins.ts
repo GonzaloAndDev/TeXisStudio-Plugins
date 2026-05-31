@@ -70,8 +70,8 @@ export class PlaneGeometryPlugin extends BasePlugin<TikzShapeDocument> {
         // Altitude from C to hypotenuse AB
         { id: "alt",   type: "line",      coords: [{ x: 1.8, y: 2.4 }, { x: 1.8, y: 0 }], lineStyle: "dashed" },
         // Angles
-        { id: "angA",  type: "angle",     coords: [{ x: 0, y: 0 }, { x: 0, y: 36 }, { x: 0.5, y: 0 }], label: "\\alpha" },
-        { id: "angB",  type: "angle",     coords: [{ x: 5, y: 0 }, { x: 0, y: 0 }, { x: 0.5, y: 0 }], label: "\\beta" },
+        { id: "angA",  type: "angle",     coords: [{ x: 0, y: 0 }, { x: 0, y: 53 }, { x: 0.5, y: 0 }], label: "\\alpha" },
+        { id: "angB",  type: "angle",     coords: [{ x: 5, y: 0 }, { x: 143, y: 180 }, { x: 0.5, y: 0 }], label: "\\beta" },
         // Labels
         { id: "lA",    type: "label",     coords: [{ x: -0.3, y: -0.3 }], label: "$A$" },
         { id: "lB",    type: "label",     coords: [{ x:  5.3, y: -0.3 }], label: "$B$" },

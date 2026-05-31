@@ -21,6 +21,13 @@ function seriesOptions(s: DataSeries): string {
   return parts.join(", ");
 }
 
+function compactOptions(parts: Array<string | undefined>): string {
+  return parts
+    .map(part => part?.trim())
+    .filter((part): part is string => !!part)
+    .join(", ");
+}
+
 function seriesCoords(s: DataSeries): string {
   const lines: string[] = [];
 
@@ -93,20 +100,21 @@ function seriesCoords(s: DataSeries): string {
 
   // ── Function / scatter / bar / other ────────────────────────────────────
   if (s.expression) {
-    const domain = s.domain ? `domain=${s.domain[0]}:${s.domain[1]}, ` : "";
+    const domain = s.domain ? `domain=${s.domain[0]}:${s.domain[1]}` : undefined;
     const opts = seriesOptions(s);
 
     if (s.plotType === "parametric") {
-      const optStr = (`variable=x, samples=80, ${domain}${opts}`).replace(/,\s*$/, "").trim();
+      const optStr = compactOptions(["variable=x", "samples=80", domain, opts]);
       lines.push(`  \\addplot${optStr ? `[${optStr}]` : ""} ${s.expression};`);
     } else if (s.plotType === "surface" || s.plotType === "contour") {
       // 3D surface/contour: requires \addplot3 and domain y= for the second axis
-      const domainY = s.domain ? `, domain y=${s.domain[0]}:${s.domain[1]}` : "";
-      const optStr = (`samples=20, ${domain}${domainY}${opts}`).replace(/,\s*$/, "").trim();
+      const domainY = s.domain ? `domain y=${s.domain[0]}:${s.domain[1]}` : undefined;
+      const optStr = compactOptions(["samples=20", domain, domainY, opts]);
       const plotType3d = s.plotType === "surface" ? "surf" : "contour gnuplot";
-      lines.push(`  \\addplot3[${plotType3d}, ${optStr}] {${s.expression}};`);
+      const plotOpts = compactOptions([plotType3d, optStr]);
+      lines.push(`  \\addplot3[${plotOpts}] {${s.expression}};`);
     } else {
-      const optStr = (domain + opts).replace(/,\s*$/, "").trim();
+      const optStr = compactOptions([domain, opts]);
       lines.push(`  \\addplot${optStr ? `[${optStr}]` : ""} {${s.expression}};`);
     }
   } else if (s.data && s.data.length > 0) {
