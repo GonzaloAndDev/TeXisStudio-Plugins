@@ -71,17 +71,35 @@ export class LabSetupPlugin extends BasePlugin<TikzShapeDocument> {
   }
 
   protected buildDefaultDocument(): TikzShapeDocument {
+    // Acid-base titration setup: burette over Erlenmeyer flask on stand
     return {
       engineId: "tikz-shape-engine", version: "1.0.0",
       shapes: [
-        { id: "flask-neck",  type: "rectangle", coords: [{ x: 0.8, y: 2 }, { x: 1.2, y: 3 }] },
-        { id: "flask-body",  type: "ellipse",   coords: [{ x: 1, y: 1.2 }, { x: 1, y: 1 }] },
-        { id: "flask-label", type: "label",     coords: [{ x: 1, y: 1.2 }], label: "Flask" },
-        { id: "stand-rod",   type: "line",      coords: [{ x: 2.5, y: 0 }, { x: 2.5, y: 3.5 }], lineWidth: "2pt" },
-        { id: "stand-base",  type: "line",      coords: [{ x: 2, y: 0 }, { x: 3, y: 0 }],       lineWidth: "2pt" },
-        { id: "stand-clamp", type: "rectangle", coords: [{ x: 2.2, y: 2.8 }, { x: 2.5, y: 3.0 }] },
+        // Stand base and rod
+        { id: "base",    type: "rectangle", coords: [{ x: 0, y: 0 }, { x: 2.5, y: 0.2 }], fill: "gray!50" },
+        { id: "rod",     type: "line",      coords: [{ x: 2, y: 0.2 }, { x: 2, y: 6 }], lineWidth: "3pt", color: "gray" },
+        // Clamp ring
+        { id: "clamp",   type: "rectangle", coords: [{ x: 1.5, y: 4.5 }, { x: 2.5, y: 4.8 }], fill: "gray!40" },
+        // Burette (long tube)
+        { id: "bur_body",type: "rectangle", coords: [{ x: 0.8, y: 2.5 }, { x: 1.2, y: 4.5 }], fill: "white" },
+        { id: "bur_tip", type: "polygon",   coords: [{ x: 0.8, y: 2.5 }, { x: 1.2, y: 2.5 }, { x: 1.0, y: 2.0 }] },
+        // Liquid in burette
+        { id: "bur_liq", type: "rectangle", coords: [{ x: 0.81, y: 3 }, { x: 1.19, y: 4.49 }], fill: "blue!25" },
+        // Burette label
+        { id: "lb_bur",  type: "label",     coords: [{ x: 1.7, y: 3.5 }], label: "Burette (NaOH)" },
+        // Drop falling from tip
+        { id: "drop",    type: "ellipse",   coords: [{ x: 1.0, y: 1.85 }, { x: 0.06, y: 0.1 }], fill: "blue!40" },
+        // Erlenmeyer flask body
+        { id: "fl_body", type: "polygon",   coords: [{ x: 0.2, y: 0.2 }, { x: 1.8, y: 0.2 }, { x: 2.1, y: 1.5 }, { x: -0.1, y: 1.5 }], fill: "pink!30" },
+        { id: "fl_neck", type: "rectangle", coords: [{ x: 0.75, y: 1.5 }, { x: 1.25, y: 2.0 }], fill: "pink!30" },
+        // Flask label
+        { id: "lb_fl",   type: "label",     coords: [{ x: -0.7, y: 1.0 }], label: "Erlenmeyer (HCl)" },
+        // Stir bar (magnetic)
+        { id: "stir",    type: "rectangle", coords: [{ x: 0.7, y: 0.22 }, { x: 1.3, y: 0.35 }], fill: "gray!60" },
+        // Indicator color label
+        { id: "ind_lbl", type: "label",     coords: [{ x: 1.0, y: 0.85 }], label: "\\tiny phenolphthalein" },
       ],
-      viewBox: { width: 5, height: 4, unit: "cm" },
+      viewBox: { width: 4.5, height: 6.5, unit: "cm" },
       tikzLibraries: [],
     };
   }
@@ -106,21 +124,30 @@ export class SyntaxTreesPlugin extends BasePlugin<TreeForestDocument> {
   }
 
   protected buildDefaultDocument(): TreeForestDocument {
+    // More complex sentence with quantifier and relative clause fragment
+    // "Every student who passed the exam celebrated"
     return {
       engineId: "tree-forest-engine", version: "1.0.0",
       style: "syntax", growth: "south",
       root: {
         id: "S", label: "S", children: [
-          { id: "NP", label: "NP", children: [
-            { id: "det", label: "Det", children: [{ id: "the", label: "the", children: [] }] },
-            { id: "n",   label: "N",   children: [{ id: "cat", label: "cat", children: [] }] },
-          ]},
-          { id: "VP", label: "VP", children: [
-            { id: "v",  label: "V",  children: [{ id: "sat", label: "sat", children: [] }] },
-            { id: "PP", label: "PP", children: [
-              { id: "p",   label: "P",  children: [{ id: "on",  label: "on",      children: [] }] },
-              { id: "np2", label: "NP", children: [{ id: "mat", label: "the mat", children: [] }] },
+          { id: "NP_s", label: "NP", children: [
+            { id: "qp",   label: "QP",  children: [{ id: "every", label: "every", children: [] }] },
+            { id: "n_bar",label: "N$'$",children: [
+              { id: "n_head", label: "N",   children: [{ id: "student", label: "student", children: [] }] },
+              { id: "relcp", label: "RelCP", children: [
+                { id: "relc", label: "RelC", children: [
+                  { id: "cp_who", label: "who",  children: [] },
+                  { id: "vp_rel", label: "VP",   children: [
+                    { id: "v_rel",  label: "V",  children: [{ id: "passed", label: "passed", children: [] }] },
+                    { id: "np_obj", label: "NP", children: [{ id: "exam", label: "the exam", children: [] }] },
+                  ]},
+                ]},
+              ]},
             ]},
+          ]},
+          { id: "VP_m", label: "VP", children: [
+            { id: "v_main", label: "V", children: [{ id: "cel", label: "celebrated", children: [] }] },
           ]},
         ],
       },

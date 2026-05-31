@@ -6,7 +6,6 @@ import type { TreeForestDocument } from "../../engines/tree-forest-engine/types.
 import type { GraphNodeDocument } from "../../engines/graph-node-engine/types.js";
 import type { TikzShapeDocument } from "../../engines/tikz-shape-engine/types.js";
 
-// ── Shared engine instances ────────────────────────────────────────
 const treeEngine  = new TreeForestEngine();
 const graphEngine = new GraphNodeEngine();
 const tikzEngine  = new TikzShapeEngine();
@@ -25,24 +24,31 @@ export class PhylogeneticTreesPlugin extends BasePlugin<TreeForestDocument> {
       requiredPackages: ["forest"],
       scopeWarning:    "Suitable for simplified phylogenies in theses. For complex phylogenetics with statistical support, use FigTree/iTOL and import as PDF.",
       blockKind:       "input",
-      defaultCaption:  "Simplified phylogenetic tree.",
+      defaultCaption:  "Simplified phylogeny of selected vertebrate classes.",
       defaultLabel:    "fig:phylogeny",
     });
   }
 
   protected buildDefaultDocument(): TreeForestDocument {
+    // Vertebrate phylogeny — recognizable in biology, medicine, and ecology theses
     return {
       engineId: "tree-forest-engine", version: "1.0.0",
       style: "phylogenetic", growth: "south",
       root: {
-        id: "root", label: "LUCA", children: [
-          { id: "bact", label: "Bacteria", children: [
-            { id: "ec", label: "\\textit{E. coli}", children: [] },
-            { id: "bs", label: "\\textit{B. subtilis}", children: [] },
+        id: "vert", label: "Vertebrata", children: [
+          { id: "fish",  label: "Actinopterygii", children: [
+            { id: "zebrafish",  label: "\\textit{Danio rerio}", children: [] },
+            { id: "medaka",     label: "\\textit{Oryzias latipes}", children: [] },
           ]},
-          { id: "euk", label: "Eukaryota", children: [
-            { id: "hs", label: "\\textit{H. sapiens}", children: [] },
-            { id: "sc", label: "\\textit{S. cerevisiae}", children: [] },
+          { id: "tetra", label: "Tetrapoda", children: [
+            { id: "amph", label: "Amphibia", children: [
+              { id: "xenopus", label: "\\textit{X. laevis}", children: [] },
+            ]},
+            { id: "amni", label: "Amniota", children: [
+              { id: "mus",   label: "\\textit{Mus musculus}", children: [] },
+              { id: "rat",   label: "\\textit{Rattus norvegicus}", children: [] },
+              { id: "human", label: "\\textit{H. sapiens}", children: [] },
+            ]},
           ]},
         ],
       },
@@ -57,28 +63,53 @@ export class SequencesPlugin extends BasePlugin<TikzShapeDocument> {
     super(tikzEngine, {
       pluginId:        "dna-rna-sequences",
       displayName:     "DNA / RNA / Protein Sequences",
-      description:     "Display biological sequences with annotations, highlights, and alignment marks.",
+      description:     "Display biological sequences with color-coded bases, codon highlighting, and alignment marks.",
       category:        "biology-medicine",
       engineId:        "tikz-shape-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["tikz"],
       blockKind:       "input",
-      defaultCaption:  "DNA sequence.",
+      defaultCaption:  "Start codon and reading frame of a short mRNA sequence.",
       defaultLabel:    "fig:dna-sequence",
     });
   }
 
   protected buildDefaultDocument(): TikzShapeDocument {
-    const seq = "ATGCGATCGATCG";
+    // mRNA sequence with color-coded nucleotides: AUG start codon + 2 codons + stop
+    // Color convention: A=blue, U=red, G=green, C=orange
+    const seq = ["A","U","G","C","A","G","U","U","A","U","G","A","A"];
+    const colors: Record<string, string> = { A: "blue!70", U: "red!70", G: "green!60!black", C: "orange!80!black" };
+    const shapes: TikzShapeDocument["shapes"] = [];
+
+    // Codon background rectangles (every 3 bases, alternating shading)
+    for (let c = 0; c < Math.floor(seq.length / 3); c++) {
+      if (c % 2 === 0) {
+        shapes.push({ id: `codon${c}`, type: "rectangle",
+          coords: [{ x: c * 1.2 - 0.15, y: -0.25 }, { x: c * 1.2 + 1.25, y: 0.45 }],
+          fill: "gray!15", options: "fill, draw=none" });
+      }
+    }
+    // Base labels with colors
+    seq.forEach((base, i) => {
+      shapes.push({ id: `b${i}`, type: "label",
+        coords: [{ x: i * 0.4, y: 0 }],
+        label: `{\\color{${colors[base] ?? "black"}}\\textbf{\\texttt{${base}}}}`,
+        options: "center" });
+    });
+    // Position numbers
+    shapes.push({ id: "p1",  type: "label", coords: [{ x: 0,   y: -0.5 }], label: "\\tiny 1" });
+    shapes.push({ id: "p4",  type: "label", coords: [{ x: 1.2, y: -0.5 }], label: "\\tiny 4" });
+    shapes.push({ id: "p7",  type: "label", coords: [{ x: 2.4, y: -0.5 }], label: "\\tiny 7" });
+    shapes.push({ id: "p10", type: "label", coords: [{ x: 3.6, y: -0.5 }], label: "\\tiny 10" });
+    // Annotation
+    shapes.push({ id: "ann_start", type: "label", coords: [{ x: 0.4, y: 0.7 }], label: "\\tiny Start codon" });
+    shapes.push({ id: "arr_start", type: "arrow",  coords: [{ x: 0.4, y: 0.6 }, { x: 0.4, y: 0.2 }] });
+    shapes.push({ id: "ann_stop",  type: "label", coords: [{ x: 4.4, y: 0.7 }], label: "\\tiny Stop-related" });
+
     return {
       engineId: "tikz-shape-engine", version: "1.0.0",
-      shapes: seq.split("").map((base, i) => ({
-        id: `b${i}`, type: "label" as const,
-        coords: [{ x: i * 0.4, y: 0 }],
-        label: `\\texttt{${base}}`,
-        options: "center",
-      })),
-      viewBox: { width: seq.length * 0.45, height: 1, unit: "cm" },
+      shapes,
+      viewBox: { width: 6.5, height: 1.8, unit: "cm" },
       tikzLibraries: [],
     };
   }
@@ -97,24 +128,36 @@ export class BiomedicalFlowPlugin extends BasePlugin<GraphNodeDocument> {
       qualityLevel:    "official-core",
       requiredPackages: ["tikz"],
       blockKind:       "input",
-      defaultCaption:  "Cell signaling pathway.",
-      defaultLabel:    "fig:signaling",
+      defaultCaption:  "MAPK/ERK signalling cascade with feedback inhibition.",
+      defaultLabel:    "fig:mapk",
     });
   }
 
   protected buildDefaultDocument(): GraphNodeDocument {
+    // MAPK/ERK pathway — canonical example in cancer biology, pharmacology theses
     return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        { id: "signal",   label: "Signal",         shape: "ellipse",   position: { x: 0, y: 4 } },
-        { id: "receptor", label: "Receptor",        shape: "rectangle", position: { x: 0, y: 2.5 } },
-        { id: "cascade",  label: "Kinase cascade",  shape: "rectangle", position: { x: 0, y: 1 } },
-        { id: "response", label: "Gene expression", shape: "rectangle", position: { x: 0, y: -0.5 } },
+        { id: "ligand",  label: "Growth factor",     shape: "ellipse",   position: { x: 0, y: 6 } },
+        { id: "rtk",     label: "RTK (EGFR)",        shape: "rectangle", position: { x: 0, y: 4.5 } },
+        { id: "ras",     label: "RAS",               shape: "ellipse",   position: { x: 0, y: 3 } },
+        { id: "raf",     label: "RAF",               shape: "rectangle", position: { x: 0, y: 1.8 } },
+        { id: "mek",     label: "MEK",               shape: "rectangle", position: { x: 0, y: 0.6 } },
+        { id: "erk",     label: "ERK",               shape: "rectangle", position: { x: 0, y: -0.6 } },
+        { id: "nucleus", label: "Nucleus\\n(gene expression)", shape: "ellipse", position: { x: 0, y: -2 } },
+        // Negative feedback loop
+        { id: "mkp",     label: "MKP-1\\n(phosphatase)", shape: "rectangle", position: { x: 3, y: -0.6 } },
       ],
       edges: [
-        { id: "e1", from: "signal",   to: "receptor", type: "directed" },
-        { id: "e2", from: "receptor", to: "cascade",  type: "directed" },
-        { id: "e3", from: "cascade",  to: "response", type: "directed" },
+        { id: "e1", from: "ligand",  to: "rtk",     type: "directed", label: "binds" },
+        { id: "e2", from: "rtk",     to: "ras",     type: "directed", label: "activates" },
+        { id: "e3", from: "ras",     to: "raf",     type: "directed", label: "phosphorylates" },
+        { id: "e4", from: "raf",     to: "mek",     type: "directed", label: "p" },
+        { id: "e5", from: "mek",     to: "erk",     type: "directed", label: "p" },
+        { id: "e6", from: "erk",     to: "nucleus", type: "directed" },
+        // Negative feedback
+        { id: "e7", from: "erk",     to: "mkp",     type: "directed", label: "induces" },
+        { id: "e8", from: "mkp",     to: "erk",     type: "dashed",   label: "inhibits" },
       ],
       layout: "manual", tikzLibraries: ["arrows.meta"], directed: true,
     };
@@ -134,30 +177,35 @@ export class CONSORTFlowPlugin extends BasePlugin<GraphNodeDocument> {
       qualityLevel:    "official-core",
       requiredPackages: ["tikz"],
       blockKind:       "input",
-      defaultCaption:  "CONSORT flow diagram.",
+      defaultCaption:  "CONSORT 2010 flow diagram.",
       defaultLabel:    "fig:consort",
     });
   }
 
   protected buildDefaultDocument(): GraphNodeDocument {
+    // CONSORT 2010 standard: enrollment → allocation → follow-up → analysis
     return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        { id: "enroll",    label: "Enrollment\\n=200",  shape: "rectangle", position: { x: 0,  y: 6 } },
-        { id: "excl",      label: "Excluded\\n=50",     shape: "rectangle", position: { x: 3,  y: 5 } },
-        { id: "rand",      label: "Randomized\\n=150",  shape: "rectangle", position: { x: 0,  y: 4 } },
-        { id: "groupA",    label: "Group A\\n=75",      shape: "rectangle", position: { x: -2, y: 2.5 } },
-        { id: "groupB",    label: "Group B\\n=75",      shape: "rectangle", position: { x: 2,  y: 2.5 } },
-        { id: "analysisA", label: "Analysed\\n=72",     shape: "rectangle", position: { x: -2, y: 0.5 } },
-        { id: "analysisB", label: "Analysed\\n=70",     shape: "rectangle", position: { x: 2,  y: 0.5 } },
+        { id: "assess",  label: "Assessed for eligibility (n=280)",  shape: "rectangle", position: { x: 0,   y: 7 } },
+        { id: "excl",    label: "Excluded (n=80): not meeting criteria", shape: "rectangle", position: { x: 4, y: 6 } },
+        { id: "rand",    label: "Randomised (n=200)",                 shape: "rectangle", position: { x: 0,   y: 5 } },
+        { id: "intA",    label: "Intervention A (n=100)",             shape: "rectangle", position: { x: -2.5,y: 3.5 } },
+        { id: "intB",    label: "Intervention B (n=100)",             shape: "rectangle", position: { x: 2.5, y: 3.5 } },
+        { id: "fuA",     label: "Follow-up (n=97, lost=3)",           shape: "rectangle", position: { x: -2.5,y: 1.8 } },
+        { id: "fuB",     label: "Follow-up (n=95, lost=5)",           shape: "rectangle", position: { x: 2.5, y: 1.8 } },
+        { id: "anaA",    label: "Analysed (n=97)",                    shape: "rectangle", position: { x: -2.5,y: 0.2 } },
+        { id: "anaB",    label: "Analysed (n=95)",                    shape: "rectangle", position: { x: 2.5, y: 0.2 } },
       ],
       edges: [
-        { id: "e1", from: "enroll", to: "excl",      type: "directed" },
-        { id: "e2", from: "enroll", to: "rand",      type: "directed" },
-        { id: "e3", from: "rand",   to: "groupA",    type: "directed" },
-        { id: "e4", from: "rand",   to: "groupB",    type: "directed" },
-        { id: "e5", from: "groupA", to: "analysisA", type: "directed" },
-        { id: "e6", from: "groupB", to: "analysisB", type: "directed" },
+        { id: "e1", from: "assess", to: "excl",  type: "directed" },
+        { id: "e2", from: "assess", to: "rand",  type: "directed" },
+        { id: "e3", from: "rand",   to: "intA",  type: "directed", label: "Allocated" },
+        { id: "e4", from: "rand",   to: "intB",  type: "directed", label: "Allocated" },
+        { id: "e5", from: "intA",   to: "fuA",   type: "directed" },
+        { id: "e6", from: "intB",   to: "fuB",   type: "directed" },
+        { id: "e7", from: "fuA",    to: "anaA",  type: "directed" },
+        { id: "e8", from: "fuB",    to: "anaB",  type: "directed" },
       ],
       layout: "manual", tikzLibraries: ["arrows.meta"], directed: true,
     };
@@ -178,32 +226,31 @@ export class BiologicalPathwaysPlugin extends BasePlugin<GraphNodeDocument> {
       requiredPackages: ["tikz"],
       scopeWarning:    "Suitable for simplified pathway diagrams in theses and reports. Not a substitute for KEGG, Reactome, or professional pathway visualization tools.",
       blockKind:       "input",
-      defaultCaption:  "Simplified glycolysis pathway.",
+      defaultCaption:  "Central carbon metabolism: glycolysis and TCA cycle entry.",
       defaultLabel:    "fig:glycolysis",
     });
   }
 
   protected buildDefaultDocument(): GraphNodeDocument {
-    // Simplified central carbon metabolism — glycolysis + TCA entry
     return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        { id: "glc",   label: "Glucose",        shape: "rectangle", position: { x: 0,  y: 6 } },
-        { id: "g6p",   label: "G-6-P",          shape: "rectangle", position: { x: 0,  y: 4.5 } },
-        { id: "f16bp", label: "F-1,6-BP",       shape: "rectangle", position: { x: 0,  y: 3 } },
-        { id: "g3p",   label: "G-3-P (×2)",     shape: "rectangle", position: { x: 0,  y: 1.5 } },
-        { id: "pyr",   label: "Pyruvate (×2)",  shape: "rectangle", position: { x: 0,  y: 0 } },
-        { id: "aca",   label: "Acetyl-CoA (×2)",shape: "rectangle", position: { x: 0,  y: -1.5 } },
+        { id: "glc",   label: "Glucose",         shape: "rectangle", position: { x: 0,   y: 6 } },
+        { id: "g6p",   label: "G-6-P",           shape: "rectangle", position: { x: 0,   y: 4.5 } },
+        { id: "f16bp", label: "F-1,6-BP",        shape: "rectangle", position: { x: 0,   y: 3 } },
+        { id: "g3p",   label: "G-3-P (x2)",      shape: "rectangle", position: { x: 0,   y: 1.5 } },
+        { id: "pyr",   label: "Pyruvate (x2)",   shape: "rectangle", position: { x: 0,   y: 0 } },
+        { id: "aca",   label: "Acetyl-CoA (x2)", shape: "rectangle", position: { x: 0,   y: -1.5 } },
         // Side products
-        { id: "atp1",  label: "2 ATP",          shape: "ellipse",   position: { x: 2.5, y: 3 } },
-        { id: "nadh",  label: "2 NADH",         shape: "ellipse",   position: { x: 2.5, y: 0 } },
-        { id: "co2",   label: "2 CO$_2$",               shape: "ellipse", position: { x: 2.5, y: -1.5 } },
+        { id: "atp1",  label: "2 ATP",           shape: "ellipse",   position: { x: 2.8, y: 3 } },
+        { id: "nadh",  label: "2 NADH",          shape: "ellipse",   position: { x: 2.8, y: 0 } },
+        { id: "co2",   label: "2 CO$_2$",        shape: "ellipse",   position: { x: 2.8, y: -1.5 } },
       ],
       edges: [
         { id: "e1", from: "glc",   to: "g6p",   type: "directed", label: "Hexokinase" },
         { id: "e2", from: "g6p",   to: "f16bp", type: "directed", label: "PFK-1" },
         { id: "e3", from: "f16bp", to: "g3p",   type: "directed", label: "Aldolase" },
-        { id: "e4", from: "g3p",   to: "pyr",   type: "directed", label: "Glycolysis" },
+        { id: "e4", from: "g3p",   to: "pyr",   type: "directed", label: "Glycolysis (x6)" },
         { id: "e5", from: "pyr",   to: "aca",   type: "directed", label: "PDH complex" },
         { id: "e6", from: "f16bp", to: "atp1",  type: "directed" },
         { id: "e7", from: "g3p",   to: "nadh",  type: "directed" },

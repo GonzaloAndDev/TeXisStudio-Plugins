@@ -1,10 +1,20 @@
 import type { TimelineGanttDocument, TimelineTask, TimelineGroup, TimelineMode } from "./types.js";
 
+/** Escape LaTeX special characters in a Gantt label (& is the most common culprit). */
+function sanitizeGanttLabel(label: string): string {
+  return label
+    .replace(/&/g, "\\&")
+    .replace(/%/g, "\\%")
+    .replace(/#/g, "\\#")
+    .replace(/\$/g, "\\$");
+}
+
 function ganttBar(task: TimelineTask): string {
+  const label = sanitizeGanttLabel(task.label);
   if (task.milestone) {
-    return `  \\ganttmilestone{${task.label}}{${task.start}}`;
+    return `  \\ganttmilestone{${label}}{${task.start}}`;
   }
-  return `  \\ganttbar{${task.label}}{${task.start}}{${task.end}}`;
+  return `  \\ganttbar{${label}}{${task.start}}{${task.end}}`;
 }
 
 function ganttGroup(group: TimelineGroup, tasks: TimelineTask[]): string {

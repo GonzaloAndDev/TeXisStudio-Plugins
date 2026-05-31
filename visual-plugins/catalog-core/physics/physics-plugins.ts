@@ -16,20 +16,33 @@ export class VectorsPlugin extends BasePlugin<TikzShapeDocument> {
       description: "Draw vectors, vector decomposition, and simple field representations.",
       category: "physics", engineId: "tikz-shape-engine", qualityLevel: "official-core",
       requiredPackages: ["tikz"], blockKind: "input",
-      defaultCaption: "Vector decomposition.", defaultLabel: "fig:vectors",
+      defaultCaption: "Vector addition — parallelogram law: $\\vec{R} = \\vec{A} + \\vec{B}$.",
+      defaultLabel: "fig:vectors",
     }, store);
   }
 
   protected buildDefaultDocument(): TikzShapeDocument {
+    // Parallelogram law of vector addition — A + B = R
     return {
       engineId: "tikz-shape-engine", version: "1.0.0",
       shapes: [
-        { id: "axes", type: "axis", coords: [{ x: 0, y: 0 }, { x: 4, y: 3 }] },
-        { id: "v",  type: "vector", coords: [{ x: 0, y: 0 }, { x: 2, y: 2 }], label: "\\vec{v}" },
-        { id: "vx", type: "vector", coords: [{ x: 0, y: 0 }, { x: 2, y: 0 }], label: "v_x", lineStyle: "dashed" },
-        { id: "vy", type: "vector", coords: [{ x: 2, y: 0 }, { x: 2, y: 2 }], label: "v_y", lineStyle: "dashed" },
+        { id: "axes",  type: "axis",    coords: [{ x: 0, y: 0 }, { x: 5, y: 3.5 }] },
+        // Vector A (horizontal-ish)
+        { id: "vA",    type: "vector",  coords: [{ x: 0, y: 0 }, { x: 3, y: 1 }], label: "\\vec{A}", color: "blue" },
+        // Vector B (vertical-ish)
+        { id: "vB",    type: "vector",  coords: [{ x: 0, y: 0 }, { x: 1, y: 2.5 }], label: "\\vec{B}", color: "red" },
+        // Resultant R = A + B
+        { id: "vR",    type: "vector",  coords: [{ x: 0, y: 0 }, { x: 4, y: 3.5 }], label: "\\vec{R}", color: "black", lineWidth: "1.5pt" },
+        // Parallelogram dashed sides
+        { id: "dA",    type: "line",    coords: [{ x: 1, y: 2.5 }, { x: 4, y: 3.5 }], lineStyle: "dashed", color: "blue" },
+        { id: "dB",    type: "line",    coords: [{ x: 3, y: 1 }, { x: 4, y: 3.5 }], lineStyle: "dashed", color: "red" },
+        // Angle between A and B
+        { id: "ang",   type: "angle",   coords: [{ x: 0, y: 0 }, { x: 18.43, y: 68.2 }, { x: 0.8, y: 0 }], label: "\\theta" },
+        // Component dashes for A
+        { id: "axc",   type: "line",    coords: [{ x: 3, y: 0 }, { x: 3, y: 1 }], lineStyle: "dotted" },
+        { id: "ayc",   type: "line",    coords: [{ x: 0, y: 1 }, { x: 3, y: 1 }], lineStyle: "dotted" },
       ],
-      viewBox: { width: 6, height: 5, unit: "cm" }, tikzLibraries: [],
+      viewBox: { width: 7, height: 5.5, unit: "cm" }, tikzLibraries: [],
     };
   }
 }
@@ -42,21 +55,35 @@ export class FreeBodyDiagramPlugin extends BasePlugin<TikzShapeDocument> {
       description: "Build free body diagrams with forces, mass blocks, and labeled arrows.",
       category: "physics", engineId: "tikz-shape-engine", qualityLevel: "official-core",
       requiredPackages: ["tikz"], blockKind: "input",
-      defaultCaption: "Free body diagram.", defaultLabel: "fig:fbd",
+      defaultCaption: "Free body diagram — block on surface with applied force at angle $\\alpha$.",
+      defaultLabel: "fig:fbd",
     }, store);
   }
 
   protected buildDefaultDocument(): TikzShapeDocument {
+    // More realistic FBD: block on surface + applied force at angle + friction + normal + weight
     return {
       engineId: "tikz-shape-engine", version: "1.0.0",
       shapes: [
-        { id: "block",  type: "rectangle", coords: [{ x: -0.5, y: -0.5 }, { x: 0.5, y: 0.5 }], fill: "gray!30" },
-        { id: "weight", type: "vector", coords: [{ x: 0, y: -0.5 }, { x: 0, y: -2 }], label: "W" },
-        { id: "normal", type: "vector", coords: [{ x: 0, y: 0.5 }, { x: 0, y: 2 }], label: "N" },
-        { id: "fapp",   type: "vector", coords: [{ x: 0.5, y: 0 }, { x: 2, y: 0 }], label: "F" },
-        { id: "frict",  type: "vector", coords: [{ x: -0.5, y: 0 }, { x: -1.5, y: 0 }], label: "f" },
+        // Surface
+        { id: "surf",   type: "line",      coords: [{ x: -2.5, y: -0.6 }, { x: 2.5, y: -0.6 }], lineWidth: "1.5pt" },
+        // Block
+        { id: "block",  type: "rectangle", coords: [{ x: -0.7, y: -0.6 }, { x: 0.7, y: 0.8 }], fill: "cyan!25" },
+        { id: "lm",     type: "label",     coords: [{ x: 0, y: 0.1 }], label: "$m$" },
+        // Weight (down)
+        { id: "W",      type: "vector",    coords: [{ x: 0, y: -0.6 }, { x: 0, y: -2.2 }], label: "W=mg", color: "red" },
+        // Normal (up)
+        { id: "N",      type: "vector",    coords: [{ x: 0, y: 0.8 }, { x: 0, y: 2.4 }], label: "N", color: "blue" },
+        // Applied force at angle 30° above horizontal (F_x + F_y components shown)
+        { id: "F",      type: "vector",    coords: [{ x: 0.7, y: 0.1 }, { x: 2.6, y: 1.2 }], label: "\\vec{F}", color: "black", lineWidth: "1.5pt" },
+        { id: "Fx",     type: "vector",    coords: [{ x: 0.7, y: 0.1 }, { x: 2.6, y: 0.1 }], label: "F\\cos\\alpha", color: "gray", lineStyle: "dashed" },
+        { id: "Fy",     type: "vector",    coords: [{ x: 2.6, y: 0.1 }, { x: 2.6, y: 1.2 }], label: "F\\sin\\alpha", color: "gray", lineStyle: "dashed" },
+        // Friction (opposing motion)
+        { id: "f",      type: "vector",    coords: [{ x: -0.7, y: 0.1 }, { x: -2.2, y: 0.1 }], label: "f", color: "orange" },
+        // Angle alpha
+        { id: "ang",    type: "angle",     coords: [{ x: 0.7, y: 0.1 }, { x: 0, y: 30 }, { x: 0.6, y: 0 }], label: "\\alpha" },
       ],
-      viewBox: { width: 6, height: 6, unit: "cm" }, tikzLibraries: [],
+      viewBox: { width: 8, height: 5.5, unit: "cm" }, tikzLibraries: [],
     };
   }
 }
