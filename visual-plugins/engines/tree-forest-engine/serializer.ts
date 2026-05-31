@@ -19,12 +19,31 @@ function stylePreset(style: TreeStyle): string {
   }
 }
 
+function escapeLatexText(text: string): string {
+  return text
+    .replace(/(?<!\\)&/g, "\\&")
+    .replace(/(?<!\\)%/g, "\\%")
+    .replace(/(?<!\\)#/g, "\\#")
+    .replace(/(?<!\\)_/g, "\\_");
+}
+
+function sanitizeLabel(label: string): string {
+  return label
+    .replace(/\\n/g, " ")
+    .replace(/\n/g, " ")
+    .replace(/\s{2,}/g, " ")
+    .trim()
+    .split(/(\$[^$]*\$)/g)
+    .map(part => part.startsWith("$") && part.endsWith("$") ? part : escapeLatexText(part))
+    .join("");
+}
+
 function serializeNode(node: TreeNode, isProbability: boolean): string {
-  const label = node.labelLatex ?? node.label;
+  const label = node.labelLatex ?? sanitizeLabel(node.label);
   const edgeLabel = node.edgeLabel
     ? (isProbability && node.probability !== undefined
         ? ` edge label={node[midway,sloped,above]{$${node.probability}$}}`
-        : ` edge label={node[midway,sloped,above]{${node.edgeLabel}}}`)
+        : ` edge label={node[midway,sloped,above]{${sanitizeLabel(node.edgeLabel)}}}`)
     : "";
 
   if (node.children.length === 0) {

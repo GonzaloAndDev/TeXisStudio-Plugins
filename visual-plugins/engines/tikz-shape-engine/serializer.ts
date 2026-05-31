@@ -16,6 +16,25 @@ function optStr(shape: TikzShape): string {
   return parts.length > 0 ? `[${parts.join(", ")}]` : "";
 }
 
+function escapeLatexText(text: string): string {
+  return text
+    .replace(/(?<!\\)&/g, "\\&")
+    .replace(/(?<!\\)%/g, "\\%")
+    .replace(/(?<!\\)#/g, "\\#")
+    .replace(/(?<!\\)_/g, "\\_");
+}
+
+function sanitizeLabel(label: string): string {
+  return label
+    .replace(/\\n/g, " ")
+    .replace(/\n/g, " ")
+    .replace(/\s{2,}/g, " ")
+    .trim()
+    .split(/(\$[^$]*\$)/g)
+    .map(part => part.startsWith("$") && part.endsWith("$") ? part : escapeLatexText(part))
+    .join("");
+}
+
 /**
  * Compute the best label placement for a vector/arrow given its direction.
  * - Horizontal edges  → label above/below (midway, above)
@@ -49,7 +68,7 @@ export function serializeShape(shape: TikzShape): string {
       const pos = coordStr(coords[0] ?? { x: 0, y: 0 });
       const fillOpt = opts || "[fill=black]";
       const labelStr = shape.label
-        ? ` node[above right, font=\\small] {${shape.label}}`
+        ? ` node[above right, font=\\small] {${sanitizeLabel(shape.label)}}`
         : "";
       // filldraw the dot + optional label node
       return `\\filldraw${fillOpt} ${pos} circle (2pt)${labelStr};`;
@@ -99,7 +118,7 @@ export function serializeShape(shape: TikzShape): string {
         "below right": "north west", "below left": "north east",
       };
       const anchor = ANCHOR_MAP[opt] ?? opt;
-      return `\\node[anchor=${anchor}, font=\\small] at ${pos} {${shape.label ?? ""}};`;
+      return `\\node[anchor=${anchor}, font=\\small] at ${pos} {${sanitizeLabel(shape.label ?? "")}};`;
     }
 
     case "axis": {

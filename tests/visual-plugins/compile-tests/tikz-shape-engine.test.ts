@@ -42,6 +42,13 @@ describe("serializeShape", () => {
     expect(serializeShape(shape)).toContain("$A$");
   });
 
+  it("escapes text labels while preserving math and LaTeX commands", () => {
+    const plain: TikzShape = { id: "lb", type: "label", coords: [{ x: 1, y: 2 }], label: "A_1 & 95% $p_0$" };
+    const latex: TikzShape = { id: "raw", type: "label", coords: [{ x: 1, y: 2 }], label: "\\small Model_1" };
+    expect(serializeShape(plain)).toContain("A\\_1 \\& 95\\% $p_0$");
+    expect(serializeShape(latex)).toContain("\\small Model\\_1");
+  });
+
   it("applies dashed style", () => {
     const shape: TikzShape = { id: "d", type: "line", coords: [{ x: 0, y: 0 }, { x: 1, y: 0 }], lineStyle: "dashed" };
     expect(serializeShape(shape)).toContain("[dashed]");

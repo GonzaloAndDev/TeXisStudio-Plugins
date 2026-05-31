@@ -38,6 +38,22 @@ describe("TreeForestEngine", () => {
     const result = await treeEng.validate(doc);
     expect(result.valid).toBe(true);
   });
+
+  it("escapes text labels while preserving inline math and explicit LaTeX labels", async () => {
+    const doc: TreeForestDocument = {
+      engineId: "tree-forest-engine", version: "1.0.0",
+      style: "decision", growth: "south",
+      root: { id: "root", label: "Model_1 & test", edgeLabel: "95% ok", children: [
+        { id: "a", label: "$H_0$ & keep", edgeLabel: "p < 5%", children: [] },
+        { id: "b", label: "ignored", labelLatex: "\\textbf{Raw_Label}", children: [] },
+      ]},
+    };
+    const result = await treeEng.export(doc, "latex");
+    expect(result.content).toContain("Model\\_1 \\& test");
+    expect(result.content).toContain("$H_0$ \\& keep");
+    expect(result.content).toContain("p < 5\\%");
+    expect(result.content).toContain("\\textbf{Raw_Label}");
+  });
 });
 
 describe("TimelineGanttEngine", () => {
