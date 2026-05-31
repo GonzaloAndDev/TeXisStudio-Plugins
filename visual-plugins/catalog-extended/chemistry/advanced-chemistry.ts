@@ -57,7 +57,7 @@ export class ReactionMechanismsPlugin extends BasePlugin<ChemEngineDocument> {
       engineId:        "chemistry-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["chemfig", "mhchem"],
-      scopeWarning:    "Suitable for standard mechanisms in theses. Complex multi-step mechanisms with curved arrows require manual ChemFig adjustment.',",
+      scopeWarning:    "Suitable for standard mechanisms in theses. Complex multi-step mechanisms with curved arrows require manual ChemFig adjustment.",
       blockKind:       "input",
       defaultCaption:  "Aldol condensation: base-catalysed formation of a $\\beta$-hydroxy carbonyl compound.",
       defaultLabel:    "fig:aldol",

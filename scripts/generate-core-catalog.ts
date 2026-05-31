@@ -118,6 +118,15 @@ console.log(`\n  ✓ ${ok} figuras generadas, ✗ ${fail} errores\n`);
 
 // ── Build LaTeX document ───────────────────────────────────────────
 
+function sanitizeTex(s: string): string {
+  return s
+    .replace(/%/g, "\\%")
+    .replace(/≤/g, "$\\leq$").replace(/≥/g, "$\\geq$")
+    .replace(/×/g, "$\\times$").replace(/→/g, "$\\to$")
+    .replace(/°/g, "\\textdegree{}").replace(/–/g, "--").replace(/—/g, "---")
+    .replace(/[&#]/g, "\\$&");
+}
+
 const pkgLines = [...allPackages]
   .filter(p => !p.startsWith("pgfplotsset"))
   .map(p => `\\usepackage{${p}}`)
@@ -147,7 +156,7 @@ for (const cat of CATEGORY_ORDER) {
       `  \\label{fig:${safeId}}`,
       `\\end{figure}`,
       fig.warnings.length > 0
-        ? `\\begin{tcolorbox}[colback=yellow!10,colframe=orange!60,title=Nota de alcance,fonttitle=\\small]\\small ${fig.warnings[0]}\\end{tcolorbox}\n`
+        ? `\\begin{tcolorbox}[colback=yellow!10,colframe=orange!60,title=Nota de alcance,fonttitle=\\small]\\small ${sanitizeTex(fig.warnings[0])}\\end{tcolorbox}\n`
         : "",
     ].join("\n");
     sectionBlocks.push(figBlock);

@@ -1,8 +1,6 @@
 /**
- * Experimental plugins upgraded to real BasePlugin implementations.
- * These use the same engines as official-extended but target more
- * specialized academic niches. Quality is "official-extended" level,
- * label kept as "experimental" until the community validates defaults.
+ * Experimental plugins with real BasePlugin implementations.
+ * Specialized academic niches. All generate compilable LaTeX.
  */
 import { BasePlugin } from "../common/plugin-base/index.js";
 import { GraphNodeEngine } from "../engines/graph-node-engine/engine.js";
@@ -13,23 +11,22 @@ import type { TreeForestDocument } from "../engines/tree-forest-engine/types.js"
 const graphEng = new GraphNodeEngine();
 const treeEng  = new TreeForestEngine();
 
-// ── BayesianNetworksPlugin ────────────────────────────────────────
-// Bayesian networks are DAGs: observed nodes (rectangles) and latent
-// variables (ellipses) with conditional probability arrows.
+// ── BayesianNetworksPlugin ────────────────────────────────────────────────────
+// COVID-19 symptom diagnosis — clinically relevant and immediately recognisable.
 
 export class BayesianNetworksPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEng, {
       pluginId:        "bayesian-networks",
       displayName:     "Bayesian Networks",
-      description:     "Directed acyclic graphs for Bayesian network visualization with observed (rectangular) and latent (elliptical) nodes.",
+      description:     "Directed acyclic graphs for Bayesian networks: latent cause nodes (ellipses) with observed evidence nodes (rectangles).",
       category:        "mathematics",
       engineId:        "graph-node-engine",
       qualityLevel:    "experimental",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Suitable for illustrative Bayesian networks. For inference or parameter learning, use dedicated tools (pgmpy, BayesFusion) and import results.",
+      scopeWarning:    "Suitable for illustrative Bayesian networks in theses. For inference or parameter learning, use pgmpy, BayesFusion, or BUGS and import results.",
       blockKind:       "input",
-      defaultCaption:  "Bayesian network.",
+      defaultCaption:  "Bayesian network for differential diagnosis of respiratory illness.",
       defaultLabel:    "fig:bayes-net",
     });
   }
@@ -38,45 +35,52 @@ export class BayesianNetworksPlugin extends BasePlugin<GraphNodeDocument> {
     return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        // Observed variables (rectangles)
-        { id: "fever",   label: "Fever",    shape: "rectangle", position: { x: 0,   y: 0 } },
-        { id: "cough",   label: "Cough",    shape: "rectangle", position: { x: 3,   y: 0 } },
-        { id: "fatigue", label: "Fatigue",  shape: "rectangle", position: { x: 6,   y: 0 } },
-        // Latent / hidden cause (ellipse)
-        { id: "flu",     label: "Flu",      shape: "ellipse",   position: { x: 1.5, y: 2 } },
-        { id: "cold",    label: "Cold",     shape: "ellipse",   position: { x: 4.5, y: 2 } },
+        // Latent disease nodes
+        { id: "covid",    label: "COVID-19",       shape: "ellipse",   position: { x: 0,   y: 4 } },
+        { id: "flu",      label: "Influenza",      shape: "ellipse",   position: { x: 4,   y: 4 } },
+        { id: "cold",     label: "Common cold",    shape: "ellipse",   position: { x: 8,   y: 4 } },
+        // Observed symptom nodes
+        { id: "fever",    label: "Fever",          shape: "rectangle", position: { x: -1,  y: 1.5 } },
+        { id: "cough",    label: "Dry cough",      shape: "rectangle", position: { x: 2,   y: 1.5 } },
+        { id: "anosmia",  label: "Anosmia",        shape: "rectangle", position: { x: 5,   y: 1.5 } },
+        { id: "sore",     label: "Sore throat",    shape: "rectangle", position: { x: 8,   y: 1.5 } },
+        { id: "dyspnoea", label: "Dyspnoea",       shape: "rectangle", position: { x: 0,   y: -0.5 } },
+        // Exposure node
+        { id: "contact",  label: "Known contact",  shape: "rectangle", position: { x: -2,  y: 4 } },
       ],
       edges: [
-        { id: "e1", from: "flu",  to: "fever",   type: "directed" },
-        { id: "e2", from: "flu",  to: "cough",   type: "directed" },
-        { id: "e3", from: "flu",  to: "fatigue", type: "directed" },
-        { id: "e4", from: "cold", to: "cough",   type: "directed" },
-        { id: "e5", from: "cold", to: "fever",   type: "directed" },
+        { id: "e1", from: "covid",   to: "fever",    type: "directed", label: "0.88" },
+        { id: "e2", from: "covid",   to: "cough",    type: "directed", label: "0.71" },
+        { id: "e3", from: "covid",   to: "anosmia",  type: "directed", label: "0.65" },
+        { id: "e4", from: "covid",   to: "dyspnoea", type: "directed", label: "0.40" },
+        { id: "e5", from: "flu",     to: "fever",    type: "directed", label: "0.92" },
+        { id: "e6", from: "flu",     to: "cough",    type: "directed", label: "0.80" },
+        { id: "e7", from: "cold",    to: "cough",    type: "directed", label: "0.60" },
+        { id: "e8", from: "cold",    to: "sore",     type: "directed", label: "0.75" },
+        { id: "e9", from: "contact", to: "covid",    type: "directed", label: "prior" },
       ],
       layout: "manual", tikzLibraries: ["arrows.meta"], directed: true,
     };
   }
 }
 
-// ── SEMPathPlugin ─────────────────────────────────────────────────
-// Structural equation model path diagram.
-// Latent variables = ellipses; observed/manifest = rectangles.
-// Path coefficients shown as edge labels.
+// ── SEMPathPlugin ─────────────────────────────────────────────────────────────
+// Technology Acceptance Model (TAM) — canonical SEM in IS and management theses.
 
 export class SEMPathPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEng, {
       pluginId:        "sem-path-diagrams",
       displayName:     "SEM / Path Diagrams",
-      description:     "Structural equation model and path analysis diagrams. Latent variables (ovals) connected to observed indicators (rectangles).",
+      description:     "Structural equation model path diagrams with latent variables and measurement models.",
       category:        "humanities-social",
       engineId:        "graph-node-engine",
       qualityLevel:    "experimental",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Suitable for thesis-level SEM diagrams. For full SEM with fit statistics and model estimation, use lavaan/R or AMOS and export figures.",
+      scopeWarning:    "Suitable for thesis-level SEM diagrams. For estimation with fit statistics, use lavaan/R or AMOS.",
       blockKind:       "input",
-      defaultCaption:  "Structural equation model.",
-      defaultLabel:    "fig:sem",
+      defaultCaption:  "Technology Acceptance Model (TAM): perceived usefulness and ease of use predicting behavioural intention.",
+      defaultLabel:    "fig:tam-sem",
     });
   }
 
@@ -84,52 +88,58 @@ export class SEMPathPlugin extends BasePlugin<GraphNodeDocument> {
     return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        // Latent variables (ellipses)
-        { id: "eta1", label: "$\\eta_1$\\nMotivation",   shape: "ellipse",   position: { x: 0,   y: 1.5 } },
-        { id: "eta2", label: "$\\eta_2$\\nPerformance",  shape: "ellipse",   position: { x: 4,   y: 1.5 } },
-        // Observed indicators (rectangles)
-        { id: "y1", label: "$y_1$", shape: "rectangle", position: { x: -1.5, y: 3.5 } },
-        { id: "y2", label: "$y_2$", shape: "rectangle", position: { x:  0,   y: 3.5 } },
-        { id: "y3", label: "$y_3$", shape: "rectangle", position: { x:  1.5, y: 3.5 } },
-        { id: "y4", label: "$y_4$", shape: "rectangle", position: { x:  2.5, y: 3.5 } },
-        { id: "y5", label: "$y_5$", shape: "rectangle", position: { x:  4,   y: 3.5 } },
-        { id: "y6", label: "$y_6$", shape: "rectangle", position: { x:  5.5, y: 3.5 } },
+        // Latent constructs (ellipses)
+        { id: "peou", label: "Perceived\\nEase of Use",    shape: "ellipse", position: { x: 0, y: 3 } },
+        { id: "pu",   label: "Perceived\\nUsefulness",     shape: "ellipse", position: { x: 0, y: 0 } },
+        { id: "bi",   label: "Behavioural\\nIntention",    shape: "ellipse", position: { x: 4, y: 1.5 } },
+        { id: "au",   label: "Actual Use",                 shape: "ellipse", position: { x: 8, y: 1.5 } },
+        // Indicators (rectangles)
+        { id: "peou1", label: "EOU1", shape: "rectangle", position: { x: -2, y: 4 } },
+        { id: "peou2", label: "EOU2", shape: "rectangle", position: { x: -2, y: 3 } },
+        { id: "peou3", label: "EOU3", shape: "rectangle", position: { x: -2, y: 2 } },
+        { id: "pu1",   label: "PU1",  shape: "rectangle", position: { x: -2, y: 1 } },
+        { id: "pu2",   label: "PU2",  shape: "rectangle", position: { x: -2, y: 0 } },
+        { id: "pu3",   label: "PU3",  shape: "rectangle", position: { x: -2, y:-1 } },
+        { id: "bi1",   label: "BI1",  shape: "rectangle", position: { x:  4, y: 3.5 } },
+        { id: "bi2",   label: "BI2",  shape: "rectangle", position: { x:  5.5, y:3.5 } },
       ],
       edges: [
-        // Structural path
-        { id: "s1", from: "eta1", to: "eta2", type: "directed", label: "$\\beta$" },
-        // Measurement model eta1
-        { id: "m1", from: "eta1", to: "y1", type: "directed", label: "$\\lambda_1$" },
-        { id: "m2", from: "eta1", to: "y2", type: "directed", label: "$\\lambda_2$" },
-        { id: "m3", from: "eta1", to: "y3", type: "directed", label: "$\\lambda_3$" },
-        // Measurement model eta2
-        { id: "m4", from: "eta2", to: "y4", type: "directed", label: "$\\lambda_4$" },
-        { id: "m5", from: "eta2", to: "y5", type: "directed", label: "$\\lambda_5$" },
-        { id: "m6", from: "eta2", to: "y6", type: "directed", label: "$\\lambda_6$" },
+        // Structural paths
+        { id: "s1", from: "peou", to: "pu",  type: "directed", label: "$\\beta_1$" },
+        { id: "s2", from: "peou", to: "bi",  type: "directed", label: "$\\beta_2$" },
+        { id: "s3", from: "pu",   to: "bi",  type: "directed", label: "$\\beta_3$" },
+        { id: "s4", from: "bi",   to: "au",  type: "directed", label: "$\\beta_4$" },
+        // Measurement links
+        { id: "m1", from: "peou", to: "peou1", type: "directed" },
+        { id: "m2", from: "peou", to: "peou2", type: "directed" },
+        { id: "m3", from: "peou", to: "peou3", type: "directed" },
+        { id: "m4", from: "pu",   to: "pu1",   type: "directed" },
+        { id: "m5", from: "pu",   to: "pu2",   type: "directed" },
+        { id: "m6", from: "pu",   to: "pu3",   type: "directed" },
+        { id: "m7", from: "bi",   to: "bi1",   type: "directed" },
+        { id: "m8", from: "bi",   to: "bi2",   type: "directed" },
       ],
       layout: "manual", tikzLibraries: ["arrows.meta"], directed: true,
     };
   }
 }
 
-// ── EconomicCausalPlugin ──────────────────────────────────────────
-// Causal loop diagram (CLD) for system dynamics.
-// Variables are nodes; causal links are directed with +/- polarity labels.
-// Feedback loops made explicit via cyclic paths.
+// ── EconomicCausalPlugin ──────────────────────────────────────────────────────
+// Wage-price spiral — a canonical causal loop in macroeconomics.
 
 export class EconomicCausalPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEng, {
       pluginId:        "economic-causal",
       displayName:     "Economic Causal Diagrams",
-      description:     "Causal loop diagrams (CLD) with reinforcing and balancing feedback loops. Essential in system dynamics and macroeconomic analysis.",
+      description:     "Causal loop diagrams (CLD) with reinforcing and balancing feedback loops.",
       category:        "humanities-social",
       engineId:        "graph-node-engine",
       qualityLevel:    "experimental",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Suitable for simple causal loop models. For complex system dynamics simulation (stocks, flows, delays), use Vensim or Stella and import.",
+      scopeWarning:    "Suitable for simple causal loop models. For complex system dynamics with stocks, flows, and delays, use Vensim or Stella and import.",
       blockKind:       "input",
-      defaultCaption:  "Causal loop diagram.",
+      defaultCaption:  "Wage--price spiral: reinforcing ($R$) and balancing ($B$) feedback loops.",
       defaultLabel:    "fig:cld",
     });
   }
@@ -138,41 +148,44 @@ export class EconomicCausalPlugin extends BasePlugin<GraphNodeDocument> {
     return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        { id: "inflation",    label: "Inflation",    shape: "ellipse", position: { x: 0,   y: 0 } },
-        { id: "wages",        label: "Wages",        shape: "ellipse", position: { x: 3,   y: 1.5 } },
-        { id: "productivity", label: "Productivity", shape: "ellipse", position: { x: 6,   y: 0 } },
-        { id: "costs",        label: "Production\\ncosts", shape: "ellipse", position: { x: 3,   y: -1.5 } },
+        { id: "wages",      label: "Nominal\\nwages",      shape: "ellipse", position: { x: 0,   y: 2 } },
+        { id: "costs",      label: "Production\\ncosts",   shape: "ellipse", position: { x: 3,   y: 3.5 } },
+        { id: "prices",     label: "Consumer\\nprices",    shape: "ellipse", position: { x: 6,   y: 2 } },
+        { id: "real_wages", label: "Real wages",           shape: "ellipse", position: { x: 3,   y: 0 } },
+        { id: "demand",     label: "Aggregate\\ndemand",   shape: "ellipse", position: { x: 0,   y: -1.5 } },
+        { id: "employ",     label: "Employment",           shape: "ellipse", position: { x: 6,   y: -1.5 } },
       ],
       edges: [
-        { id: "e1", from: "inflation",    to: "wages",        type: "directed", label: "+" },
-        { id: "e2", from: "wages",        to: "productivity", type: "directed", label: "+" },
-        { id: "e3", from: "productivity", to: "costs",        type: "directed", label: "−" },
-        { id: "e4", from: "costs",        to: "inflation",    type: "directed", label: "+" },
-        { id: "e5", from: "wages",        to: "costs",        type: "directed", label: "+" },
+        { id: "e1", from: "wages",      to: "costs",      type: "directed", label: "+" },
+        { id: "e2", from: "costs",      to: "prices",     type: "directed", label: "+" },
+        { id: "e3", from: "prices",     to: "real_wages", type: "directed", label: "$-$" },  // R loop
+        { id: "e4", from: "real_wages", to: "wages",      type: "directed", label: "+" },    // B loop
+        { id: "e5", from: "real_wages", to: "demand",     type: "directed", label: "+" },
+        { id: "e6", from: "demand",     to: "employ",     type: "directed", label: "+" },
+        { id: "e7", from: "employ",     to: "wages",      type: "directed", label: "+" },
       ],
       layout: "manual", tikzLibraries: ["arrows.meta"], directed: true,
     };
   }
 }
 
-// ── LegalProceduralPlugin ─────────────────────────────────────────
-// Legal procedure flowchart with decision diamonds (conditions)
-// and rectangular process boxes (actions/stages).
+// ── LegalProceduralPlugin ─────────────────────────────────────────────────────
+// EU administrative law procedure — specific to legal studies theses.
 
 export class LegalProceduralPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEng, {
       pluginId:        "legal-procedural",
       displayName:     "Legal / Procedural Diagrams",
-      description:     "Flowcharts for legal processes, judicial procedures, administrative workflows, and regulatory compliance flows.",
+      description:     "Flowcharts for legal and administrative procedures: judicial, regulatory, and compliance workflows.",
       category:        "humanities-social",
       engineId:        "graph-node-engine",
       qualityLevel:    "experimental",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Suitable for standard legal process flows in theses. Complex multi-jurisdiction or cross-institutional diagrams may need manual adjustment.",
+      scopeWarning:    "Suitable for standard legal/administrative process flows in theses. Complex multi-party or multi-jurisdiction procedures may need manual adjustment.",
       blockKind:       "input",
-      defaultCaption:  "Legal procedure flowchart.",
-      defaultLabel:    "fig:legal-procedure",
+      defaultCaption:  "Criminal procedure: from complaint to verdict.",
+      defaultLabel:    "fig:legal",
     });
   }
 
@@ -180,46 +193,55 @@ export class LegalProceduralPlugin extends BasePlugin<GraphNodeDocument> {
     return {
       engineId: "graph-node-engine", version: "1.0.0",
       nodes: [
-        { id: "report",     label: "Filing\\nof complaint",  shape: "rounded-rectangle", position: { x: 0, y: 5 } },
-        { id: "admissible", label: "Admissible?",            shape: "diamond",           position: { x: 0, y: 3.5 } },
-        { id: "reject",     label: "Dismissed",              shape: "rounded-rectangle", position: { x: 2.5, y: 3.5 } },
-        { id: "invest",     label: "Investigation",          shape: "rectangle",         position: { x: 0, y: 2 } },
-        { id: "charges",    label: "Charges filed?",         shape: "diamond",           position: { x: 0, y: 0.5 } },
-        { id: "archive",    label: "Case archived",          shape: "rounded-rectangle", position: { x: 2.5, y: 0.5 } },
-        { id: "trial",      label: "Trial",                  shape: "rectangle",         position: { x: 0, y: -1 } },
-        { id: "verdict",    label: "Verdict",                shape: "rounded-rectangle", position: { x: 0, y: -2.5 } },
+        { id: "complaint",  label: "Complaint filed",      shape: "rounded-rectangle", position: { x: 0, y: 6 } },
+        { id: "admission",  label: "Admissible?",          shape: "diamond",           position: { x: 0, y: 4.5 } },
+        { id: "dismissed",  label: "Case dismissed",       shape: "rounded-rectangle", position: { x: 3, y: 4.5 } },
+        { id: "prelim",     label: "Preliminary hearing",  shape: "rectangle",         position: { x: 0, y: 3 } },
+        { id: "evidence",   label: "Sufficient evidence?", shape: "diamond",           position: { x: 0, y: 1.5 } },
+        { id: "archived",   label: "Archived",             shape: "rounded-rectangle", position: { x: 3, y: 1.5 } },
+        { id: "indictment", label: "Indictment issued",    shape: "rectangle",         position: { x: 0, y: 0 } },
+        { id: "trial",      label: "Trial (oral hearing)", shape: "rectangle",         position: { x: 0, y: -1.5 } },
+        { id: "verdict",    label: "Verdict",              shape: "diamond",           position: { x: 0, y: -3 } },
+        { id: "acquitted",  label: "Acquittal",            shape: "rounded-rectangle", position: { x: -3, y: -3 } },
+        { id: "convicted",  label: "Conviction\\n+ sentence", shape: "rounded-rectangle", position: { x: 3, y: -3 } },
+        { id: "appeal",     label: "Appeal possible",      shape: "ellipse",           position: { x: 0, y: -4.5 } },
       ],
       edges: [
-        { id: "e1", from: "report",     to: "admissible", type: "directed" },
-        { id: "e2", from: "admissible", to: "reject",     type: "directed", label: "No" },
-        { id: "e3", from: "admissible", to: "invest",     type: "directed", label: "Yes" },
-        { id: "e4", from: "invest",     to: "charges",    type: "directed" },
-        { id: "e5", from: "charges",    to: "archive",    type: "directed", label: "No" },
-        { id: "e6", from: "charges",    to: "trial",      type: "directed", label: "Yes" },
-        { id: "e7", from: "trial",      to: "verdict",    type: "directed" },
+        { id: "e1", from: "complaint",  to: "admission",  type: "directed" },
+        { id: "e2", from: "admission",  to: "dismissed",  type: "directed", label: "No" },
+        { id: "e3", from: "admission",  to: "prelim",     type: "directed", label: "Yes" },
+        { id: "e4", from: "prelim",     to: "evidence",   type: "directed" },
+        { id: "e5", from: "evidence",   to: "archived",   type: "directed", label: "No" },
+        { id: "e6", from: "evidence",   to: "indictment", type: "directed", label: "Yes" },
+        { id: "e7", from: "indictment", to: "trial",      type: "directed" },
+        { id: "e8", from: "trial",      to: "verdict",    type: "directed" },
+        { id: "e9", from: "verdict",    to: "acquitted",  type: "directed", label: "Not guilty" },
+        { id: "e10",from: "verdict",    to: "convicted",  type: "directed", label: "Guilty" },
+        { id: "e11",from: "convicted",  to: "appeal",     type: "directed" },
+        { id: "e12",from: "acquitted",  to: "appeal",     type: "directed" },
       ],
       layout: "manual", tikzLibraries: ["arrows.meta", "shapes.geometric"], directed: true,
     };
   }
 }
 
-// ── PedagogicalDiagramsPlugin ─────────────────────────────────────
-// Bloom's taxonomy tree and curriculum/competency maps.
+// ── PedagogicalDiagramsPlugin ─────────────────────────────────────────────────
+// Revised Bloom's (Anderson & Krathwohl 2001) — specific and actionable.
 
 export class PedagogicalDiagramsPlugin extends BasePlugin<TreeForestDocument> {
   constructor() {
     super(treeEng, {
       pluginId:        "pedagogical-diagrams",
       displayName:     "Pedagogical Diagrams",
-      description:     "Educational diagrams: Bloom's taxonomy trees, learning outcome hierarchies, curriculum maps, and instructional design flows.",
+      description:     "Bloom's taxonomy, learning outcome hierarchies, and curriculum maps for education theses.",
       category:        "humanities-social",
       engineId:        "tree-forest-engine",
       qualityLevel:    "experimental",
       requiredPackages: ["forest", "tikz"],
-      scopeWarning:    "Covers common pedagogical diagram patterns. Complex instructional design models (ADDIE, Dick-Carey) may need manual TikZ adjustment.",
+      scopeWarning:    "Covers common pedagogical diagram patterns. Complex ADDIE or Dick-Carey models may need manual TikZ adjustment.",
       blockKind:       "input",
-      defaultCaption:  "Bloom's taxonomy for this course.",
-      defaultLabel:    "fig:bloom",
+      defaultCaption:  "Revised Bloom's taxonomy — six cognitive levels with representative verbs (Anderson \\& Krathwohl, 2001).",
+      defaultLabel:    "fig:blooms",
     });
   }
 
@@ -228,31 +250,29 @@ export class PedagogicalDiagramsPlugin extends BasePlugin<TreeForestDocument> {
       engineId: "tree-forest-engine", version: "1.0.0",
       style: "taxonomic", growth: "south",
       root: {
-        id: "bloom", label: "\\textbf{Learning Outcomes}", children: [
-          {
-            id: "remember", label: "Remember", children: [
-              { id: "r1", label: "Identify key concepts", children: [] },
-              { id: "r2", label: "Recall definitions",    children: [] },
-            ],
-          },
-          {
-            id: "apply", label: "Apply", children: [
-              { id: "a1", label: "Solve problems",  children: [] },
-              { id: "a2", label: "Use techniques",  children: [] },
-            ],
-          },
-          {
-            id: "analyze", label: "Analyze", children: [
-              { id: "an1", label: "Compare models",  children: [] },
-              { id: "an2", label: "Critique methods", children: [] },
-            ],
-          },
-          {
-            id: "create", label: "Create", children: [
-              { id: "c1", label: "Design solutions",  children: [] },
-              { id: "c2", label: "Produce reports",   children: [] },
-            ],
-          },
+        id: "root", label: "\\textbf{Cognitive Domain}", children: [
+          { id: "remember", label: "1. Remember",  children: [
+            { id: "r1", label: "define", children: [] },
+            { id: "r2", label: "list / recall", children: [] },
+          ]},
+          { id: "understand", label: "2. Understand", children: [
+            { id: "u1", label: "explain", children: [] },
+            { id: "u2", label: "classify", children: [] },
+          ]},
+          { id: "apply", label: "3. Apply", children: [
+            { id: "a1", label: "execute", children: [] },
+            { id: "a2", label: "implement", children: [] },
+          ]},
+          { id: "analyse", label: "4. Analyse", children: [
+            { id: "an1", label: "differentiate", children: [] },
+            { id: "an2", label: "organise", children: [] },
+          ]},
+          { id: "evaluate", label: "5. Evaluate", children: [
+            { id: "ev1", label: "judge / critique", children: [] },
+          ]},
+          { id: "create", label: "6. Create", children: [
+            { id: "c1", label: "design / produce", children: [] },
+          ]},
         ],
       },
     };
