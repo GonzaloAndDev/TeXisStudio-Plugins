@@ -1,1 +1,1 @@
-export { VectorsPlugin, FreeBodyDiagramPlugin, InclinedPlanePlugin, GeometricOpticsPlugin } from "./physics-plugins.js";
+export { VectorsPlugin, FreeBodyDiagramPlugin, InclinedPlanePlugin, WaveOscillationPlugin, GeometricOpticsPlugin } from "./physics-plugins.js";

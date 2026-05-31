@@ -11,7 +11,7 @@ export { FunctionPlots2DPlugin, ParametricPolarPlugin, BasicStatisticsPlugin, St
 export { ProbabilityTreesPlugin } from "./humanities/index.js";
 
 // Physics (plugins 13–17)
-export { VectorsPlugin, FreeBodyDiagramPlugin, InclinedPlanePlugin, GeometricOpticsPlugin } from "./physics/index.js";
+export { VectorsPlugin, FreeBodyDiagramPlugin, InclinedPlanePlugin, WaveOscillationPlugin, GeometricOpticsPlugin } from "./physics/index.js";
 
 // Engineering / CS (plugins 18–22)
 export { BasicCircuitsPlugin, BlockDiagramPlugin, FlowchartPlugin, SoftwareArchitecturePlugin } from "./engineering/index.js";

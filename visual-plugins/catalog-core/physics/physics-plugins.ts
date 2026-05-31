@@ -1,9 +1,12 @@
 import { BasePlugin } from "../../common/plugin-base/base-plugin.js";
 import type { FigureStore } from "../../common/persistence/figure-store.js";
 import { TikzShapeEngine } from "../../engines/tikz-shape-engine/engine.js";
+import { PGFPlotsEngine } from "../../engines/pgfplots-engine/engine.js";
 import type { TikzShapeDocument } from "../../engines/tikz-shape-engine/types.js";
+import type { PGFPlotsDocument } from "../../engines/pgfplots-engine/types.js";
 
-const engine = new TikzShapeEngine();
+const engine     = new TikzShapeEngine();
+const pgfEngine  = new PGFPlotsEngine();
 
 export class VectorsPlugin extends BasePlugin<TikzShapeDocument> {
   constructor(store?: FigureStore) {
@@ -82,6 +85,66 @@ export class InclinedPlanePlugin extends BasePlugin<TikzShapeDocument> {
         { id: "weight", type: "vector", coords: [{ x: 2.6, y: 1.3 }, { x: 2.6, y: -0.2 }], label: "W" },
       ],
       viewBox: { width: 6, height: 4, unit: "cm" }, tikzLibraries: [],
+    };
+  }
+}
+
+// ── Plugin 17 — Wave & Oscillation Diagrams ──────────────────────
+// Ondas sinusoidales, oscilación amortiguada y superposición de ondas.
+// Fundamental en física general, óptica ondulatoria, acústica y electromagnetismo.
+
+export class WaveOscillationPlugin extends BasePlugin<PGFPlotsDocument> {
+  constructor(store?: FigureStore) {
+    super(pgfEngine, {
+      pluginId:        "wave-oscillation",
+      displayName:     "Wave & Oscillation Diagrams",
+      description:     "Sinusoidal waves, damped oscillations, and wave superposition. Covers SHM, transverse/longitudinal waves, and interference patterns.",
+      category:        "physics",
+      engineId:        "pgfplots-engine",
+      qualityLevel:    "official-core",
+      requiredPackages: ["pgfplots", "tikz"],
+      blockKind:       "input",
+      defaultCaption:  "Sinusoidal wave $y = A\\sin(\\omega t)$ with damped envelope.",
+      defaultLabel:    "fig:wave",
+    }, store);
+  }
+
+  protected buildDefaultDocument(): PGFPlotsDocument {
+    return {
+      engineId: "pgfplots-engine", version: "1.0.0",
+      series: [
+        {
+          id: "wave",
+          label: "$y = e^{-0.3t}\\sin(2\\pi t)$",
+          plotType: "function2d",
+          expression: "exp(-0.3*x)*sin(2*pi*x)",
+          domain: [0, 5],
+          color: "blue",
+        },
+        {
+          id: "envelope_pos",
+          label: "Envelope $e^{-0.3t}$",
+          plotType: "function2d",
+          expression: "exp(-0.3*x)",
+          domain: [0, 5],
+          color: "red",
+        },
+        {
+          id: "envelope_neg",
+          label: "",
+          plotType: "function2d",
+          expression: "-exp(-0.3*x)",
+          domain: [0, 5],
+          color: "red",
+        },
+      ],
+      xLabel: "Time $t$ (s)",
+      yLabel: "Displacement $y$ (m)",
+      xScale: "linear",
+      yScale: "linear",
+      showLegend: true,
+      grid: "major",
+      pgfplotsOptions: "ymin=-1.2, ymax=1.2",
     };
   }
 }
