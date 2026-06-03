@@ -1,7 +1,14 @@
 import type { ChemFormula, ChemReaction, ChemElement } from "./types.js";
 
+/** Strip characters that have special meaning inside \ce{}: % starts a comment
+ *  and & is a bond-table alignment tab in mhchem v4. Neither belongs in a
+ *  free-text formula name entered by the user. */
+function sanitizeCeText(text: string): string {
+  return text.replace(/%/g, "").replace(/&/g, "");
+}
+
 export function serializeFormula(f: ChemFormula): string {
-  let out = f.text;
+  let out = sanitizeCeText(f.text);
   if (f.charge) out += `^{${f.charge}}`;
   if (f.state) out += `_{(${f.state})}`;
   return out;

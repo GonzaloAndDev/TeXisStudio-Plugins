@@ -51,8 +51,16 @@ function componentStr(c: CircuitComponent): string {
   return `  \\draw (${c.from}) to[${optParts.join(", ")}] (${c.to});`;
 }
 
+function sanitizeLabel(text: string): string {
+  return text
+    .replace(/(?<!\\)&/g, "\\&")
+    .replace(/(?<!\\)%/g, "\\%")
+    .replace(/(?<!\\)#/g, "\\#")
+    .replace(/(?<!\\)_/g, "\\_");
+}
+
 function nodeStr(n: CircuitNode): string {
-  const label = n.label ? ` node[above] {${n.label}}` : "";
+  const label = n.label ? ` node[above] {${sanitizeLabel(n.label)}}` : "";
   return `  \\node[coordinate] (${n.id}) at (${n.x}, ${n.y})${label} {};`;
 }
 

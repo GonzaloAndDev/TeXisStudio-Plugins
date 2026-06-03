@@ -1,5 +1,21 @@
 import type { PGFPlotsDocument, DataSeries, AxisScale } from "./types.js";
 
+/** Escape LaTeX text-mode specials while preserving inline math ($...$). */
+function escapeLabel(text: string): string {
+  return text
+    .split(/(\$[^$]*\$)/g)
+    .map(part =>
+      part.startsWith("$") && part.endsWith("$")
+        ? part
+        : part
+            .replace(/(?<!\\)&/g, "\\&")
+            .replace(/(?<!\\)%/g, "\\%")
+            .replace(/(?<!\\)#/g, "\\#")
+            .replace(/(?<!\\)_/g, "\\_")
+    )
+    .join("");
+}
+
 function axisEnv(xScale: AxisScale, yScale: AxisScale): string {
   if (xScale === "log" && yScale === "log") return "loglogaxis";
   if (xScale === "log") return "semilogxaxis";
@@ -48,7 +64,7 @@ function seriesCoords(s: DataSeries): string {
         `    point meta=explicit`,
         `  ] coordinates { ${coords} };`,
       );
-      if (s.label) lines.push(`  \\addlegendentry{${s.label}}`);
+      if (s.label) lines.push(`  \\addlegendentry{${escapeLabel(s.label)}}`);
     }
     return lines.join("\n");
   }
@@ -78,7 +94,7 @@ function seriesCoords(s: DataSeries): string {
           `  ] coordinates {};`,
         );
       });
-      if (s.label) lines.push(`  \\addlegendentry{${s.label}}`);
+      if (s.label) lines.push(`  \\addlegendentry{${escapeLabel(s.label)}}`);
     }
     return lines.join("\n");
   }
@@ -93,7 +109,7 @@ function seriesCoords(s: DataSeries): string {
         `(${d.x}, ${d.y}) +- (0, ${d.error ?? 0})`
       ).join(" ");
       lines.push(`  \\addplot[${opts}] plot [error bars/.cd, y dir=both, y explicit] coordinates { ${coords} };`);
-      if (s.label) lines.push(`  \\addlegendentry{${s.label}}`);
+      if (s.label) lines.push(`  \\addlegendentry{${escapeLabel(s.label)}}`);
     }
     return lines.join("\n");
   }
@@ -140,8 +156,8 @@ export function serializePGFPlots(doc: PGFPlotsDocument): string {
   let env = axisEnv(doc.xScale, doc.yScale);
   const axisOpts: string[] = [];
 
-  if (doc.xLabel) axisOpts.push(`xlabel={${doc.xLabel}}`);
-  if (doc.yLabel) axisOpts.push(`ylabel={${doc.yLabel}}`);
+  if (doc.xLabel) axisOpts.push(`xlabel={${escapeLabel(doc.xLabel)}}`);
+  if (doc.yLabel) axisOpts.push(`ylabel={${escapeLabel(doc.yLabel)}}`);
   if (doc.grid && !hasHeatmap) {
     const g = doc.grid === true ? "major" : doc.grid;
     axisOpts.push(`grid=${g}`);
@@ -171,7 +187,7 @@ export function serializePGFPlots(doc: PGFPlotsDocument): string {
 
   // Heatmap and boxplot need the boxplot library
   const extraSetup: string[] = [];
-  if (hasBoxplot) extraSetup.push("\\usetikzlibrary{pgfplots.statistics}");
+  if (hasBoxplot) extraSetup.push("\\usepgfplotslibrary{statistics}");
 
   return [
     ...extraSetup,

@@ -7,7 +7,8 @@ function sanitizeLabel(label: string): string {
   return label
     .replace(/(?<!\\)&/g, "\\&")
     .replace(/(?<!\\)%/g, "\\%")
-    .replace(/(?<!\\)#/g, "\\#");
+    .replace(/(?<!\\)#/g, "\\#")
+    .replace(/(?<!\\)_/g, "\\_");
 }
 
 function sanitizeId(id: string): string {
