@@ -1,6 +1,7 @@
 import { BasePlugin } from "../../common/plugin-base/index.js";
 import { PGFPlotsEngine } from "../../engines/pgfplots-engine/engine.js";
 import type { PGFPlotsDocument } from "../../engines/pgfplots-engine/types.js";
+import { pluginText } from "../../i18n/index.js";
 
 const engine = new PGFPlotsEngine();
 
@@ -12,15 +13,15 @@ export class BarChartsPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(engine, {
       pluginId:        "bar-charts",
-      displayName:     "Bar Charts & Histograms",
-      description:     "Grouped and stacked bar charts, frequency histograms for descriptive statistics.",
+      displayName:     pluginText("bar-charts", "displayName", "Bar Charts & Histograms"),
+      description:     pluginText("bar-charts", "description", "Grouped and stacked bar charts, frequency histograms for descriptive statistics."),
       category:        "mathematics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "Enter values manually. For charts from large datasets, generate in R/Python and import as PDF.",
+      scopeWarning:    pluginText("bar-charts", "scopeWarning", "Enter values manually. For charts from large datasets, generate in R/Python and import as PDF."),
       blockKind:       "input",
-      defaultCaption:  "Grouped bar chart — mean response by condition and time point ($\\pm$\\,SD).",
+      defaultCaption:  pluginText("bar-charts", "defaultCaption", "Grouped bar chart — mean response by condition and time point ($\\pm$\\,SD)."),
       defaultLabel:    "fig:bar-chart",
     });
   }
@@ -84,15 +85,15 @@ export class BoxViolinPlotsPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(engine, {
       pluginId:        "box-violin-plots",
-      displayName:     "Box Plots & Distribution Comparisons",
-      description:     "Box-and-whisker plots with medians, quartiles, and outliers for comparing distributions.",
+      displayName:     pluginText("box-violin-plots", "displayName", "Box Plots & Distribution Comparisons"),
+      description:     pluginText("box-violin-plots", "description", "Box-and-whisker plots with medians, quartiles, and outliers for comparing distributions."),
       category:        "mathematics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "Enter pre-computed statistics (median, Q1, Q3) from R/Python. Each data point encodes: x=group position, y=median, error=IQR half-range.",
+      scopeWarning:    pluginText("box-violin-plots", "scopeWarning", "Enter pre-computed statistics (median, Q1, Q3) from R/Python. Each data point encodes: x=group position, y=median, error=IQR half-range."),
       blockKind:       "input",
-      defaultCaption:  "Distribution of test scores across three teaching conditions (box: Q1--Q3; whiskers: 1.5$\\times$IQR).",
+      defaultCaption:  pluginText("box-violin-plots", "defaultCaption", "Distribution of test scores across three teaching conditions (box: Q1--Q3; whiskers: 1.5$\\times$IQR)."),
       defaultLabel:    "fig:boxplot",
     });
   }
@@ -147,15 +148,15 @@ export class ScatterRegressionPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(engine, {
       pluginId:        "scatter-regression",
-      displayName:     "Scatter Plots with Regression",
-      description:     "Scatter plot with linear regression line and optional confidence band.",
+      displayName:     pluginText("scatter-regression", "displayName", "Scatter Plots with Regression"),
+      description:     pluginText("scatter-regression", "description", "Scatter plot with linear regression line and optional confidence band."),
       category:        "mathematics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "Compute slope, intercept, and CI band in your statistical software. Enter the values here for publication-quality rendering.",
+      scopeWarning:    pluginText("scatter-regression", "scopeWarning", "Compute slope, intercept, and CI band in your statistical software. Enter the values here for publication-quality rendering."),
       blockKind:       "input",
-      defaultCaption:  "BMI vs systolic blood pressure: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$).",
+      defaultCaption:  pluginText("scatter-regression", "defaultCaption", "BMI vs systolic blood pressure: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."),
       defaultLabel:    "fig:scatter-regression",
     });
   }

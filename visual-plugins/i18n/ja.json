@@ -1,0 +1,366 @@
+{
+  "plugins": {
+    "phylogenetic-trees": {
+      "displayName": "単純な系統樹",
+      "description": "ラベル付けされたノードと枝の長さを使用して系統樹と分類樹を構築します。",
+      "scopeWarning": "論文の簡略化された系統発生に適しています。統計サポートのある複雑な系統発生学の場合は、FigTree/iTOL を使用し、PDF としてインポートします。",
+      "defaultCaption": "選択された脊椎動物クラスの簡略化された系統発生。"
+    },
+    "dna-rna-sequences": {
+      "displayName": "DNA / RNA / タンパク質配列",
+      "description": "色分けされた塩基、コドンの強調表示、およびアラインメント マークを使用して生物学的配列を表示します。",
+      "defaultCaption": "短い mRNA 配列の開始コドンとリーディング フレーム。"
+    },
+    "biomedical-flow": {
+      "displayName": "生物医学の流れ図",
+      "description": "生物学的および臨床プロセス フロー — シグナル伝達経路、代謝ステップ、治療アルゴリズム。",
+      "defaultCaption": "フィードバック阻害を伴う MAPK/ERK シグナル伝達カスケード。"
+    },
+    "consort-flow": {
+      "displayName": "CONSORT / 臨床試験の流れ",
+      "description": "ランダム化臨床試験の CONSORT スタイルのフロー図 - 登録、割り当て、追跡調査、分析。",
+      "defaultCaption": "CONSORT 2010 のフロー図。"
+    },
+    "biological-pathways": {
+      "displayName": "概略的な生物学的経路",
+      "description": "論文数値のための簡略化された代謝およびシグナル伝達経路スキーム。",
+      "scopeWarning": "論文やレポートの簡略化されたパスウェイ図に適しています。 KEGG、Reactome、または専門的な経路視覚化ツールの代替品ではありません。",
+      "defaultCaption": "中心炭素代謝: 解糖と TCA サイクルの開始。"
+    },
+    "chemical-formulas": {
+      "displayName": "化学式",
+      "description": "電荷、状態、下付き文字を含む化学式を書きます。 mhchem — LaTeX ネイティブを使用します。",
+      "defaultCaption": "酸化状態と相を含む厳選された無機化合物。"
+    },
+    "chemical-reactions": {
+      "displayName": "化学反応",
+      "description": "矢印、条件、触媒を使用して化学反応方程式を作成します。 mhchem を使用します。",
+      "defaultCaption": "酸-塩基の中和および燃焼反応。"
+    },
+    "reaction-equilibria": {
+      "displayName": "反応平衡と条件",
+      "description": "矢印の上/下の条件での化学平衡反応。 mhchem を使用します。",
+      "defaultCaption": "ハーバー法とエステル化平衡。"
+    },
+    "chemical-structures": {
+      "displayName": "化学構造",
+      "description": "ChemFig を使用した単純な有機構造と環システム。ベンゼン、官能基、環化合物。",
+      "scopeWarning": "論文内の単純な有機構造に適しています。複雑なマルチリング システムでは、手動で ChemFig を調整する必要がある場合があります。完全な構造化学については、ChemDraw を使用し、PDF/SVG としてインポートします。",
+      "defaultCaption": "アスピリン (アセチルサリチル酸) の構造式。"
+    },
+    "basic-electrical-circuits": {
+      "displayName": "基本的な電気回路",
+      "description": "ビジュアル回路ビルダー: 抵抗、コンデンサ、インダクタ、ソース、スイッチ、ダイオード。 CircuiTikZ ネイティブ。",
+      "defaultCaption": "分圧器を備えた RC ローパス フィルター回路"
+    },
+    "block-diagrams-control": {
+      "displayName": "ブロック図 / 制御システム",
+      "description": "伝達関数、加算ジャンクション、およびフィードバック ループを含む制御システムのブロック図。",
+      "defaultCaption": "PID 閉ループ制御システムのブロック図"
+    },
+    "flowcharts": {
+      "displayName": "フローチャート",
+      "description": "意思決定ダイヤモンド、プロセス ボックス、コネクタ矢印を含むアカデミック フローチャートとプロセス フローチャート。",
+      "defaultCaption": "研究方法のフローチャート。"
+    },
+    "software-architecture": {
+      "displayName": "ソフトウェア / システム アーキテクチャ",
+      "description": "コンポーネント、レイヤー、およびシステム アーキテクチャ図。",
+      "scopeWarning": "標準的なアーキテクチャの概要に適しています。複雑な UML または展開図の場合は、Draw.io を使用して、PDF としてインポートします。",
+      "defaultCaption": "3 層 Web アプリケーション アーキテクチャ。"
+    },
+    "venn-set-diagrams": {
+      "displayName": "ベン / セット図",
+      "description": "ラベル付きの円と交点を含むベン図と集合論図を作成します。",
+      "defaultCaption": "混合手法の研究デザインを示す 3 セットのベン図。"
+    },
+    "plane-geometry": {
+      "displayName": "平面ジオメトリ",
+      "description": "幾何学的形状: 三角形、多角形、円、角度、垂線、平行線。",
+      "defaultCaption": "斜辺からの高度を持つ直角三角形 — 幾何平均関係"
+    },
+    "analytic-geometry": {
+      "displayName": "解析幾何学",
+      "description": "曲線、直線、接線、ラベル付き点を含む座標系。",
+      "defaultCaption": "$x=2$ に根、頂点、接線がある放物線 $f(x)=x^2-2x-3$。"
+    },
+    "probability-trees": {
+      "displayName": "確率ツリー",
+      "description": "分岐の確率と結果を含む視覚的な確率ツリー。森林出身。",
+      "defaultCaption": "確率ツリー — 2 回のコイン投げ。"
+    },
+    "lab-setups": {
+      "displayName": "簡単なラボ設定",
+      "description": "基本的な実験器具の図: フラスコ、ビーカー、ビュレット、チューブ アセンブリ。",
+      "scopeWarning": "標準的な実験装置をカバーします。特殊な機器図の場合は、専用のイラストツールを使用し、PDF としてインポートします。",
+      "defaultCaption": "簡単な実験室のセットアップ。"
+    },
+    "syntax-trees": {
+      "displayName": "構文 / 言語ツリー",
+      "description": "言語学の句構造と依存関係ツリー。森林出身。",
+      "defaultCaption": "フレーズ構造ツリー。"
+    },
+    "concept-maps": {
+      "displayName": "概念マップと引数図",
+      "description": "コンセプト マップ、マインド マップ、議論構造図。",
+      "defaultCaption": "コンセプトマップ。"
+    },
+    "visual-equations": {
+      "displayName": "視覚的な方程式",
+      "description": "ビジュアル エディターを使用して、数式、数式、数式を作成します。 LaTeX ネイティブを出力します。",
+      "defaultCaption": "二次公式と二次形式。"
+    },
+    "matrices-determinants": {
+      "displayName": "行列と行列式",
+      "description": "ビジュアルセル編集により、任意のサイズの行列と行列式を作成します。",
+      "defaultCaption": "角度 $\\theta$ による $z$ 軸の周りの 3D 回転行列。"
+    },
+    "systems-of-equations": {
+      "displayName": "連立方程式",
+      "description": "整列した書式設定を使用して、線形または非線形方程式のシステムを構築します。",
+      "defaultCaption": "3 つの一次方程式系 (流体の流れのバランス)。"
+    },
+    "piecewise-functions": {
+      "displayName": "区分関数",
+      "description": "ビジュアル行エディターを使用して、ケースまたはパーツごとに関数を定義します。",
+      "defaultCaption": "ヘヴィサイド ステップ関数と ReLU 活性化関数。"
+    },
+    "vectors-fields": {
+      "displayName": "ベクトルと単純なフィールド",
+      "description": "ベクトル、ベクトル分解、および単純なフィールド表現を描画します。",
+      "defaultCaption": "ベクトル加算 - 平行四辺形の法則: $\\vec{R} = \\vec{A} + \\vec{B}$。"
+    },
+    "free-body-diagrams": {
+      "displayName": "フリーボディ図",
+      "description": "力、質量ブロック、ラベル付き矢印を使用して自由体図を作成します。",
+      "defaultCaption": "自由体図 — 角度 $\\alpha$ で力を加えた表面上のブロック。"
+    },
+    "inclined-plane-pulleys": {
+      "displayName": "傾斜面、滑車、スプリング",
+      "description": "機械システム: 傾斜面、プーリーのセットアップ、およびバネ質量システム。",
+      "scopeWarning": "正確な回路図を生成します。非常に複雑なマルチプーリー システムでは、TikZ を手動で調整する必要がある場合があります。",
+      "defaultCaption": "傾斜面上の自由体図 (角度 $\\theta$)。"
+    },
+    "wave-oscillation": {
+      "displayName": "波動図と振動図",
+      "description": "正弦波、減衰振動、および波の重ね合わせ。 SHM、横波/縦波、干渉パターンをカバーします。",
+      "defaultCaption": "減衰エンベロープを備えた正弦波 $y = A\\sin(\\omega t)$。"
+    },
+    "geometric-optics": {
+      "displayName": "幾何光学",
+      "description": "レンズ、ミラー、光線図、屈折図。",
+      "scopeWarning": "標準的な光線図に適しています。複数の要素を備えた複雑な光学システムは、手動による調整が必要な場合があります。",
+      "defaultCaption": "収束する薄いレンズ — 3 つの主光線構造。"
+    },
+    "gantt-charts": {
+      "displayName": "ガント チャート",
+      "description": "タスク、グループ、マイルストーン、依存関係を含むガント チャートを調査およびプロジェクトします。 pgfgantt ネイティブ。",
+      "defaultCaption": "学期ごとの博士研究スケジュール。"
+    },
+    "timelines": {
+      "displayName": "タイムライン",
+      "description": "ラベル付きイベントを含む歴史、研究、物語のタイムライン。",
+      "defaultCaption": "分子生物学における重要なマイルストーン (1944 ～ 2003 年)。"
+    },
+    "function-plots-2d": {
+      "displayName": "2D 関数プロット",
+      "description": "ラベル付きの軸、グリッド、凡例を使用して数学関数をプロットします。 PGFPlots ネイティブ。",
+      "defaultCaption": "三角関数 $\\sin x$ および $\\cos x$。"
+    },
+    "parametric-polar-plots": {
+      "displayName": "パラメトリック プロットと極座標プロット",
+      "description": "パラメトリック曲線と極関数プロット。",
+      "defaultCaption": "リサージュ曲線 $(\\cos 2t,\\, \\sin 3t)$。"
+    },
+    "basic-statistics": {
+      "displayName": "基本的な統計チャート",
+      "description": "表形式データからの棒グラフ、ヒストグラム、散布図。",
+      "defaultCaption": "比較棒グラフ — 実験グループ別の測定結果。"
+    },
+    "statistical-distributions": {
+      "displayName": "統計分布",
+      "description": "正規分布、t 分布、カイ二乗分布、および陰影領域のあるその他の分布。",
+      "defaultCaption": "95\\% 信頼区間を陰影付けした標準正規分布。"
+    },
+    "kaplan-meier": {
+      "displayName": "カプランマイヤー生存曲線",
+      "description": "臨床研究および疫学研究のためのステップ関数生存曲線。",
+      "scopeWarning": "事前に計算された KM 推定値 (R survfit、Stata stcurve、または SPSS から) をステップ関数を形成するデータ ポイントとして入力します。統計的テストは外部で行う必要があります。",
+      "defaultCaption": "カプラン -- 補助化学療法と標準化学療法のマイヤー全生存曲線 ($n{=}200$; ログランク $p{=}0.008$)。"
+    },
+    "network-graph": {
+      "displayName": "ネットワーク / ソーシャル グラフ",
+      "description": "コミュニティ クラスタリングによる共著、引用、または社会的影響力ネットワーク。",
+      "scopeWarning": "例示的なネットワーク (≤ 15 ノード) に適しています。大規模なビジュアライゼーションの場合は、Gephi または NetworkX を使用し、PDF としてインポートします。",
+      "defaultCaption": "共著ネットワーク — ブリッジ著者によって接続された 2 つの研究クラスター。"
+    },
+    "organic-chemistry-extended": {
+      "displayName": "拡張有機化学",
+      "description": "環、官能基、立体中心を含む有機構造。 ChemFig ネイティブ。",
+      "scopeWarning": "複雑なマルチリングまたはステレオ構造では、ChemFig を手動で調整する必要がある場合があります。出版品質の構造の場合は、ChemDraw を使用し、PDF としてインポートします。",
+      "defaultCaption": "カフェイン (1,3,7-トリメチルキサンチン) の構造式。"
+    },
+    "reaction-mechanisms": {
+      "displayName": "基本的な反応メカニズム",
+      "description": "C-C 結合形成反応、置換、脱離などの反応機構。",
+      "scopeWarning": "論文の標準メカニズムに適しています。湾曲した矢印を備えた複雑な多段階機構では、手動で ChemFig を調整する必要があります。",
+      "defaultCaption": "アルドール縮合: 塩基触媒による $\\beta$-ヒドロキシカルボニル化合物の形成。"
+    },
+    "er-diagrams": {
+      "displayName": "ER 図",
+      "description": "データベース設計のためのエンティティ関係図。 TikZ ネイティブ。",
+      "scopeWarning": "論文の標準的な ER 図に適しています。多くのエンティティを含む複雑なスキーマは、PDF としてエクスポートされた Draw.io の恩恵を受けます。",
+      "defaultCaption": "大学のコース登録システムの ER 図。"
+    },
+    "state-machines": {
+      "displayName": "ステートマシン",
+      "description": "状態、遷移、ラベルを持つ有限状態マシンとオートマトン。",
+      "scopeWarning": "論文の DFA/NFA およびリアクティブ システム図に適しています。大きなオートマトンの場合は、Graphviz/PlantUML から生成し、PDF としてインポートします。",
+      "defaultCaption": "信号機の有限状態マシン (タイマー駆動)。"
+    },
+    "markov-chains": {
+      "displayName": "マルコフチェーン",
+      "description": "状態と遷移確率を含むマルコフ連鎖図。",
+      "scopeWarning": "論文でマルコフ連鎖を説明するのに適しています。推論またはシミュレーションの場合は、R/Python を使用し、結果を図としてインポートします。",
+      "defaultCaption": "天気マルコフ連鎖 (晴れ / 曇り / 雨)。"
+    },
+    "bode-nyquist": {
+      "displayName": "ボード線図/ナイキスト線図",
+      "description": "周波数応答: ボード振幅 + 位相、またはナイキスト プロット。 2 次伝達関数。",
+      "scopeWarning": "システム伝達関数を pgfplots 式として入力します。最初に MATLAB/Python の極/零点を計算します。",
+      "defaultCaption": "$G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$、$\\zeta{=}0.3$) のボード線図。"
+    },
+    "plots-3d": {
+      "displayName": "3D 科学プロット",
+      "description": "3D サーフェス、ワイヤーフレーム、および等高線プロット。 PGFPlots ネイティブ。",
+      "scopeWarning": "3D プロットは、細かいメッシュの場合コンパイルに時間がかかります。適切なコンパイル時間を確保するには、サンプル ≤ 25×25 を維持してください。",
+      "defaultCaption": "標準二変量正規密度 $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$。"
+    },
+    "phase-diagrams": {
+      "displayName": "状態図",
+      "description": "動的システムの相ポートレート、ヌルクライン、および安定性図。",
+      "scopeWarning": "2D 位相面とヌルクライン プロットに適しています。完全なベクトルフィールドの矢印には、pgfplots の矢筒を手動で調整する必要があります。",
+      "defaultCaption": "ロトカ -- ヴォルテラ位相面: 捕食者 $x$ 対捕食者 $y$ ヌルクライン ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)。"
+    },
+    "heat-maps": {
+      "displayName": "相関ヒート マップ",
+      "description": "pgfplots 行列プロットを使用した相関行列とヒート マップ。 -1 から 1 までの値、カラーマップ。",
+      "scopeWarning": "小さな行列 (≤ 10×10) に適しています。まず R/Python で相関を計算し、次にここに値を入力します。",
+      "defaultCaption": "4 つの心理測定変数のピアソン相関行列。"
+    },
+    "supply-demand": {
+      "displayName": "供給曲線と需要曲線",
+      "description": "均衡、消費者/生産者の余剰、およびオプションの曲線シフトによる需要と供給。",
+      "scopeWarning": "論文における部分平衡解析の説明に適しています。非線形弾性曲線では、pgfplots を手動で調整する必要がある場合があります。",
+      "defaultCaption": "需要と供給: 元の均衡 $E_0$ と所得増加後の需要シフト $D \\to D'$。"
+    },
+    "uml-class-diagrams": {
+      "displayName": "UML クラス図",
+      "description": "継承、インターフェイス、構成、および関連付けを含む UML クラス図。",
+      "scopeWarning": "簡略化されたクラス ボックスを生成します。 UML に完全に準拠するには、PlantUML またはdraw.io を使用し、PDF としてインポートします。",
+      "defaultCaption": "オブザーバーを使用したリポジトリ パターン: \\\\ $<<$interface$>>$ クラス、継承および合成。"
+    },
+    "time-series": {
+      "displayName": "時系列プロット",
+      "description": "傾向、信頼帯、および注釈付きイベントを含む時系列。経済学、生態学、臨床研究における長期的なデータに最適です。",
+      "scopeWarning": "データポイントを手動で入力します。大規模または複雑な時系列 (ARIMA、季節性) の場合は、R/Python で生成し、PDF としてインポートします。",
+      "defaultCaption": "長期傾向と $\\pm$2\\、SD バンドを含む毎月の CO$_2$ 濃度 (ppm)。"
+    },
+    "genealogy": {
+      "displayName": "系図 / 家系図",
+      "description": "家系図、王朝、世代および関係マーカーを含む臨床家系図。",
+      "scopeWarning": "簡略化された家系図に適しています。標準シンボル (ACMG/AMP) を含む臨床遺伝家系図の場合は、専用の家系図ソフトウェアを使用してください。",
+      "defaultCaption": "家系図。"
+    },
+    "parallel-coordinates": {
+      "displayName": "平行座標 / 基準マトリックス",
+      "description": "正規化された次元 (0 ～ 10 スケール) にわたる代替案の多基準比較のための平行座標プロット。",
+      "scopeWarning": "値を入力する前に、すべての基準を共通のスケール (0 ～ 10 など) に正規化します。多くの代替案 (>6) では、Python/R を使用し、PDF としてインポートします。",
+      "defaultCaption": "4 つの基準で 5 つのソフトウェア ソリューションを比較した平行座標プロット。"
+    },
+    "energy-band-diagrams": {
+      "displayName": "エネルギー/バンド図",
+      "description": "物理学および材料科学のエネルギー準位図、バンド ギャップ、半導体バンド図。",
+      "scopeWarning": "エネルギー値は例示です。文献または計算から得た、材料の実際のバンドギャップとフェルミ準位の値に置き換えてください。",
+      "defaultCaption": "半導体バンド図。"
+    },
+    "decision-tree": {
+      "displayName": "デシジョン ツリー",
+      "description": "条件、分岐、および葉の結果を含む意思決定木図。分類ツリー、CART、臨床意思決定ルールについて説明します。",
+      "scopeWarning": "ツリー構造を手動で入力します。データからツリーを自動生成するには、scikit-learn/rpart を使用してツリーをエクスポートし、公開するためにここで複製します。",
+      "defaultCaption": "デシジョン ツリー。"
+    },
+    "roc-curve": {
+      "displayName": "ROC カーブ",
+      "description": "分類子評価のための受信機動作特性曲線。 AUC アノテーションを持つ複数の分類子をサポートします。",
+      "scopeWarning": "統計ソフトウェア (sklearn、R pROC) から事前に計算された TPR/FPR 値を入力します。このプラグインは曲線をレンダリングします。モデルのトレーニングは外部で行う必要があります。",
+      "defaultCaption": "ROC カーブ (凡例には AUC を表示)。"
+    },
+    "population-pyramid": {
+      "displayName": "人口ピラミッド",
+      "description": "人口統計分析用の年齢性別人口ピラミッド。年齢グループごとの男性/女性の人口分布を示します。",
+      "scopeWarning": "国勢調査データを手動で入力します。大規模なデータセットの場合は、R/Python でピラミッドを生成し、PDF としてインポートするか、このプラグインを例示的な部分母集団に使用します。",
+      "defaultCaption": "人口ピラミッド。"
+    },
+    "error-bars": {
+      "displayName": "誤差範囲と信頼区間",
+      "description": "平均値 ± SD/SE/CI のエラーバー付きの折れ線または棒グラフ。実験や調査の結果を提示する場合に必須です。",
+      "scopeWarning": "データから計算された平均値と誤差値 (SD、SE、または 95% CI 半角) を入力します。生データの処理は外部で行う必要があります。",
+      "defaultCaption": "95\\% 信頼区間の平均値。"
+    },
+    "causal-dag": {
+      "displayName": "因果関係 DAG / パス図",
+      "description": "因果推論フレームワーク、構造方程式モデル、媒介分析用の有向非巡回グラフ (DAG)。",
+      "scopeWarning": "最大 10 個の変数までの因果関係図に適しています。複雑な SEM または大規模な DAG の場合は、dagitty.net または lavaan を使用して図をインポートします。",
+      "defaultCaption": "因果有向非巡回グラフ (DAG)。"
+    },
+    "bar-charts": {
+      "displayName": "棒グラフとヒストグラム",
+      "description": "グループ化および積み上げ棒グラフ、記述統計の頻度ヒストグラム。",
+      "scopeWarning": "値を手動で入力します。大規模なデータセットからのチャートの場合は、R/Python で生成し、PDF としてインポートします。",
+      "defaultCaption": "グループ化された棒グラフ — 条件および時点別の平均応答 ($\\pm$\\,SD)。"
+    },
+    "box-violin-plots": {
+      "displayName": "箱ひげ図と分布の比較",
+      "description": "分布を比較するための中央値、四分位数、外れ値を含む箱ひげ図。",
+      "scopeWarning": "R/Python から事前に計算された統計 (中央値、Q1、Q3) を入力します。各データ ポイントは、x=グループ位置、y=中央値、誤差=IQR 半範囲をエンコードします。",
+      "defaultCaption": "3 つの指導条件にわたるテストスコアの分布 (ボックス: Q1--Q3; ひげ: 1.5$\\times$IQR)。"
+    },
+    "scatter-regression": {
+      "displayName": "回帰を使用した散布図",
+      "description": "線形回帰直線とオプションの信頼帯を含む散布図。",
+      "scopeWarning": "統計ソフトウェアで傾き、切片、CI バンドを計算します。出版品質のレンダリングを行うには、ここに値を入力します。",
+      "defaultCaption": "BMI 対 最高血圧: $\\hat{y} = 89.4 + 1.83x$、$R^2{=}0.74$、$p{<}0.001$ ($n{=}120$)。"
+    },
+    "bayesian-networks": {
+      "displayName": "ベイジアン ネットワーク",
+      "description": "ベイジアン ネットワークの有向非巡回グラフ: 潜在原因ノード (楕円) と観察された証拠ノード (長方形)。",
+      "scopeWarning": "論文でのベイジアン ネットワークの説明に適しています。推論、パラメータ学習、または密なグラフの場合は、pgmpy、BayesFusion、GeNIe、または BUGS を使用し、最終的な PDF/SVG をインポートします。",
+      "defaultCaption": "呼吸器疾患の鑑別診断のためのベイジアン ネットワーク"
+    },
+    "sem-path-diagrams": {
+      "displayName": "SEM / パス図",
+      "description": "潜在変数と測定モデルを含む構造方程式モデルのパス図。",
+      "scopeWarning": "論文レベルの SEM 図に適しています。推定、適合統計、および標準化されたレポートには、lavaan/R、Mplus、または AMOS を使用し、最終的な図/表を PDF としてインポートします。",
+      "defaultCaption": "テクノロジー アクセプタンス モデル (TAM): 行動の意図を予測する、認識された有用性と使いやすさ。"
+    },
+    "economic-causal": {
+      "displayName": "経済因果関係図",
+      "description": "強化およびバランスの取れたフィードバック ループを備えた因果ループ図 (CLD)。",
+      "scopeWarning": "単純な因果ループ モデルに適しています。ストック、フロー、遅延、またはシミュレーションを含む完全なシステム ダイナミクスの場合は、Vensim、Stella、または AnyLogic を使用し、最終的な PDF/SVG をインポートします。",
+      "defaultCaption": "賃金-価格スパイラル: フィードバック ループの強化 ($R$) とバランス調整 ($B$)。"
+    },
+    "legal-procedural": {
+      "displayName": "法的/手順図",
+      "description": "法律および行政手続きのフローチャート: 司法、規制、およびコンプライアンスのワークフロー。",
+      "scopeWarning": "論文の標準的な法律/行政プロセス フローに適しています。複雑な複数の当事者または複数の管轄区域にまたがる手順は、BPMN/draw.io で管理し、PDF としてインポートする方が適切です。",
+      "defaultCaption": "刑事手続き: 告訴から判決まで。"
+    },
+    "pedagogical-diagrams": {
+      "displayName": "教育図",
+      "description": "ブルームの分類、学習成果の階層、教育論文のカリキュラム マップ。",
+      "scopeWarning": "一般的な教育図のパターンをカバーします。複雑なインストラクショナル デザイン モデルの場合は、信頼できる図をdraw.io/Figmaに保存し、最終的なPDF/SVGをインポートします。",
+      "defaultCaption": "ブルームの分類法を改訂 — 代表的な動詞を含む 6 つの認知レベル (Anderson \\& Krathwohl、2001)。"
+    }
+  }
+}

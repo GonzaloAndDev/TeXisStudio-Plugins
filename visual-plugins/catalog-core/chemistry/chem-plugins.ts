@@ -2,6 +2,7 @@ import { BasePlugin } from "../../common/plugin-base/base-plugin.js";
 import type { FigureStore } from "../../common/persistence/figure-store.js";
 import { ChemistryEngine } from "../../engines/chemistry-engine/engine.js";
 import type { ChemEngineDocument } from "../../engines/chemistry-engine/types.js";
+import { pluginText } from "../../i18n/index.js";
 
 const engine = new ChemistryEngine();
 
@@ -9,14 +10,14 @@ export class ChemicalFormulasPlugin extends BasePlugin<ChemEngineDocument> {
   constructor(store?: FigureStore) {
     super(engine, {
       pluginId: "chemical-formulas",
-      displayName: "Chemical Formulas",
-      description: "Write chemical formulas with charges, states, and subscripts. Uses mhchem — LaTeX native.",
+      displayName: pluginText("chemical-formulas", "displayName", "Chemical Formulas"),
+      description: pluginText("chemical-formulas", "description", "Write chemical formulas with charges, states, and subscripts. Uses mhchem — LaTeX native."),
       category: "chemistry",
       engineId: "chemistry-engine",
       qualityLevel: "official-core",
       requiredPackages: ["mhchem"],
       blockKind: "raw",
-      defaultCaption: "Selected inorganic formulas with oxidation states and phases.",
+      defaultCaption: pluginText("chemical-formulas", "defaultCaption", "Selected inorganic formulas with oxidation states and phases."),
       defaultLabel: "eq:formula",
     }, store);
   }
@@ -41,14 +42,14 @@ export class ChemicalReactionsPlugin extends BasePlugin<ChemEngineDocument> {
   constructor(store?: FigureStore) {
     super(engine, {
       pluginId: "chemical-reactions",
-      displayName: "Chemical Reactions",
-      description: "Build chemical reaction equations with arrows, conditions, and catalysts. Uses mhchem.",
+      displayName: pluginText("chemical-reactions", "displayName", "Chemical Reactions"),
+      description: pluginText("chemical-reactions", "description", "Build chemical reaction equations with arrows, conditions, and catalysts. Uses mhchem."),
       category: "chemistry",
       engineId: "chemistry-engine",
       qualityLevel: "official-core",
       requiredPackages: ["mhchem"],
       blockKind: "raw",
-      defaultCaption: "Acid--base neutralisation and combustion reactions.",
+      defaultCaption: pluginText("chemical-reactions", "defaultCaption", "Acid--base neutralisation and combustion reactions."),
       defaultLabel: "eq:reaction",
     }, store);
   }
@@ -94,14 +95,14 @@ export class ReactionEquilibriaPlugin extends BasePlugin<ChemEngineDocument> {
   constructor(store?: FigureStore) {
     super(engine, {
       pluginId: "reaction-equilibria",
-      displayName: "Reaction Equilibria & Conditions",
-      description: "Chemical equilibrium reactions with conditions above/below the arrow. Uses mhchem.",
+      displayName: pluginText("reaction-equilibria", "displayName", "Reaction Equilibria & Conditions"),
+      description: pluginText("reaction-equilibria", "description", "Chemical equilibrium reactions with conditions above/below the arrow. Uses mhchem."),
       category: "chemistry",
       engineId: "chemistry-engine",
       qualityLevel: "official-core",
       requiredPackages: ["mhchem"],
       blockKind: "raw",
-      defaultCaption: "Haber process and esterification equilibria.",
+      defaultCaption: pluginText("reaction-equilibria", "defaultCaption", "Haber process and esterification equilibria."),
       defaultLabel: "eq:equilibrium",
     }, store);
   }
@@ -137,15 +138,15 @@ export class ChemicalStructuresPlugin extends BasePlugin<ChemEngineDocument> {
   constructor(store?: FigureStore) {
     super(engine, {
       pluginId: "chemical-structures",
-      displayName: "Chemical Structures",
-      description: "Simple organic structures and ring systems using ChemFig. Benzene, functional groups, ring compounds.",
+      displayName: pluginText("chemical-structures", "displayName", "Chemical Structures"),
+      description: pluginText("chemical-structures", "description", "Simple organic structures and ring systems using ChemFig. Benzene, functional groups, ring compounds."),
       category: "chemistry",
       engineId: "chemistry-engine",
       qualityLevel: "official-core",
       requiredPackages: ["chemfig", "mhchem"],
-      scopeWarning: "Suitable for simple organic structures in theses. Complex multi-ring systems may need manual ChemFig adjustment. For full structural chemistry, use ChemDraw and import as PDF/SVG.",
+      scopeWarning: pluginText("chemical-structures", "scopeWarning", "Suitable for simple organic structures in theses. Complex multi-ring systems may need manual ChemFig adjustment. For full structural chemistry, use ChemDraw and import as PDF/SVG."),
       blockKind: "raw",
-      defaultCaption: "Aspirin (acetylsalicylic acid) structural formula.",
+      defaultCaption: pluginText("chemical-structures", "defaultCaption", "Aspirin (acetylsalicylic acid) structural formula."),
       defaultLabel: "fig:structure",
     }, store);
   }

@@ -4,6 +4,7 @@ import { TikzShapeEngine } from "../../engines/tikz-shape-engine/engine.js";
 import { PGFPlotsEngine } from "../../engines/pgfplots-engine/engine.js";
 import type { TikzShapeDocument } from "../../engines/tikz-shape-engine/types.js";
 import type { PGFPlotsDocument } from "../../engines/pgfplots-engine/types.js";
+import { pluginText } from "../../i18n/index.js";
 
 const tikzEng = new TikzShapeEngine();
 const pgfEng  = new PGFPlotsEngine();
@@ -12,11 +13,11 @@ export class VennDiagramPlugin extends BasePlugin<TikzShapeDocument> {
   constructor(store?: FigureStore) {
     super(tikzEng, {
       pluginId: "venn-set-diagrams",
-      displayName: "Venn / Set Diagrams",
-      description: "Create Venn diagrams and set-theory diagrams with labeled circles and intersections.",
+      displayName: pluginText("venn-set-diagrams", "displayName", "Venn / Set Diagrams"),
+      description: pluginText("venn-set-diagrams", "description", "Create Venn diagrams and set-theory diagrams with labeled circles and intersections."),
       category: "mathematics", engineId: "tikz-shape-engine", qualityLevel: "official-core",
       requiredPackages: ["tikz"], blockKind: "input",
-      defaultCaption: "Three-set Venn diagram showing mixed-methods research design.",
+      defaultCaption: pluginText("venn-set-diagrams", "defaultCaption", "Three-set Venn diagram showing mixed-methods research design."),
       defaultLabel: "fig:venn",
     }, store);
   }
@@ -49,11 +50,11 @@ export class PlaneGeometryPlugin extends BasePlugin<TikzShapeDocument> {
   constructor(store?: FigureStore) {
     super(tikzEng, {
       pluginId: "plane-geometry",
-      displayName: "Plane Geometry",
-      description: "Geometric shapes: triangles, polygons, circles, angles, perpendiculars, parallels.",
+      displayName: pluginText("plane-geometry", "displayName", "Plane Geometry"),
+      description: pluginText("plane-geometry", "description", "Geometric shapes: triangles, polygons, circles, angles, perpendiculars, parallels."),
       category: "mathematics", engineId: "tikz-shape-engine", qualityLevel: "official-core",
       requiredPackages: ["tikz"], blockKind: "input",
-      defaultCaption: "Right triangle with altitude from hypotenuse — geometric mean relations.",
+      defaultCaption: pluginText("plane-geometry", "defaultCaption", "Right triangle with altitude from hypotenuse — geometric mean relations."),
       defaultLabel: "fig:triangle",
     }, store);
   }
@@ -93,11 +94,11 @@ export class AnalyticGeometryPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor(store?: FigureStore) {
     super(pgfEng, {
       pluginId: "analytic-geometry",
-      displayName: "Analytic Geometry",
-      description: "Coordinate systems with curves, lines, tangents, and labeled points.",
+      displayName: pluginText("analytic-geometry", "displayName", "Analytic Geometry"),
+      description: pluginText("analytic-geometry", "description", "Coordinate systems with curves, lines, tangents, and labeled points."),
       category: "mathematics", engineId: "pgfplots-engine", qualityLevel: "official-core",
       requiredPackages: ["pgfplots", "tikz"], blockKind: "input",
-      defaultCaption: "Parabola $f(x)=x^2-2x-3$ with roots, vertex, and tangent at $x=2$.",
+      defaultCaption: pluginText("analytic-geometry", "defaultCaption", "Parabola $f(x)=x^2-2x-3$ with roots, vertex, and tangent at $x=2$."),
       defaultLabel: "fig:analytic",
     }, store);
   }

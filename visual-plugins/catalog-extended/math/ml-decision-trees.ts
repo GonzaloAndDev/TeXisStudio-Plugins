@@ -5,6 +5,7 @@ import { GraphNodeEngine } from "../../engines/graph-node-engine/engine.js";
 import type { TreeForestDocument } from "../../engines/tree-forest-engine/types.js";
 import type { PGFPlotsDocument } from "../../engines/pgfplots-engine/types.js";
 import type { GraphNodeDocument } from "../../engines/graph-node-engine/types.js";
+import { pluginText } from "../../i18n/index.js";
 
 const treeEng  = new TreeForestEngine();
 const pgfEng   = new PGFPlotsEngine();
@@ -17,15 +18,15 @@ export class DecisionTreePlugin extends BasePlugin<TreeForestDocument> {
   constructor() {
     super(treeEng, {
       pluginId:        "decision-tree",
-      displayName:     "Decision Trees",
-      description:     "Decision tree diagrams with conditions, branches, and leaf outcomes. Covers classification trees, CART, and clinical decision rules.",
+      displayName:     pluginText("decision-tree", "displayName", "Decision Trees"),
+      description:     pluginText("decision-tree", "description", "Decision tree diagrams with conditions, branches, and leaf outcomes. Covers classification trees, CART, and clinical decision rules."),
       category:        "mathematics",
       engineId:        "tree-forest-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["forest", "tikz"],
-      scopeWarning:    "Enter tree structure manually. For automatic tree generation from data, use scikit-learn/rpart and export the tree, then reproduce here for publication.",
+      scopeWarning:    pluginText("decision-tree", "scopeWarning", "Enter tree structure manually. For automatic tree generation from data, use scikit-learn/rpart and export the tree, then reproduce here for publication."),
       blockKind:       "input",
-      defaultCaption:  "Decision tree.",
+      defaultCaption:  pluginText("decision-tree", "defaultCaption", "Decision tree."),
       defaultLabel:    "fig:decision-tree",
     });
   }
@@ -61,15 +62,15 @@ export class ROCCurvePlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(pgfEng, {
       pluginId:        "roc-curve",
-      displayName:     "ROC Curves",
-      description:     "Receiver operating characteristic curves for classifier evaluation. Supports multiple classifiers with AUC annotation.",
+      displayName:     pluginText("roc-curve", "displayName", "ROC Curves"),
+      description:     pluginText("roc-curve", "description", "Receiver operating characteristic curves for classifier evaluation. Supports multiple classifiers with AUC annotation."),
       category:        "mathematics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "Enter pre-computed TPR/FPR values from your statistical software (sklearn, R pROC). This plugin renders the curve; model training must be done externally.",
+      scopeWarning:    pluginText("roc-curve", "scopeWarning", "Enter pre-computed TPR/FPR values from your statistical software (sklearn, R pROC). This plugin renders the curve; model training must be done externally."),
       blockKind:       "input",
-      defaultCaption:  "ROC curves (AUC shown in legend).",
+      defaultCaption:  pluginText("roc-curve", "defaultCaption", "ROC curves (AUC shown in legend)."),
       defaultLabel:    "fig:roc",
     });
   }
@@ -145,15 +146,15 @@ export class PopulationPyramidPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(pgfEng, {
       pluginId:        "population-pyramid",
-      displayName:     "Population Pyramid",
-      description:     "Age-sex population pyramid for demographic analysis. Shows male/female population distributions by age group.",
+      displayName:     pluginText("population-pyramid", "displayName", "Population Pyramid"),
+      description:     pluginText("population-pyramid", "description", "Age-sex population pyramid for demographic analysis. Shows male/female population distributions by age group."),
       category:        "humanities-social",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "Enter census data manually. For large datasets, generate the pyramid in R/Python and import as PDF, or use this plugin for illustrative sub-populations.",
+      scopeWarning:    pluginText("population-pyramid", "scopeWarning", "Enter census data manually. For large datasets, generate the pyramid in R/Python and import as PDF, or use this plugin for illustrative sub-populations."),
       blockKind:       "input",
-      defaultCaption:  "Population pyramid.",
+      defaultCaption:  pluginText("population-pyramid", "defaultCaption", "Population pyramid."),
       defaultLabel:    "fig:population-pyramid",
     });
   }
@@ -208,15 +209,15 @@ export class ErrorBarsPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(pgfEng, {
       pluginId:        "error-bars",
-      displayName:     "Error Bars & Confidence Intervals",
-      description:     "Line or bar plots with error bars for means ± SD/SE/CI. Essential for presenting experimental or survey results.",
+      displayName:     pluginText("error-bars", "displayName", "Error Bars & Confidence Intervals"),
+      description:     pluginText("error-bars", "description", "Line or bar plots with error bars for means ± SD/SE/CI. Essential for presenting experimental or survey results."),
       category:        "mathematics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "Enter means and error values (SD, SE, or 95% CI half-width) computed from your data. Raw data processing must be done externally.",
+      scopeWarning:    pluginText("error-bars", "scopeWarning", "Enter means and error values (SD, SE, or 95% CI half-width) computed from your data. Raw data processing must be done externally."),
       blockKind:       "input",
-      defaultCaption:  "Mean values with 95\\% confidence intervals.",
+      defaultCaption:  pluginText("error-bars", "defaultCaption", "Mean values with 95\\% confidence intervals."),
       defaultLabel:    "fig:error-bars",
     });
   }
@@ -279,15 +280,15 @@ export class CausalDAGPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEng, {
       pluginId:        "causal-dag",
-      displayName:     "Causal DAG / Path Diagrams",
-      description:     "Directed acyclic graphs (DAGs) for causal inference frameworks, structural equation models, and mediation analysis.",
+      displayName:     pluginText("causal-dag", "displayName", "Causal DAG / Path Diagrams"),
+      description:     pluginText("causal-dag", "description", "Directed acyclic graphs (DAGs) for causal inference frameworks, structural equation models, and mediation analysis."),
       category:        "humanities-social",
       engineId:        "graph-node-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Suitable for causal diagrams up to ~10 variables. For complex SEM or large DAGs, use dagitty.net or lavaan and import the diagram.",
+      scopeWarning:    pluginText("causal-dag", "scopeWarning", "Suitable for causal diagrams up to ~10 variables. For complex SEM or large DAGs, use dagitty.net or lavaan and import the diagram."),
       blockKind:       "input",
-      defaultCaption:  "Causal directed acyclic graph (DAG).",
+      defaultCaption:  pluginText("causal-dag", "defaultCaption", "Causal directed acyclic graph (DAG)."),
       defaultLabel:    "fig:dag",
     });
   }

@@ -5,6 +5,7 @@ import { TikzShapeEngine } from "../../engines/tikz-shape-engine/engine.js";
 import type { TreeForestDocument } from "../../engines/tree-forest-engine/types.js";
 import type { GraphNodeDocument } from "../../engines/graph-node-engine/types.js";
 import type { TikzShapeDocument } from "../../engines/tikz-shape-engine/types.js";
+import { pluginText } from "../../i18n/index.js";
 
 // ── Shared engine instances ────────────────────────────────────────
 const treeEngine  = new TreeForestEngine();
@@ -17,14 +18,14 @@ export class ProbabilityTreesPlugin extends BasePlugin<TreeForestDocument> {
   constructor() {
     super(treeEngine, {
       pluginId:        "probability-trees",
-      displayName:     "Probability Trees",
-      description:     "Visual probability trees with branch probabilities and outcomes. forest native.",
+      displayName:     pluginText("probability-trees", "displayName", "Probability Trees"),
+      description:     pluginText("probability-trees", "description", "Visual probability trees with branch probabilities and outcomes. forest native."),
       category:        "mathematics",
       engineId:        "tree-forest-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["forest"],
       blockKind:       "input",
-      defaultCaption:  "Probability tree — two coin flips.",
+      defaultCaption:  pluginText("probability-trees", "defaultCaption", "Probability tree — two coin flips."),
       defaultLabel:    "fig:prob-tree",
     });
   }
@@ -57,15 +58,15 @@ export class LabSetupPlugin extends BasePlugin<TikzShapeDocument> {
   constructor() {
     super(tikzEngine, {
       pluginId:        "lab-setups",
-      displayName:     "Simple Lab Setups",
-      description:     "Basic laboratory apparatus diagrams: flasks, beakers, burettes, tube assemblies.",
+      displayName:     pluginText("lab-setups", "displayName", "Simple Lab Setups"),
+      description:     pluginText("lab-setups", "description", "Basic laboratory apparatus diagrams: flasks, beakers, burettes, tube assemblies."),
       category:        "chemistry",
       engineId:        "tikz-shape-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Covers standard lab apparatus. For specialized equipment diagrams, use dedicated illustration tools and import as PDF.",
+      scopeWarning:    pluginText("lab-setups", "scopeWarning", "Covers standard lab apparatus. For specialized equipment diagrams, use dedicated illustration tools and import as PDF."),
       blockKind:       "input",
-      defaultCaption:  "Simple laboratory setup.",
+      defaultCaption:  pluginText("lab-setups", "defaultCaption", "Simple laboratory setup."),
       defaultLabel:    "fig:lab-setup",
     });
   }
@@ -111,14 +112,14 @@ export class SyntaxTreesPlugin extends BasePlugin<TreeForestDocument> {
   constructor() {
     super(treeEngine, {
       pluginId:        "syntax-trees",
-      displayName:     "Syntax / Linguistic Trees",
-      description:     "Phrase-structure and dependency trees for linguistics. forest native.",
+      displayName:     pluginText("syntax-trees", "displayName", "Syntax / Linguistic Trees"),
+      description:     pluginText("syntax-trees", "description", "Phrase-structure and dependency trees for linguistics. forest native."),
       category:        "humanities-social",
       engineId:        "tree-forest-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["forest"],
       blockKind:       "input",
-      defaultCaption:  "Phrase-structure tree.",
+      defaultCaption:  pluginText("syntax-trees", "defaultCaption", "Phrase-structure tree."),
       defaultLabel:    "fig:syntax-tree",
     });
   }
@@ -161,14 +162,14 @@ export class ConceptMapsPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEngine, {
       pluginId:        "concept-maps",
-      displayName:     "Concept Maps & Argument Diagrams",
-      description:     "Concept maps, mind maps, and argumentative structure diagrams.",
+      displayName:     pluginText("concept-maps", "displayName", "Concept Maps & Argument Diagrams"),
+      description:     pluginText("concept-maps", "description", "Concept maps, mind maps, and argumentative structure diagrams."),
       category:        "humanities-social",
       engineId:        "graph-node-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["tikz"],
       blockKind:       "input",
-      defaultCaption:  "Concept map.",
+      defaultCaption:  pluginText("concept-maps", "defaultCaption", "Concept map."),
       defaultLabel:    "fig:concept-map",
     });
   }

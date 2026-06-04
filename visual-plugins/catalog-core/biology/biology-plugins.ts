@@ -5,6 +5,7 @@ import { TikzShapeEngine } from "../../engines/tikz-shape-engine/engine.js";
 import type { TreeForestDocument } from "../../engines/tree-forest-engine/types.js";
 import type { GraphNodeDocument } from "../../engines/graph-node-engine/types.js";
 import type { TikzShapeDocument } from "../../engines/tikz-shape-engine/types.js";
+import { pluginText } from "../../i18n/index.js";
 
 const treeEngine  = new TreeForestEngine();
 const graphEngine = new GraphNodeEngine();
@@ -16,15 +17,15 @@ export class PhylogeneticTreesPlugin extends BasePlugin<TreeForestDocument> {
   constructor() {
     super(treeEngine, {
       pluginId:        "phylogenetic-trees",
-      displayName:     "Simple Phylogenetic Trees",
-      description:     "Build phylogenetic and taxonomic trees with labeled nodes and branch lengths.",
+      displayName:     pluginText("phylogenetic-trees", "displayName", "Simple Phylogenetic Trees"),
+      description:     pluginText("phylogenetic-trees", "description", "Build phylogenetic and taxonomic trees with labeled nodes and branch lengths."),
       category:        "biology-medicine",
       engineId:        "tree-forest-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["forest"],
-      scopeWarning:    "Suitable for simplified phylogenies in theses. For complex phylogenetics with statistical support, use FigTree/iTOL and import as PDF.",
+      scopeWarning:    pluginText("phylogenetic-trees", "scopeWarning", "Suitable for simplified phylogenies in theses. For complex phylogenetics with statistical support, use FigTree/iTOL and import as PDF."),
       blockKind:       "input",
-      defaultCaption:  "Simplified phylogeny of selected vertebrate classes.",
+      defaultCaption:  pluginText("phylogenetic-trees", "defaultCaption", "Simplified phylogeny of selected vertebrate classes."),
       defaultLabel:    "fig:phylogeny",
     });
   }
@@ -62,14 +63,14 @@ export class SequencesPlugin extends BasePlugin<TikzShapeDocument> {
   constructor() {
     super(tikzEngine, {
       pluginId:        "dna-rna-sequences",
-      displayName:     "DNA / RNA / Protein Sequences",
-      description:     "Display biological sequences with color-coded bases, codon highlighting, and alignment marks.",
+      displayName:     pluginText("dna-rna-sequences", "displayName", "DNA / RNA / Protein Sequences"),
+      description:     pluginText("dna-rna-sequences", "description", "Display biological sequences with color-coded bases, codon highlighting, and alignment marks."),
       category:        "biology-medicine",
       engineId:        "tikz-shape-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["tikz"],
       blockKind:       "input",
-      defaultCaption:  "Start codon and reading frame of a short mRNA sequence.",
+      defaultCaption:  pluginText("dna-rna-sequences", "defaultCaption", "Start codon and reading frame of a short mRNA sequence."),
       defaultLabel:    "fig:dna-sequence",
     });
   }
@@ -121,14 +122,14 @@ export class BiomedicalFlowPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEngine, {
       pluginId:        "biomedical-flow",
-      displayName:     "Biomedical Flow Diagrams",
-      description:     "Biological and clinical process flows — signaling pathways, metabolic steps, treatment algorithms.",
+      displayName:     pluginText("biomedical-flow", "displayName", "Biomedical Flow Diagrams"),
+      description:     pluginText("biomedical-flow", "description", "Biological and clinical process flows — signaling pathways, metabolic steps, treatment algorithms."),
       category:        "biology-medicine",
       engineId:        "graph-node-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["tikz"],
       blockKind:       "input",
-      defaultCaption:  "MAPK/ERK signalling cascade with feedback inhibition.",
+      defaultCaption:  pluginText("biomedical-flow", "defaultCaption", "MAPK/ERK signalling cascade with feedback inhibition."),
       defaultLabel:    "fig:mapk",
     });
   }
@@ -170,14 +171,14 @@ export class CONSORTFlowPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEngine, {
       pluginId:        "consort-flow",
-      displayName:     "CONSORT / Clinical Trial Flow",
-      description:     "CONSORT-style flow diagrams for randomized clinical trials — enrollment, allocation, follow-up, analysis.",
+      displayName:     pluginText("consort-flow", "displayName", "CONSORT / Clinical Trial Flow"),
+      description:     pluginText("consort-flow", "description", "CONSORT-style flow diagrams for randomized clinical trials — enrollment, allocation, follow-up, analysis."),
       category:        "biology-medicine",
       engineId:        "graph-node-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["tikz"],
       blockKind:       "input",
-      defaultCaption:  "CONSORT 2010 flow diagram.",
+      defaultCaption:  pluginText("consort-flow", "defaultCaption", "CONSORT 2010 flow diagram."),
       defaultLabel:    "fig:consort",
     });
   }
@@ -218,15 +219,15 @@ export class BiologicalPathwaysPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEngine, {
       pluginId:        "biological-pathways",
-      displayName:     "Schematic Biological Pathways",
-      description:     "Simplified metabolic and signaling pathway schemes for thesis figures.",
+      displayName:     pluginText("biological-pathways", "displayName", "Schematic Biological Pathways"),
+      description:     pluginText("biological-pathways", "description", "Simplified metabolic and signaling pathway schemes for thesis figures."),
       category:        "biology-medicine",
       engineId:        "graph-node-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Suitable for simplified pathway diagrams in theses and reports. Not a substitute for KEGG, Reactome, or professional pathway visualization tools.",
+      scopeWarning:    pluginText("biological-pathways", "scopeWarning", "Suitable for simplified pathway diagrams in theses and reports. Not a substitute for KEGG, Reactome, or professional pathway visualization tools."),
       blockKind:       "input",
-      defaultCaption:  "Central carbon metabolism: glycolysis and TCA cycle entry.",
+      defaultCaption:  pluginText("biological-pathways", "defaultCaption", "Central carbon metabolism: glycolysis and TCA cycle entry."),
       defaultLabel:    "fig:glycolysis",
     });
   }

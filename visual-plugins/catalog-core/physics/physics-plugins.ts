@@ -4,6 +4,7 @@ import { TikzShapeEngine } from "../../engines/tikz-shape-engine/engine.js";
 import { PGFPlotsEngine } from "../../engines/pgfplots-engine/engine.js";
 import type { TikzShapeDocument } from "../../engines/tikz-shape-engine/types.js";
 import type { PGFPlotsDocument } from "../../engines/pgfplots-engine/types.js";
+import { pluginText } from "../../i18n/index.js";
 
 const engine     = new TikzShapeEngine();
 const pgfEngine  = new PGFPlotsEngine();
@@ -12,11 +13,11 @@ export class VectorsPlugin extends BasePlugin<TikzShapeDocument> {
   constructor(store?: FigureStore) {
     super(engine, {
       pluginId: "vectors-fields",
-      displayName: "Vectors & Simple Fields",
-      description: "Draw vectors, vector decomposition, and simple field representations.",
+      displayName: pluginText("vectors-fields", "displayName", "Vectors & Simple Fields"),
+      description: pluginText("vectors-fields", "description", "Draw vectors, vector decomposition, and simple field representations."),
       category: "physics", engineId: "tikz-shape-engine", qualityLevel: "official-core",
       requiredPackages: ["tikz"], blockKind: "input",
-      defaultCaption: "Vector addition — parallelogram law: $\\vec{R} = \\vec{A} + \\vec{B}$.",
+      defaultCaption: pluginText("vectors-fields", "defaultCaption", "Vector addition — parallelogram law: $\\vec{R} = \\vec{A} + \\vec{B}$."),
       defaultLabel: "fig:vectors",
     }, store);
   }
@@ -51,11 +52,11 @@ export class FreeBodyDiagramPlugin extends BasePlugin<TikzShapeDocument> {
   constructor(store?: FigureStore) {
     super(engine, {
       pluginId: "free-body-diagrams",
-      displayName: "Free Body Diagrams",
-      description: "Build free body diagrams with forces, mass blocks, and labeled arrows.",
+      displayName: pluginText("free-body-diagrams", "displayName", "Free Body Diagrams"),
+      description: pluginText("free-body-diagrams", "description", "Build free body diagrams with forces, mass blocks, and labeled arrows."),
       category: "physics", engineId: "tikz-shape-engine", qualityLevel: "official-core",
       requiredPackages: ["tikz"], blockKind: "input",
-      defaultCaption: "Free body diagram — block on surface with applied force at angle $\\alpha$.",
+      defaultCaption: pluginText("free-body-diagrams", "defaultCaption", "Free body diagram — block on surface with applied force at angle $\\alpha$."),
       defaultLabel: "fig:fbd",
     }, store);
   }
@@ -92,13 +93,13 @@ export class InclinedPlanePlugin extends BasePlugin<TikzShapeDocument> {
   constructor(store?: FigureStore) {
     super(engine, {
       pluginId: "inclined-plane-pulleys",
-      displayName: "Inclined Planes, Pulleys & Springs",
-      description: "Mechanical systems: inclined planes, pulley setups, and spring-mass systems.",
+      displayName: pluginText("inclined-plane-pulleys", "displayName", "Inclined Planes, Pulleys & Springs"),
+      description: pluginText("inclined-plane-pulleys", "description", "Mechanical systems: inclined planes, pulley setups, and spring-mass systems."),
       category: "physics", engineId: "tikz-shape-engine", qualityLevel: "official-core",
       requiredPackages: ["tikz"],
-      scopeWarning: "Generates accurate schematic diagrams. Highly complex multi-pulley systems may need manual TikZ adjustments.",
+      scopeWarning: pluginText("inclined-plane-pulleys", "scopeWarning", "Generates accurate schematic diagrams. Highly complex multi-pulley systems may need manual TikZ adjustments."),
       blockKind: "input",
-      defaultCaption: "Free-body diagram on inclined plane (angle $\\theta$).",
+      defaultCaption: pluginText("inclined-plane-pulleys", "defaultCaption", "Free-body diagram on inclined plane (angle $\\theta$)."),
       defaultLabel: "fig:inclined-plane",
     }, store);
   }
@@ -140,14 +141,14 @@ export class WaveOscillationPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor(store?: FigureStore) {
     super(pgfEngine, {
       pluginId:        "wave-oscillation",
-      displayName:     "Wave & Oscillation Diagrams",
-      description:     "Sinusoidal waves, damped oscillations, and wave superposition. Covers SHM, transverse/longitudinal waves, and interference patterns.",
+      displayName:     pluginText("wave-oscillation", "displayName", "Wave & Oscillation Diagrams"),
+      description:     pluginText("wave-oscillation", "description", "Sinusoidal waves, damped oscillations, and wave superposition. Covers SHM, transverse/longitudinal waves, and interference patterns."),
       category:        "physics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["pgfplots", "tikz"],
       blockKind:       "input",
-      defaultCaption:  "Sinusoidal wave $y = A\\sin(\\omega t)$ with damped envelope.",
+      defaultCaption:  pluginText("wave-oscillation", "defaultCaption", "Sinusoidal wave $y = A\\sin(\\omega t)$ with damped envelope."),
       defaultLabel:    "fig:wave",
     }, store);
   }
@@ -196,13 +197,13 @@ export class GeometricOpticsPlugin extends BasePlugin<TikzShapeDocument> {
   constructor(store?: FigureStore) {
     super(engine, {
       pluginId: "geometric-optics",
-      displayName: "Geometric Optics",
-      description: "Lenses, mirrors, ray diagrams, and refraction diagrams.",
+      displayName: pluginText("geometric-optics", "displayName", "Geometric Optics"),
+      description: pluginText("geometric-optics", "description", "Lenses, mirrors, ray diagrams, and refraction diagrams."),
       category: "physics", engineId: "tikz-shape-engine", qualityLevel: "official-core",
       requiredPackages: ["tikz"],
-      scopeWarning: "Suitable for standard ray diagrams. Complex optical systems with multiple elements may need manual adjustment.",
+      scopeWarning: pluginText("geometric-optics", "scopeWarning", "Suitable for standard ray diagrams. Complex optical systems with multiple elements may need manual adjustment."),
       blockKind: "input",
-      defaultCaption: "Converging thin lens — three principal ray construction.",
+      defaultCaption: pluginText("geometric-optics", "defaultCaption", "Converging thin lens — three principal ray construction."),
       defaultLabel: "fig:optics",
     }, store);
   }

@@ -3,6 +3,7 @@ import { PGFPlotsEngine } from "../../engines/pgfplots-engine/engine.js";
 import { GraphNodeEngine } from "../../engines/graph-node-engine/engine.js";
 import type { PGFPlotsDocument } from "../../engines/pgfplots-engine/types.js";
 import type { GraphNodeDocument } from "../../engines/graph-node-engine/types.js";
+import { pluginText } from "../../i18n/index.js";
 
 const pgfEng   = new PGFPlotsEngine();
 const graphEng = new GraphNodeEngine();
@@ -15,15 +16,15 @@ export class SupplyDemandPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(pgfEng, {
       pluginId:        "supply-demand",
-      displayName:     "Supply & Demand Curves",
-      description:     "Supply and demand with equilibrium, consumer/producer surplus, and optional curve shifts.",
+      displayName:     pluginText("supply-demand", "displayName", "Supply & Demand Curves"),
+      description:     pluginText("supply-demand", "description", "Supply and demand with equilibrium, consumer/producer surplus, and optional curve shifts."),
       category:        "humanities-social",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "Suitable for illustrative partial-equilibrium analysis in theses. Non-linear elasticity curves may need manual pgfplots adjustment.",
+      scopeWarning:    pluginText("supply-demand", "scopeWarning", "Suitable for illustrative partial-equilibrium analysis in theses. Non-linear elasticity curves may need manual pgfplots adjustment."),
       blockKind:       "input",
-      defaultCaption:  "Supply and demand: original equilibrium $E_0$ and demand shift $D \\to D'$ after income increase.",
+      defaultCaption:  pluginText("supply-demand", "defaultCaption", "Supply and demand: original equilibrium $E_0$ and demand shift $D \\to D'$ after income increase."),
       defaultLabel:    "fig:supply-demand",
     });
   }
@@ -103,15 +104,15 @@ export class UMLClassDiagramPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEng, {
       pluginId:        "uml-class-diagrams",
-      displayName:     "UML Class Diagrams",
-      description:     "UML class diagrams with inheritance, interfaces, composition, and association.",
+      displayName:     pluginText("uml-class-diagrams", "displayName", "UML Class Diagrams"),
+      description:     pluginText("uml-class-diagrams", "description", "UML class diagrams with inheritance, interfaces, composition, and association."),
       category:        "engineering-cs",
       engineId:        "graph-node-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Generates simplified class boxes. For full UML compliance, use PlantUML or draw.io and import as PDF.",
+      scopeWarning:    pluginText("uml-class-diagrams", "scopeWarning", "Generates simplified class boxes. For full UML compliance, use PlantUML or draw.io and import as PDF."),
       blockKind:       "input",
-      defaultCaption:  "Repository pattern with Observer: \\\\ $<<$interface$>>$ classes, inheritance and composition.",
+      defaultCaption:  pluginText("uml-class-diagrams", "defaultCaption", "Repository pattern with Observer: \\\\ $<<$interface$>>$ classes, inheritance and composition."),
       defaultLabel:    "fig:uml-class",
     });
   }

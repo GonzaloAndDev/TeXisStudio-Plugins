@@ -3,6 +3,7 @@ import { CircuiTikZEngine } from "../../engines/circuitikz-engine/engine.js";
 import { GraphNodeEngine } from "../../engines/graph-node-engine/engine.js";
 import type { CircuiTikZDocument } from "../../engines/circuitikz-engine/types.js";
 import type { GraphNodeDocument } from "../../engines/graph-node-engine/types.js";
+import { pluginText } from "../../i18n/index.js";
 
 const circEngine  = new CircuiTikZEngine();
 const graphEngine = new GraphNodeEngine();
@@ -13,14 +14,14 @@ export class BasicCircuitsPlugin extends BasePlugin<CircuiTikZDocument> {
   constructor() {
     super(circEngine, {
       pluginId:        "basic-electrical-circuits",
-      displayName:     "Basic Electrical Circuits",
-      description:     "Visual circuit builder: resistors, capacitors, inductors, sources, switches, diodes. CircuiTikZ native.",
+      displayName:     pluginText("basic-electrical-circuits", "displayName", "Basic Electrical Circuits"),
+      description:     pluginText("basic-electrical-circuits", "description", "Visual circuit builder: resistors, capacitors, inductors, sources, switches, diodes. CircuiTikZ native."),
       category:        "engineering-cs",
       engineId:        "circuitikz-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["circuitikz"],
       blockKind:       "input",
-      defaultCaption:  "RC low-pass filter circuit with voltage divider.",
+      defaultCaption:  pluginText("basic-electrical-circuits", "defaultCaption", "RC low-pass filter circuit with voltage divider."),
       defaultLabel:    "fig:circuit-rc",
     });
   }
@@ -63,14 +64,14 @@ export class BlockDiagramPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEngine, {
       pluginId:        "block-diagrams-control",
-      displayName:     "Block Diagrams / Control Systems",
-      description:     "Control system block diagrams with transfer functions, summing junctions, and feedback loops.",
+      displayName:     pluginText("block-diagrams-control", "displayName", "Block Diagrams / Control Systems"),
+      description:     pluginText("block-diagrams-control", "description", "Control system block diagrams with transfer functions, summing junctions, and feedback loops."),
       category:        "engineering-cs",
       engineId:        "graph-node-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["tikz"],
       blockKind:       "input",
-      defaultCaption:  "PID closed-loop control system block diagram.",
+      defaultCaption:  pluginText("block-diagrams-control", "defaultCaption", "PID closed-loop control system block diagram."),
       defaultLabel:    "fig:pid-control",
     });
   }
@@ -106,14 +107,14 @@ export class FlowchartPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEngine, {
       pluginId:        "flowcharts",
-      displayName:     "Flowcharts",
-      description:     "Academic and process flowcharts with decision diamonds, process boxes, and connector arrows.",
+      displayName:     pluginText("flowcharts", "displayName", "Flowcharts"),
+      description:     pluginText("flowcharts", "description", "Academic and process flowcharts with decision diamonds, process boxes, and connector arrows."),
       category:        "engineering-cs",
       engineId:        "graph-node-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["tikz"],
       blockKind:       "input",
-      defaultCaption:  "Research methodology flowchart.",
+      defaultCaption:  pluginText("flowcharts", "defaultCaption", "Research methodology flowchart."),
       defaultLabel:    "fig:methodology",
     });
   }
@@ -155,15 +156,15 @@ export class SoftwareArchitecturePlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEngine, {
       pluginId:        "software-architecture",
-      displayName:     "Software / System Architecture",
-      description:     "Component, layer, and system architecture diagrams.",
+      displayName:     pluginText("software-architecture", "displayName", "Software / System Architecture"),
+      description:     pluginText("software-architecture", "description", "Component, layer, and system architecture diagrams."),
       category:        "engineering-cs",
       engineId:        "graph-node-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Suitable for standard architecture overviews. For complex UML or deployment diagrams, use Draw.io and import as PDF.",
+      scopeWarning:    pluginText("software-architecture", "scopeWarning", "Suitable for standard architecture overviews. For complex UML or deployment diagrams, use Draw.io and import as PDF."),
       blockKind:       "input",
-      defaultCaption:  "Three-tier web application architecture.",
+      defaultCaption:  pluginText("software-architecture", "defaultCaption", "Three-tier web application architecture."),
       defaultLabel:    "fig:architecture",
     });
   }

@@ -1,3 +1,4 @@
+import { pluginText } from "../i18n/index.js";
 /**
  * Experimental plugins with real BasePlugin implementations.
  * Specialized academic niches. All generate compilable LaTeX.
@@ -18,15 +19,15 @@ export class BayesianNetworksPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEng, {
       pluginId:        "bayesian-networks",
-      displayName:     "Bayesian Networks",
-      description:     "Directed acyclic graphs for Bayesian networks: latent cause nodes (ellipses) with observed evidence nodes (rectangles).",
+      displayName:     pluginText("bayesian-networks", "displayName", "Bayesian Networks"),
+      description:     pluginText("bayesian-networks", "description", "Directed acyclic graphs for Bayesian networks: latent cause nodes (ellipses) with observed evidence nodes (rectangles)."),
       category:        "mathematics",
       engineId:        "graph-node-engine",
       qualityLevel:    "experimental",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Suitable for illustrative Bayesian networks in theses. For inference, parameter learning, or dense graphs, use pgmpy, BayesFusion, GeNIe, or BUGS and import the final PDF/SVG.",
+      scopeWarning:    pluginText("bayesian-networks", "scopeWarning", "Suitable for illustrative Bayesian networks in theses. For inference, parameter learning, or dense graphs, use pgmpy, BayesFusion, GeNIe, or BUGS and import the final PDF/SVG."),
       blockKind:       "input",
-      defaultCaption:  "Bayesian network for differential diagnosis of respiratory illness.",
+      defaultCaption:  pluginText("bayesian-networks", "defaultCaption", "Bayesian network for differential diagnosis of respiratory illness."),
       defaultLabel:    "fig:bayes-net",
     });
   }
@@ -71,15 +72,15 @@ export class SEMPathPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEng, {
       pluginId:        "sem-path-diagrams",
-      displayName:     "SEM / Path Diagrams",
-      description:     "Structural equation model path diagrams with latent variables and measurement models.",
+      displayName:     pluginText("sem-path-diagrams", "displayName", "SEM / Path Diagrams"),
+      description:     pluginText("sem-path-diagrams", "description", "Structural equation model path diagrams with latent variables and measurement models."),
       category:        "humanities-social",
       engineId:        "graph-node-engine",
       qualityLevel:    "experimental",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Suitable for thesis-level SEM diagrams. For estimation, fit statistics, and standardized reports, use lavaan/R, Mplus, or AMOS and import the final diagram/table as PDF.",
+      scopeWarning:    pluginText("sem-path-diagrams", "scopeWarning", "Suitable for thesis-level SEM diagrams. For estimation, fit statistics, and standardized reports, use lavaan/R, Mplus, or AMOS and import the final diagram/table as PDF."),
       blockKind:       "input",
-      defaultCaption:  "Technology Acceptance Model (TAM): perceived usefulness and ease of use predicting behavioural intention.",
+      defaultCaption:  pluginText("sem-path-diagrams", "defaultCaption", "Technology Acceptance Model (TAM): perceived usefulness and ease of use predicting behavioural intention."),
       defaultLabel:    "fig:tam-sem",
     });
   }
@@ -131,15 +132,15 @@ export class EconomicCausalPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEng, {
       pluginId:        "economic-causal",
-      displayName:     "Economic Causal Diagrams",
-      description:     "Causal loop diagrams (CLD) with reinforcing and balancing feedback loops.",
+      displayName:     pluginText("economic-causal", "displayName", "Economic Causal Diagrams"),
+      description:     pluginText("economic-causal", "description", "Causal loop diagrams (CLD) with reinforcing and balancing feedback loops."),
       category:        "humanities-social",
       engineId:        "graph-node-engine",
       qualityLevel:    "experimental",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Suitable for simple causal loop models. For full system dynamics with stocks, flows, delays, or simulation, use Vensim, Stella, or AnyLogic and import the final PDF/SVG.",
+      scopeWarning:    pluginText("economic-causal", "scopeWarning", "Suitable for simple causal loop models. For full system dynamics with stocks, flows, delays, or simulation, use Vensim, Stella, or AnyLogic and import the final PDF/SVG."),
       blockKind:       "input",
-      defaultCaption:  "Wage--price spiral: reinforcing ($R$) and balancing ($B$) feedback loops.",
+      defaultCaption:  pluginText("economic-causal", "defaultCaption", "Wage--price spiral: reinforcing ($R$) and balancing ($B$) feedback loops."),
       defaultLabel:    "fig:cld",
     });
   }
@@ -176,15 +177,15 @@ export class LegalProceduralPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEng, {
       pluginId:        "legal-procedural",
-      displayName:     "Legal / Procedural Diagrams",
-      description:     "Flowcharts for legal and administrative procedures: judicial, regulatory, and compliance workflows.",
+      displayName:     pluginText("legal-procedural", "displayName", "Legal / Procedural Diagrams"),
+      description:     pluginText("legal-procedural", "description", "Flowcharts for legal and administrative procedures: judicial, regulatory, and compliance workflows."),
       category:        "humanities-social",
       engineId:        "graph-node-engine",
       qualityLevel:    "experimental",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Suitable for standard legal/administrative process flows in theses. Complex multi-party or multi-jurisdiction procedures are better maintained in BPMN/draw.io and imported as PDF.",
+      scopeWarning:    pluginText("legal-procedural", "scopeWarning", "Suitable for standard legal/administrative process flows in theses. Complex multi-party or multi-jurisdiction procedures are better maintained in BPMN/draw.io and imported as PDF."),
       blockKind:       "input",
-      defaultCaption:  "Criminal procedure: from complaint to verdict.",
+      defaultCaption:  pluginText("legal-procedural", "defaultCaption", "Criminal procedure: from complaint to verdict."),
       defaultLabel:    "fig:legal",
     });
   }
@@ -232,15 +233,15 @@ export class PedagogicalDiagramsPlugin extends BasePlugin<TreeForestDocument> {
   constructor() {
     super(treeEng, {
       pluginId:        "pedagogical-diagrams",
-      displayName:     "Pedagogical Diagrams",
-      description:     "Bloom's taxonomy, learning outcome hierarchies, and curriculum maps for education theses.",
+      displayName:     pluginText("pedagogical-diagrams", "displayName", "Pedagogical Diagrams"),
+      description:     pluginText("pedagogical-diagrams", "description", "Bloom's taxonomy, learning outcome hierarchies, and curriculum maps for education theses."),
       category:        "humanities-social",
       engineId:        "tree-forest-engine",
       qualityLevel:    "experimental",
       requiredPackages: ["forest", "tikz"],
-      scopeWarning:    "Covers common pedagogical diagram patterns. For complex instructional-design models, keep the authoritative diagram in draw.io/Figma and import the final PDF/SVG.",
+      scopeWarning:    pluginText("pedagogical-diagrams", "scopeWarning", "Covers common pedagogical diagram patterns. For complex instructional-design models, keep the authoritative diagram in draw.io/Figma and import the final PDF/SVG."),
       blockKind:       "input",
-      defaultCaption:  "Revised Bloom's taxonomy — six cognitive levels with representative verbs (Anderson \\& Krathwohl, 2001).",
+      defaultCaption:  pluginText("pedagogical-diagrams", "defaultCaption", "Revised Bloom's taxonomy — six cognitive levels with representative verbs (Anderson \\& Krathwohl, 2001)."),
       defaultLabel:    "fig:blooms",
     });
   }

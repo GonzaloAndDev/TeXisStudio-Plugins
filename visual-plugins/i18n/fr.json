@@ -1,0 +1,366 @@
+{
+  "plugins": {
+    "phylogenetic-trees": {
+      "displayName": "Arbres phylogénétiques simples",
+      "description": "Créez des arbres phylogénétiques et taxonomiques avec des nœuds et des longueurs de branches étiquetés.",
+      "scopeWarning": "Convient aux phylogénies simplifiées dans les thèses. Pour une phylogénétique complexe avec support statistique, utilisez FigTree/iTOL et importez en tant que PDF.",
+      "defaultCaption": "Phylogénie simplifiée de classes de vertébrés sélectionnées."
+    },
+    "dna-rna-sequences": {
+      "displayName": "DNA / RNA / Séquences protéiques",
+      "description": "Affichez les séquences biologiques avec des bases codées par couleur, une mise en évidence des codons et des marques d'alignement.",
+      "defaultCaption": "Codon de départ et cadre de lecture d'une courte séquence d'ARNm."
+    },
+    "biomedical-flow": {
+      "displayName": "Diagrammes de flux biomédicaux",
+      "description": "Flux de processus biologiques et cliniques : voies de signalisation, étapes métaboliques, algorithmes de traitement.",
+      "defaultCaption": "Cascade de signalisation MAPK/ERK avec inhibition de rétroaction."
+    },
+    "consort-flow": {
+      "displayName": "CONSORT / Flux des essais cliniques",
+      "description": "Organigrammes de style CONSORT pour les essais cliniques randomisés : recrutement, allocation, suivi, analyse.",
+      "defaultCaption": "Organigramme CONSORT 2010."
+    },
+    "biological-pathways": {
+      "displayName": "Voies biologiques schématiques",
+      "description": "Schémas simplifiés des voies métaboliques et de signalisation pour les chiffres de la thèse.",
+      "scopeWarning": "Convient aux diagrammes de parcours simplifiés dans les thèses et les rapports. Ne remplace pas les outils KEGG, Reactome ou de visualisation de parcours professionnels.",
+      "defaultCaption": "Métabolisme central du carbone : glycolyse et entrée du cycle TCA."
+    },
+    "chemical-formulas": {
+      "displayName": "Formules chimiques",
+      "description": "Écrivez des formules chimiques avec des charges, des états et des indices. Utilise mhchem — LaTeX natif.",
+      "defaultCaption": "Formules inorganiques sélectionnées avec états et phases d'oxydation."
+    },
+    "chemical-reactions": {
+      "displayName": "Réactions chimiques",
+      "description": "Construisez des équations de réaction chimique avec des flèches, des conditions et des catalyseurs. Utilise mhchem.",
+      "defaultCaption": "Réactions de neutralisation acide-base et de combustion."
+    },
+    "reaction-equilibria": {
+      "displayName": "Équilibres et conditions de réaction",
+      "description": "Réactions chimiques d'équilibre avec des conditions au-dessus/en dessous de la flèche. Utilise mhchem.",
+      "defaultCaption": "Procédé Haber et équilibres d'estérification."
+    },
+    "chemical-structures": {
+      "displayName": "Structures chimiques",
+      "description": "Structures organiques simples et systèmes d'anneaux utilisant ChemFig. Benzène, groupes fonctionnels, composés cycliques.",
+      "scopeWarning": "Convient aux structures organiques simples dans les thèses. Les systèmes multi-anneaux complexes peuvent nécessiter un réglage manuel du ChemFig. Pour une chimie structurale complète, utilisez ChemDraw et importez au format PDF/SVG.",
+      "defaultCaption": "Formule développée de l'aspirine (acide acétylsalicylique)."
+    },
+    "basic-electrical-circuits": {
+      "displayName": "Circuits électriques de base",
+      "description": "Constructeur de circuits visuels : résistances, condensateurs, inductances, sources, interrupteurs, diodes. CircuiTikZ natif.",
+      "defaultCaption": "Circuit de filtre passe-bas RC avec diviseur de tension."
+    },
+    "block-diagrams-control": {
+      "displayName": "Schémas fonctionnels/Systèmes de contrôle",
+      "description": "Schémas fonctionnels du système de contrôle avec fonctions de transfert, jonctions de sommation et boucles de rétroaction.",
+      "defaultCaption": "Schéma fonctionnel du système de contrôle en boucle fermée PID."
+    },
+    "flowcharts": {
+      "displayName": "Organigrammes",
+      "description": "Organigrammes académiques et de processus avec losanges de décision, boîtes de processus et flèches de connexion.",
+      "defaultCaption": "Organigramme de la méthodologie de recherche."
+    },
+    "software-architecture": {
+      "displayName": "Architecture logicielle/système",
+      "description": "Diagrammes des composants, des couches et de l'architecture du système.",
+      "scopeWarning": "Convient aux présentations d'architecture standard. Pour les diagrammes UML ou de déploiement complexes, utilisez Draw.io et importez en tant que PDF.",
+      "defaultCaption": "Architecture d'application Web à trois niveaux."
+    },
+    "venn-set-diagrams": {
+      "displayName": "Venn / Définir des diagrammes",
+      "description": "Créez des diagrammes de Venn et des diagrammes de théorie des ensembles avec des cercles et des intersections étiquetés.",
+      "defaultCaption": "Diagramme de Venn en trois ensembles illustrant la conception de la recherche à méthodes mixtes."
+    },
+    "plane-geometry": {
+      "displayName": "Géométrie plane",
+      "description": "Formes géométriques : triangles, polygones, cercles, angles, perpendiculaires, parallèles.",
+      "defaultCaption": "Triangle rectangle avec altitude à partir de l'hypoténuse — relations de moyenne géométrique."
+    },
+    "analytic-geometry": {
+      "displayName": "Géométrie analytique",
+      "description": "Systèmes de coordonnées avec des courbes, des lignes, des tangentes et des points étiquetés.",
+      "defaultCaption": "Parabole $f(x)=x^2-2x-3$ avec racines, sommet et tangente à $x=2$."
+    },
+    "probability-trees": {
+      "displayName": "Arbres de probabilité",
+      "description": "Arbres de probabilité visuels avec probabilités et résultats de branche. originaire de la forêt.",
+      "defaultCaption": "Arbre de probabilité – deux tirages à pile ou face."
+    },
+    "lab-setups": {
+      "displayName": "Configurations de laboratoire simples",
+      "description": "Schémas des appareils de laboratoire de base : flacons, béchers, burettes, assemblages de tubes.",
+      "scopeWarning": "Couvre les appareils de laboratoire standard. Pour les schémas d'équipements spécialisés, utilisez des outils d'illustration dédiés et importez-les au format PDF.",
+      "defaultCaption": "Configuration simple du laboratoire."
+    },
+    "syntax-trees": {
+      "displayName": "Syntaxe/Arbres linguistiques",
+      "description": "Arbres de structure de phrases et de dépendances pour la linguistique. originaire de la forêt.",
+      "defaultCaption": "Arbre de structure de phrase."
+    },
+    "concept-maps": {
+      "displayName": "Cartes conceptuelles et diagrammes d'arguments",
+      "description": "Cartes conceptuelles, cartes mentales et diagrammes de structure argumentative.",
+      "defaultCaption": "Carte conceptuelle."
+    },
+    "visual-equations": {
+      "displayName": "Équations visuelles",
+      "description": "Créez des équations, des expressions et des formules mathématiques avec un éditeur visuel. Sorties LaTeX natives.",
+      "defaultCaption": "Formule quadratique et forme quadratique."
+    },
+    "matrices-determinants": {
+      "displayName": "Matrices et déterminants",
+      "description": "Créez des matrices et des déterminants de n'importe quelle taille avec l'édition visuelle des cellules.",
+      "defaultCaption": "Matrice de rotation 3D autour de l'axe $z$ par angle $\\theta$."
+    },
+    "systems-of-equations": {
+      "displayName": "Systèmes d'équations",
+      "description": "Créez des systèmes d'équations linéaires ou non linéaires avec un formatage aligné.",
+      "defaultCaption": "Système de trois équations linéaires (bilan de débit de fluide)."
+    },
+    "piecewise-functions": {
+      "displayName": "Fonctions par morceaux",
+      "description": "Définissez des fonctions par cas ou pièces avec un éditeur visuel de lignes.",
+      "defaultCaption": "Fonction marchepied Heaviside et fonction d'activation ReLU."
+    },
+    "vectors-fields": {
+      "displayName": "Vecteurs et champs simples",
+      "description": "Dessinez des vecteurs, une décomposition vectorielle et des représentations de champs simples.",
+      "defaultCaption": "Ajout vectoriel — loi du parallélogramme : $\\vec{R} = \\vec{A} + \\vec{B}$."
+    },
+    "free-body-diagrams": {
+      "displayName": "Schémas corporels gratuits",
+      "description": "Créez des diagrammes de corps libres avec des forces, des blocs de masse et des flèches étiquetées.",
+      "defaultCaption": "Diagramme du corps libre — bloc sur la surface avec une force appliquée à l'angle $\\alpha$."
+    },
+    "inclined-plane-pulleys": {
+      "displayName": "Plans inclinés, poulies et ressorts",
+      "description": "Systèmes mécaniques : plans inclinés, configurations de poulies et systèmes ressort-masse.",
+      "scopeWarning": "Génère des diagrammes schématiques précis. Les systèmes multi-poulies très complexes peuvent nécessiter des ajustements manuels TikZ.",
+      "defaultCaption": "Schéma du corps libre sur plan incliné (angle $\\theta$)."
+    },
+    "wave-oscillation": {
+      "displayName": "Diagrammes d'ondes et d'oscillations",
+      "description": "Ondes sinusoïdales, oscillations amorties et superposition d'ondes. Couvre le SHM, les ondes transversales/longitudinales et les modèles d'interférence.",
+      "defaultCaption": "Onde sinusoïdale $y = A\\sin(\\omega t)$ avec enveloppe amortie."
+    },
+    "geometric-optics": {
+      "displayName": "Optique géométrique",
+      "description": "Lentilles, miroirs, diagrammes de rayons et diagrammes de réfraction.",
+      "scopeWarning": "Convient aux diagrammes de rayons standard. Les systèmes optiques complexes comportant plusieurs éléments peuvent nécessiter un réglage manuel.",
+      "defaultCaption": "Lentille mince convergente — construction à trois rayons principaux."
+    },
+    "gantt-charts": {
+      "displayName": "Diagrammes de Gantt",
+      "description": "Diagrammes de Gantt de recherche et de projet avec tâches, groupes, jalons et dépendances. pgfgantt natif.",
+      "defaultCaption": "Calendrier des recherches doctorales par semestre."
+    },
+    "timelines": {
+      "displayName": "Chronologies",
+      "description": "Chronologies historiques, de recherche et narratives avec événements étiquetés.",
+      "defaultCaption": "Étapes clés de la biologie moléculaire (1944--2003)."
+    },
+    "function-plots-2d": {
+      "displayName": "Tracés de fonctions 2D",
+      "description": "Tracez des fonctions mathématiques avec des axes étiquetés, une grille et une légende. PGFPlots natif.",
+      "defaultCaption": "Fonctions trigonométriques $\\sin x$ et $\\cos x$."
+    },
+    "parametric-polar-plots": {
+      "displayName": "Tracés paramétriques et polaires",
+      "description": "Courbes paramétriques et tracés de fonctions polaires.",
+      "defaultCaption": "Courbe de Lissajous $(\\cos 2t,\\, \\sin 3t)$."
+    },
+    "basic-statistics": {
+      "displayName": "Tableaux de statistiques de base",
+      "description": "Graphiques à barres, histogrammes et nuages de points à partir de données tabulaires.",
+      "defaultCaption": "Graphique à barres comparatif — résultats de mesure par groupe expérimental."
+    },
+    "statistical-distributions": {
+      "displayName": "Distributions statistiques",
+      "description": "Distributions normales, t, chi carré et autres avec régions ombrées.",
+      "defaultCaption": "Distribution normale standard avec intervalle de confiance à 95 % ombré."
+    },
+    "kaplan-meier": {
+      "displayName": "Courbes de survie de Kaplan-Meier",
+      "description": "Courbes de survie échelon-fonction pour les études cliniques et épidémiologiques.",
+      "scopeWarning": "Saisissez des estimations KM précalculées (à partir de R survfit, Stata stcurve ou SPSS) sous forme de points de données formant une fonction échelonnée. Les tests statistiques doivent être effectués en externe.",
+      "defaultCaption": "Kaplan – Courbes de survie globale de Meier pour la chimiothérapie adjuvante par rapport à la chimiothérapie standard ($n{=}200$ ; log-rank $p{=}0.008$)."
+    },
+    "network-graph": {
+      "displayName": "Graphiques réseau/sociaux",
+      "description": "Réseaux de co-auteur, de citation ou d'influence sociale avec regroupement communautaire.",
+      "scopeWarning": "Convient aux réseaux illustratifs (≤ 15 nœuds). Pour une visualisation à grande échelle, utilisez Gephi ou NetworkX et importez au format PDF.",
+      "defaultCaption": "Réseau de co-auteur : deux groupes de recherche reliés par un auteur pont."
+    },
+    "organic-chemistry-extended": {
+      "displayName": "Chimie organique étendue",
+      "description": "Structures organiques avec anneaux, groupes fonctionnels et stéréocentres. ChemFig natif.",
+      "scopeWarning": "Les structures complexes à plusieurs anneaux ou stéréo peuvent nécessiter un réglage manuel du ChemFig. Pour les structures de qualité publication, utilisez ChemDraw et importez au format PDF.",
+      "defaultCaption": "Formule développée de caféine (1,3,7-triméthylxanthine)."
+    },
+    "reaction-mechanisms": {
+      "displayName": "Mécanismes de réaction de base",
+      "description": "Mécanismes de réaction, notamment les réactions de formation de liaisons C-C, les substitutions et les éliminations.",
+      "scopeWarning": "Convient aux mécanismes standards des thèses. Les mécanismes complexes à plusieurs étapes avec des flèches courbes nécessitent un réglage manuel ChemFig.",
+      "defaultCaption": "Condensation aldolique : formation catalysée par une base d'un composé $\\beta$-hydroxycarbonyle."
+    },
+    "er-diagrams": {
+      "displayName": "Diagrammes ER",
+      "description": "Diagrammes entité-relation pour la conception de bases de données. TikZ natif.",
+      "scopeWarning": "Convient aux diagrammes ER standards dans les thèses. Les schémas complexes comportant de nombreuses entités bénéficient de Draw.io exporté au format PDF.",
+      "defaultCaption": "Diagramme ER pour un système d'inscription aux cours universitaires."
+    },
+    "state-machines": {
+      "displayName": "Machines à états",
+      "description": "Machines à états finis et automates avec états, transitions et étiquettes.",
+      "scopeWarning": "Convient aux diagrammes DFA/NFA et de systèmes réactifs dans les thèses. Pour les grands automates, générez à partir de Graphviz/PlantUML et importez en tant que PDF.",
+      "defaultCaption": "Machine à états finis avec feux de circulation (pilotée par minuterie)."
+    },
+    "markov-chains": {
+      "displayName": "Chaînes de Markov",
+      "description": "Diagrammes de chaînes de Markov avec états et probabilités de transition.",
+      "scopeWarning": "Convient aux chaînes de Markov illustratives dans les thèses. Pour l'inférence ou la simulation, utilisez R/Python et importez les résultats sous forme de figures.",
+      "defaultCaption": "Chaîne météo de Markov (Ensoleillé / Nuageux / Pluvieux)."
+    },
+    "bode-nyquist": {
+      "displayName": "Diagrammes de Bode/Nyquist",
+      "description": "Réponse en fréquence : amplitude de Bode + phase ou tracé de Nyquist. Fonctions de transfert de second ordre.",
+      "scopeWarning": "Entrez votre fonction de transfert système sous forme d'expression pgfplots. Calculez d'abord les pôles/zéros dans MATLAB/Python.",
+      "defaultCaption": "Tracé de Bode de $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
+    },
+    "plots-3d": {
+      "displayName": "Tracés scientifiques 3D",
+      "description": "Surfaces 3D, wireframes et tracés de contours. PGFPlots natif.",
+      "scopeWarning": "Les tracés 3D se compilent lentement pour les maillages fins. Conservez les échantillons ≤ 25 × 25 pour un temps de compilation raisonnable.",
+      "defaultCaption": "Densité normale bivariée standard $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
+    },
+    "phase-diagrams": {
+      "displayName": "Diagrammes de phases",
+      "description": "Portraits de phases, lignes nulles et diagrammes de stabilité pour les systèmes dynamiques.",
+      "scopeWarning": "Convient aux plans de phase 2D et aux tracés nullcline. Les flèches de champ vectoriel complet nécessitent des ajustements manuels du carquois pgfplots.",
+      "defaultCaption": "Plan de phase Lotka--Volterra : proie $x$ vs prédateur $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
+    },
+    "heat-maps": {
+      "displayName": "Cartes thermiques de corrélation",
+      "description": "Matrices de corrélation et cartes thermiques utilisant le tracé matriciel pgfplots. Valeurs comprises entre -1 et 1, mappées en couleurs.",
+      "scopeWarning": "Convient aux petites matrices (≤ 10×10). Calculez d'abord les corrélations dans R/Python, puis entrez les valeurs ici.",
+      "defaultCaption": "Matrice de corrélation de Pearson pour quatre variables psychométriques."
+    },
+    "supply-demand": {
+      "displayName": "Courbes d'offre et de demande",
+      "description": "Offre et demande avec équilibre, surplus du consommateur/producteur et déplacements de courbe facultatifs.",
+      "scopeWarning": "Convient pour une analyse illustrative d’équilibre partiel dans les thèses. Les courbes d'élasticité non linéaires peuvent nécessiter un ajustement manuel des pgfplots.",
+      "defaultCaption": "Offre et demande : équilibre d'origine $E_0$ et déplacement de la demande $D \\to D'$ après l'augmentation des revenus."
+    },
+    "uml-class-diagrams": {
+      "displayName": "Diagrammes de classes UML",
+      "description": "Diagrammes de classes UML avec héritage, interfaces, composition et association.",
+      "scopeWarning": "Génère des boîtes de classe simplifiées. Pour une conformité totale avec UML, utilisez PlantUML ou draw.io et importez en tant que PDF.",
+      "defaultCaption": "Modèle de référentiel avec Observer : \\\\ Classes $<<$interface$>>$, héritage et composition."
+    },
+    "time-series": {
+      "displayName": "Tracés de séries chronologiques",
+      "description": "Séries chronologiques avec tendance, bande de confiance et événements annotés. Idéal pour les données longitudinales en économie, en écologie et en recherche clinique.",
+      "scopeWarning": "Saisissez les points de données manuellement. Pour les séries temporelles volumineuses ou complexes (ARIMA, saisonnières), générez dans R/Python et importez au format PDF.",
+      "defaultCaption": "Concentration mensuelle de CO$_2$ (ppm) avec tendance à long terme et bande $\\pm$2\\,SD."
+    },
+    "genealogy": {
+      "displayName": "Généalogie / Arbres généalogiques",
+      "description": "Arbres généalogiques, dynasties et pedigrees cliniques avec générations et marqueurs relationnels.",
+      "scopeWarning": "Convient aux arbres généalogiques simplifiés. Pour les pedigrees génétiques cliniques avec des symboles standard (ACMG/AMP), utilisez un logiciel de pedigree dédié.",
+      "defaultCaption": "Arbre généalogique."
+    },
+    "parallel-coordinates": {
+      "displayName": "Coordonnées parallèles / Matrice de critères",
+      "description": "Tracés de coordonnées parallèles pour une comparaison multicritère d'alternatives sur des dimensions normalisées (échelle 0 à 10).",
+      "scopeWarning": "Normalisez tous les critères sur une échelle commune (par exemple 0--10) avant de saisir des valeurs. Pour de nombreuses alternatives (>6), utilisez Python/R et importez en tant que PDF.",
+      "defaultCaption": "Tracé de coordonnées parallèles comparant cinq solutions logicielles sur quatre critères."
+    },
+    "energy-band-diagrams": {
+      "displayName": "Diagrammes d'énergie/bande",
+      "description": "Diagrammes de niveaux d'énergie, diagrammes de bandes interdites et diagrammes de bandes de semi-conducteurs pour la physique et la science des matériaux.",
+      "scopeWarning": "Les valeurs énergétiques sont illustratives. Remplacez par la bande interdite réelle de votre matériau et les valeurs de niveau de Fermi tirées de la littérature ou des calculs.",
+      "defaultCaption": "Diagramme de bande semi-conductrice."
+    },
+    "decision-tree": {
+      "displayName": "Arbres de décision",
+      "description": "Diagrammes d'arbre de décision avec conditions, branches et résultats de feuilles. Couvre les arbres de classification, CART et les règles de décision clinique.",
+      "scopeWarning": "Entrez manuellement l’arborescence. Pour la génération automatique d'arborescence à partir de données, utilisez scikit-learn/rpart et exportez l'arborescence, puis reproduisez-la ici pour publication.",
+      "defaultCaption": "Arbre de décision."
+    },
+    "roc-curve": {
+      "displayName": "Courbes ROC",
+      "description": "Courbes caractéristiques de fonctionnement du récepteur pour l'évaluation du classificateur. Prend en charge plusieurs classificateurs avec l'annotation AUC.",
+      "scopeWarning": "Saisissez les valeurs TPR/FPR précalculées à partir de votre logiciel statistique (sklearn, R pROC). Ce plugin restitue la courbe ; la formation des modèles doit être effectuée en externe.",
+      "defaultCaption": "Courbes ROC (AUC affichées dans la légende)."
+    },
+    "population-pyramid": {
+      "displayName": "Pyramide des âges",
+      "description": "Pyramide des âges et des sexes pour l'analyse démographique. Affiche la répartition de la population hommes/femmes par groupe d'âge.",
+      "scopeWarning": "Saisissez manuellement les données du recensement. Pour les grands ensembles de données, générez la pyramide dans R/Python et importez-la au format PDF, ou utilisez ce plugin pour des sous-populations illustratives.",
+      "defaultCaption": "Pyramide des âges."
+    },
+    "error-bars": {
+      "displayName": "Barres d'erreur et intervalles de confiance",
+      "description": "Tracés linéaires ou à barres avec barres d'erreur pour les moyennes ± SD/SE/CI. Indispensable pour présenter les résultats d'expérimentations ou d'enquêtes.",
+      "scopeWarning": "Saisissez les moyennes et les valeurs d'erreur (SD, SE ou 95 % de la demi-largeur CI) calculées à partir de vos données. Le traitement des données brutes doit être effectué en externe.",
+      "defaultCaption": "Valeurs moyennes avec des intervalles de confiance de 95 %."
+    },
+    "causal-dag": {
+      "displayName": "Diagrammes causals DAG/chemin",
+      "description": "Graphiques acycliques dirigés (DAG) pour les cadres d'inférence causale, les modèles d'équations structurelles et l'analyse de médiation.",
+      "scopeWarning": "Convient aux diagrammes de cause à effet jusqu'à ~10 variables. Pour les SEM complexes ou les DAG volumineux, utilisez dagitty.net ou lavaan et importez le diagramme.",
+      "defaultCaption": "Graphique acyclique dirigé causal (DAG)."
+    },
+    "bar-charts": {
+      "displayName": "Graphiques à barres et histogrammes",
+      "description": "Graphiques à barres groupés et empilés, histogrammes de fréquence pour les statistiques descriptives.",
+      "scopeWarning": "Entrez les valeurs manuellement. Pour les graphiques provenant de grands ensembles de données, générez dans R/Python et importez au format PDF.",
+      "defaultCaption": "Graphique à barres groupées : réponse moyenne par condition et point temporel ($\\pm$\\,SD)."
+    },
+    "box-violin-plots": {
+      "displayName": "Box Plots et comparaisons de distribution",
+      "description": "Graphiques en forme de boîte et de moustaches avec médianes, quartiles et valeurs aberrantes pour comparer les distributions.",
+      "scopeWarning": "Entrez les statistiques précalculées (médiane, Q1, Q3) à partir de R/Python. Chaque point de données code : x=position du groupe, y=médiane, erreur=demi-plage IQR.",
+      "defaultCaption": "Répartition des résultats des tests sur trois conditions d'enseignement (encadré : Q1--Q3 ; moustaches : 1,5$\\times$IQR)."
+    },
+    "scatter-regression": {
+      "displayName": "Diagrammes de points avec régression",
+      "description": "Nuage de points avec ligne de régression linéaire et bande de confiance facultative.",
+      "scopeWarning": "Calculez la pente, l'interception et la bande CI dans votre logiciel statistique. Entrez les valeurs ici pour un rendu de qualité publication.",
+      "defaultCaption": "BMI vs tension artérielle systolique : $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
+    },
+    "bayesian-networks": {
+      "displayName": "Réseaux bayésiens",
+      "description": "Graphiques acycliques dirigés pour les réseaux bayésiens : nœuds de cause latente (ellipses) avec nœuds de preuve observés (rectangles).",
+      "scopeWarning": "Convient aux réseaux bayésiens illustratifs dans les thèses. Pour l'inférence, l'apprentissage de paramètres ou les graphiques denses, utilisez pgmpy, BayesFusion, GeNIe ou BUGS et importez le PDF/SVG final.",
+      "defaultCaption": "Réseau bayésien pour le diagnostic différentiel des maladies respiratoires."
+    },
+    "sem-path-diagrams": {
+      "displayName": "SEM / Diagrammes de chemin",
+      "description": "Diagrammes de chemin du modèle d'équation structurelle avec variables latentes et modèles de mesure.",
+      "scopeWarning": "Convient aux diagrammes SEM de niveau thèse. Pour l'estimation, les statistiques d'ajustement et les rapports standardisés, utilisez lavaan/R, Mplus ou AMOS et importez le diagramme/tableau final au format PDF.",
+      "defaultCaption": "Modèle d'acceptation technologique (TAM) : utilité perçue et facilité d'utilisation prédisant l'intention comportementale."
+    },
+    "economic-causal": {
+      "displayName": "Diagrammes de causalité économique",
+      "description": "Diagrammes de boucles causales (CLD) avec boucles de rétroaction de renforcement et d'équilibrage.",
+      "scopeWarning": "Convient aux modèles de boucles causales simples. Pour une dynamique complète du système avec des stocks, des flux, des retards ou une simulation, utilisez Vensim, Stella ou AnyLogic et importez le PDF/SVG final.",
+      "defaultCaption": "Spirale salaires--prix : renforcement ($R$) et équilibrage ($B$) des boucles de rétroaction."
+    },
+    "legal-procedural": {
+      "displayName": "Diagrammes juridiques/procéduraux",
+      "description": "Organigrammes des procédures juridiques et administratives : workflows judiciaires, réglementaires et de conformité.",
+      "scopeWarning": "Convient aux flux de processus juridiques/administratifs standard dans les thèses. Les procédures complexes multipartites ou multijuridictionnelles sont mieux gérées dans BPMN/draw.io et importées au format PDF.",
+      "defaultCaption": "Procédure pénale : de la plainte au verdict."
+    },
+    "pedagogical-diagrams": {
+      "displayName": "Schémas pédagogiques",
+      "description": "Taxonomie de Bloom, hiérarchies des résultats d'apprentissage et cartes pédagogiques pour les thèses pédagogiques.",
+      "scopeWarning": "Couvre les modèles de diagrammes pédagogiques courants. Pour les modèles de conception pédagogique complexes, conservez le diagramme faisant autorité dans draw.io/Figma et importez le PDF/SVG final.",
+      "defaultCaption": "Taxonomie révisée de Bloom — six niveaux cognitifs avec des verbes représentatifs (Anderson \\& Krathwohl, 2001)."
+    }
+  }
+}

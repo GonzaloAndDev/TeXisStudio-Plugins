@@ -3,6 +3,7 @@ import { GraphNodeEngine } from "../../engines/graph-node-engine/engine.js";
 import { PGFPlotsEngine } from "../../engines/pgfplots-engine/engine.js";
 import type { GraphNodeDocument } from "../../engines/graph-node-engine/types.js";
 import type { PGFPlotsDocument } from "../../engines/pgfplots-engine/types.js";
+import { pluginText } from "../../i18n/index.js";
 
 const graphEng = new GraphNodeEngine();
 const pgfEng   = new PGFPlotsEngine();
@@ -14,15 +15,15 @@ export class ERDiagramPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEng, {
       pluginId:        "er-diagrams",
-      displayName:     "ER Diagrams",
-      description:     "Entity-relationship diagrams for database design. TikZ native.",
+      displayName:     pluginText("er-diagrams", "displayName", "ER Diagrams"),
+      description:     pluginText("er-diagrams", "description", "Entity-relationship diagrams for database design. TikZ native."),
       category:        "engineering-cs",
       engineId:        "graph-node-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Suitable for standard ER diagrams in theses. Complex schemas with many entities benefit from Draw.io exported as PDF.",
+      scopeWarning:    pluginText("er-diagrams", "scopeWarning", "Suitable for standard ER diagrams in theses. Complex schemas with many entities benefit from Draw.io exported as PDF."),
       blockKind:       "input",
-      defaultCaption:  "ER diagram for a university course-enrollment system.",
+      defaultCaption:  pluginText("er-diagrams", "defaultCaption", "ER diagram for a university course-enrollment system."),
       defaultLabel:    "fig:er-diagram",
     });
   }
@@ -74,15 +75,15 @@ export class StateMachinePlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEng, {
       pluginId:        "state-machines",
-      displayName:     "State Machines",
-      description:     "Finite state machines and automata with states, transitions, and labels.",
+      displayName:     pluginText("state-machines", "displayName", "State Machines"),
+      description:     pluginText("state-machines", "description", "Finite state machines and automata with states, transitions, and labels."),
       category:        "engineering-cs",
       engineId:        "graph-node-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Suitable for DFA/NFA and reactive system diagrams in theses. For large automata, generate from Graphviz/PlantUML and import as PDF.",
+      scopeWarning:    pluginText("state-machines", "scopeWarning", "Suitable for DFA/NFA and reactive system diagrams in theses. For large automata, generate from Graphviz/PlantUML and import as PDF."),
       blockKind:       "input",
-      defaultCaption:  "Traffic-light finite state machine (timer-driven).",
+      defaultCaption:  pluginText("state-machines", "defaultCaption", "Traffic-light finite state machine (timer-driven)."),
       defaultLabel:    "fig:fsm",
     });
   }
@@ -115,15 +116,15 @@ export class MarkovChainsPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEng, {
       pluginId:        "markov-chains",
-      displayName:     "Markov Chains",
-      description:     "Markov chain diagrams with states and transition probabilities.",
+      displayName:     pluginText("markov-chains", "displayName", "Markov Chains"),
+      description:     pluginText("markov-chains", "description", "Markov chain diagrams with states and transition probabilities."),
       category:        "mathematics",
       engineId:        "graph-node-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Suitable for illustrative Markov chains in theses. For inference or simulation, use R/Python and import results as figures.",
+      scopeWarning:    pluginText("markov-chains", "scopeWarning", "Suitable for illustrative Markov chains in theses. For inference or simulation, use R/Python and import results as figures."),
       blockKind:       "input",
-      defaultCaption:  "Weather Markov chain (Sunny / Cloudy / Rainy).",
+      defaultCaption:  pluginText("markov-chains", "defaultCaption", "Weather Markov chain (Sunny / Cloudy / Rainy)."),
       defaultLabel:    "fig:markov",
     });
   }
@@ -160,15 +161,15 @@ export class BodeNyquistPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(pgfEng, {
       pluginId:        "bode-nyquist",
-      displayName:     "Bode / Nyquist Diagrams",
-      description:     "Frequency response: Bode magnitude + phase, or Nyquist plot. Second-order transfer functions.",
+      displayName:     pluginText("bode-nyquist", "displayName", "Bode / Nyquist Diagrams"),
+      description:     pluginText("bode-nyquist", "description", "Frequency response: Bode magnitude + phase, or Nyquist plot. Second-order transfer functions."),
       category:        "engineering-cs",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "Enter your system transfer function as a pgfplots expression. Compute poles/zeros in MATLAB/Python first.",
+      scopeWarning:    pluginText("bode-nyquist", "scopeWarning", "Enter your system transfer function as a pgfplots expression. Compute poles/zeros in MATLAB/Python first."),
       blockKind:       "input",
-      defaultCaption:  "Bode plot of $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$).",
+      defaultCaption:  pluginText("bode-nyquist", "defaultCaption", "Bode plot of $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."),
       defaultLabel:    "fig:bode",
     });
   }

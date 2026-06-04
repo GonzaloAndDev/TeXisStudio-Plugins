@@ -2,6 +2,7 @@ import { BasePlugin } from "../../common/plugin-base/base-plugin.js";
 import type { FigureStore } from "../../common/persistence/figure-store.js";
 import { MathEngine } from "../../engines/math-engine/engine.js";
 import type { MathEngineDocument, MatrixDocument, SystemDocument } from "../../engines/math-engine/types.js";
+import { pluginText } from "../../i18n/index.js";
 
 const engine = new MathEngine();
 
@@ -9,14 +10,14 @@ export class VisualEquationsPlugin extends BasePlugin<MathEngineDocument> {
   constructor(store?: FigureStore) {
     super(engine, {
       pluginId: "visual-equations",
-      displayName: "Visual Equations",
-      description: "Build mathematical equations, expressions, and formulas with a visual editor. Outputs LaTeX native.",
+      displayName: pluginText("visual-equations", "displayName", "Visual Equations"),
+      description: pluginText("visual-equations", "description", "Build mathematical equations, expressions, and formulas with a visual editor. Outputs LaTeX native."),
       category: "mathematics",
       engineId: "math-engine",
       qualityLevel: "official-core",
       requiredPackages: ["amsmath", "amssymb"],
       blockKind: "raw",
-      defaultCaption: "Quadratic formula and quadratic form.",
+      defaultCaption: pluginText("visual-equations", "defaultCaption", "Quadratic formula and quadratic form."),
       defaultLabel: "eq:equation",
     }, store);
   }
@@ -39,14 +40,14 @@ export class MatricesPlugin extends BasePlugin<MatrixDocument> {
   constructor(store?: FigureStore) {
     super(engine, {
       pluginId: "matrices-determinants",
-      displayName: "Matrices & Determinants",
-      description: "Create matrices and determinants of any size with visual cell editing.",
+      displayName: pluginText("matrices-determinants", "displayName", "Matrices & Determinants"),
+      description: pluginText("matrices-determinants", "description", "Create matrices and determinants of any size with visual cell editing."),
       category: "mathematics",
       engineId: "math-engine",
       qualityLevel: "official-core",
       requiredPackages: ["amsmath"],
       blockKind: "raw",
-      defaultCaption: "3D rotation matrix around the $z$-axis by angle $\\theta$.",
+      defaultCaption: pluginText("matrices-determinants", "defaultCaption", "3D rotation matrix around the $z$-axis by angle $\\theta$."),
       defaultLabel: "eq:matrix",
     }, store);
   }
@@ -70,14 +71,14 @@ export class SystemOfEquationsPlugin extends BasePlugin<SystemDocument> {
   constructor(store?: FigureStore) {
     super(engine, {
       pluginId: "systems-of-equations",
-      displayName: "Systems of Equations",
-      description: "Build systems of linear or nonlinear equations with aligned formatting.",
+      displayName: pluginText("systems-of-equations", "displayName", "Systems of Equations"),
+      description: pluginText("systems-of-equations", "description", "Build systems of linear or nonlinear equations with aligned formatting."),
       category: "mathematics",
       engineId: "math-engine",
       qualityLevel: "official-core",
       requiredPackages: ["amsmath"],
       blockKind: "raw",
-      defaultCaption: "System of three linear equations (fluid flow balance).",
+      defaultCaption: pluginText("systems-of-equations", "defaultCaption", "System of three linear equations (fluid flow balance)."),
       defaultLabel: "eq:system",
     }, store);
   }
@@ -101,14 +102,14 @@ export class PiecewiseFunctionsPlugin extends BasePlugin<MathEngineDocument> {
   constructor(store?: FigureStore) {
     super(engine, {
       pluginId: "piecewise-functions",
-      displayName: "Piecewise Functions",
-      description: "Define functions by cases or parts with a visual row editor.",
+      displayName: pluginText("piecewise-functions", "displayName", "Piecewise Functions"),
+      description: pluginText("piecewise-functions", "description", "Define functions by cases or parts with a visual row editor."),
       category: "mathematics",
       engineId: "math-engine",
       qualityLevel: "official-core",
       requiredPackages: ["amsmath"],
       blockKind: "raw",
-      defaultCaption: "Heaviside step function and ReLU activation function.",
+      defaultCaption: pluginText("piecewise-functions", "defaultCaption", "Heaviside step function and ReLU activation function."),
       defaultLabel: "eq:piecewise",
     }, store);
   }

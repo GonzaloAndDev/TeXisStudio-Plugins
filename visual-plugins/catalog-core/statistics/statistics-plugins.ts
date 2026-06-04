@@ -1,6 +1,7 @@
 import { BasePlugin } from "../../common/plugin-base/index.js";
 import { PGFPlotsEngine } from "../../engines/pgfplots-engine/engine.js";
 import type { PGFPlotsDocument } from "../../engines/pgfplots-engine/types.js";
+import { pluginText } from "../../i18n/index.js";
 
 const engine = new PGFPlotsEngine();
 
@@ -10,14 +11,14 @@ export class FunctionPlots2DPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(engine, {
       pluginId:        "function-plots-2d",
-      displayName:     "2D Function Plots",
-      description:     "Plot mathematical functions with labeled axes, grid, and legend. PGFPlots native.",
+      displayName:     pluginText("function-plots-2d", "displayName", "2D Function Plots"),
+      description:     pluginText("function-plots-2d", "description", "Plot mathematical functions with labeled axes, grid, and legend. PGFPlots native."),
       category:        "mathematics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["pgfplots", "tikz"],
       blockKind:       "input",
-      defaultCaption:  "Trigonometric functions $\\sin x$ and $\\cos x$.",
+      defaultCaption:  pluginText("function-plots-2d", "defaultCaption", "Trigonometric functions $\\sin x$ and $\\cos x$."),
       defaultLabel:    "fig:plot-2d",
     });
   }
@@ -59,14 +60,14 @@ export class ParametricPolarPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(engine, {
       pluginId:        "parametric-polar-plots",
-      displayName:     "Parametric & Polar Plots",
-      description:     "Parametric curves and polar function plots.",
+      displayName:     pluginText("parametric-polar-plots", "displayName", "Parametric & Polar Plots"),
+      description:     pluginText("parametric-polar-plots", "description", "Parametric curves and polar function plots."),
       category:        "mathematics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["pgfplots", "tikz"],
       blockKind:       "input",
-      defaultCaption:  "Lissajous curve $(\\cos 2t,\\, \\sin 3t)$.",
+      defaultCaption:  pluginText("parametric-polar-plots", "defaultCaption", "Lissajous curve $(\\cos 2t,\\, \\sin 3t)$."),
       defaultLabel:    "fig:parametric",
     });
   }
@@ -96,14 +97,14 @@ export class BasicStatisticsPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(engine, {
       pluginId:        "basic-statistics",
-      displayName:     "Basic Statistics Charts",
-      description:     "Bar charts, histograms, and scatter plots from tabular data.",
+      displayName:     pluginText("basic-statistics", "displayName", "Basic Statistics Charts"),
+      description:     pluginText("basic-statistics", "description", "Bar charts, histograms, and scatter plots from tabular data."),
       category:        "mathematics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["pgfplots", "tikz"],
       blockKind:       "input",
-      defaultCaption:  "Comparative bar chart — measurement results by experimental group.",
+      defaultCaption:  pluginText("basic-statistics", "defaultCaption", "Comparative bar chart — measurement results by experimental group."),
       defaultLabel:    "fig:stats-bar",
     });
   }
@@ -147,14 +148,14 @@ export class StatisticalDistributionsPlugin extends BasePlugin<PGFPlotsDocument>
   constructor() {
     super(engine, {
       pluginId:        "statistical-distributions",
-      displayName:     "Statistical Distributions",
-      description:     "Normal, t, chi-squared, and other distributions with shaded regions.",
+      displayName:     pluginText("statistical-distributions", "displayName", "Statistical Distributions"),
+      description:     pluginText("statistical-distributions", "description", "Normal, t, chi-squared, and other distributions with shaded regions."),
       category:        "mathematics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-core",
       requiredPackages: ["pgfplots", "tikz"],
       blockKind:       "input",
-      defaultCaption:  "Standard normal distribution with 95\\% confidence interval shaded.",
+      defaultCaption:  pluginText("statistical-distributions", "defaultCaption", "Standard normal distribution with 95\\% confidence interval shaded."),
       defaultLabel:    "fig:normal-dist",
     });
   }

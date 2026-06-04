@@ -3,6 +3,7 @@ import { PGFPlotsEngine } from "../../engines/pgfplots-engine/engine.js";
 import { GraphNodeEngine } from "../../engines/graph-node-engine/engine.js";
 import type { PGFPlotsDocument } from "../../engines/pgfplots-engine/types.js";
 import type { GraphNodeDocument } from "../../engines/graph-node-engine/types.js";
+import { pluginText } from "../../i18n/index.js";
 
 const pgfEng   = new PGFPlotsEngine();
 const graphEng = new GraphNodeEngine();
@@ -15,15 +16,15 @@ export class KaplanMeierPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(pgfEng, {
       pluginId:        "kaplan-meier",
-      displayName:     "Kaplan-Meier Survival Curves",
-      description:     "Step-function survival curves for clinical and epidemiological studies.",
+      displayName:     pluginText("kaplan-meier", "displayName", "Kaplan-Meier Survival Curves"),
+      description:     pluginText("kaplan-meier", "description", "Step-function survival curves for clinical and epidemiological studies."),
       category:        "biology-medicine",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "Enter pre-computed KM estimates (from R survfit, Stata stcurve, or SPSS) as data points forming a step function. Statistical tests must be done externally.",
+      scopeWarning:    pluginText("kaplan-meier", "scopeWarning", "Enter pre-computed KM estimates (from R survfit, Stata stcurve, or SPSS) as data points forming a step function. Statistical tests must be done externally."),
       blockKind:       "input",
-      defaultCaption:  "Kaplan--Meier overall survival curves for adjuvant vs.\\ standard chemotherapy ($n{=}200$; log-rank $p{=}0.008$).",
+      defaultCaption:  pluginText("kaplan-meier", "defaultCaption", "Kaplan--Meier overall survival curves for adjuvant vs.\\ standard chemotherapy ($n{=}200$; log-rank $p{=}0.008$)."),
       defaultLabel:    "fig:km-survival",
     });
   }
@@ -87,15 +88,15 @@ export class NetworkGraphPlugin extends BasePlugin<GraphNodeDocument> {
   constructor() {
     super(graphEng, {
       pluginId:        "network-graph",
-      displayName:     "Network / Social Graphs",
-      description:     "Co-authorship, citation, or social influence networks with community clustering.",
+      displayName:     pluginText("network-graph", "displayName", "Network / Social Graphs"),
+      description:     pluginText("network-graph", "description", "Co-authorship, citation, or social influence networks with community clustering."),
       category:        "engineering-cs",
       engineId:        "graph-node-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["tikz"],
-      scopeWarning:    "Suitable for illustrative networks (≤ 15 nodes). For large-scale visualization, use Gephi or NetworkX and import as PDF.",
+      scopeWarning:    pluginText("network-graph", "scopeWarning", "Suitable for illustrative networks (≤ 15 nodes). For large-scale visualization, use Gephi or NetworkX and import as PDF."),
       blockKind:       "input",
-      defaultCaption:  "Co-authorship network — two research clusters connected by a bridge author.",
+      defaultCaption:  pluginText("network-graph", "defaultCaption", "Co-authorship network — two research clusters connected by a bridge author."),
       defaultLabel:    "fig:network",
     });
   }

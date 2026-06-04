@@ -1,6 +1,7 @@
 import { BasePlugin } from "../../common/plugin-base/index.js";
 import { PGFPlotsEngine } from "../../engines/pgfplots-engine/engine.js";
 import type { PGFPlotsDocument } from "../../engines/pgfplots-engine/types.js";
+import { pluginText } from "../../i18n/index.js";
 
 const engine = new PGFPlotsEngine();
 
@@ -12,15 +13,15 @@ export class Plots3DPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(engine, {
       pluginId:        "plots-3d",
-      displayName:     "3D Scientific Plots",
-      description:     "3D surfaces, wireframes, and contour plots. PGFPlots native.",
+      displayName:     pluginText("plots-3d", "displayName", "3D Scientific Plots"),
+      description:     pluginText("plots-3d", "description", "3D surfaces, wireframes, and contour plots. PGFPlots native."),
       category:        "mathematics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "3D plots compile slowly for fine meshes. Keep samples ≤ 25×25 for reasonable compile time.",
+      scopeWarning:    pluginText("plots-3d", "scopeWarning", "3D plots compile slowly for fine meshes. Keep samples ≤ 25×25 for reasonable compile time."),
       blockKind:       "input",
-      defaultCaption:  "Standard bivariate normal density $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$.",
+      defaultCaption:  pluginText("plots-3d", "defaultCaption", "Standard bivariate normal density $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."),
       defaultLabel:    "fig:surface-3d",
     });
   }
@@ -65,15 +66,15 @@ export class PhaseDiagramsPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(engine, {
       pluginId:        "phase-diagrams",
-      displayName:     "Phase Diagrams",
-      description:     "Phase portraits, nullclines, and stability diagrams for dynamical systems.",
+      displayName:     pluginText("phase-diagrams", "displayName", "Phase Diagrams"),
+      description:     pluginText("phase-diagrams", "description", "Phase portraits, nullclines, and stability diagrams for dynamical systems."),
       category:        "mathematics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "Suitable for 2D phase planes and nullcline plots. Full vector-field arrows require manual pgfplots quiver adjustments.",
+      scopeWarning:    pluginText("phase-diagrams", "scopeWarning", "Suitable for 2D phase planes and nullcline plots. Full vector-field arrows require manual pgfplots quiver adjustments."),
       blockKind:       "input",
-      defaultCaption:  "Lotka--Volterra phase plane: prey $x$ vs predator $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$).",
+      defaultCaption:  pluginText("phase-diagrams", "defaultCaption", "Lotka--Volterra phase plane: prey $x$ vs predator $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."),
       defaultLabel:    "fig:phase-diagram",
     });
   }
@@ -138,15 +139,15 @@ export class HeatMapsPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(engine, {
       pluginId:        "heat-maps",
-      displayName:     "Correlation Heat Maps",
-      description:     "Correlation matrices and heat maps using pgfplots matrix plot. Values between -1 and 1, color-mapped.",
+      displayName:     pluginText("heat-maps", "displayName", "Correlation Heat Maps"),
+      description:     pluginText("heat-maps", "description", "Correlation matrices and heat maps using pgfplots matrix plot. Values between -1 and 1, color-mapped."),
       category:        "mathematics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "Suitable for small matrices (≤ 10×10). Compute correlations in R/Python first, then enter the values here.",
+      scopeWarning:    pluginText("heat-maps", "scopeWarning", "Suitable for small matrices (≤ 10×10). Compute correlations in R/Python first, then enter the values here."),
       blockKind:       "input",
-      defaultCaption:  "Pearson correlation matrix for four psychometric variables.",
+      defaultCaption:  pluginText("heat-maps", "defaultCaption", "Pearson correlation matrix for four psychometric variables."),
       defaultLabel:    "fig:heatmap",
     });
   }

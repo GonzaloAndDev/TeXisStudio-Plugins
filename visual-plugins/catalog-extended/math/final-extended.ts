@@ -3,6 +3,7 @@ import { PGFPlotsEngine } from "../../engines/pgfplots-engine/engine.js";
 import { TreeForestEngine } from "../../engines/tree-forest-engine/engine.js";
 import type { PGFPlotsDocument } from "../../engines/pgfplots-engine/types.js";
 import type { TreeForestDocument } from "../../engines/tree-forest-engine/types.js";
+import { pluginText } from "../../i18n/index.js";
 
 const pgfEng   = new PGFPlotsEngine();
 const treeEng  = new TreeForestEngine();
@@ -14,15 +15,15 @@ export class TimeSeriesPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(pgfEng, {
       pluginId:        "time-series",
-      displayName:     "Time Series Plots",
-      description:     "Time series with trend, confidence band, and annotated events. Ideal for longitudinal data in economics, ecology, and clinical research.",
+      displayName:     pluginText("time-series", "displayName", "Time Series Plots"),
+      description:     pluginText("time-series", "description", "Time series with trend, confidence band, and annotated events. Ideal for longitudinal data in economics, ecology, and clinical research."),
       category:        "mathematics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "Enter data points manually. For large or complex time series (ARIMA, seasonal), generate in R/Python and import as PDF.",
+      scopeWarning:    pluginText("time-series", "scopeWarning", "Enter data points manually. For large or complex time series (ARIMA, seasonal), generate in R/Python and import as PDF."),
       blockKind:       "input",
-      defaultCaption:  "Monthly CO$_2$ concentration (ppm) with long-term trend and $\\pm$2\\,SD band.",
+      defaultCaption:  pluginText("time-series", "defaultCaption", "Monthly CO$_2$ concentration (ppm) with long-term trend and $\\pm$2\\,SD band."),
       defaultLabel:    "fig:time-series",
     });
   }
@@ -99,15 +100,15 @@ export class GenealogyPlugin extends BasePlugin<TreeForestDocument> {
   constructor() {
     super(treeEng, {
       pluginId:        "genealogy",
-      displayName:     "Genealogy / Family Trees",
-      description:     "Family trees, dynasties, and clinical pedigrees with generations and relationship markers.",
+      displayName:     pluginText("genealogy", "displayName", "Genealogy / Family Trees"),
+      description:     pluginText("genealogy", "description", "Family trees, dynasties, and clinical pedigrees with generations and relationship markers."),
       category:        "humanities-social",
       engineId:        "tree-forest-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["forest", "tikz"],
-      scopeWarning:    "Suitable for simplified family trees. For clinical genetic pedigrees with standard symbols (ACMG/AMP), use dedicated pedigree software.",
+      scopeWarning:    pluginText("genealogy", "scopeWarning", "Suitable for simplified family trees. For clinical genetic pedigrees with standard symbols (ACMG/AMP), use dedicated pedigree software."),
       blockKind:       "input",
-      defaultCaption:  "Family tree.",
+      defaultCaption:  pluginText("genealogy", "defaultCaption", "Family tree."),
       defaultLabel:    "fig:genealogy",
     });
   }
@@ -155,15 +156,15 @@ export class ParallelCoordinatesPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(pgfEng, {
       pluginId:        "parallel-coordinates",
-      displayName:     "Parallel Coordinates / Criteria Matrix",
-      description:     "Parallel coordinate plots for multi-criteria comparison of alternatives across normalised dimensions (0--10 scale).",
+      displayName:     pluginText("parallel-coordinates", "displayName", "Parallel Coordinates / Criteria Matrix"),
+      description:     pluginText("parallel-coordinates", "description", "Parallel coordinate plots for multi-criteria comparison of alternatives across normalised dimensions (0--10 scale)."),
       category:        "mathematics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "Normalise all criteria to a common scale (e.g. 0--10) before entering values. For many alternatives (>6), use Python/R and import as PDF.",
+      scopeWarning:    pluginText("parallel-coordinates", "scopeWarning", "Normalise all criteria to a common scale (e.g. 0--10) before entering values. For many alternatives (>6), use Python/R and import as PDF."),
       blockKind:       "input",
-      defaultCaption:  "Parallel coordinate plot comparing five software solutions on four criteria.",
+      defaultCaption:  pluginText("parallel-coordinates", "defaultCaption", "Parallel coordinate plot comparing five software solutions on four criteria."),
       defaultLabel:    "fig:parallel-coords",
     });
   }
@@ -218,15 +219,15 @@ export class EnergyBandPlugin extends BasePlugin<PGFPlotsDocument> {
   constructor() {
     super(pgfEng, {
       pluginId:        "energy-band-diagrams",
-      displayName:     "Energy / Band Diagrams",
-      description:     "Energy level diagrams, band gaps, and semiconductor band diagrams for physics and materials science.",
+      displayName:     pluginText("energy-band-diagrams", "displayName", "Energy / Band Diagrams"),
+      description:     pluginText("energy-band-diagrams", "description", "Energy level diagrams, band gaps, and semiconductor band diagrams for physics and materials science."),
       category:        "physics",
       engineId:        "pgfplots-engine",
       qualityLevel:    "official-extended",
       requiredPackages: ["pgfplots", "tikz"],
-      scopeWarning:    "Energy values are illustrative. Replace with your material's actual band gap and Fermi level values from literature or calculation.",
+      scopeWarning:    pluginText("energy-band-diagrams", "scopeWarning", "Energy values are illustrative. Replace with your material's actual band gap and Fermi level values from literature or calculation."),
       blockKind:       "input",
-      defaultCaption:  "Semiconductor band diagram.",
+      defaultCaption:  pluginText("energy-band-diagrams", "defaultCaption", "Semiconductor band diagram."),
       defaultLabel:    "fig:band-diagram",
     });
   }
