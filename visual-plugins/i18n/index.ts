@@ -129,8 +129,11 @@ export function pluginText(
   field: PluginTextField,
   fallback: string,
 ): string {
+  const primaryFallback = currentLocale === "es" ? LOCALES.es : LOCALES.en;
+  const secondaryFallback = currentLocale === "es" ? LOCALES.en : LOCALES.es;
+
   return LOCALES[currentLocale].plugins?.[pluginId]?.[field]
-    ?? LOCALES.es.plugins?.[pluginId]?.[field]
-    ?? LOCALES.en.plugins?.[pluginId]?.[field]
+    ?? primaryFallback.plugins?.[pluginId]?.[field]
+    ?? secondaryFallback.plugins?.[pluginId]?.[field]
     ?? fallback;
 }

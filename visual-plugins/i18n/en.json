@@ -258,7 +258,7 @@
       "displayName": "UML Class Diagrams",
       "description": "UML class diagrams with inheritance, interfaces, composition, and association.",
       "scopeWarning": "Generates simplified class boxes. For full UML compliance, use PlantUML or draw.io and import as PDF.",
-      "defaultCaption": "Repository pattern with Observer: \\\\ $<<$interface$>>$ classes, inheritance and composition."
+      "defaultCaption": "Repository pattern with Observer: $<<$interface$>>$ classes, inheritance and composition."
     },
     "time-series": {
       "displayName": "Time Series Plots",
