@@ -1,366 +1,366 @@
 {
   "plugins": {
     "phylogenetic-trees": {
-      "displayName": "Simple Phylogenetic Trees",
-      "description": "Build phylogenetic and taxonomic trees with labeled nodes and branch lengths.",
-      "scopeWarning": "Suitable for simplified phylogenies in theses. For complex phylogenetics with statistical support, use FigTree/iTOL and import as PDF.",
-      "defaultCaption": "Simplified phylogeny of selected vertebrate classes."
+      "displayName": "단순 계통발생수",
+      "description": "마디와 가지 길이가 표시된 계통발생 및 분류학 나무를 만듭니다.",
+      "scopeWarning": "논문의 단순화된 계통발생에 적합합니다. 통계적으로 지원되는 복잡한 계통발생학의 경우 FigTree/iTOL을 사용하고 PDF로 가져옵니다.",
+      "defaultCaption": "선택된 척추동물 클래스의 단순화된 계통발생"
     },
     "dna-rna-sequences": {
-      "displayName": "DNA / RNA / Protein Sequences",
-      "description": "Display biological sequences with color-coded bases, codon highlighting, and alignment marks.",
-      "defaultCaption": "Start codon and reading frame of a short mRNA sequence."
+      "displayName": "DNA / RNA / 단백질 서열",
+      "description": "색상으로 구분된 염기, 코돈 강조 표시 및 정렬 표시를 사용하여 생물학적 서열을 표시합니다.",
+      "defaultCaption": "짧은 mRNA 서열의 시작 코돈과 리딩 프레임"
     },
     "biomedical-flow": {
-      "displayName": "Biomedical Flow Diagrams",
-      "description": "Biological and clinical process flows — signaling pathways, metabolic steps, treatment algorithms.",
-      "defaultCaption": "MAPK/ERK signalling cascade with feedback inhibition."
+      "displayName": "생의학 흐름도",
+      "description": "생물학적 및 임상적 과정 흐름 - 신호 전달 경로, 대사 단계, 치료 알고리즘",
+      "defaultCaption": "피드백 억제 기능이 있는 MAPK/ERK 신호 캐스케이드"
     },
     "consort-flow": {
-      "displayName": "CONSORT / Clinical Trial Flow",
-      "description": "CONSORT-style flow diagrams for randomized clinical trials — enrollment, allocation, follow-up, analysis.",
-      "defaultCaption": "CONSORT 2010 flow diagram."
+      "displayName": "CONSORT / 임상시험 흐름",
+      "description": "무작위 임상시험을 위한 CONSORT-스타일 흐름도 - 등록, 할당, 후속 조치, 분석.",
+      "defaultCaption": "CONSORT 2010 흐름도."
     },
     "biological-pathways": {
-      "displayName": "Schematic Biological Pathways",
-      "description": "Simplified metabolic and signaling pathway schemes for thesis figures.",
-      "scopeWarning": "Suitable for simplified pathway diagrams in theses and reports. Not a substitute for KEGG, Reactome, or professional pathway visualization tools.",
-      "defaultCaption": "Central carbon metabolism: glycolysis and TCA cycle entry."
+      "displayName": "도식적 생물학적 경로",
+      "description": "논문 수치에 대한 단순화된 대사 및 신호 전달 경로 체계.",
+      "scopeWarning": "논문 및 보고서의 단순화된 경로 다이어그램에 적합합니다. KEGG, Reactome 또는 전문 경로 시각화 도구를 대체할 수 없습니다.",
+      "defaultCaption": "중앙 탄소 대사: 해당과정과 TCA 주기 진입."
     },
     "chemical-formulas": {
-      "displayName": "Chemical Formulas",
-      "description": "Write chemical formulas with charges, states, and subscripts. Uses mhchem — LaTeX native.",
-      "defaultCaption": "Selected inorganic formulas with oxidation states and phases."
+      "displayName": "화학식",
+      "description": "전하, 상태 및 첨자를 사용하여 화학식을 작성합니다. mhchem — LaTeX 기본을 사용합니다.",
+      "defaultCaption": "산화 상태와 단계가 포함된 선택된 무기 공식."
     },
     "chemical-reactions": {
-      "displayName": "Chemical Reactions",
-      "description": "Build chemical reaction equations with arrows, conditions, and catalysts. Uses mhchem.",
-      "defaultCaption": "Acid--base neutralisation and combustion reactions."
+      "displayName": "화학반응",
+      "description": "화살표, 조건, 촉매를 사용하여 화학 반응 방정식을 구축하세요. mhchem을 사용합니다.",
+      "defaultCaption": "산-염기 중화 및 연소 반응."
     },
     "reaction-equilibria": {
-      "displayName": "Reaction Equilibria & Conditions",
-      "description": "Chemical equilibrium reactions with conditions above/below the arrow. Uses mhchem.",
-      "defaultCaption": "Haber process and esterification equilibria."
+      "displayName": "반응 평형 및 조건",
+      "description": "화살표 위/아래 조건의 화학 평형 반응. mhchem을 사용합니다.",
+      "defaultCaption": "하버 과정과 에스테르화 평형"
     },
     "chemical-structures": {
-      "displayName": "Chemical Structures",
-      "description": "Simple organic structures and ring systems using ChemFig. Benzene, functional groups, ring compounds.",
-      "scopeWarning": "Suitable for simple organic structures in theses. Complex multi-ring systems may need manual ChemFig adjustment. For full structural chemistry, use ChemDraw and import as PDF/SVG.",
-      "defaultCaption": "Aspirin (acetylsalicylic acid) structural formula."
+      "displayName": "화학 구조",
+      "description": "ChemFig를 이용한 간단한 유기 구조와 링 시스템. 벤젠, 작용기, 고리 화합물.",
+      "scopeWarning": "논문의 단순한 유기 구조에 적합합니다. 복잡한 다중 링 시스템에는 수동 ChemFig 조정이 필요할 수 있습니다. 전체 구조 화학을 위해서는 ChemDraw를 사용하고 PDF/SVG로 가져옵니다.",
+      "defaultCaption": "아스피린(아세틸살리실산) 구조식"
     },
     "basic-electrical-circuits": {
-      "displayName": "Basic Electrical Circuits",
-      "description": "Visual circuit builder: resistors, capacitors, inductors, sources, switches, diodes. CircuiTikZ native.",
-      "defaultCaption": "RC low-pass filter circuit with voltage divider."
+      "displayName": "기본 전기 회로",
+      "description": "시각적 회로 빌더: 저항기, 커패시터, 인덕터, 소스, 스위치, 다이오드. CircuiTikZ 네이티브.",
+      "defaultCaption": "전압 분배기가 있는 RC 저역 통과 필터 회로."
     },
     "block-diagrams-control": {
-      "displayName": "Block Diagrams / Control Systems",
-      "description": "Control system block diagrams with transfer functions, summing junctions, and feedback loops.",
-      "defaultCaption": "PID closed-loop control system block diagram."
+      "displayName": "블록 다이어그램 / 제어 시스템",
+      "description": "전달 함수, 합산 접합 및 피드백 루프가 포함된 제어 시스템 블록 다이어그램.",
+      "defaultCaption": "PID 폐쇄 루프 제어 시스템 블록 다이어그램"
     },
     "flowcharts": {
-      "displayName": "Flowcharts",
-      "description": "Academic and process flowcharts with decision diamonds, process boxes, and connector arrows.",
-      "defaultCaption": "Research methodology flowchart."
+      "displayName": "흐름도",
+      "description": "결정 다이아몬드, 프로세스 상자 및 커넥터 화살표가 포함된 학술 및 프로세스 흐름도",
+      "defaultCaption": "연구 방법론 흐름도"
     },
     "software-architecture": {
-      "displayName": "Software / System Architecture",
-      "description": "Component, layer, and system architecture diagrams.",
-      "scopeWarning": "Suitable for standard architecture overviews. For complex UML or deployment diagrams, use Draw.io and import as PDF.",
-      "defaultCaption": "Three-tier web application architecture."
+      "displayName": "소프트웨어/시스템 아키텍처",
+      "description": "구성요소, 레이어 및 시스템 아키텍처 다이어그램",
+      "scopeWarning": "표준 아키텍처 개요에 적합합니다. 복잡한 UML 또는 배포 다이어그램의 경우 Draw.io를 사용하고 PDF로 가져옵니다.",
+      "defaultCaption": "3계층 웹 애플리케이션 아키텍처."
     },
     "venn-set-diagrams": {
-      "displayName": "Venn / Set Diagrams",
-      "description": "Create Venn diagrams and set-theory diagrams with labeled circles and intersections.",
-      "defaultCaption": "Three-set Venn diagram showing mixed-methods research design."
+      "displayName": "벤/세트 다이어그램",
+      "description": "레이블이 붙은 원과 교차점을 사용하여 벤 다이어그램과 집합 이론 다이어그램을 만듭니다.",
+      "defaultCaption": "혼합 방법 연구 설계를 보여주는 3세트 벤 다이어그램"
     },
     "plane-geometry": {
-      "displayName": "Plane Geometry",
-      "description": "Geometric shapes: triangles, polygons, circles, angles, perpendiculars, parallels.",
-      "defaultCaption": "Right triangle with altitude from hypotenuse — geometric mean relations."
+      "displayName": "평면 기하학",
+      "description": "기하학적 모양: 삼각형, 다각형, 원, 각도, 수직선, 평행선",
+      "defaultCaption": "빗변으로부터 고도를 갖는 직각 삼각형 — 기하 평균 관계."
     },
     "analytic-geometry": {
-      "displayName": "Analytic Geometry",
-      "description": "Coordinate systems with curves, lines, tangents, and labeled points.",
-      "defaultCaption": "Parabola $f(x)=x^2-2x-3$ with roots, vertex, and tangent at $x=2$."
+      "displayName": "해석적 기하학",
+      "description": "곡선, 선, 접선 및 라벨이 붙은 점이 있는 좌표계.",
+      "defaultCaption": "$x=2$에 근, 꼭지점, 접선이 있는 포물선 $f(x)=x^2-2x-3$."
     },
     "probability-trees": {
-      "displayName": "Probability Trees",
-      "description": "Visual probability trees with branch probabilities and outcomes. forest native.",
-      "defaultCaption": "Probability tree — two coin flips."
+      "displayName": "확률 트리",
+      "description": "분기 확률과 결과가 포함된 시각적 확률 트리. 숲속 원주민.",
+      "defaultCaption": "확률 트리 — 동전 던지기 두 번."
     },
     "lab-setups": {
-      "displayName": "Simple Lab Setups",
-      "description": "Basic laboratory apparatus diagrams: flasks, beakers, burettes, tube assemblies.",
-      "scopeWarning": "Covers standard lab apparatus. For specialized equipment diagrams, use dedicated illustration tools and import as PDF.",
-      "defaultCaption": "Simple laboratory setup."
+      "displayName": "간단한 실험실 설정",
+      "description": "기본 실험실 장치 다이어그램: 플라스크, 비커, 뷰렛, 튜브 어셈블리",
+      "scopeWarning": "표준 실험실 장비를 다룹니다. 특수 장비 다이어그램의 경우 전용 일러스트레이션 도구를 사용하고 PDF로 가져옵니다.",
+      "defaultCaption": "간단한 실험실 설정."
     },
     "syntax-trees": {
-      "displayName": "Syntax / Linguistic Trees",
-      "description": "Phrase-structure and dependency trees for linguistics. forest native.",
-      "defaultCaption": "Phrase-structure tree."
+      "displayName": "구문/언어 트리",
+      "description": "언어학을 위한 구문 구조 및 종속성 트리. 숲속 원주민.",
+      "defaultCaption": "문구 구조 트리"
     },
     "concept-maps": {
-      "displayName": "Concept Maps & Argument Diagrams",
-      "description": "Concept maps, mind maps, and argumentative structure diagrams.",
-      "defaultCaption": "Concept map."
+      "displayName": "개념도 및 인수 다이어그램",
+      "description": "개념 맵, 마인드 맵, 논쟁적 구조 다이어그램",
+      "defaultCaption": "콘셉트맵."
     },
     "visual-equations": {
-      "displayName": "Visual Equations",
-      "description": "Build mathematical equations, expressions, and formulas with a visual editor. Outputs LaTeX native.",
-      "defaultCaption": "Quadratic formula and quadratic form."
+      "displayName": "시각적 방정식",
+      "description": "비주얼 편집기를 사용하여 수학 방정식, 표현식 및 공식을 작성하세요. LaTeX 네이티브를 출력합니다.",
+      "defaultCaption": "2차 공식과 2차 형태"
     },
     "matrices-determinants": {
-      "displayName": "Matrices & Determinants",
-      "description": "Create matrices and determinants of any size with visual cell editing.",
-      "defaultCaption": "3D rotation matrix around the $z$-axis by angle $\\theta$."
+      "displayName": "행렬 및 행렬식",
+      "description": "시각적 셀 편집을 통해 모든 크기의 행렬과 행렬식을 생성하세요.",
+      "defaultCaption": "$\\theta$ 각도에 따른 $z$-축 주위의 3D 회전 행렬"
     },
     "systems-of-equations": {
-      "displayName": "Systems of Equations",
-      "description": "Build systems of linear or nonlinear equations with aligned formatting.",
-      "defaultCaption": "System of three linear equations (fluid flow balance)."
+      "displayName": "방정식 시스템",
+      "description": "정렬된 형식으로 선형 또는 비선형 방정식 시스템을 구축하세요.",
+      "defaultCaption": "3개의 선형 방정식 시스템(유체 흐름 균형)."
     },
     "piecewise-functions": {
-      "displayName": "Piecewise Functions",
-      "description": "Define functions by cases or parts with a visual row editor.",
-      "defaultCaption": "Heaviside step function and ReLU activation function."
+      "displayName": "조각별 함수",
+      "description": "시각적 행 편집기를 사용하여 케이스 또는 부품별로 기능을 정의하세요.",
+      "defaultCaption": "헤비사이드 스텝 함수와 ReLU 활성화 함수"
     },
     "vectors-fields": {
-      "displayName": "Vectors & Simple Fields",
-      "description": "Draw vectors, vector decomposition, and simple field representations.",
-      "defaultCaption": "Vector addition — parallelogram law: $\\vec{R} = \\vec{A} + \\vec{B}$."
+      "displayName": "벡터 및 단순 필드",
+      "description": "벡터 그리기, 벡터 분해 및 간단한 필드 표현",
+      "defaultCaption": "벡터 덧셈 — 평행사변형 법칙: $\\vec{R} = \\vec{A} + \\vec{B}$."
     },
     "free-body-diagrams": {
-      "displayName": "Free Body Diagrams",
-      "description": "Build free body diagrams with forces, mass blocks, and labeled arrows.",
-      "defaultCaption": "Free body diagram — block on surface with applied force at angle $\\alpha$."
+      "displayName": "자유체 도표",
+      "description": "힘, 질량 블록, 표시된 화살표를 사용하여 자유물체 다이어그램을 작성하세요.",
+      "defaultCaption": "자유물체 다이어그램 — 각도 $\\alpha$에서 힘이 가해진 표면의 블록"
     },
     "inclined-plane-pulleys": {
-      "displayName": "Inclined Planes, Pulleys & Springs",
-      "description": "Mechanical systems: inclined planes, pulley setups, and spring-mass systems.",
-      "scopeWarning": "Generates accurate schematic diagrams. Highly complex multi-pulley systems may need manual TikZ adjustments.",
-      "defaultCaption": "Free-body diagram on inclined plane (angle $\\theta$)."
+      "displayName": "경사면, 풀리 및 스프링",
+      "description": "기계 시스템: 경사면, 도르래 설정 및 스프링 질량 시스템",
+      "scopeWarning": "정확한 회로도를 생성합니다. 매우 복잡한 다중 풀리 시스템에는 수동 TikZ 조정이 필요할 수 있습니다.",
+      "defaultCaption": "경사면의 자유물체도(각도 $\\theta$)."
     },
     "wave-oscillation": {
-      "displayName": "Wave & Oscillation Diagrams",
-      "description": "Sinusoidal waves, damped oscillations, and wave superposition. Covers SHM, transverse/longitudinal waves, and interference patterns.",
-      "defaultCaption": "Sinusoidal wave $y = A\\sin(\\omega t)$ with damped envelope."
+      "displayName": "파동 및 진동 다이어그램",
+      "description": "정현파, 감쇠 진동 및 파동 중첩. SHM, 횡파/종파 및 간섭 패턴을 다룹니다.",
+      "defaultCaption": "감쇠된 엔벨로프가 있는 정현파 $y = A\\sin(\\omega t)$."
     },
     "geometric-optics": {
-      "displayName": "Geometric Optics",
-      "description": "Lenses, mirrors, ray diagrams, and refraction diagrams.",
-      "scopeWarning": "Suitable for standard ray diagrams. Complex optical systems with multiple elements may need manual adjustment.",
-      "defaultCaption": "Converging thin lens — three principal ray construction."
+      "displayName": "기하광학",
+      "description": "렌즈, 거울, 광선 다이어그램 및 굴절 다이어그램.",
+      "scopeWarning": "표준 광선 다이어그램에 적합합니다. 여러 요소가 포함된 복잡한 광학 시스템에는 수동 조정이 필요할 수 있습니다.",
+      "defaultCaption": "수렴하는 얇은 렌즈 — 3개의 주요 광선 구성."
     },
     "gantt-charts": {
-      "displayName": "Gantt Charts",
-      "description": "Research and project Gantt charts with tasks, groups, milestones, and dependencies. pgfgantt native.",
-      "defaultCaption": "Doctoral research schedule by semester."
+      "displayName": "간트 차트",
+      "description": "작업, 그룹, 마일스톤 및 종속성이 포함된 간트 차트를 조사하고 프로젝트합니다. pgfgantt 네이티브.",
+      "defaultCaption": "학기별 박사연구 일정"
     },
     "timelines": {
-      "displayName": "Timelines",
-      "description": "Historical, research, and narrative timelines with labeled events.",
-      "defaultCaption": "Key milestones in molecular biology (1944--2003)."
+      "displayName": "타임라인",
+      "description": "이벤트 라벨이 포함된 역사적, 연구 및 서술적 타임라인",
+      "defaultCaption": "분자 생물학의 주요 이정표(1944~2003)."
     },
     "function-plots-2d": {
-      "displayName": "2D Function Plots",
-      "description": "Plot mathematical functions with labeled axes, grid, and legend. PGFPlots native.",
-      "defaultCaption": "Trigonometric functions $\\sin x$ and $\\cos x$."
+      "displayName": "2D 함수 도표",
+      "description": "레이블이 지정된 축, 그리드 및 범례를 사용하여 수학 함수를 플롯합니다. PGFPlots 기본.",
+      "defaultCaption": "삼각 함수 $\\sin x$ 및 $\\cos x$."
     },
     "parametric-polar-plots": {
-      "displayName": "Parametric & Polar Plots",
-      "description": "Parametric curves and polar function plots.",
-      "defaultCaption": "Lissajous curve $(\\cos 2t,\\, \\sin 3t)$."
+      "displayName": "매개변수 및 극좌표",
+      "description": "매개변수 곡선 및 극함수 도표",
+      "defaultCaption": "리사주 곡선 $(\\cos 2t,\\, \\sin 3t)$."
     },
     "basic-statistics": {
-      "displayName": "Basic Statistics Charts",
-      "description": "Bar charts, histograms, and scatter plots from tabular data.",
-      "defaultCaption": "Comparative bar chart — measurement results by experimental group."
+      "displayName": "기본 통계 차트",
+      "description": "표 데이터의 막대 차트, 히스토그램 및 분산형 차트.",
+      "defaultCaption": "비교 막대 차트 — 실험군별 측정 결과"
     },
     "statistical-distributions": {
-      "displayName": "Statistical Distributions",
-      "description": "Normal, t, chi-squared, and other distributions with shaded regions.",
-      "defaultCaption": "Standard normal distribution with 95\\% confidence interval shaded."
+      "displayName": "통계 분포",
+      "description": "정규, t, 카이제곱 및 음영 영역이 있는 기타 분포",
+      "defaultCaption": "95\\% 신뢰 구간이 음영 처리된 표준 정규 분포."
     },
     "kaplan-meier": {
-      "displayName": "Kaplan-Meier Survival Curves",
-      "description": "Step-function survival curves for clinical and epidemiological studies.",
-      "scopeWarning": "Enter pre-computed KM estimates (from R survfit, Stata stcurve, or SPSS) as data points forming a step function. Statistical tests must be done externally.",
-      "defaultCaption": "Kaplan--Meier overall survival curves for adjuvant vs.\\ standard chemotherapy ($n{=}200$; log-rank $p{=}0.008$)."
+      "displayName": "Kaplan-Meier 생존 곡선",
+      "description": "임상 및 역학 연구를 위한 단계 함수 생존 곡선",
+      "scopeWarning": "Enter 사전 계산된 KM 추정값(R survfit, Stata stcurve 또는 SPSS에서)을 계단 함수를 형성하는 데이터 포인트로 사용합니다. 통계 테스트는 외부에서 수행해야 합니다.",
+      "defaultCaption": "Kaplan--보조제 대 표준 화학요법($n{=}200$; 로그 순위 $p{=}0.008$)에 대한 마이어 전체 생존 곡선."
     },
     "network-graph": {
-      "displayName": "Network / Social Graphs",
-      "description": "Co-authorship, citation, or social influence networks with community clustering.",
-      "scopeWarning": "Suitable for illustrative networks (≤ 15 nodes). For large-scale visualization, use Gephi or NetworkX and import as PDF.",
-      "defaultCaption": "Co-authorship network — two research clusters connected by a bridge author."
+      "displayName": "네트워크/소셜 그래프",
+      "description": "커뮤니티 클러스터링을 통한 공동 저작, 인용 또는 사회적 영향력 네트워크.",
+      "scopeWarning": "예시적인 네트워크에 적합합니다(노드 15개 이하). 대규모 시각화의 경우 Gephi 또는 NetworkX를 사용하고 PDF로 가져옵니다.",
+      "defaultCaption": "공동 저자 네트워크 — 브릿지 저자로 연결된 두 개의 연구 클러스터"
     },
     "organic-chemistry-extended": {
-      "displayName": "Extended Organic Chemistry",
-      "description": "Organic structures with rings, functional groups, and stereocentres. ChemFig native.",
-      "scopeWarning": "Complex multi-ring or stereo structures may need manual ChemFig adjustment. For publication-quality structures, use ChemDraw and import as PDF.",
-      "defaultCaption": "Caffeine (1,3,7-trimethylxanthine) structural formula."
+      "displayName": "확장 유기화학",
+      "description": "고리, 작용기 및 입체 중심을 갖춘 유기 구조. ChemFig 네이티브.",
+      "scopeWarning": "복잡한 다중 링 또는 스테레오 구조에는 수동 ChemFig 조정이 필요할 수 있습니다. 출판 품질 구조의 경우 ChemDraw를 사용하고 PDF로 가져옵니다.",
+      "defaultCaption": "카페인(1,3,7-트리메틸크산틴) 구조식"
     },
     "reaction-mechanisms": {
-      "displayName": "Basic Reaction Mechanisms",
-      "description": "Reaction mechanisms including C-C bond forming reactions, substitutions, and eliminations.",
-      "scopeWarning": "Suitable for standard mechanisms in theses. Complex multi-step mechanisms with curved arrows require manual ChemFig adjustment.",
-      "defaultCaption": "Aldol condensation: base-catalysed formation of a $\\beta$-hydroxy carbonyl compound."
+      "displayName": "기본 반응 메커니즘",
+      "description": "C-C 결합 형성 반응, 치환 및 제거를 포함한 반응 메커니즘",
+      "scopeWarning": "논문의 표준 메커니즘에 적합합니다. 곡선 화살표가 있는 복잡한 다단계 메커니즘에는 수동 ChemFig 조정이 필요합니다.",
+      "defaultCaption": "알돌 축합: $\\beta$-하이드록시 카르보닐 화합물의 염기 촉매 형성."
     },
     "er-diagrams": {
-      "displayName": "ER Diagrams",
-      "description": "Entity-relationship diagrams for database design. TikZ native.",
-      "scopeWarning": "Suitable for standard ER diagrams in theses. Complex schemas with many entities benefit from Draw.io exported as PDF.",
-      "defaultCaption": "ER diagram for a university course-enrollment system."
+      "displayName": "ER 다이어그램",
+      "description": "데이터베이스 설계를 위한 엔터티 관계 다이어그램. TikZ 네이티브.",
+      "scopeWarning": "논문의 표준 ER 다이어그램에 적합합니다. 많은 개체가 포함된 복잡한 스키마는 PDF로 내보낸 Draw.io의 이점을 누릴 수 있습니다.",
+      "defaultCaption": "대학 과정 등록 시스템의 ER 다이어그램"
     },
     "state-machines": {
-      "displayName": "State Machines",
-      "description": "Finite state machines and automata with states, transitions, and labels.",
-      "scopeWarning": "Suitable for DFA/NFA and reactive system diagrams in theses. For large automata, generate from Graphviz/PlantUML and import as PDF.",
-      "defaultCaption": "Traffic-light finite state machine (timer-driven)."
+      "displayName": "상태 머신",
+      "description": "상태, 전환 및 레이블이 있는 유한 상태 기계 및 자동 장치",
+      "scopeWarning": "논문의 DFA/NFA 및 반응형 시스템 다이어그램에 적합합니다. 대형 오토마타의 경우 Graphviz/PlantUML에서 생성하고 PDF로 가져옵니다.",
+      "defaultCaption": "신호등 유한 상태 기계(타이머 구동)."
     },
     "markov-chains": {
-      "displayName": "Markov Chains",
-      "description": "Markov chain diagrams with states and transition probabilities.",
-      "scopeWarning": "Suitable for illustrative Markov chains in theses. For inference or simulation, use R/Python and import results as figures.",
-      "defaultCaption": "Weather Markov chain (Sunny / Cloudy / Rainy)."
+      "displayName": "마르코프 체인",
+      "description": "상태 및 전환 확률이 포함된 마르코프 체인 다이어그램",
+      "scopeWarning": "논문의 예시적인 마르코프 체인에 적합합니다. 추론이나 시뮬레이션의 경우 R/Python를 사용하고 결과를 그림으로 가져옵니다.",
+      "defaultCaption": "마르코프 날씨 체인(맑음/흐림/비)."
     },
     "bode-nyquist": {
-      "displayName": "Bode / Nyquist Diagrams",
-      "description": "Frequency response: Bode magnitude + phase, or Nyquist plot. Second-order transfer functions.",
-      "scopeWarning": "Enter your system transfer function as a pgfplots expression. Compute poles/zeros in MATLAB/Python first.",
-      "defaultCaption": "Bode plot of $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
+      "displayName": "보드/나이퀴스트 다이어그램",
+      "description": "주파수 응답: 보드 크기 + 위상 또는 나이퀴스트 플롯. 2차 전달 함수.",
+      "scopeWarning": "Enter 시스템 전송 기능을 pgfplots 표현으로 사용하세요. 먼저 MATLAB/Python에서 극점/영점을 계산하세요.",
+      "defaultCaption": "$G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$($\\omega_n{=}10$, $\\zeta{=}0.3$)의 보드 플롯"
     },
     "plots-3d": {
-      "displayName": "3D Scientific Plots",
-      "description": "3D surfaces, wireframes, and contour plots. PGFPlots native.",
-      "scopeWarning": "3D plots compile slowly for fine meshes. Keep samples ≤ 25×25 for reasonable compile time.",
-      "defaultCaption": "Standard bivariate normal density $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
+      "displayName": "3D 과학 플롯",
+      "description": "3D 표면, 와이어프레임 및 등고선 도표. PGFPlots 기본.",
+      "scopeWarning": "3D 플롯은 미세한 메시에 대해 느리게 컴파일됩니다. 합리적인 컴파일 시간을 위해 샘플을 25×25 이하로 유지하세요.",
+      "defaultCaption": "표준 이변량 정규 밀도 $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
     },
     "phase-diagrams": {
-      "displayName": "Phase Diagrams",
-      "description": "Phase portraits, nullclines, and stability diagrams for dynamical systems.",
-      "scopeWarning": "Suitable for 2D phase planes and nullcline plots. Full vector-field arrows require manual pgfplots quiver adjustments.",
-      "defaultCaption": "Lotka--Volterra phase plane: prey $x$ vs predator $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
+      "displayName": "단계 다이어그램",
+      "description": "동적 시스템에 대한 위상 초상화, 영사선 및 안정성 다이어그램.",
+      "scopeWarning": "2D 위상 평면 및 널클라인 플롯에 적합합니다. 전체 벡터 필드 화살표에는 수동 pgfplots 떨림 조정이 필요합니다.",
+      "defaultCaption": "Lotka--Volterra 단계 평면: 먹이 $x$ 대 포식자 $y$ 널 클라인($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
     },
     "heat-maps": {
-      "displayName": "Correlation Heat Maps",
-      "description": "Correlation matrices and heat maps using pgfplots matrix plot. Values between -1 and 1, color-mapped.",
-      "scopeWarning": "Suitable for small matrices (≤ 10×10). Compute correlations in R/Python first, then enter the values here.",
-      "defaultCaption": "Pearson correlation matrix for four psychometric variables."
+      "displayName": "상관관계 히트맵",
+      "description": "pgfplots 매트릭스 플롯을 사용한 상관 매트릭스 및 히트 맵. -1과 1 사이의 값, 색상 매핑.",
+      "scopeWarning": "작은 행렬(≤ 10×10)에 적합합니다. 먼저 R/Python에서 상관관계를 계산한 다음 여기에 값을 입력하세요.",
+      "defaultCaption": "네 가지 심리 측정 변수에 대한 피어슨 상관 행렬"
     },
     "supply-demand": {
-      "displayName": "Supply & Demand Curves",
-      "description": "Supply and demand with equilibrium, consumer/producer surplus, and optional curve shifts.",
-      "scopeWarning": "Suitable for illustrative partial-equilibrium analysis in theses. Non-linear elasticity curves may need manual pgfplots adjustment.",
-      "defaultCaption": "Supply and demand: original equilibrium $E_0$ and demand shift $D \\to D'$ after income increase."
+      "displayName": "수급곡선",
+      "description": "균형, 소비자/생산자 잉여 및 선택적인 곡선 이동을 통한 수요와 공급",
+      "scopeWarning": "논문의 예시적인 부분평형 분석에 적합합니다. 비선형 탄력성 곡선은 수동 pgfplots 조정이 필요할 수 있습니다.",
+      "defaultCaption": "공급과 수요: 원래 균형 $E_0$ 및 소득 증가 후 수요 이동 $D \\to D'$."
     },
     "uml-class-diagrams": {
-      "displayName": "UML Class Diagrams",
-      "description": "UML class diagrams with inheritance, interfaces, composition, and association.",
-      "scopeWarning": "Generates simplified class boxes. For full UML compliance, use PlantUML or draw.io and import as PDF.",
-      "defaultCaption": "Repository pattern with Observer: \\\\ $<<$interface$>>$ classes, inheritance and composition."
+      "displayName": "UML 클래스 다이어그램",
+      "description": "상속, 인터페이스, 구성 및 연관이 포함된 UML 클래스 다이어그램",
+      "scopeWarning": "간소화된 클래스 상자를 생성합니다. UML를 완전히 준수하려면 PlantUML 또는 draw.io를 사용하고 PDF로 가져오세요.",
+      "defaultCaption": "관찰자가 있는 저장소 패턴: $<<$interface$>>$ 클래스, 상속 및 구성."
     },
     "time-series": {
-      "displayName": "Time Series Plots",
-      "description": "Time series with trend, confidence band, and annotated events. Ideal for longitudinal data in economics, ecology, and clinical research.",
-      "scopeWarning": "Enter data points manually. For large or complex time series (ARIMA, seasonal), generate in R/Python and import as PDF.",
-      "defaultCaption": "Monthly CO$_2$ concentration (ppm) with long-term trend and $\\pm$2\\,SD band."
+      "displayName": "시계열 도표",
+      "description": "추세, 신뢰 구간 및 주석이 달린 이벤트가 포함된 시계열입니다. 경제, 생태학, 임상 연구 분야의 종단적 데이터에 적합합니다.",
+      "scopeWarning": "Enter 데이터 포인트를 수동으로 지정합니다. 크거나 복잡한 시계열(ARIMA, 계절)의 경우 R/Python에서 생성하고 PDF로 가져옵니다.",
+      "defaultCaption": "장기 추세 및 $\\pm$2\\,SD 밴드가 포함된 월별 CO$_2$ 농도(ppm)"
     },
     "genealogy": {
-      "displayName": "Genealogy / Family Trees",
-      "description": "Family trees, dynasties, and clinical pedigrees with generations and relationship markers.",
-      "scopeWarning": "Suitable for simplified family trees. For clinical genetic pedigrees with standard symbols (ACMG/AMP), use dedicated pedigree software.",
-      "defaultCaption": "Family tree."
+      "displayName": "계보 / 가계도",
+      "description": "세대 및 관계 표시가 포함된 가계도, 왕조 및 임상 가계도.",
+      "scopeWarning": "간단한 가계도에 적합합니다. 표준 기호(ACMG/AMP)가 있는 임상 유전 가계도의 경우 전용 가계도 소프트웨어를 사용하세요.",
+      "defaultCaption": "가계도."
     },
     "parallel-coordinates": {
-      "displayName": "Parallel Coordinates / Criteria Matrix",
-      "description": "Parallel coordinate plots for multi-criteria comparison of alternatives across normalised dimensions (0--10 scale).",
-      "scopeWarning": "Normalise all criteria to a common scale (e.g. 0--10) before entering values. For many alternatives (>6), use Python/R and import as PDF.",
-      "defaultCaption": "Parallel coordinate plot comparing five software solutions on four criteria."
+      "displayName": "평행좌표 / 기준행렬",
+      "description": "정규화된 차원(0-10 척도)에 걸쳐 대안의 다기준 비교를 위한 평행 좌표 플롯.",
+      "scopeWarning": "값을 입력하기 전에 모든 기준을 공통 척도(예: 0-10)로 정규화합니다. 많은 대안(>6)의 경우 Python/R를 사용하고 PDF로 가져옵니다.",
+      "defaultCaption": "네 가지 기준에 따라 다섯 가지 소프트웨어 솔루션을 비교하는 평행 좌표 플롯"
     },
     "energy-band-diagrams": {
-      "displayName": "Energy / Band Diagrams",
-      "description": "Energy level diagrams, band gaps, and semiconductor band diagrams for physics and materials science.",
-      "scopeWarning": "Energy values are illustrative. Replace with your material's actual band gap and Fermi level values from literature or calculation.",
-      "defaultCaption": "Semiconductor band diagram."
+      "displayName": "에너지 / 밴드 다이어그램",
+      "description": "물리학 및 재료 과학에 대한 에너지 수준 다이어그램, 밴드 갭 및 반도체 밴드 다이어그램",
+      "scopeWarning": "에너지 값은 예시입니다. 문헌이나 계산에서 얻은 물질의 실제 밴드 갭 및 페르미 준위 값으로 바꾸십시오.",
+      "defaultCaption": "반도체 밴드 다이어그램"
     },
     "decision-tree": {
-      "displayName": "Decision Trees",
-      "description": "Decision tree diagrams with conditions, branches, and leaf outcomes. Covers classification trees, CART, and clinical decision rules.",
-      "scopeWarning": "Enter tree structure manually. For automatic tree generation from data, use scikit-learn/rpart and export the tree, then reproduce here for publication.",
-      "defaultCaption": "Decision tree."
+      "displayName": "의사결정 트리",
+      "description": "조건, 분기 및 리프 결과가 포함된 의사결정 트리 다이어그램. 분류 트리, CART 및 임상 결정 규칙을 다룹니다.",
+      "scopeWarning": "Enter 트리 구조를 수동으로 구성합니다. 데이터에서 자동 트리 생성을 위해 scikit-learn/rpart를 사용하고 트리를 내보낸 다음 게시를 위해 여기에서 재현하세요.",
+      "defaultCaption": "결정 트리"
     },
     "roc-curve": {
-      "displayName": "ROC Curves",
-      "description": "Receiver operating characteristic curves for classifier evaluation. Supports multiple classifiers with AUC annotation.",
-      "scopeWarning": "Enter pre-computed TPR/FPR values from your statistical software (sklearn, R pROC). This plugin renders the curve; model training must be done externally.",
-      "defaultCaption": "ROC curves (AUC shown in legend)."
+      "displayName": "ROC 곡선",
+      "description": "분류자 평가를 위한 수신기 작동 특성 곡선. AUC 주석으로 여러 분류자를 지원합니다.",
+      "scopeWarning": "Enter는 통계 소프트웨어(sklearn, R pROC)에서 TPR/FPR 값을 미리 계산했습니다. 이 플러그인은 곡선을 렌더링합니다. 모델 훈련은 외부에서 이루어져야 합니다.",
+      "defaultCaption": "ROC 곡선(범례에 표시된 AUC)."
     },
     "population-pyramid": {
-      "displayName": "Population Pyramid",
-      "description": "Age-sex population pyramid for demographic analysis. Shows male/female population distributions by age group.",
-      "scopeWarning": "Enter census data manually. For large datasets, generate the pyramid in R/Python and import as PDF, or use this plugin for illustrative sub-populations.",
-      "defaultCaption": "Population pyramid."
+      "displayName": "인구 피라미드",
+      "description": "인구통계학적 분석을 위한 연령-성별 인구 피라미드. 연령별 남성/여성 인구 분포를 보여줍니다.",
+      "scopeWarning": "Enter 인구 조사 데이터를 수동으로 생성합니다. 대규모 데이터 세트의 경우 R/Python에서 피라미드를 생성하고 PDF로 가져오거나 예시 하위 모집단에 이 플러그인을 사용하세요.",
+      "defaultCaption": "인구 피라미드."
     },
     "error-bars": {
-      "displayName": "Error Bars & Confidence Intervals",
-      "description": "Line or bar plots with error bars for means ± SD/SE/CI. Essential for presenting experimental or survey results.",
-      "scopeWarning": "Enter means and error values (SD, SE, or 95% CI half-width) computed from your data. Raw data processing must be done externally.",
-      "defaultCaption": "Mean values with 95\\% confidence intervals."
+      "displayName": "오차 막대 및 신뢰 구간",
+      "description": "평균 ± SD/SE/CI에 대한 오차 막대가 있는 선 또는 막대 그래프. 실험 또는 설문 조사 결과를 제시하는 데 필수적입니다.",
+      "scopeWarning": "Enter는 데이터에서 계산된 평균 및 오류 값(SD, SE 또는 95% CI 반폭)입니다. 원시 데이터 처리는 외부에서 수행되어야 합니다.",
+      "defaultCaption": "95\\% 신뢰 구간의 평균 값."
     },
     "causal-dag": {
-      "displayName": "Causal DAG / Path Diagrams",
-      "description": "Directed acyclic graphs (DAGs) for causal inference frameworks, structural equation models, and mediation analysis.",
-      "scopeWarning": "Suitable for causal diagrams up to ~10 variables. For complex SEM or large DAGs, use dagitty.net or lavaan and import the diagram.",
-      "defaultCaption": "Causal directed acyclic graph (DAG)."
+      "displayName": "원인 DAG / 경로 다이어그램",
+      "description": "인과 추론 프레임워크, 구조 방정식 모델 및 중재 분석을 위한 방향성 비순환 그래프(DAG)",
+      "scopeWarning": "최대 10개의 변수까지 인과 다이어그램에 적합합니다. 복잡한 SEM 또는 대규모 DAG의 경우 dagitty.net 또는 lavaan을 사용하고 다이어그램을 가져옵니다.",
+      "defaultCaption": "인과적 방향성 비순환 그래프(DAG)."
     },
     "bar-charts": {
-      "displayName": "Bar Charts & Histograms",
-      "description": "Grouped and stacked bar charts, frequency histograms for descriptive statistics.",
-      "scopeWarning": "Enter values manually. For charts from large datasets, generate in R/Python and import as PDF.",
-      "defaultCaption": "Grouped bar chart — mean response by condition and time point ($\\pm$\\,SD)."
+      "displayName": "막대 차트 및 히스토그램",
+      "description": "그룹화 및 누적 막대 차트, 기술 통계용 빈도 히스토그램.",
+      "scopeWarning": "Enter 값을 수동으로 지정합니다. 대규모 데이터 세트의 차트의 경우 R/Python에서 생성하고 PDF로 가져옵니다.",
+      "defaultCaption": "그룹화된 막대 차트 — 조건 및 시점별 평균 반응($\\pm$\\,SD)."
     },
     "box-violin-plots": {
-      "displayName": "Box Plots & Distribution Comparisons",
-      "description": "Box-and-whisker plots with medians, quartiles, and outliers for comparing distributions.",
-      "scopeWarning": "Enter pre-computed statistics (median, Q1, Q3) from R/Python. Each data point encodes: x=group position, y=median, error=IQR half-range.",
-      "defaultCaption": "Distribution of test scores across three teaching conditions (box: Q1--Q3; whiskers: 1.5$\\times$IQR)."
+      "displayName": "상자 도표 및 분포 비교",
+      "description": "분포 비교를 위한 중앙값, 사분위수 및 이상값이 포함된 상자 수염 도표",
+      "scopeWarning": "Enter R/Python에서 미리 계산된 통계(중앙값, Q1, Q3). 각 데이터 포인트는 x=그룹 위치, y=중앙값, 오류=IQR 절반 범위를 인코딩합니다.",
+      "defaultCaption": "세 가지 교육 조건에 따른 시험 점수 분포(상자: Q1--Q3; 수염: 1.5$\\times$IQR)."
     },
     "scatter-regression": {
-      "displayName": "Scatter Plots with Regression",
-      "description": "Scatter plot with linear regression line and optional confidence band.",
-      "scopeWarning": "Compute slope, intercept, and CI band in your statistical software. Enter the values here for publication-quality rendering.",
-      "defaultCaption": "BMI vs systolic blood pressure: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
+      "displayName": "회귀를 이용한 산점도",
+      "description": "선형 회귀선과 선택적인 신뢰 대역이 있는 산점도.",
+      "scopeWarning": "통계 소프트웨어에서 기울기, 절편 및 CI 대역을 계산합니다. 출판 품질 렌더링을 위한 값은 Enter입니다.",
+      "defaultCaption": "BMI 대 수축기 혈압: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$($n{=}120$)."
     },
     "bayesian-networks": {
-      "displayName": "Bayesian Networks",
-      "description": "Directed acyclic graphs for Bayesian networks: latent cause nodes (ellipses) with observed evidence nodes (rectangles).",
-      "scopeWarning": "Suitable for illustrative Bayesian networks in theses. For inference, parameter learning, or dense graphs, use pgmpy, BayesFusion, GeNIe, or BUGS and import the final PDF/SVG.",
-      "defaultCaption": "Bayesian network for differential diagnosis of respiratory illness."
+      "displayName": "베이지안 네트워크",
+      "description": "베이지안 네트워크에 대한 방향성 비순환 그래프: 관찰된 증거 노드(직사각형)가 있는 잠재 원인 노드(타원).",
+      "scopeWarning": "논문의 예시적인 베이지안 네트워크에 적합합니다. 추론, 매개변수 학습 또는 밀집 그래프의 경우 pgmpy, BayesFusion, GeNIe 또는 BUGS를 사용하고 최종 PDF/SVG를 가져옵니다.",
+      "defaultCaption": "호흡기 질환 감별 진단을 위한 베이지안 네트워크"
     },
     "sem-path-diagrams": {
-      "displayName": "SEM / Path Diagrams",
-      "description": "Structural equation model path diagrams with latent variables and measurement models.",
-      "scopeWarning": "Suitable for thesis-level SEM diagrams. For estimation, fit statistics, and standardized reports, use lavaan/R, Mplus, or AMOS and import the final diagram/table as PDF.",
-      "defaultCaption": "Technology Acceptance Model (TAM): perceived usefulness and ease of use predicting behavioural intention."
+      "displayName": "SEM / 경로 다이어그램",
+      "description": "잠재 변수 및 측정 모델이 포함된 구조 방정식 모델 경로 다이어그램",
+      "scopeWarning": "논문 수준의 SEM 다이어그램에 적합합니다. 추정, 적합 통계 및 표준화된 보고서의 경우 lavaan/R, Mplus 또는 AMOS를 사용하고 최종 다이어그램/표를 PDF로 가져옵니다.",
+      "defaultCaption": "기술 수용 모델(TAM): 인지된 유용성과 사용 용이성은 행동 의도를 예측합니다."
     },
     "economic-causal": {
-      "displayName": "Economic Causal Diagrams",
-      "description": "Causal loop diagrams (CLD) with reinforcing and balancing feedback loops.",
-      "scopeWarning": "Suitable for simple causal loop models. For full system dynamics with stocks, flows, delays, or simulation, use Vensim, Stella, or AnyLogic and import the final PDF/SVG.",
-      "defaultCaption": "Wage--price spiral: reinforcing ($R$) and balancing ($B$) feedback loops."
+      "displayName": "경제적 인과도",
+      "description": "피드백 루프를 강화하고 균형을 맞추는 인과 루프 다이어그램(CLD)",
+      "scopeWarning": "간단한 인과관계 모델에 적합합니다. 재고, 흐름, 지연 또는 시뮬레이션을 포함하는 전체 시스템 역학을 위해서는 Vensim, Stella 또는 AnyLogic을 사용하고 최종 PDF/SVG를 가져오십시오.",
+      "defaultCaption": "임금-가격 나선형: 강화($R$) 및 균형 조정($B$) 피드백 루프."
     },
     "legal-procedural": {
-      "displayName": "Legal / Procedural Diagrams",
-      "description": "Flowcharts for legal and administrative procedures: judicial, regulatory, and compliance workflows.",
-      "scopeWarning": "Suitable for standard legal/administrative process flows in theses. Complex multi-party or multi-jurisdiction procedures are better maintained in BPMN/draw.io and imported as PDF.",
-      "defaultCaption": "Criminal procedure: from complaint to verdict."
+      "displayName": "법적/절차적 다이어그램",
+      "description": "법률 및 행정 절차 흐름도: 사법, 규제 및 규정 준수 워크플로",
+      "scopeWarning": "논문의 표준 법률/행정 프로세스 흐름에 적합합니다. 복잡한 다자간 또는 다중 관할권 절차는 BPMN/draw.io에서 더 잘 관리되고 PDF로 가져옵니다.",
+      "defaultCaption": "형사절차: 고소부터 판결까지"
     },
     "pedagogical-diagrams": {
-      "displayName": "Pedagogical Diagrams",
-      "description": "Bloom's taxonomy, learning outcome hierarchies, and curriculum maps for education theses.",
-      "scopeWarning": "Covers common pedagogical diagram patterns. For complex instructional-design models, keep the authoritative diagram in draw.io/Figma and import the final PDF/SVG.",
-      "defaultCaption": "Revised Bloom's taxonomy — six cognitive levels with representative verbs (Anderson \\& Krathwohl, 2001)."
+      "displayName": "교육적 다이어그램",
+      "description": "Bloom의 분류, 학습 결과 계층 및 교육 논문을 위한 커리큘럼 지도.",
+      "scopeWarning": "일반적인 교육학적 다이어그램 패턴을 다룹니다. 복잡한 교육 설계 모델의 경우 draw.io/Figma에 신뢰할 수 있는 다이어그램을 유지하고 최종 PDF/SVG를 가져옵니다.",
+      "defaultCaption": "Bloom의 분류법 개정 — 대표적인 동사를 포함한 6가지 인지 수준(Anderson \\& Krathwohl, 2001)."
     }
   }
 }

@@ -1,366 +1,366 @@
 {
   "plugins": {
     "phylogenetic-trees": {
-      "displayName": "Simple Phylogenetic Trees",
-      "description": "Build phylogenetic and taxonomic trees with labeled nodes and branch lengths.",
-      "scopeWarning": "Suitable for simplified phylogenies in theses. For complex phylogenetics with statistical support, use FigTree/iTOL and import as PDF.",
-      "defaultCaption": "Simplified phylogeny of selected vertebrate classes."
+      "displayName": "Прості філогенетичні дерева",
+      "description": "Створюйте філогенетичні та таксономічні дерева з підписаними вузлами й довжинами гілок.",
+      "scopeWarning": "Підходить для спрощених філогеній у дисертаціях. Для складної філогенетики зі статистичною підтримкою використовуйте FigTree/iTOL та імпортуйте як PDF.",
+      "defaultCaption": "Спрощена філогенія вибраних класів хребетних."
     },
     "dna-rna-sequences": {
-      "displayName": "DNA / RNA / Protein Sequences",
-      "description": "Display biological sequences with color-coded bases, codon highlighting, and alignment marks.",
-      "defaultCaption": "Start codon and reading frame of a short mRNA sequence."
+      "displayName": "DNA / RNA / Білкові послідовності",
+      "description": "Відображайте біологічні послідовності з кольоровим кодуванням основ, підсвічуванням кодонів і позначками вирівнювання.",
+      "defaultCaption": "Стартовий кодон і рамка зчитування короткої послідовності mRNA."
     },
     "biomedical-flow": {
-      "displayName": "Biomedical Flow Diagrams",
-      "description": "Biological and clinical process flows — signaling pathways, metabolic steps, treatment algorithms.",
-      "defaultCaption": "MAPK/ERK signalling cascade with feedback inhibition."
+      "displayName": "Біомедичні блок-схеми",
+      "description": "Потоки біологічних і клінічних процесів: сигнальні шляхи, метаболічні кроки, алгоритми лікування.",
+      "defaultCaption": "Сигнальний каскад MAPK/ERK з інгібуванням зворотним зв’язком."
     },
     "consort-flow": {
-      "displayName": "CONSORT / Clinical Trial Flow",
-      "description": "CONSORT-style flow diagrams for randomized clinical trials — enrollment, allocation, follow-up, analysis.",
-      "defaultCaption": "CONSORT 2010 flow diagram."
+      "displayName": "CONSORT / Потік клінічних випробувань",
+      "description": "Блок-схеми у стилі CONSORT для рандомізованих клінічних випробувань: включення, розподіл, спостереження, аналіз.",
+      "defaultCaption": "Блок-схема CONSORT 2010."
     },
     "biological-pathways": {
-      "displayName": "Schematic Biological Pathways",
-      "description": "Simplified metabolic and signaling pathway schemes for thesis figures.",
-      "scopeWarning": "Suitable for simplified pathway diagrams in theses and reports. Not a substitute for KEGG, Reactome, or professional pathway visualization tools.",
-      "defaultCaption": "Central carbon metabolism: glycolysis and TCA cycle entry."
+      "displayName": "Схематичні біологічні шляхи",
+      "description": "Спрощені схеми метаболічних і сигнальних шляхів для рисунків у дисертаціях.",
+      "scopeWarning": "Підходить для спрощених діаграм шляхів у дисертаціях і звітах. Не замінює KEGG, Reactome або професійні інструменти візуалізації шляхів.",
+      "defaultCaption": "Центральний вуглецевий метаболізм: гліколіз і вхід до циклу TCA."
     },
     "chemical-formulas": {
-      "displayName": "Chemical Formulas",
-      "description": "Write chemical formulas with charges, states, and subscripts. Uses mhchem — LaTeX native.",
-      "defaultCaption": "Selected inorganic formulas with oxidation states and phases."
+      "displayName": "Хімічні формули",
+      "description": "Write chemical formulas with charges, states, and subscripts. Використовує mhchem — рідний LaTeX.",
+      "defaultCaption": "Вибрані неорганічні формули зі ступенями окиснення та фазами."
     },
     "chemical-reactions": {
-      "displayName": "Chemical Reactions",
-      "description": "Build chemical reaction equations with arrows, conditions, and catalysts. Uses mhchem.",
-      "defaultCaption": "Acid--base neutralisation and combustion reactions."
+      "displayName": "Хімічні реакції",
+      "description": "Build chemical reaction equations with arrows, conditions, and catalysts. Використовує mhchem.",
+      "defaultCaption": "Кислотно-лужні реакції нейтралізації та горіння."
     },
     "reaction-equilibria": {
-      "displayName": "Reaction Equilibria & Conditions",
-      "description": "Chemical equilibrium reactions with conditions above/below the arrow. Uses mhchem.",
-      "defaultCaption": "Haber process and esterification equilibria."
+      "displayName": "Рівноваги та умови реакції",
+      "description": "Реакції хімічної рівноваги з умовами вище/під стрілкою. Використовує mhchem.",
+      "defaultCaption": "Процес Хабера та рівноваги етерифікації."
     },
     "chemical-structures": {
-      "displayName": "Chemical Structures",
-      "description": "Simple organic structures and ring systems using ChemFig. Benzene, functional groups, ring compounds.",
-      "scopeWarning": "Suitable for simple organic structures in theses. Complex multi-ring systems may need manual ChemFig adjustment. For full structural chemistry, use ChemDraw and import as PDF/SVG.",
-      "defaultCaption": "Aspirin (acetylsalicylic acid) structural formula."
+      "displayName": "Хімічні структури",
+      "description": "Прості органічні структури та кільцеві системи за допомогою ChemFig. Бензол, функціональні групи, кільцеві сполуки.",
+      "scopeWarning": "Підходить для простих органічних структур у дипломних роботах. Складні системи з кількома кільцями можуть потребувати ручного налаштування ChemFig. Для повної структурної хімії використовуйте ChemDraw та імпортуйте як PDF/SVG.",
+      "defaultCaption": "Структурна формула аспірину (ацетилсаліцилової кислоти)."
     },
     "basic-electrical-circuits": {
-      "displayName": "Basic Electrical Circuits",
-      "description": "Visual circuit builder: resistors, capacitors, inductors, sources, switches, diodes. CircuiTikZ native.",
-      "defaultCaption": "RC low-pass filter circuit with voltage divider."
+      "displayName": "Основні електричні схеми",
+      "description": "Візуальний конструктор схем: резистори, конденсатори, котушки індуктивності, джерела, перемикачі, діоди. CircuiTikZ рідний.",
+      "defaultCaption": "RC-фільтр нижніх частот із дільником напруги."
     },
     "block-diagrams-control": {
-      "displayName": "Block Diagrams / Control Systems",
-      "description": "Control system block diagrams with transfer functions, summing junctions, and feedback loops.",
-      "defaultCaption": "PID closed-loop control system block diagram."
+      "displayName": "Блок-схеми / Системи керування",
+      "description": "Блок-схеми системи керування з функціями передачі, підсумовуванням з’єднань і контурами зворотного зв’язку.",
+      "defaultCaption": "Блок-схема замкнутої системи керування PID."
     },
     "flowcharts": {
-      "displayName": "Flowcharts",
-      "description": "Academic and process flowcharts with decision diamonds, process boxes, and connector arrows.",
-      "defaultCaption": "Research methodology flowchart."
+      "displayName": "Блок-схеми",
+      "description": "Академічні блок-схеми та блок-схеми процесу з ромбами для прийняття рішень, блоками процесу та стрілками з’єднувачів.",
+      "defaultCaption": "Блок-схема методології дослідження."
     },
     "software-architecture": {
-      "displayName": "Software / System Architecture",
-      "description": "Component, layer, and system architecture diagrams.",
-      "scopeWarning": "Suitable for standard architecture overviews. For complex UML or deployment diagrams, use Draw.io and import as PDF.",
-      "defaultCaption": "Three-tier web application architecture."
+      "displayName": "Програмне забезпечення / архітектура системи",
+      "description": "Діаграми архітектури компонентів, рівнів і системи.",
+      "scopeWarning": "Підходить для оглядів стандартної архітектури. Для складних схем UML або розгортання використовуйте Draw.io та імпортуйте як PDF.",
+      "defaultCaption": "Трьохрівнева архітектура веб-додатків."
     },
     "venn-set-diagrams": {
-      "displayName": "Venn / Set Diagrams",
-      "description": "Create Venn diagrams and set-theory diagrams with labeled circles and intersections.",
-      "defaultCaption": "Three-set Venn diagram showing mixed-methods research design."
+      "displayName": "Венна / Набір діаграм",
+      "description": "Створіть діаграми Венна та діаграми теорії множин із позначеними колами та перетинами.",
+      "defaultCaption": "Трикомпонентна діаграма Венна, що демонструє план дослідження зі змішаними методами."
     },
     "plane-geometry": {
-      "displayName": "Plane Geometry",
-      "description": "Geometric shapes: triangles, polygons, circles, angles, perpendiculars, parallels.",
-      "defaultCaption": "Right triangle with altitude from hypotenuse — geometric mean relations."
+      "displayName": "Геометрія площини",
+      "description": "Геометричні фігури: трикутники, багатокутники, кола, кути, перпендикуляри, паралелі.",
+      "defaultCaption": "Прямокутний трикутник із висотою від гіпотенузи — середні геометричні співвідношення."
     },
     "analytic-geometry": {
-      "displayName": "Analytic Geometry",
-      "description": "Coordinate systems with curves, lines, tangents, and labeled points.",
-      "defaultCaption": "Parabola $f(x)=x^2-2x-3$ with roots, vertex, and tangent at $x=2$."
+      "displayName": "Аналітична геометрія",
+      "description": "Системи координат із кривими, лініями, дотичними та позначеними точками.",
+      "defaultCaption": "Парабола $f(x)=x^2-2x-3$ з коренями, вершиною та дотичною в $x=2$."
     },
     "probability-trees": {
-      "displayName": "Probability Trees",
-      "description": "Visual probability trees with branch probabilities and outcomes. forest native.",
-      "defaultCaption": "Probability tree — two coin flips."
+      "displayName": "Дерева ймовірностей",
+      "description": "Візуальні дерева ймовірностей із ймовірностями розгалужень і результатами. ліс рідний.",
+      "defaultCaption": "Дерево ймовірностей — два підкидання монети."
     },
     "lab-setups": {
-      "displayName": "Simple Lab Setups",
-      "description": "Basic laboratory apparatus diagrams: flasks, beakers, burettes, tube assemblies.",
-      "scopeWarning": "Covers standard lab apparatus. For specialized equipment diagrams, use dedicated illustration tools and import as PDF.",
-      "defaultCaption": "Simple laboratory setup."
+      "displayName": "Прості лабораторні налаштування",
+      "description": "Схеми основних лабораторних приладів: колби, мензурки, бюретки, вузли труб.",
+      "scopeWarning": "Охоплює стандартне лабораторне обладнання. Для схем спеціального обладнання використовуйте спеціальні інструменти ілюстрації та імпортуйте як PDF.",
+      "defaultCaption": "Просте лабораторне налаштування."
     },
     "syntax-trees": {
-      "displayName": "Syntax / Linguistic Trees",
-      "description": "Phrase-structure and dependency trees for linguistics. forest native.",
-      "defaultCaption": "Phrase-structure tree."
+      "displayName": "Синтаксис / Лінгвістичні дерева",
+      "description": "Структура фрази та дерева залежностей для лінгвістики. ліс рідний.",
+      "defaultCaption": "Дерево фразової структури."
     },
     "concept-maps": {
-      "displayName": "Concept Maps & Argument Diagrams",
-      "description": "Concept maps, mind maps, and argumentative structure diagrams.",
-      "defaultCaption": "Concept map."
+      "displayName": "Карти понять і діаграми аргументів",
+      "description": "Концептуальні карти, карти розуму та діаграми аргументованої структури.",
+      "defaultCaption": "Концептуальна карта."
     },
     "visual-equations": {
-      "displayName": "Visual Equations",
-      "description": "Build mathematical equations, expressions, and formulas with a visual editor. Outputs LaTeX native.",
-      "defaultCaption": "Quadratic formula and quadratic form."
+      "displayName": "Візуальні рівняння",
+      "description": "Створюйте математичні рівняння, вирази та формули за допомогою візуального редактора. Виводить нативний LaTeX.",
+      "defaultCaption": "Квадратична формула та квадратична форма."
     },
     "matrices-determinants": {
-      "displayName": "Matrices & Determinants",
-      "description": "Create matrices and determinants of any size with visual cell editing.",
-      "defaultCaption": "3D rotation matrix around the $z$-axis by angle $\\theta$."
+      "displayName": "Матриці та детермінанти",
+      "description": "Створюйте матриці та визначники будь-якого розміру за допомогою візуального редагування клітинок.",
+      "defaultCaption": "3D-матриця обертання навколо осі $z$-a на кут $\\theta$."
     },
     "systems-of-equations": {
-      "displayName": "Systems of Equations",
-      "description": "Build systems of linear or nonlinear equations with aligned formatting.",
-      "defaultCaption": "System of three linear equations (fluid flow balance)."
+      "displayName": "Системи рівнянь",
+      "description": "Створюйте системи лінійних або нелінійних рівнянь із вирівняним форматуванням.",
+      "defaultCaption": "Система трьох лінійних рівнянь (баланс потоку рідини)."
     },
     "piecewise-functions": {
-      "displayName": "Piecewise Functions",
-      "description": "Define functions by cases or parts with a visual row editor.",
-      "defaultCaption": "Heaviside step function and ReLU activation function."
+      "displayName": "Покроково функції",
+      "description": "Визначайте функції за регістрами або частинами за допомогою візуального редактора рядків.",
+      "defaultCaption": "Функція Heaviside Step і функція активації ReLU."
     },
     "vectors-fields": {
-      "displayName": "Vectors & Simple Fields",
-      "description": "Draw vectors, vector decomposition, and simple field representations.",
-      "defaultCaption": "Vector addition — parallelogram law: $\\vec{R} = \\vec{A} + \\vec{B}$."
+      "displayName": "Вектори та прості поля",
+      "description": "Рисуйте вектори, векторну декомпозицію та прості представлення полів.",
+      "defaultCaption": "Векторне додавання — закон паралелограма: $\\vec{R} = \\vec{A} + \\vec{B}$."
     },
     "free-body-diagrams": {
-      "displayName": "Free Body Diagrams",
-      "description": "Build free body diagrams with forces, mass blocks, and labeled arrows.",
-      "defaultCaption": "Free body diagram — block on surface with applied force at angle $\\alpha$."
+      "displayName": "Діаграми вільних тіл",
+      "description": "Побудуйте діаграми вільних тіл із силами, блоками мас і позначеними стрілками.",
+      "defaultCaption": "Діаграма вільного тіла — блок на поверхні із прикладеною силою під кутом $\\alpha$."
     },
     "inclined-plane-pulleys": {
-      "displayName": "Inclined Planes, Pulleys & Springs",
-      "description": "Mechanical systems: inclined planes, pulley setups, and spring-mass systems.",
-      "scopeWarning": "Generates accurate schematic diagrams. Highly complex multi-pulley systems may need manual TikZ adjustments.",
-      "defaultCaption": "Free-body diagram on inclined plane (angle $\\theta$)."
+      "displayName": "Похилі площини, шківи та пружини",
+      "description": "Механічні системи: похилі площини, установки шківів і системи пружинних мас.",
+      "scopeWarning": "Створює точні схематичні діаграми. Дуже складні системи з кількома шківами можуть потребувати ручного регулювання TikZ.",
+      "defaultCaption": "Діаграма вільного тіла на похилій площині (кут $\\theta$)."
     },
     "wave-oscillation": {
-      "displayName": "Wave & Oscillation Diagrams",
-      "description": "Sinusoidal waves, damped oscillations, and wave superposition. Covers SHM, transverse/longitudinal waves, and interference patterns.",
-      "defaultCaption": "Sinusoidal wave $y = A\\sin(\\omega t)$ with damped envelope."
+      "displayName": "Діаграми хвиль і коливань",
+      "description": "Синусоїдальні хвилі, затухаючі коливання та суперпозиція хвиль. Охоплює SHM, поперечні/поздовжні хвилі та інтерференційні картини.",
+      "defaultCaption": "Синусоїдальна хвиля $y = A\\sin(\\omega t)$ із затухаючою обвідною."
     },
     "geometric-optics": {
-      "displayName": "Geometric Optics",
-      "description": "Lenses, mirrors, ray diagrams, and refraction diagrams.",
-      "scopeWarning": "Suitable for standard ray diagrams. Complex optical systems with multiple elements may need manual adjustment.",
-      "defaultCaption": "Converging thin lens — three principal ray construction."
+      "displayName": "Геометрична оптика",
+      "description": "Лінзи, дзеркала, променеві діаграми та діаграми заломлення.",
+      "scopeWarning": "Підходить для стандартних променевих діаграм. Складні оптичні системи з кількома елементами можуть потребувати ручного налаштування.",
+      "defaultCaption": "Збиральна тонка лінза — конструкція трьох основних променів."
     },
     "gantt-charts": {
-      "displayName": "Gantt Charts",
-      "description": "Research and project Gantt charts with tasks, groups, milestones, and dependencies. pgfgantt native.",
-      "defaultCaption": "Doctoral research schedule by semester."
+      "displayName": "Діаграми Ганта",
+      "description": "Досліджуйте та проектуйте діаграми Ганта із завданнями, групами, віхами та залежностями. рідний pgfgantt.",
+      "defaultCaption": "Розклад докторських досліджень за семестром."
     },
     "timelines": {
-      "displayName": "Timelines",
-      "description": "Historical, research, and narrative timelines with labeled events.",
-      "defaultCaption": "Key milestones in molecular biology (1944--2003)."
+      "displayName": "Часові шкали",
+      "description": "Історичні, дослідницькі та розповідні хронології з позначеними подіями.",
+      "defaultCaption": "Ключові віхи в молекулярній біології (1944--2003)."
     },
     "function-plots-2d": {
-      "displayName": "2D Function Plots",
-      "description": "Plot mathematical functions with labeled axes, grid, and legend. PGFPlots native.",
-      "defaultCaption": "Trigonometric functions $\\sin x$ and $\\cos x$."
+      "displayName": "Двовимірні графіки функцій",
+      "description": "Побудуйте графік математичних функцій із позначеними осями, сіткою та легендою. Рідний PGFPlots.",
+      "defaultCaption": "Тригонометричні функції $\\sin x$ і $\\cos x$."
     },
     "parametric-polar-plots": {
-      "displayName": "Parametric & Polar Plots",
-      "description": "Parametric curves and polar function plots.",
-      "defaultCaption": "Lissajous curve $(\\cos 2t,\\, \\sin 3t)$."
+      "displayName": "Параметричні та полярні графіки",
+      "description": "Параметричні криві та графіки полярних функцій.",
+      "defaultCaption": "Крива Ліссажу $(\\cos 2t,\\, \\sin 3t)$."
     },
     "basic-statistics": {
-      "displayName": "Basic Statistics Charts",
-      "description": "Bar charts, histograms, and scatter plots from tabular data.",
-      "defaultCaption": "Comparative bar chart — measurement results by experimental group."
+      "displayName": "Базові статистичні діаграми",
+      "description": "Гістограми, гістограми та діаграми розсіювання з табличних даних.",
+      "defaultCaption": "Порівняльна стовпчаста діаграма — результати вимірювань по експериментальній групі."
     },
     "statistical-distributions": {
-      "displayName": "Statistical Distributions",
-      "description": "Normal, t, chi-squared, and other distributions with shaded regions.",
-      "defaultCaption": "Standard normal distribution with 95\\% confidence interval shaded."
+      "displayName": "Статистичні розподіли",
+      "description": "Нормальний, t, хі-квадрат та інші розподіли із затіненими областями.",
+      "defaultCaption": "Стандартний нормальний розподіл із 95\\% довірчим інтервалом заштриховано."
     },
     "kaplan-meier": {
-      "displayName": "Kaplan-Meier Survival Curves",
-      "description": "Step-function survival curves for clinical and epidemiological studies.",
-      "scopeWarning": "Enter pre-computed KM estimates (from R survfit, Stata stcurve, or SPSS) as data points forming a step function. Statistical tests must be done externally.",
-      "defaultCaption": "Kaplan--Meier overall survival curves for adjuvant vs.\\ standard chemotherapy ($n{=}200$; log-rank $p{=}0.008$)."
+      "displayName": "Криві виживання Каплана-Майєра",
+      "description": "Криві ступінчастої функції виживання для клінічних та епідеміологічних досліджень.",
+      "scopeWarning": "Попередньо обчислені Enter оцінки KM (з R survfit, Stata stcurve або SPSS) як точки даних, що утворюють ступінчасту функцію. Статистичні тести необхідно проводити зовні.",
+      "defaultCaption": "Криві загальної виживаності Каплана-Мейєра для ад’ювантної та стандартної хіміотерапії ($n{=}200$; логарифмічний ранг $p{=}0.008$)."
     },
     "network-graph": {
-      "displayName": "Network / Social Graphs",
-      "description": "Co-authorship, citation, or social influence networks with community clustering.",
-      "scopeWarning": "Suitable for illustrative networks (≤ 15 nodes). For large-scale visualization, use Gephi or NetworkX and import as PDF.",
-      "defaultCaption": "Co-authorship network — two research clusters connected by a bridge author."
+      "displayName": "Мережеві/соціальні графіки",
+      "description": "Співавторство, цитування або мережі соціального впливу з кластеризацією спільноти.",
+      "scopeWarning": "Підходить для ілюстративних мереж (≤ 15 вузлів). Для масштабної візуалізації використовуйте Gephi або NetworkX та імпортуйте як PDF.",
+      "defaultCaption": "Мережа співавторства — два дослідницькі кластери, з’єднані міжнародним автором."
     },
     "organic-chemistry-extended": {
-      "displayName": "Extended Organic Chemistry",
-      "description": "Organic structures with rings, functional groups, and stereocentres. ChemFig native.",
-      "scopeWarning": "Complex multi-ring or stereo structures may need manual ChemFig adjustment. For publication-quality structures, use ChemDraw and import as PDF.",
-      "defaultCaption": "Caffeine (1,3,7-trimethylxanthine) structural formula."
+      "displayName": "Розширена органічна хімія",
+      "description": "Органічні структури з кільцями, функціональними групами та стереоцентрами. Рідний ChemFig.",
+      "scopeWarning": "Складні багатокільцеві або стереоструктури можуть потребувати ручного налаштування ChemFig. Для структур якості публікації використовуйте ChemDraw та імпортуйте як PDF.",
+      "defaultCaption": "Структурна формула кофеїну (1,3,7-триметилксантину)."
     },
     "reaction-mechanisms": {
-      "displayName": "Basic Reaction Mechanisms",
-      "description": "Reaction mechanisms including C-C bond forming reactions, substitutions, and eliminations.",
-      "scopeWarning": "Suitable for standard mechanisms in theses. Complex multi-step mechanisms with curved arrows require manual ChemFig adjustment.",
-      "defaultCaption": "Aldol condensation: base-catalysed formation of a $\\beta$-hydroxy carbonyl compound."
+      "displayName": "Основні механізми реакції",
+      "description": "Механізми реакції, включаючи реакції утворення зв’язків C-C, заміщення та елімінацію.",
+      "scopeWarning": "Підходить для стандартних механізмів у тезах. Складні багатоступінчасті механізми з вигнутими стрілками потребують ручного регулювання ChemFig.",
+      "defaultCaption": "Альдольна конденсація: каталізоване основами утворення $\\beta$-гідроксикарбонільної сполуки."
     },
     "er-diagrams": {
-      "displayName": "ER Diagrams",
-      "description": "Entity-relationship diagrams for database design. TikZ native.",
-      "scopeWarning": "Suitable for standard ER diagrams in theses. Complex schemas with many entities benefit from Draw.io exported as PDF.",
-      "defaultCaption": "ER diagram for a university course-enrollment system."
+      "displayName": "Діаграми ER",
+      "description": "Діаграми сутності-зв’язку для проектування бази даних. Рідний TikZ.",
+      "scopeWarning": "Підходить для стандартних діаграм ER у тезах. Складні схеми з багатьма об’єктами виграють від Draw.io, експортованого як PDF.",
+      "defaultCaption": "Діаграма ER для системи реєстрації на курси університету."
     },
     "state-machines": {
-      "displayName": "State Machines",
-      "description": "Finite state machines and automata with states, transitions, and labels.",
-      "scopeWarning": "Suitable for DFA/NFA and reactive system diagrams in theses. For large automata, generate from Graphviz/PlantUML and import as PDF.",
-      "defaultCaption": "Traffic-light finite state machine (timer-driven)."
+      "displayName": "Конечні машини",
+      "description": "Скінцеві автомати та автомати зі станами, переходами та мітками.",
+      "scopeWarning": "Підходить для DFA/NFA і схем реактивної системи в дипломних роботах. Для великих автоматів генеруйте з Graphviz/PlantUML та імпортуйте як PDF.",
+      "defaultCaption": "Скінцевий автомат \"Світлофор\" (керований таймером)."
     },
     "markov-chains": {
-      "displayName": "Markov Chains",
-      "description": "Markov chain diagrams with states and transition probabilities.",
-      "scopeWarning": "Suitable for illustrative Markov chains in theses. For inference or simulation, use R/Python and import results as figures.",
-      "defaultCaption": "Weather Markov chain (Sunny / Cloudy / Rainy)."
+      "displayName": "Ланцюги Маркова",
+      "description": "Ланцюгові діаграми Маркова зі станами та ймовірностями переходів.",
+      "scopeWarning": "Підходить для ілюстративних ланцюгів Маркова в тезах. Для висновків або симуляції використовуйте R/Python та імпортуйте результати як малюнки.",
+      "defaultCaption": "Метеорологічний ланцюжок Маркова (Сонячно / Хмарно / Дощ)."
     },
     "bode-nyquist": {
-      "displayName": "Bode / Nyquist Diagrams",
-      "description": "Frequency response: Bode magnitude + phase, or Nyquist plot. Second-order transfer functions.",
-      "scopeWarning": "Enter your system transfer function as a pgfplots expression. Compute poles/zeros in MATLAB/Python first.",
-      "defaultCaption": "Bode plot of $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
+      "displayName": "Діаграми Боде/Найквіста",
+      "description": "Частотна характеристика: величина Боде + фаза або графік Найквіста. Передатні функції другого порядку.",
+      "scopeWarning": "Enter ваша функція передачі системи як вираз pgfplots. Спочатку обчисліть полюси/нулі в MATLAB/Python.",
+      "defaultCaption": "Діаграма Боде $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
     },
     "plots-3d": {
-      "displayName": "3D Scientific Plots",
-      "description": "3D surfaces, wireframes, and contour plots. PGFPlots native.",
-      "scopeWarning": "3D plots compile slowly for fine meshes. Keep samples ≤ 25×25 for reasonable compile time.",
-      "defaultCaption": "Standard bivariate normal density $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
+      "displayName": "3D наукові сюжети",
+      "description": "3D-поверхні, каркаси та контурні графіки. Рідний PGFPlots.",
+      "scopeWarning": "3D-графіки компонуються повільно для тонкої сітки. Зберігайте зразки ≤ 25×25 протягом прийнятного часу компіляції.",
+      "defaultCaption": "Стандартна двовимірна нормальна щільність $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
     },
     "phase-diagrams": {
-      "displayName": "Phase Diagrams",
-      "description": "Phase portraits, nullclines, and stability diagrams for dynamical systems.",
-      "scopeWarning": "Suitable for 2D phase planes and nullcline plots. Full vector-field arrows require manual pgfplots quiver adjustments.",
-      "defaultCaption": "Lotka--Volterra phase plane: prey $x$ vs predator $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
+      "displayName": "Фазові діаграми",
+      "description": "Фазові портрети, нуль-кліни та діаграми стабільності для динамічних систем.",
+      "scopeWarning": "Підходить для двовимірних фазових площин і графіків нульклінів. Стрілки з повним векторним полем потребують ручного налаштування сагайдака pgfplots.",
+      "defaultCaption": "Фазова площина Лотка-Вольтерра: нуль-кліни $x$ жертви та $y$ хижака ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
     },
     "heat-maps": {
-      "displayName": "Correlation Heat Maps",
-      "description": "Correlation matrices and heat maps using pgfplots matrix plot. Values between -1 and 1, color-mapped.",
-      "scopeWarning": "Suitable for small matrices (≤ 10×10). Compute correlations in R/Python first, then enter the values here.",
-      "defaultCaption": "Pearson correlation matrix for four psychometric variables."
+      "displayName": "Кореляційні теплові карти",
+      "description": "Кореляційні матриці та теплові карти з використанням pgfplots matrix plot. Значення від -1 до 1, кольорове відображення.",
+      "scopeWarning": "Підходить для малих матриць (≤ 10×10). Спочатку обчисліть кореляції в R/Python, а потім введіть значення тут.",
+      "defaultCaption": "Кореляційна матриця Пірсона для чотирьох психометричних змінних."
     },
     "supply-demand": {
-      "displayName": "Supply & Demand Curves",
-      "description": "Supply and demand with equilibrium, consumer/producer surplus, and optional curve shifts.",
-      "scopeWarning": "Suitable for illustrative partial-equilibrium analysis in theses. Non-linear elasticity curves may need manual pgfplots adjustment.",
-      "defaultCaption": "Supply and demand: original equilibrium $E_0$ and demand shift $D \\to D'$ after income increase."
+      "displayName": "Криві попиту та пропозиції",
+      "description": "Попит і пропозиція з рівновагою, надлишком споживача/виробника та необов’язковими зрушеннями кривої.",
+      "scopeWarning": "Підходить для ілюстративного аналізу часткової рівноваги в тезах. Для нелінійних кривих еластичності може знадобитися налаштування pgfplots вручну.",
+      "defaultCaption": "Попит і пропозиція: первісна рівновага $E_0$ і зміна попиту $D \\to D'$ після збільшення доходу."
     },
     "uml-class-diagrams": {
-      "displayName": "UML Class Diagrams",
-      "description": "UML class diagrams with inheritance, interfaces, composition, and association.",
-      "scopeWarning": "Generates simplified class boxes. For full UML compliance, use PlantUML or draw.io and import as PDF.",
-      "defaultCaption": "Repository pattern with Observer: \\\\ $<<$interface$>>$ classes, inheritance and composition."
+      "displayName": "Діаграми класів UML",
+      "description": "Діаграми класів UML із успадкуванням, інтерфейсами, композицією та асоціаціями.",
+      "scopeWarning": "Створює спрощені блоки класів. Для повної відповідності UML використовуйте PlantUML або draw.io та імпортуйте як PDF.",
+      "defaultCaption": "Шаблон сховища з Observer: класи $<<$interface$>>$, успадкування та композиція."
     },
     "time-series": {
-      "displayName": "Time Series Plots",
-      "description": "Time series with trend, confidence band, and annotated events. Ideal for longitudinal data in economics, ecology, and clinical research.",
-      "scopeWarning": "Enter data points manually. For large or complex time series (ARIMA, seasonal), generate in R/Python and import as PDF.",
-      "defaultCaption": "Monthly CO$_2$ concentration (ppm) with long-term trend and $\\pm$2\\,SD band."
+      "displayName": "Графіки часових рядів",
+      "description": "Часові ряди з трендом, діапазоном довіри та анотованими подіями. Ідеально підходить для довгострокових даних в економіці, екології та клінічних дослідженнях.",
+      "scopeWarning": "Точки даних Enter вручну. Для великих або складних часових рядів (ARIMA, сезонний) створіть у R/Python та імпортуйте як PDF.",
+      "defaultCaption": "Місячна концентрація CO$_2$ (ppm) із довгостроковою тенденцією та діапазоном $\\pm$2\\,SD."
     },
     "genealogy": {
-      "displayName": "Genealogy / Family Trees",
-      "description": "Family trees, dynasties, and clinical pedigrees with generations and relationship markers.",
-      "scopeWarning": "Suitable for simplified family trees. For clinical genetic pedigrees with standard symbols (ACMG/AMP), use dedicated pedigree software.",
-      "defaultCaption": "Family tree."
+      "displayName": "Генеалогія / сімейні дерева",
+      "description": "Родинні дерева, династії та клінічні родоводи з поколіннями та ознаками спорідненості.",
+      "scopeWarning": "Підходить для спрощених сімейних дерев. Для клінічних генетичних родоводів зі стандартними символами (ACMG/AMP) використовуйте спеціальне програмне забезпечення для родоводу.",
+      "defaultCaption": "Генеалогічне дерево."
     },
     "parallel-coordinates": {
-      "displayName": "Parallel Coordinates / Criteria Matrix",
-      "description": "Parallel coordinate plots for multi-criteria comparison of alternatives across normalised dimensions (0--10 scale).",
-      "scopeWarning": "Normalise all criteria to a common scale (e.g. 0--10) before entering values. For many alternatives (>6), use Python/R and import as PDF.",
-      "defaultCaption": "Parallel coordinate plot comparing five software solutions on four criteria."
+      "displayName": "Паралельні координати / матриця критеріїв",
+      "description": "Графіки паралельних координат для багатокритеріального порівняння альтернатив у нормалізованих розмірах (шкала 0--10).",
+      "scopeWarning": "Перш ніж вводити значення, нормалізуйте всі критерії до загальної шкали (наприклад, 0--10). Для багатьох альтернатив (>6) використовуйте Python/R та імпортуйте як PDF.",
+      "defaultCaption": "Графік паралельних координат, що порівнює п’ять програмних рішень за чотирма критеріями."
     },
     "energy-band-diagrams": {
-      "displayName": "Energy / Band Diagrams",
-      "description": "Energy level diagrams, band gaps, and semiconductor band diagrams for physics and materials science.",
-      "scopeWarning": "Energy values are illustrative. Replace with your material's actual band gap and Fermi level values from literature or calculation.",
-      "defaultCaption": "Semiconductor band diagram."
+      "displayName": "Діаграми енергії/зони",
+      "description": "Діаграми рівнів енергії, заборонених зон і зонних діаграм напівпровідників для фізики та матеріалознавства.",
+      "scopeWarning": "Значення енергії є ілюстративними. Замініть фактичні значення ширини забороненої зони вашого матеріалу та рівня Фермі з літератури чи розрахунків.",
+      "defaultCaption": "Зонна діаграма напівпровідника."
     },
     "decision-tree": {
-      "displayName": "Decision Trees",
-      "description": "Decision tree diagrams with conditions, branches, and leaf outcomes. Covers classification trees, CART, and clinical decision rules.",
-      "scopeWarning": "Enter tree structure manually. For automatic tree generation from data, use scikit-learn/rpart and export the tree, then reproduce here for publication.",
-      "defaultCaption": "Decision tree."
+      "displayName": "Дерево рішень",
+      "description": "Деревосхеми рішень із умовами, розгалуженнями та листовими результатами. Охоплює дерева класифікації, CART і правила клінічного прийняття рішень.",
+      "scopeWarning": "Деревоподібна структура Enter вручну. Для автоматичного створення дерева з даних використовуйте scikit-learn/rpart і експортуйте дерево, а потім відтворіть його для публікації.",
+      "defaultCaption": "Дерево рішень."
     },
     "roc-curve": {
-      "displayName": "ROC Curves",
-      "description": "Receiver operating characteristic curves for classifier evaluation. Supports multiple classifiers with AUC annotation.",
-      "scopeWarning": "Enter pre-computed TPR/FPR values from your statistical software (sklearn, R pROC). This plugin renders the curve; model training must be done externally.",
-      "defaultCaption": "ROC curves (AUC shown in legend)."
+      "displayName": "Криві ROC",
+      "description": "Криві робочих характеристик приймача для оцінки класифікатора. Підтримує кілька класифікаторів з анотацією AUC.",
+      "scopeWarning": "Enter попередньо обчислені значення TPR/FPR із вашого статистичного програмного забезпечення (sklearn, R pROC). Цей плагін рендерить криву; Тренування моделі має проводитися екстерном.",
+      "defaultCaption": "Криві ROC (AUC показано в легенді)."
     },
     "population-pyramid": {
-      "displayName": "Population Pyramid",
-      "description": "Age-sex population pyramid for demographic analysis. Shows male/female population distributions by age group.",
-      "scopeWarning": "Enter census data manually. For large datasets, generate the pyramid in R/Python and import as PDF, or use this plugin for illustrative sub-populations.",
-      "defaultCaption": "Population pyramid."
+      "displayName": "Піраміда населення",
+      "description": "Вікова піраміда населення для демографічного аналізу. Показує розподіл чоловічого/жіночого населення за віковими групами.",
+      "scopeWarning": "Дані перепису Enter вручну. Для великих наборів даних створіть піраміду в R/Python та імпортуйте як PDF або скористайтеся цим додатком для ілюстративних субпопуляцій.",
+      "defaultCaption": "Піраміда населення."
     },
     "error-bars": {
-      "displayName": "Error Bars & Confidence Intervals",
-      "description": "Line or bar plots with error bars for means ± SD/SE/CI. Essential for presenting experimental or survey results.",
-      "scopeWarning": "Enter means and error values (SD, SE, or 95% CI half-width) computed from your data. Raw data processing must be done externally.",
-      "defaultCaption": "Mean values with 95\\% confidence intervals."
+      "displayName": "Смуги похибок і довірчі інтервали",
+      "description": "Лінійні або стовпчасті графіки зі стовпчиками похибок для середніх значень ± SD/SE/CI. Необхідний для представлення результатів експерименту чи опитування.",
+      "scopeWarning": "Значення Enter і значення похибок (SD, SE або 95% напівширини CI), обчислені на основі ваших даних. Обробка необроблених даних повинна здійснюватися ззовні.",
+      "defaultCaption": "Середні значення з 95\\% довірчими інтервалами."
     },
     "causal-dag": {
-      "displayName": "Causal DAG / Path Diagrams",
-      "description": "Directed acyclic graphs (DAGs) for causal inference frameworks, structural equation models, and mediation analysis.",
-      "scopeWarning": "Suitable for causal diagrams up to ~10 variables. For complex SEM or large DAGs, use dagitty.net or lavaan and import the diagram.",
-      "defaultCaption": "Causal directed acyclic graph (DAG)."
+      "displayName": "Причинно-наслідкові DAG / діаграми шляху",
+      "description": "Спрямовані ациклічні графіки (DAG) для структур причинного висновку, моделей структурних рівнянь і аналізу посередництва.",
+      "scopeWarning": "Підходить для причинно-наслідкових діаграм до ~10 змінних. Для складних SEM або великих DAG використовуйте dagitty.net або lavaan та імпортуйте діаграму.",
+      "defaultCaption": "Каузальний спрямований ациклічний граф (DAG)."
     },
     "bar-charts": {
-      "displayName": "Bar Charts & Histograms",
-      "description": "Grouped and stacked bar charts, frequency histograms for descriptive statistics.",
-      "scopeWarning": "Enter values manually. For charts from large datasets, generate in R/Python and import as PDF.",
-      "defaultCaption": "Grouped bar chart — mean response by condition and time point ($\\pm$\\,SD)."
+      "displayName": "Гістограми та гістограми",
+      "description": "Згруповані та складені гістограми, частотні гістограми для описової статистики.",
+      "scopeWarning": "Значення Enter вручну. Для діаграм із великих наборів даних створіть у R/Python та імпортуйте як PDF.",
+      "defaultCaption": "Згрупована гістограма — середня відповідь за умовою та моментом часу ($\\pm$\\,SD)."
     },
     "box-violin-plots": {
-      "displayName": "Box Plots & Distribution Comparisons",
-      "description": "Box-and-whisker plots with medians, quartiles, and outliers for comparing distributions.",
-      "scopeWarning": "Enter pre-computed statistics (median, Q1, Q3) from R/Python. Each data point encodes: x=group position, y=median, error=IQR half-range.",
-      "defaultCaption": "Distribution of test scores across three teaching conditions (box: Q1--Q3; whiskers: 1.5$\\times$IQR)."
+      "displayName": "Коробкові діаграми та порівняння розподілу",
+      "description": "Графіки прямокутної форми з медіанами, квартилями та викидами для порівняння розподілів.",
+      "scopeWarning": "Попередньо обчислена статистика Enter (медіана, Q1, Q3) від R/Python. Кожна точка даних кодує: x=позиція групи, y=медіана, помилка=IQR напівдіапазон.",
+      "defaultCaption": "Розподіл тестових балів за трьома умовами навчання (вставка: Q1--Q3; вуса: 1,5$\\times$IQR)."
     },
     "scatter-regression": {
-      "displayName": "Scatter Plots with Regression",
-      "description": "Scatter plot with linear regression line and optional confidence band.",
-      "scopeWarning": "Compute slope, intercept, and CI band in your statistical software. Enter the values here for publication-quality rendering.",
-      "defaultCaption": "BMI vs systolic blood pressure: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
+      "displayName": "Графіки розсіювання з регресією",
+      "description": "Діаграма розсіювання з лінією лінійної регресії та необов’язковим діапазоном достовірності.",
+      "scopeWarning": "Обчисліть нахил, відрізок і діапазон CI у вашому статистичному програмному забезпеченні. Enter значення тут для відтворення якості публікації.",
+      "defaultCaption": "BMI проти систолічного артеріального тиску: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
     },
     "bayesian-networks": {
-      "displayName": "Bayesian Networks",
-      "description": "Directed acyclic graphs for Bayesian networks: latent cause nodes (ellipses) with observed evidence nodes (rectangles).",
-      "scopeWarning": "Suitable for illustrative Bayesian networks in theses. For inference, parameter learning, or dense graphs, use pgmpy, BayesFusion, GeNIe, or BUGS and import the final PDF/SVG.",
-      "defaultCaption": "Bayesian network for differential diagnosis of respiratory illness."
+      "displayName": "Байєсовські мережі",
+      "description": "Спрямовані ациклічні графи для байєсівських мереж: вузли прихованої причини (еліпси) із спостережуваними вузлами доказів (прямокутники).",
+      "scopeWarning": "Підходить для ілюстративних байєсівських мереж у тезах. Для висновків, вивчення параметрів або щільних графіків використовуйте pgmpy, BayesFusion, GeNIe або BUGS та імпортуйте остаточний PDF/SVG.",
+      "defaultCaption": "Байєсова мережа для диференціальної діагностики респіраторних захворювань."
     },
     "sem-path-diagrams": {
-      "displayName": "SEM / Path Diagrams",
-      "description": "Structural equation model path diagrams with latent variables and measurement models.",
-      "scopeWarning": "Suitable for thesis-level SEM diagrams. For estimation, fit statistics, and standardized reports, use lavaan/R, Mplus, or AMOS and import the final diagram/table as PDF.",
-      "defaultCaption": "Technology Acceptance Model (TAM): perceived usefulness and ease of use predicting behavioural intention."
+      "displayName": "SEM / діаграми шляху",
+      "description": "Діаграми шляхів моделі структурного рівняння з латентними змінними та моделями вимірювання.",
+      "scopeWarning": "Підходить для діаграм SEM дипломного рівня. Для оцінки, відповідної статистики та стандартизованих звітів використовуйте lavaan/R, Mplus або AMOS та імпортуйте остаточну діаграму/таблицю як PDF.",
+      "defaultCaption": "Модель прийнятності технології (TAM): передбачувана корисність і легкість використання, що передбачають поведінкові наміри."
     },
     "economic-causal": {
-      "displayName": "Economic Causal Diagrams",
-      "description": "Causal loop diagrams (CLD) with reinforcing and balancing feedback loops.",
-      "scopeWarning": "Suitable for simple causal loop models. For full system dynamics with stocks, flows, delays, or simulation, use Vensim, Stella, or AnyLogic and import the final PDF/SVG.",
-      "defaultCaption": "Wage--price spiral: reinforcing ($R$) and balancing ($B$) feedback loops."
+      "displayName": "Діаграми економічних причин",
+      "description": "Діаграми причинно-наслідкових зв’язків (CLD) із підсилювальними та балансуючими петлями зворотного зв’язку.",
+      "scopeWarning": "Підходить для простих моделей причинного циклу. Для повної динаміки системи із запасами, потоками, затримками або симуляцією використовуйте Vensim, Stella або AnyLogic та імпортуйте остаточний PDF/SVG.",
+      "defaultCaption": "Спіраль «заробітна плата – ціна»: підсилення ($R$) і балансування ($B$) циклів зворотного зв’язку."
     },
     "legal-procedural": {
-      "displayName": "Legal / Procedural Diagrams",
-      "description": "Flowcharts for legal and administrative procedures: judicial, regulatory, and compliance workflows.",
-      "scopeWarning": "Suitable for standard legal/administrative process flows in theses. Complex multi-party or multi-jurisdiction procedures are better maintained in BPMN/draw.io and imported as PDF.",
-      "defaultCaption": "Criminal procedure: from complaint to verdict."
+      "displayName": "Юридичні/процедурні схеми",
+      "description": "Блок-схеми юридичних і адміністративних процедур: судові, нормативні та робочі процеси з дотримання вимог.",
+      "scopeWarning": "Підходить для стандартних юридичних/адміністративних процесів у дипломних роботах. Складні багатосторонні або багатоюрисдикційні процедури краще підтримувати в BPMN/draw.io та імпортувати як PDF.",
+      "defaultCaption": "Кримінальний процес: від скарги до вироку."
     },
     "pedagogical-diagrams": {
-      "displayName": "Pedagogical Diagrams",
-      "description": "Bloom's taxonomy, learning outcome hierarchies, and curriculum maps for education theses.",
-      "scopeWarning": "Covers common pedagogical diagram patterns. For complex instructional-design models, keep the authoritative diagram in draw.io/Figma and import the final PDF/SVG.",
-      "defaultCaption": "Revised Bloom's taxonomy — six cognitive levels with representative verbs (Anderson \\& Krathwohl, 2001)."
+      "displayName": "Педагогічні діаграми",
+      "description": "Таксономія Блума, ієрархії результатів навчання та карти навчальних програм для дипломних робіт.",
+      "scopeWarning": "Охоплює типові шаблони педагогічної діаграми. Для складних інструкційно-проектних моделей збережіть офіційну діаграму в draw.io/Figma та імпортуйте остаточний PDF/SVG.",
+      "defaultCaption": "Переглянута таксономія Блума — шість когнітивних рівнів із репрезентативними дієсловами (Anderson & Krathwohl, 2001)."
     }
   }
 }

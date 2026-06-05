@@ -1,366 +1,366 @@
 {
   "plugins": {
     "phylogenetic-trees": {
-      "displayName": "Simple Phylogenetic Trees",
-      "description": "Build phylogenetic and taxonomic trees with labeled nodes and branch lengths.",
-      "scopeWarning": "Suitable for simplified phylogenies in theses. For complex phylogenetics with statistical support, use FigTree/iTOL and import as PDF.",
-      "defaultCaption": "Simplified phylogeny of selected vertebrate classes."
+      "displayName": "Cây phát sinh loài đơn giản",
+      "description": "Xây dựng cây phát sinh loài và phân loại với các nút và độ dài nhánh được gắn nhãn.",
+      "scopeWarning": "Thích hợp cho việc phát sinh chủng loại đơn giản trong luận án. Đối với phương pháp phát sinh chủng loại phức tạp có hỗ trợ thống kê, hãy sử dụng FigTree/iTOL và nhập dưới dạng PDF.",
+      "defaultCaption": "Phát sinh loài đơn giản của các lớp động vật có xương sống được chọn."
     },
     "dna-rna-sequences": {
-      "displayName": "DNA / RNA / Protein Sequences",
-      "description": "Display biological sequences with color-coded bases, codon highlighting, and alignment marks.",
-      "defaultCaption": "Start codon and reading frame of a short mRNA sequence."
+      "displayName": "DNA / RNA / Trình tự protein",
+      "description": "Hiển thị trình tự sinh học với các base được mã hóa màu, làm nổi bật codon và dấu căn chỉnh.",
+      "defaultCaption": "Codon khởi đầu và khung đọc của chuỗi mRNA ngắn."
     },
     "biomedical-flow": {
-      "displayName": "Biomedical Flow Diagrams",
-      "description": "Biological and clinical process flows — signaling pathways, metabolic steps, treatment algorithms.",
-      "defaultCaption": "MAPK/ERK signalling cascade with feedback inhibition."
+      "displayName": "Sơ đồ dòng chảy y sinh",
+      "description": "Dòng quy trình sinh học và lâm sàng — con đường truyền tín hiệu, các bước trao đổi chất, thuật toán điều trị.",
+      "defaultCaption": "Tầng tín hiệu MAPK/ERK có chức năng ức chế phản hồi."
     },
     "consort-flow": {
-      "displayName": "CONSORT / Clinical Trial Flow",
-      "description": "CONSORT-style flow diagrams for randomized clinical trials — enrollment, allocation, follow-up, analysis.",
-      "defaultCaption": "CONSORT 2010 flow diagram."
+      "displayName": "CONSORT / Luồng thử nghiệm lâm sàng",
+      "description": "Sơ đồ kiểu CONSORT- dành cho các thử nghiệm lâm sàng ngẫu nhiên — tuyển sinh, phân bổ, theo dõi, phân tích.",
+      "defaultCaption": "Sơ đồ luồng CONSORT 2010."
     },
     "biological-pathways": {
-      "displayName": "Schematic Biological Pathways",
-      "description": "Simplified metabolic and signaling pathway schemes for thesis figures.",
-      "scopeWarning": "Suitable for simplified pathway diagrams in theses and reports. Not a substitute for KEGG, Reactome, or professional pathway visualization tools.",
-      "defaultCaption": "Central carbon metabolism: glycolysis and TCA cycle entry."
+      "displayName": "Sơ đồ các con đường sinh học",
+      "description": "Các sơ đồ chuyển hóa và truyền tín hiệu được đơn giản hóa cho các số liệu luận án.",
+      "scopeWarning": "Thích hợp với sơ đồ lộ trình đơn giản hóa trong luận văn, báo cáo. Không thay thế cho KEGG, Reactome hoặc các công cụ trực quan hóa lộ trình chuyên nghiệp.",
+      "defaultCaption": "Chuyển hóa carbon trung tâm: quá trình đường phân và đầu vào chu trình TCA."
     },
     "chemical-formulas": {
-      "displayName": "Chemical Formulas",
-      "description": "Write chemical formulas with charges, states, and subscripts. Uses mhchem — LaTeX native.",
-      "defaultCaption": "Selected inorganic formulas with oxidation states and phases."
+      "displayName": "Công thức hóa học",
+      "description": "Viết công thức hóa học với điện tích, trạng thái và chỉ số. Sử dụng mhchem — LaTeX gốc.",
+      "defaultCaption": "Các công thức vô cơ được chọn lọc có trạng thái và pha oxy hóa."
     },
     "chemical-reactions": {
-      "displayName": "Chemical Reactions",
-      "description": "Build chemical reaction equations with arrows, conditions, and catalysts. Uses mhchem.",
-      "defaultCaption": "Acid--base neutralisation and combustion reactions."
+      "displayName": "Phản ứng hóa học",
+      "description": "Xây dựng phương trình phản ứng hóa học bằng mũi tên, điều kiện và chất xúc tác. Sử dụng mhchem.",
+      "defaultCaption": "Phản ứng trung hòa axit-bazơ và phản ứng đốt cháy."
     },
     "reaction-equilibria": {
-      "displayName": "Reaction Equilibria & Conditions",
-      "description": "Chemical equilibrium reactions with conditions above/below the arrow. Uses mhchem.",
-      "defaultCaption": "Haber process and esterification equilibria."
+      "displayName": "Cân bằng và điều kiện phản ứng",
+      "description": "Các phản ứng cân bằng hóa học với điều kiện trên/dưới mũi tên. Sử dụng mhchem.",
+      "defaultCaption": "Cân bằng quá trình Haber và quá trình este hóa."
     },
     "chemical-structures": {
-      "displayName": "Chemical Structures",
-      "description": "Simple organic structures and ring systems using ChemFig. Benzene, functional groups, ring compounds.",
-      "scopeWarning": "Suitable for simple organic structures in theses. Complex multi-ring systems may need manual ChemFig adjustment. For full structural chemistry, use ChemDraw and import as PDF/SVG.",
-      "defaultCaption": "Aspirin (acetylsalicylic acid) structural formula."
+      "displayName": "Cấu trúc hóa học",
+      "description": "Cấu trúc hữu cơ đơn giản và hệ thống vòng sử dụng ChemFig. Benzen, nhóm chức, hợp chất vòng.",
+      "scopeWarning": "Thích hợp với các cấu trúc hữu cơ đơn giản trong luận án. Hệ thống nhiều vòng phức tạp có thể cần điều chỉnh ChemFig thủ công. Để có cấu trúc hóa học đầy đủ, hãy sử dụng ChemDraw và nhập dưới dạng PDF/SVG.",
+      "defaultCaption": "Công thức cấu trúc Aspirin (axit acetylsalicylic)."
     },
     "basic-electrical-circuits": {
-      "displayName": "Basic Electrical Circuits",
-      "description": "Visual circuit builder: resistors, capacitors, inductors, sources, switches, diodes. CircuiTikZ native.",
-      "defaultCaption": "RC low-pass filter circuit with voltage divider."
+      "displayName": "Mạch điện cơ bản",
+      "description": "Trình tạo mạch trực quan: điện trở, tụ điện, cuộn cảm, nguồn, công tắc, điốt. CircuiTikZ bản địa.",
+      "defaultCaption": "Mạch lọc thông thấp RC có bộ chia điện áp."
     },
     "block-diagrams-control": {
-      "displayName": "Block Diagrams / Control Systems",
-      "description": "Control system block diagrams with transfer functions, summing junctions, and feedback loops.",
-      "defaultCaption": "PID closed-loop control system block diagram."
+      "displayName": "Sơ đồ khối / Hệ thống điều khiển",
+      "description": "Sơ đồ khối hệ thống điều khiển với các hàm truyền, mối nối tổng và vòng phản hồi.",
+      "defaultCaption": "Sơ đồ khối hệ thống điều khiển vòng kín PID."
     },
     "flowcharts": {
-      "displayName": "Flowcharts",
-      "description": "Academic and process flowcharts with decision diamonds, process boxes, and connector arrows.",
-      "defaultCaption": "Research methodology flowchart."
+      "displayName": "Lưu đồ",
+      "description": "Sơ đồ quy trình và học thuật có hình kim cương quyết định, hộp quy trình và mũi tên kết nối.",
+      "defaultCaption": "Sơ đồ phương pháp nghiên cứu."
     },
     "software-architecture": {
-      "displayName": "Software / System Architecture",
-      "description": "Component, layer, and system architecture diagrams.",
-      "scopeWarning": "Suitable for standard architecture overviews. For complex UML or deployment diagrams, use Draw.io and import as PDF.",
-      "defaultCaption": "Three-tier web application architecture."
+      "displayName": "Kiến trúc phần mềm / hệ thống",
+      "description": "Sơ đồ kiến trúc thành phần, lớp và hệ thống.",
+      "scopeWarning": "Thích hợp cho tổng quan về kiến trúc tiêu chuẩn. Đối với UML hoặc sơ đồ triển khai phức tạp, hãy sử dụng Draw.io và nhập dưới dạng PDF.",
+      "defaultCaption": "Kiến trúc ứng dụng web ba tầng."
     },
     "venn-set-diagrams": {
-      "displayName": "Venn / Set Diagrams",
-      "description": "Create Venn diagrams and set-theory diagrams with labeled circles and intersections.",
-      "defaultCaption": "Three-set Venn diagram showing mixed-methods research design."
+      "displayName": "Venn / Đặt sơ đồ",
+      "description": "Tạo sơ đồ Venn và sơ đồ lý thuyết tập hợp với các vòng tròn và giao điểm được gắn nhãn.",
+      "defaultCaption": "Biểu đồ Venn ba bộ thể hiện thiết kế nghiên cứu theo các phương pháp hỗn hợp."
     },
     "plane-geometry": {
-      "displayName": "Plane Geometry",
-      "description": "Geometric shapes: triangles, polygons, circles, angles, perpendiculars, parallels.",
-      "defaultCaption": "Right triangle with altitude from hypotenuse — geometric mean relations."
+      "displayName": "Hình học phẳng",
+      "description": "Các hình dạng hình học: hình tam giác, đa giác, hình tròn, góc, đường vuông góc, hình song song.",
+      "defaultCaption": "Tam giác vuông có đường cao tính từ cạnh huyền — quan hệ trung bình hình học."
     },
     "analytic-geometry": {
-      "displayName": "Analytic Geometry",
-      "description": "Coordinate systems with curves, lines, tangents, and labeled points.",
-      "defaultCaption": "Parabola $f(x)=x^2-2x-3$ with roots, vertex, and tangent at $x=2$."
+      "displayName": "Hình học giải tích",
+      "description": "Hệ tọa độ với các đường cong, đường thẳng, tiếp tuyến và các điểm được gắn nhãn.",
+      "defaultCaption": "Parabol $f(x)=x^2-2x-3$ có gốc, đỉnh và tiếp tuyến tại $x=2$."
     },
     "probability-trees": {
-      "displayName": "Probability Trees",
-      "description": "Visual probability trees with branch probabilities and outcomes. forest native.",
-      "defaultCaption": "Probability tree — two coin flips."
+      "displayName": "Cây xác suất",
+      "description": "Cây xác suất trực quan với xác suất và kết quả của nhánh. rừng bản địa.",
+      "defaultCaption": "Cây xác suất — tung hai đồng xu."
     },
     "lab-setups": {
-      "displayName": "Simple Lab Setups",
-      "description": "Basic laboratory apparatus diagrams: flasks, beakers, burettes, tube assemblies.",
-      "scopeWarning": "Covers standard lab apparatus. For specialized equipment diagrams, use dedicated illustration tools and import as PDF.",
-      "defaultCaption": "Simple laboratory setup."
+      "displayName": "Thiết lập phòng thí nghiệm đơn giản",
+      "description": "Sơ đồ thiết bị thí nghiệm cơ bản: bình cầu, cốc có mỏ, buret, cụm ống.",
+      "scopeWarning": "Bao gồm các thiết bị phòng thí nghiệm tiêu chuẩn. Đối với sơ đồ thiết bị chuyên dụng sử dụng công cụ minh họa chuyên dụng và nhập dưới dạng PDF.",
+      "defaultCaption": "Thiết lập phòng thí nghiệm đơn giản."
     },
     "syntax-trees": {
-      "displayName": "Syntax / Linguistic Trees",
-      "description": "Phrase-structure and dependency trees for linguistics. forest native.",
-      "defaultCaption": "Phrase-structure tree."
+      "displayName": "Cú pháp/Cây ngôn ngữ",
+      "description": "Cấu trúc cụm từ và cây phụ thuộc cho ngôn ngữ học. rừng nguyên sinh.",
+      "defaultCaption": "Cây cấu trúc cụm từ."
     },
     "concept-maps": {
-      "displayName": "Concept Maps & Argument Diagrams",
-      "description": "Concept maps, mind maps, and argumentative structure diagrams.",
-      "defaultCaption": "Concept map."
+      "displayName": "Bản đồ khái niệm & sơ đồ lập luận",
+      "description": "Bản đồ khái niệm, bản đồ tư duy và sơ đồ cấu trúc lập luận.",
+      "defaultCaption": "Bản đồ khái niệm."
     },
     "visual-equations": {
-      "displayName": "Visual Equations",
-      "description": "Build mathematical equations, expressions, and formulas with a visual editor. Outputs LaTeX native.",
-      "defaultCaption": "Quadratic formula and quadratic form."
+      "displayName": "Phương trình trực quan",
+      "description": "Xây dựng các phương trình, biểu thức và công thức toán học bằng trình chỉnh sửa trực quan. Xuất ra bản gốc LaTeX.",
+      "defaultCaption": "Công thức bậc hai và dạng bậc hai."
     },
     "matrices-determinants": {
-      "displayName": "Matrices & Determinants",
-      "description": "Create matrices and determinants of any size with visual cell editing.",
-      "defaultCaption": "3D rotation matrix around the $z$-axis by angle $\\theta$."
+      "displayName": "Ma trận & yếu tố quyết định",
+      "description": "Tạo ma trận và định thức ở mọi kích thước bằng tính năng chỉnh sửa ô trực quan.",
+      "defaultCaption": "Ma trận xoay 3D quanh $z$-axis theo góc $\\theta$."
     },
     "systems-of-equations": {
-      "displayName": "Systems of Equations",
-      "description": "Build systems of linear or nonlinear equations with aligned formatting.",
-      "defaultCaption": "System of three linear equations (fluid flow balance)."
+      "displayName": "Hệ phương trình",
+      "description": "Xây dựng hệ phương trình tuyến tính hoặc phi tuyến với định dạng căn chỉnh.",
+      "defaultCaption": "Hệ ba phương trình tuyến tính (cân bằng dòng chất lỏng)."
     },
     "piecewise-functions": {
-      "displayName": "Piecewise Functions",
-      "description": "Define functions by cases or parts with a visual row editor.",
-      "defaultCaption": "Heaviside step function and ReLU activation function."
+      "displayName": "Chức năng từng phần",
+      "description": "Xác định chức năng theo trường hợp hoặc phần bằng trình chỉnh sửa hàng trực quan.",
+      "defaultCaption": "Hàm bước Heaviside và hàm kích hoạt ReLU."
     },
     "vectors-fields": {
-      "displayName": "Vectors & Simple Fields",
-      "description": "Draw vectors, vector decomposition, and simple field representations.",
-      "defaultCaption": "Vector addition — parallelogram law: $\\vec{R} = \\vec{A} + \\vec{B}$."
+      "displayName": "Vectơ & Trường đơn giản",
+      "description": "Vẽ vectơ, phân tách vectơ và biểu diễn trường đơn giản.",
+      "defaultCaption": "Cộng vectơ - định luật hình bình hành: $\\vec{R} = \\vec{A} + \\vec{B}$."
     },
     "free-body-diagrams": {
-      "displayName": "Free Body Diagrams",
-      "description": "Build free body diagrams with forces, mass blocks, and labeled arrows.",
-      "defaultCaption": "Free body diagram — block on surface with applied force at angle $\\alpha$."
+      "displayName": "Sơ đồ cơ thể miễn phí",
+      "description": "Xây dựng sơ đồ vật thể tự do bằng lực, khối khối và mũi tên được dán nhãn.",
+      "defaultCaption": "Sơ đồ vật tự do — khối trên bề mặt với lực tác dụng ở góc $\\alpha$."
     },
     "inclined-plane-pulleys": {
-      "displayName": "Inclined Planes, Pulleys & Springs",
-      "description": "Mechanical systems: inclined planes, pulley setups, and spring-mass systems.",
-      "scopeWarning": "Generates accurate schematic diagrams. Highly complex multi-pulley systems may need manual TikZ adjustments.",
-      "defaultCaption": "Free-body diagram on inclined plane (angle $\\theta$)."
+      "displayName": "Mặt phẳng nghiêng, ròng rọc & lò xo",
+      "description": "Hệ thống cơ khí: mặt phẳng nghiêng, thiết lập ròng rọc và hệ thống lò xo.",
+      "scopeWarning": "Tạo sơ đồ nguyên lý chính xác. Hệ thống nhiều ròng rọc có độ phức tạp cao có thể cần điều chỉnh TikZ thủ công.",
+      "defaultCaption": "Sơ đồ vật tự do trên mặt phẳng nghiêng (góc $\\theta$)."
     },
     "wave-oscillation": {
-      "displayName": "Wave & Oscillation Diagrams",
-      "description": "Sinusoidal waves, damped oscillations, and wave superposition. Covers SHM, transverse/longitudinal waves, and interference patterns.",
-      "defaultCaption": "Sinusoidal wave $y = A\\sin(\\omega t)$ with damped envelope."
+      "displayName": "Biểu đồ sóng và dao động",
+      "description": "Sóng hình sin, dao động tắt dần và sự chồng chất sóng. Bao gồm SHM, sóng ngang/dọc và các mẫu giao thoa.",
+      "defaultCaption": "Sóng hình sin $y = A\\sin(\\omega t)$ có đường bao tắt dần."
     },
     "geometric-optics": {
-      "displayName": "Geometric Optics",
-      "description": "Lenses, mirrors, ray diagrams, and refraction diagrams.",
-      "scopeWarning": "Suitable for standard ray diagrams. Complex optical systems with multiple elements may need manual adjustment.",
-      "defaultCaption": "Converging thin lens — three principal ray construction."
+      "displayName": "Quang học hình học",
+      "description": "Thấu kính, gương, sơ đồ tia sáng và sơ đồ khúc xạ.",
+      "scopeWarning": "Thích hợp với sơ đồ tia tiêu chuẩn. Hệ thống quang học phức tạp có nhiều thành phần có thể cần điều chỉnh thủ công.",
+      "defaultCaption": "Thấu kính mỏng hội tụ — cấu trúc ba tia chính."
     },
     "gantt-charts": {
-      "displayName": "Gantt Charts",
-      "description": "Research and project Gantt charts with tasks, groups, milestones, and dependencies. pgfgantt native.",
-      "defaultCaption": "Doctoral research schedule by semester."
+      "displayName": "Biểu đồ Gantt",
+      "description": "Nghiên cứu và lập biểu đồ Gantt với các nhiệm vụ, nhóm, cột mốc và sự phụ thuộc. pgfgantt bản địa.",
+      "defaultCaption": "Lịch nghiên cứu tiến sĩ theo học kỳ."
     },
     "timelines": {
-      "displayName": "Timelines",
-      "description": "Historical, research, and narrative timelines with labeled events.",
-      "defaultCaption": "Key milestones in molecular biology (1944--2003)."
+      "displayName": "Dòng thời gian",
+      "description": "Dòng thời gian lịch sử, nghiên cứu và tường thuật kèm theo các sự kiện được gắn nhãn.",
+      "defaultCaption": "Các cột mốc quan trọng trong sinh học phân tử (1944--2003)."
     },
     "function-plots-2d": {
-      "displayName": "2D Function Plots",
-      "description": "Plot mathematical functions with labeled axes, grid, and legend. PGFPlots native.",
-      "defaultCaption": "Trigonometric functions $\\sin x$ and $\\cos x$."
+      "displayName": "Sơ đồ chức năng 2D",
+      "description": "Vẽ biểu đồ các hàm toán học với các trục, lưới và chú giải được gắn nhãn. PGFPlots gốc.",
+      "defaultCaption": "Hàm lượng giác $\\sin x$ và $\\cos x$."
     },
     "parametric-polar-plots": {
-      "displayName": "Parametric & Polar Plots",
-      "description": "Parametric curves and polar function plots.",
-      "defaultCaption": "Lissajous curve $(\\cos 2t,\\, \\sin 3t)$."
+      "displayName": "Biểu đồ tham số và cực",
+      "description": "Đường cong tham số và đồ thị hàm cực.",
+      "defaultCaption": "Đường cong Lissajous $(\\cos 2t,\\, \\sin 3t)$."
     },
     "basic-statistics": {
-      "displayName": "Basic Statistics Charts",
-      "description": "Bar charts, histograms, and scatter plots from tabular data.",
-      "defaultCaption": "Comparative bar chart — measurement results by experimental group."
+      "displayName": "Biểu đồ thống kê cơ bản",
+      "description": "Biểu đồ thanh, biểu đồ và biểu đồ phân tán từ dữ liệu dạng bảng.",
+      "defaultCaption": "Biểu đồ thanh so sánh — kết quả đo theo nhóm thử nghiệm."
     },
     "statistical-distributions": {
-      "displayName": "Statistical Distributions",
-      "description": "Normal, t, chi-squared, and other distributions with shaded regions.",
-      "defaultCaption": "Standard normal distribution with 95\\% confidence interval shaded."
+      "displayName": "Phân phối thống kê",
+      "description": "Phân phối bình thường, t, chi bình phương và các phân phối khác với các vùng được tô bóng.",
+      "defaultCaption": "Phân phối chuẩn chuẩn với khoảng tin cậy 95\\% được tô bóng."
     },
     "kaplan-meier": {
-      "displayName": "Kaplan-Meier Survival Curves",
-      "description": "Step-function survival curves for clinical and epidemiological studies.",
-      "scopeWarning": "Enter pre-computed KM estimates (from R survfit, Stata stcurve, or SPSS) as data points forming a step function. Statistical tests must be done externally.",
-      "defaultCaption": "Kaplan--Meier overall survival curves for adjuvant vs.\\ standard chemotherapy ($n{=}200$; log-rank $p{=}0.008$)."
+      "displayName": "Đường cong sinh tồn Kaplan-Meier",
+      "description": "Đường cong sinh tồn theo chức năng từng bước cho nghiên cứu lâm sàng và dịch tễ học.",
+      "scopeWarning": "Enter ước tính KM được tính toán trước (từ R survfit, Stata stcurve hoặc SPSS) dưới dạng các điểm dữ liệu tạo thành hàm bước. Kiểm tra thống kê phải được thực hiện bên ngoài.",
+      "defaultCaption": "Kaplan--Meier đường cong sống sót tổng thể của hóa trị liệu bổ trợ so với\\ hóa trị tiêu chuẩn ($n{=}200$; $p{=}0.008$ thứ hạng log)."
     },
     "network-graph": {
-      "displayName": "Network / Social Graphs",
-      "description": "Co-authorship, citation, or social influence networks with community clustering.",
-      "scopeWarning": "Suitable for illustrative networks (≤ 15 nodes). For large-scale visualization, use Gephi or NetworkX and import as PDF.",
-      "defaultCaption": "Co-authorship network — two research clusters connected by a bridge author."
+      "displayName": "Mạng / Đồ thị xã hội",
+      "description": "Mạng lưới đồng tác giả, trích dẫn hoặc ảnh hưởng xã hội với việc phân nhóm cộng đồng.",
+      "scopeWarning": "Thích hợp cho các mạng minh họa (< 15 nút). Để hiển thị ở quy mô lớn, hãy sử dụng Gephi hoặc NetworkX và nhập dưới dạng PDF.",
+      "defaultCaption": "Mạng lưới đồng tác giả — hai cụm nghiên cứu được kết nối bởi một tác giả cầu nối."
     },
     "organic-chemistry-extended": {
-      "displayName": "Extended Organic Chemistry",
-      "description": "Organic structures with rings, functional groups, and stereocentres. ChemFig native.",
-      "scopeWarning": "Complex multi-ring or stereo structures may need manual ChemFig adjustment. For publication-quality structures, use ChemDraw and import as PDF.",
-      "defaultCaption": "Caffeine (1,3,7-trimethylxanthine) structural formula."
+      "displayName": "Hóa học hữu cơ mở rộng",
+      "description": "Cấu trúc hữu cơ có vòng, nhóm chức và trung tâm lập thể. ChemFig bản địa.",
+      "scopeWarning": "Cấu trúc nhiều vòng hoặc âm thanh nổi phức tạp có thể cần điều chỉnh ChemFig thủ công. Đối với cấu trúc chất lượng xuất bản, hãy sử dụng ChemDraw và nhập dưới dạng PDF.",
+      "defaultCaption": "Công thức cấu trúc Caffeine (1,3,7-trimethylxanthine)."
     },
     "reaction-mechanisms": {
-      "displayName": "Basic Reaction Mechanisms",
-      "description": "Reaction mechanisms including C-C bond forming reactions, substitutions, and eliminations.",
-      "scopeWarning": "Suitable for standard mechanisms in theses. Complex multi-step mechanisms with curved arrows require manual ChemFig adjustment.",
-      "defaultCaption": "Aldol condensation: base-catalysed formation of a $\\beta$-hydroxy carbonyl compound."
+      "displayName": "Cơ chế phản ứng cơ bản",
+      "description": "Cơ chế phản ứng bao gồm phản ứng hình thành liên kết C-C, thay thế và loại bỏ.",
+      "scopeWarning": "Thích hợp với các cơ chế tiêu chuẩn trong luận văn. Cơ chế nhiều bước phức tạp với mũi tên cong yêu cầu điều chỉnh ChemFig thủ công.",
+      "defaultCaption": "Ngưng tụ Aldol: sự hình thành hợp chất $\\beta$-hydroxy carbonyl được xúc tác bằng bazơ."
     },
     "er-diagrams": {
-      "displayName": "ER Diagrams",
-      "description": "Entity-relationship diagrams for database design. TikZ native.",
-      "scopeWarning": "Suitable for standard ER diagrams in theses. Complex schemas with many entities benefit from Draw.io exported as PDF.",
-      "defaultCaption": "ER diagram for a university course-enrollment system."
+      "displayName": "Sơ đồ ER",
+      "description": "Sơ đồ mối quan hệ thực thể để thiết kế cơ sở dữ liệu. TikZ bản địa.",
+      "scopeWarning": "Thích hợp với sơ đồ ER tiêu chuẩn trong luận văn. Các lược đồ phức tạp với nhiều thực thể được hưởng lợi từ Draw.io được xuất dưới dạng PDF.",
+      "defaultCaption": "Sơ đồ ER cho hệ thống tuyển sinh khóa học đại học."
     },
     "state-machines": {
-      "displayName": "State Machines",
-      "description": "Finite state machines and automata with states, transitions, and labels.",
-      "scopeWarning": "Suitable for DFA/NFA and reactive system diagrams in theses. For large automata, generate from Graphviz/PlantUML and import as PDF.",
-      "defaultCaption": "Traffic-light finite state machine (timer-driven)."
+      "displayName": "Máy trạng thái",
+      "description": "Máy trạng thái hữu hạn và automata có trạng thái, chuyển tiếp và nhãn.",
+      "scopeWarning": "Thích hợp với DFA/NFA và sơ đồ hệ thống phản kháng trong luận văn. Đối với máy tự động lớn, hãy tạo từ Graphviz/PlantUML và nhập dưới dạng PDF.",
+      "defaultCaption": "Máy trạng thái hữu hạn đèn giao thông (điều khiển bằng bộ đếm thời gian)."
     },
     "markov-chains": {
-      "displayName": "Markov Chains",
-      "description": "Markov chain diagrams with states and transition probabilities.",
-      "scopeWarning": "Suitable for illustrative Markov chains in theses. For inference or simulation, use R/Python and import results as figures.",
-      "defaultCaption": "Weather Markov chain (Sunny / Cloudy / Rainy)."
+      "displayName": "Xích Markov",
+      "description": "Sơ đồ chuỗi Markov với các trạng thái và xác suất chuyển tiếp.",
+      "scopeWarning": "Thích hợp cho xích Markov minh họa trong luận văn. Để suy luận hoặc mô phỏng, hãy sử dụng R/Python và nhập kết quả dưới dạng số liệu.",
+      "defaultCaption": "Chuỗi thời tiết Markov (Nắng / Mây / Mưa)."
     },
     "bode-nyquist": {
-      "displayName": "Bode / Nyquist Diagrams",
-      "description": "Frequency response: Bode magnitude + phase, or Nyquist plot. Second-order transfer functions.",
-      "scopeWarning": "Enter your system transfer function as a pgfplots expression. Compute poles/zeros in MATLAB/Python first.",
-      "defaultCaption": "Bode plot of $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
+      "displayName": "Sơ đồ Bode / Nyquist",
+      "description": "Đáp ứng tần số: Biên độ Bode + pha hoặc biểu đồ Nyquist. Hàm truyền bậc hai.",
+      "scopeWarning": "Enter hàm truyền hệ thống của bạn dưới dạng biểu thức pgfplots. Trước tiên hãy tính các cực/số 0 trong MATLAB/Python.",
+      "defaultCaption": "Biểu đồ Bode của $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
     },
     "plots-3d": {
-      "displayName": "3D Scientific Plots",
-      "description": "3D surfaces, wireframes, and contour plots. PGFPlots native.",
-      "scopeWarning": "3D plots compile slowly for fine meshes. Keep samples ≤ 25×25 for reasonable compile time.",
-      "defaultCaption": "Standard bivariate normal density $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
+      "displayName": "Sơ đồ khoa học 3D",
+      "description": "Bề mặt 3D, khung lưới và sơ đồ đường viền. PGFPlots gốc.",
+      "scopeWarning": "Các ô 3D được biên dịch chậm để tạo thành các mắt lưới mịn. Giữ mẫu 25×25 để có thời gian biên dịch hợp lý.",
+      "defaultCaption": "Mật độ chuẩn hai biến chuẩn $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
     },
     "phase-diagrams": {
-      "displayName": "Phase Diagrams",
-      "description": "Phase portraits, nullclines, and stability diagrams for dynamical systems.",
-      "scopeWarning": "Suitable for 2D phase planes and nullcline plots. Full vector-field arrows require manual pgfplots quiver adjustments.",
-      "defaultCaption": "Lotka--Volterra phase plane: prey $x$ vs predator $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
+      "displayName": "Sơ đồ pha",
+      "description": "Chân dung pha, đường null và sơ đồ ổn định cho hệ thống động lực.",
+      "scopeWarning": "Thích hợp cho các mặt phẳng pha 2D và sơ đồ nullcline. Mũi tên trường vectơ đầy đủ yêu cầu điều chỉnh rung động pgfplot thủ công.",
+      "defaultCaption": "Lotka--Mặt phẳng pha Volterra: con mồi $x$ và kẻ săn mồi $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
     },
     "heat-maps": {
-      "displayName": "Correlation Heat Maps",
-      "description": "Correlation matrices and heat maps using pgfplots matrix plot. Values between -1 and 1, color-mapped.",
-      "scopeWarning": "Suitable for small matrices (≤ 10×10). Compute correlations in R/Python first, then enter the values here.",
-      "defaultCaption": "Pearson correlation matrix for four psychometric variables."
+      "displayName": "Bản đồ nhiệt tương quan",
+      "description": "Ma trận tương quan và bản đồ nhiệt sử dụng biểu đồ ma trận pgfplots. Giá trị từ -1 đến 1, được ánh xạ màu.",
+      "scopeWarning": "Thích hợp với ma trận nhỏ (≤ 10×10). Trước tiên hãy tính các mối tương quan trong R/Python, sau đó nhập các giá trị vào đây.",
+      "defaultCaption": "Ma trận tương quan Pearson cho bốn biến tâm lý."
     },
     "supply-demand": {
-      "displayName": "Supply & Demand Curves",
-      "description": "Supply and demand with equilibrium, consumer/producer surplus, and optional curve shifts.",
-      "scopeWarning": "Suitable for illustrative partial-equilibrium analysis in theses. Non-linear elasticity curves may need manual pgfplots adjustment.",
-      "defaultCaption": "Supply and demand: original equilibrium $E_0$ and demand shift $D \\to D'$ after income increase."
+      "displayName": "Đường cung và cầu",
+      "description": "Cung và cầu với trạng thái cân bằng, thặng dư người tiêu dùng/nhà sản xuất và sự dịch chuyển đường cong tùy chọn.",
+      "scopeWarning": "Thích hợp cho việc phân tích cân bằng từng phần mang tính minh họa trong luận văn. Đường cong đàn hồi phi tuyến tính có thể cần điều chỉnh pgfplots thủ công.",
+      "defaultCaption": "Cung và cầu: cân bằng ban đầu $E_0$ và cầu dịch chuyển $D \\to D'$ sau khi thu nhập tăng."
     },
     "uml-class-diagrams": {
-      "displayName": "UML Class Diagrams",
-      "description": "UML class diagrams with inheritance, interfaces, composition, and association.",
-      "scopeWarning": "Generates simplified class boxes. For full UML compliance, use PlantUML or draw.io and import as PDF.",
-      "defaultCaption": "Repository pattern with Observer: \\\\ $<<$interface$>>$ classes, inheritance and composition."
+      "displayName": "Sơ đồ lớp UML",
+      "description": "Sơ đồ lớp UML với tính kế thừa, giao diện, thành phần và liên kết.",
+      "scopeWarning": "Tạo các hộp lớp đơn giản hóa. Để tuân thủ đầy đủ UML, hãy sử dụng PlantUML hoặc draw.io và nhập dưới dạng PDF.",
+      "defaultCaption": "Mẫu kho lưu trữ với Observer: Các lớp $<<$interface$>>$, tính kế thừa và thành phần."
     },
     "time-series": {
-      "displayName": "Time Series Plots",
-      "description": "Time series with trend, confidence band, and annotated events. Ideal for longitudinal data in economics, ecology, and clinical research.",
-      "scopeWarning": "Enter data points manually. For large or complex time series (ARIMA, seasonal), generate in R/Python and import as PDF.",
-      "defaultCaption": "Monthly CO$_2$ concentration (ppm) with long-term trend and $\\pm$2\\,SD band."
+      "displayName": "Biểu đồ chuỗi thời gian",
+      "description": "Chuỗi thời gian có xu hướng, dải tin cậy và các sự kiện được chú thích. Lý tưởng cho dữ liệu theo chiều dọc về kinh tế, sinh thái và nghiên cứu lâm sàng.",
+      "scopeWarning": "Điểm dữ liệu Enter theo cách thủ công. Đối với chuỗi thời gian lớn hoặc phức tạp (ARIMA, theo mùa), hãy tạo trong R/Python và nhập dưới dạng PDF.",
+      "defaultCaption": "Nồng độ CO$_2$ hàng tháng (ppm) với xu hướng dài hạn và dải $\\pm$2\\,SD."
     },
     "genealogy": {
-      "displayName": "Genealogy / Family Trees",
-      "description": "Family trees, dynasties, and clinical pedigrees with generations and relationship markers.",
-      "scopeWarning": "Suitable for simplified family trees. For clinical genetic pedigrees with standard symbols (ACMG/AMP), use dedicated pedigree software.",
-      "defaultCaption": "Family tree."
+      "displayName": "Phả hệ / Cây phả hệ",
+      "description": "Cây phả hệ, triều đại và phả hệ lâm sàng với các thế hệ và dấu hiệu mối quan hệ.",
+      "scopeWarning": "Thích hợp cho cây phả hệ đơn giản. Đối với các phả hệ di truyền lâm sàng có ký hiệu chuẩn (ACMG/AMP), hãy sử dụng phần mềm phả hệ chuyên dụng.",
+      "defaultCaption": "Cây gia phả."
     },
     "parallel-coordinates": {
-      "displayName": "Parallel Coordinates / Criteria Matrix",
-      "description": "Parallel coordinate plots for multi-criteria comparison of alternatives across normalised dimensions (0--10 scale).",
-      "scopeWarning": "Normalise all criteria to a common scale (e.g. 0--10) before entering values. For many alternatives (>6), use Python/R and import as PDF.",
-      "defaultCaption": "Parallel coordinate plot comparing five software solutions on four criteria."
+      "displayName": "Tọa độ song song / Ma trận tiêu chí",
+      "description": "Các biểu đồ tọa độ song song để so sánh đa tiêu chí các lựa chọn thay thế trên các kích thước chuẩn hóa (tỷ lệ 0--10).",
+      "scopeWarning": "Bình thường hóa tất cả tiêu chí về thang đo chung (ví dụ: 0--10) trước khi nhập giá trị. Đối với nhiều lựa chọn thay thế (>6), hãy sử dụng Python/R và nhập dưới dạng PDF.",
+      "defaultCaption": "Sơ đồ tọa độ song song so sánh 5 giải pháp phần mềm theo 4 tiêu chí."
     },
     "energy-band-diagrams": {
-      "displayName": "Energy / Band Diagrams",
-      "description": "Energy level diagrams, band gaps, and semiconductor band diagrams for physics and materials science.",
-      "scopeWarning": "Energy values are illustrative. Replace with your material's actual band gap and Fermi level values from literature or calculation.",
-      "defaultCaption": "Semiconductor band diagram."
+      "displayName": "Sơ đồ năng lượng / dải",
+      "description": "Biểu đồ mức năng lượng, vùng cấm và sơ đồ vùng cấm cho vật lý và khoa học vật liệu.",
+      "scopeWarning": "Giá trị năng lượng mang tính minh họa. Thay thế bằng khoảng cách thực tế của tài liệu và giá trị mức Fermi từ tài liệu hoặc phép tính.",
+      "defaultCaption": "Sơ đồ dải bán dẫn."
     },
     "decision-tree": {
-      "displayName": "Decision Trees",
-      "description": "Decision tree diagrams with conditions, branches, and leaf outcomes. Covers classification trees, CART, and clinical decision rules.",
-      "scopeWarning": "Enter tree structure manually. For automatic tree generation from data, use scikit-learn/rpart and export the tree, then reproduce here for publication.",
-      "defaultCaption": "Decision tree."
+      "displayName": "Cây quyết định",
+      "description": "Sơ đồ cây quyết định với các điều kiện, kết quả nhánh và lá. Bao gồm các cây phân loại, CART và các quy tắc quyết định lâm sàng.",
+      "scopeWarning": "Cấu trúc cây Enter theo cách thủ công. Để tạo cây tự động từ dữ liệu, hãy sử dụng scikit-learn/rpart và xuất cây, sau đó sao chép ở đây để xuất bản.",
+      "defaultCaption": "Cây quyết định."
     },
     "roc-curve": {
-      "displayName": "ROC Curves",
-      "description": "Receiver operating characteristic curves for classifier evaluation. Supports multiple classifiers with AUC annotation.",
-      "scopeWarning": "Enter pre-computed TPR/FPR values from your statistical software (sklearn, R pROC). This plugin renders the curve; model training must be done externally.",
-      "defaultCaption": "ROC curves (AUC shown in legend)."
+      "displayName": "Đường cong ROC",
+      "description": "Các đường cong đặc tính vận hành máy thu để đánh giá bộ phân loại. Hỗ trợ nhiều bộ phân loại với chú thích AUC.",
+      "scopeWarning": "Enter Giá trị TPR/FPR được tính toán trước từ phần mềm thống kê của bạn (sklearn, R pROC). Plugin này hiển thị đường cong; đào tạo mô hình phải được thực hiện bên ngoài.",
+      "defaultCaption": "Đường cong ROC (AUC được hiển thị trong chú giải)."
     },
     "population-pyramid": {
-      "displayName": "Population Pyramid",
-      "description": "Age-sex population pyramid for demographic analysis. Shows male/female population distributions by age group.",
-      "scopeWarning": "Enter census data manually. For large datasets, generate the pyramid in R/Python and import as PDF, or use this plugin for illustrative sub-populations.",
-      "defaultCaption": "Population pyramid."
+      "displayName": "Tháp dân số",
+      "description": "Tháp dân số theo độ tuổi-giới tính để phân tích nhân khẩu học. Hiển thị sự phân bổ dân số nam/nữ theo nhóm tuổi.",
+      "scopeWarning": "Dữ liệu điều tra dân số Enter theo cách thủ công. Đối với các tập dữ liệu lớn, hãy tạo kim tự tháp trong R/Python và nhập dưới dạng PDF hoặc sử dụng plugin này cho các quần thể phụ minh họa.",
+      "defaultCaption": "Tháp dân số."
     },
     "error-bars": {
-      "displayName": "Error Bars & Confidence Intervals",
-      "description": "Line or bar plots with error bars for means ± SD/SE/CI. Essential for presenting experimental or survey results.",
-      "scopeWarning": "Enter means and error values (SD, SE, or 95% CI half-width) computed from your data. Raw data processing must be done externally.",
-      "defaultCaption": "Mean values with 95\\% confidence intervals."
+      "displayName": "Thanh lỗi và khoảng tin cậy",
+      "description": "Biểu đồ đường hoặc thanh có thanh lỗi cho phương tiện ± SD/SE/CI. Cần thiết để trình bày kết quả thử nghiệm hoặc khảo sát.",
+      "scopeWarning": "Enter có nghĩa và các giá trị lỗi (SD, SE hoặc 95% CI nửa chiều rộng) được tính toán từ dữ liệu của bạn. Việc xử lý dữ liệu thô phải được thực hiện bên ngoài.",
+      "defaultCaption": "Giá trị trung bình với khoảng tin cậy 95\\%."
     },
     "causal-dag": {
-      "displayName": "Causal DAG / Path Diagrams",
-      "description": "Directed acyclic graphs (DAGs) for causal inference frameworks, structural equation models, and mediation analysis.",
-      "scopeWarning": "Suitable for causal diagrams up to ~10 variables. For complex SEM or large DAGs, use dagitty.net or lavaan and import the diagram.",
-      "defaultCaption": "Causal directed acyclic graph (DAG)."
+      "displayName": "DAG nhân quả / Sơ đồ đường dẫn",
+      "description": "Biểu đồ không theo chu kỳ có hướng (DAG) dành cho khung suy luận nguyên nhân, mô hình phương trình cấu trúc và phân tích dàn xếp.",
+      "scopeWarning": "Thích hợp cho sơ đồ nhân quả có tối đa ~10 biến. Đối với SEM phức tạp hoặc DAG lớn, hãy sử dụng dagitty.net hoặc lavaan và nhập sơ đồ.",
+      "defaultCaption": "Biểu đồ tuần hoàn có hướng nhân quả (DAG)."
     },
     "bar-charts": {
-      "displayName": "Bar Charts & Histograms",
-      "description": "Grouped and stacked bar charts, frequency histograms for descriptive statistics.",
-      "scopeWarning": "Enter values manually. For charts from large datasets, generate in R/Python and import as PDF.",
-      "defaultCaption": "Grouped bar chart — mean response by condition and time point ($\\pm$\\,SD)."
+      "displayName": "Biểu đồ thanh & biểu đồ",
+      "description": "Biểu đồ thanh được nhóm và xếp chồng lên nhau, biểu đồ tần số để thống kê mô tả.",
+      "scopeWarning": "Giá trị Enter theo cách thủ công. Đối với biểu đồ từ tập dữ liệu lớn, hãy tạo trong R/Python và nhập dưới dạng PDF.",
+      "defaultCaption": "Biểu đồ thanh được nhóm — phản hồi trung bình theo điều kiện và điểm thời gian ($\\pm$\\,SD)."
     },
     "box-violin-plots": {
-      "displayName": "Box Plots & Distribution Comparisons",
-      "description": "Box-and-whisker plots with medians, quartiles, and outliers for comparing distributions.",
-      "scopeWarning": "Enter pre-computed statistics (median, Q1, Q3) from R/Python. Each data point encodes: x=group position, y=median, error=IQR half-range.",
-      "defaultCaption": "Distribution of test scores across three teaching conditions (box: Q1--Q3; whiskers: 1.5$\\times$IQR)."
+      "displayName": "Sơ đồ hộp & So sánh phân phối",
+      "description": "Biểu đồ hình hộp và râu có trung vị, tứ phân vị và các giá trị ngoại lệ để so sánh phân bố.",
+      "scopeWarning": "Enter thống kê được tính toán trước (trung vị, Q1, Q3) từ R/Python. Mỗi điểm dữ liệu mã hóa: x=vị trí nhóm, y=trung vị, error=IQR nửa phạm vi.",
+      "defaultCaption": "Phân bổ điểm kiểm tra theo ba điều kiện giảng dạy (ô: Q1--Q3; râu: 1.5$\\times$IQR)."
     },
     "scatter-regression": {
-      "displayName": "Scatter Plots with Regression",
-      "description": "Scatter plot with linear regression line and optional confidence band.",
-      "scopeWarning": "Compute slope, intercept, and CI band in your statistical software. Enter the values here for publication-quality rendering.",
-      "defaultCaption": "BMI vs systolic blood pressure: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
+      "displayName": "Biểu đồ phân tán có hồi quy",
+      "description": "Biểu đồ phân tán với đường hồi quy tuyến tính và dải tin cậy tùy chọn.",
+      "scopeWarning": "Tính toán độ dốc, giao điểm và dải CI trong phần mềm thống kê của bạn. Enter các giá trị ở đây để hiển thị chất lượng xuất bản.",
+      "defaultCaption": "BMI so với huyết áp tâm thu: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
     },
     "bayesian-networks": {
-      "displayName": "Bayesian Networks",
-      "description": "Directed acyclic graphs for Bayesian networks: latent cause nodes (ellipses) with observed evidence nodes (rectangles).",
-      "scopeWarning": "Suitable for illustrative Bayesian networks in theses. For inference, parameter learning, or dense graphs, use pgmpy, BayesFusion, GeNIe, or BUGS and import the final PDF/SVG.",
-      "defaultCaption": "Bayesian network for differential diagnosis of respiratory illness."
+      "displayName": "Mạng Bayesian",
+      "description": "Biểu đồ tuần hoàn có hướng cho mạng Bayes: các nút nguyên nhân tiềm ẩn (hình elip) với các nút bằng chứng quan sát được (hình chữ nhật).",
+      "scopeWarning": "Thích hợp cho mạng Bayes minh họa trong luận văn. Để suy luận, tìm hiểu tham số hoặc biểu đồ dày đặc, hãy sử dụng pgmpy, BayesFusion, GeNIe hoặc BUGS và nhập PDF/SVG cuối cùng.",
+      "defaultCaption": "Mạng Bayesian chẩn đoán phân biệt bệnh hô hấp."
     },
     "sem-path-diagrams": {
-      "displayName": "SEM / Path Diagrams",
-      "description": "Structural equation model path diagrams with latent variables and measurement models.",
-      "scopeWarning": "Suitable for thesis-level SEM diagrams. For estimation, fit statistics, and standardized reports, use lavaan/R, Mplus, or AMOS and import the final diagram/table as PDF.",
-      "defaultCaption": "Technology Acceptance Model (TAM): perceived usefulness and ease of use predicting behavioural intention."
+      "displayName": "SEM / Sơ đồ đường dẫn",
+      "description": "Sơ đồ đường dẫn mô hình phương trình cấu trúc với các biến tiềm ẩn và mô hình đo lường.",
+      "scopeWarning": "Thích hợp với sơ đồ SEM cấp độ luận văn. Để ước tính, thống kê phù hợp và báo cáo được chuẩn hóa, hãy sử dụng lavaan/R, Mplus hoặc AMOS và nhập sơ đồ/bảng cuối cùng dưới dạng PDF.",
+      "defaultCaption": "Mô hình chấp nhận công nghệ (TAM): nhận thức tính hữu ích và tính dễ sử dụng dự đoán ý định hành vi."
     },
     "economic-causal": {
-      "displayName": "Economic Causal Diagrams",
-      "description": "Causal loop diagrams (CLD) with reinforcing and balancing feedback loops.",
-      "scopeWarning": "Suitable for simple causal loop models. For full system dynamics with stocks, flows, delays, or simulation, use Vensim, Stella, or AnyLogic and import the final PDF/SVG.",
-      "defaultCaption": "Wage--price spiral: reinforcing ($R$) and balancing ($B$) feedback loops."
+      "displayName": "Biểu đồ nhân quả kinh tế",
+      "description": "Sơ đồ vòng lặp nhân quả (CLD) với các vòng phản hồi tăng cường và cân bằng.",
+      "scopeWarning": "Thích hợp cho các mô hình vòng lặp nhân quả đơn giản. Để có được động lực toàn hệ thống với trữ lượng, luồng, độ trễ hoặc mô phỏng, hãy sử dụng Vensim, Stella hoặc AnyLogic và nhập PDF/SVG cuối cùng.",
+      "defaultCaption": "Vòng xoáy tiền lương--giá cả: các vòng phản hồi củng cố ($R$) và cân bằng ($B$)."
     },
     "legal-procedural": {
-      "displayName": "Legal / Procedural Diagrams",
-      "description": "Flowcharts for legal and administrative procedures: judicial, regulatory, and compliance workflows.",
-      "scopeWarning": "Suitable for standard legal/administrative process flows in theses. Complex multi-party or multi-jurisdiction procedures are better maintained in BPMN/draw.io and imported as PDF.",
-      "defaultCaption": "Criminal procedure: from complaint to verdict."
+      "displayName": "Sơ đồ pháp lý/thủ tục",
+      "description": "Sơ đồ quy trình thủ tục pháp lý và hành chính: quy trình tư pháp, quy định và tuân thủ.",
+      "scopeWarning": "Thích hợp cho các luồng quy trình pháp lý/hành chính tiêu chuẩn trong luận văn. Các thủ tục đa bên hoặc đa thẩm quyền phức tạp được duy trì tốt hơn trong BPMN/draw.io và được nhập dưới dạng PDF.",
+      "defaultCaption": "Thủ tục hình sự: từ khiếu nại đến phán quyết."
     },
     "pedagogical-diagrams": {
-      "displayName": "Pedagogical Diagrams",
-      "description": "Bloom's taxonomy, learning outcome hierarchies, and curriculum maps for education theses.",
-      "scopeWarning": "Covers common pedagogical diagram patterns. For complex instructional-design models, keep the authoritative diagram in draw.io/Figma and import the final PDF/SVG.",
-      "defaultCaption": "Revised Bloom's taxonomy — six cognitive levels with representative verbs (Anderson \\& Krathwohl, 2001)."
+      "displayName": "Sơ đồ sư phạm",
+      "description": "Phân loại, phân cấp kết quả học tập và sơ đồ chương trình giảng dạy cho các luận văn giáo dục của Bloom.",
+      "scopeWarning": "Bao gồm các mẫu sơ đồ sư phạm phổ biến. Đối với các mô hình thiết kế hướng dẫn phức tạp, hãy giữ sơ đồ chính thức trong draw.io/Figma và nhập PDF/SVG cuối cùng.",
+      "defaultCaption": "Đã sửa đổi cách phân loại của Bloom — sáu cấp độ nhận thức với các động từ đại diện (Anderson \\& Krathwohl, 2001)."
     }
   }
 }

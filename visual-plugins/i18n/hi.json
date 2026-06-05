@@ -1,366 +1,366 @@
 {
   "plugins": {
     "phylogenetic-trees": {
-      "displayName": "Simple Phylogenetic Trees",
-      "description": "Build phylogenetic and taxonomic trees with labeled nodes and branch lengths.",
-      "scopeWarning": "Suitable for simplified phylogenies in theses. For complex phylogenetics with statistical support, use FigTree/iTOL and import as PDF.",
-      "defaultCaption": "Simplified phylogeny of selected vertebrate classes."
+      "displayName": "सरल फाइलोजेनेटिक पेड़",
+      "description": "लेबल नोड्स और शाखा की लंबाई के साथ फ़ाइलोजेनेटिक और टैक्सोनोमिक पेड़ बनाएं।",
+      "scopeWarning": "थीसिस में सरलीकृत फ़ाइलोजेनीज़ के लिए उपयुक्त। सांख्यिकीय समर्थन के साथ जटिल फ़ाइलोजेनेटिक्स के लिए, फ़िगरट्री/आईटीओएल का उपयोग करें और PDF के रूप में आयात करें।",
+      "defaultCaption": "चयनित कशेरुक वर्गों की सरलीकृत फाइलोजेनी।"
     },
     "dna-rna-sequences": {
-      "displayName": "DNA / RNA / Protein Sequences",
-      "description": "Display biological sequences with color-coded bases, codon highlighting, and alignment marks.",
-      "defaultCaption": "Start codon and reading frame of a short mRNA sequence."
+      "displayName": "DNA / RNA / प्रोटीन अनुक्रम",
+      "description": "रंग-कोडित आधारों, कोडन हाइलाइटिंग और संरेखण चिह्नों के साथ जैविक अनुक्रम प्रदर्शित करें।",
+      "defaultCaption": "एक छोटे एमआरएनए अनुक्रम का कोडन और रीडिंग फ्रेम प्रारंभ करें।"
     },
     "biomedical-flow": {
-      "displayName": "Biomedical Flow Diagrams",
-      "description": "Biological and clinical process flows — signaling pathways, metabolic steps, treatment algorithms.",
-      "defaultCaption": "MAPK/ERK signalling cascade with feedback inhibition."
+      "displayName": "बायोमेडिकल फ्लो आरेख",
+      "description": "जैविक और नैदानिक प्रक्रिया प्रवाह - सिग्नलिंग मार्ग, चयापचय चरण, उपचार एल्गोरिदम।",
+      "defaultCaption": "प्रतिक्रिया निषेध के साथ MAPK/ERK सिग्नलिंग कैस्केड।"
     },
     "consort-flow": {
-      "displayName": "CONSORT / Clinical Trial Flow",
-      "description": "CONSORT-style flow diagrams for randomized clinical trials — enrollment, allocation, follow-up, analysis.",
-      "defaultCaption": "CONSORT 2010 flow diagram."
+      "displayName": "CONSORT / क्लिनिकल परीक्षण प्रवाह",
+      "description": "यादृच्छिक नैदानिक ​​परीक्षणों के लिए CONSORT-शैली प्रवाह आरेख - नामांकन, आवंटन, अनुवर्ती, विश्लेषण।",
+      "defaultCaption": "CONSORT 2010 प्रवाह आरेख।"
     },
     "biological-pathways": {
-      "displayName": "Schematic Biological Pathways",
-      "description": "Simplified metabolic and signaling pathway schemes for thesis figures.",
-      "scopeWarning": "Suitable for simplified pathway diagrams in theses and reports. Not a substitute for KEGG, Reactome, or professional pathway visualization tools.",
-      "defaultCaption": "Central carbon metabolism: glycolysis and TCA cycle entry."
+      "displayName": "योजनाबद्ध जैविक पथ",
+      "description": "थीसिस आंकड़ों के लिए सरलीकृत चयापचय और सिग्नलिंग मार्ग योजनाएं।",
+      "scopeWarning": "थीसिस और रिपोर्ट में सरलीकृत मार्ग आरेखों के लिए उपयुक्त। KEGG, रिएक्टोम, या प्रोफेशनल पाथवे विज़ुअलाइज़ेशन टूल का विकल्प नहीं।",
+      "defaultCaption": "केंद्रीय कार्बन चयापचय: ग्लाइकोलाइसिस और TCA चक्र प्रवेश।"
     },
     "chemical-formulas": {
-      "displayName": "Chemical Formulas",
-      "description": "Write chemical formulas with charges, states, and subscripts. Uses mhchem — LaTeX native.",
-      "defaultCaption": "Selected inorganic formulas with oxidation states and phases."
+      "displayName": "रासायनिक सूत्र",
+      "description": "आवेशों, अवस्थाओं और उपस्क्रिप्ट के साथ रासायनिक सूत्र लिखें। mhchem का उपयोग करता है - LaTeX मूल।",
+      "defaultCaption": "ऑक्सीकरण अवस्थाओं और चरणों के साथ चयनित अकार्बनिक सूत्र।"
     },
     "chemical-reactions": {
-      "displayName": "Chemical Reactions",
-      "description": "Build chemical reaction equations with arrows, conditions, and catalysts. Uses mhchem.",
-      "defaultCaption": "Acid--base neutralisation and combustion reactions."
+      "displayName": "रासायनिक प्रतिक्रियाएं",
+      "description": "तीरों, स्थितियों और उत्प्रेरकों के साथ रासायनिक प्रतिक्रिया समीकरण बनाएं। एमएचकेएम का उपयोग करता है।",
+      "defaultCaption": "अम्ल-क्षार उदासीनीकरण और दहन प्रतिक्रियाएं।"
     },
     "reaction-equilibria": {
-      "displayName": "Reaction Equilibria & Conditions",
-      "description": "Chemical equilibrium reactions with conditions above/below the arrow. Uses mhchem.",
-      "defaultCaption": "Haber process and esterification equilibria."
+      "displayName": "प्रतिक्रिया संतुलन एवं स्थितियाँ",
+      "description": "तीर के ऊपर/नीचे स्थितियों के साथ रासायनिक संतुलन प्रतिक्रियाएं। एमएचकेएम का उपयोग करता है।",
+      "defaultCaption": "हैबर प्रक्रिया और एस्टरीफिकेशन संतुलन।"
     },
     "chemical-structures": {
-      "displayName": "Chemical Structures",
-      "description": "Simple organic structures and ring systems using ChemFig. Benzene, functional groups, ring compounds.",
-      "scopeWarning": "Suitable for simple organic structures in theses. Complex multi-ring systems may need manual ChemFig adjustment. For full structural chemistry, use ChemDraw and import as PDF/SVG.",
-      "defaultCaption": "Aspirin (acetylsalicylic acid) structural formula."
+      "displayName": "रासायनिक संरचनाएं",
+      "description": "केमफिग का उपयोग करके सरल जैविक संरचनाएं और रिंग सिस्टम। बेंजीन, कार्यात्मक समूह, रिंग यौगिक।",
+      "scopeWarning": "थीसिस में सरल जैविक संरचनाओं के लिए उपयुक्त। जटिल मल्टी-रिंग सिस्टम को मैन्युअल केमफिग समायोजन की आवश्यकता हो सकती है। पूर्ण संरचनात्मक रसायन विज्ञान के लिए, केमड्रा का उपयोग करें और PDF/SVG के रूप में आयात करें।",
+      "defaultCaption": "एस्पिरिन (एसिटाइलसैलिसिलिक एसिड) संरचनात्मक सूत्र।"
     },
     "basic-electrical-circuits": {
-      "displayName": "Basic Electrical Circuits",
-      "description": "Visual circuit builder: resistors, capacitors, inductors, sources, switches, diodes. CircuiTikZ native.",
-      "defaultCaption": "RC low-pass filter circuit with voltage divider."
+      "displayName": "बुनियादी विद्युत सर्किट",
+      "description": "विज़ुअल सर्किट बिल्डर: प्रतिरोधक, कैपेसिटर, इंडक्टर्स, स्रोत, स्विच, डायोड। circuiTikZ मूलनिवासी।",
+      "defaultCaption": "वोल्टेज डिवाइडर के साथ RC लो-पास फिल्टर सर्किट।"
     },
     "block-diagrams-control": {
-      "displayName": "Block Diagrams / Control Systems",
-      "description": "Control system block diagrams with transfer functions, summing junctions, and feedback loops.",
-      "defaultCaption": "PID closed-loop control system block diagram."
+      "displayName": "ब्लॉक आरेख/नियंत्रण प्रणाली",
+      "description": "ट्रांसफर फ़ंक्शन, सारांश जंक्शन और फीडबैक लूप के साथ सिस्टम ब्लॉक आरेख को नियंत्रित करें।",
+      "defaultCaption": "PID बंद-लूप नियंत्रण प्रणाली ब्लॉक आरेख।"
     },
     "flowcharts": {
-      "displayName": "Flowcharts",
-      "description": "Academic and process flowcharts with decision diamonds, process boxes, and connector arrows.",
-      "defaultCaption": "Research methodology flowchart."
+      "displayName": "फ़्लोचार्ट",
+      "description": "निर्णय हीरे, प्रक्रिया बक्से और कनेक्टर तीरों के साथ अकादमिक और प्रक्रिया फ़्लोचार्ट।",
+      "defaultCaption": "अनुसंधान पद्धति फ़्लोचार्ट।"
     },
     "software-architecture": {
-      "displayName": "Software / System Architecture",
-      "description": "Component, layer, and system architecture diagrams.",
-      "scopeWarning": "Suitable for standard architecture overviews. For complex UML or deployment diagrams, use Draw.io and import as PDF.",
-      "defaultCaption": "Three-tier web application architecture."
+      "displayName": "सॉफ़्टवेयर / सिस्टम आर्किटेक्चर",
+      "description": "घटक, परत और सिस्टम आर्किटेक्चर आरेख।",
+      "scopeWarning": "मानक वास्तुकला अवलोकन के लिए उपयुक्त। जटिल UML या परिनियोजन आरेखों के लिए, Draw.io का उपयोग करें और PDF के रूप में आयात करें।",
+      "defaultCaption": "त्रि-स्तरीय वेब एप्लिकेशन आर्किटेक्चर।"
     },
     "venn-set-diagrams": {
-      "displayName": "Venn / Set Diagrams",
-      "description": "Create Venn diagrams and set-theory diagrams with labeled circles and intersections.",
-      "defaultCaption": "Three-set Venn diagram showing mixed-methods research design."
+      "displayName": "वेन / सेट आरेख",
+      "description": "लेबल वाले वृत्तों और चौराहों के साथ वेन आरेख और सेट-थ्योरी आरेख बनाएं।",
+      "defaultCaption": "तीन-सेट वेन आरेख, जो मिश्रित-विधियों के अनुसंधान डिज़ाइन को दर्शाता है।"
     },
     "plane-geometry": {
-      "displayName": "Plane Geometry",
-      "description": "Geometric shapes: triangles, polygons, circles, angles, perpendiculars, parallels.",
-      "defaultCaption": "Right triangle with altitude from hypotenuse — geometric mean relations."
+      "displayName": "समतल ज्यामिति",
+      "description": "ज्यामितीय आकृतियाँ: त्रिकोण, बहुभुज, वृत्त, कोण, लंब, समानांतर।",
+      "defaultCaption": "कर्ण से ऊंचाई के साथ समकोण त्रिभुज - ज्यामितीय माध्य संबंध।"
     },
     "analytic-geometry": {
-      "displayName": "Analytic Geometry",
-      "description": "Coordinate systems with curves, lines, tangents, and labeled points.",
-      "defaultCaption": "Parabola $f(x)=x^2-2x-3$ with roots, vertex, and tangent at $x=2$."
+      "displayName": "विश्लेषणात्मक ज्यामिति",
+      "description": "वक्रों, रेखाओं, स्पर्शरेखाओं और लेबल बिंदुओं के साथ समन्वय प्रणाली।",
+      "defaultCaption": "परवलय $f(x)=x^2-2x-3$ जड़ों, शीर्ष और $x=2$ पर स्पर्शरेखा के साथ।"
     },
     "probability-trees": {
-      "displayName": "Probability Trees",
-      "description": "Visual probability trees with branch probabilities and outcomes. forest native.",
-      "defaultCaption": "Probability tree — two coin flips."
+      "displayName": "संभावना वृक्ष",
+      "description": "शाखा संभावनाओं और परिणामों के साथ दृश्य संभाव्यता पेड़। वनवासी.",
+      "defaultCaption": "संभावना वृक्ष - दो सिक्के उछालें।"
     },
     "lab-setups": {
-      "displayName": "Simple Lab Setups",
-      "description": "Basic laboratory apparatus diagrams: flasks, beakers, burettes, tube assemblies.",
-      "scopeWarning": "Covers standard lab apparatus. For specialized equipment diagrams, use dedicated illustration tools and import as PDF.",
-      "defaultCaption": "Simple laboratory setup."
+      "displayName": "सरल लैब सेटअप",
+      "description": "बुनियादी प्रयोगशाला उपकरण आरेख: फ्लास्क, बीकर, ब्यूरेट, ट्यूब असेंबली।",
+      "scopeWarning": "मानक प्रयोगशाला उपकरण को कवर करता है। विशेष उपकरण आरेखों के लिए, समर्पित चित्रण उपकरण का उपयोग करें और PDF के रूप में आयात करें।",
+      "defaultCaption": "सरल प्रयोगशाला सेटअप।"
     },
     "syntax-trees": {
-      "displayName": "Syntax / Linguistic Trees",
-      "description": "Phrase-structure and dependency trees for linguistics. forest native.",
-      "defaultCaption": "Phrase-structure tree."
+      "displayName": "वाक्यविन्यास / भाषाई वृक्ष",
+      "description": "भाषाविज्ञान के लिए वाक्यांश-संरचना और निर्भरता वृक्ष। वनवासी.",
+      "defaultCaption": "वाक्यांश-संरचना वृक्ष।"
     },
     "concept-maps": {
-      "displayName": "Concept Maps & Argument Diagrams",
-      "description": "Concept maps, mind maps, and argumentative structure diagrams.",
-      "defaultCaption": "Concept map."
+      "displayName": "संकल्पना मानचित्र और तर्क आरेख",
+      "description": "संकल्पना मानचित्र, मानसिक मानचित्र, और तर्कपूर्ण संरचना आरेख।",
+      "defaultCaption": "संकल्पना मानचित्र."
     },
     "visual-equations": {
-      "displayName": "Visual Equations",
-      "description": "Build mathematical equations, expressions, and formulas with a visual editor. Outputs LaTeX native.",
-      "defaultCaption": "Quadratic formula and quadratic form."
+      "displayName": "दृश्य समीकरण",
+      "description": "एक दृश्य संपादक के साथ गणितीय समीकरण, अभिव्यक्ति और सूत्र बनाएं। आउटपुट LaTeX मूल।",
+      "defaultCaption": "द्विघात सूत्र और द्विघात रूप।"
     },
     "matrices-determinants": {
-      "displayName": "Matrices & Determinants",
-      "description": "Create matrices and determinants of any size with visual cell editing.",
-      "defaultCaption": "3D rotation matrix around the $z$-axis by angle $\\theta$."
+      "displayName": "आव्यूह और निर्धारक",
+      "description": "दृश्य सेल संपादन के साथ किसी भी आकार के मैट्रिक्स और निर्धारक बनाएं।",
+      "defaultCaption": "कोण $\\theta$ द्वारा $z$-axis के चारों ओर 3डी रोटेशन मैट्रिक्स।"
     },
     "systems-of-equations": {
-      "displayName": "Systems of Equations",
-      "description": "Build systems of linear or nonlinear equations with aligned formatting.",
-      "defaultCaption": "System of three linear equations (fluid flow balance)."
+      "displayName": "समीकरणों की प्रणाली",
+      "description": "संरेखित स्वरूपण के साथ रैखिक या अरेखीय समीकरणों की प्रणाली बनाएं।",
+      "defaultCaption": "तीन रैखिक समीकरणों की प्रणाली (द्रव प्रवाह संतुलन)।"
     },
     "piecewise-functions": {
-      "displayName": "Piecewise Functions",
-      "description": "Define functions by cases or parts with a visual row editor.",
-      "defaultCaption": "Heaviside step function and ReLU activation function."
+      "displayName": "टुकड़े-टुकड़े कार्य",
+      "description": "दृश्य पंक्ति संपादक के साथ मामलों या भागों द्वारा कार्यों को परिभाषित करें।",
+      "defaultCaption": "हेविसाइड स्टेप फ़ंक्शन और ReLU सक्रियण फ़ंक्शन।"
     },
     "vectors-fields": {
-      "displayName": "Vectors & Simple Fields",
-      "description": "Draw vectors, vector decomposition, and simple field representations.",
-      "defaultCaption": "Vector addition — parallelogram law: $\\vec{R} = \\vec{A} + \\vec{B}$."
+      "displayName": "वेक्टर और सरल फ़ील्ड",
+      "description": "वेक्टर, वेक्टर अपघटन और सरल फ़ील्ड निरूपण बनाएं।",
+      "defaultCaption": "वेक्टर जोड़ - समांतर चतुर्भुज नियम: $\\vec{R} = \\vec{A} + \\vec{B}$."
     },
     "free-body-diagrams": {
-      "displayName": "Free Body Diagrams",
-      "description": "Build free body diagrams with forces, mass blocks, and labeled arrows.",
-      "defaultCaption": "Free body diagram — block on surface with applied force at angle $\\alpha$."
+      "displayName": "निःशुल्क शारीरिक आरेख",
+      "description": "बलों, द्रव्यमान ब्लॉकों और लेबल वाले तीरों के साथ मुक्त बॉडी आरेख बनाएं।",
+      "defaultCaption": "मुक्त निकाय आरेख - कोण $\\alpha$ पर लगाए गए बल के साथ सतह पर ब्लॉक।"
     },
     "inclined-plane-pulleys": {
-      "displayName": "Inclined Planes, Pulleys & Springs",
-      "description": "Mechanical systems: inclined planes, pulley setups, and spring-mass systems.",
-      "scopeWarning": "Generates accurate schematic diagrams. Highly complex multi-pulley systems may need manual TikZ adjustments.",
-      "defaultCaption": "Free-body diagram on inclined plane (angle $\\theta$)."
+      "displayName": "इच्छुक तल, पुली और स्प्रिंग्स",
+      "description": "मैकेनिकल सिस्टम: झुके हुए विमान, पुली सेटअप और स्प्रिंग-मास सिस्टम।",
+      "scopeWarning": "सटीक योजनाबद्ध आरेख उत्पन्न करता है। अत्यधिक जटिल मल्टी-पुली सिस्टम को मैन्युअल टिकज़ समायोजन की आवश्यकता हो सकती है।",
+      "defaultCaption": "झुकाव वाले तल पर मुक्त-शरीर आरेख (कोण $\\theta$)।"
     },
     "wave-oscillation": {
-      "displayName": "Wave & Oscillation Diagrams",
-      "description": "Sinusoidal waves, damped oscillations, and wave superposition. Covers SHM, transverse/longitudinal waves, and interference patterns.",
-      "defaultCaption": "Sinusoidal wave $y = A\\sin(\\omega t)$ with damped envelope."
+      "displayName": "तरंग एवं दोलन आरेख",
+      "description": "साइनसॉइडल तरंगें, अवमंदित दोलन, और तरंग सुपरपोजिशन। SHM, अनुप्रस्थ/अनुदैर्ध्य तरंगों और हस्तक्षेप पैटर्न को कवर करता है।",
+      "defaultCaption": "साइनसॉइडल तरंग $y = A\\sin(\\omega t)$ नम आवरण के साथ।"
     },
     "geometric-optics": {
-      "displayName": "Geometric Optics",
-      "description": "Lenses, mirrors, ray diagrams, and refraction diagrams.",
-      "scopeWarning": "Suitable for standard ray diagrams. Complex optical systems with multiple elements may need manual adjustment.",
-      "defaultCaption": "Converging thin lens — three principal ray construction."
+      "displayName": "ज्यामितीय प्रकाशिकी",
+      "description": "लेंस, दर्पण, किरण आरेख और अपवर्तन आरेख।",
+      "scopeWarning": "मानक किरण आरेखों के लिए उपयुक्त। एकाधिक तत्वों वाले जटिल ऑप्टिकल सिस्टम को मैन्युअल समायोजन की आवश्यकता हो सकती है।",
+      "defaultCaption": "अभिसारी पतला लेंस - तीन प्रमुख किरण निर्माण।"
     },
     "gantt-charts": {
-      "displayName": "Gantt Charts",
-      "description": "Research and project Gantt charts with tasks, groups, milestones, and dependencies. pgfgantt native.",
-      "defaultCaption": "Doctoral research schedule by semester."
+      "displayName": "गैंट चार्ट",
+      "description": "कार्यों, समूहों, मील के पत्थर और निर्भरताओं के साथ अनुसंधान और प्रोजेक्ट गैंट चार्ट। pgfgantt मूलनिवासी.",
+      "defaultCaption": "सेमेस्टर के अनुसार डॉक्टरेट अनुसंधान कार्यक्रम।"
     },
     "timelines": {
-      "displayName": "Timelines",
-      "description": "Historical, research, and narrative timelines with labeled events.",
-      "defaultCaption": "Key milestones in molecular biology (1944--2003)."
+      "displayName": "समयसीमा",
+      "description": "ऐतिहासिक, अनुसंधान, और लेबल वाली घटनाओं के साथ कथात्मक समयरेखा।",
+      "defaultCaption": "आणविक जीव विज्ञान में प्रमुख मील के पत्थर (1944-2003)।"
     },
     "function-plots-2d": {
-      "displayName": "2D Function Plots",
-      "description": "Plot mathematical functions with labeled axes, grid, and legend. PGFPlots native.",
-      "defaultCaption": "Trigonometric functions $\\sin x$ and $\\cos x$."
+      "displayName": "2डी फ़ंक्शन प्लॉट",
+      "description": "लेबल वाले अक्षों, ग्रिड और लेजेंड के साथ गणितीय कार्यों को प्लॉट करें। पीजीएफप्लॉट मूल निवासी।",
+      "defaultCaption": "त्रिकोणमितीय फलन $\\sin x$ और $\\cos x$."
     },
     "parametric-polar-plots": {
-      "displayName": "Parametric & Polar Plots",
-      "description": "Parametric curves and polar function plots.",
-      "defaultCaption": "Lissajous curve $(\\cos 2t,\\, \\sin 3t)$."
+      "displayName": "पैरामीट्रिक और ध्रुवीय प्लॉट",
+      "description": "पैरामीट्रिक वक्र और ध्रुवीय फ़ंक्शन प्लॉट।",
+      "defaultCaption": "लिसाजौस वक्र $(\\cos 2t,\\, \\sin 3t)$."
     },
     "basic-statistics": {
-      "displayName": "Basic Statistics Charts",
-      "description": "Bar charts, histograms, and scatter plots from tabular data.",
-      "defaultCaption": "Comparative bar chart — measurement results by experimental group."
+      "displayName": "बुनियादी सांख्यिकी चार्ट",
+      "description": "सारणीबद्ध डेटा से बार चार्ट, हिस्टोग्राम और स्कैटर प्लॉट।",
+      "defaultCaption": "तुलनात्मक बार चार्ट - प्रयोगात्मक समूह द्वारा माप परिणाम।"
     },
     "statistical-distributions": {
-      "displayName": "Statistical Distributions",
-      "description": "Normal, t, chi-squared, and other distributions with shaded regions.",
-      "defaultCaption": "Standard normal distribution with 95\\% confidence interval shaded."
+      "displayName": "सांख्यिकीय वितरण",
+      "description": "सामान्य, टी, ची-वर्ग, और छायांकित क्षेत्रों के साथ अन्य वितरण।",
+      "defaultCaption": "95\\% विश्वास अंतराल के साथ मानक सामान्य वितरण छायांकित।"
     },
     "kaplan-meier": {
-      "displayName": "Kaplan-Meier Survival Curves",
-      "description": "Step-function survival curves for clinical and epidemiological studies.",
-      "scopeWarning": "Enter pre-computed KM estimates (from R survfit, Stata stcurve, or SPSS) as data points forming a step function. Statistical tests must be done externally.",
-      "defaultCaption": "Kaplan--Meier overall survival curves for adjuvant vs.\\ standard chemotherapy ($n{=}200$; log-rank $p{=}0.008$)."
+      "displayName": "कपलान-मेयर सर्वाइवल कर्व्स",
+      "description": "नैदानिक ​​और महामारी विज्ञान के अध्ययन के लिए चरण-कार्य उत्तरजीविता वक्र।",
+      "scopeWarning": "Enter ने चरण फ़ंक्शन बनाने वाले डेटा बिंदुओं के रूप में KM अनुमानों (R Survfit, Stata stcurve, या SPSS से) की पूर्व-गणना की। सांख्यिकीय परीक्षण बाह्य रूप से किए जाने चाहिए।",
+      "defaultCaption": "कपलान--एडजुवेंट बनाम\\ मानक कीमोथेरेपी ($n{=}200$; लॉग-रैंक $p{=}0.008$) के लिए मेयर समग्र उत्तरजीविता वक्र।"
     },
     "network-graph": {
-      "displayName": "Network / Social Graphs",
-      "description": "Co-authorship, citation, or social influence networks with community clustering.",
-      "scopeWarning": "Suitable for illustrative networks (≤ 15 nodes). For large-scale visualization, use Gephi or NetworkX and import as PDF.",
-      "defaultCaption": "Co-authorship network — two research clusters connected by a bridge author."
+      "displayName": "नेटवर्क / सामाजिक ग्राफ़",
+      "description": "सामुदायिक क्लस्टरिंग के साथ सह-लेखन, उद्धरण, या सामाजिक प्रभाव नेटवर्क।",
+      "scopeWarning": "चित्रात्मक नेटवर्क के लिए उपयुक्त (≤ 15 नोड्स)। बड़े पैमाने पर विज़ुअलाइज़ेशन के लिए, Gephi या NetworkX का उपयोग करें और PDF के रूप में आयात करें।",
+      "defaultCaption": "सह-लेखक नेटवर्क - एक ब्रिज लेखक द्वारा जुड़े दो अनुसंधान क्लस्टर।"
     },
     "organic-chemistry-extended": {
-      "displayName": "Extended Organic Chemistry",
-      "description": "Organic structures with rings, functional groups, and stereocentres. ChemFig native.",
-      "scopeWarning": "Complex multi-ring or stereo structures may need manual ChemFig adjustment. For publication-quality structures, use ChemDraw and import as PDF.",
-      "defaultCaption": "Caffeine (1,3,7-trimethylxanthine) structural formula."
+      "displayName": "विस्तारित कार्बनिक रसायन शास्त्र",
+      "description": "रिंग्स, कार्यात्मक समूहों और स्टीरियोसेंटर के साथ कार्बनिक संरचनाएं। केमफिग मूलनिवासी।",
+      "scopeWarning": "जटिल मल्टी-रिंग या स्टीरियो संरचनाओं को मैन्युअल केमफिग समायोजन की आवश्यकता हो सकती है। प्रकाशन-गुणवत्ता संरचनाओं के लिए, ChemDraw का उपयोग करें और PDF के रूप में आयात करें।",
+      "defaultCaption": "कैफीन (1,3,7-ट्राइमेथिलक्सैन्थिन) संरचनात्मक सूत्र।"
     },
     "reaction-mechanisms": {
-      "displayName": "Basic Reaction Mechanisms",
-      "description": "Reaction mechanisms including C-C bond forming reactions, substitutions, and eliminations.",
-      "scopeWarning": "Suitable for standard mechanisms in theses. Complex multi-step mechanisms with curved arrows require manual ChemFig adjustment.",
-      "defaultCaption": "Aldol condensation: base-catalysed formation of a $\\beta$-hydroxy carbonyl compound."
+      "displayName": "बुनियादी प्रतिक्रिया तंत्र",
+      "description": "प्रतिक्रिया तंत्र जिसमें C-C बांड बनाने वाली प्रतिक्रियाएं, प्रतिस्थापन और उन्मूलन शामिल हैं।",
+      "scopeWarning": "थीसिस में मानक तंत्र के लिए उपयुक्त। घुमावदार तीरों के साथ जटिल बहु-चरण तंत्र को मैन्युअल केमफ़िग समायोजन की आवश्यकता होती है।",
+      "defaultCaption": "एल्डोल संघनन: एक $\\beta$-हाइड्रॉक्सी कार्बोनिल यौगिक का आधार-उत्प्रेरित गठन।"
     },
     "er-diagrams": {
-      "displayName": "ER Diagrams",
-      "description": "Entity-relationship diagrams for database design. TikZ native.",
-      "scopeWarning": "Suitable for standard ER diagrams in theses. Complex schemas with many entities benefit from Draw.io exported as PDF.",
-      "defaultCaption": "ER diagram for a university course-enrollment system."
+      "displayName": "ER आरेख",
+      "description": "डेटाबेस डिज़ाइन के लिए इकाई-संबंध आरेख। टिक्ज़ मूल निवासी।",
+      "scopeWarning": "थीसिस में मानक ER आरेखों के लिए उपयुक्त। कई संस्थाओं वाले जटिल स्कीमा PDF के रूप में निर्यात किए गए Draw.io से लाभान्वित होते हैं।",
+      "defaultCaption": "विश्वविद्यालय पाठ्यक्रम-नामांकन प्रणाली के लिए ER आरेख।"
     },
     "state-machines": {
-      "displayName": "State Machines",
-      "description": "Finite state machines and automata with states, transitions, and labels.",
-      "scopeWarning": "Suitable for DFA/NFA and reactive system diagrams in theses. For large automata, generate from Graphviz/PlantUML and import as PDF.",
-      "defaultCaption": "Traffic-light finite state machine (timer-driven)."
+      "displayName": "राज्य मशीनें",
+      "description": "राज्यों, संक्रमणों और लेबलों के साथ परिमित राज्य मशीनें और ऑटोमेटा।",
+      "scopeWarning": "थीसिस में DFA/NFA और प्रतिक्रियाशील सिस्टम आरेख के लिए उपयुक्त। बड़े ऑटोमेटा के लिए, ग्राफ़विज़/PlantUML से उत्पन्न करें और PDF के रूप में आयात करें।",
+      "defaultCaption": "ट्रैफ़िक-लाइट परिमित राज्य मशीन (टाइमर-चालित)।"
     },
     "markov-chains": {
-      "displayName": "Markov Chains",
-      "description": "Markov chain diagrams with states and transition probabilities.",
-      "scopeWarning": "Suitable for illustrative Markov chains in theses. For inference or simulation, use R/Python and import results as figures.",
-      "defaultCaption": "Weather Markov chain (Sunny / Cloudy / Rainy)."
+      "displayName": "मार्कोव चेन्स",
+      "description": "राज्यों और संक्रमण संभावनाओं के साथ मार्कोव श्रृंखला आरेख।",
+      "scopeWarning": "थीसिस में उदाहरणात्मक मार्कोव श्रृंखलाओं के लिए उपयुक्त। अनुमान या अनुकरण के लिए, R/Python का उपयोग करें और परिणामों को आंकड़ों के रूप में आयात करें।",
+      "defaultCaption": "मौसम मार्कोव श्रृंखला (धूप/बादल/बरसात)।"
     },
     "bode-nyquist": {
-      "displayName": "Bode / Nyquist Diagrams",
-      "description": "Frequency response: Bode magnitude + phase, or Nyquist plot. Second-order transfer functions.",
-      "scopeWarning": "Enter your system transfer function as a pgfplots expression. Compute poles/zeros in MATLAB/Python first.",
-      "defaultCaption": "Bode plot of $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
+      "displayName": "बोड/नाइक्विस्ट आरेख",
+      "description": "आवृत्ति प्रतिक्रिया: बोड परिमाण + चरण, या नाइक्विस्ट प्लॉट। दूसरे क्रम के स्थानांतरण कार्य।",
+      "scopeWarning": "Enter आपका सिस्टम ट्रांसफर फ़ंक्शन एक pgfplots अभिव्यक्ति के रूप में। पहले MATLAB/Python में ध्रुव/शून्य की गणना करें।",
+      "defaultCaption": "$G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$) का बोड प्लॉट।"
     },
     "plots-3d": {
-      "displayName": "3D Scientific Plots",
-      "description": "3D surfaces, wireframes, and contour plots. PGFPlots native.",
-      "scopeWarning": "3D plots compile slowly for fine meshes. Keep samples ≤ 25×25 for reasonable compile time.",
-      "defaultCaption": "Standard bivariate normal density $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
+      "displayName": "3डी वैज्ञानिक कथानक",
+      "description": "3डी सतहें, वायरफ्रेम और समोच्च प्लॉट। पीजीएफप्लॉट मूल निवासी।",
+      "scopeWarning": "3डी प्लॉट महीन जाली के लिए धीरे-धीरे संकलित होते हैं। उचित संकलन समय के लिए नमूने ≤ 25×25 रखें।",
+      "defaultCaption": "मानक द्विचर सामान्य घनत्व $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
     },
     "phase-diagrams": {
-      "displayName": "Phase Diagrams",
-      "description": "Phase portraits, nullclines, and stability diagrams for dynamical systems.",
-      "scopeWarning": "Suitable for 2D phase planes and nullcline plots. Full vector-field arrows require manual pgfplots quiver adjustments.",
-      "defaultCaption": "Lotka--Volterra phase plane: prey $x$ vs predator $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
+      "displayName": "चरण आरेख",
+      "description": "गतिशील प्रणालियों के लिए चरण चित्र, नलक्लाइन और स्थिरता आरेख।",
+      "scopeWarning": "2डी चरण विमानों और नलक्लाइन प्लॉट के लिए उपयुक्त। पूर्ण वेक्टर-फ़ील्ड तीरों को मैन्युअल pgfplots तरकश समायोजन की आवश्यकता होती है।",
+      "defaultCaption": "लोटका--वोल्टेरा चरण विमान: शिकार $x$ बनाम शिकारी $y$ नलक्लाइन ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)।"
     },
     "heat-maps": {
-      "displayName": "Correlation Heat Maps",
-      "description": "Correlation matrices and heat maps using pgfplots matrix plot. Values between -1 and 1, color-mapped.",
-      "scopeWarning": "Suitable for small matrices (≤ 10×10). Compute correlations in R/Python first, then enter the values here.",
-      "defaultCaption": "Pearson correlation matrix for four psychometric variables."
+      "displayName": "सहसंबंध ताप मानचित्र",
+      "description": "pgfplots मैट्रिक्स प्लॉट का उपयोग करके सहसंबंध मैट्रिक्स और हीट मैप। -1 और 1 के बीच के मान, रंग-मैप किए गए।",
+      "scopeWarning": "छोटे मैट्रिक्स के लिए उपयुक्त (≤ 10×10)। पहले R/Python में सहसंबंधों की गणना करें, फिर यहां मान दर्ज करें।",
+      "defaultCaption": "चार साइकोमेट्रिक चर के लिए पियर्सन सहसंबंध मैट्रिक्स।"
     },
     "supply-demand": {
-      "displayName": "Supply & Demand Curves",
-      "description": "Supply and demand with equilibrium, consumer/producer surplus, and optional curve shifts.",
-      "scopeWarning": "Suitable for illustrative partial-equilibrium analysis in theses. Non-linear elasticity curves may need manual pgfplots adjustment.",
-      "defaultCaption": "Supply and demand: original equilibrium $E_0$ and demand shift $D \\to D'$ after income increase."
+      "displayName": "आपूर्ति एवं मांग वक्र",
+      "description": "संतुलन, उपभोक्ता/निर्माता अधिशेष और वैकल्पिक वक्र बदलाव के साथ आपूर्ति और मांग।",
+      "scopeWarning": "थीसिस में उदाहरणात्मक आंशिक-संतुलन विश्लेषण के लिए उपयुक्त। गैर-रैखिक लोच वक्रों को मैन्युअल पीजीएफप्लॉट समायोजन की आवश्यकता हो सकती है।",
+      "defaultCaption": "आपूर्ति और मांग: मूल संतुलन $E_0$ और आय वृद्धि के बाद मांग बदलाव $D \\to D'$।"
     },
     "uml-class-diagrams": {
-      "displayName": "UML Class Diagrams",
-      "description": "UML class diagrams with inheritance, interfaces, composition, and association.",
-      "scopeWarning": "Generates simplified class boxes. For full UML compliance, use PlantUML or draw.io and import as PDF.",
-      "defaultCaption": "Repository pattern with Observer: \\\\ $<<$interface$>>$ classes, inheritance and composition."
+      "displayName": "UML क्लास आरेख",
+      "description": "विरासत, इंटरफेस, संरचना और एसोसिएशन के साथ UML वर्ग आरेख।",
+      "scopeWarning": "सरलीकृत क्लास बॉक्स उत्पन्न करता है। पूर्ण UML अनुपालन के लिए, PlantUML या Draw.io का उपयोग करें और PDF के रूप में आयात करें।",
+      "defaultCaption": "ऑब्जर्वर के साथ रिपोजिटरी पैटर्न: $<<$interface$>>$ कक्षाएं, विरासत और संरचना।"
     },
     "time-series": {
-      "displayName": "Time Series Plots",
-      "description": "Time series with trend, confidence band, and annotated events. Ideal for longitudinal data in economics, ecology, and clinical research.",
-      "scopeWarning": "Enter data points manually. For large or complex time series (ARIMA, seasonal), generate in R/Python and import as PDF.",
-      "defaultCaption": "Monthly CO$_2$ concentration (ppm) with long-term trend and $\\pm$2\\,SD band."
+      "displayName": "समय श्रृंखला प्लॉट",
+      "description": "ट्रेंड, कॉन्फिडेंस बैंड और एनोटेटेड इवेंट के साथ समय श्रृंखला। अर्थशास्त्र, पारिस्थितिकी और नैदानिक ​​अनुसंधान में अनुदैर्ध्य डेटा के लिए आदर्श।",
+      "scopeWarning": "Enter डेटा पॉइंट मैन्युअल रूप से। बड़ी या जटिल समय श्रृंखला (ARIMA, मौसमी) के लिए, R/Python में उत्पन्न करें और PDF के रूप में आयात करें।",
+      "defaultCaption": "दीर्घकालिक प्रवृत्ति और $\\pm$2\\,SD बैंड के साथ मासिक CO$_2$ एकाग्रता (पीपीएम)।"
     },
     "genealogy": {
-      "displayName": "Genealogy / Family Trees",
-      "description": "Family trees, dynasties, and clinical pedigrees with generations and relationship markers.",
-      "scopeWarning": "Suitable for simplified family trees. For clinical genetic pedigrees with standard symbols (ACMG/AMP), use dedicated pedigree software.",
-      "defaultCaption": "Family tree."
+      "displayName": "वंशावली/पारिवारिक वृक्ष",
+      "description": "परिवार के पेड़, राजवंश, और पीढ़ियों और संबंध मार्करों के साथ नैदानिक वंशावली।",
+      "scopeWarning": "सरलीकृत पारिवारिक वृक्षों के लिए उपयुक्त। मानक प्रतीकों (ACMG/AMP) के साथ नैदानिक आनुवंशिक वंशावली के लिए, समर्पित वंशावली सॉफ़्टवेयर का उपयोग करें।",
+      "defaultCaption": "परिवार वृक्ष."
     },
     "parallel-coordinates": {
-      "displayName": "Parallel Coordinates / Criteria Matrix",
-      "description": "Parallel coordinate plots for multi-criteria comparison of alternatives across normalised dimensions (0--10 scale).",
-      "scopeWarning": "Normalise all criteria to a common scale (e.g. 0--10) before entering values. For many alternatives (>6), use Python/R and import as PDF.",
-      "defaultCaption": "Parallel coordinate plot comparing five software solutions on four criteria."
+      "displayName": "समानांतर निर्देशांक/मानदंड मैट्रिक्स",
+      "description": "सामान्यीकृत आयामों (0-10 स्केल) में विकल्पों की बहु-मापदंड तुलना के लिए समानांतर समन्वय प्लॉट।",
+      "scopeWarning": "मान दर्ज करने से पहले सभी मानदंडों को एक सामान्य पैमाने (जैसे 0--10) पर सामान्यीकृत करें। कई विकल्पों (>6) के लिए, Python/R का उपयोग करें और PDF के रूप में आयात करें।",
+      "defaultCaption": "चार मानदंडों पर पांच सॉफ्टवेयर समाधानों की तुलना करने वाला समानांतर समन्वय प्लॉट।"
     },
     "energy-band-diagrams": {
-      "displayName": "Energy / Band Diagrams",
-      "description": "Energy level diagrams, band gaps, and semiconductor band diagrams for physics and materials science.",
-      "scopeWarning": "Energy values are illustrative. Replace with your material's actual band gap and Fermi level values from literature or calculation.",
-      "defaultCaption": "Semiconductor band diagram."
+      "displayName": "ऊर्जा/बैंड आरेख",
+      "description": "भौतिकी और सामग्री विज्ञान के लिए ऊर्जा स्तर आरेख, बैंड अंतराल और अर्धचालक बैंड आरेख।",
+      "scopeWarning": "ऊर्जा मान उदाहरणात्मक हैं। अपनी सामग्री के वास्तविक बैंड गैप और फ़र्मी स्तर के मानों को साहित्य या गणना से बदलें।",
+      "defaultCaption": "सेमीकंडक्टर बैंड आरेख."
     },
     "decision-tree": {
-      "displayName": "Decision Trees",
-      "description": "Decision tree diagrams with conditions, branches, and leaf outcomes. Covers classification trees, CART, and clinical decision rules.",
-      "scopeWarning": "Enter tree structure manually. For automatic tree generation from data, use scikit-learn/rpart and export the tree, then reproduce here for publication.",
-      "defaultCaption": "Decision tree."
+      "displayName": "निर्णय वृक्ष",
+      "description": "स्थितियों, शाखाओं और पत्ती परिणामों के साथ निर्णय वृक्ष आरेख। वर्गीकरण वृक्ष, CART, और नैदानिक निर्णय नियम शामिल हैं।",
+      "scopeWarning": "Enter वृक्ष संरचना मैन्युअल रूप से। डेटा से स्वचालित ट्री निर्माण के लिए, स्किकिट-लर्न/आरपार्ट का उपयोग करें और ट्री को निर्यात करें, फिर प्रकाशन के लिए यहां पुन: प्रस्तुत करें।",
+      "defaultCaption": "निर्णय वृक्ष."
     },
     "roc-curve": {
-      "displayName": "ROC Curves",
-      "description": "Receiver operating characteristic curves for classifier evaluation. Supports multiple classifiers with AUC annotation.",
-      "scopeWarning": "Enter pre-computed TPR/FPR values from your statistical software (sklearn, R pROC). This plugin renders the curve; model training must be done externally.",
-      "defaultCaption": "ROC curves (AUC shown in legend)."
+      "displayName": "ROC वक्र",
+      "description": "क्लासिफायर मूल्यांकन के लिए रिसीवर ऑपरेटिंग विशेषता वक्र। AUC एनोटेशन के साथ एकाधिक क्लासिफायर का समर्थन करता है।",
+      "scopeWarning": "Enter ने आपके सांख्यिकीय सॉफ़्टवेयर (sklearn, R pROC) से TPR/FPR मानों की पूर्व-गणना की। यह प्लगइन वक्र प्रस्तुत करता है; मॉडल प्रशिक्षण बाह्य रूप से किया जाना चाहिए।",
+      "defaultCaption": "ROC वक्र (AUC किंवदंती में दिखाया गया है)।"
     },
     "population-pyramid": {
-      "displayName": "Population Pyramid",
-      "description": "Age-sex population pyramid for demographic analysis. Shows male/female population distributions by age group.",
-      "scopeWarning": "Enter census data manually. For large datasets, generate the pyramid in R/Python and import as PDF, or use this plugin for illustrative sub-populations.",
-      "defaultCaption": "Population pyramid."
+      "displayName": "जनसंख्या पिरामिड",
+      "description": "जनसांख्यिकीय विश्लेषण के लिए आयु-लिंग जनसंख्या पिरामिड। आयु समूह के अनुसार पुरुष/महिला जनसंख्या वितरण दिखाता है।",
+      "scopeWarning": "Enter जनगणना डेटा मैन्युअल रूप से। बड़े डेटासेट के लिए, R/Python में पिरामिड बनाएं और PDF के रूप में आयात करें, या उदाहरणात्मक उप-आबादी के लिए इस प्लगइन का उपयोग करें।",
+      "defaultCaption": "जनसंख्या पिरामिड."
     },
     "error-bars": {
-      "displayName": "Error Bars & Confidence Intervals",
-      "description": "Line or bar plots with error bars for means ± SD/SE/CI. Essential for presenting experimental or survey results.",
-      "scopeWarning": "Enter means and error values (SD, SE, or 95% CI half-width) computed from your data. Raw data processing must be done externally.",
-      "defaultCaption": "Mean values with 95\\% confidence intervals."
+      "displayName": "त्रुटि पट्टियाँ और आत्मविश्वास अंतराल",
+      "description": "माध्य ± SD/SE/CI के लिए त्रुटि पट्टियों के साथ लाइन या बार प्लॉट। प्रयोगात्मक या सर्वेक्षण परिणाम प्रस्तुत करने के लिए आवश्यक।",
+      "scopeWarning": "Enter का मतलब और त्रुटि मान (SD, SE, या 95% CI आधी-चौड़ाई) आपके डेटा से गणना की गई है। कच्चे डेटा का प्रसंस्करण बाहरी रूप से किया जाना चाहिए।",
+      "defaultCaption": "95\\% विश्वास अंतराल के साथ माध्य मान।"
     },
     "causal-dag": {
-      "displayName": "Causal DAG / Path Diagrams",
-      "description": "Directed acyclic graphs (DAGs) for causal inference frameworks, structural equation models, and mediation analysis.",
-      "scopeWarning": "Suitable for causal diagrams up to ~10 variables. For complex SEM or large DAGs, use dagitty.net or lavaan and import the diagram.",
-      "defaultCaption": "Causal directed acyclic graph (DAG)."
+      "displayName": "कारण DAG / पथ आरेख",
+      "description": "कारण अनुमान ढांचे, संरचनात्मक समीकरण मॉडल और मध्यस्थता विश्लेषण के लिए निर्देशित एसाइक्लिक ग्राफ़ (डीएजी)।",
+      "scopeWarning": "~10 चर तक के कारण आरेखों के लिए उपयुक्त। जटिल SEM या बड़े DAG के लिए, dagitty.net या lavan का उपयोग करें और आरेख आयात करें।",
+      "defaultCaption": "कारण निर्देशित चक्रीय ग्राफ (DAG)."
     },
     "bar-charts": {
-      "displayName": "Bar Charts & Histograms",
-      "description": "Grouped and stacked bar charts, frequency histograms for descriptive statistics.",
-      "scopeWarning": "Enter values manually. For charts from large datasets, generate in R/Python and import as PDF.",
-      "defaultCaption": "Grouped bar chart — mean response by condition and time point ($\\pm$\\,SD)."
+      "displayName": "बार चार्ट और हिस्टोग्राम",
+      "description": "समूहीकृत और स्टैक्ड बार चार्ट, वर्णनात्मक आंकड़ों के लिए आवृत्ति हिस्टोग्राम।",
+      "scopeWarning": "Enter मान मैन्युअल रूप से। बड़े डेटासेट से चार्ट के लिए, R/Python में जेनरेट करें और PDF के रूप में आयात करें।",
+      "defaultCaption": "समूहित बार चार्ट - स्थिति और समय बिंदु द्वारा औसत प्रतिक्रिया ($\\pm$\\,SD)।"
     },
     "box-violin-plots": {
-      "displayName": "Box Plots & Distribution Comparisons",
-      "description": "Box-and-whisker plots with medians, quartiles, and outliers for comparing distributions.",
-      "scopeWarning": "Enter pre-computed statistics (median, Q1, Q3) from R/Python. Each data point encodes: x=group position, y=median, error=IQR half-range.",
-      "defaultCaption": "Distribution of test scores across three teaching conditions (box: Q1--Q3; whiskers: 1.5$\\times$IQR)."
+      "displayName": "बॉक्स प्लॉट और वितरण तुलना",
+      "description": "वितरण की तुलना के लिए माध्यिका, चतुर्थक और आउटलेर के साथ बॉक्स-एंड-व्हिस्कर प्लॉट।",
+      "scopeWarning": "R/Python से Enter पूर्व-गणना आँकड़े (माध्यिका, Q1, Q3)। प्रत्येक डेटा बिंदु एन्कोड करता है: x=समूह स्थिति, y=माध्यिका, त्रुटि=IQR अर्ध-श्रेणी।",
+      "defaultCaption": "तीन शिक्षण स्थितियों में परीक्षण स्कोर का वितरण (बॉक्स: Q1--Q3; मूंछें: 1.5$\\times$IQR)।"
     },
     "scatter-regression": {
-      "displayName": "Scatter Plots with Regression",
-      "description": "Scatter plot with linear regression line and optional confidence band.",
-      "scopeWarning": "Compute slope, intercept, and CI band in your statistical software. Enter the values here for publication-quality rendering.",
-      "defaultCaption": "BMI vs systolic blood pressure: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
+      "displayName": "प्रतिगमन के साथ स्कैटर प्लॉट",
+      "description": "रैखिक प्रतिगमन रेखा और वैकल्पिक कॉन्फिडेंस बैंड के साथ स्कैटर प्लॉट।",
+      "scopeWarning": "अपने सांख्यिकीय सॉफ़्टवेयर में ढलान, अवरोधन और CI बैंड की गणना करें। प्रकाशन-गुणवत्ता प्रतिपादन के लिए यहां मान Enter हैं।",
+      "defaultCaption": "BMI बनाम सिस्टोलिक रक्तचाप: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
     },
     "bayesian-networks": {
-      "displayName": "Bayesian Networks",
-      "description": "Directed acyclic graphs for Bayesian networks: latent cause nodes (ellipses) with observed evidence nodes (rectangles).",
-      "scopeWarning": "Suitable for illustrative Bayesian networks in theses. For inference, parameter learning, or dense graphs, use pgmpy, BayesFusion, GeNIe, or BUGS and import the final PDF/SVG.",
-      "defaultCaption": "Bayesian network for differential diagnosis of respiratory illness."
+      "displayName": "बायेसियन नेटवर्क",
+      "description": "बायेसियन नेटवर्क के लिए निर्देशित चक्रीय ग्राफ़: प्रेक्षित साक्ष्य नोड्स (आयत) के साथ अव्यक्त कारण नोड्स (दीर्घवृत्त)।",
+      "scopeWarning": "थीसिस में उदाहरणात्मक बायेसियन नेटवर्क के लिए उपयुक्त। अनुमान, पैरामीटर सीखने, या सघन ग्राफ़ के लिए, pgmpy, BayesFusion, GeNIe, या BUGS का उपयोग करें और अंतिम PDF/SVG आयात करें।",
+      "defaultCaption": "श्वसन संबंधी बीमारी के विभेदक निदान के लिए बायेसियन नेटवर्क।"
     },
     "sem-path-diagrams": {
-      "displayName": "SEM / Path Diagrams",
-      "description": "Structural equation model path diagrams with latent variables and measurement models.",
-      "scopeWarning": "Suitable for thesis-level SEM diagrams. For estimation, fit statistics, and standardized reports, use lavaan/R, Mplus, or AMOS and import the final diagram/table as PDF.",
-      "defaultCaption": "Technology Acceptance Model (TAM): perceived usefulness and ease of use predicting behavioural intention."
+      "displayName": "SEM / पथ आरेख",
+      "description": "अव्यक्त चर और माप मॉडल के साथ संरचनात्मक समीकरण मॉडल पथ आरेख।",
+      "scopeWarning": "थीसिस-स्तर SEM आरेखों के लिए उपयुक्त। अनुमान, फ़िट आँकड़े और मानकीकृत रिपोर्ट के लिए, लावान/R, Mplus, या AMOS का उपयोग करें और अंतिम आरेख/तालिका को PDF के रूप में आयात करें।",
+      "defaultCaption": "प्रौद्योगिकी स्वीकृति मॉडल (TAM): व्यावहारिक इरादे की भविष्यवाणी करते हुए कथित उपयोगिता और उपयोग में आसानी।"
     },
     "economic-causal": {
-      "displayName": "Economic Causal Diagrams",
-      "description": "Causal loop diagrams (CLD) with reinforcing and balancing feedback loops.",
-      "scopeWarning": "Suitable for simple causal loop models. For full system dynamics with stocks, flows, delays, or simulation, use Vensim, Stella, or AnyLogic and import the final PDF/SVG.",
-      "defaultCaption": "Wage--price spiral: reinforcing ($R$) and balancing ($B$) feedback loops."
+      "displayName": "आर्थिक कारण आरेख",
+      "description": "कॉज़ल लूप आरेख (CLD) फीडबैक लूप को मजबूत करने और संतुलित करने के साथ।",
+      "scopeWarning": "सरल कारण लूप मॉडल के लिए उपयुक्त। स्टॉक, प्रवाह, विलंब या सिमुलेशन के साथ पूर्ण सिस्टम गतिशीलता के लिए, वेनसिम, स्टेला, या AnyLogic का उपयोग करें और अंतिम PDF/SVG आयात करें।",
+      "defaultCaption": "वेतन--मूल्य सर्पिल: सुदृढ़ीकरण ($R$) और संतुलन ($B$) फीडबैक लूप।"
     },
     "legal-procedural": {
-      "displayName": "Legal / Procedural Diagrams",
-      "description": "Flowcharts for legal and administrative procedures: judicial, regulatory, and compliance workflows.",
-      "scopeWarning": "Suitable for standard legal/administrative process flows in theses. Complex multi-party or multi-jurisdiction procedures are better maintained in BPMN/draw.io and imported as PDF.",
-      "defaultCaption": "Criminal procedure: from complaint to verdict."
+      "displayName": "कानूनी/प्रक्रियात्मक आरेख",
+      "description": "कानूनी और प्रशासनिक प्रक्रियाओं के लिए फ़्लोचार्ट: न्यायिक, नियामक और अनुपालन वर्कफ़्लो।",
+      "scopeWarning": "थीसिस में मानक कानूनी/प्रशासनिक प्रक्रिया प्रवाह के लिए उपयुक्त। जटिल बहु-पक्षीय या बहु-क्षेत्राधिकार प्रक्रियाओं को BPMN/draw.io में बेहतर ढंग से बनाए रखा जाता है और PDF के रूप में आयात किया जाता है।",
+      "defaultCaption": "आपराधिक प्रक्रिया: शिकायत से फैसले तक।"
     },
     "pedagogical-diagrams": {
-      "displayName": "Pedagogical Diagrams",
-      "description": "Bloom's taxonomy, learning outcome hierarchies, and curriculum maps for education theses.",
-      "scopeWarning": "Covers common pedagogical diagram patterns. For complex instructional-design models, keep the authoritative diagram in draw.io/Figma and import the final PDF/SVG.",
-      "defaultCaption": "Revised Bloom's taxonomy — six cognitive levels with representative verbs (Anderson \\& Krathwohl, 2001)."
+      "displayName": "शैक्षणिक आरेख",
+      "description": "ब्लूम की वर्गीकरण, सीखने के परिणाम पदानुक्रम, और शिक्षा थीसिस के लिए पाठ्यक्रम मानचित्र।",
+      "scopeWarning": "सामान्य शैक्षणिक आरेख पैटर्न को शामिल करता है। जटिल अनुदेशात्मक-डिज़ाइन मॉडल के लिए, आधिकारिक आरेख को duck.io/Figma में रखें और अंतिम PDF/SVG आयात करें।",
+      "defaultCaption": "संशोधित ब्लूम का वर्गीकरण - प्रतिनिधि क्रियाओं के साथ छह संज्ञानात्मक स्तर (एंडरसन \\& क्रथवोहल, 2001)।"
     }
   }
 }

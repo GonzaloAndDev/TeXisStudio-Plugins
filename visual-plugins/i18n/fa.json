@@ -1,366 +1,366 @@
 {
   "plugins": {
     "phylogenetic-trees": {
-      "displayName": "Simple Phylogenetic Trees",
-      "description": "Build phylogenetic and taxonomic trees with labeled nodes and branch lengths.",
-      "scopeWarning": "Suitable for simplified phylogenies in theses. For complex phylogenetics with statistical support, use FigTree/iTOL and import as PDF.",
-      "defaultCaption": "Simplified phylogeny of selected vertebrate classes."
+      "displayName": "درختان فیلوژنتیک ساده",
+      "description": "درختان فیلوژنتیک و طبقه بندی را با گره ها و طول شاخه های برچسب دار بسازید.",
+      "scopeWarning": "مناسب برای فیلوژنی های ساده شده در پایان نامه ها. برای فیلوژنتیک پیچیده با پشتیبانی آماری، از FigTree/iTOL استفاده کنید و به عنوان PDF وارد کنید.",
+      "defaultCaption": "فیلوژنی ساده شده طبقات مهره داران انتخاب شده."
     },
     "dna-rna-sequences": {
-      "displayName": "DNA / RNA / Protein Sequences",
-      "description": "Display biological sequences with color-coded bases, codon highlighting, and alignment marks.",
-      "defaultCaption": "Start codon and reading frame of a short mRNA sequence."
+      "displayName": "DNA / RNA / توالی پروتئین",
+      "description": "توالی‌های بیولوژیکی را با پایه‌های رنگی، برجسته‌سازی کدون، و علامت‌های تراز نمایش دهید.",
+      "defaultCaption": "کدون و فریم خواندن یک توالی کوتاه mRNA را شروع کنید."
     },
     "biomedical-flow": {
-      "displayName": "Biomedical Flow Diagrams",
-      "description": "Biological and clinical process flows — signaling pathways, metabolic steps, treatment algorithms.",
-      "defaultCaption": "MAPK/ERK signalling cascade with feedback inhibition."
+      "displayName": "نمودارهای جریان زیست پزشکی",
+      "description": "جریان‌های فرآیند بیولوژیکی و بالینی - مسیرهای سیگنال‌دهی، مراحل متابولیک، الگوریتم‌های درمان.",
+      "defaultCaption": "آبشار سیگنالینگ MAPK/ERK با مهار بازخورد."
     },
     "consort-flow": {
-      "displayName": "CONSORT / Clinical Trial Flow",
-      "description": "CONSORT-style flow diagrams for randomized clinical trials — enrollment, allocation, follow-up, analysis.",
-      "defaultCaption": "CONSORT 2010 flow diagram."
+      "displayName": "CONSORT / جریان کارآزمایی بالینی",
+      "description": "نمودارهای جریان سبک CONSORT- برای کارآزمایی‌های بالینی تصادفی - ثبت‌نام، تخصیص، پیگیری، تجزیه و تحلیل.",
+      "defaultCaption": "نمودار جریان CONSORT 2010."
     },
     "biological-pathways": {
-      "displayName": "Schematic Biological Pathways",
-      "description": "Simplified metabolic and signaling pathway schemes for thesis figures.",
-      "scopeWarning": "Suitable for simplified pathway diagrams in theses and reports. Not a substitute for KEGG, Reactome, or professional pathway visualization tools.",
-      "defaultCaption": "Central carbon metabolism: glycolysis and TCA cycle entry."
+      "displayName": "مسیرهای بیولوژیکی شماتیک",
+      "description": "طرحهای متابولیک و مسیر سیگنالینگ ساده برای شکل پایان نامه.",
+      "scopeWarning": "مناسب برای نمودارهای مسیر ساده شده در پایان نامه ها و گزارش ها. جایگزینی برای KEGG، Reactome یا ابزارهای تجسم مسیر حرفه ای نیست.",
+      "defaultCaption": "متابولیسم کربن مرکزی: گلیکولیز و ورود به چرخه TCA."
     },
     "chemical-formulas": {
-      "displayName": "Chemical Formulas",
-      "description": "Write chemical formulas with charges, states, and subscripts. Uses mhchem — LaTeX native.",
-      "defaultCaption": "Selected inorganic formulas with oxidation states and phases."
+      "displayName": "فرمول های شیمیایی",
+      "description": "فرمول های شیمیایی را با بارها، حالت ها و زیرنویس ها بنویسید. از mhchem — LaTeX بومی استفاده می کند.",
+      "defaultCaption": "فرمول‌های معدنی انتخابی با حالت‌ها و فازهای اکسیداسیون."
     },
     "chemical-reactions": {
-      "displayName": "Chemical Reactions",
-      "description": "Build chemical reaction equations with arrows, conditions, and catalysts. Uses mhchem.",
-      "defaultCaption": "Acid--base neutralisation and combustion reactions."
+      "displayName": "واکنش های شیمیایی",
+      "description": "معادلات واکنش شیمیایی را با فلش ها، شرایط و کاتالیزورها بسازید. از mhchem استفاده می کند.",
+      "defaultCaption": "واکنش های خنثی سازی و احتراق اسید-باز."
     },
     "reaction-equilibria": {
-      "displayName": "Reaction Equilibria & Conditions",
-      "description": "Chemical equilibrium reactions with conditions above/below the arrow. Uses mhchem.",
-      "defaultCaption": "Haber process and esterification equilibria."
+      "displayName": "تعادل و شرایط واکنش",
+      "description": "واکنش‌های تعادل شیمیایی با شرایط بالا/زیر فلش. از mhchem استفاده می کند.",
+      "defaultCaption": "فرایند هابر و تعادل استری."
     },
     "chemical-structures": {
-      "displayName": "Chemical Structures",
-      "description": "Simple organic structures and ring systems using ChemFig. Benzene, functional groups, ring compounds.",
-      "scopeWarning": "Suitable for simple organic structures in theses. Complex multi-ring systems may need manual ChemFig adjustment. For full structural chemistry, use ChemDraw and import as PDF/SVG.",
-      "defaultCaption": "Aspirin (acetylsalicylic acid) structural formula."
+      "displayName": "ساختارهای شیمیایی",
+      "description": "ساختارهای آلی ساده و سیستم های حلقه ای با استفاده از ChemFig. بنزن، گروه های عاملی، ترکیبات حلقه ای.",
+      "scopeWarning": "مناسب برای ساختارهای ارگانیک ساده در پایان نامه ها. سیستم های پیچیده چند حلقه ای ممکن است به تنظیم دستی ChemFig نیاز داشته باشند. برای شیمی ساختاری کامل، از ChemDraw استفاده کنید و به عنوان PDF/SVG وارد کنید.",
+      "defaultCaption": "فرمول ساختاری آسپرین (اسید استیل سالیسیلیک)."
     },
     "basic-electrical-circuits": {
-      "displayName": "Basic Electrical Circuits",
-      "description": "Visual circuit builder: resistors, capacitors, inductors, sources, switches, diodes. CircuiTikZ native.",
-      "defaultCaption": "RC low-pass filter circuit with voltage divider."
+      "displayName": "مدارهای الکتریکی اساسی",
+      "description": "سازنده مدار بصری: مقاومت ها، خازن ها، سلف ها، منابع، سوئیچ ها، دیودها. CircuiTikZ بومی.",
+      "defaultCaption": "مدار فیلتر پایین گذر RC با تقسیم کننده ولتاژ."
     },
     "block-diagrams-control": {
-      "displayName": "Block Diagrams / Control Systems",
-      "description": "Control system block diagrams with transfer functions, summing junctions, and feedback loops.",
-      "defaultCaption": "PID closed-loop control system block diagram."
+      "displayName": "نمودارهای بلوک / سیستم های کنترل",
+      "description": "نمودارهای بلوک سیستم را با توابع انتقال، پیوندهای جمع، و حلقه های بازخورد کنترل کنید.",
+      "defaultCaption": "نمودار بلوک سیستم کنترل حلقه بسته PID."
     },
     "flowcharts": {
-      "displayName": "Flowcharts",
-      "description": "Academic and process flowcharts with decision diamonds, process boxes, and connector arrows.",
-      "defaultCaption": "Research methodology flowchart."
+      "displayName": "فلوچارت",
+      "description": "نمونه‌های جریان آکادمیک و فرآیند با الماس تصمیم، جعبه‌های فرآیند، و پیکان‌های رابط.",
+      "defaultCaption": "نمودار روش تحقیق."
     },
     "software-architecture": {
-      "displayName": "Software / System Architecture",
-      "description": "Component, layer, and system architecture diagrams.",
-      "scopeWarning": "Suitable for standard architecture overviews. For complex UML or deployment diagrams, use Draw.io and import as PDF.",
-      "defaultCaption": "Three-tier web application architecture."
+      "displayName": "نرم افزار / معماری سیستم",
+      "description": "نمودارهای کامپوننت، لایه و معماری سیستم.",
+      "scopeWarning": "مناسب برای نمای کلی معماری استاندارد. برای نمودارهای پیچیده UML یا استقرار، از Draw.io استفاده کنید و به عنوان PDF وارد کنید.",
+      "defaultCaption": "معماری برنامه وب سه لایه."
     },
     "venn-set-diagrams": {
-      "displayName": "Venn / Set Diagrams",
-      "description": "Create Venn diagrams and set-theory diagrams with labeled circles and intersections.",
-      "defaultCaption": "Three-set Venn diagram showing mixed-methods research design."
+      "displayName": "ون / تنظیم نمودارها",
+      "description": "نمودارهای Venn و نمودارهای نظریه مجموعه‌ها را با دایره‌ها و تقاطع‌های برچسب‌گذاری شده ایجاد کنید.",
+      "defaultCaption": "نمودار ون سه مجموعه ای که طرح تحقیق با روش های ترکیبی را نشان می دهد."
     },
     "plane-geometry": {
-      "displayName": "Plane Geometry",
-      "description": "Geometric shapes: triangles, polygons, circles, angles, perpendiculars, parallels.",
-      "defaultCaption": "Right triangle with altitude from hypotenuse — geometric mean relations."
+      "displayName": "هندسه صفحه",
+      "description": "اشکال هندسی: مثلث، چند ضلعی، دایره، زاویه، عمود، موازی.",
+      "defaultCaption": "مثلث قائم الزاویه با ارتفاع از هیپوتنوز - روابط میانگین هندسی."
     },
     "analytic-geometry": {
-      "displayName": "Analytic Geometry",
-      "description": "Coordinate systems with curves, lines, tangents, and labeled points.",
-      "defaultCaption": "Parabola $f(x)=x^2-2x-3$ with roots, vertex, and tangent at $x=2$."
+      "displayName": "هندسه تحلیلی",
+      "description": "سیستم‌های مختصات را با منحنی‌ها، خطوط، مماس‌ها و نقاط برچسب‌گذاری شده هماهنگ کنید.",
+      "defaultCaption": "پارابولا $f(x)=x^2-2x-3$ با ریشه، رأس و مماس در $x=2$."
     },
     "probability-trees": {
-      "displayName": "Probability Trees",
-      "description": "Visual probability trees with branch probabilities and outcomes. forest native.",
-      "defaultCaption": "Probability tree — two coin flips."
+      "displayName": "درخت احتمال",
+      "description": "درختان احتمال بصری با احتمالات شاخه و نتایج. بومی جنگل.",
+      "defaultCaption": "درخت احتمال — دو ورق سکه."
     },
     "lab-setups": {
-      "displayName": "Simple Lab Setups",
-      "description": "Basic laboratory apparatus diagrams: flasks, beakers, burettes, tube assemblies.",
-      "scopeWarning": "Covers standard lab apparatus. For specialized equipment diagrams, use dedicated illustration tools and import as PDF.",
-      "defaultCaption": "Simple laboratory setup."
+      "displayName": "تنظیمات آزمایشگاهی ساده",
+      "description": "نمودارهای اصلی دستگاه آزمایشگاهی: فلاسک، بشر، بورت، مجموعه لوله.",
+      "scopeWarning": "دستگاه های آزمایشگاهی استاندارد را پوشش می دهد. برای نمودارهای تجهیزات تخصصی، از ابزارهای تصویرسازی اختصاصی استفاده کنید و به عنوان PDF وارد کنید.",
+      "defaultCaption": "تنظیم آزمایشگاهی ساده."
     },
     "syntax-trees": {
-      "displayName": "Syntax / Linguistic Trees",
-      "description": "Phrase-structure and dependency trees for linguistics. forest native.",
-      "defaultCaption": "Phrase-structure tree."
+      "displayName": "نحو / درختان زبانی",
+      "description": "عبارت-ساختار و درختان وابستگی برای زبانشناسی. بومی جنگل.",
+      "defaultCaption": "درخت ساختار عبارت."
     },
     "concept-maps": {
-      "displayName": "Concept Maps & Argument Diagrams",
-      "description": "Concept maps, mind maps, and argumentative structure diagrams.",
-      "defaultCaption": "Concept map."
+      "displayName": "نقشه‌های مفهومی و نمودارهای استدلال",
+      "description": "نقشه‌های مفهومی، نقشه‌های ذهنی، و نمودارهای ساختار استدلالی.",
+      "defaultCaption": "نقشه مفهومی."
     },
     "visual-equations": {
-      "displayName": "Visual Equations",
-      "description": "Build mathematical equations, expressions, and formulas with a visual editor. Outputs LaTeX native.",
-      "defaultCaption": "Quadratic formula and quadratic form."
+      "displayName": "معادلات بصری",
+      "description": "معادلات، عبارات و فرمول های ریاضی را با ویرایشگر بصری بسازید. خروجی LaTeX بومی.",
+      "defaultCaption": "فرمول درجه دوم و فرم درجه دوم."
     },
     "matrices-determinants": {
-      "displayName": "Matrices & Determinants",
-      "description": "Create matrices and determinants of any size with visual cell editing.",
-      "defaultCaption": "3D rotation matrix around the $z$-axis by angle $\\theta$."
+      "displayName": "ماتریس و تعیین کننده",
+      "description": "با ویرایش سلولی بصری، ماتریس ها و عوامل تعیین کننده را با هر اندازه ای ایجاد کنید.",
+      "defaultCaption": "ماتریس چرخش سه بعدی حول $z$-axis بر اساس زاویه $\\theta$."
     },
     "systems-of-equations": {
-      "displayName": "Systems of Equations",
-      "description": "Build systems of linear or nonlinear equations with aligned formatting.",
-      "defaultCaption": "System of three linear equations (fluid flow balance)."
+      "displayName": "سیستم های معادلات",
+      "description": "سیستم‌هایی از معادلات خطی یا غیرخطی با قالب‌بندی تراز شده بسازید.",
+      "defaultCaption": "سیستم سه معادله خطی (تعادل جریان سیال)."
     },
     "piecewise-functions": {
-      "displayName": "Piecewise Functions",
-      "description": "Define functions by cases or parts with a visual row editor.",
-      "defaultCaption": "Heaviside step function and ReLU activation function."
+      "displayName": "توابع تکه ای",
+      "description": "با یک ویرایشگر ردیف بصری، توابع را بر اساس موارد یا قسمت‌ها تعریف کنید.",
+      "defaultCaption": "عملکرد مرحله Heaviside و عملکرد فعال‌سازی ReLU."
     },
     "vectors-fields": {
-      "displayName": "Vectors & Simple Fields",
-      "description": "Draw vectors, vector decomposition, and simple field representations.",
-      "defaultCaption": "Vector addition — parallelogram law: $\\vec{R} = \\vec{A} + \\vec{B}$."
+      "displayName": "بردارها و فیلدهای ساده",
+      "description": "بردارها، تجزیه برداری، و نمایش میدان ساده را رسم کنید.",
+      "defaultCaption": "جمع بردار — قانون متوازی الاضلاع: $\\vec{R} = \\vec{A} + \\vec{B}$."
     },
     "free-body-diagrams": {
-      "displayName": "Free Body Diagrams",
-      "description": "Build free body diagrams with forces, mass blocks, and labeled arrows.",
-      "defaultCaption": "Free body diagram — block on surface with applied force at angle $\\alpha$."
+      "displayName": "نمودارهای بدنه رایگان",
+      "description": "نمودار بدن آزاد را با نیروها، بلوک‌های جرم، و فلش‌های برچسب‌دار بسازید.",
+      "defaultCaption": "نمودار بدنه آزاد - بلوک روی سطح با نیروی اعمال شده در زاویه $\\alpha$."
     },
     "inclined-plane-pulleys": {
-      "displayName": "Inclined Planes, Pulleys & Springs",
-      "description": "Mechanical systems: inclined planes, pulley setups, and spring-mass systems.",
-      "scopeWarning": "Generates accurate schematic diagrams. Highly complex multi-pulley systems may need manual TikZ adjustments.",
-      "defaultCaption": "Free-body diagram on inclined plane (angle $\\theta$)."
+      "displayName": "هواپیماهای شیبدار، قرقره ها و فنرها",
+      "description": "سیستم‌های مکانیکی: صفحات شیبدار، نصب قرقره‌ها و سیستم‌های جرمی فنر.",
+      "scopeWarning": "نمودارهای شماتیک دقیقی ایجاد می کند. سیستم‌های چند قرقره‌ای بسیار پیچیده ممکن است به تنظیمات دستی TikZ نیاز داشته باشند.",
+      "defaultCaption": "نمودار بدنه آزاد در صفحه شیبدار (زاویه $\\theta$)."
     },
     "wave-oscillation": {
-      "displayName": "Wave & Oscillation Diagrams",
-      "description": "Sinusoidal waves, damped oscillations, and wave superposition. Covers SHM, transverse/longitudinal waves, and interference patterns.",
-      "defaultCaption": "Sinusoidal wave $y = A\\sin(\\omega t)$ with damped envelope."
+      "displayName": "نمودارهای موج و نوسان",
+      "description": "امواج سینوسی، نوسانات میرا، و برهم نهی موج. SHM، امواج عرضی/طولی و الگوهای تداخل را پوشش می‌دهد.",
+      "defaultCaption": "موج سینوسی $y = A\\sin(\\omega t)$ با پوشش مرطوب."
     },
     "geometric-optics": {
-      "displayName": "Geometric Optics",
-      "description": "Lenses, mirrors, ray diagrams, and refraction diagrams.",
-      "scopeWarning": "Suitable for standard ray diagrams. Complex optical systems with multiple elements may need manual adjustment.",
-      "defaultCaption": "Converging thin lens — three principal ray construction."
+      "displayName": "اپتیک هندسی",
+      "description": "عدسی‌ها، آینه‌ها، نمودارهای پرتو، و نمودارهای شکست.",
+      "scopeWarning": "مناسب برای نمودارهای پرتوی استاندارد. سیستم‌های نوری پیچیده با عناصر متعدد ممکن است نیاز به تنظیم دستی داشته باشند.",
+      "defaultCaption": "عدسی نازک همگرا - ساختار سه پرتوی اصلی."
     },
     "gantt-charts": {
-      "displayName": "Gantt Charts",
-      "description": "Research and project Gantt charts with tasks, groups, milestones, and dependencies. pgfgantt native.",
-      "defaultCaption": "Doctoral research schedule by semester."
+      "displayName": "نمودار گانت",
+      "description": "نمودارهای گانت را با وظایف، گروه ها، نقاط عطف، و وابستگی ها تحقیق و پروژه کنید. pgfgantt بومی.",
+      "defaultCaption": "برنامه تحقیقات دکترا بر اساس ترم."
     },
     "timelines": {
-      "displayName": "Timelines",
-      "description": "Historical, research, and narrative timelines with labeled events.",
-      "defaultCaption": "Key milestones in molecular biology (1944--2003)."
+      "displayName": "خط های زمانی",
+      "description": "زمان‌های زمانی تاریخی، پژوهشی و روایی با رویدادهای برچسب‌گذاری شده.",
+      "defaultCaption": "نقاط عطف کلیدی در زیست شناسی مولکولی (1944-2003)."
     },
     "function-plots-2d": {
-      "displayName": "2D Function Plots",
-      "description": "Plot mathematical functions with labeled axes, grid, and legend. PGFPlots native.",
-      "defaultCaption": "Trigonometric functions $\\sin x$ and $\\cos x$."
+      "displayName": "نقشه های تابع دوبعدی",
+      "description": "توابع ریاضی را با محورها، شبکه و افسانه برچسب‌گذاری شده ترسیم کنید. PGFPlots بومی.",
+      "defaultCaption": "توابع مثلثاتی $\\sin x$ و $\\cos x$."
     },
     "parametric-polar-plots": {
-      "displayName": "Parametric & Polar Plots",
-      "description": "Parametric curves and polar function plots.",
-      "defaultCaption": "Lissajous curve $(\\cos 2t,\\, \\sin 3t)$."
+      "displayName": "نقشه های پارامتری و قطبی",
+      "description": "منحنی های پارامتریک و نمودارهای تابع قطبی.",
+      "defaultCaption": "منحنی Lissajous $(\\cos 2t,\\, \\sin 3t)$."
     },
     "basic-statistics": {
-      "displayName": "Basic Statistics Charts",
-      "description": "Bar charts, histograms, and scatter plots from tabular data.",
-      "defaultCaption": "Comparative bar chart — measurement results by experimental group."
+      "displayName": "نمودارهای آمار پایه",
+      "description": "نمودارهای میله‌ای، هیستوگرام، و نمودارهای پراکنده از داده‌های جدولی.",
+      "defaultCaption": "نمودار میله ای مقایسه - نتایج اندازه گیری بر اساس گروه آزمایشی."
     },
     "statistical-distributions": {
-      "displayName": "Statistical Distributions",
-      "description": "Normal, t, chi-squared, and other distributions with shaded regions.",
-      "defaultCaption": "Standard normal distribution with 95\\% confidence interval shaded."
+      "displayName": "توزیعات آماری",
+      "description": "عادی، t، مجذور کای، و توزیع های دیگر با مناطق سایه دار.",
+      "defaultCaption": "توزیع نرمال استاندارد با فاصله اطمینان %95 سایه دار."
     },
     "kaplan-meier": {
-      "displayName": "Kaplan-Meier Survival Curves",
-      "description": "Step-function survival curves for clinical and epidemiological studies.",
-      "scopeWarning": "Enter pre-computed KM estimates (from R survfit, Stata stcurve, or SPSS) as data points forming a step function. Statistical tests must be done externally.",
-      "defaultCaption": "Kaplan--Meier overall survival curves for adjuvant vs.\\ standard chemotherapy ($n{=}200$; log-rank $p{=}0.008$)."
+      "displayName": "منحنی های بقای کاپلان-مایر",
+      "description": "منحنی‌های بقای عملکرد مرحله‌ای برای مطالعات بالینی و اپیدمیولوژیک.",
+      "scopeWarning": "Enter تخمین های KM از پیش محاسبه شده (از R survfit، Stata stcurve، یا SPSS) به عنوان نقاط داده ای که یک تابع مرحله را تشکیل می دهند. تست های آماری باید به صورت خارجی انجام شود.",
+      "defaultCaption": "کاپلان--منحنی‌های بقای کلی مایر برای شیمی‌درمانی کمکی در مقابل شیمی‌درمانی استاندارد ($n{=}200$؛ log-rank $p{=}0.008$)."
     },
     "network-graph": {
-      "displayName": "Network / Social Graphs",
-      "description": "Co-authorship, citation, or social influence networks with community clustering.",
-      "scopeWarning": "Suitable for illustrative networks (≤ 15 nodes). For large-scale visualization, use Gephi or NetworkX and import as PDF.",
-      "defaultCaption": "Co-authorship network — two research clusters connected by a bridge author."
+      "displayName": "شبکه / نمودارهای اجتماعی",
+      "description": "شبکه‌های هم‌نویسی، نقل‌قول یا نفوذ اجتماعی با خوشه‌بندی انجمن.",
+      "scopeWarning": "مناسب برای شبکه های گویا (≤ 15 گره). برای تجسم در مقیاس بزرگ، از Gephi یا NetworkX استفاده کنید و به عنوان PDF وارد کنید.",
+      "defaultCaption": "شبکه هم نویسندگی — دو خوشه تحقیقاتی که توسط نویسنده پل به هم متصل شده اند."
     },
     "organic-chemistry-extended": {
-      "displayName": "Extended Organic Chemistry",
-      "description": "Organic structures with rings, functional groups, and stereocentres. ChemFig native.",
-      "scopeWarning": "Complex multi-ring or stereo structures may need manual ChemFig adjustment. For publication-quality structures, use ChemDraw and import as PDF.",
-      "defaultCaption": "Caffeine (1,3,7-trimethylxanthine) structural formula."
+      "displayName": "شیمی آلی توسعه یافته",
+      "description": "ساختارهای ارگانیک با حلقه‌ها، گروه‌های عملکردی و مراکز استریو. ChemFig بومی.",
+      "scopeWarning": "ساختارهای پیچیده چند حلقه ای یا استریو ممکن است به تنظیم دستی ChemFig نیاز داشته باشند. برای ساختارهای با کیفیت انتشار، از ChemDraw استفاده کنید و به عنوان PDF وارد کنید.",
+      "defaultCaption": "فرمول ساختاری کافئین (1،3،7-trimethylxanthine)."
     },
     "reaction-mechanisms": {
-      "displayName": "Basic Reaction Mechanisms",
-      "description": "Reaction mechanisms including C-C bond forming reactions, substitutions, and eliminations.",
-      "scopeWarning": "Suitable for standard mechanisms in theses. Complex multi-step mechanisms with curved arrows require manual ChemFig adjustment.",
-      "defaultCaption": "Aldol condensation: base-catalysed formation of a $\\beta$-hydroxy carbonyl compound."
+      "displayName": "مکانیسم‌های واکنش اساسی",
+      "description": "مکانیسم‌های واکنش شامل واکنش‌های تشکیل پیوند C-C، جایگزینی و حذف.",
+      "scopeWarning": "مناسب برای مکانیسم های استاندارد در پایان نامه ها. مکانیسم‌های پیچیده چند مرحله‌ای با پیکان‌های منحنی نیاز به تنظیم دستی ChemFig دارند.",
+      "defaultCaption": "تراکم آلدول: تشکیل یک ترکیب کربونیل $\\beta$-hydroxy hydroxy."
     },
     "er-diagrams": {
-      "displayName": "ER Diagrams",
-      "description": "Entity-relationship diagrams for database design. TikZ native.",
-      "scopeWarning": "Suitable for standard ER diagrams in theses. Complex schemas with many entities benefit from Draw.io exported as PDF.",
-      "defaultCaption": "ER diagram for a university course-enrollment system."
+      "displayName": "نمودارهای ER",
+      "description": "نمودارهای نهاد-رابطه برای طراحی پایگاه داده. TikZ بومی.",
+      "scopeWarning": "مناسب برای نمودارهای استاندارد ER در پایان نامه ها. طرحواره های پیچیده با موجودیت های بسیار از Draw.io که به عنوان PDF صادر شده است بهره می برند.",
+      "defaultCaption": "نمودار ER برای سیستم ثبت نام دوره دانشگاه."
     },
     "state-machines": {
-      "displayName": "State Machines",
-      "description": "Finite state machines and automata with states, transitions, and labels.",
-      "scopeWarning": "Suitable for DFA/NFA and reactive system diagrams in theses. For large automata, generate from Graphviz/PlantUML and import as PDF.",
-      "defaultCaption": "Traffic-light finite state machine (timer-driven)."
+      "displayName": "ماشین های دولتی",
+      "description": "ماشین‌ها و خودکارهای حالت محدود با حالت‌ها، انتقال‌ها و برچسب‌ها.",
+      "scopeWarning": "مناسب برای DFA/NFA و نمودارهای سیستم واکنشی در پایان نامه ها. برای خودکارهای بزرگ، از Graphviz/PlantUML تولید کنید و به عنوان PDF وارد کنید.",
+      "defaultCaption": "ماشین حالت محدود چراغ راهنمایی (تایمر محور)."
     },
     "markov-chains": {
-      "displayName": "Markov Chains",
-      "description": "Markov chain diagrams with states and transition probabilities.",
-      "scopeWarning": "Suitable for illustrative Markov chains in theses. For inference or simulation, use R/Python and import results as figures.",
-      "defaultCaption": "Weather Markov chain (Sunny / Cloudy / Rainy)."
+      "displayName": "زنجیره مارکوف",
+      "description": "نمودارهای زنجیره ای مارکوف با حالت ها و احتمالات انتقال.",
+      "scopeWarning": "مناسب برای نشان دادن زنجیره مارکوف در پایان نامه ها. برای استنباط یا شبیه سازی، از R/Python استفاده کنید و نتایج را به عنوان شکل وارد کنید.",
+      "defaultCaption": "آب و هوا زنجیره مارکوف (آفتابی / ابری / بارانی)."
     },
     "bode-nyquist": {
-      "displayName": "Bode / Nyquist Diagrams",
-      "description": "Frequency response: Bode magnitude + phase, or Nyquist plot. Second-order transfer functions.",
-      "scopeWarning": "Enter your system transfer function as a pgfplots expression. Compute poles/zeros in MATLAB/Python first.",
-      "defaultCaption": "Bode plot of $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
+      "displayName": "نمودارهای Bode / Nyquist",
+      "description": "پاسخ فرکانس: قدر Bode + فاز یا نمودار نایکیست. توابع انتقال مرتبه دوم.",
+      "scopeWarning": "Enter عملکرد انتقال سیستم شما به عنوان یک عبارت pgfplots. ابتدا قطب/صفرها را در MATLAB/Python محاسبه کنید.",
+      "defaultCaption": "نقشه Bode $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$، $\\zeta{=}0.3$)."
     },
     "plots-3d": {
-      "displayName": "3D Scientific Plots",
-      "description": "3D surfaces, wireframes, and contour plots. PGFPlots native.",
-      "scopeWarning": "3D plots compile slowly for fine meshes. Keep samples ≤ 25×25 for reasonable compile time.",
-      "defaultCaption": "Standard bivariate normal density $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
+      "displayName": "نقشه های علمی سه بعدی",
+      "description": "سطوح سه بعدی، قاب سیمی، و نمودارهای کانتور. PGFPlots بومی.",
+      "scopeWarning": "نقشه های سه بعدی به آرامی برای مش های ظریف جمع آوری می شوند. نمونه ها ≤ 25×25 را برای زمان کامپایل معقول نگه دارید.",
+      "defaultCaption": "چگالی معمولی دو متغیره استاندارد $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
     },
     "phase-diagrams": {
-      "displayName": "Phase Diagrams",
-      "description": "Phase portraits, nullclines, and stability diagrams for dynamical systems.",
-      "scopeWarning": "Suitable for 2D phase planes and nullcline plots. Full vector-field arrows require manual pgfplots quiver adjustments.",
-      "defaultCaption": "Lotka--Volterra phase plane: prey $x$ vs predator $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
+      "displayName": "نمودار فاز",
+      "description": "پرتره‌های فاز، خطوط تهی، و نمودارهای پایداری برای سیستم‌های دینامیکی.",
+      "scopeWarning": "مناسب برای صفحات فاز دو بعدی و نمودارهای تهی. فلش‌های میدان برداری کامل به تنظیمات دستی quiver pgfplots نیاز دارند.",
+      "defaultCaption": "Lotka--صفحه فاز ولترا: طعمه $x$ در مقابل شکارچی $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
     },
     "heat-maps": {
-      "displayName": "Correlation Heat Maps",
-      "description": "Correlation matrices and heat maps using pgfplots matrix plot. Values between -1 and 1, color-mapped.",
-      "scopeWarning": "Suitable for small matrices (≤ 10×10). Compute correlations in R/Python first, then enter the values here.",
-      "defaultCaption": "Pearson correlation matrix for four psychometric variables."
+      "displayName": "نقشه های حرارتی همبستگی",
+      "description": "ماتریس های همبستگی و نقشه های حرارتی با استفاده از نمودار ماتریس pgfplots. مقادیر بین -1 و 1، نقشه‌برداری رنگی.",
+      "scopeWarning": "مناسب برای ماتریس های کوچک (≤ 10×10). ابتدا همبستگی ها را در R/Python محاسبه کنید، سپس مقادیر را در اینجا وارد کنید.",
+      "defaultCaption": "ماتریس همبستگی پیرسون برای چهار متغیر روانسنجی."
     },
     "supply-demand": {
-      "displayName": "Supply & Demand Curves",
-      "description": "Supply and demand with equilibrium, consumer/producer surplus, and optional curve shifts.",
-      "scopeWarning": "Suitable for illustrative partial-equilibrium analysis in theses. Non-linear elasticity curves may need manual pgfplots adjustment.",
-      "defaultCaption": "Supply and demand: original equilibrium $E_0$ and demand shift $D \\to D'$ after income increase."
+      "displayName": "منحنی های عرضه و تقاضا",
+      "description": "عرضه و تقاضا با تعادل، مازاد مصرف کننده/تولیدکننده، و تغییر منحنی اختیاری.",
+      "scopeWarning": "مناسب برای تجزیه و تحلیل تصویری تعادل جزئی در پایان نامه ها. منحنی های کشش غیر خطی ممکن است به تنظیم دستی pgfplots نیاز داشته باشند.",
+      "defaultCaption": "عرضه و تقاضا: تعادل اولیه $E_0$ و تغییر تقاضا به $D \\to D'$ پس از افزایش درآمد."
     },
     "uml-class-diagrams": {
-      "displayName": "UML Class Diagrams",
-      "description": "UML class diagrams with inheritance, interfaces, composition, and association.",
-      "scopeWarning": "Generates simplified class boxes. For full UML compliance, use PlantUML or draw.io and import as PDF.",
-      "defaultCaption": "Repository pattern with Observer: \\\\ $<<$interface$>>$ classes, inheritance and composition."
+      "displayName": "نمودار کلاس UML",
+      "description": "نمودار کلاس UML با وراثت، رابط‌ها، ترکیب، و ارتباط.",
+      "scopeWarning": "جعبه های کلاس ساده شده را ایجاد می کند. برای انطباق کامل با UML، از PlantUML یا draw.io استفاده کنید و به عنوان PDF وارد کنید.",
+      "defaultCaption": "الگوی مخزن با Observer: کلاس‌های $<<$interface$>>$، وراثت و ترکیب."
     },
     "time-series": {
-      "displayName": "Time Series Plots",
-      "description": "Time series with trend, confidence band, and annotated events. Ideal for longitudinal data in economics, ecology, and clinical research.",
-      "scopeWarning": "Enter data points manually. For large or complex time series (ARIMA, seasonal), generate in R/Python and import as PDF.",
-      "defaultCaption": "Monthly CO$_2$ concentration (ppm) with long-term trend and $\\pm$2\\,SD band."
+      "displayName": "نقشه های سری زمانی",
+      "description": "سری های زمانی با روند، باند اطمینان، و رویدادهای حاشیه نویسی شده. ایده آل برای داده های طولی در اقتصاد، بوم شناسی، و تحقیقات بالینی.",
+      "scopeWarning": "Enter داده ها را به صورت دستی نشان می دهد. برای سری های زمانی بزرگ یا پیچیده (ARIMA، فصلی)، در R/Python تولید کنید و به عنوان PDF وارد کنید.",
+      "defaultCaption": "غلظت ماهانه CO$_2$ (ppm) با روند بلندمدت و باند $\\pm$2\\,SD."
     },
     "genealogy": {
-      "displayName": "Genealogy / Family Trees",
-      "description": "Family trees, dynasties, and clinical pedigrees with generations and relationship markers.",
-      "scopeWarning": "Suitable for simplified family trees. For clinical genetic pedigrees with standard symbols (ACMG/AMP), use dedicated pedigree software.",
-      "defaultCaption": "Family tree."
+      "displayName": "تبارشناسی / درختان خانواده",
+      "description": "درختان خانواده، سلسله‌ها و شجره‌نامه‌های بالینی با نسل‌ها و نشانگرهای رابطه.",
+      "scopeWarning": "مناسب برای درختان خانوادگی ساده شده. برای شجره نامه های ژنتیکی بالینی با نمادهای استاندارد (ACMG/AMP)، از نرم افزار اختصاصی شجره نامه استفاده کنید.",
+      "defaultCaption": "شجره خانواده."
     },
     "parallel-coordinates": {
-      "displayName": "Parallel Coordinates / Criteria Matrix",
-      "description": "Parallel coordinate plots for multi-criteria comparison of alternatives across normalised dimensions (0--10 scale).",
-      "scopeWarning": "Normalise all criteria to a common scale (e.g. 0--10) before entering values. For many alternatives (>6), use Python/R and import as PDF.",
-      "defaultCaption": "Parallel coordinate plot comparing five software solutions on four criteria."
+      "displayName": "مختصات موازی / ماتریس معیار",
+      "description": "نمودار مختصات موازی برای مقایسه چند معیاره جایگزین ها در ابعاد نرمال شده (مقیاس 0-10).",
+      "scopeWarning": "قبل از وارد کردن مقادیر، همه معیارها را در یک مقیاس مشترک (مثلاً 0-10) عادی کنید. برای بسیاری از گزینه ها (>6)، از Python/R استفاده کنید و به عنوان PDF وارد کنید.",
+      "defaultCaption": "نمودار مختصات موازی که پنج راه حل نرم افزاری را بر اساس چهار معیار مقایسه می کند."
     },
     "energy-band-diagrams": {
-      "displayName": "Energy / Band Diagrams",
-      "description": "Energy level diagrams, band gaps, and semiconductor band diagrams for physics and materials science.",
-      "scopeWarning": "Energy values are illustrative. Replace with your material's actual band gap and Fermi level values from literature or calculation.",
-      "defaultCaption": "Semiconductor band diagram."
+      "displayName": "انرژی / نمودارهای باند",
+      "description": "نمودارهای سطح انرژی، شکاف باند، و نمودارهای نوار نیمه هادی برای فیزیک و علم مواد.",
+      "scopeWarning": "مقادیر انرژی گویا هستند. شکاف باند واقعی مواد و مقادیر سطح فرمی را از ادبیات یا محاسبات جایگزین کنید.",
+      "defaultCaption": "نمودار نوار نیمه هادی."
     },
     "decision-tree": {
-      "displayName": "Decision Trees",
-      "description": "Decision tree diagrams with conditions, branches, and leaf outcomes. Covers classification trees, CART, and clinical decision rules.",
-      "scopeWarning": "Enter tree structure manually. For automatic tree generation from data, use scikit-learn/rpart and export the tree, then reproduce here for publication.",
-      "defaultCaption": "Decision tree."
+      "displayName": "درخت تصمیم",
+      "description": "نمودارهای درخت تصمیم با شرایط، شاخه ها و نتایج برگ. درختان طبقه بندی، CART و قوانین تصمیم گیری بالینی را پوشش می دهد.",
+      "scopeWarning": "ساختار درختی Enter به صورت دستی. برای تولید خودکار درخت از داده ها، از scikit-learn/rpart استفاده کنید و درخت را صادر کنید، سپس برای انتشار در اینجا تکثیر کنید.",
+      "defaultCaption": "درخت تصمیم."
     },
     "roc-curve": {
-      "displayName": "ROC Curves",
-      "description": "Receiver operating characteristic curves for classifier evaluation. Supports multiple classifiers with AUC annotation.",
-      "scopeWarning": "Enter pre-computed TPR/FPR values from your statistical software (sklearn, R pROC). This plugin renders the curve; model training must be done externally.",
-      "defaultCaption": "ROC curves (AUC shown in legend)."
+      "displayName": "منحنی‌های ROC",
+      "description": "منحنی های مشخصه عملکرد گیرنده برای ارزیابی طبقه بندی کننده. از چندین طبقه بندی کننده با حاشیه نویسی AUC پشتیبانی می کند.",
+      "scopeWarning": "Enter مقادیر TPR/FPR را از پیش محاسبه کرده از نرم افزار آماری شما (sklearn، R pROC). این پلاگین منحنی را ارائه می دهد. آموزش مدل باید به صورت خارجی انجام شود.",
+      "defaultCaption": "منحنی‌های ROC (AUC در افسانه نشان داده شده است)."
     },
     "population-pyramid": {
-      "displayName": "Population Pyramid",
-      "description": "Age-sex population pyramid for demographic analysis. Shows male/female population distributions by age group.",
-      "scopeWarning": "Enter census data manually. For large datasets, generate the pyramid in R/Python and import as PDF, or use this plugin for illustrative sub-populations.",
-      "defaultCaption": "Population pyramid."
+      "displayName": "هرم جمعیت",
+      "description": "هرم جمعیت سن-جنس برای تجزیه و تحلیل جمعیت شناختی. توزیع جمعیت مرد/زن را بر اساس گروه سنی نشان می دهد.",
+      "scopeWarning": "داده های سرشماری Enter به صورت دستی. برای مجموعه داده های بزرگ، هرم را در R/Python ایجاد کنید و به عنوان PDF وارد کنید، یا از این افزونه برای زیرجمعیت های گویا استفاده کنید.",
+      "defaultCaption": "هرم جمعیت."
     },
     "error-bars": {
-      "displayName": "Error Bars & Confidence Intervals",
-      "description": "Line or bar plots with error bars for means ± SD/SE/CI. Essential for presenting experimental or survey results.",
-      "scopeWarning": "Enter means and error values (SD, SE, or 95% CI half-width) computed from your data. Raw data processing must be done externally.",
-      "defaultCaption": "Mean values with 95\\% confidence intervals."
+      "displayName": "نوارهای خطا و فواصل اطمینان",
+      "description": "نمودارهای خط یا نوار با نوارهای خطا برای میانگین ± SD/SE/CI. برای ارائه نتایج آزمایشی یا نظرسنجی ضروری است.",
+      "scopeWarning": "Enter میانگین و مقادیر خطا (SD، SE، یا 95٪ CI نیم عرض) محاسبه شده از داده های شما. پردازش داده های خام باید به صورت خارجی انجام شود.",
+      "defaultCaption": "مقادیر متوسط با بازه‌های اطمینان %95."
     },
     "causal-dag": {
-      "displayName": "Causal DAG / Path Diagrams",
-      "description": "Directed acyclic graphs (DAGs) for causal inference frameworks, structural equation models, and mediation analysis.",
-      "scopeWarning": "Suitable for causal diagrams up to ~10 variables. For complex SEM or large DAGs, use dagitty.net or lavaan and import the diagram.",
-      "defaultCaption": "Causal directed acyclic graph (DAG)."
+      "displayName": "علت DAG / نمودارهای مسیر",
+      "description": "نمودارهای غیر چرخه ای جهت دار (DAGs) برای چارچوب های استنتاج علی، مدل های معادلات ساختاری، و تجزیه و تحلیل میانجی.",
+      "scopeWarning": "مناسب برای نمودارهای علی تا ~ 10 متغیر. برای SEM پیچیده یا DAGهای بزرگ، از dagitty.net یا lavaan استفاده کنید و نمودار را وارد کنید.",
+      "defaultCaption": "گراف غیر چرخه ای جهت دار علی (DAG)."
     },
     "bar-charts": {
-      "displayName": "Bar Charts & Histograms",
-      "description": "Grouped and stacked bar charts, frequency histograms for descriptive statistics.",
-      "scopeWarning": "Enter values manually. For charts from large datasets, generate in R/Python and import as PDF.",
-      "defaultCaption": "Grouped bar chart — mean response by condition and time point ($\\pm$\\,SD)."
+      "displayName": "نمودارهای نواری و هیستوگرام",
+      "description": "نمودارهای میله ای گروه بندی و انباشته، هیستوگرام فرکانس برای آمار توصیفی.",
+      "scopeWarning": "Enter به صورت دستی مقادیر می دهد. برای نمودارهایی از مجموعه داده های بزرگ، در R/Python ایجاد کنید و به عنوان PDF وارد کنید.",
+      "defaultCaption": "نمودار میله‌ای گروه‌بندی شده — میانگین پاسخ براساس شرایط و نقطه زمانی ($\\pm$\\,SD)."
     },
     "box-violin-plots": {
-      "displayName": "Box Plots & Distribution Comparisons",
-      "description": "Box-and-whisker plots with medians, quartiles, and outliers for comparing distributions.",
-      "scopeWarning": "Enter pre-computed statistics (median, Q1, Q3) from R/Python. Each data point encodes: x=group position, y=median, error=IQR half-range.",
-      "defaultCaption": "Distribution of test scores across three teaching conditions (box: Q1--Q3; whiskers: 1.5$\\times$IQR)."
+      "displayName": "قطعات جعبه و مقایسه توزیع",
+      "description": "نمودارهای جعبه و سبیل با میانه ها، چارک ها و نقاط پرت برای مقایسه توزیع ها.",
+      "scopeWarning": "آمار از پیش محاسبه شده Enter (متوسط، Q1، Q3) از R/Python. هر نقطه داده کدگذاری می کند: x=موقعیت گروه، y=میانگین، error=IQR نیم برد.",
+      "defaultCaption": "توزیع نمرات آزمون در سه شرایط آموزشی (جعبه: Q1--Q3؛ سبیل: 1.5$\\times$IQR)."
     },
     "scatter-regression": {
-      "displayName": "Scatter Plots with Regression",
-      "description": "Scatter plot with linear regression line and optional confidence band.",
-      "scopeWarning": "Compute slope, intercept, and CI band in your statistical software. Enter the values here for publication-quality rendering.",
-      "defaultCaption": "BMI vs systolic blood pressure: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
+      "displayName": "نقشه‌های پراکنده با رگرسیون",
+      "description": "نمودار پراکندگی با خط رگرسیون خطی و باند اطمینان اختیاری.",
+      "scopeWarning": "شیب، رهگیری و باند CI را در نرم افزار آماری خود محاسبه کنید. Enter مقادیر اینجا برای رندر با کیفیت انتشار.",
+      "defaultCaption": "BMI در مقابل فشار خون سیستولیک: $\\hat{y} = 89.4 + 1.83x$، $R^2{=}0.74$، $p{<}0.001$ ($n{=}120$)."
     },
     "bayesian-networks": {
-      "displayName": "Bayesian Networks",
-      "description": "Directed acyclic graphs for Bayesian networks: latent cause nodes (ellipses) with observed evidence nodes (rectangles).",
-      "scopeWarning": "Suitable for illustrative Bayesian networks in theses. For inference, parameter learning, or dense graphs, use pgmpy, BayesFusion, GeNIe, or BUGS and import the final PDF/SVG.",
-      "defaultCaption": "Bayesian network for differential diagnosis of respiratory illness."
+      "displayName": "شبکه های بیزی",
+      "description": "گراف‌های غیر چرخه‌ای جهت‌دار برای شبکه‌های بیزی: گره‌های علت پنهان (بیضی) با گره‌های شواهد مشاهده شده (مستطیل).",
+      "scopeWarning": "برای شبکه های بیزی گویا در پایان نامه ها مناسب است. برای استنتاج، یادگیری پارامتر یا نمودارهای متراکم، از pgmpy، BayesFusion، GenIe یا BUGS استفاده کنید و PDF/SVG نهایی را وارد کنید.",
+      "defaultCaption": "شبکه بیزی برای تشخیص افتراقی بیماری های تنفسی."
     },
     "sem-path-diagrams": {
-      "displayName": "SEM / Path Diagrams",
-      "description": "Structural equation model path diagrams with latent variables and measurement models.",
-      "scopeWarning": "Suitable for thesis-level SEM diagrams. For estimation, fit statistics, and standardized reports, use lavaan/R, Mplus, or AMOS and import the final diagram/table as PDF.",
-      "defaultCaption": "Technology Acceptance Model (TAM): perceived usefulness and ease of use predicting behavioural intention."
+      "displayName": "SEM / نمودارهای مسیر",
+      "description": "نمودارهای مسیر مدل معادلات ساختاری با متغیرهای پنهان و مدل‌های اندازه‌گیری.",
+      "scopeWarning": "مناسب برای نمودارهای SEM در سطح پایان نامه. برای تخمین، آمار مناسب و گزارش‌های استاندارد، از lavaan/R، Mplus یا AMOS استفاده کنید و نمودار/جدول نهایی را به‌عنوان PDF وارد کنید.",
+      "defaultCaption": "مدل پذیرش فناوری (TAM): سودمندی درک شده و سهولت استفاده برای پیش‌بینی قصد رفتاری."
     },
     "economic-causal": {
-      "displayName": "Economic Causal Diagrams",
-      "description": "Causal loop diagrams (CLD) with reinforcing and balancing feedback loops.",
-      "scopeWarning": "Suitable for simple causal loop models. For full system dynamics with stocks, flows, delays, or simulation, use Vensim, Stella, or AnyLogic and import the final PDF/SVG.",
-      "defaultCaption": "Wage--price spiral: reinforcing ($R$) and balancing ($B$) feedback loops."
+      "displayName": "نمودار علّی اقتصادی",
+      "description": "نمودار حلقه علّی (CLD) با حلقه‌های بازخورد تقویت‌کننده و متعادل کننده.",
+      "scopeWarning": "مناسب برای مدل های حلقه علّی ساده. برای پویایی کامل سیستم با سهام، جریان، تاخیر یا شبیه‌سازی، از Vensim، Stella یا AnyLogic استفاده کنید و PDF/SVG نهایی را وارد کنید.",
+      "defaultCaption": "مارپیچ دستمزد--قیمت: حلقه‌های بازخورد تقویت‌کننده ($R$) و متعادل کننده ($B$)."
     },
     "legal-procedural": {
-      "displayName": "Legal / Procedural Diagrams",
-      "description": "Flowcharts for legal and administrative procedures: judicial, regulatory, and compliance workflows.",
-      "scopeWarning": "Suitable for standard legal/administrative process flows in theses. Complex multi-party or multi-jurisdiction procedures are better maintained in BPMN/draw.io and imported as PDF.",
-      "defaultCaption": "Criminal procedure: from complaint to verdict."
+      "displayName": "نمودارهای قانونی / رویه ای",
+      "description": "نمونه‌های جریان برای رویه‌های قانونی و اداری: روند کار قضایی، نظارتی، و انطباق.",
+      "scopeWarning": "مناسب برای جریان های استاندارد قانونی/اداری در پایان نامه ها. رویه‌های پیچیده چند حزبی یا چند حوزه قضایی بهتر در BPMN/draw.io نگهداری می‌شوند و به عنوان PDF وارد می‌شوند.",
+      "defaultCaption": "آیین دادرسی کیفری: از شکایت تا حکم."
     },
     "pedagogical-diagrams": {
-      "displayName": "Pedagogical Diagrams",
-      "description": "Bloom's taxonomy, learning outcome hierarchies, and curriculum maps for education theses.",
-      "scopeWarning": "Covers common pedagogical diagram patterns. For complex instructional-design models, keep the authoritative diagram in draw.io/Figma and import the final PDF/SVG.",
-      "defaultCaption": "Revised Bloom's taxonomy — six cognitive levels with representative verbs (Anderson \\& Krathwohl, 2001)."
+      "displayName": "نمودارهای آموزشی",
+      "description": "طبقه بندی بلوم، سلسله مراتب نتایج یادگیری و نقشه های برنامه درسی پایان نامه های آموزشی.",
+      "scopeWarning": "الگوهای نمودار آموزشی رایج را پوشش می دهد. برای مدل‌های طراحی آموزشی پیچیده، نمودار معتبر را در draw.io/Figma نگه دارید و PDF/SVG نهایی را وارد کنید.",
+      "defaultCaption": "طبقه بندی بلوم تجدید نظر شده - شش سطح شناختی با افعال نماینده (Anderson \\& Krathwohl، 2001)."
     }
   }
 }

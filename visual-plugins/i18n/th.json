@@ -1,366 +1,366 @@
 {
   "plugins": {
     "phylogenetic-trees": {
-      "displayName": "Simple Phylogenetic Trees",
-      "description": "Build phylogenetic and taxonomic trees with labeled nodes and branch lengths.",
-      "scopeWarning": "Suitable for simplified phylogenies in theses. For complex phylogenetics with statistical support, use FigTree/iTOL and import as PDF.",
-      "defaultCaption": "Simplified phylogeny of selected vertebrate classes."
+      "displayName": "ต้นไม้สายวิวัฒนาการอย่างง่าย",
+      "description": "สร้างต้นไม้สายวิวัฒนาการและอนุกรมวิธานที่มีโหนดที่มีป้ายกำกับและความยาวกิ่ง",
+      "scopeWarning": "เหมาะสำหรับสายวิวัฒนาการแบบง่ายในวิทยานิพนธ์ สำหรับสายวิวัฒนาการที่ซับซ้อนพร้อมการสนับสนุนทางสถิติ ให้ใช้ FigTree/iTOL และนำเข้าเป็น PDF",
+      "defaultCaption": "สายวิวัฒนาการอย่างง่ายของคลาสสัตว์มีกระดูกสันหลังที่เลือก"
     },
     "dna-rna-sequences": {
-      "displayName": "DNA / RNA / Protein Sequences",
-      "description": "Display biological sequences with color-coded bases, codon highlighting, and alignment marks.",
-      "defaultCaption": "Start codon and reading frame of a short mRNA sequence."
+      "displayName": "ลำดับ DNA / RNA / โปรตีน",
+      "description": "แสดงลำดับทางชีวภาพด้วยฐานรหัสสี การเน้นโคดอน และเครื่องหมายการจัดตำแหน่ง",
+      "defaultCaption": "เริ่มโคดอนและอ่านเฟรมของลำดับ mRNA สั้น ๆ"
     },
     "biomedical-flow": {
-      "displayName": "Biomedical Flow Diagrams",
-      "description": "Biological and clinical process flows — signaling pathways, metabolic steps, treatment algorithms.",
-      "defaultCaption": "MAPK/ERK signalling cascade with feedback inhibition."
+      "displayName": "แผนภาพการไหลทางชีวการแพทย์",
+      "description": "การไหลของกระบวนการทางชีวภาพและทางคลินิก — เส้นทางการส่งสัญญาณ ขั้นตอนการเผาผลาญ อัลกอริธึมการรักษา",
+      "defaultCaption": "น้ำตกส่งสัญญาณ MAPK/ERK พร้อมการยับยั้งการป้อนกลับ"
     },
     "consort-flow": {
-      "displayName": "CONSORT / Clinical Trial Flow",
-      "description": "CONSORT-style flow diagrams for randomized clinical trials — enrollment, allocation, follow-up, analysis.",
-      "defaultCaption": "CONSORT 2010 flow diagram."
+      "displayName": "CONSORT / ขั้นตอนการทดลองทางคลินิก",
+      "description": "แผนภาพการไหลสไตล์ CONSORT- สำหรับการทดลองทางคลินิกแบบสุ่ม — การลงทะเบียน การจัดสรร การติดตามผล การวิเคราะห์",
+      "defaultCaption": "แผนภาพโฟลว์ CONSORT 2010"
     },
     "biological-pathways": {
-      "displayName": "Schematic Biological Pathways",
-      "description": "Simplified metabolic and signaling pathway schemes for thesis figures.",
-      "scopeWarning": "Suitable for simplified pathway diagrams in theses and reports. Not a substitute for KEGG, Reactome, or professional pathway visualization tools.",
-      "defaultCaption": "Central carbon metabolism: glycolysis and TCA cycle entry."
+      "displayName": "แผนผังวิถีทางชีววิทยา",
+      "description": "รูปแบบเส้นทางเมแทบอลิซึมและการส่งสัญญาณที่ง่ายขึ้นสำหรับตัวเลขวิทยานิพนธ์",
+      "scopeWarning": "เหมาะสำหรับแผนภาพวิถีแบบง่ายในวิทยานิพนธ์และรายงาน ไม่สามารถใช้แทน KEGG, Reactome หรือเครื่องมือแสดงภาพวิถีทางระดับมืออาชีพได้",
+      "defaultCaption": "เมแทบอลิซึมของคาร์บอนส่วนกลาง: ไกลโคไลซิสและการเข้าสู่วงจร TCA"
     },
     "chemical-formulas": {
-      "displayName": "Chemical Formulas",
-      "description": "Write chemical formulas with charges, states, and subscripts. Uses mhchem — LaTeX native.",
-      "defaultCaption": "Selected inorganic formulas with oxidation states and phases."
+      "displayName": "สูตรเคมี",
+      "description": "เขียนสูตรเคมีพร้อมประจุ สถานะ และตัวห้อย ใช้ mhchem — เนทิฟ LaTeX",
+      "defaultCaption": "สูตรอนินทรีย์ที่เลือกซึ่งมีสถานะออกซิเดชันและเฟส"
     },
     "chemical-reactions": {
-      "displayName": "Chemical Reactions",
-      "description": "Build chemical reaction equations with arrows, conditions, and catalysts. Uses mhchem.",
-      "defaultCaption": "Acid--base neutralisation and combustion reactions."
+      "displayName": "ปฏิกิริยาเคมี",
+      "description": "สร้างสมการปฏิกิริยาเคมีด้วยลูกศร สภาวะ และตัวเร่งปฏิกิริยา ใช้ mhchem",
+      "defaultCaption": "กรด--เบสทำให้เป็นกลางและปฏิกิริยาการเผาไหม้"
     },
     "reaction-equilibria": {
-      "displayName": "Reaction Equilibria & Conditions",
-      "description": "Chemical equilibrium reactions with conditions above/below the arrow. Uses mhchem.",
-      "defaultCaption": "Haber process and esterification equilibria."
+      "displayName": "สมดุลของปฏิกิริยาและเงื่อนไข",
+      "description": "ปฏิกิริยาสมดุลเคมีที่มีสภาวะด้านบน/ด้านล่างลูกศร ใช้ mhchem",
+      "defaultCaption": "กระบวนการฮาเบอร์และสมดุลเอสเทอริฟิเคชัน"
     },
     "chemical-structures": {
-      "displayName": "Chemical Structures",
-      "description": "Simple organic structures and ring systems using ChemFig. Benzene, functional groups, ring compounds.",
-      "scopeWarning": "Suitable for simple organic structures in theses. Complex multi-ring systems may need manual ChemFig adjustment. For full structural chemistry, use ChemDraw and import as PDF/SVG.",
-      "defaultCaption": "Aspirin (acetylsalicylic acid) structural formula."
+      "displayName": "โครงสร้างทางเคมี",
+      "description": "โครงสร้างอินทรีย์และระบบวงแหวนอย่างง่ายโดยใช้ ChemFig เบนซีน หมู่ฟังก์ชัน สารประกอบวงแหวน",
+      "scopeWarning": "เหมาะสำหรับโครงสร้างอินทรีย์อย่างง่ายในวิทยานิพนธ์ ระบบหลายวงแหวนที่ซับซ้อนอาจต้องมีการปรับ ChemFig ด้วยตนเอง สำหรับเคมีโครงสร้างเต็มรูปแบบ ให้ใช้ ChemDraw และนำเข้าเป็น PDF/SVG",
+      "defaultCaption": "สูตรโครงสร้างของแอสไพริน (กรดอะซิติลซาลิไซลิก)"
     },
     "basic-electrical-circuits": {
-      "displayName": "Basic Electrical Circuits",
-      "description": "Visual circuit builder: resistors, capacitors, inductors, sources, switches, diodes. CircuiTikZ native.",
-      "defaultCaption": "RC low-pass filter circuit with voltage divider."
+      "displayName": "วงจรไฟฟ้าพื้นฐาน",
+      "description": "ตัวสร้างวงจรภาพ: ตัวต้านทาน ตัวเก็บประจุ ตัวเหนี่ยวนำ แหล่งกำเนิด สวิตช์ ไดโอด CircuiTikZ เนทีฟ",
+      "defaultCaption": "วงจรกรองความถี่ต่ำผ่าน RC พร้อมตัวแบ่งแรงดันไฟฟ้า"
     },
     "block-diagrams-control": {
-      "displayName": "Block Diagrams / Control Systems",
-      "description": "Control system block diagrams with transfer functions, summing junctions, and feedback loops.",
-      "defaultCaption": "PID closed-loop control system block diagram."
+      "displayName": "บล็อกไดอะแกรม / ระบบควบคุม",
+      "description": "แผนภาพบล็อกระบบควบคุมพร้อมฟังก์ชันถ่ายโอน จุดรวม และลูปป้อนกลับ",
+      "defaultCaption": "แผนภาพบล็อกระบบควบคุมวงปิด PID"
     },
     "flowcharts": {
-      "displayName": "Flowcharts",
-      "description": "Academic and process flowcharts with decision diamonds, process boxes, and connector arrows.",
-      "defaultCaption": "Research methodology flowchart."
+      "displayName": "ผังงาน",
+      "description": "ผังงานทางวิชาการและกระบวนการพร้อมเพชรสำหรับการตัดสินใจ กล่องกระบวนการ และลูกศรเชื่อมต่อ",
+      "defaultCaption": "ผังระเบียบวิธีวิจัย"
     },
     "software-architecture": {
-      "displayName": "Software / System Architecture",
-      "description": "Component, layer, and system architecture diagrams.",
-      "scopeWarning": "Suitable for standard architecture overviews. For complex UML or deployment diagrams, use Draw.io and import as PDF.",
-      "defaultCaption": "Three-tier web application architecture."
+      "displayName": "ซอฟต์แวร์ / สถาปัตยกรรมระบบ",
+      "description": "ไดอะแกรมสถาปัตยกรรมส่วนประกอบ เลเยอร์ และระบบ",
+      "scopeWarning": "เหมาะสำหรับภาพรวมสถาปัตยกรรมมาตรฐาน สำหรับ UML ที่ซับซ้อนหรือไดอะแกรมการปรับใช้ ให้ใช้ Draw.io และนำเข้าเป็น PDF",
+      "defaultCaption": "สถาปัตยกรรมแอปพลิเคชันเว็บสามระดับ"
     },
     "venn-set-diagrams": {
-      "displayName": "Venn / Set Diagrams",
-      "description": "Create Venn diagrams and set-theory diagrams with labeled circles and intersections.",
-      "defaultCaption": "Three-set Venn diagram showing mixed-methods research design."
+      "displayName": "เวนน์ / เซ็ตไดอะแกรม",
+      "description": "สร้างแผนภาพเวนน์และแผนภาพทฤษฎีเซตด้วยวงกลมและทางแยกที่มีป้ายกำกับ",
+      "defaultCaption": "แผนภาพเวนน์สามชุดแสดงการออกแบบการวิจัยวิธีผสม"
     },
     "plane-geometry": {
-      "displayName": "Plane Geometry",
-      "description": "Geometric shapes: triangles, polygons, circles, angles, perpendiculars, parallels.",
-      "defaultCaption": "Right triangle with altitude from hypotenuse — geometric mean relations."
+      "displayName": "เรขาคณิตระนาบ",
+      "description": "รูปทรงเรขาคณิต: สามเหลี่ยม รูปหลายเหลี่ยม วงกลม มุม ตั้งฉาก เส้นขนาน",
+      "defaultCaption": "สามเหลี่ยมมุมฉากที่มีความสูงจากด้านตรงข้ามมุมฉาก — ความสัมพันธ์เฉลี่ยทางเรขาคณิต"
     },
     "analytic-geometry": {
-      "displayName": "Analytic Geometry",
-      "description": "Coordinate systems with curves, lines, tangents, and labeled points.",
-      "defaultCaption": "Parabola $f(x)=x^2-2x-3$ with roots, vertex, and tangent at $x=2$."
+      "displayName": "เรขาคณิตวิเคราะห์",
+      "description": "ประสานงานระบบด้วยเส้นโค้ง เส้น แทนเจนต์ และจุดที่มีป้ายกำกับ",
+      "defaultCaption": "พาราโบลา $f(x)=x^2-2x-3$ ที่มีราก จุดยอด และแทนเจนต์ที่ $x=2$"
     },
     "probability-trees": {
-      "displayName": "Probability Trees",
-      "description": "Visual probability trees with branch probabilities and outcomes. forest native.",
-      "defaultCaption": "Probability tree — two coin flips."
+      "displayName": "แผนผังความน่าจะเป็น",
+      "description": "ต้นไม้ความน่าจะเป็นแบบภาพที่มีความน่าจะเป็นแบบสาขาและผลลัพธ์ ชาวป่าพื้นเมือง",
+      "defaultCaption": "แผนผังความน่าจะเป็น — การพลิกเหรียญสองครั้ง"
     },
     "lab-setups": {
-      "displayName": "Simple Lab Setups",
-      "description": "Basic laboratory apparatus diagrams: flasks, beakers, burettes, tube assemblies.",
-      "scopeWarning": "Covers standard lab apparatus. For specialized equipment diagrams, use dedicated illustration tools and import as PDF.",
-      "defaultCaption": "Simple laboratory setup."
+      "displayName": "การตั้งค่าห้องปฏิบัติการอย่างง่าย",
+      "description": "แผนภาพอุปกรณ์ห้องปฏิบัติการขั้นพื้นฐาน: ขวดทดลอง บีกเกอร์ บิวเรตต์ ชุดประกอบท่อ",
+      "scopeWarning": "ครอบคลุมอุปกรณ์ห้องปฏิบัติการมาตรฐาน สำหรับไดอะแกรมอุปกรณ์พิเศษ ให้ใช้เครื่องมือภาพประกอบเฉพาะและนำเข้าเป็น PDF",
+      "defaultCaption": "การตั้งค่าห้องปฏิบัติการอย่างง่าย"
     },
     "syntax-trees": {
-      "displayName": "Syntax / Linguistic Trees",
-      "description": "Phrase-structure and dependency trees for linguistics. forest native.",
-      "defaultCaption": "Phrase-structure tree."
+      "displayName": "แผนผังไวยากรณ์ / ภาษาศาสตร์",
+      "description": "โครงสร้างวลีและโครงสร้างการพึ่งพาสำหรับภาษาศาสตร์ ชาวป่าพื้นเมือง",
+      "defaultCaption": "โครงสร้างวลี"
     },
     "concept-maps": {
-      "displayName": "Concept Maps & Argument Diagrams",
-      "description": "Concept maps, mind maps, and argumentative structure diagrams.",
-      "defaultCaption": "Concept map."
+      "displayName": "แผนที่แนวคิดและไดอะแกรมอาร์กิวเมนต์",
+      "description": "แผนที่แนวคิด แผนที่ความคิด และแผนภาพโครงสร้างเชิงโต้แย้ง",
+      "defaultCaption": "แผนที่แนวคิด"
     },
     "visual-equations": {
-      "displayName": "Visual Equations",
-      "description": "Build mathematical equations, expressions, and formulas with a visual editor. Outputs LaTeX native.",
-      "defaultCaption": "Quadratic formula and quadratic form."
+      "displayName": "สมการภาพ",
+      "description": "สร้างสมการทางคณิตศาสตร์ นิพจน์ และสูตรด้วยโปรแกรมแก้ไขภาพ เอาต์พุต LaTeX เนทิฟ",
+      "defaultCaption": "สูตรกำลังสองและรูปกำลังสอง"
     },
     "matrices-determinants": {
-      "displayName": "Matrices & Determinants",
-      "description": "Create matrices and determinants of any size with visual cell editing.",
-      "defaultCaption": "3D rotation matrix around the $z$-axis by angle $\\theta$."
+      "displayName": "เมทริกซ์และปัจจัยกำหนด",
+      "description": "สร้างเมทริกซ์และปัจจัยกำหนดทุกขนาดด้วยการแก้ไขเซลล์ภาพ",
+      "defaultCaption": "เมทริกซ์การหมุน 3 มิติรอบแกน $z$- ตามมุม $\\theta$"
     },
     "systems-of-equations": {
-      "displayName": "Systems of Equations",
-      "description": "Build systems of linear or nonlinear equations with aligned formatting.",
-      "defaultCaption": "System of three linear equations (fluid flow balance)."
+      "displayName": "ระบบสมการ",
+      "description": "สร้างระบบสมการเชิงเส้นหรือไม่เชิงเส้นด้วยการจัดรูปแบบที่สอดคล้องกัน",
+      "defaultCaption": "ระบบสมการเชิงเส้นสามสมการ (สมดุลการไหลของของไหล)"
     },
     "piecewise-functions": {
-      "displayName": "Piecewise Functions",
-      "description": "Define functions by cases or parts with a visual row editor.",
-      "defaultCaption": "Heaviside step function and ReLU activation function."
+      "displayName": "ฟังก์ชันทีละส่วน",
+      "description": "กำหนดฟังก์ชันตามกรณีหรือส่วนด้วยเครื่องมือแก้ไขแถวแบบภาพ",
+      "defaultCaption": "ฟังก์ชันขั้นบันไดข้างหนักและฟังก์ชันการเปิดใช้งาน ReLU"
     },
     "vectors-fields": {
-      "displayName": "Vectors & Simple Fields",
-      "description": "Draw vectors, vector decomposition, and simple field representations.",
-      "defaultCaption": "Vector addition — parallelogram law: $\\vec{R} = \\vec{A} + \\vec{B}$."
+      "displayName": "เวกเตอร์และฟิลด์แบบง่าย",
+      "description": "วาดเวกเตอร์ การสลายตัวของเวกเตอร์ และการแสดงฟิลด์อย่างง่าย",
+      "defaultCaption": "การบวกเวกเตอร์ — กฎสี่เหลี่ยมด้านขนาน: $\\vec{R} = \\vec{A} + \\vec{B}$"
     },
     "free-body-diagrams": {
-      "displayName": "Free Body Diagrams",
-      "description": "Build free body diagrams with forces, mass blocks, and labeled arrows.",
-      "defaultCaption": "Free body diagram — block on surface with applied force at angle $\\alpha$."
+      "displayName": "แผนภาพร่างกายฟรี",
+      "description": "สร้างแผนภาพร่างกายอย่างอิสระด้วยแรง บล็อกมวล และลูกศรที่มีป้ายกำกับ",
+      "defaultCaption": "แผนภาพตัวถังอิสระ — ปิดกั้นบนพื้นผิวด้วยแรงที่กระทำที่มุม $\\alpha$"
     },
     "inclined-plane-pulleys": {
-      "displayName": "Inclined Planes, Pulleys & Springs",
-      "description": "Mechanical systems: inclined planes, pulley setups, and spring-mass systems.",
-      "scopeWarning": "Generates accurate schematic diagrams. Highly complex multi-pulley systems may need manual TikZ adjustments.",
-      "defaultCaption": "Free-body diagram on inclined plane (angle $\\theta$)."
+      "displayName": "ระนาบเอียง รอก และสปริง",
+      "description": "ระบบเครื่องกล: ระนาบเอียง การตั้งค่ารอก และระบบมวลสปริง",
+      "scopeWarning": "สร้างไดอะแกรมแผนผังที่แม่นยำ ระบบหลายพูลเล่ย์ที่ซับซ้อนสูงอาจจำเป็นต้องปรับ TikZ ด้วยตนเอง",
+      "defaultCaption": "แผนภาพอิสระบนระนาบเอียง (มุม $\\theta$)"
     },
     "wave-oscillation": {
-      "displayName": "Wave & Oscillation Diagrams",
-      "description": "Sinusoidal waves, damped oscillations, and wave superposition. Covers SHM, transverse/longitudinal waves, and interference patterns.",
-      "defaultCaption": "Sinusoidal wave $y = A\\sin(\\omega t)$ with damped envelope."
+      "displayName": "ไดอะแกรมคลื่นและการสั่น",
+      "description": "คลื่นไซนูซอยด์ การแกว่งแบบหน่วง และการซ้อนของคลื่น ครอบคลุม SHM คลื่นตามขวาง/ตามยาว และรูปแบบการรบกวน",
+      "defaultCaption": "คลื่นไซน์ $y = A\\sin(\\omega t)$ พร้อมซองกันกระแทก"
     },
     "geometric-optics": {
-      "displayName": "Geometric Optics",
-      "description": "Lenses, mirrors, ray diagrams, and refraction diagrams.",
-      "scopeWarning": "Suitable for standard ray diagrams. Complex optical systems with multiple elements may need manual adjustment.",
-      "defaultCaption": "Converging thin lens — three principal ray construction."
+      "displayName": "ทัศนศาสตร์เชิงเรขาคณิต",
+      "description": "เลนส์ กระจก แผนภาพรังสี และแผนภาพการหักเหของแสง",
+      "scopeWarning": "เหมาะสำหรับไดอะแกรมรังสีมาตรฐาน ระบบออพติคอลที่ซับซ้อนที่มีหลายองค์ประกอบอาจต้องมีการปรับด้วยตนเอง",
+      "defaultCaption": "เลนส์บางเฉียบมาบรรจบกัน — โครงสร้างรังสีหลักสามประการ"
     },
     "gantt-charts": {
-      "displayName": "Gantt Charts",
-      "description": "Research and project Gantt charts with tasks, groups, milestones, and dependencies. pgfgantt native.",
-      "defaultCaption": "Doctoral research schedule by semester."
+      "displayName": "แผนภูมิแกนต์",
+      "description": "แผนภูมิแกนต์การวิจัยและโครงการพร้อมงาน กลุ่ม เหตุการณ์สำคัญ และการพึ่งพา pgfgantt พื้นเมือง",
+      "defaultCaption": "ตารางการวิจัยระดับปริญญาเอกแยกตามภาคการศึกษา"
     },
     "timelines": {
-      "displayName": "Timelines",
-      "description": "Historical, research, and narrative timelines with labeled events.",
-      "defaultCaption": "Key milestones in molecular biology (1944--2003)."
+      "displayName": "ไทม์ไลน์",
+      "description": "ไทม์ไลน์ทางประวัติศาสตร์ การวิจัย และการเล่าเรื่องพร้อมเหตุการณ์ที่มีป้ายกำกับ",
+      "defaultCaption": "เหตุการณ์สำคัญทางอณูชีววิทยา (พ.ศ. 2487--2546)"
     },
     "function-plots-2d": {
-      "displayName": "2D Function Plots",
-      "description": "Plot mathematical functions with labeled axes, grid, and legend. PGFPlots native.",
-      "defaultCaption": "Trigonometric functions $\\sin x$ and $\\cos x$."
+      "displayName": "พล็อตฟังก์ชัน 2D",
+      "description": "พล็อตฟังก์ชันทางคณิตศาสตร์ด้วยแกน ตาราง และคำอธิบายที่มีป้ายกำกับ PGFPlots พื้นเมือง",
+      "defaultCaption": "ฟังก์ชันตรีโกณมิติ $\\sin x$ และ $\\cos x$"
     },
     "parametric-polar-plots": {
-      "displayName": "Parametric & Polar Plots",
-      "description": "Parametric curves and polar function plots.",
-      "defaultCaption": "Lissajous curve $(\\cos 2t,\\, \\sin 3t)$."
+      "displayName": "พล็อตพาราเมตริกและโพลาร์",
+      "description": "เส้นโค้งพาราเมตริกและพล็อตฟังก์ชันเชิงขั้ว",
+      "defaultCaption": "เส้นโค้งลิสซาจูส $(\\cos 2t,\\, \\sin 3t)$."
     },
     "basic-statistics": {
-      "displayName": "Basic Statistics Charts",
-      "description": "Bar charts, histograms, and scatter plots from tabular data.",
-      "defaultCaption": "Comparative bar chart — measurement results by experimental group."
+      "displayName": "แผนภูมิสถิติพื้นฐาน",
+      "description": "แผนภูมิแท่ง ฮิสโตแกรม และแผนภูมิกระจายจากข้อมูลแบบตาราง",
+      "defaultCaption": "แผนภูมิแท่งเปรียบเทียบ — ผลการวัดตามกลุ่มทดลอง"
     },
     "statistical-distributions": {
-      "displayName": "Statistical Distributions",
-      "description": "Normal, t, chi-squared, and other distributions with shaded regions.",
-      "defaultCaption": "Standard normal distribution with 95\\% confidence interval shaded."
+      "displayName": "การแจกแจงทางสถิติ",
+      "description": "การแจกแจงแบบปกติ, t, ไคสแควร์ และการแจกแจงอื่นๆ ที่มีขอบเขตแรเงา",
+      "defaultCaption": "การแจกแจงแบบปกติมาตรฐานโดยมีช่วงความเชื่อมั่น 95\\% แรเงา"
     },
     "kaplan-meier": {
-      "displayName": "Kaplan-Meier Survival Curves",
-      "description": "Step-function survival curves for clinical and epidemiological studies.",
-      "scopeWarning": "Enter pre-computed KM estimates (from R survfit, Stata stcurve, or SPSS) as data points forming a step function. Statistical tests must be done externally.",
-      "defaultCaption": "Kaplan--Meier overall survival curves for adjuvant vs.\\ standard chemotherapy ($n{=}200$; log-rank $p{=}0.008$)."
+      "displayName": "เส้นโค้งการเอาชีวิตรอดของ Kaplan-Meier",
+      "description": "เส้นโค้งการอยู่รอดของฟังก์ชันขั้นตอนสำหรับการศึกษาทางคลินิกและระบาดวิทยา",
+      "scopeWarning": "การประมาณค่า KM ที่คำนวณไว้ล่วงหน้าของ Enter (จากความอยู่รอดของ R, stcurve ของ Stata หรือ SPSS) เป็นจุดข้อมูลที่สร้างฟังก์ชันสเต็ป การทดสอบทางสถิติต้องทำภายนอก",
+      "defaultCaption": "Kaplan--กราฟการรอดชีวิตโดยรวมของ Meier สำหรับการบำบัดแบบเสริมเทียบกับ\\ เคมีบำบัดแบบมาตรฐาน ($n{=}200$; $p{=}0.008$ ระดับบันทึก)"
     },
     "network-graph": {
-      "displayName": "Network / Social Graphs",
-      "description": "Co-authorship, citation, or social influence networks with community clustering.",
-      "scopeWarning": "Suitable for illustrative networks (≤ 15 nodes). For large-scale visualization, use Gephi or NetworkX and import as PDF.",
-      "defaultCaption": "Co-authorship network — two research clusters connected by a bridge author."
+      "displayName": "กราฟเครือข่าย / โซเชียล",
+      "description": "การเขียนร่วม การอ้างอิง หรือเครือข่ายอิทธิพลทางสังคมที่มีการรวมกลุ่มชุมชน",
+      "scopeWarning": "เหมาะสำหรับเครือข่ายที่มีภาพประกอบ (≤ 15 โหนด) สำหรับการแสดงภาพขนาดใหญ่ ให้ใช้ Gephi หรือ NetworkX และนำเข้าเป็น PDF",
+      "defaultCaption": "เครือข่ายผู้เขียนร่วม — กลุ่มงานวิจัยสองกลุ่มเชื่อมต่อกันโดยผู้เขียนสะพาน"
     },
     "organic-chemistry-extended": {
-      "displayName": "Extended Organic Chemistry",
-      "description": "Organic structures with rings, functional groups, and stereocentres. ChemFig native.",
-      "scopeWarning": "Complex multi-ring or stereo structures may need manual ChemFig adjustment. For publication-quality structures, use ChemDraw and import as PDF.",
-      "defaultCaption": "Caffeine (1,3,7-trimethylxanthine) structural formula."
+      "displayName": "เคมีอินทรีย์แบบขยาย",
+      "description": "โครงสร้างอินทรีย์ที่มีวงแหวน หมู่ฟังก์ชัน และศูนย์กลางสเตอริโอ ChemFig เนทีฟ",
+      "scopeWarning": "โครงสร้างหลายวงแหวนหรือสเตอริโอที่ซับซ้อนอาจต้องมีการปรับ ChemFig ด้วยตนเอง สำหรับโครงสร้างคุณภาพสิ่งพิมพ์ ให้ใช้ ChemDraw และนำเข้าเป็น PDF",
+      "defaultCaption": "สูตรโครงสร้างคาเฟอีน (1,3,7-ไตรเมทิลแซนทีน)"
     },
     "reaction-mechanisms": {
-      "displayName": "Basic Reaction Mechanisms",
-      "description": "Reaction mechanisms including C-C bond forming reactions, substitutions, and eliminations.",
-      "scopeWarning": "Suitable for standard mechanisms in theses. Complex multi-step mechanisms with curved arrows require manual ChemFig adjustment.",
-      "defaultCaption": "Aldol condensation: base-catalysed formation of a $\\beta$-hydroxy carbonyl compound."
+      "displayName": "กลไกปฏิกิริยาพื้นฐาน",
+      "description": "กลไกการเกิดปฏิกิริยา รวมถึงปฏิกิริยาการสร้างพันธะ C-C การแทนที่ และการกำจัด",
+      "scopeWarning": "เหมาะสำหรับกลไกมาตรฐานในวิทยานิพนธ์ กลไกหลายขั้นตอนที่ซับซ้อนพร้อมลูกศรโค้งจำเป็นต้องมีการปรับ ChemFig ด้วยตนเอง",
+      "defaultCaption": "การควบแน่นของอัลโดล: การก่อตัวของสารประกอบ $\\beta$-ไฮดรอกซีคาร์บอนิลที่เป็นตัวเร่งปฏิกิริยา"
     },
     "er-diagrams": {
-      "displayName": "ER Diagrams",
-      "description": "Entity-relationship diagrams for database design. TikZ native.",
-      "scopeWarning": "Suitable for standard ER diagrams in theses. Complex schemas with many entities benefit from Draw.io exported as PDF.",
-      "defaultCaption": "ER diagram for a university course-enrollment system."
+      "displayName": "ไดอะแกรม ER",
+      "description": "ไดอะแกรมความสัมพันธ์เอนทิตีสำหรับการออกแบบฐานข้อมูล TikZ พื้นเมือง",
+      "scopeWarning": "เหมาะสำหรับไดอะแกรม ER มาตรฐานในวิทยานิพนธ์ สคีมาที่ซับซ้อนซึ่งมีเอนทิตีจำนวนมากได้รับประโยชน์จาก Draw.io ที่ส่งออกเป็น PDF",
+      "defaultCaption": "แผนภาพ ER สำหรับระบบการลงทะเบียนหลักสูตรของมหาวิทยาลัย"
     },
     "state-machines": {
-      "displayName": "State Machines",
-      "description": "Finite state machines and automata with states, transitions, and labels.",
-      "scopeWarning": "Suitable for DFA/NFA and reactive system diagrams in theses. For large automata, generate from Graphviz/PlantUML and import as PDF.",
-      "defaultCaption": "Traffic-light finite state machine (timer-driven)."
+      "displayName": "เครื่องจักรของรัฐ",
+      "description": "เครื่องสถานะจำกัดและออโตมาตาพร้อมสถานะ การเปลี่ยนภาพ และป้ายกำกับ",
+      "scopeWarning": "เหมาะสำหรับ DFA/NFA และไดอะแกรมระบบปฏิกิริยาในวิทยานิพนธ์ สำหรับออโตมาตะขนาดใหญ่ ให้สร้างจาก Graphviz/PlantUML และนำเข้าเป็น PDF",
+      "defaultCaption": "เครื่องควบคุมไฟจราจรแบบจำกัด (ขับเคลื่อนด้วยตัวจับเวลา)"
     },
     "markov-chains": {
-      "displayName": "Markov Chains",
-      "description": "Markov chain diagrams with states and transition probabilities.",
-      "scopeWarning": "Suitable for illustrative Markov chains in theses. For inference or simulation, use R/Python and import results as figures.",
-      "defaultCaption": "Weather Markov chain (Sunny / Cloudy / Rainy)."
+      "displayName": "มาร์คอฟเชนส์",
+      "description": "แผนภาพลูกโซ่มาร์คอฟพร้อมสถานะและความน่าจะเป็นในการเปลี่ยนแปลง",
+      "scopeWarning": "เหมาะสำหรับภาพประกอบของ Markov chains ในวิทยานิพนธ์ สำหรับการอนุมานหรือการจำลอง ให้ใช้ R/Python และนำเข้าผลลัพธ์เป็นตัวเลข",
+      "defaultCaption": "ห่วงโซ่สภาพอากาศมาร์คอฟ (แดดจัด / มีเมฆมาก / ฝนตก)"
     },
     "bode-nyquist": {
-      "displayName": "Bode / Nyquist Diagrams",
-      "description": "Frequency response: Bode magnitude + phase, or Nyquist plot. Second-order transfer functions.",
-      "scopeWarning": "Enter your system transfer function as a pgfplots expression. Compute poles/zeros in MATLAB/Python first.",
-      "defaultCaption": "Bode plot of $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
+      "displayName": "แผนภาพลางบอกเหตุ / Nyquist",
+      "description": "การตอบสนองความถี่: ขนาดลาง + เฟส หรือพล็อต Nyquist ฟังก์ชันการถ่ายโอนลำดับที่สอง",
+      "scopeWarning": "Enter ฟังก์ชั่นการถ่ายโอนระบบของคุณเป็นนิพจน์ pgfplots คำนวณโพล/ศูนย์ใน MATLAB/Python ก่อน",
+      "defaultCaption": "แผนภาพบอกเหตุของ $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)"
     },
     "plots-3d": {
-      "displayName": "3D Scientific Plots",
-      "description": "3D surfaces, wireframes, and contour plots. PGFPlots native.",
-      "scopeWarning": "3D plots compile slowly for fine meshes. Keep samples ≤ 25×25 for reasonable compile time.",
-      "defaultCaption": "Standard bivariate normal density $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
+      "displayName": "โครงเรื่องทางวิทยาศาสตร์ 3 มิติ",
+      "description": "พื้นผิว 3 มิติ โครงร่าง และโครงร่าง PGFPlots พื้นเมือง",
+      "scopeWarning": "แปลง 3D คอมไพล์ช้าๆ สำหรับตาข่ายละเอียด เก็บตัวอย่างไว้ ≤ 25×25 เพื่อเวลาในการรวบรวมที่เหมาะสม",
+      "defaultCaption": "ความหนาแน่นปกติของตัวแปรคู่มาตรฐาน $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$"
     },
     "phase-diagrams": {
-      "displayName": "Phase Diagrams",
-      "description": "Phase portraits, nullclines, and stability diagrams for dynamical systems.",
-      "scopeWarning": "Suitable for 2D phase planes and nullcline plots. Full vector-field arrows require manual pgfplots quiver adjustments.",
-      "defaultCaption": "Lotka--Volterra phase plane: prey $x$ vs predator $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
+      "displayName": "เฟสไดอะแกรม",
+      "description": "ภาพเฟส nullclines และไดอะแกรมความเสถียรสำหรับระบบไดนามิก",
+      "scopeWarning": "เหมาะสำหรับระนาบเฟส 2D และพล็อต nullcline ลูกศรสนามเวกเตอร์แบบเต็มจำเป็นต้องมีการปรับการสั่นของ pgfplots ด้วยตนเอง",
+      "defaultCaption": "Lotka--ระนาบเฟสโวลเทอร์รา: เหยื่อ $x$ กับนักล่า $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)"
     },
     "heat-maps": {
-      "displayName": "Correlation Heat Maps",
-      "description": "Correlation matrices and heat maps using pgfplots matrix plot. Values between -1 and 1, color-mapped.",
-      "scopeWarning": "Suitable for small matrices (≤ 10×10). Compute correlations in R/Python first, then enter the values here.",
-      "defaultCaption": "Pearson correlation matrix for four psychometric variables."
+      "displayName": "แผนที่ความร้อนสหสัมพันธ์",
+      "description": "เมทริกซ์สหสัมพันธ์และแผนที่ความร้อนโดยใช้พล็อตเมทริกซ์ pgfplots ค่าระหว่าง -1 ถึง 1 แมปสี",
+      "scopeWarning": "เหมาะสำหรับเมทริกซ์ขนาดเล็ก (≤ 10×10) คำนวณความสัมพันธ์ใน R/Python ก่อน จากนั้นป้อนค่าที่นี่",
+      "defaultCaption": "เมทริกซ์สหสัมพันธ์เพียร์สันสำหรับตัวแปรไซโครเมตริกสี่ตัว"
     },
     "supply-demand": {
-      "displayName": "Supply & Demand Curves",
-      "description": "Supply and demand with equilibrium, consumer/producer surplus, and optional curve shifts.",
-      "scopeWarning": "Suitable for illustrative partial-equilibrium analysis in theses. Non-linear elasticity curves may need manual pgfplots adjustment.",
-      "defaultCaption": "Supply and demand: original equilibrium $E_0$ and demand shift $D \\to D'$ after income increase."
+      "displayName": "เส้นอุปสงค์และอุปทาน",
+      "description": "อุปสงค์และอุปทานที่มีความสมดุล ส่วนเกินของผู้บริโภค/ผู้ผลิต และการเปลี่ยนแปลงเส้นโค้งที่เป็นตัวเลือก",
+      "scopeWarning": "เหมาะสำหรับการวิเคราะห์สมดุลบางส่วนที่เป็นภาพประกอบในวิทยานิพนธ์ เส้นโค้งความยืดหยุ่นแบบไม่เชิงเส้นอาจต้องมีการปรับ pgfplots ด้วยตนเอง",
+      "defaultCaption": "อุปสงค์และอุปทาน: ความสมดุลเดิม $E_0$ และอุปสงค์เปลี่ยนไป $D \\to D'$ หลังจากรายได้เพิ่มขึ้น"
     },
     "uml-class-diagrams": {
-      "displayName": "UML Class Diagrams",
-      "description": "UML class diagrams with inheritance, interfaces, composition, and association.",
-      "scopeWarning": "Generates simplified class boxes. For full UML compliance, use PlantUML or draw.io and import as PDF.",
-      "defaultCaption": "Repository pattern with Observer: \\\\ $<<$interface$>>$ classes, inheritance and composition."
+      "displayName": "ไดอะแกรมคลาส UML",
+      "description": "คลาสไดอะแกรม UML พร้อมการสืบทอด อินเทอร์เฟซ องค์ประกอบ และการเชื่อมโยง",
+      "scopeWarning": "สร้างกล่องคลาสแบบง่าย เพื่อให้สอดคล้องกับ UML อย่างสมบูรณ์ ให้ใช้ PlantUML หรือ Draw.io และนำเข้าเป็น PDF",
+      "defaultCaption": "รูปแบบพื้นที่เก็บข้อมูลด้วย Observer: คลาส $<<$interface$>>$ การสืบทอด และองค์ประกอบ"
     },
     "time-series": {
-      "displayName": "Time Series Plots",
-      "description": "Time series with trend, confidence band, and annotated events. Ideal for longitudinal data in economics, ecology, and clinical research.",
-      "scopeWarning": "Enter data points manually. For large or complex time series (ARIMA, seasonal), generate in R/Python and import as PDF.",
-      "defaultCaption": "Monthly CO$_2$ concentration (ppm) with long-term trend and $\\pm$2\\,SD band."
+      "displayName": "แปลงอนุกรมเวลา",
+      "description": "อนุกรมเวลาพร้อมเทรนด์ แถบความมั่นใจ และเหตุการณ์ที่มีคำอธิบายประกอบ เหมาะสำหรับข้อมูลระยะยาวในด้านเศรษฐศาสตร์ นิเวศวิทยา และการวิจัยทางคลินิก",
+      "scopeWarning": "จุดข้อมูล Enter ด้วยตนเอง สำหรับอนุกรมเวลาขนาดใหญ่หรือซับซ้อน (ARIMA ตามฤดูกาล) ให้สร้างใน R/Python และนำเข้าเป็น PDF",
+      "defaultCaption": "ความเข้มข้นของ CO$_2$ รายเดือน (ppm) พร้อมแนวโน้มระยะยาวและแถบ $\\pm$2\\,SD"
     },
     "genealogy": {
-      "displayName": "Genealogy / Family Trees",
-      "description": "Family trees, dynasties, and clinical pedigrees with generations and relationship markers.",
-      "scopeWarning": "Suitable for simplified family trees. For clinical genetic pedigrees with standard symbols (ACMG/AMP), use dedicated pedigree software.",
-      "defaultCaption": "Family tree."
+      "displayName": "ลำดับวงศ์ตระกูล / ลำดับวงศ์ตระกูล",
+      "description": "แผนภูมิลำดับวงศ์ตระกูล ราชวงศ์ และสายเลือดทางคลินิกพร้อมรุ่นและเครื่องหมายความสัมพันธ์",
+      "scopeWarning": "เหมาะสำหรับแผนภูมิลำดับวงศ์ตระกูลแบบง่าย สำหรับสายเลือดทางพันธุกรรมทางคลินิกที่มีสัญลักษณ์มาตรฐาน (ACMG/AMP) ให้ใช้ซอฟต์แวร์สายเลือดเฉพาะ",
+      "defaultCaption": "ผังครอบครัว"
     },
     "parallel-coordinates": {
-      "displayName": "Parallel Coordinates / Criteria Matrix",
-      "description": "Parallel coordinate plots for multi-criteria comparison of alternatives across normalised dimensions (0--10 scale).",
-      "scopeWarning": "Normalise all criteria to a common scale (e.g. 0--10) before entering values. For many alternatives (>6), use Python/R and import as PDF.",
-      "defaultCaption": "Parallel coordinate plot comparing five software solutions on four criteria."
+      "displayName": "พิกัดขนาน / เมทริกซ์เกณฑ์",
+      "description": "แปลงพิกัดคู่ขนานสำหรับการเปรียบเทียบหลายเกณฑ์ของทางเลือกข้ามมิติปกติ (สเกล 0--10)",
+      "scopeWarning": "ปรับเกณฑ์ทั้งหมดให้เป็นมาตรฐาน (เช่น 0--10) ก่อนป้อนค่า สำหรับทางเลือกอื่นๆ (>6) ให้ใช้ Python/R และนำเข้าเป็น PDF",
+      "defaultCaption": "พล็อตพิกัดคู่ขนานเปรียบเทียบโซลูชันซอฟต์แวร์ 5 รายการบนเกณฑ์ 4 รายการ"
     },
     "energy-band-diagrams": {
-      "displayName": "Energy / Band Diagrams",
-      "description": "Energy level diagrams, band gaps, and semiconductor band diagrams for physics and materials science.",
-      "scopeWarning": "Energy values are illustrative. Replace with your material's actual band gap and Fermi level values from literature or calculation.",
-      "defaultCaption": "Semiconductor band diagram."
+      "displayName": "ไดอะแกรมพลังงาน / แบนด์",
+      "description": "แผนภาพระดับพลังงาน ช่องว่างของแถบความถี่ และแผนภาพแถบสารกึ่งตัวนำสำหรับฟิสิกส์และวัสดุศาสตร์",
+      "scopeWarning": "ค่าพลังงานเป็นเพียงตัวอย่างเท่านั้น แทนที่ด้วยช่องว่างแถบจริงของวัสดุและค่าระดับ Fermi จากวรรณกรรมหรือการคำนวณ",
+      "defaultCaption": "แผนภาพแถบสารกึ่งตัวนำ"
     },
     "decision-tree": {
-      "displayName": "Decision Trees",
-      "description": "Decision tree diagrams with conditions, branches, and leaf outcomes. Covers classification trees, CART, and clinical decision rules.",
-      "scopeWarning": "Enter tree structure manually. For automatic tree generation from data, use scikit-learn/rpart and export the tree, then reproduce here for publication.",
-      "defaultCaption": "Decision tree."
+      "displayName": "แผนผังการตัดสินใจ",
+      "description": "แผนผังต้นไม้การตัดสินใจพร้อมเงื่อนไข กิ่งก้าน และผลลัพธ์ของใบไม้ ครอบคลุมแผนผังการจำแนกประเภท CART และกฎการตัดสินใจทางคลินิก",
+      "scopeWarning": "โครงสร้างต้นไม้ Enter ด้วยตนเอง สำหรับการสร้างแผนภูมิต้นไม้อัตโนมัติจากข้อมูล ให้ใช้ scikit-learn/rpart แล้วส่งออกแผนภูมิ จากนั้นทำซ้ำที่นี่เพื่อเผยแพร่",
+      "defaultCaption": "แผนผังการตัดสินใจ"
     },
     "roc-curve": {
-      "displayName": "ROC Curves",
-      "description": "Receiver operating characteristic curves for classifier evaluation. Supports multiple classifiers with AUC annotation.",
-      "scopeWarning": "Enter pre-computed TPR/FPR values from your statistical software (sklearn, R pROC). This plugin renders the curve; model training must be done externally.",
-      "defaultCaption": "ROC curves (AUC shown in legend)."
+      "displayName": "เส้นโค้ง ROC",
+      "description": "เส้นโค้งลักษณะการทำงานของตัวรับสัญญาณสำหรับการประเมินลักษณนาม รองรับตัวแยกประเภทหลายตัวพร้อมคำอธิบายประกอบ AUC",
+      "scopeWarning": "ค่า TPR/FPR ที่คำนวณล่วงหน้าของ Enter จากซอฟต์แวร์ทางสถิติของคุณ (sklearn, R pROC) ปลั๊กอินนี้แสดงเส้นโค้ง การฝึกโมเดลต้องทำจากภายนอก",
+      "defaultCaption": "เส้นโค้ง ROC (AUC แสดงในคำอธิบาย)"
     },
     "population-pyramid": {
-      "displayName": "Population Pyramid",
-      "description": "Age-sex population pyramid for demographic analysis. Shows male/female population distributions by age group.",
-      "scopeWarning": "Enter census data manually. For large datasets, generate the pyramid in R/Python and import as PDF, or use this plugin for illustrative sub-populations.",
-      "defaultCaption": "Population pyramid."
+      "displayName": "พีระมิดประชากร",
+      "description": "พีระมิดประชากรอายุ-เพศสำหรับการวิเคราะห์ทางประชากรศาสตร์ แสดงการกระจายตัวของประชากรชาย/หญิงตามกลุ่มอายุ",
+      "scopeWarning": "ข้อมูลสำมะโนประชากร Enter ด้วยตนเอง สำหรับชุดข้อมูลขนาดใหญ่ ให้สร้างปิรามิดใน R/Python และนำเข้าเป็น PDF หรือใช้ปลั๊กอินนี้เพื่อแสดงประชากรย่อย",
+      "defaultCaption": "ปิรามิดประชากร"
     },
     "error-bars": {
-      "displayName": "Error Bars & Confidence Intervals",
-      "description": "Line or bar plots with error bars for means ± SD/SE/CI. Essential for presenting experimental or survey results.",
-      "scopeWarning": "Enter means and error values (SD, SE, or 95% CI half-width) computed from your data. Raw data processing must be done externally.",
-      "defaultCaption": "Mean values with 95\\% confidence intervals."
+      "displayName": "แถบข้อผิดพลาดและช่วงความเชื่อมั่น",
+      "description": "เส้นหรือกราฟแท่งที่มีแถบค่าคลาดเคลื่อนสำหรับค่าเฉลี่ย ± SD/SE/CI จำเป็นสำหรับการนำเสนอผลการทดลองหรือการสำรวจ",
+      "scopeWarning": "ค่าเฉลี่ย Enter และค่าความผิดพลาด (SD, SE หรือ 95% CI ครึ่งความกว้าง) คำนวณจากข้อมูลของคุณ การประมวลผลข้อมูลดิบต้องทำภายนอก",
+      "defaultCaption": "ค่าเฉลี่ยที่มีช่วงความเชื่อมั่น 95\\%"
     },
     "causal-dag": {
-      "displayName": "Causal DAG / Path Diagrams",
-      "description": "Directed acyclic graphs (DAGs) for causal inference frameworks, structural equation models, and mediation analysis.",
-      "scopeWarning": "Suitable for causal diagrams up to ~10 variables. For complex SEM or large DAGs, use dagitty.net or lavaan and import the diagram.",
-      "defaultCaption": "Causal directed acyclic graph (DAG)."
+      "displayName": "สาเหตุ DAG / ไดอะแกรมเส้นทาง",
+      "description": "กราฟอะไซคลิกแบบกำหนดทิศทาง (DAG) สำหรับกรอบงานการอนุมานเชิงสาเหตุ แบบจำลองสมการโครงสร้าง และการวิเคราะห์การไกล่เกลี่ย",
+      "scopeWarning": "เหมาะสำหรับไดอะแกรมสาเหตุมากถึง ~10 ตัวแปร สำหรับ SEM ที่ซับซ้อนหรือ DAG ขนาดใหญ่ ให้ใช้ dagitty.net หรือ lavaan แล้วนำเข้าไดอะแกรม",
+      "defaultCaption": "กราฟอะไซคลิกแบบกำหนดทิศทางเชิงสาเหตุ (DAG)"
     },
     "bar-charts": {
-      "displayName": "Bar Charts & Histograms",
-      "description": "Grouped and stacked bar charts, frequency histograms for descriptive statistics.",
-      "scopeWarning": "Enter values manually. For charts from large datasets, generate in R/Python and import as PDF.",
-      "defaultCaption": "Grouped bar chart — mean response by condition and time point ($\\pm$\\,SD)."
+      "displayName": "แผนภูมิแท่งและฮิสโตแกรม",
+      "description": "แผนภูมิแท่งที่จัดกลุ่มและแบบเรียงซ้อน ฮิสโตแกรมความถี่สำหรับสถิติเชิงพรรณนา",
+      "scopeWarning": "ค่า Enter ด้วยตนเอง สำหรับแผนภูมิจากชุดข้อมูลขนาดใหญ่ ให้สร้างใน R/Python และนำเข้าเป็น PDF",
+      "defaultCaption": "แผนภูมิแท่งแบบจัดกลุ่ม — ค่าเฉลี่ยการตอบสนองตามเงื่อนไขและจุดเวลา ($\\pm$\\,SD)"
     },
     "box-violin-plots": {
-      "displayName": "Box Plots & Distribution Comparisons",
-      "description": "Box-and-whisker plots with medians, quartiles, and outliers for comparing distributions.",
-      "scopeWarning": "Enter pre-computed statistics (median, Q1, Q3) from R/Python. Each data point encodes: x=group position, y=median, error=IQR half-range.",
-      "defaultCaption": "Distribution of test scores across three teaching conditions (box: Q1--Q3; whiskers: 1.5$\\times$IQR)."
+      "displayName": "กล่องแปลงและการเปรียบเทียบการกระจาย",
+      "description": "แผนภาพแบบ Box-and-Whisker พร้อมค่ามัธยฐาน ควอไทล์ และค่าผิดปกติสำหรับการเปรียบเทียบการแจกแจง",
+      "scopeWarning": "สถิติที่คำนวณล่วงหน้าของ Enter (ค่ามัธยฐาน, Q1, Q3) จาก R/Python จุดข้อมูลแต่ละจุดเข้ารหัส: x=ตำแหน่งกลุ่ม, y=ค่ามัธยฐาน, ข้อผิดพลาด=IQR ครึ่งช่วง",
+      "defaultCaption": "การกระจายคะแนนทดสอบตามเงื่อนไขการสอน 3 แบบ (กล่อง: Q1--Q3; หนวด: 1.5$\\times$IQR)"
     },
     "scatter-regression": {
-      "displayName": "Scatter Plots with Regression",
-      "description": "Scatter plot with linear regression line and optional confidence band.",
-      "scopeWarning": "Compute slope, intercept, and CI band in your statistical software. Enter the values here for publication-quality rendering.",
-      "defaultCaption": "BMI vs systolic blood pressure: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
+      "displayName": "แผนกระจายที่มีการถดถอย",
+      "description": "พล็อตกระจายพร้อมเส้นการถดถอยเชิงเส้นและแถบความมั่นใจเสริม",
+      "scopeWarning": "คำนวณความชัน การสกัดกั้น และแบนด์ CI ในซอฟต์แวร์ทางสถิติของคุณ Enter ค่าที่นี่สำหรับการแสดงผลคุณภาพสิ่งพิมพ์",
+      "defaultCaption": "BMI เทียบกับความดันโลหิตซิสโตลิก: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)"
     },
     "bayesian-networks": {
-      "displayName": "Bayesian Networks",
-      "description": "Directed acyclic graphs for Bayesian networks: latent cause nodes (ellipses) with observed evidence nodes (rectangles).",
-      "scopeWarning": "Suitable for illustrative Bayesian networks in theses. For inference, parameter learning, or dense graphs, use pgmpy, BayesFusion, GeNIe, or BUGS and import the final PDF/SVG.",
-      "defaultCaption": "Bayesian network for differential diagnosis of respiratory illness."
+      "displayName": "เครือข่ายแบบเบย์เซียน",
+      "description": "กราฟอะไซคลิกกำกับสำหรับเครือข่ายแบบเบย์: โหนดสาเหตุแฝง (วงรี) พร้อมโหนดหลักฐานที่สังเกตได้ (สี่เหลี่ยม)",
+      "scopeWarning": "เหมาะสำหรับภาพประกอบเครือข่ายแบบเบย์ในวิทยานิพนธ์ สำหรับการอนุมาน การเรียนรู้พารามิเตอร์ หรือกราฟหนาแน่น ให้ใช้ pgmpy, BayesFusion, GeNIe หรือ BUGS แล้วนำเข้า PDF/SVG สุดท้าย",
+      "defaultCaption": "เครือข่ายแบบเบย์เซียนสำหรับการวินิจฉัยแยกโรคระบบทางเดินหายใจ"
     },
     "sem-path-diagrams": {
-      "displayName": "SEM / Path Diagrams",
-      "description": "Structural equation model path diagrams with latent variables and measurement models.",
-      "scopeWarning": "Suitable for thesis-level SEM diagrams. For estimation, fit statistics, and standardized reports, use lavaan/R, Mplus, or AMOS and import the final diagram/table as PDF.",
-      "defaultCaption": "Technology Acceptance Model (TAM): perceived usefulness and ease of use predicting behavioural intention."
+      "displayName": "SEM / ไดอะแกรมเส้นทาง",
+      "description": "ไดอะแกรมเส้นทางแบบจำลองสมการโครงสร้างพร้อมตัวแปรแฝงและแบบจำลองการวัด",
+      "scopeWarning": "เหมาะสำหรับไดอะแกรม SEM ระดับวิทยานิพนธ์ สำหรับการประมาณค่า สถิติที่เหมาะสม และรายงานที่เป็นมาตรฐาน ให้ใช้ lavaan/R, Mplus หรือ AMOS และนำเข้าไดอะแกรม/ตารางสุดท้ายเป็น PDF",
+      "defaultCaption": "โมเดลการยอมรับทางเทคโนโลยี (TAM): การรับรู้ถึงประโยชน์และความง่ายในการใช้งานในการทำนายความตั้งใจเชิงพฤติกรรม"
     },
     "economic-causal": {
-      "displayName": "Economic Causal Diagrams",
-      "description": "Causal loop diagrams (CLD) with reinforcing and balancing feedback loops.",
-      "scopeWarning": "Suitable for simple causal loop models. For full system dynamics with stocks, flows, delays, or simulation, use Vensim, Stella, or AnyLogic and import the final PDF/SVG.",
-      "defaultCaption": "Wage--price spiral: reinforcing ($R$) and balancing ($B$) feedback loops."
+      "displayName": "แผนภาพเชิงสาเหตุทางเศรษฐกิจ",
+      "description": "แผนภาพลูปเชิงสาเหตุ (CLD) พร้อมลูปป้อนกลับเสริมและปรับสมดุล",
+      "scopeWarning": "เหมาะสำหรับโมเดลลูปเชิงสาเหตุอย่างง่าย สำหรับไดนามิกทั้งระบบที่มีสต็อก การไหล ความล่าช้า หรือการจำลอง ให้ใช้ Vensim, Stella หรือ AnyLogic และนำเข้า PDF/SVG สุดท้าย",
+      "defaultCaption": "ค่าจ้าง - เกลียวราคา: ลูปป้อนกลับเสริม ($R$) และสมดุล ($B$)"
     },
     "legal-procedural": {
-      "displayName": "Legal / Procedural Diagrams",
-      "description": "Flowcharts for legal and administrative procedures: judicial, regulatory, and compliance workflows.",
-      "scopeWarning": "Suitable for standard legal/administrative process flows in theses. Complex multi-party or multi-jurisdiction procedures are better maintained in BPMN/draw.io and imported as PDF.",
-      "defaultCaption": "Criminal procedure: from complaint to verdict."
+      "displayName": "แผนผังกฎหมาย / ขั้นตอน",
+      "description": "ผังงานสำหรับขั้นตอนทางกฎหมายและการบริหาร: ขั้นตอนการทำงานด้านตุลาการ กฎระเบียบ และการปฏิบัติตามข้อกำหนด",
+      "scopeWarning": "เหมาะสำหรับกระบวนการทางกฎหมาย/การบริหารมาตรฐานในวิทยานิพนธ์ ขั้นตอนที่ซับซ้อนหลายฝ่ายหรือหลายเขตอำนาจศาลได้รับการดูแลที่ดีกว่าใน BPMN/draw.io และนำเข้าเป็น PDF",
+      "defaultCaption": "กระบวนการทางอาญา: ตั้งแต่การร้องเรียนไปจนถึงการพิพากษา"
     },
     "pedagogical-diagrams": {
-      "displayName": "Pedagogical Diagrams",
-      "description": "Bloom's taxonomy, learning outcome hierarchies, and curriculum maps for education theses.",
-      "scopeWarning": "Covers common pedagogical diagram patterns. For complex instructional-design models, keep the authoritative diagram in draw.io/Figma and import the final PDF/SVG.",
-      "defaultCaption": "Revised Bloom's taxonomy — six cognitive levels with representative verbs (Anderson \\& Krathwohl, 2001)."
+      "displayName": "แผนภาพการสอน",
+      "description": "อนุกรมวิธานของ Bloom ลำดับชั้นผลลัพธ์การเรียนรู้ และแผนที่หลักสูตรสำหรับวิทยานิพนธ์ด้านการศึกษา",
+      "scopeWarning": "ครอบคลุมรูปแบบแผนภาพการสอนทั่วไป สำหรับโมเดลการออกแบบการเรียนการสอนที่ซับซ้อน ให้เก็บไดอะแกรมที่เชื่อถือได้ใน Draw.io/Figma และนำเข้า PDF/SVG สุดท้าย",
+      "defaultCaption": "อนุกรมวิธานของ Bloom ปรับปรุง — ระดับการรับรู้หกระดับพร้อมกริยาที่เป็นตัวแทน (Anderson \\& Krathwohl, 2001)"
     }
   }
 }

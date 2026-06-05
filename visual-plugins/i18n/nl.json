@@ -1,366 +1,366 @@
 {
   "plugins": {
     "phylogenetic-trees": {
-      "displayName": "Simple Phylogenetic Trees",
-      "description": "Build phylogenetic and taxonomic trees with labeled nodes and branch lengths.",
-      "scopeWarning": "Suitable for simplified phylogenies in theses. For complex phylogenetics with statistical support, use FigTree/iTOL and import as PDF.",
-      "defaultCaption": "Simplified phylogeny of selected vertebrate classes."
+      "displayName": "Eenvoudige fylogenetische bomen",
+      "description": "Bouw fylogenetische en taxonomische bomen met gelabelde knooppunten en taklengtes.",
+      "scopeWarning": "Geschikt voor vereenvoudigde fylogenieën in scripties. Voor complexe fylogenetica met statistische ondersteuning gebruikt u FigTree/iTOL en importeert u als PDF.",
+      "defaultCaption": "Vereenvoudigde fylogenie van geselecteerde klassen van gewervelde dieren."
     },
     "dna-rna-sequences": {
-      "displayName": "DNA / RNA / Protein Sequences",
-      "description": "Display biological sequences with color-coded bases, codon highlighting, and alignment marks.",
-      "defaultCaption": "Start codon and reading frame of a short mRNA sequence."
+      "displayName": "DNA / RNA / Eiwitsequenties",
+      "description": "Geef biologische sequenties weer met kleurgecodeerde basen, codonaccentuering en uitlijningsmarkeringen.",
+      "defaultCaption": "Startcodon en leesframe van een korte mRNA-sequentie."
     },
     "biomedical-flow": {
-      "displayName": "Biomedical Flow Diagrams",
-      "description": "Biological and clinical process flows — signaling pathways, metabolic steps, treatment algorithms.",
-      "defaultCaption": "MAPK/ERK signalling cascade with feedback inhibition."
+      "displayName": "Biomedische stroomdiagrammen",
+      "description": "Biologische en klinische processtromen: signaalroutes, metabolische stappen, behandelalgoritmen.",
+      "defaultCaption": "MAPK/ERK-signaleringscascade met feedbackremming."
     },
     "consort-flow": {
-      "displayName": "CONSORT / Clinical Trial Flow",
-      "description": "CONSORT-style flow diagrams for randomized clinical trials — enrollment, allocation, follow-up, analysis.",
-      "defaultCaption": "CONSORT 2010 flow diagram."
+      "displayName": "CONSORT / Klinische proefstroom",
+      "description": "CONSORT--stroomdiagrammen voor gerandomiseerde klinische onderzoeken: inschrijving, toewijzing, follow-up, analyse.",
+      "defaultCaption": "CONSORT 2010 stroomschema."
     },
     "biological-pathways": {
-      "displayName": "Schematic Biological Pathways",
-      "description": "Simplified metabolic and signaling pathway schemes for thesis figures.",
-      "scopeWarning": "Suitable for simplified pathway diagrams in theses and reports. Not a substitute for KEGG, Reactome, or professional pathway visualization tools.",
-      "defaultCaption": "Central carbon metabolism: glycolysis and TCA cycle entry."
+      "displayName": "Schematische biologische routes",
+      "description": "Vereenvoudigde metabolische en signaalrouteschema's voor proefschriftcijfers.",
+      "scopeWarning": "Geschikt voor vereenvoudigde trajectdiagrammen in scripties en rapporten. Geen vervanging voor KEGG, Reactome of professionele trajectvisualisatietools.",
+      "defaultCaption": "Centraal koolstofmetabolisme: glycolyse en toegang tot de TCA-cyclus."
     },
     "chemical-formulas": {
-      "displayName": "Chemical Formulas",
-      "description": "Write chemical formulas with charges, states, and subscripts. Uses mhchem — LaTeX native.",
-      "defaultCaption": "Selected inorganic formulas with oxidation states and phases."
+      "displayName": "Chemische formules",
+      "description": "Schrijf chemische formules met ladingen, staten en subscripts. Gebruikt mhchem — LaTeX native.",
+      "defaultCaption": "Geselecteerde anorganische formules met oxidatietoestanden en fasen."
     },
     "chemical-reactions": {
-      "displayName": "Chemical Reactions",
-      "description": "Build chemical reaction equations with arrows, conditions, and catalysts. Uses mhchem.",
-      "defaultCaption": "Acid--base neutralisation and combustion reactions."
+      "displayName": "Chemische reacties",
+      "description": "Stel chemische reactievergelijkingen op met pijlen, omstandigheden en katalysatoren. Maakt gebruik van mhchem.",
+      "defaultCaption": "Zuur-base neutralisatie en verbrandingsreacties."
     },
     "reaction-equilibria": {
-      "displayName": "Reaction Equilibria & Conditions",
-      "description": "Chemical equilibrium reactions with conditions above/below the arrow. Uses mhchem.",
-      "defaultCaption": "Haber process and esterification equilibria."
+      "displayName": "Reactie-evenwichten en omstandigheden",
+      "description": "Chemische evenwichtsreacties met omstandigheden boven/onder de pijl. Maakt gebruik van mhchem.",
+      "defaultCaption": "Haberproces- en veresteringsevenwichten."
     },
     "chemical-structures": {
-      "displayName": "Chemical Structures",
-      "description": "Simple organic structures and ring systems using ChemFig. Benzene, functional groups, ring compounds.",
-      "scopeWarning": "Suitable for simple organic structures in theses. Complex multi-ring systems may need manual ChemFig adjustment. For full structural chemistry, use ChemDraw and import as PDF/SVG.",
-      "defaultCaption": "Aspirin (acetylsalicylic acid) structural formula."
+      "displayName": "Chemische structuren",
+      "description": "Eenvoudige organische structuren en ringsystemen met behulp van ChemFig. Benzeen, functionele groepen, ringverbindingen.",
+      "scopeWarning": "Geschikt voor eenvoudige organische structuren in proefschriften. Bij complexe systemen met meerdere ringen kan handmatige ChemFig-aanpassing nodig zijn. Voor volledige structurele chemie gebruikt u ChemDraw en importeert u als PDF/SVG.",
+      "defaultCaption": "Structuurformule van aspirine (acetylsalicylzuur)."
     },
     "basic-electrical-circuits": {
-      "displayName": "Basic Electrical Circuits",
-      "description": "Visual circuit builder: resistors, capacitors, inductors, sources, switches, diodes. CircuiTikZ native.",
-      "defaultCaption": "RC low-pass filter circuit with voltage divider."
+      "displayName": "Elektrische basiscircuits",
+      "description": "Visuele circuitbouwer: weerstanden, condensatoren, inductoren, bronnen, schakelaars, diodes. CircuiTikZ native.",
+      "defaultCaption": "RC laagdoorlaatfiltercircuit met spanningsdeler."
     },
     "block-diagrams-control": {
-      "displayName": "Block Diagrams / Control Systems",
-      "description": "Control system block diagrams with transfer functions, summing junctions, and feedback loops.",
-      "defaultCaption": "PID closed-loop control system block diagram."
+      "displayName": "Blokdiagrammen/besturingssystemen",
+      "description": "Blokschema's van het besturingssysteem met overdrachtsfuncties, optelpunten en feedbacklussen.",
+      "defaultCaption": "PID blokschema met gesloten lusbesturingssysteem."
     },
     "flowcharts": {
-      "displayName": "Flowcharts",
-      "description": "Academic and process flowcharts with decision diamonds, process boxes, and connector arrows.",
-      "defaultCaption": "Research methodology flowchart."
+      "displayName": "Stroomdiagrammen",
+      "description": "Academische en processtroomdiagrammen met beslissingsdiamanten, procesvakken en verbindingspijlen.",
+      "defaultCaption": "Stroomdiagram voor onderzoeksmethodologie."
     },
     "software-architecture": {
-      "displayName": "Software / System Architecture",
-      "description": "Component, layer, and system architecture diagrams.",
-      "scopeWarning": "Suitable for standard architecture overviews. For complex UML or deployment diagrams, use Draw.io and import as PDF.",
-      "defaultCaption": "Three-tier web application architecture."
+      "displayName": "Software-/systeemarchitectuur",
+      "description": "Component-, laag- en systeemarchitectuurdiagrammen.",
+      "scopeWarning": "Geschikt voor standaard architectuuroverzichten. Voor complexe UML- of implementatiediagrammen gebruikt u Draw.io en importeert u als PDF.",
+      "defaultCaption": "Webapplicatie-architectuur met drie niveaus."
     },
     "venn-set-diagrams": {
-      "displayName": "Venn / Set Diagrams",
-      "description": "Create Venn diagrams and set-theory diagrams with labeled circles and intersections.",
-      "defaultCaption": "Three-set Venn diagram showing mixed-methods research design."
+      "displayName": "Venn / Set-diagrammen",
+      "description": "Maak Venn-diagrammen en verzamelingentheoriediagrammen met gelabelde cirkels en snijpunten.",
+      "defaultCaption": "Venn-diagram met drie sets dat een onderzoeksontwerp met gemengde methoden laat zien."
     },
     "plane-geometry": {
-      "displayName": "Plane Geometry",
-      "description": "Geometric shapes: triangles, polygons, circles, angles, perpendiculars, parallels.",
-      "defaultCaption": "Right triangle with altitude from hypotenuse — geometric mean relations."
+      "displayName": "Vlakke geometrie",
+      "description": "Geometrische vormen: driehoeken, veelhoeken, cirkels, hoeken, loodlijnen, parallellen.",
+      "defaultCaption": "Rechthoekige driehoek met hoogte vanaf de hypotenusa: relaties met geometrische gemiddelden."
     },
     "analytic-geometry": {
-      "displayName": "Analytic Geometry",
-      "description": "Coordinate systems with curves, lines, tangents, and labeled points.",
-      "defaultCaption": "Parabola $f(x)=x^2-2x-3$ with roots, vertex, and tangent at $x=2$."
+      "displayName": "Analytische geometrie",
+      "description": "Coördinatiesystemen met krommen, lijnen, raaklijnen en gelabelde punten.",
+      "defaultCaption": "Parabola $f(x)=x^2-2x-3$ met wortels, hoekpunt en raaklijn op $x=2$."
     },
     "probability-trees": {
-      "displayName": "Probability Trees",
-      "description": "Visual probability trees with branch probabilities and outcomes. forest native.",
-      "defaultCaption": "Probability tree — two coin flips."
+      "displayName": "Waarschijnlijkheidsbomen",
+      "description": "Visuele waarschijnlijkheidsbomen met vertakkingskansen en uitkomsten. bos inheems.",
+      "defaultCaption": "Kansboom: twee muntjes opgooien."
     },
     "lab-setups": {
-      "displayName": "Simple Lab Setups",
-      "description": "Basic laboratory apparatus diagrams: flasks, beakers, burettes, tube assemblies.",
-      "scopeWarning": "Covers standard lab apparatus. For specialized equipment diagrams, use dedicated illustration tools and import as PDF.",
-      "defaultCaption": "Simple laboratory setup."
+      "displayName": "Eenvoudige Lab-instellingen",
+      "description": "Basisdiagrammen van laboratoriumapparatuur: kolven, bekers, buretten, buisconstructies.",
+      "scopeWarning": "Omvat standaard laboratoriumapparatuur. Gebruik voor gespecialiseerde apparatuurdiagrammen speciale illustratietools en importeer deze als PDF.",
+      "defaultCaption": "Eenvoudige laboratoriumopstelling."
     },
     "syntax-trees": {
-      "displayName": "Syntax / Linguistic Trees",
-      "description": "Phrase-structure and dependency trees for linguistics. forest native.",
-      "defaultCaption": "Phrase-structure tree."
+      "displayName": "Syntaxis/taalkundige bomen",
+      "description": "Frasestructuur en afhankelijkheidsbomen voor de taalkunde. bos inheems.",
+      "defaultCaption": "Boomstructuur van zinsstructuren."
     },
     "concept-maps": {
-      "displayName": "Concept Maps & Argument Diagrams",
-      "description": "Concept maps, mind maps, and argumentative structure diagrams.",
-      "defaultCaption": "Concept map."
+      "displayName": "Conceptkaarten en argumentdiagrammen",
+      "description": "Conceptkaarten, mindmaps en argumentatieve structuurdiagrammen.",
+      "defaultCaption": "Conceptkaart."
     },
     "visual-equations": {
-      "displayName": "Visual Equations",
-      "description": "Build mathematical equations, expressions, and formulas with a visual editor. Outputs LaTeX native.",
-      "defaultCaption": "Quadratic formula and quadratic form."
+      "displayName": "Visuele vergelijkingen",
+      "description": "Maak wiskundige vergelijkingen, uitdrukkingen en formules met een visuele editor. Voert LaTeX native uit.",
+      "defaultCaption": "Kwadratische formule en kwadratische vorm."
     },
     "matrices-determinants": {
-      "displayName": "Matrices & Determinants",
-      "description": "Create matrices and determinants of any size with visual cell editing.",
-      "defaultCaption": "3D rotation matrix around the $z$-axis by angle $\\theta$."
+      "displayName": "Matrices en determinanten",
+      "description": "Maak matrices en determinanten van elke grootte met visuele celbewerking.",
+      "defaultCaption": "3D-rotatiematrix rond de $z$--as volgens hoek $\\theta$."
     },
     "systems-of-equations": {
-      "displayName": "Systems of Equations",
-      "description": "Build systems of linear or nonlinear equations with aligned formatting.",
-      "defaultCaption": "System of three linear equations (fluid flow balance)."
+      "displayName": "Systeem van vergelijkingen",
+      "description": "Bouw systemen van lineaire of niet-lineaire vergelijkingen met uitgelijnde opmaak.",
+      "defaultCaption": "Systeem van drie lineaire vergelijkingen (vloeistofstroombalans)."
     },
     "piecewise-functions": {
-      "displayName": "Piecewise Functions",
-      "description": "Define functions by cases or parts with a visual row editor.",
-      "defaultCaption": "Heaviside step function and ReLU activation function."
+      "displayName": "Stuksgewijze functies",
+      "description": "Definieer functies op basis van cases of onderdelen met een visuele rij-editor.",
+      "defaultCaption": "Heaviside-stapfunctie en ReLU-activeringsfunctie."
     },
     "vectors-fields": {
-      "displayName": "Vectors & Simple Fields",
-      "description": "Draw vectors, vector decomposition, and simple field representations.",
-      "defaultCaption": "Vector addition — parallelogram law: $\\vec{R} = \\vec{A} + \\vec{B}$."
+      "displayName": "Vectoren en eenvoudige velden",
+      "description": "Teken vectoren, vectorontleding en eenvoudige veldrepresentaties.",
+      "defaultCaption": "Vectoroptelling — parallellogramwet: $\\vec{R} = \\vec{A} + \\vec{B}$."
     },
     "free-body-diagrams": {
-      "displayName": "Free Body Diagrams",
-      "description": "Build free body diagrams with forces, mass blocks, and labeled arrows.",
-      "defaultCaption": "Free body diagram — block on surface with applied force at angle $\\alpha$."
+      "displayName": "Vrije lichaamsdiagrammen",
+      "description": "Bouw vrije lichaamsdiagrammen met krachten, massablokken en gelabelde pijlen.",
+      "defaultCaption": "Vrij lichaamsdiagram — blok op oppervlak met uitgeoefende kracht onder hoek $\\alpha$."
     },
     "inclined-plane-pulleys": {
-      "displayName": "Inclined Planes, Pulleys & Springs",
-      "description": "Mechanical systems: inclined planes, pulley setups, and spring-mass systems.",
-      "scopeWarning": "Generates accurate schematic diagrams. Highly complex multi-pulley systems may need manual TikZ adjustments.",
-      "defaultCaption": "Free-body diagram on inclined plane (angle $\\theta$)."
+      "displayName": "Hellende vlakken, katrollen en veren",
+      "description": "Mechanische systemen: hellende vlakken, katrolopstellingen en veermassasystemen.",
+      "scopeWarning": "Genereert nauwkeurige schematische diagrammen. Bij zeer complexe systemen met meerdere katrollen zijn mogelijk handmatige TikZ-aanpassingen nodig.",
+      "defaultCaption": "Vrijlichaamdiagram op hellend vlak (hoek $\\theta$)."
     },
     "wave-oscillation": {
-      "displayName": "Wave & Oscillation Diagrams",
-      "description": "Sinusoidal waves, damped oscillations, and wave superposition. Covers SHM, transverse/longitudinal waves, and interference patterns.",
-      "defaultCaption": "Sinusoidal wave $y = A\\sin(\\omega t)$ with damped envelope."
+      "displayName": "Golf- en oscillatiediagrammen",
+      "description": "Sinusoïdale golven, gedempte oscillaties en golfsuperpositie. Omvat SHM, transversale/longitudinale golven en interferentiepatronen.",
+      "defaultCaption": "Sinusvormige golf $y = A\\sin(\\omega t)$ met gedempte omhullende."
     },
     "geometric-optics": {
-      "displayName": "Geometric Optics",
-      "description": "Lenses, mirrors, ray diagrams, and refraction diagrams.",
-      "scopeWarning": "Suitable for standard ray diagrams. Complex optical systems with multiple elements may need manual adjustment.",
-      "defaultCaption": "Converging thin lens — three principal ray construction."
+      "displayName": "Geometrische optica",
+      "description": "Lenzen, spiegels, straaldiagrammen en brekingsdiagrammen.",
+      "scopeWarning": "Geschikt voor standaard straaldiagrammen. Complexe optische systemen met meerdere elementen moeten mogelijk handmatig worden aangepast.",
+      "defaultCaption": "Convergerende dunne lens — constructie met drie hoofdstralen."
     },
     "gantt-charts": {
-      "displayName": "Gantt Charts",
-      "description": "Research and project Gantt charts with tasks, groups, milestones, and dependencies. pgfgantt native.",
-      "defaultCaption": "Doctoral research schedule by semester."
+      "displayName": "Gantt-diagrammen",
+      "description": "Onderzoeks- en project-Gantt-diagrammen met taken, groepen, mijlpalen en afhankelijkheden. pgfgantt native.",
+      "defaultCaption": "Promotieonderzoekschema per semester."
     },
     "timelines": {
-      "displayName": "Timelines",
-      "description": "Historical, research, and narrative timelines with labeled events.",
-      "defaultCaption": "Key milestones in molecular biology (1944--2003)."
+      "displayName": "Tijdlijnen",
+      "description": "Historische, onderzoeks- en verhalende tijdlijnen met gelabelde gebeurtenissen.",
+      "defaultCaption": "Belangrijke mijlpalen in de moleculaire biologie (1944--2003)."
     },
     "function-plots-2d": {
-      "displayName": "2D Function Plots",
-      "description": "Plot mathematical functions with labeled axes, grid, and legend. PGFPlots native.",
-      "defaultCaption": "Trigonometric functions $\\sin x$ and $\\cos x$."
+      "displayName": "2D-functieplots",
+      "description": "Plot wiskundige functies met gelabelde assen, raster en legenda. PGFPlots native.",
+      "defaultCaption": "Trigonometrische functies $\\sin x$ en $\\cos x$."
     },
     "parametric-polar-plots": {
-      "displayName": "Parametric & Polar Plots",
-      "description": "Parametric curves and polar function plots.",
-      "defaultCaption": "Lissajous curve $(\\cos 2t,\\, \\sin 3t)$."
+      "displayName": "Parametrische en polaire plots",
+      "description": "Parametrische curven en polaire functiegrafieken.",
+      "defaultCaption": "Lissajous-curve $(\\cos 2t,\\, \\sin 3t)$."
     },
     "basic-statistics": {
-      "displayName": "Basic Statistics Charts",
-      "description": "Bar charts, histograms, and scatter plots from tabular data.",
-      "defaultCaption": "Comparative bar chart — measurement results by experimental group."
+      "displayName": "Basisstatistiekengrafieken",
+      "description": "Staafdiagrammen, histogrammen en spreidingsdiagrammen van gegevens in tabelvorm.",
+      "defaultCaption": "Vergelijkend staafdiagram: meetresultaten per experimentele groep."
     },
     "statistical-distributions": {
-      "displayName": "Statistical Distributions",
-      "description": "Normal, t, chi-squared, and other distributions with shaded regions.",
-      "defaultCaption": "Standard normal distribution with 95\\% confidence interval shaded."
+      "displayName": "Statistische verdelingen",
+      "description": "Normaal, t, chi-kwadraat en andere verdelingen met gearceerde gebieden.",
+      "defaultCaption": "Standaardnormale verdeling met een betrouwbaarheidsinterval van 95\\% gearceerd."
     },
     "kaplan-meier": {
-      "displayName": "Kaplan-Meier Survival Curves",
-      "description": "Step-function survival curves for clinical and epidemiological studies.",
-      "scopeWarning": "Enter pre-computed KM estimates (from R survfit, Stata stcurve, or SPSS) as data points forming a step function. Statistical tests must be done externally.",
-      "defaultCaption": "Kaplan--Meier overall survival curves for adjuvant vs.\\ standard chemotherapy ($n{=}200$; log-rank $p{=}0.008$)."
+      "displayName": "Kaplan-Meier-overlevingscurven",
+      "description": "Stapfunctie-overlevingscurven voor klinische en epidemiologische onderzoeken.",
+      "scopeWarning": "Enter vooraf berekende KM-schattingen (van R survfit, Stata stcurve of SPSS) als gegevenspunten die een stapfunctie vormen. Statistische tests moeten extern worden uitgevoerd.",
+      "defaultCaption": "Kaplan--Meier totale overlevingscurven voor adjuvante versus standaard chemotherapie ($n{=}200$; log-rank $p{=}0.008$)."
     },
     "network-graph": {
-      "displayName": "Network / Social Graphs",
-      "description": "Co-authorship, citation, or social influence networks with community clustering.",
-      "scopeWarning": "Suitable for illustrative networks (≤ 15 nodes). For large-scale visualization, use Gephi or NetworkX and import as PDF.",
-      "defaultCaption": "Co-authorship network — two research clusters connected by a bridge author."
+      "displayName": "Netwerk/sociale grafieken",
+      "description": "Co-auteurschaps-, citatie- of sociale-invloednetwerken met communityclustering.",
+      "scopeWarning": "Geschikt voor illustratieve netwerken (≤ 15 knooppunten). Voor grootschalige visualisatie gebruikt u Gephi of NetworkX en importeert u als PDF.",
+      "defaultCaption": "Co-auteurschapsnetwerk — twee onderzoeksclusters verbonden door een brugauteur."
     },
     "organic-chemistry-extended": {
-      "displayName": "Extended Organic Chemistry",
-      "description": "Organic structures with rings, functional groups, and stereocentres. ChemFig native.",
-      "scopeWarning": "Complex multi-ring or stereo structures may need manual ChemFig adjustment. For publication-quality structures, use ChemDraw and import as PDF.",
-      "defaultCaption": "Caffeine (1,3,7-trimethylxanthine) structural formula."
+      "displayName": "Uitgebreide organische chemie",
+      "description": "Organische structuren met ringen, functionele groepen en stereocentra. ChemFig-native.",
+      "scopeWarning": "Complexe multi-ring- of stereostructuren vereisen mogelijk handmatige ChemFig-aanpassing. Voor structuren van publicatiekwaliteit gebruikt u ChemDraw en importeert u als PDF.",
+      "defaultCaption": "Structuurformule van cafeïne (1,3,7-trimethylxanthine)."
     },
     "reaction-mechanisms": {
-      "displayName": "Basic Reaction Mechanisms",
-      "description": "Reaction mechanisms including C-C bond forming reactions, substitutions, and eliminations.",
-      "scopeWarning": "Suitable for standard mechanisms in theses. Complex multi-step mechanisms with curved arrows require manual ChemFig adjustment.",
-      "defaultCaption": "Aldol condensation: base-catalysed formation of a $\\beta$-hydroxy carbonyl compound."
+      "displayName": "Basisreactiemechanismen",
+      "description": "Reactiemechanismen, waaronder C-C-bindingsvormende reacties, vervangingen en eliminaties.",
+      "scopeWarning": "Geschikt voor standaardmechanismen in scripties. Complexe meerstapsmechanismen met gebogen pijlen vereisen handmatige ChemFig-aanpassing.",
+      "defaultCaption": "Aldolcondensatie: door base gekatalyseerde vorming van een $\\beta$-hydroxycarbonylverbinding."
     },
     "er-diagrams": {
-      "displayName": "ER Diagrams",
-      "description": "Entity-relationship diagrams for database design. TikZ native.",
-      "scopeWarning": "Suitable for standard ER diagrams in theses. Complex schemas with many entities benefit from Draw.io exported as PDF.",
-      "defaultCaption": "ER diagram for a university course-enrollment system."
+      "displayName": "ER-diagrammen",
+      "description": "Entiteitsrelatiediagrammen voor databaseontwerp. TikZ native.",
+      "scopeWarning": "Geschikt voor standaard ER-diagrammen in proefschriften. Complexe schema's met veel entiteiten profiteren van Draw.io, geëxporteerd als PDF.",
+      "defaultCaption": "ER-diagram voor een universitair cursusinschrijvingssysteem."
     },
     "state-machines": {
-      "displayName": "State Machines",
-      "description": "Finite state machines and automata with states, transitions, and labels.",
-      "scopeWarning": "Suitable for DFA/NFA and reactive system diagrams in theses. For large automata, generate from Graphviz/PlantUML and import as PDF.",
-      "defaultCaption": "Traffic-light finite state machine (timer-driven)."
+      "displayName": "Statemachines",
+      "description": "Eindetoestandsmachines en automaten met toestanden, overgangen en labels.",
+      "scopeWarning": "Geschikt voor DFA/NFA en reactieve systeemdiagrammen in scripties. Voor grote automaten kunt u genereren vanuit Graphviz/PlantUML en importeren als PDF.",
+      "defaultCaption": "Verkeerslicht-eindige toestandsmachine (timergestuurd)."
     },
     "markov-chains": {
-      "displayName": "Markov Chains",
-      "description": "Markov chain diagrams with states and transition probabilities.",
-      "scopeWarning": "Suitable for illustrative Markov chains in theses. For inference or simulation, use R/Python and import results as figures.",
-      "defaultCaption": "Weather Markov chain (Sunny / Cloudy / Rainy)."
+      "displayName": "Markov-ketens",
+      "description": "Markov-ketendiagrammen met toestanden en overgangskansen.",
+      "scopeWarning": "Geschikt voor illustratieve Markov-ketens in scripties. Gebruik R/Python voor gevolgtrekking of simulatie en importeer de resultaten als cijfers.",
+      "defaultCaption": "Weer Markov-keten (zonnig / bewolkt / regenachtig)."
     },
     "bode-nyquist": {
-      "displayName": "Bode / Nyquist Diagrams",
-      "description": "Frequency response: Bode magnitude + phase, or Nyquist plot. Second-order transfer functions.",
-      "scopeWarning": "Enter your system transfer function as a pgfplots expression. Compute poles/zeros in MATLAB/Python first.",
-      "defaultCaption": "Bode plot of $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
+      "displayName": "Bode-/Nyquist-diagrammen",
+      "description": "Frequentierespons: Bode-grootte + fase, of Nyquist-plot. Overdrachtsfuncties van de tweede orde.",
+      "scopeWarning": "Enter uw systeemoverdrachtsfunctie als een pgfplots-expressie. Bereken eerst de polen/nullen in de MATLAB/Python.",
+      "defaultCaption": "Bode-diagram van $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
     },
     "plots-3d": {
-      "displayName": "3D Scientific Plots",
-      "description": "3D surfaces, wireframes, and contour plots. PGFPlots native.",
-      "scopeWarning": "3D plots compile slowly for fine meshes. Keep samples ≤ 25×25 for reasonable compile time.",
-      "defaultCaption": "Standard bivariate normal density $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
+      "displayName": "3D wetenschappelijke plots",
+      "description": "3D-oppervlakken, draadframes en contourplots. PGFPlots native.",
+      "scopeWarning": "3D-plots worden langzaam samengesteld voor fijne mazen. Houd samples ≤ 25×25 voor een redelijke compileertijd.",
+      "defaultCaption": "Standaard bivariate normale dichtheid $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
     },
     "phase-diagrams": {
-      "displayName": "Phase Diagrams",
-      "description": "Phase portraits, nullclines, and stability diagrams for dynamical systems.",
-      "scopeWarning": "Suitable for 2D phase planes and nullcline plots. Full vector-field arrows require manual pgfplots quiver adjustments.",
-      "defaultCaption": "Lotka--Volterra phase plane: prey $x$ vs predator $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
+      "displayName": "Fasediagrammen",
+      "description": "Faseportretten, nulclines en stabiliteitsdiagrammen voor dynamische systemen.",
+      "scopeWarning": "Geschikt voor 2D-fasevlakken en nullcline-plots. Voor volledige vectorveldpijlen zijn handmatige aanpassingen van de pgfplots nodig.",
+      "defaultCaption": "Lotka--Volterra-fasevlak: prooi $x$ versus roofdier $y$ nulclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
     },
     "heat-maps": {
-      "displayName": "Correlation Heat Maps",
-      "description": "Correlation matrices and heat maps using pgfplots matrix plot. Values between -1 and 1, color-mapped.",
-      "scopeWarning": "Suitable for small matrices (≤ 10×10). Compute correlations in R/Python first, then enter the values here.",
-      "defaultCaption": "Pearson correlation matrix for four psychometric variables."
+      "displayName": "Correlatie-hittekaarten",
+      "description": "Correlatiematrices en heatmaps met behulp van pgfplots-matrixplots. Waarden tussen -1 en 1, in kleur toegewezen.",
+      "scopeWarning": "Geschikt voor kleine matrices (≤ 10×10). Bereken eerst de correlaties in R/Python en voer vervolgens de waarden hier in.",
+      "defaultCaption": "Pearson-correlatiematrix voor vier psychometrische variabelen."
     },
     "supply-demand": {
-      "displayName": "Supply & Demand Curves",
-      "description": "Supply and demand with equilibrium, consumer/producer surplus, and optional curve shifts.",
-      "scopeWarning": "Suitable for illustrative partial-equilibrium analysis in theses. Non-linear elasticity curves may need manual pgfplots adjustment.",
-      "defaultCaption": "Supply and demand: original equilibrium $E_0$ and demand shift $D \\to D'$ after income increase."
+      "displayName": "Vraag- en aanbodcurven",
+      "description": "Vraag en aanbod met evenwicht, consumenten-/producentensurplus en optionele curveverschuivingen.",
+      "scopeWarning": "Geschikt voor illustratieve analyse van het gedeeltelijke evenwicht in scripties. Voor niet-lineaire elasticiteitscurven is mogelijk handmatige aanpassing van de pgfplots nodig.",
+      "defaultCaption": "Vraag en aanbod: oorspronkelijk evenwicht $E_0$ en vraagverschuiving $D \\to D'$ na inkomensstijging."
     },
     "uml-class-diagrams": {
-      "displayName": "UML Class Diagrams",
-      "description": "UML class diagrams with inheritance, interfaces, composition, and association.",
-      "scopeWarning": "Generates simplified class boxes. For full UML compliance, use PlantUML or draw.io and import as PDF.",
-      "defaultCaption": "Repository pattern with Observer: \\\\ $<<$interface$>>$ classes, inheritance and composition."
+      "displayName": "UML-klassediagrammen",
+      "description": "UML-klassediagrammen met overerving, interfaces, compositie en associatie.",
+      "scopeWarning": "Genereert vereenvoudigde klassenvakken. Voor volledige naleving van UML gebruikt u PlantUML of draw.io en importeert u als PDF.",
+      "defaultCaption": "Repositorypatroon met Observer: $<<$interface$>>$-klassen, overerving en compositie."
     },
     "time-series": {
-      "displayName": "Time Series Plots",
-      "description": "Time series with trend, confidence band, and annotated events. Ideal for longitudinal data in economics, ecology, and clinical research.",
-      "scopeWarning": "Enter data points manually. For large or complex time series (ARIMA, seasonal), generate in R/Python and import as PDF.",
-      "defaultCaption": "Monthly CO$_2$ concentration (ppm) with long-term trend and $\\pm$2\\,SD band."
+      "displayName": "Tijdreeksplots",
+      "description": "Tijdreeksen met trend, betrouwbaarheidsband en geannoteerde gebeurtenissen. Ideaal voor longitudinale gegevens in de economie, ecologie en klinisch onderzoek.",
+      "scopeWarning": "Enter-gegevenspunten handmatig. Voor grote of complexe tijdreeksen (ARIMA, seizoensgebonden): genereer in R/Python en importeer als PDF.",
+      "defaultCaption": "Maandelijkse CO$_2$-concentratie (ppm) met langetermijntrend en $\\pm$2\\,SD-band."
     },
     "genealogy": {
-      "displayName": "Genealogy / Family Trees",
-      "description": "Family trees, dynasties, and clinical pedigrees with generations and relationship markers.",
-      "scopeWarning": "Suitable for simplified family trees. For clinical genetic pedigrees with standard symbols (ACMG/AMP), use dedicated pedigree software.",
-      "defaultCaption": "Family tree."
+      "displayName": "Genealogie/stambomen",
+      "description": "Stambomen, dynastieën en klinische stambomen met generaties en relatiemarkeringen.",
+      "scopeWarning": "Geschikt voor vereenvoudigde stambomen. Gebruik speciale stamboomsoftware voor klinisch genetische stambomen met standaardsymbolen (ACMG/AMP).",
+      "defaultCaption": "Stamboom."
     },
     "parallel-coordinates": {
-      "displayName": "Parallel Coordinates / Criteria Matrix",
-      "description": "Parallel coordinate plots for multi-criteria comparison of alternatives across normalised dimensions (0--10 scale).",
-      "scopeWarning": "Normalise all criteria to a common scale (e.g. 0--10) before entering values. For many alternatives (>6), use Python/R and import as PDF.",
-      "defaultCaption": "Parallel coordinate plot comparing five software solutions on four criteria."
+      "displayName": "Parallelle coördinaten/criteriamatrix",
+      "description": "Parallelle coördinatenplots voor vergelijking op basis van meerdere criteria van alternatieven over genormaliseerde dimensies (schaal 0--10).",
+      "scopeWarning": "Normaliseer alle criteria naar een gemeenschappelijke schaal (bijvoorbeeld 0--10) voordat u waarden invoert. Gebruik voor veel alternatieven (>6) Python/R en importeer als PDF.",
+      "defaultCaption": "Parallelle coördinatenplot waarbij vijf softwareoplossingen worden vergeleken op basis van vier criteria."
     },
     "energy-band-diagrams": {
-      "displayName": "Energy / Band Diagrams",
-      "description": "Energy level diagrams, band gaps, and semiconductor band diagrams for physics and materials science.",
-      "scopeWarning": "Energy values are illustrative. Replace with your material's actual band gap and Fermi level values from literature or calculation.",
-      "defaultCaption": "Semiconductor band diagram."
+      "displayName": "Energie-/banddiagrammen",
+      "description": "Energieniveaudiagrammen, bandafstanden en halfgeleiderbanddiagrammen voor natuurkunde en materiaalkunde.",
+      "scopeWarning": "Energiewaarden zijn illustratief. Vervang dit door de werkelijke bandafstand en Fermi-niveauwaarden van uw materiaal uit de literatuur of berekeningen.",
+      "defaultCaption": "Halfgeleiderbanddiagram."
     },
     "decision-tree": {
-      "displayName": "Decision Trees",
-      "description": "Decision tree diagrams with conditions, branches, and leaf outcomes. Covers classification trees, CART, and clinical decision rules.",
-      "scopeWarning": "Enter tree structure manually. For automatic tree generation from data, use scikit-learn/rpart and export the tree, then reproduce here for publication.",
-      "defaultCaption": "Decision tree."
+      "displayName": "Beslissingsbomen",
+      "description": "Beslissingsboomdiagrammen met voorwaarden, takken en bladresultaten. Omvat classificatiebomen, CART en klinische beslissingsregels.",
+      "scopeWarning": "Enter-boomstructuur handmatig. Voor het automatisch genereren van boomstructuren op basis van gegevens gebruikt u scikit-learn/rpart en exporteert u de boomstructuur, waarna u deze hier reproduceert voor publicatie.",
+      "defaultCaption": "Beslissingsboom."
     },
     "roc-curve": {
-      "displayName": "ROC Curves",
-      "description": "Receiver operating characteristic curves for classifier evaluation. Supports multiple classifiers with AUC annotation.",
-      "scopeWarning": "Enter pre-computed TPR/FPR values from your statistical software (sklearn, R pROC). This plugin renders the curve; model training must be done externally.",
-      "defaultCaption": "ROC curves (AUC shown in legend)."
+      "displayName": "ROC-curven",
+      "description": "Bedrijfskarakteristieken van de ontvanger voor classificatie-evaluatie. Ondersteunt meerdere classificaties met AUC-annotatie.",
+      "scopeWarning": "Enter vooraf berekende TPR/FPR-waarden uit uw statistische software (sklearn, R pROC). Deze plug-in geeft de curve weer; modeltraining moet extern worden gedaan.",
+      "defaultCaption": "ROC-curven (AUC weergegeven in legenda)."
     },
     "population-pyramid": {
-      "displayName": "Population Pyramid",
-      "description": "Age-sex population pyramid for demographic analysis. Shows male/female population distributions by age group.",
-      "scopeWarning": "Enter census data manually. For large datasets, generate the pyramid in R/Python and import as PDF, or use this plugin for illustrative sub-populations.",
-      "defaultCaption": "Population pyramid."
+      "displayName": "Bevolkingspiramide",
+      "description": "Bevolkingspiramide leeftijd-geslacht voor demografische analyse. Toont de verdeling van de mannelijke/vrouwelijke bevolking per leeftijdsgroep.",
+      "scopeWarning": "Enter censusgegevens handmatig. Voor grote datasets genereert u de piramide in R/Python en importeert u deze als PDF, of gebruikt u deze plug-in voor illustratieve subpopulaties.",
+      "defaultCaption": "Bevolkingspiramide."
     },
     "error-bars": {
-      "displayName": "Error Bars & Confidence Intervals",
-      "description": "Line or bar plots with error bars for means ± SD/SE/CI. Essential for presenting experimental or survey results.",
-      "scopeWarning": "Enter means and error values (SD, SE, or 95% CI half-width) computed from your data. Raw data processing must be done externally.",
-      "defaultCaption": "Mean values with 95\\% confidence intervals."
+      "displayName": "Foutbalken en betrouwbaarheidsintervallen",
+      "description": "Lijn- of staafdiagrammen met foutbalken voor gemiddelden ± SD/SE/CI. Essentieel voor het presenteren van experimentele of enquêteresultaten.",
+      "scopeWarning": "Enter-gemiddelden en foutwaarden (SD, SE of 95% CI halve breedte) berekend op basis van uw gegevens. De verwerking van ruwe gegevens moet extern gebeuren.",
+      "defaultCaption": "Gemiddelde waarden met een betrouwbaarheidsinterval van 95\\%."
     },
     "causal-dag": {
-      "displayName": "Causal DAG / Path Diagrams",
-      "description": "Directed acyclic graphs (DAGs) for causal inference frameworks, structural equation models, and mediation analysis.",
-      "scopeWarning": "Suitable for causal diagrams up to ~10 variables. For complex SEM or large DAGs, use dagitty.net or lavaan and import the diagram.",
-      "defaultCaption": "Causal directed acyclic graph (DAG)."
+      "displayName": "Causale DAG / paddiagrammen",
+      "description": "Gerichte acyclische grafieken (DAG's) voor raamwerken voor causale inferentie, structurele vergelijkingsmodellen en bemiddelingsanalyse.",
+      "scopeWarning": "Geschikt voor causale diagrammen tot ~10 variabelen. Voor complexe SEM of grote DAG's gebruikt u dagitty.net of lavaan en importeert u het diagram.",
+      "defaultCaption": "Causaal gerichte acyclische grafiek (DAG)."
     },
     "bar-charts": {
-      "displayName": "Bar Charts & Histograms",
-      "description": "Grouped and stacked bar charts, frequency histograms for descriptive statistics.",
-      "scopeWarning": "Enter values manually. For charts from large datasets, generate in R/Python and import as PDF.",
-      "defaultCaption": "Grouped bar chart — mean response by condition and time point ($\\pm$\\,SD)."
+      "displayName": "Staafdiagrammen en histogrammen",
+      "description": "Gegroepeerde en gestapelde staafdiagrammen, frequentiehistogrammen voor beschrijvende statistieken.",
+      "scopeWarning": "Enter-waarden handmatig. Voor diagrammen uit grote datasets kunt u genereren in R/Python en importeren als PDF.",
+      "defaultCaption": "Gegroepeerd staafdiagram: gemiddelde respons per toestand en tijdstip ($\\pm$\\,SD)."
     },
     "box-violin-plots": {
-      "displayName": "Box Plots & Distribution Comparisons",
-      "description": "Box-and-whisker plots with medians, quartiles, and outliers for comparing distributions.",
-      "scopeWarning": "Enter pre-computed statistics (median, Q1, Q3) from R/Python. Each data point encodes: x=group position, y=median, error=IQR half-range.",
-      "defaultCaption": "Distribution of test scores across three teaching conditions (box: Q1--Q3; whiskers: 1.5$\\times$IQR)."
+      "displayName": "Boxplots en distributievergelijkingen",
+      "description": "Box-and-whisker-plots met medianen, kwartielen en uitbijters voor het vergelijken van verdelingen.",
+      "scopeWarning": "Enter vooraf berekende statistieken (mediaan, Q1, Q3) van R/Python. Elk datapunt codeert: x=groepspositie, y=mediaan, fout=IQR halve bereik.",
+      "defaultCaption": "Verdeling van toetsscores over drie onderwijscondities (vak: Q1--Q3; snorharen: 1,5$\\times$IQR)."
     },
     "scatter-regression": {
-      "displayName": "Scatter Plots with Regression",
-      "description": "Scatter plot with linear regression line and optional confidence band.",
-      "scopeWarning": "Compute slope, intercept, and CI band in your statistical software. Enter the values here for publication-quality rendering.",
-      "defaultCaption": "BMI vs systolic blood pressure: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
+      "displayName": "Verspreidingsdiagrammen met regressie",
+      "description": "Scatterplot met lineaire regressielijn en optionele betrouwbaarheidsband.",
+      "scopeWarning": "Bereken de helling, het snijpunt en de CI-band in uw statistische software. Enter de waarden hier voor weergave van publicatiekwaliteit.",
+      "defaultCaption": "BMI versus systolische bloeddruk: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
     },
     "bayesian-networks": {
-      "displayName": "Bayesian Networks",
-      "description": "Directed acyclic graphs for Bayesian networks: latent cause nodes (ellipses) with observed evidence nodes (rectangles).",
-      "scopeWarning": "Suitable for illustrative Bayesian networks in theses. For inference, parameter learning, or dense graphs, use pgmpy, BayesFusion, GeNIe, or BUGS and import the final PDF/SVG.",
-      "defaultCaption": "Bayesian network for differential diagnosis of respiratory illness."
+      "displayName": "Bayesiaanse netwerken",
+      "description": "Gerichte acyclische grafieken voor Bayesiaanse netwerken: latente oorzaakknooppunten (ellipsen) met waargenomen bewijsknooppunten (rechthoeken).",
+      "scopeWarning": "Geschikt voor illustratieve Bayesiaanse netwerken in scripties. Voor inferentie, het leren van parameters of compacte grafieken gebruikt u pgmpy, BayesFusion, GeNIe of BUGS en importeert u de uiteindelijke PDF/SVG.",
+      "defaultCaption": "Bayesiaans netwerk voor differentiële diagnose van luchtwegaandoeningen."
     },
     "sem-path-diagrams": {
-      "displayName": "SEM / Path Diagrams",
-      "description": "Structural equation model path diagrams with latent variables and measurement models.",
-      "scopeWarning": "Suitable for thesis-level SEM diagrams. For estimation, fit statistics, and standardized reports, use lavaan/R, Mplus, or AMOS and import the final diagram/table as PDF.",
-      "defaultCaption": "Technology Acceptance Model (TAM): perceived usefulness and ease of use predicting behavioural intention."
+      "displayName": "SEM / Paddiagrammen",
+      "description": "Paddiagrammen voor structurele vergelijkingsmodellen met latente variabelen en meetmodellen.",
+      "scopeWarning": "Geschikt voor SEM-diagrammen op proefschriftniveau. Voor schattingen, fitstatistieken en gestandaardiseerde rapporten gebruikt u lavaan/R, Mplus of AMOS en importeert u het uiteindelijke diagram/de uiteindelijke tabel als PDF.",
+      "defaultCaption": "Technologieacceptatiemodel (TAM): waargenomen nut en gebruiksgemak dat gedragsintentie voorspelt."
     },
     "economic-causal": {
-      "displayName": "Economic Causal Diagrams",
-      "description": "Causal loop diagrams (CLD) with reinforcing and balancing feedback loops.",
-      "scopeWarning": "Suitable for simple causal loop models. For full system dynamics with stocks, flows, delays, or simulation, use Vensim, Stella, or AnyLogic and import the final PDF/SVG.",
-      "defaultCaption": "Wage--price spiral: reinforcing ($R$) and balancing ($B$) feedback loops."
+      "displayName": "Economische causale diagrammen",
+      "description": "Causale diagrammen (CLD) met versterkende en balancerende feedbacklussen.",
+      "scopeWarning": "Geschikt voor eenvoudige causale lusmodellen. Voor volledige systeemdynamiek met aandelen, stromen, vertragingen of simulatie, gebruik Vensim, Stella of AnyLogic en importeer de uiteindelijke PDF/SVG.",
+      "defaultCaption": "Loon-prijsspiraal: feedbackloops versterken ($R$) en balanceren ($B$)."
     },
     "legal-procedural": {
-      "displayName": "Legal / Procedural Diagrams",
-      "description": "Flowcharts for legal and administrative procedures: judicial, regulatory, and compliance workflows.",
-      "scopeWarning": "Suitable for standard legal/administrative process flows in theses. Complex multi-party or multi-jurisdiction procedures are better maintained in BPMN/draw.io and imported as PDF.",
-      "defaultCaption": "Criminal procedure: from complaint to verdict."
+      "displayName": "Juridische/procedurele diagrammen",
+      "description": "Stroomdiagrammen voor juridische en administratieve procedures: gerechtelijke, regelgevende en nalevingsworkflows.",
+      "scopeWarning": "Geschikt voor standaard juridische/administratieve processtromen in scripties. Complexe procedures met meerdere partijen of meerdere rechtsgebieden worden beter onderhouden in BPMN/draw.io en geïmporteerd als PDF.",
+      "defaultCaption": "Strafproces: van klacht tot vonnis."
     },
     "pedagogical-diagrams": {
-      "displayName": "Pedagogical Diagrams",
-      "description": "Bloom's taxonomy, learning outcome hierarchies, and curriculum maps for education theses.",
-      "scopeWarning": "Covers common pedagogical diagram patterns. For complex instructional-design models, keep the authoritative diagram in draw.io/Figma and import the final PDF/SVG.",
-      "defaultCaption": "Revised Bloom's taxonomy — six cognitive levels with representative verbs (Anderson \\& Krathwohl, 2001)."
+      "displayName": "Pedagogische diagrammen",
+      "description": "De taxonomie van Bloom, leerresultatenhiërarchieën en curriculumkaarten voor onderwijsscripties.",
+      "scopeWarning": "Behandelt algemene pedagogische diagrampatronen. Voor complexe instructieontwerpmodellen kunt u het gezaghebbende diagram in draw.io/Figma behouden en de uiteindelijke PDF/SVG importeren.",
+      "defaultCaption": "Herziene taxonomie van Bloom: zes cognitieve niveaus met representatieve werkwoorden (Anderson \\& Krathwohl, 2001)."
     }
   }
 }

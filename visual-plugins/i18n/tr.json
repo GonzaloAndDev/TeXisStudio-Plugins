@@ -1,366 +1,366 @@
 {
   "plugins": {
     "phylogenetic-trees": {
-      "displayName": "Simple Phylogenetic Trees",
-      "description": "Build phylogenetic and taxonomic trees with labeled nodes and branch lengths.",
-      "scopeWarning": "Suitable for simplified phylogenies in theses. For complex phylogenetics with statistical support, use FigTree/iTOL and import as PDF.",
-      "defaultCaption": "Simplified phylogeny of selected vertebrate classes."
+      "displayName": "Basit Filogenetik Ağaçlar",
+      "description": "Etiketlenmiş düğümlere ve dal uzunluklarına sahip filogenetik ve taksonomik ağaçlar oluşturun.",
+      "scopeWarning": "Tezlerde basitleştirilmiş filogeniler için uygundur. İstatistiksel destekli karmaşık filogenetik için FigTree/iTOL kullanın ve PDF olarak içe aktarın.",
+      "defaultCaption": "Seçilen omurgalı sınıflarının basitleştirilmiş filogenisi."
     },
     "dna-rna-sequences": {
-      "displayName": "DNA / RNA / Protein Sequences",
-      "description": "Display biological sequences with color-coded bases, codon highlighting, and alignment marks.",
-      "defaultCaption": "Start codon and reading frame of a short mRNA sequence."
+      "displayName": "DNA / RNA / Protein Dizileri",
+      "description": "Biyolojik dizileri renk kodlu bazlar, kodon vurgulama ve hizalama işaretleri ile görüntüleyin.",
+      "defaultCaption": "Kısa bir mRNA dizisinin kodonunu ve okuma çerçevesini başlatın."
     },
     "biomedical-flow": {
-      "displayName": "Biomedical Flow Diagrams",
-      "description": "Biological and clinical process flows — signaling pathways, metabolic steps, treatment algorithms.",
-      "defaultCaption": "MAPK/ERK signalling cascade with feedback inhibition."
+      "displayName": "Biyomedikal Akış Diyagramları",
+      "description": "Biyolojik ve klinik süreç akışları — sinyal yolları, metabolik adımlar, tedavi algoritmaları.",
+      "defaultCaption": "Geri besleme engellemeli MAPK/ERK sinyalleşme kademesi."
     },
     "consort-flow": {
-      "displayName": "CONSORT / Clinical Trial Flow",
-      "description": "CONSORT-style flow diagrams for randomized clinical trials — enrollment, allocation, follow-up, analysis.",
-      "defaultCaption": "CONSORT 2010 flow diagram."
+      "displayName": "CONSORT / Klinik Deney Akışı",
+      "description": "Rastgeleleştirilmiş klinik araştırmalar için CONSORT- tarzı akış şemaları — kayıt, tahsis, takip, analiz.",
+      "defaultCaption": "CONSORT 2010 akış şeması."
     },
     "biological-pathways": {
-      "displayName": "Schematic Biological Pathways",
-      "description": "Simplified metabolic and signaling pathway schemes for thesis figures.",
-      "scopeWarning": "Suitable for simplified pathway diagrams in theses and reports. Not a substitute for KEGG, Reactome, or professional pathway visualization tools.",
-      "defaultCaption": "Central carbon metabolism: glycolysis and TCA cycle entry."
+      "displayName": "Şematik Biyolojik Yollar",
+      "description": "Tez rakamları için basitleştirilmiş metabolik ve sinyal yolu şemaları.",
+      "scopeWarning": "Tezler ve raporlardaki basitleştirilmiş yol diyagramları için uygundur. KEGG, Reactome veya profesyonel yol görselleştirme araçlarının yerini almaz.",
+      "defaultCaption": "Merkezi karbon metabolizması: glikoliz ve TCA döngüsü girişi."
     },
     "chemical-formulas": {
-      "displayName": "Chemical Formulas",
-      "description": "Write chemical formulas with charges, states, and subscripts. Uses mhchem — LaTeX native.",
-      "defaultCaption": "Selected inorganic formulas with oxidation states and phases."
+      "displayName": "Kimyasal Formüller",
+      "description": "Yükler, durumlar ve alt simgelerle kimyasal formüller yazın. mhchem — LaTeX yerelini kullanır.",
+      "defaultCaption": "Oksidasyon durumları ve aşamaları olan seçilmiş inorganik formüller."
     },
     "chemical-reactions": {
-      "displayName": "Chemical Reactions",
-      "description": "Build chemical reaction equations with arrows, conditions, and catalysts. Uses mhchem.",
-      "defaultCaption": "Acid--base neutralisation and combustion reactions."
+      "displayName": "Kimyasal Reaksiyonlar",
+      "description": "Oklar, koşullar ve katalizörlerle kimyasal reaksiyon denklemleri oluşturun. mhchem'i kullanır.",
+      "defaultCaption": "Asit-baz nötrleştirme ve yanma reaksiyonları."
     },
     "reaction-equilibria": {
-      "displayName": "Reaction Equilibria & Conditions",
-      "description": "Chemical equilibrium reactions with conditions above/below the arrow. Uses mhchem.",
-      "defaultCaption": "Haber process and esterification equilibria."
+      "displayName": "Reaksiyon Dengeleri ve Koşulları",
+      "description": "Okun üstündeki/altındaki koşullarla kimyasal denge reaksiyonları. mhchem'i kullanır.",
+      "defaultCaption": "Haber süreci ve esterleşme dengeleri."
     },
     "chemical-structures": {
-      "displayName": "Chemical Structures",
-      "description": "Simple organic structures and ring systems using ChemFig. Benzene, functional groups, ring compounds.",
-      "scopeWarning": "Suitable for simple organic structures in theses. Complex multi-ring systems may need manual ChemFig adjustment. For full structural chemistry, use ChemDraw and import as PDF/SVG.",
-      "defaultCaption": "Aspirin (acetylsalicylic acid) structural formula."
+      "displayName": "Kimyasal Yapılar",
+      "description": "ChemFig'i kullanan basit organik yapılar ve halka sistemleri. Benzen, fonksiyonel gruplar, halka bileşikleri.",
+      "scopeWarning": "Tezlerdeki basit organik yapılar için uygundur. Karmaşık çok halkalı sistemler manuel ChemFig ayarına ihtiyaç duyabilir. Tam yapısal kimya için ChemDraw'ı kullanın ve PDF/SVG olarak içe aktarın.",
+      "defaultCaption": "Aspirin (asetilsalisilik asit) yapısal formülü."
     },
     "basic-electrical-circuits": {
-      "displayName": "Basic Electrical Circuits",
-      "description": "Visual circuit builder: resistors, capacitors, inductors, sources, switches, diodes. CircuiTikZ native.",
-      "defaultCaption": "RC low-pass filter circuit with voltage divider."
+      "displayName": "Temel Elektrik Devreleri",
+      "description": "Görsel devre oluşturucu: dirençler, kapasitörler, indüktörler, kaynaklar, anahtarlar, diyotlar. CircuiTikZ yerel.",
+      "defaultCaption": "RC voltaj bölücülü alçak geçişli filtre devresi."
     },
     "block-diagrams-control": {
-      "displayName": "Block Diagrams / Control Systems",
-      "description": "Control system block diagrams with transfer functions, summing junctions, and feedback loops.",
-      "defaultCaption": "PID closed-loop control system block diagram."
+      "displayName": "Blok Diyagramlar / Kontrol Sistemleri",
+      "description": "Aktarım işlevleri, toplama bağlantıları ve geri bildirim döngüleri içeren kontrol sistemi blok diyagramları.",
+      "defaultCaption": "PID kapalı döngü kontrol sistemi blok şeması."
     },
     "flowcharts": {
-      "displayName": "Flowcharts",
-      "description": "Academic and process flowcharts with decision diamonds, process boxes, and connector arrows.",
-      "defaultCaption": "Research methodology flowchart."
+      "displayName": "Akış şemaları",
+      "description": "Karar elmasları, süreç kutuları ve bağlayıcı okları içeren akademik ve süreç akış şemaları.",
+      "defaultCaption": "Araştırma metodolojisi akış şeması."
     },
     "software-architecture": {
-      "displayName": "Software / System Architecture",
-      "description": "Component, layer, and system architecture diagrams.",
-      "scopeWarning": "Suitable for standard architecture overviews. For complex UML or deployment diagrams, use Draw.io and import as PDF.",
-      "defaultCaption": "Three-tier web application architecture."
+      "displayName": "Yazılım / Sistem Mimarisi",
+      "description": "Bileşen, katman ve sistem mimarisi diyagramları.",
+      "scopeWarning": "Standart mimariye genel bakış için uygundur. Karmaşık UML veya dağıtım diyagramları için Draw.io'yu kullanın ve PDF olarak içe aktarın.",
+      "defaultCaption": "Üç katmanlı web uygulaması mimarisi."
     },
     "venn-set-diagrams": {
-      "displayName": "Venn / Set Diagrams",
-      "description": "Create Venn diagrams and set-theory diagrams with labeled circles and intersections.",
-      "defaultCaption": "Three-set Venn diagram showing mixed-methods research design."
+      "displayName": "Venn / Set Diyagramları",
+      "description": "Etiketli daireler ve kesişimlerle Venn diyagramları ve küme teorisi diyagramları oluşturun.",
+      "defaultCaption": "Karma yöntem araştırma tasarımını gösteren üç kümeli Venn diyagramı."
     },
     "plane-geometry": {
-      "displayName": "Plane Geometry",
-      "description": "Geometric shapes: triangles, polygons, circles, angles, perpendiculars, parallels.",
-      "defaultCaption": "Right triangle with altitude from hypotenuse — geometric mean relations."
+      "displayName": "Düzlem Geometrisi",
+      "description": "Geometrik şekiller: üçgenler, çokgenler, daireler, açılar, dikler, paraleller.",
+      "defaultCaption": "Hipotenüsten yüksekliği olan dik üçgen — geometrik ortalama ilişkiler."
     },
     "analytic-geometry": {
-      "displayName": "Analytic Geometry",
-      "description": "Coordinate systems with curves, lines, tangents, and labeled points.",
-      "defaultCaption": "Parabola $f(x)=x^2-2x-3$ with roots, vertex, and tangent at $x=2$."
+      "displayName": "Analitik Geometri",
+      "description": "Eğriler, çizgiler, teğetler ve etiketli noktalar içeren koordinat sistemleri.",
+      "defaultCaption": "$x=2$'de kökleri, tepe noktası ve teğeti olan Parabol $f(x)=x^2-2x-3$."
     },
     "probability-trees": {
-      "displayName": "Probability Trees",
-      "description": "Visual probability trees with branch probabilities and outcomes. forest native.",
-      "defaultCaption": "Probability tree — two coin flips."
+      "displayName": "Olasılık Ağaçları",
+      "description": "Dallanma olasılıkları ve sonuçlarıyla birlikte görsel olasılık ağaçları. orman yerlisi.",
+      "defaultCaption": "Olasılık ağacı — iki yazı tura atma."
     },
     "lab-setups": {
-      "displayName": "Simple Lab Setups",
-      "description": "Basic laboratory apparatus diagrams: flasks, beakers, burettes, tube assemblies.",
-      "scopeWarning": "Covers standard lab apparatus. For specialized equipment diagrams, use dedicated illustration tools and import as PDF.",
-      "defaultCaption": "Simple laboratory setup."
+      "displayName": "Basit Laboratuvar Kurulumları",
+      "description": "Temel laboratuvar aparat şemaları: şişeler, beherler, büretler, tüp düzenekleri.",
+      "scopeWarning": "Standart laboratuvar cihazlarını kapsar. Özel ekipman şemaları için özel çizim araçlarını kullanın ve PDF olarak içe aktarın.",
+      "defaultCaption": "Basit laboratuvar kurulumu."
     },
     "syntax-trees": {
-      "displayName": "Syntax / Linguistic Trees",
-      "description": "Phrase-structure and dependency trees for linguistics. forest native.",
-      "defaultCaption": "Phrase-structure tree."
+      "displayName": "Söz Dizimi / Dil Ağaçları",
+      "description": "Dilbilim için sözcük öbeği yapısı ve bağımlılık ağaçları. orman yerlisi.",
+      "defaultCaption": "Cümle yapısı ağacı."
     },
     "concept-maps": {
-      "displayName": "Concept Maps & Argument Diagrams",
-      "description": "Concept maps, mind maps, and argumentative structure diagrams.",
-      "defaultCaption": "Concept map."
+      "displayName": "Kavram Haritaları ve Tartışma Diyagramları",
+      "description": "Kavram haritaları, zihin haritaları ve tartışmaya dayalı yapı diyagramları.",
+      "defaultCaption": "Kavram haritası."
     },
     "visual-equations": {
-      "displayName": "Visual Equations",
-      "description": "Build mathematical equations, expressions, and formulas with a visual editor. Outputs LaTeX native.",
-      "defaultCaption": "Quadratic formula and quadratic form."
+      "displayName": "Görsel Denklemler",
+      "description": "Görsel düzenleyiciyle matematiksel denklemler, ifadeler ve formüller oluşturun. Yerel LaTeX çıktısı verir.",
+      "defaultCaption": "İkinci dereceden formül ve ikinci dereceden form."
     },
     "matrices-determinants": {
-      "displayName": "Matrices & Determinants",
-      "description": "Create matrices and determinants of any size with visual cell editing.",
-      "defaultCaption": "3D rotation matrix around the $z$-axis by angle $\\theta$."
+      "displayName": "Matrisler ve Belirleyiciler",
+      "description": "Görsel hücre düzenlemeyle her boyutta matris ve determinant oluşturun.",
+      "defaultCaption": "$z$- ekseni etrafında $\\theta$ açısına göre 3 boyutlu döndürme matrisi."
     },
     "systems-of-equations": {
-      "displayName": "Systems of Equations",
-      "description": "Build systems of linear or nonlinear equations with aligned formatting.",
-      "defaultCaption": "System of three linear equations (fluid flow balance)."
+      "displayName": "Denklem Sistemleri",
+      "description": "Hizalanmış biçimlendirmeyle doğrusal veya doğrusal olmayan denklem sistemleri oluşturun.",
+      "defaultCaption": "Üç doğrusal denklem sistemi (akışkan akış dengesi)."
     },
     "piecewise-functions": {
-      "displayName": "Piecewise Functions",
-      "description": "Define functions by cases or parts with a visual row editor.",
-      "defaultCaption": "Heaviside step function and ReLU activation function."
+      "displayName": "Parçalı İşlevler",
+      "description": "Görsel bir satır düzenleyiciyle işlevleri vakalara veya parçalara göre tanımlayın.",
+      "defaultCaption": "Heaviside adım işlevi ve ReLU etkinleştirme işlevi."
     },
     "vectors-fields": {
-      "displayName": "Vectors & Simple Fields",
-      "description": "Draw vectors, vector decomposition, and simple field representations.",
-      "defaultCaption": "Vector addition — parallelogram law: $\\vec{R} = \\vec{A} + \\vec{B}$."
+      "displayName": "Vektörler ve Basit Alanlar",
+      "description": "Vektörleri, vektör ayrıştırmasını ve basit alan gösterimlerini çizin.",
+      "defaultCaption": "Vektör toplama — paralelkenar yasası: $\\vec{R} = \\vec{A} + \\vec{B}$."
     },
     "free-body-diagrams": {
-      "displayName": "Free Body Diagrams",
-      "description": "Build free body diagrams with forces, mass blocks, and labeled arrows.",
-      "defaultCaption": "Free body diagram — block on surface with applied force at angle $\\alpha$."
+      "displayName": "Serbest Gövde Diyagramları",
+      "description": "Kuvvetler, kütle blokları ve etiketli oklarla serbest cisim diyagramları oluşturun.",
+      "defaultCaption": "Serbest cisim diyagramı — $\\alpha$ açısında uygulanan kuvvetle yüzeydeki blok."
     },
     "inclined-plane-pulleys": {
-      "displayName": "Inclined Planes, Pulleys & Springs",
-      "description": "Mechanical systems: inclined planes, pulley setups, and spring-mass systems.",
-      "scopeWarning": "Generates accurate schematic diagrams. Highly complex multi-pulley systems may need manual TikZ adjustments.",
-      "defaultCaption": "Free-body diagram on inclined plane (angle $\\theta$)."
+      "displayName": "Eğik Düzlemler, Makaralar ve Yaylar",
+      "description": "Mekanik sistemler: eğik düzlemler, makara düzenleri ve yay-kütle sistemleri.",
+      "scopeWarning": "Doğru şematik diyagramlar oluşturur. Son derece karmaşık, çok makaralı sistemlerde manuel TikZ ayarlamaları yapılması gerekebilir.",
+      "defaultCaption": "Eğik düzlemde serbest cisim diyagramı ($\\theta$ açısı)."
     },
     "wave-oscillation": {
-      "displayName": "Wave & Oscillation Diagrams",
-      "description": "Sinusoidal waves, damped oscillations, and wave superposition. Covers SHM, transverse/longitudinal waves, and interference patterns.",
-      "defaultCaption": "Sinusoidal wave $y = A\\sin(\\omega t)$ with damped envelope."
+      "displayName": "Dalga ve Salınım Diyagramları",
+      "description": "Sinüzoidal dalgalar, sönümlü salınımlar ve dalga süperpozisyonu. SHM'yi, enine/boyuna dalgaları ve girişim desenlerini kapsar.",
+      "defaultCaption": "Sönümlü zarflı sinüzoidal dalga $y = A\\sin(\\omega t)$."
     },
     "geometric-optics": {
-      "displayName": "Geometric Optics",
-      "description": "Lenses, mirrors, ray diagrams, and refraction diagrams.",
-      "scopeWarning": "Suitable for standard ray diagrams. Complex optical systems with multiple elements may need manual adjustment.",
-      "defaultCaption": "Converging thin lens — three principal ray construction."
+      "displayName": "Geometrik Optik",
+      "description": "Mercekler, aynalar, ışın diyagramları ve kırılma diyagramları.",
+      "scopeWarning": "Standart ışın diyagramları için uygundur. Birden fazla öğeye sahip karmaşık optik sistemlerin manuel olarak ayarlanması gerekebilir.",
+      "defaultCaption": "Birleşen ince mercek — üç ana ışın yapısı."
     },
     "gantt-charts": {
-      "displayName": "Gantt Charts",
-      "description": "Research and project Gantt charts with tasks, groups, milestones, and dependencies. pgfgantt native.",
-      "defaultCaption": "Doctoral research schedule by semester."
+      "displayName": "Gantt Grafikleri",
+      "description": "Gantt grafiklerini görevler, gruplar, kilometre taşları ve bağımlılıklarla araştırın ve projelendirin. pgfgantt yerel.",
+      "defaultCaption": "Döneme göre doktora araştırma programı."
     },
     "timelines": {
-      "displayName": "Timelines",
-      "description": "Historical, research, and narrative timelines with labeled events.",
-      "defaultCaption": "Key milestones in molecular biology (1944--2003)."
+      "displayName": "Zaman Çizelgeleri",
+      "description": "Etiketlenmiş etkinliklerle birlikte tarihsel, araştırma ve anlatım zaman çizelgeleri.",
+      "defaultCaption": "Moleküler biyolojideki önemli kilometre taşları (1944-2003)."
     },
     "function-plots-2d": {
-      "displayName": "2D Function Plots",
-      "description": "Plot mathematical functions with labeled axes, grid, and legend. PGFPlots native.",
-      "defaultCaption": "Trigonometric functions $\\sin x$ and $\\cos x$."
+      "displayName": "2B İşlev Grafikleri",
+      "description": "Matematiksel fonksiyonları etiketli eksenler, ızgara ve göstergelerle çizin. PGFPlot'lar yerel.",
+      "defaultCaption": "Trigonometrik fonksiyonlar $\\sin x$ ve $\\cos x$."
     },
     "parametric-polar-plots": {
-      "displayName": "Parametric & Polar Plots",
-      "description": "Parametric curves and polar function plots.",
-      "defaultCaption": "Lissajous curve $(\\cos 2t,\\, \\sin 3t)$."
+      "displayName": "Parametrik ve Kutupsal Grafikler",
+      "description": "Parametrik eğriler ve kutupsal fonksiyon grafikleri.",
+      "defaultCaption": "Lissajous eğrisi $(\\cos 2t,\\, \\sin 3t)$."
     },
     "basic-statistics": {
-      "displayName": "Basic Statistics Charts",
-      "description": "Bar charts, histograms, and scatter plots from tabular data.",
-      "defaultCaption": "Comparative bar chart — measurement results by experimental group."
+      "displayName": "Temel İstatistik Grafikleri",
+      "description": "Tablolu verilerden çubuk grafikler, histogramlar ve dağılım grafikleri.",
+      "defaultCaption": "Karşılaştırmalı çubuk grafik — deney grubuna göre ölçüm sonuçları."
     },
     "statistical-distributions": {
-      "displayName": "Statistical Distributions",
-      "description": "Normal, t, chi-squared, and other distributions with shaded regions.",
-      "defaultCaption": "Standard normal distribution with 95\\% confidence interval shaded."
+      "displayName": "İstatistiksel Dağılımlar",
+      "description": "Gölgeli bölgelere sahip normal, t, ki-kare ve diğer dağılımlar.",
+      "defaultCaption": "Gölgeli %95\\% güven aralığıyla standart normal dağılım."
     },
     "kaplan-meier": {
-      "displayName": "Kaplan-Meier Survival Curves",
-      "description": "Step-function survival curves for clinical and epidemiological studies.",
-      "scopeWarning": "Enter pre-computed KM estimates (from R survfit, Stata stcurve, or SPSS) as data points forming a step function. Statistical tests must be done externally.",
-      "defaultCaption": "Kaplan--Meier overall survival curves for adjuvant vs.\\ standard chemotherapy ($n{=}200$; log-rank $p{=}0.008$)."
+      "displayName": "Kaplan-Meier Hayatta Kalma Eğrileri",
+      "description": "Klinik ve epidemiyolojik araştırmalar için adım işlevli hayatta kalma eğrileri.",
+      "scopeWarning": "Enter, bir adım fonksiyonu oluşturan veri noktaları olarak önceden hesaplanmış KM tahminlerini (R survfit, Stata stcurve veya SPSS'den). İstatistiksel testler dışarıdan yapılmalıdır.",
+      "defaultCaption": "Kaplan--Adjuvan ve standart kemoterapi için Meier genel sağkalım eğrileri ($n{=}200$; log-rank $p{=}0.008$)."
     },
     "network-graph": {
-      "displayName": "Network / Social Graphs",
-      "description": "Co-authorship, citation, or social influence networks with community clustering.",
-      "scopeWarning": "Suitable for illustrative networks (≤ 15 nodes). For large-scale visualization, use Gephi or NetworkX and import as PDF.",
-      "defaultCaption": "Co-authorship network — two research clusters connected by a bridge author."
+      "displayName": "Ağ / Sosyal Grafikler",
+      "description": "Topluluk kümelenmesiyle ortak yazarlık, alıntı veya sosyal etki ağları.",
+      "scopeWarning": "Açıklayıcı ağlar için uygundur (≤ 15 düğüm). Büyük ölçekli görselleştirme için Gephi veya NetworkX kullanın ve PDF olarak içe aktarın.",
+      "defaultCaption": "Ortak yazarlık ağı — bir köprü yazarı tarafından bağlanan iki araştırma kümesi."
     },
     "organic-chemistry-extended": {
-      "displayName": "Extended Organic Chemistry",
-      "description": "Organic structures with rings, functional groups, and stereocentres. ChemFig native.",
-      "scopeWarning": "Complex multi-ring or stereo structures may need manual ChemFig adjustment. For publication-quality structures, use ChemDraw and import as PDF.",
-      "defaultCaption": "Caffeine (1,3,7-trimethylxanthine) structural formula."
+      "displayName": "Genişletilmiş Organik Kimya",
+      "description": "Halkalar, fonksiyonel gruplar ve stereomerkezlerden oluşan organik yapılar. ChemFig yerlisi.",
+      "scopeWarning": "Karmaşık çok halkalı veya stereo yapılar manuel ChemFig ayarı gerektirebilir. Yayın kalitesinde yapılar için ChemDraw'ı kullanın ve PDF olarak içe aktarın.",
+      "defaultCaption": "Kafein (1,3,7-trimetilksantin) yapısal formülü."
     },
     "reaction-mechanisms": {
-      "displayName": "Basic Reaction Mechanisms",
-      "description": "Reaction mechanisms including C-C bond forming reactions, substitutions, and eliminations.",
-      "scopeWarning": "Suitable for standard mechanisms in theses. Complex multi-step mechanisms with curved arrows require manual ChemFig adjustment.",
-      "defaultCaption": "Aldol condensation: base-catalysed formation of a $\\beta$-hydroxy carbonyl compound."
+      "displayName": "Temel Reaksiyon Mekanizmaları",
+      "description": "C-C bağ oluşturan reaksiyonlar, ikameler ve eliminasyonları içeren reaksiyon mekanizmaları.",
+      "scopeWarning": "Tezlerdeki standart mekanizmalara uygundur. Kavisli oklara sahip karmaşık çok adımlı mekanizmalar, manuel ChemFig ayarlaması gerektirir.",
+      "defaultCaption": "Aldol yoğunlaşması: $\\beta$-hidroksi karbonil bileşiğinin baz katalizli oluşumu."
     },
     "er-diagrams": {
-      "displayName": "ER Diagrams",
-      "description": "Entity-relationship diagrams for database design. TikZ native.",
-      "scopeWarning": "Suitable for standard ER diagrams in theses. Complex schemas with many entities benefit from Draw.io exported as PDF.",
-      "defaultCaption": "ER diagram for a university course-enrollment system."
+      "displayName": "ER Diyagramları",
+      "description": "Veritabanı tasarımı için varlık-ilişki diyagramları. TikZ yerel.",
+      "scopeWarning": "Tezlerdeki standart ER diyagramları için uygundur. Birçok varlığa sahip karmaşık şemalar, PDF olarak dışa aktarılan Draw.io'dan yararlanır.",
+      "defaultCaption": "Bir üniversite ders kayıt sistemi için ER diyagramı."
     },
     "state-machines": {
-      "displayName": "State Machines",
-      "description": "Finite state machines and automata with states, transitions, and labels.",
-      "scopeWarning": "Suitable for DFA/NFA and reactive system diagrams in theses. For large automata, generate from Graphviz/PlantUML and import as PDF.",
-      "defaultCaption": "Traffic-light finite state machine (timer-driven)."
+      "displayName": "Durum Makineleri",
+      "description": "Durumlar, geçişler ve etiketler içeren sonlu durum makineleri ve otomatlar.",
+      "scopeWarning": "Tezlerdeki DFA/NFA ve reaktif sistem diyagramlarına uygundur. Büyük otomatlar için Graphviz/PlantUML'den oluşturun ve PDF olarak içe aktarın.",
+      "defaultCaption": "Trafik ışığı sonlu durum makinesi (zamanlayıcıyla çalıştırılan)."
     },
     "markov-chains": {
-      "displayName": "Markov Chains",
-      "description": "Markov chain diagrams with states and transition probabilities.",
-      "scopeWarning": "Suitable for illustrative Markov chains in theses. For inference or simulation, use R/Python and import results as figures.",
-      "defaultCaption": "Weather Markov chain (Sunny / Cloudy / Rainy)."
+      "displayName": "Markov Zincirleri",
+      "description": "Durumlar ve geçiş olasılıklarını içeren Markov zincir diyagramları.",
+      "scopeWarning": "Tezlerdeki açıklayıcı Markov zincirleri için uygundur. Çıkarım veya simülasyon için R/Python kullanın ve sonuçları şekil olarak içe aktarın.",
+      "defaultCaption": "Hava Markov zinciri (Güneşli / Bulutlu / Yağmurlu)."
     },
     "bode-nyquist": {
-      "displayName": "Bode / Nyquist Diagrams",
-      "description": "Frequency response: Bode magnitude + phase, or Nyquist plot. Second-order transfer functions.",
-      "scopeWarning": "Enter your system transfer function as a pgfplots expression. Compute poles/zeros in MATLAB/Python first.",
-      "defaultCaption": "Bode plot of $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
+      "displayName": "Bode / Nyquist Diyagramları",
+      "description": "Frekans yanıtı: Bode büyüklüğü + faz veya Nyquist grafiği. İkinci dereceden aktarım işlevleri.",
+      "scopeWarning": "Enter sistem aktarım fonksiyonunuz bir pgfplots ifadesi olarak. Önce MATLAB/Python'de kutupları/sıfırları hesaplayın.",
+      "defaultCaption": "$G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$'nin ($\\omega_n{=}10$, $\\zeta{=}0.3$) Bode grafiği."
     },
     "plots-3d": {
-      "displayName": "3D Scientific Plots",
-      "description": "3D surfaces, wireframes, and contour plots. PGFPlots native.",
-      "scopeWarning": "3D plots compile slowly for fine meshes. Keep samples ≤ 25×25 for reasonable compile time.",
-      "defaultCaption": "Standard bivariate normal density $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
+      "displayName": "3B Bilimsel Grafikler",
+      "description": "3B yüzeyler, tel çerçeveler ve kontur grafikleri. PGFPlot'lar yerel.",
+      "scopeWarning": "3B grafikler ince ağlar için yavaş derlenir. Makul derleme süresi için örnekleri ≤ 25×25 tutun.",
+      "defaultCaption": "Standart iki değişkenli normal yoğunluk $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
     },
     "phase-diagrams": {
-      "displayName": "Phase Diagrams",
-      "description": "Phase portraits, nullclines, and stability diagrams for dynamical systems.",
-      "scopeWarning": "Suitable for 2D phase planes and nullcline plots. Full vector-field arrows require manual pgfplots quiver adjustments.",
-      "defaultCaption": "Lotka--Volterra phase plane: prey $x$ vs predator $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
+      "displayName": "Faz Diyagramları",
+      "description": "Dinamik sistemler için faz portreleri, sıfır çizgileri ve kararlılık diyagramları.",
+      "scopeWarning": "2B faz düzlemleri ve sıfır çizgi grafikleri için uygundur. Tam vektör alanı okları, pgfplot'ların manüel titreme ayarlamalarını gerektirir.",
+      "defaultCaption": "Lotka--Volterra faz düzlemi: av $x$ ile yırtıcı $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$) arasındaki karşılaştırma."
     },
     "heat-maps": {
-      "displayName": "Correlation Heat Maps",
-      "description": "Correlation matrices and heat maps using pgfplots matrix plot. Values between -1 and 1, color-mapped.",
-      "scopeWarning": "Suitable for small matrices (≤ 10×10). Compute correlations in R/Python first, then enter the values here.",
-      "defaultCaption": "Pearson correlation matrix for four psychometric variables."
+      "displayName": "Korelasyon Isı Haritaları",
+      "description": "pgfplots matris grafiğini kullanan korelasyon matrisleri ve ısı haritaları. -1 ile 1 arasındaki değerler, renk eşlemelidir.",
+      "scopeWarning": "Küçük matrisler için uygundur (≤ 10×10). Önce R/Python'deki korelasyonları hesaplayın, ardından değerleri buraya girin.",
+      "defaultCaption": "Dört psikometrik değişken için Pearson korelasyon matrisi."
     },
     "supply-demand": {
-      "displayName": "Supply & Demand Curves",
-      "description": "Supply and demand with equilibrium, consumer/producer surplus, and optional curve shifts.",
-      "scopeWarning": "Suitable for illustrative partial-equilibrium analysis in theses. Non-linear elasticity curves may need manual pgfplots adjustment.",
-      "defaultCaption": "Supply and demand: original equilibrium $E_0$ and demand shift $D \\to D'$ after income increase."
+      "displayName": "Arz ve Talep Eğrileri",
+      "description": "Denge, tüketici/üretici fazlası ve isteğe bağlı eğri değişimleriyle arz ve talep.",
+      "scopeWarning": "Tezlerde açıklayıcı kısmi denge analizi için uygundur. Doğrusal olmayan esneklik eğrileri pgfplotların manuel olarak ayarlanmasını gerektirebilir.",
+      "defaultCaption": "Arz ve talep: orijinal denge $E_0$ ve gelir artışından sonra talep kayması $D \\to D'$."
     },
     "uml-class-diagrams": {
-      "displayName": "UML Class Diagrams",
-      "description": "UML class diagrams with inheritance, interfaces, composition, and association.",
-      "scopeWarning": "Generates simplified class boxes. For full UML compliance, use PlantUML or draw.io and import as PDF.",
-      "defaultCaption": "Repository pattern with Observer: \\\\ $<<$interface$>>$ classes, inheritance and composition."
+      "displayName": "UML Sınıf Diyagramları",
+      "description": "Kalıtım, arayüzler, kompozisyon ve ilişkilendirme içeren UML sınıf diyagramları.",
+      "scopeWarning": "Basitleştirilmiş sınıf kutuları oluşturur. Tam UML uyumluluğu için PlantUML veya Draw.io kullanın ve PDF olarak içe aktarın.",
+      "defaultCaption": "Observer ile depo modeli: $<<$interface$>>$ sınıfları, kalıtım ve kompozisyon."
     },
     "time-series": {
-      "displayName": "Time Series Plots",
-      "description": "Time series with trend, confidence band, and annotated events. Ideal for longitudinal data in economics, ecology, and clinical research.",
-      "scopeWarning": "Enter data points manually. For large or complex time series (ARIMA, seasonal), generate in R/Python and import as PDF.",
-      "defaultCaption": "Monthly CO$_2$ concentration (ppm) with long-term trend and $\\pm$2\\,SD band."
+      "displayName": "Zaman Serisi Grafikleri",
+      "description": "Trend, güven aralığı ve açıklamalı olaylar içeren zaman serisi. Ekonomi, ekoloji ve klinik araştırmalardaki boylamsal veriler için idealdir.",
+      "scopeWarning": "Enter veri noktaları manuel olarak. Büyük veya karmaşık zaman serileri (ARIMA, mevsimsel) için R/Python'de oluşturun ve PDF olarak içe aktarın.",
+      "defaultCaption": "Uzun vadeli trend ve $\\pm$2\\,SD bandıyla birlikte aylık CO$_2$ konsantrasyonu (ppm)."
     },
     "genealogy": {
-      "displayName": "Genealogy / Family Trees",
-      "description": "Family trees, dynasties, and clinical pedigrees with generations and relationship markers.",
-      "scopeWarning": "Suitable for simplified family trees. For clinical genetic pedigrees with standard symbols (ACMG/AMP), use dedicated pedigree software.",
-      "defaultCaption": "Family tree."
+      "displayName": "Şecere / Aile Ağaçları",
+      "description": "Aile ağaçları, hanedanlar ve nesiller ve ilişki belirteçleriyle birlikte klinik soyağaçları.",
+      "scopeWarning": "Basitleştirilmiş aile ağaçları için uygundur. Standart sembollere (ACMG/AMP) sahip klinik genetik soyağaçları için özel soyağacı yazılımını kullanın.",
+      "defaultCaption": "Aile ağacı."
     },
     "parallel-coordinates": {
-      "displayName": "Parallel Coordinates / Criteria Matrix",
-      "description": "Parallel coordinate plots for multi-criteria comparison of alternatives across normalised dimensions (0--10 scale).",
-      "scopeWarning": "Normalise all criteria to a common scale (e.g. 0--10) before entering values. For many alternatives (>6), use Python/R and import as PDF.",
-      "defaultCaption": "Parallel coordinate plot comparing five software solutions on four criteria."
+      "displayName": "Paralel Koordinatlar / Kriter Matrisi",
+      "description": "Normalleştirilmiş boyutlar (0-10 ölçeği) genelinde alternatiflerin çok kriterli karşılaştırması için paralel koordinat grafikleri.",
+      "scopeWarning": "Değerleri girmeden önce tüm kriterleri ortak bir ölçeğe (örneğin 0--10) göre normalleştirin. Birçok alternatif için (>6), Python/R kullanın ve PDF olarak içe aktarın.",
+      "defaultCaption": "Beş yazılım çözümünü dört kritere göre karşılaştıran paralel koordinat grafiği."
     },
     "energy-band-diagrams": {
-      "displayName": "Energy / Band Diagrams",
-      "description": "Energy level diagrams, band gaps, and semiconductor band diagrams for physics and materials science.",
-      "scopeWarning": "Energy values are illustrative. Replace with your material's actual band gap and Fermi level values from literature or calculation.",
-      "defaultCaption": "Semiconductor band diagram."
+      "displayName": "Enerji / Bant Diyagramları",
+      "description": "Fizik ve malzeme bilimi için enerji seviyesi diyagramları, bant aralıkları ve yarı iletken bant diyagramları.",
+      "scopeWarning": "Enerji değerleri örnek niteliğindedir. Malzemenizin gerçek bant aralığını ve literatürden veya hesaplamadan elde edilen Fermi seviyesi değerleriyle değiştirin.",
+      "defaultCaption": "Yarı iletken bant şeması."
     },
     "decision-tree": {
-      "displayName": "Decision Trees",
-      "description": "Decision tree diagrams with conditions, branches, and leaf outcomes. Covers classification trees, CART, and clinical decision rules.",
-      "scopeWarning": "Enter tree structure manually. For automatic tree generation from data, use scikit-learn/rpart and export the tree, then reproduce here for publication.",
-      "defaultCaption": "Decision tree."
+      "displayName": "Karar Ağaçları",
+      "description": "Koşulları, dalları ve yaprak sonuçlarını içeren karar ağacı diyagramları. Sınıflandırma ağaçlarını, CART'yi ve klinik karar kurallarını kapsar.",
+      "scopeWarning": "Enter ağaç yapısı manuel olarak. Verilerden otomatik ağaç oluşturmak için scikit-learn/rpart kullanın ve ağacı dışa aktarın, ardından yayınlanmak üzere burada çoğaltın.",
+      "defaultCaption": "Karar ağacı."
     },
     "roc-curve": {
-      "displayName": "ROC Curves",
-      "description": "Receiver operating characteristic curves for classifier evaluation. Supports multiple classifiers with AUC annotation.",
-      "scopeWarning": "Enter pre-computed TPR/FPR values from your statistical software (sklearn, R pROC). This plugin renders the curve; model training must be done externally.",
-      "defaultCaption": "ROC curves (AUC shown in legend)."
+      "displayName": "ROC Eğrileri",
+      "description": "Sınıflandırıcı değerlendirmesi için alıcı çalışma karakteristik eğrileri. AUC ek açıklamasıyla birden fazla sınıflandırıcıyı destekler.",
+      "scopeWarning": "Enter, istatistiksel yazılımınızdan (sklearn, R pROC) önceden hesaplanan TPR/FPR değerleri. Bu eklenti eğriyi oluşturur; model eğitiminin dışarıdan yapılması gerekir.",
+      "defaultCaption": "ROC eğrileri (açıklamada AUC gösterilmektedir)."
     },
     "population-pyramid": {
-      "displayName": "Population Pyramid",
-      "description": "Age-sex population pyramid for demographic analysis. Shows male/female population distributions by age group.",
-      "scopeWarning": "Enter census data manually. For large datasets, generate the pyramid in R/Python and import as PDF, or use this plugin for illustrative sub-populations.",
-      "defaultCaption": "Population pyramid."
+      "displayName": "Nüfus Piramidi",
+      "description": "Demografik analiz için yaş-cinsiyet nüfus piramidi. Yaş grubuna göre erkek/kadın nüfus dağılımlarını gösterir.",
+      "scopeWarning": "Enter sayım verileri manuel olarak. Büyük veri kümeleri için piramidi R/Python'de oluşturun ve PDF olarak içe aktarın veya açıklayıcı alt popülasyonlar için bu eklentiyi kullanın.",
+      "defaultCaption": "Nüfus piramidi."
     },
     "error-bars": {
-      "displayName": "Error Bars & Confidence Intervals",
-      "description": "Line or bar plots with error bars for means ± SD/SE/CI. Essential for presenting experimental or survey results.",
-      "scopeWarning": "Enter means and error values (SD, SE, or 95% CI half-width) computed from your data. Raw data processing must be done externally.",
-      "defaultCaption": "Mean values with 95\\% confidence intervals."
+      "displayName": "Hata Çubukları ve Güven Aralıkları",
+      "description": "Ortalama ± SD/SE/CI için hata çubuklarıyla birlikte çizgi veya çubuk grafikleri. Deney veya anket sonuçlarının sunulması için gereklidir.",
+      "scopeWarning": "Enter, verilerinizden hesaplanan ortalamalar ve hata değerleri (SD, SE veya %95 CI yarı genişlik). Ham veri işlemenin harici olarak yapılması gerekir.",
+      "defaultCaption": "%95 güven aralığına sahip ortalama değerler."
     },
     "causal-dag": {
-      "displayName": "Causal DAG / Path Diagrams",
-      "description": "Directed acyclic graphs (DAGs) for causal inference frameworks, structural equation models, and mediation analysis.",
-      "scopeWarning": "Suitable for causal diagrams up to ~10 variables. For complex SEM or large DAGs, use dagitty.net or lavaan and import the diagram.",
-      "defaultCaption": "Causal directed acyclic graph (DAG)."
+      "displayName": "Nedensel DAG / Yol Diyagramları",
+      "description": "Nedensel çıkarım çerçeveleri, yapısal eşitlik modelleri ve aracılık analizi için yönlendirilmiş döngüsel olmayan grafikler (DAG'ler).",
+      "scopeWarning": "~10 değişkene kadar nedensel diyagramlar için uygundur. Karmaşık SEM veya büyük DAG'ler için dagitty.net veya lavaan kullanın ve diyagramı içe aktarın.",
+      "defaultCaption": "Nedensel yönlü döngüsel olmayan grafik (DAG)."
     },
     "bar-charts": {
-      "displayName": "Bar Charts & Histograms",
-      "description": "Grouped and stacked bar charts, frequency histograms for descriptive statistics.",
-      "scopeWarning": "Enter values manually. For charts from large datasets, generate in R/Python and import as PDF.",
-      "defaultCaption": "Grouped bar chart — mean response by condition and time point ($\\pm$\\,SD)."
+      "displayName": "Çubuk Grafikler ve Histogramlar",
+      "description": "Gruplandırılmış ve yığılmış çubuk grafikler, tanımlayıcı istatistikler için frekans histogramları.",
+      "scopeWarning": "Enter değerlerini manuel olarak ayarlar. Büyük veri kümelerindeki grafikler için R/Python'de oluşturun ve PDF olarak içe aktarın.",
+      "defaultCaption": "Gruplandırılmış çubuk grafik — koşula ve zaman noktasına ($\\pm$\\,SD) göre ortalama yanıt."
     },
     "box-violin-plots": {
-      "displayName": "Box Plots & Distribution Comparisons",
-      "description": "Box-and-whisker plots with medians, quartiles, and outliers for comparing distributions.",
-      "scopeWarning": "Enter pre-computed statistics (median, Q1, Q3) from R/Python. Each data point encodes: x=group position, y=median, error=IQR half-range.",
-      "defaultCaption": "Distribution of test scores across three teaching conditions (box: Q1--Q3; whiskers: 1.5$\\times$IQR)."
+      "displayName": "Kutu Grafikleri ve Dağıtım Karşılaştırmaları",
+      "description": "Dağılımları karşılaştırmak için medyanları, çeyrekleri ve aykırı değerleri içeren kutu ve bıyık grafikleri.",
+      "scopeWarning": "Enter, R/Python'den önceden hesaplanmış istatistikler (medyan, Q1, Q3). Her veri noktası şunu kodlar: x=grup konumu, y=medyan, hata=IQR yarım aralık.",
+      "defaultCaption": "Test puanlarının üç öğretim koşuluna göre dağılımı (kutu: Q1--Q3; bıyık: 1.5$\\times$IQR)."
     },
     "scatter-regression": {
-      "displayName": "Scatter Plots with Regression",
-      "description": "Scatter plot with linear regression line and optional confidence band.",
-      "scopeWarning": "Compute slope, intercept, and CI band in your statistical software. Enter the values here for publication-quality rendering.",
-      "defaultCaption": "BMI vs systolic blood pressure: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
+      "displayName": "Regresyonlu Dağılım Grafikleri",
+      "description": "Doğrusal regresyon çizgisi ve isteğe bağlı güven bandı içeren dağılım grafiği.",
+      "scopeWarning": "İstatistik yazılımınızda eğimi, kesişimi ve CI bandını hesaplayın. Enter yayın kalitesinde görüntüleme için değerleri burada bulabilirsiniz.",
+      "defaultCaption": "BMI ve sistolik kan basıncı karşılaştırması: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
     },
     "bayesian-networks": {
-      "displayName": "Bayesian Networks",
-      "description": "Directed acyclic graphs for Bayesian networks: latent cause nodes (ellipses) with observed evidence nodes (rectangles).",
-      "scopeWarning": "Suitable for illustrative Bayesian networks in theses. For inference, parameter learning, or dense graphs, use pgmpy, BayesFusion, GeNIe, or BUGS and import the final PDF/SVG.",
-      "defaultCaption": "Bayesian network for differential diagnosis of respiratory illness."
+      "displayName": "Bayes Ağları",
+      "description": "Bayes ağları için yönlendirilmiş döngüsel olmayan grafikler: gözlemlenen kanıt düğümleriyle (dikdörtgenler) gizli neden düğümleri (elipsler).",
+      "scopeWarning": "Tezlerdeki açıklayıcı Bayes ağları için uygundur. Çıkarım, parametre öğrenimi veya yoğun grafikler için pgmpy, BayesFusion, GeNIe veya BUGS kullanın ve son PDF/SVG'yi içe aktarın.",
+      "defaultCaption": "Solunum yolu hastalıklarının ayırıcı tanısı için Bayes ağı."
     },
     "sem-path-diagrams": {
-      "displayName": "SEM / Path Diagrams",
-      "description": "Structural equation model path diagrams with latent variables and measurement models.",
-      "scopeWarning": "Suitable for thesis-level SEM diagrams. For estimation, fit statistics, and standardized reports, use lavaan/R, Mplus, or AMOS and import the final diagram/table as PDF.",
-      "defaultCaption": "Technology Acceptance Model (TAM): perceived usefulness and ease of use predicting behavioural intention."
+      "displayName": "SEM / Yol Diyagramları",
+      "description": "Gizli değişkenler ve ölçüm modelleri içeren yapısal denklem modeli yol diyagramları.",
+      "scopeWarning": "Tez düzeyindeki SEM diyagramları için uygundur. Tahmin, uyum istatistikleri ve standartlaştırılmış raporlar için lavaan/R, Mplus veya AMOS kullanın ve son diyagramı/tabloyu PDF olarak içe aktarın.",
+      "defaultCaption": "Teknoloji Kabul Modeli (TAM): Algılanan kullanışlılık ve kullanım kolaylığı, davranışsal niyeti tahmin eder."
     },
     "economic-causal": {
-      "displayName": "Economic Causal Diagrams",
-      "description": "Causal loop diagrams (CLD) with reinforcing and balancing feedback loops.",
-      "scopeWarning": "Suitable for simple causal loop models. For full system dynamics with stocks, flows, delays, or simulation, use Vensim, Stella, or AnyLogic and import the final PDF/SVG.",
-      "defaultCaption": "Wage--price spiral: reinforcing ($R$) and balancing ($B$) feedback loops."
+      "displayName": "Ekonomik Nedensel Diyagramlar",
+      "description": "Geri bildirim döngülerini güçlendiren ve dengeleyen nedensel döngü diyagramları (CLD).",
+      "scopeWarning": "Basit nedensel döngü modelleri için uygundur. Stoklar, akışlar, gecikmeler veya simülasyonlarla tam sistem dinamikleri için Vensim, Stella veya AnyLogic kullanın ve son PDF/SVG'yi içe aktarın.",
+      "defaultCaption": "Ücret--fiyat sarmalı: güçlendirme ($R$) ve dengeleme ($B$) geri bildirim döngüleri."
     },
     "legal-procedural": {
-      "displayName": "Legal / Procedural Diagrams",
-      "description": "Flowcharts for legal and administrative procedures: judicial, regulatory, and compliance workflows.",
-      "scopeWarning": "Suitable for standard legal/administrative process flows in theses. Complex multi-party or multi-jurisdiction procedures are better maintained in BPMN/draw.io and imported as PDF.",
-      "defaultCaption": "Criminal procedure: from complaint to verdict."
+      "displayName": "Yasal / Prosedürel Şemalar",
+      "description": "Yasal ve idari prosedürler için akış şemaları: adli, düzenleyici ve uyumluluk iş akışları.",
+      "scopeWarning": "Tezlerdeki standart hukuki/idari süreç akışlarına uygundur. Karmaşık çok taraflı veya çok yargı yetkisine sahip prosedürler BPMN/draw.io'da daha iyi korunur ve PDF olarak içe aktarılır.",
+      "defaultCaption": "Ceza muhakemesi: şikayetten karara."
     },
     "pedagogical-diagrams": {
-      "displayName": "Pedagogical Diagrams",
-      "description": "Bloom's taxonomy, learning outcome hierarchies, and curriculum maps for education theses.",
-      "scopeWarning": "Covers common pedagogical diagram patterns. For complex instructional-design models, keep the authoritative diagram in draw.io/Figma and import the final PDF/SVG.",
-      "defaultCaption": "Revised Bloom's taxonomy — six cognitive levels with representative verbs (Anderson \\& Krathwohl, 2001)."
+      "displayName": "Pedagojik Diyagramlar",
+      "description": "Bloom'un sınıflandırması, öğrenme sonucu hiyerarşileri ve eğitim tezleri için müfredat haritaları.",
+      "scopeWarning": "Yaygın pedagojik diyagram modellerini kapsar. Karmaşık öğretim tasarımı modelleri için yetkili diyagramı Draw.io/Figma'de tutun ve son PDF/SVG'yi içe aktarın.",
+      "defaultCaption": "Bloom'un sınıflandırması yeniden düzenlendi — temsili fiillerle birlikte altı bilişsel düzey (Anderson \\& Krathwohl, 2001)."
     }
   }
 }

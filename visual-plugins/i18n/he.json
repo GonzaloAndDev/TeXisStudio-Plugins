@@ -1,366 +1,366 @@
 {
   "plugins": {
     "phylogenetic-trees": {
-      "displayName": "Simple Phylogenetic Trees",
-      "description": "Build phylogenetic and taxonomic trees with labeled nodes and branch lengths.",
-      "scopeWarning": "Suitable for simplified phylogenies in theses. For complex phylogenetics with statistical support, use FigTree/iTOL and import as PDF.",
-      "defaultCaption": "Simplified phylogeny of selected vertebrate classes."
+      "displayName": "עצים פילוגנטיים פשוטים",
+      "description": "בנה עצים פילוגנטיים וטקסונומיים עם צמתים מסומנים ואורכי ענפים.",
+      "scopeWarning": "מתאים לפילוגניות מפושטות בתזות. לפילוגנטיקה מורכבת עם תמיכה סטטיסטית, השתמש ב- FigTree/iTOL וייבא בתור PDF.",
+      "defaultCaption": "פילוגניה פשוטה של כיתות נבחרות של בעלי חוליות."
     },
     "dna-rna-sequences": {
-      "displayName": "DNA / RNA / Protein Sequences",
-      "description": "Display biological sequences with color-coded bases, codon highlighting, and alignment marks.",
-      "defaultCaption": "Start codon and reading frame of a short mRNA sequence."
+      "displayName": "DNA / RNA / רצפי חלבון",
+      "description": "הצג רצפים ביולוגיים עם בסיסים מקודדי צבע, הדגשת קודונים וסימני יישור.",
+      "defaultCaption": "התחל קודון ומסגרת קריאה של רצף mRNA קצר."
     },
     "biomedical-flow": {
-      "displayName": "Biomedical Flow Diagrams",
-      "description": "Biological and clinical process flows — signaling pathways, metabolic steps, treatment algorithms.",
-      "defaultCaption": "MAPK/ERK signalling cascade with feedback inhibition."
+      "displayName": "דיאגרמות זרימה ביו-רפואית",
+      "description": "זרימות תהליכים ביולוגיים וקליניים - מסלולי איתות, שלבים מטבוליים, אלגוריתמי טיפול.",
+      "defaultCaption": "מפל איתות MAPK/ERK עם עיכוב משוב."
     },
     "consort-flow": {
-      "displayName": "CONSORT / Clinical Trial Flow",
-      "description": "CONSORT-style flow diagrams for randomized clinical trials — enrollment, allocation, follow-up, analysis.",
-      "defaultCaption": "CONSORT 2010 flow diagram."
+      "displayName": "CONSORT / זרימת ניסוי קליני",
+      "description": "דיאגרמות זרימה בסגנון CONSORT- לניסויים קליניים אקראיים - הרשמה, הקצאה, מעקב, ניתוח.",
+      "defaultCaption": "דיאגרמת זרימה CONSORT 2010."
     },
     "biological-pathways": {
-      "displayName": "Schematic Biological Pathways",
-      "description": "Simplified metabolic and signaling pathway schemes for thesis figures.",
-      "scopeWarning": "Suitable for simplified pathway diagrams in theses and reports. Not a substitute for KEGG, Reactome, or professional pathway visualization tools.",
-      "defaultCaption": "Central carbon metabolism: glycolysis and TCA cycle entry."
+      "displayName": "מסלולים ביולוגיים סכמטיים",
+      "description": "סכימות מטבוליות ומסלולי איתות פשוטות עבור דמויות תזה.",
+      "scopeWarning": "מתאים לדיאגרמות מסלולים מפושטות בתזות ובדוחות. לא תחליף ל-KEGG, ל-Reactome או לכלים מקצועיים להדמיה של מסלולים.",
+      "defaultCaption": "מטבוליזם פחמן מרכזי: גליקוליזה וכניסה למחזור TCA."
     },
     "chemical-formulas": {
-      "displayName": "Chemical Formulas",
-      "description": "Write chemical formulas with charges, states, and subscripts. Uses mhchem — LaTeX native.",
-      "defaultCaption": "Selected inorganic formulas with oxidation states and phases."
+      "displayName": "נוסחאות כימיות",
+      "description": "כתוב נוסחאות כימיות עם מטענים, מצבים ומנויים. משתמש ב-mhchem — מקורי של LaTeX.",
+      "defaultCaption": "נוסחאות אנאורגניות נבחרות עם מצבי חמצון ופאזות."
     },
     "chemical-reactions": {
-      "displayName": "Chemical Reactions",
-      "description": "Build chemical reaction equations with arrows, conditions, and catalysts. Uses mhchem.",
-      "defaultCaption": "Acid--base neutralisation and combustion reactions."
+      "displayName": "תגובות כימיות",
+      "description": "בנה משוואות תגובה כימית עם חצים, תנאים וזרזים. משתמש ב-mhchem.",
+      "defaultCaption": "חומצה--נטרול בסיס ותגובות בעירה."
     },
     "reaction-equilibria": {
-      "displayName": "Reaction Equilibria & Conditions",
-      "description": "Chemical equilibrium reactions with conditions above/below the arrow. Uses mhchem.",
-      "defaultCaption": "Haber process and esterification equilibria."
+      "displayName": "שיווי משקל ותנאים בתגובה",
+      "description": "תגובות שיווי משקל כימיות עם תנאים מעל/מתחת לחץ. משתמש ב-mhchem.",
+      "defaultCaption": "שיווי משקל בתהליך האבר."
     },
     "chemical-structures": {
-      "displayName": "Chemical Structures",
-      "description": "Simple organic structures and ring systems using ChemFig. Benzene, functional groups, ring compounds.",
-      "scopeWarning": "Suitable for simple organic structures in theses. Complex multi-ring systems may need manual ChemFig adjustment. For full structural chemistry, use ChemDraw and import as PDF/SVG.",
-      "defaultCaption": "Aspirin (acetylsalicylic acid) structural formula."
+      "displayName": "מבנים כימיים",
+      "description": "מבנים אורגניים פשוטים ומערכות טבעת באמצעות ChemFig. בנזן, קבוצות פונקציונליות, תרכובות טבעת.",
+      "scopeWarning": "מתאים למבנים אורגניים פשוטים בתזות. מערכות מרובות טבעות מורכבות עשויות להזדקק להתאמה ידנית של ChemFig. לכימיה מבנית מלאה, השתמש ב- ChemDraw וייבא בתור PDF/SVG.",
+      "defaultCaption": "נוסחת המבנה של אספירין (חומצה אצטילסליצילית)."
     },
     "basic-electrical-circuits": {
-      "displayName": "Basic Electrical Circuits",
-      "description": "Visual circuit builder: resistors, capacitors, inductors, sources, switches, diodes. CircuiTikZ native.",
-      "defaultCaption": "RC low-pass filter circuit with voltage divider."
+      "displayName": "מעגלים חשמליים בסיסיים",
+      "description": "בונה מעגלים חזותיים: נגדים, קבלים, משרנים, מקורות, מתגים, דיודות. CircuiTikZ יליד.",
+      "defaultCaption": "מעגל סינון במעבר נמוך RC עם מחלק מתח."
     },
     "block-diagrams-control": {
-      "displayName": "Block Diagrams / Control Systems",
-      "description": "Control system block diagrams with transfer functions, summing junctions, and feedback loops.",
-      "defaultCaption": "PID closed-loop control system block diagram."
+      "displayName": "דיאגרמות חסימה / מערכות בקרה",
+      "description": "שליטה בדיאגרמות בלוקים של מערכת עם פונקציות העברה, צמתי סיכום ולולאות משוב.",
+      "defaultCaption": "דיאגרמת בלוקים של מערכת בקרה בלולאה סגורה PID."
     },
     "flowcharts": {
-      "displayName": "Flowcharts",
-      "description": "Academic and process flowcharts with decision diamonds, process boxes, and connector arrows.",
-      "defaultCaption": "Research methodology flowchart."
+      "displayName": "תרשימי זרימה",
+      "description": "תרשימי זרימה אקדמיים ותהליכים עם יהלומי החלטה, תיבות תהליך וחיצי מחברים.",
+      "defaultCaption": "תרשים זרימה של מתודולוגיית מחקר."
     },
     "software-architecture": {
-      "displayName": "Software / System Architecture",
-      "description": "Component, layer, and system architecture diagrams.",
-      "scopeWarning": "Suitable for standard architecture overviews. For complex UML or deployment diagrams, use Draw.io and import as PDF.",
-      "defaultCaption": "Three-tier web application architecture."
+      "displayName": "תוכנה / ארכיטקטורת מערכת",
+      "description": "דיאגרמות ארכיטקטורת רכיבים, שכבות ומערכת.",
+      "scopeWarning": "מתאים לסקירות כלליות של ארכיטקטורה. עבור דיאגרמות UML או פריסה מורכבות, השתמש ב-Draw.io וייבא כ-PDF.",
+      "defaultCaption": "ארכיטקטורת אפליקציות אינטרנט תלת-שכבתית."
     },
     "venn-set-diagrams": {
-      "displayName": "Venn / Set Diagrams",
-      "description": "Create Venn diagrams and set-theory diagrams with labeled circles and intersections.",
-      "defaultCaption": "Three-set Venn diagram showing mixed-methods research design."
+      "displayName": "דיאגרמות Venn / Set",
+      "description": "צור דיאגרמות Venn ודיאגרמות של תורת הקבוצות עם עיגולים וצמתים מסומנים.",
+      "defaultCaption": "דיאגרמת Venn של שלוש קבוצות המציגה עיצוב מחקר בשיטות מעורבות."
     },
     "plane-geometry": {
-      "displayName": "Plane Geometry",
-      "description": "Geometric shapes: triangles, polygons, circles, angles, perpendiculars, parallels.",
-      "defaultCaption": "Right triangle with altitude from hypotenuse — geometric mean relations."
+      "displayName": "גיאומטריית מישור",
+      "description": "צורות גיאומטריות: משולשים, מצולעים, עיגולים, זוויות, ניצבים, מקבילים.",
+      "defaultCaption": "משולש ישר זווית עם גובה מהתחתון - יחסי ממוצע גיאומטריים."
     },
     "analytic-geometry": {
-      "displayName": "Analytic Geometry",
-      "description": "Coordinate systems with curves, lines, tangents, and labeled points.",
-      "defaultCaption": "Parabola $f(x)=x^2-2x-3$ with roots, vertex, and tangent at $x=2$."
+      "displayName": "גיאומטריה אנליטית",
+      "description": "מערכות קואורדינטות עם עקומות, קווים, משיקים ונקודות מסומנות.",
+      "defaultCaption": "פרבולה $f(x)=x^2-2x-3$ עם שורשים, קודקוד ומשיק ב-$x=2$."
     },
     "probability-trees": {
-      "displayName": "Probability Trees",
-      "description": "Visual probability trees with branch probabilities and outcomes. forest native.",
-      "defaultCaption": "Probability tree — two coin flips."
+      "displayName": "עצי הסתברות",
+      "description": "עצי הסתברות חזותיים עם הסתברויות ותוצאות ענפים. יליד היער.",
+      "defaultCaption": "עץ הסתברות - שתי סיבובי מטבע."
     },
     "lab-setups": {
-      "displayName": "Simple Lab Setups",
-      "description": "Basic laboratory apparatus diagrams: flasks, beakers, burettes, tube assemblies.",
-      "scopeWarning": "Covers standard lab apparatus. For specialized equipment diagrams, use dedicated illustration tools and import as PDF.",
-      "defaultCaption": "Simple laboratory setup."
+      "displayName": "הגדרות מעבדה פשוטות",
+      "description": "דיאגרמות מכשירי מעבדה בסיסיים: צלוחיות, כוסות, בורטים, מכלולי צינורות.",
+      "scopeWarning": "מכסה מכשירי מעבדה סטנדרטיים. עבור דיאגרמות ציוד מיוחד, השתמש בכלי המחשה ייעודיים וייבא כ-PDF.",
+      "defaultCaption": "הגדרת מעבדה פשוטה."
     },
     "syntax-trees": {
-      "displayName": "Syntax / Linguistic Trees",
-      "description": "Phrase-structure and dependency trees for linguistics. forest native.",
-      "defaultCaption": "Phrase-structure tree."
+      "displayName": "תחביר / עצים לשוניים",
+      "description": "עצים של מבנה ביטוי ותלות לבלשנות. יליד היער.",
+      "defaultCaption": "עץ מבנה ביטוי."
     },
     "concept-maps": {
-      "displayName": "Concept Maps & Argument Diagrams",
-      "description": "Concept maps, mind maps, and argumentative structure diagrams.",
-      "defaultCaption": "Concept map."
+      "displayName": "מפות מושגים ודיאגרמות ארגומנטים",
+      "description": "מפות מושגים, מפות חשיבה ודיאגרמות מבנה טיעוני.",
+      "defaultCaption": "מפת מושגים."
     },
     "visual-equations": {
-      "displayName": "Visual Equations",
-      "description": "Build mathematical equations, expressions, and formulas with a visual editor. Outputs LaTeX native.",
-      "defaultCaption": "Quadratic formula and quadratic form."
+      "displayName": "משוואות חזותיות",
+      "description": "בנה משוואות, ביטויים ונוסחאות מתמטיות עם עורך חזותי. פלט LaTeX מקורי.",
+      "defaultCaption": "נוסחה ריבועית וצורה ריבועית."
     },
     "matrices-determinants": {
-      "displayName": "Matrices & Determinants",
-      "description": "Create matrices and determinants of any size with visual cell editing.",
-      "defaultCaption": "3D rotation matrix around the $z$-axis by angle $\\theta$."
+      "displayName": "מטריצות וקובעות",
+      "description": "צור מטריצות ודטרמיננטים בכל גודל עם עריכת תאים חזותיים.",
+      "defaultCaption": "מטריצת סיבוב תלת-ממדית סביב $z$-axis לפי זווית $\\theta$."
     },
     "systems-of-equations": {
-      "displayName": "Systems of Equations",
-      "description": "Build systems of linear or nonlinear equations with aligned formatting.",
-      "defaultCaption": "System of three linear equations (fluid flow balance)."
+      "displayName": "מערכות משוואות",
+      "description": "בנה מערכות של משוואות ליניאריות או לא ליניאריות עם עיצוב מיושר.",
+      "defaultCaption": "מערכת של שלוש משוואות ליניאריות (איזון זרימת נוזלים)."
     },
     "piecewise-functions": {
-      "displayName": "Piecewise Functions",
-      "description": "Define functions by cases or parts with a visual row editor.",
-      "defaultCaption": "Heaviside step function and ReLU activation function."
+      "displayName": "פונקציות לפי חלק",
+      "description": "הגדר פונקציות לפי מקרים או חלקים עם עורך שורות חזותי.",
+      "defaultCaption": "פונקציית Heaviside Step ופונקציית הפעלת ReLU."
     },
     "vectors-fields": {
-      "displayName": "Vectors & Simple Fields",
-      "description": "Draw vectors, vector decomposition, and simple field representations.",
-      "defaultCaption": "Vector addition — parallelogram law: $\\vec{R} = \\vec{A} + \\vec{B}$."
+      "displayName": "וקטורים ושדות פשוטים",
+      "description": "צייר וקטורים, פירוק וקטור וייצוגי שדות פשוטים.",
+      "defaultCaption": "חיבור וקטור - חוק מקבילית: $\\vec{R} = \\vec{A} + \\vec{B}$."
     },
     "free-body-diagrams": {
-      "displayName": "Free Body Diagrams",
-      "description": "Build free body diagrams with forces, mass blocks, and labeled arrows.",
-      "defaultCaption": "Free body diagram — block on surface with applied force at angle $\\alpha$."
+      "displayName": "דיאגרמות גוף בחינם",
+      "description": "בנה דיאגרמות גוף חופשיות עם כוחות, בלוקים מסה וחצים מסומנים.",
+      "defaultCaption": "דיאגרמת גוף חופשי - בלוק על פני השטח עם כוח מופעל בזווית $\\alpha$."
     },
     "inclined-plane-pulleys": {
-      "displayName": "Inclined Planes, Pulleys & Springs",
-      "description": "Mechanical systems: inclined planes, pulley setups, and spring-mass systems.",
-      "scopeWarning": "Generates accurate schematic diagrams. Highly complex multi-pulley systems may need manual TikZ adjustments.",
-      "defaultCaption": "Free-body diagram on inclined plane (angle $\\theta$)."
+      "displayName": "מטוסים משופעים, גלגלות וקפיצים",
+      "description": "מערכות מכניות: מישורים משופעים, הגדרות גלגלות ומערכות קפיציות.",
+      "scopeWarning": "יוצר דיאגרמות סכמטיות מדויקות. מערכות מרובות גלגלות מורכבות ביותר עשויות להזדקק להתאמת TikZ ידנית.",
+      "defaultCaption": "דיאגרמת גוף חופשי במישור משופע (זווית $\\theta$)."
     },
     "wave-oscillation": {
-      "displayName": "Wave & Oscillation Diagrams",
-      "description": "Sinusoidal waves, damped oscillations, and wave superposition. Covers SHM, transverse/longitudinal waves, and interference patterns.",
-      "defaultCaption": "Sinusoidal wave $y = A\\sin(\\omega t)$ with damped envelope."
+      "displayName": "דיאגרמות גלים ותנודות",
+      "description": "גלים סינוסואידיים, תנודות דחוסות וסופרפוזיציה של גלים. מכסה את SHM, גלים רוחביים/אורכיים ודפוסי הפרעות.",
+      "defaultCaption": "גל סינוסואידי $y = A\\sin(\\omega t)$ עם מעטפת דחוסה."
     },
     "geometric-optics": {
-      "displayName": "Geometric Optics",
-      "description": "Lenses, mirrors, ray diagrams, and refraction diagrams.",
-      "scopeWarning": "Suitable for standard ray diagrams. Complex optical systems with multiple elements may need manual adjustment.",
-      "defaultCaption": "Converging thin lens — three principal ray construction."
+      "displayName": "אופטיקה גיאומטרית",
+      "description": "עדשות, מראות, דיאגרמות קרניים ודיאגרמות שבירה.",
+      "scopeWarning": "מתאים לדיאגרמות קרניים סטנדרטיות. מערכות אופטיות מורכבות עם מספר אלמנטים עשויות להזדקק להתאמה ידנית.",
+      "defaultCaption": "עדשה דקה מתכנסת - בניית שלוש קרניים עיקריות."
     },
     "gantt-charts": {
-      "displayName": "Gantt Charts",
-      "description": "Research and project Gantt charts with tasks, groups, milestones, and dependencies. pgfgantt native.",
-      "defaultCaption": "Doctoral research schedule by semester."
+      "displayName": "תרשימי גאנט",
+      "description": "חקור והקרין תרשימי גנט עם משימות, קבוצות, אבני דרך ותלות. pgfgantt native.",
+      "defaultCaption": "לוח זמנים למחקר דוקטורט לפי סמסטר."
     },
     "timelines": {
-      "displayName": "Timelines",
-      "description": "Historical, research, and narrative timelines with labeled events.",
-      "defaultCaption": "Key milestones in molecular biology (1944--2003)."
+      "displayName": "קווי זמן",
+      "description": "צירי זמן היסטוריים, מחקריים ונרטיביים עם אירועים מתויגים.",
+      "defaultCaption": "אבני דרך מרכזיות בביולוגיה מולקולרית (1944--2003)."
     },
     "function-plots-2d": {
-      "displayName": "2D Function Plots",
-      "description": "Plot mathematical functions with labeled axes, grid, and legend. PGFPlots native.",
-      "defaultCaption": "Trigonometric functions $\\sin x$ and $\\cos x$."
+      "displayName": "עלילות פונקציות דו-ממדיות",
+      "description": "הצג פונקציות מתמטיות עם צירים, רשת ואגדה מסומנים. PGFPlots מקורי.",
+      "defaultCaption": "פונקציות טריגונומטריות $\\sin x$ ו-$\\cos x$."
     },
     "parametric-polar-plots": {
-      "displayName": "Parametric & Polar Plots",
-      "description": "Parametric curves and polar function plots.",
-      "defaultCaption": "Lissajous curve $(\\cos 2t,\\, \\sin 3t)$."
+      "displayName": "עלילות פרמטריות וקוטביות",
+      "description": "עקומות פרמטריות וערימות פונקציות קוטביות.",
+      "defaultCaption": "עקומת Lissajous $(\\cos 2t,\\, \\sin 3t)$."
     },
     "basic-statistics": {
-      "displayName": "Basic Statistics Charts",
-      "description": "Bar charts, histograms, and scatter plots from tabular data.",
-      "defaultCaption": "Comparative bar chart — measurement results by experimental group."
+      "displayName": "תרשימים סטטיסטיים בסיסיים",
+      "description": "תרשימי עמודות, היסטוגרמות וערימות פיזור מנתונים טבלאיים.",
+      "defaultCaption": "תרשים עמודות השוואתי - תוצאות מדידה לפי קבוצת ניסוי."
     },
     "statistical-distributions": {
-      "displayName": "Statistical Distributions",
-      "description": "Normal, t, chi-squared, and other distributions with shaded regions.",
-      "defaultCaption": "Standard normal distribution with 95\\% confidence interval shaded."
+      "displayName": "התפלגויות סטטיסטיות",
+      "description": "התפלגות רגילה, t, צ'י בריבוע ואחרות עם אזורים מוצללים.",
+      "defaultCaption": "התפלגות נורמלית סטנדרטית עם רווח בר סמך של 95\\% מוצלל."
     },
     "kaplan-meier": {
-      "displayName": "Kaplan-Meier Survival Curves",
-      "description": "Step-function survival curves for clinical and epidemiological studies.",
-      "scopeWarning": "Enter pre-computed KM estimates (from R survfit, Stata stcurve, or SPSS) as data points forming a step function. Statistical tests must be done externally.",
-      "defaultCaption": "Kaplan--Meier overall survival curves for adjuvant vs.\\ standard chemotherapy ($n{=}200$; log-rank $p{=}0.008$)."
+      "displayName": "עקומות הישרדות של קפלן-מאייר",
+      "description": "עקומות הישרדות של תפקוד צעד עבור מחקרים קליניים ואפידמיולוגיים.",
+      "scopeWarning": "אומדני Enter מחושבים מראש (מ-R survfit, Stata stcurve או SPSS) כנקודות נתונים היוצרות פונקציית צעד. בדיקות סטטיסטיות חייבות להיעשות באופן חיצוני.",
+      "defaultCaption": "קפלן--עקומות ההישרדות הכוללות של מאייר עבור כימותרפיה אדג'ובנטית לעומת\\ סטנדרטית ($n{=}200$; $p{=}0.008$ בדרגת log-rank)."
     },
     "network-graph": {
-      "displayName": "Network / Social Graphs",
-      "description": "Co-authorship, citation, or social influence networks with community clustering.",
-      "scopeWarning": "Suitable for illustrative networks (≤ 15 nodes). For large-scale visualization, use Gephi or NetworkX and import as PDF.",
-      "defaultCaption": "Co-authorship network — two research clusters connected by a bridge author."
+      "displayName": "רשת / גרפים חברתיים",
+      "description": "רשתות שיתוף, ציטוט או השפעה חברתית עם מקבץ קהילתי.",
+      "scopeWarning": "מתאים לרשתות להמחשה (≤ 15 צמתים). להדמיה בקנה מידה גדול, השתמש ב-Gephi או NetworkX וייבא כ-PDF.",
+      "defaultCaption": "רשת מחברים משותפים - שני אשכולות מחקר המחוברים על ידי מחבר גשר."
     },
     "organic-chemistry-extended": {
-      "displayName": "Extended Organic Chemistry",
-      "description": "Organic structures with rings, functional groups, and stereocentres. ChemFig native.",
-      "scopeWarning": "Complex multi-ring or stereo structures may need manual ChemFig adjustment. For publication-quality structures, use ChemDraw and import as PDF.",
-      "defaultCaption": "Caffeine (1,3,7-trimethylxanthine) structural formula."
+      "displayName": "כימיה אורגנית מורחבת",
+      "description": "מבנים אורגניים עם טבעות, קבוצות פונקציונליות ומרכזי סטריאו. יליד ChemFig.",
+      "scopeWarning": "ייתכן שיידרשו התאמה ידנית של ChemFig למבנים מורכבים מרובי טבעות או סטריאו. למבנים באיכות פרסום, השתמש ב- ChemDraw וייבא בתור PDF.",
+      "defaultCaption": "נוסחת המבנה של קפאין (1,3,7-טרימתילקסנטין)."
     },
     "reaction-mechanisms": {
-      "displayName": "Basic Reaction Mechanisms",
-      "description": "Reaction mechanisms including C-C bond forming reactions, substitutions, and eliminations.",
-      "scopeWarning": "Suitable for standard mechanisms in theses. Complex multi-step mechanisms with curved arrows require manual ChemFig adjustment.",
-      "defaultCaption": "Aldol condensation: base-catalysed formation of a $\\beta$-hydroxy carbonyl compound."
+      "displayName": "מנגנוני תגובה בסיסיים",
+      "description": "מנגנוני תגובה כולל תגובות, החלפות וביטולים ליצירת קשר C-C.",
+      "scopeWarning": "מתאים למנגנונים סטנדרטיים בתזות. מנגנונים מרובי-שלבים מורכבים עם חיצים מעוקלים דורשים התאמה ידנית של ChemFig.",
+      "defaultCaption": "עיבוי אלדול: היווצרות בזרז בסיס של תרכובת $\\beta$-hydroxy קרבוניל."
     },
     "er-diagrams": {
-      "displayName": "ER Diagrams",
-      "description": "Entity-relationship diagrams for database design. TikZ native.",
-      "scopeWarning": "Suitable for standard ER diagrams in theses. Complex schemas with many entities benefit from Draw.io exported as PDF.",
-      "defaultCaption": "ER diagram for a university course-enrollment system."
+      "displayName": "דיאגרמות ER",
+      "description": "דיאגרמות קשר בין ישות לעיצוב מסד נתונים. יליד TikZ.",
+      "scopeWarning": "מתאים לדיאגרמות ER סטנדרטיות בתזות. סכימות מורכבות עם ישויות רבות נהנות מ-Draw.io המיוצא כ-PDF.",
+      "defaultCaption": "דיאגרמת ER עבור מערכת הרשמה לקורסים באוניברסיטה."
     },
     "state-machines": {
-      "displayName": "State Machines",
-      "description": "Finite state machines and automata with states, transitions, and labels.",
-      "scopeWarning": "Suitable for DFA/NFA and reactive system diagrams in theses. For large automata, generate from Graphviz/PlantUML and import as PDF.",
-      "defaultCaption": "Traffic-light finite state machine (timer-driven)."
+      "displayName": "מכונות מדינה",
+      "description": "מכונות ואוטומטים במצב סופי עם מצבים, מעברים ותוויות.",
+      "scopeWarning": "מתאים ל-DFA/NFA ודיאגרמות מערכת תגובתיות בתזות. עבור אוטומטיות גדולות, הפק מ-Graphviz/PlantUML וייבא כ-PDF.",
+      "defaultCaption": "מכונת מצב סופי של רמזור (מונעת על ידי טיימר)."
     },
     "markov-chains": {
-      "displayName": "Markov Chains",
-      "description": "Markov chain diagrams with states and transition probabilities.",
-      "scopeWarning": "Suitable for illustrative Markov chains in theses. For inference or simulation, use R/Python and import results as figures.",
-      "defaultCaption": "Weather Markov chain (Sunny / Cloudy / Rainy)."
+      "displayName": "שרשראות מרקוב",
+      "description": "דיאגרמות שרשרת של מרקוב עם מצבים והסתברויות מעבר.",
+      "scopeWarning": "מתאים לשרשראות מרקוב להמחשה בתזות. להסקת מסקנות או סימולציה, השתמש ב-R/Python וייבא תוצאות כדמויות.",
+      "defaultCaption": "שרשרת מזג אוויר מרקוב (שמש / מעונן / גשום)."
     },
     "bode-nyquist": {
-      "displayName": "Bode / Nyquist Diagrams",
-      "description": "Frequency response: Bode magnitude + phase, or Nyquist plot. Second-order transfer functions.",
-      "scopeWarning": "Enter your system transfer function as a pgfplots expression. Compute poles/zeros in MATLAB/Python first.",
-      "defaultCaption": "Bode plot of $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
+      "displayName": "דיאגרמות Bode / Nyquist",
+      "description": "תגובת תדר: גודל בודה + פאזה, או עלילת Nyquist. פונקציות העברה מסדר שני.",
+      "scopeWarning": "Enter פונקציית העברת המערכת שלך כביטוי pgfplots. מחשב תחילה קטבים/אפסים ב-MATLAB/Python.",
+      "defaultCaption": "עלילת בודה של $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
     },
     "plots-3d": {
-      "displayName": "3D Scientific Plots",
-      "description": "3D surfaces, wireframes, and contour plots. PGFPlots native.",
-      "scopeWarning": "3D plots compile slowly for fine meshes. Keep samples ≤ 25×25 for reasonable compile time.",
-      "defaultCaption": "Standard bivariate normal density $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
+      "displayName": "עלילות מדעיות תלת-ממדיות",
+      "description": "משטחים תלת מימדיים, מסגרות תיל וערימות קווי מתאר. PGFPlots מקורי.",
+      "scopeWarning": "עלילות תלת-ממד מתחברות לאט עבור רשתות עדינות. שמור דגימות ≤ 25×25 למשך זמן הידור סביר.",
+      "defaultCaption": "צפיפות רגילה דו משתנים $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
     },
     "phase-diagrams": {
-      "displayName": "Phase Diagrams",
-      "description": "Phase portraits, nullclines, and stability diagrams for dynamical systems.",
-      "scopeWarning": "Suitable for 2D phase planes and nullcline plots. Full vector-field arrows require manual pgfplots quiver adjustments.",
-      "defaultCaption": "Lotka--Volterra phase plane: prey $x$ vs predator $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
+      "displayName": "דיאגרמות שלבים",
+      "description": "דיוקנאות פאזה, nullclines ודיאגרמות יציבות עבור מערכות דינמיות.",
+      "scopeWarning": "מתאים למישורי פאזה דו-ממדיים ולעלילות נולקליין. חיצים מלאים של שדה וקטור דורשים התאמות ידניות של רטט של pgfplots.",
+      "defaultCaption": "לוטקה--מישור שלב וולטרה: טרף $x$ לעומת טורף $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
     },
     "heat-maps": {
-      "displayName": "Correlation Heat Maps",
-      "description": "Correlation matrices and heat maps using pgfplots matrix plot. Values between -1 and 1, color-mapped.",
-      "scopeWarning": "Suitable for small matrices (≤ 10×10). Compute correlations in R/Python first, then enter the values here.",
-      "defaultCaption": "Pearson correlation matrix for four psychometric variables."
+      "displayName": "מפות חום מתאם",
+      "description": "מטריצות מתאם ומפות חום באמצעות מגרש מטריצת pgfplots. ערכים בין -1 ל-1, ממופי צבע.",
+      "scopeWarning": "מתאים למטריצות קטנות (≤ 10×10). חישוב מתאמים ב-R/Python תחילה, ולאחר מכן הזן את הערכים כאן.",
+      "defaultCaption": "מטריצת מתאם Pearson עבור ארבעה משתנים פסיכומטריים."
     },
     "supply-demand": {
-      "displayName": "Supply & Demand Curves",
-      "description": "Supply and demand with equilibrium, consumer/producer surplus, and optional curve shifts.",
-      "scopeWarning": "Suitable for illustrative partial-equilibrium analysis in theses. Non-linear elasticity curves may need manual pgfplots adjustment.",
-      "defaultCaption": "Supply and demand: original equilibrium $E_0$ and demand shift $D \\to D'$ after income increase."
+      "displayName": "עקומות היצע וביקוש",
+      "description": "היצע וביקוש עם שיווי משקל, עודף צרכן/יצרן ושינויי עקומה אופציונליים.",
+      "scopeWarning": "מתאים לניתוח ממחיש של שיווי משקל חלקי בתזה. עקומות גמישות לא ליניאריות עשויות להזדקק לכוונון ידני של תרשים pgfplots.",
+      "defaultCaption": "היצע וביקוש: שיווי משקל מקורי $E_0$ ושינוי בביקוש $D \\to D'$ לאחר עליית הכנסה."
     },
     "uml-class-diagrams": {
-      "displayName": "UML Class Diagrams",
-      "description": "UML class diagrams with inheritance, interfaces, composition, and association.",
-      "scopeWarning": "Generates simplified class boxes. For full UML compliance, use PlantUML or draw.io and import as PDF.",
-      "defaultCaption": "Repository pattern with Observer: \\\\ $<<$interface$>>$ classes, inheritance and composition."
+      "displayName": "דיאגרמות כיתה UML",
+      "description": "דיאגרמות מחלקות UML עם ירושה, ממשקים, קומפוזיציה ושיוך.",
+      "scopeWarning": "יוצר תיבות מחלקות פשוטות. לתאימות מלאה של UML, השתמש ב-PlantUML או draw.io וייבא בתור PDF.",
+      "defaultCaption": "דפוס מאגר עם Observer: מחלקות $<<$interface$>>$, ירושה והרכב."
     },
     "time-series": {
-      "displayName": "Time Series Plots",
-      "description": "Time series with trend, confidence band, and annotated events. Ideal for longitudinal data in economics, ecology, and clinical research.",
-      "scopeWarning": "Enter data points manually. For large or complex time series (ARIMA, seasonal), generate in R/Python and import as PDF.",
-      "defaultCaption": "Monthly CO$_2$ concentration (ppm) with long-term trend and $\\pm$2\\,SD band."
+      "displayName": "עלילות סדרת זמן",
+      "description": "סדרת זמן עם מגמה, רצועת ביטחון ואירועים מוערים. אידיאלי עבור נתונים אורך בכלכלה, אקולוגיה ומחקר קליני.",
+      "scopeWarning": "נקודות נתונים Enter באופן ידני. עבור סדרות זמן גדולות או מורכבות (ARIMA, עונתיות), צור ב-R/Python וייבא כ-PDF.",
+      "defaultCaption": "ריכוז CO$_2$ חודשי (ppm) עם מגמה ארוכת טווח ורצועת $\\pm$2\\,SD."
     },
     "genealogy": {
-      "displayName": "Genealogy / Family Trees",
-      "description": "Family trees, dynasties, and clinical pedigrees with generations and relationship markers.",
-      "scopeWarning": "Suitable for simplified family trees. For clinical genetic pedigrees with standard symbols (ACMG/AMP), use dedicated pedigree software.",
-      "defaultCaption": "Family tree."
+      "displayName": "גנאלוגיה / עצי משפחה",
+      "description": "עצי משפחה, שושלות ואילן יוחסין קליני עם דורות וסמני קשר.",
+      "scopeWarning": "מתאים לעצי משפחה פשוטים. עבור אילן יוחסין קליני עם סמלים סטנדרטיים (ACMG/AMP), השתמש בתוכנת אילן יוחסין ייעודית.",
+      "defaultCaption": "עץ משפחה."
     },
     "parallel-coordinates": {
-      "displayName": "Parallel Coordinates / Criteria Matrix",
-      "description": "Parallel coordinate plots for multi-criteria comparison of alternatives across normalised dimensions (0--10 scale).",
-      "scopeWarning": "Normalise all criteria to a common scale (e.g. 0--10) before entering values. For many alternatives (>6), use Python/R and import as PDF.",
-      "defaultCaption": "Parallel coordinate plot comparing five software solutions on four criteria."
+      "displayName": "קואורדינטות מקבילות / מטריצת קריטריונים",
+      "description": "עלילות קואורדינטות מקבילות להשוואה מרובת קריטריונים של חלופות על פני ממדים מנורמלים (סולם 0--10).",
+      "scopeWarning": "לנרמל את כל הקריטריונים לסולם משותף (למשל 0--10) לפני הזנת ערכים. עבור חלופות רבות (>6), השתמש ב-Python/R וייבא כ-PDF.",
+      "defaultCaption": "עלילת קואורדינטות מקבילות המשווה חמישה פתרונות תוכנה לפי ארבעה קריטריונים."
     },
     "energy-band-diagrams": {
-      "displayName": "Energy / Band Diagrams",
-      "description": "Energy level diagrams, band gaps, and semiconductor band diagrams for physics and materials science.",
-      "scopeWarning": "Energy values are illustrative. Replace with your material's actual band gap and Fermi level values from literature or calculation.",
-      "defaultCaption": "Semiconductor band diagram."
+      "displayName": "דיאגרמות אנרגיה / פס",
+      "description": "דיאגרמות רמת אנרגיה, פערי פס ודיאגרמות פס מוליכים למחצה לפיזיקה ומדעי החומרים.",
+      "scopeWarning": "ערכי אנרגיה הם להמחשה. החלף בפער הרצועה בפועל של החומר שלך ובערכי רמת פרמי מהספרות או החישוב.",
+      "defaultCaption": "דיאגרמת פס מוליכים למחצה."
     },
     "decision-tree": {
-      "displayName": "Decision Trees",
-      "description": "Decision tree diagrams with conditions, branches, and leaf outcomes. Covers classification trees, CART, and clinical decision rules.",
-      "scopeWarning": "Enter tree structure manually. For automatic tree generation from data, use scikit-learn/rpart and export the tree, then reproduce here for publication.",
-      "defaultCaption": "Decision tree."
+      "displayName": "עצי החלטה",
+      "description": "דיאגרמות עץ החלטות עם תנאים, ענפים ותוצאות עלים. מכסה עצי סיווג, CART וכללי החלטה קלינית.",
+      "scopeWarning": "מבנה עץ Enter באופן ידני. להפקה אוטומטית של עצים מנתונים, השתמש ב-sikit-learn/rpart וייצא את העץ, ולאחר מכן השכפל כאן לפרסום.",
+      "defaultCaption": "עץ ההחלטות."
     },
     "roc-curve": {
-      "displayName": "ROC Curves",
-      "description": "Receiver operating characteristic curves for classifier evaluation. Supports multiple classifiers with AUC annotation.",
-      "scopeWarning": "Enter pre-computed TPR/FPR values from your statistical software (sklearn, R pROC). This plugin renders the curve; model training must be done externally.",
-      "defaultCaption": "ROC curves (AUC shown in legend)."
+      "displayName": "עקומות ROC",
+      "description": "עקומות אופי הפעלה של מקלט להערכת מסווג. תומך במספר מסווגים עם ביאור AUC.",
+      "scopeWarning": "Enter מחושבים מראש ערכי TPR/FPR מהתוכנה הסטטיסטית שלך (sklearn, R pROC). תוסף זה מציג את העקומה; הכשרת מודל חייבת להיעשות באופן חיצוני.",
+      "defaultCaption": "עקומות ROC (AUC מוצגות במקרא)."
     },
     "population-pyramid": {
-      "displayName": "Population Pyramid",
-      "description": "Age-sex population pyramid for demographic analysis. Shows male/female population distributions by age group.",
-      "scopeWarning": "Enter census data manually. For large datasets, generate the pyramid in R/Python and import as PDF, or use this plugin for illustrative sub-populations.",
-      "defaultCaption": "Population pyramid."
+      "displayName": "פירמידת האוכלוסין",
+      "description": "פירמידת אוכלוסין גיל-מין לניתוח דמוגרפי. מציג התפלגות אוכלוסיית גברים/נשים לפי קבוצת גיל.",
+      "scopeWarning": "נתוני מפקד האוכלוסין Enter באופן ידני. עבור מערכי נתונים גדולים, צור את הפירמידה ב-R/Python וייבא כ-PDF, או השתמש בפלאגין זה עבור תת-אוכלוסיות להמחשה.",
+      "defaultCaption": "פירמידת האוכלוסין."
     },
     "error-bars": {
-      "displayName": "Error Bars & Confidence Intervals",
-      "description": "Line or bar plots with error bars for means ± SD/SE/CI. Essential for presenting experimental or survey results.",
-      "scopeWarning": "Enter means and error values (SD, SE, or 95% CI half-width) computed from your data. Raw data processing must be done externally.",
-      "defaultCaption": "Mean values with 95\\% confidence intervals."
+      "displayName": "סרגלי שגיאה ומרווחי סמך",
+      "description": "עלילות קו או פסים עם פסי שגיאה עבור אמצעים ± SD/SE/CI. חיוני להצגת תוצאות ניסויים או סקר.",
+      "scopeWarning": "Enter אמצעים וערכי שגיאה (SD, SE, או 95% CI חצי רוחב) מחושבים מהנתונים שלך. עיבוד נתונים גולמיים חייב להיעשות באופן חיצוני.",
+      "defaultCaption": "ערכים ממוצעים עם רווחי סמך של 95\\%."
     },
     "causal-dag": {
-      "displayName": "Causal DAG / Path Diagrams",
-      "description": "Directed acyclic graphs (DAGs) for causal inference frameworks, structural equation models, and mediation analysis.",
-      "scopeWarning": "Suitable for causal diagrams up to ~10 variables. For complex SEM or large DAGs, use dagitty.net or lavaan and import the diagram.",
-      "defaultCaption": "Causal directed acyclic graph (DAG)."
+      "displayName": "דיאגרמות DAG / נתיב סיבתי",
+      "description": "גרפים א-מחזוריים מכוונים (DAGs) עבור מסגרות מסקנות סיבתיות, מודלים של משוואות מבניות וניתוח תיווך.",
+      "scopeWarning": "מתאים לדיאגרמות סיבתיות של עד ~10 משתנים. עבור SEM מורכבים או DAGs גדולים, השתמש ב-dagitty.net או lavaan וייבא את הדיאגרמה.",
+      "defaultCaption": "גרף א-ציקלי מכוון סיבתי (DAG)."
     },
     "bar-charts": {
-      "displayName": "Bar Charts & Histograms",
-      "description": "Grouped and stacked bar charts, frequency histograms for descriptive statistics.",
-      "scopeWarning": "Enter values manually. For charts from large datasets, generate in R/Python and import as PDF.",
-      "defaultCaption": "Grouped bar chart — mean response by condition and time point ($\\pm$\\,SD)."
+      "displayName": "תרשימי עמודות והיסטוגרמות",
+      "description": "תרשימי עמודות מקובצים ומוערמים, היסטוגרמות של תדירות לסטטיסטיקה תיאורית.",
+      "scopeWarning": "ערכי Enter באופן ידני. עבור תרשימים ממערכי נתונים גדולים, צור ב-R/Python וייבא כ-PDF.",
+      "defaultCaption": "תרשים עמודות מקובץ - ממוצע תגובה לפי מצב ונקודת זמן ($\\pm$\\,SD)."
     },
     "box-violin-plots": {
-      "displayName": "Box Plots & Distribution Comparisons",
-      "description": "Box-and-whisker plots with medians, quartiles, and outliers for comparing distributions.",
-      "scopeWarning": "Enter pre-computed statistics (median, Q1, Q3) from R/Python. Each data point encodes: x=group position, y=median, error=IQR half-range.",
-      "defaultCaption": "Distribution of test scores across three teaching conditions (box: Q1--Q3; whiskers: 1.5$\\times$IQR)."
+      "displayName": "השוואות תיבות והפצה",
+      "description": "עלילות תיבה-ו-שפם עם חציונים, רבעונים וחריגים להשוואת התפלגויות.",
+      "scopeWarning": "סטטיסטיקה מחושבת מראש של Enter (חציון, Q1, Q3) מ-R/Python. כל נקודת נתונים מקודדת: x=מיקום קבוצה, y=חציון, error=IQR חצי טווח.",
+      "defaultCaption": "חלוקת ציוני המבחנים על פני שלושה תנאי הוראה (תיבה: Q1--Q3; שפם: 1.5$\\times$IQR)."
     },
     "scatter-regression": {
-      "displayName": "Scatter Plots with Regression",
-      "description": "Scatter plot with linear regression line and optional confidence band.",
-      "scopeWarning": "Compute slope, intercept, and CI band in your statistical software. Enter the values here for publication-quality rendering.",
-      "defaultCaption": "BMI vs systolic blood pressure: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
+      "displayName": "עלילות פיזור עם רגרסיה",
+      "description": "עלילת פיזור עם קו רגרסיה ליניארי ורצועת ביטחון אופציונלית.",
+      "scopeWarning": "חשב שיפוע, יירוט ורצועת CI בתוכנה הסטטיסטית שלך. Enter הערכים כאן עבור עיבוד באיכות פרסום.",
+      "defaultCaption": "BMI לעומת לחץ דם סיסטולי: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
     },
     "bayesian-networks": {
-      "displayName": "Bayesian Networks",
-      "description": "Directed acyclic graphs for Bayesian networks: latent cause nodes (ellipses) with observed evidence nodes (rectangles).",
-      "scopeWarning": "Suitable for illustrative Bayesian networks in theses. For inference, parameter learning, or dense graphs, use pgmpy, BayesFusion, GeNIe, or BUGS and import the final PDF/SVG.",
-      "defaultCaption": "Bayesian network for differential diagnosis of respiratory illness."
+      "displayName": "רשתות בייסיאניות",
+      "description": "גרפים א-ציקליים מכוונים עבור רשתות בייסיאניות: צמתים סמויים (אליפסות) עם צמתי ראיה שנצפו (מלבנים).",
+      "scopeWarning": "מתאים לרשתות בייסיאניות להמחשה בתזות. להסקת מסקנות, למידת פרמטרים או גרפים צפופים, השתמש ב-pgmpy, BayesFusion, GeNIe או BUGS וייבא את ה-PDF/SVG הסופי.",
+      "defaultCaption": "רשת בייסיאנית לאבחנה מבדלת של מחלות בדרכי הנשימה."
     },
     "sem-path-diagrams": {
-      "displayName": "SEM / Path Diagrams",
-      "description": "Structural equation model path diagrams with latent variables and measurement models.",
-      "scopeWarning": "Suitable for thesis-level SEM diagrams. For estimation, fit statistics, and standardized reports, use lavaan/R, Mplus, or AMOS and import the final diagram/table as PDF.",
-      "defaultCaption": "Technology Acceptance Model (TAM): perceived usefulness and ease of use predicting behavioural intention."
+      "displayName": "SEM / דיאגרמות נתיב",
+      "description": "דיאגרמות נתיב של מודל משוואות מבניות עם משתנים סמויים ומודלי מדידה.",
+      "scopeWarning": "מתאים לדיאגרמות SEM ברמת התזה. לאומדן, סטטיסטיקות התאמה ודוחות סטנדרטיים, השתמש ב-lavaan/R, Mplus או AMOS וייבא את הדיאגרמה/טבלה הסופית בתור PDF.",
+      "defaultCaption": "מודל קבלה טכנולוגי (TAM): שימושיות נתפסת וקלות שימוש המנבאת כוונה התנהגותית."
     },
     "economic-causal": {
-      "displayName": "Economic Causal Diagrams",
-      "description": "Causal loop diagrams (CLD) with reinforcing and balancing feedback loops.",
-      "scopeWarning": "Suitable for simple causal loop models. For full system dynamics with stocks, flows, delays, or simulation, use Vensim, Stella, or AnyLogic and import the final PDF/SVG.",
-      "defaultCaption": "Wage--price spiral: reinforcing ($R$) and balancing ($B$) feedback loops."
+      "displayName": "דיאגרמות סיבתיות כלכליות",
+      "description": "דיאגרמות לולאות סיבתיות (CLD) עם לולאות משוב מחזקות ומאזנות.",
+      "scopeWarning": "מתאים למודלים פשוטים של לולאות סיבתיות. לדינמיקה מלאה של המערכת עם מניות, זרימות, עיכובים או סימולציה, השתמש ב-Vensim, בסטלה או ב-AnyLogic וייבא את ה-PDF/SVG הסופי.",
+      "defaultCaption": "שכר--ספירלת מחיר: חיזוק ($R$) ואיזון ($B$) לולאות משוב."
     },
     "legal-procedural": {
-      "displayName": "Legal / Procedural Diagrams",
-      "description": "Flowcharts for legal and administrative procedures: judicial, regulatory, and compliance workflows.",
-      "scopeWarning": "Suitable for standard legal/administrative process flows in theses. Complex multi-party or multi-jurisdiction procedures are better maintained in BPMN/draw.io and imported as PDF.",
-      "defaultCaption": "Criminal procedure: from complaint to verdict."
+      "displayName": "דיאגרמות משפטיות / פרוצדורליות",
+      "description": "תרשימי זרימה להליכים משפטיים ומנהליים: תהליכי עבודה שיפוטיים, רגולטוריים ותאימות.",
+      "scopeWarning": "מתאים לזרימות סטנדרטיות של תהליכים משפטיים/מנהליים בתזות. נהלים מורכבים מרובי צד או ריבוי תחומי שיפוט נשמרים טוב יותר ב-BPMN/draw.io ומיובאים כ-PDF.",
+      "defaultCaption": "הליך פלילי: מתלונה לפסק דין."
     },
     "pedagogical-diagrams": {
-      "displayName": "Pedagogical Diagrams",
-      "description": "Bloom's taxonomy, learning outcome hierarchies, and curriculum maps for education theses.",
-      "scopeWarning": "Covers common pedagogical diagram patterns. For complex instructional-design models, keep the authoritative diagram in draw.io/Figma and import the final PDF/SVG.",
-      "defaultCaption": "Revised Bloom's taxonomy — six cognitive levels with representative verbs (Anderson \\& Krathwohl, 2001)."
+      "displayName": "דיאגרמות פדגוגיות",
+      "description": "הטקסונומיה של בלום, היררכיות של תוצרי למידה ומפות תכניות לימודים עבור עבודות חינוך.",
+      "scopeWarning": "מכסה דפוסי דיאגרמות פדגוגיות נפוצות. עבור מודלים מורכבים של עיצוב הדרכה, שמור את הדיאגרמה המוסמכת ב-draw.io/Figma וייבא את ה-PDF/SVG הסופי.",
+      "defaultCaption": "הטקסונומיה המתוקנת של בלום - שש רמות קוגניטיביות עם פעלים מייצגים (Anderson \\& Krathwohl, 2001)."
     }
   }
 }

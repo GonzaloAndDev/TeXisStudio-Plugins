@@ -1,366 +1,366 @@
 {
   "plugins": {
     "phylogenetic-trees": {
-      "displayName": "Simple Phylogenetic Trees",
-      "description": "Build phylogenetic and taxonomic trees with labeled nodes and branch lengths.",
-      "scopeWarning": "Suitable for simplified phylogenies in theses. For complex phylogenetics with statistical support, use FigTree/iTOL and import as PDF.",
-      "defaultCaption": "Simplified phylogeny of selected vertebrate classes."
+      "displayName": "أشجار النشوء والتطور البسيطة",
+      "description": "قم ببناء أشجار النشوء والتصنيف ذات العقد المميزة وأطوال الفروع.",
+      "scopeWarning": "مناسب للسلالات المبسطة في الأطروحات. بالنسبة لعلم الوراثة المعقد مع الدعم الإحصائي، استخدم FigTree/iTOL واستورده كـ PDF.",
+      "defaultCaption": "سلالة مبسطة لفئات الفقاريات المختارة."
     },
     "dna-rna-sequences": {
-      "displayName": "DNA / RNA / Protein Sequences",
-      "description": "Display biological sequences with color-coded bases, codon highlighting, and alignment marks.",
-      "defaultCaption": "Start codon and reading frame of a short mRNA sequence."
+      "displayName": "DNA / RNA / تسلسلات البروتين",
+      "description": "عرض التسلسلات البيولوجية مع قواعد مرمزة بالألوان، وتمييز الكودون، وعلامات المحاذاة.",
+      "defaultCaption": "كودون البداية وإطار القراءة لتسلسل mRNA قصير."
     },
     "biomedical-flow": {
-      "displayName": "Biomedical Flow Diagrams",
-      "description": "Biological and clinical process flows — signaling pathways, metabolic steps, treatment algorithms.",
-      "defaultCaption": "MAPK/ERK signalling cascade with feedback inhibition."
+      "displayName": "مخططات التدفق الطبي الحيوي",
+      "description": "تدفقات العمليات البيولوجية والسريرية - مسارات الإشارات، وخطوات التمثيل الغذائي، وخوارزميات العلاج.",
+      "defaultCaption": "سلسلة إشارات MAPK/ERK مع تثبيط ردود الفعل."
     },
     "consort-flow": {
-      "displayName": "CONSORT / Clinical Trial Flow",
-      "description": "CONSORT-style flow diagrams for randomized clinical trials — enrollment, allocation, follow-up, analysis.",
-      "defaultCaption": "CONSORT 2010 flow diagram."
+      "displayName": "CONSORT / تدفق التجارب السريرية",
+      "description": "مخططات تدفق نمط CONSORT- للتجارب السريرية العشوائية - التسجيل والتخصيص والمتابعة والتحليل.",
+      "defaultCaption": "مخطط تدفق CONSORT 2010."
     },
     "biological-pathways": {
-      "displayName": "Schematic Biological Pathways",
-      "description": "Simplified metabolic and signaling pathway schemes for thesis figures.",
-      "scopeWarning": "Suitable for simplified pathway diagrams in theses and reports. Not a substitute for KEGG, Reactome, or professional pathway visualization tools.",
-      "defaultCaption": "Central carbon metabolism: glycolysis and TCA cycle entry."
+      "displayName": "المسارات البيولوجية التخطيطية",
+      "description": "مخططات مبسطة لمسار التمثيل الغذائي والإشارات لأرقام الأطروحة.",
+      "scopeWarning": "مناسب لمخططات المسار المبسطة في الأطروحات والتقارير. ليس بديلاً عن KEGG أو Reactome أو أدوات تصور المسار الاحترافية.",
+      "defaultCaption": "استقلاب الكربون المركزي: تحلل السكر ودخول دورة TCA."
     },
     "chemical-formulas": {
-      "displayName": "Chemical Formulas",
-      "description": "Write chemical formulas with charges, states, and subscripts. Uses mhchem — LaTeX native.",
-      "defaultCaption": "Selected inorganic formulas with oxidation states and phases."
+      "displayName": "الصيغ الكيميائية",
+      "description": "اكتب الصيغ الكيميائية مع الشحنات والحالات والرموز. يستخدم mhchem — LaTeX الأصلي.",
+      "defaultCaption": "صيغ غير عضوية مختارة مع حالات وأطوار الأكسدة."
     },
     "chemical-reactions": {
-      "displayName": "Chemical Reactions",
-      "description": "Build chemical reaction equations with arrows, conditions, and catalysts. Uses mhchem.",
-      "defaultCaption": "Acid--base neutralisation and combustion reactions."
+      "displayName": "التفاعلات الكيميائية",
+      "description": "قم ببناء معادلات التفاعل الكيميائي باستخدام الأسهم والظروف والمحفزات. يستخدم mhchem.",
+      "defaultCaption": "تحييد الأحماض والقاعدة وتفاعلات الاحتراق."
     },
     "reaction-equilibria": {
-      "displayName": "Reaction Equilibria & Conditions",
-      "description": "Chemical equilibrium reactions with conditions above/below the arrow. Uses mhchem.",
-      "defaultCaption": "Haber process and esterification equilibria."
+      "displayName": "توازنات وشروط التفاعل",
+      "description": "تفاعلات التوازن الكيميائي مع الظروف أعلى/أسفل السهم. يستخدم mhchem.",
+      "defaultCaption": "عملية هابر وتوازنات الأسترة."
     },
     "chemical-structures": {
-      "displayName": "Chemical Structures",
-      "description": "Simple organic structures and ring systems using ChemFig. Benzene, functional groups, ring compounds.",
-      "scopeWarning": "Suitable for simple organic structures in theses. Complex multi-ring systems may need manual ChemFig adjustment. For full structural chemistry, use ChemDraw and import as PDF/SVG.",
-      "defaultCaption": "Aspirin (acetylsalicylic acid) structural formula."
+      "displayName": "التركيبات الكيميائية",
+      "description": "تركيبات عضوية بسيطة وأنظمة حلقية باستخدام ChemFig. البنزين، المجموعات الوظيفية، المركبات الحلقية.",
+      "scopeWarning": "مناسب للتركيبات العضوية البسيطة في الأطروحات. قد تحتاج الأنظمة المعقدة متعددة الحلقات إلى تعديل ChemFig يدويًا. للحصول على الكيمياء الهيكلية الكاملة، استخدم ChemDraw واستورد كـ PDF/SVG.",
+      "defaultCaption": "الصيغة الهيكلية للأسبرين (حمض أسيتيل الساليسيليك)."
     },
     "basic-electrical-circuits": {
-      "displayName": "Basic Electrical Circuits",
-      "description": "Visual circuit builder: resistors, capacitors, inductors, sources, switches, diodes. CircuiTikZ native.",
-      "defaultCaption": "RC low-pass filter circuit with voltage divider."
+      "displayName": "الدوائر الكهربائية الأساسية",
+      "description": "منشئ الدوائر المرئية: المقاومات، المكثفات، المحاثات، المصادر، المفاتيح، الثنائيات. CircuiTikZ أصلي.",
+      "defaultCaption": "دائرة مرشح الترددات المنخفضة RC مع مقسم الجهد."
     },
     "block-diagrams-control": {
-      "displayName": "Block Diagrams / Control Systems",
-      "description": "Control system block diagrams with transfer functions, summing junctions, and feedback loops.",
-      "defaultCaption": "PID closed-loop control system block diagram."
+      "displayName": "مخططات الكتلة/أنظمة التحكم",
+      "description": "التحكم في المخططات الهيكلية للنظام باستخدام وظائف النقل وجمع الوصلات وحلقات التغذية الراجعة.",
+      "defaultCaption": "مخطط كتلة نظام التحكم ذو الحلقة المغلقة PID."
     },
     "flowcharts": {
-      "displayName": "Flowcharts",
-      "description": "Academic and process flowcharts with decision diamonds, process boxes, and connector arrows.",
-      "defaultCaption": "Research methodology flowchart."
+      "displayName": "المخططات الانسيابية",
+      "description": "مخططات انسيابية أكاديمية وعملية تحتوي على معينات القرار ومربعات العمليات وأسهم الموصلات.",
+      "defaultCaption": "مخطط انسيابي لمنهجية البحث."
     },
     "software-architecture": {
-      "displayName": "Software / System Architecture",
-      "description": "Component, layer, and system architecture diagrams.",
-      "scopeWarning": "Suitable for standard architecture overviews. For complex UML or deployment diagrams, use Draw.io and import as PDF.",
-      "defaultCaption": "Three-tier web application architecture."
+      "displayName": "هندسة البرمجيات/النظام",
+      "description": "مخططات معمارية للمكونات والطبقات والنظام.",
+      "scopeWarning": "مناسب للنظرات العامة على البنية القياسية. بالنسبة إلى UML المعقدة أو مخططات النشر، استخدم Draw.io وقم بالاستيراد كـ PDF.",
+      "defaultCaption": "هندسة تطبيقات الويب ثلاثية المستويات."
     },
     "venn-set-diagrams": {
-      "displayName": "Venn / Set Diagrams",
-      "description": "Create Venn diagrams and set-theory diagrams with labeled circles and intersections.",
-      "defaultCaption": "Three-set Venn diagram showing mixed-methods research design."
+      "displayName": "فين / تعيين المخططات",
+      "description": "قم بإنشاء رسوم تخطيطية لـ Venn ورسومات تخطيطية لنظرية المجموعات باستخدام دوائر وتقاطعات ذات علامات.",
+      "defaultCaption": "مخطط فين المكون من ثلاث مجموعات يوضح تصميم البحث متعدد الأساليب."
     },
     "plane-geometry": {
-      "displayName": "Plane Geometry",
-      "description": "Geometric shapes: triangles, polygons, circles, angles, perpendiculars, parallels.",
-      "defaultCaption": "Right triangle with altitude from hypotenuse — geometric mean relations."
+      "displayName": "هندسة المستوى",
+      "description": "الأشكال الهندسية: المثلثات، المضلعات، الدوائر، الزوايا، المتعامدون، المتوازيات.",
+      "defaultCaption": "المثلث القائم الزاوية مع الارتفاع من الوتر — علاقات الوسط الهندسي."
     },
     "analytic-geometry": {
-      "displayName": "Analytic Geometry",
-      "description": "Coordinate systems with curves, lines, tangents, and labeled points.",
-      "defaultCaption": "Parabola $f(x)=x^2-2x-3$ with roots, vertex, and tangent at $x=2$."
+      "displayName": "الهندسة التحليلية",
+      "description": "تنسيق الأنظمة باستخدام المنحنيات والخطوط والظلال والنقاط المميزة.",
+      "defaultCaption": "القطع المكافئ $f(x)=x^2-2x-3$ مع الجذور والرأس والظل عند $x=2$."
     },
     "probability-trees": {
-      "displayName": "Probability Trees",
-      "description": "Visual probability trees with branch probabilities and outcomes. forest native.",
-      "defaultCaption": "Probability tree — two coin flips."
+      "displayName": "أشجار الاحتمالية",
+      "description": "أشجار الاحتمالات المرئية مع احتمالات ونتائج الفروع. مواطن الغابة.",
+      "defaultCaption": "شجرة الاحتمالات — رمي العملة مرتين."
     },
     "lab-setups": {
-      "displayName": "Simple Lab Setups",
-      "description": "Basic laboratory apparatus diagrams: flasks, beakers, burettes, tube assemblies.",
-      "scopeWarning": "Covers standard lab apparatus. For specialized equipment diagrams, use dedicated illustration tools and import as PDF.",
-      "defaultCaption": "Simple laboratory setup."
+      "displayName": "إعدادات معملية بسيطة",
+      "description": "الرسومات التخطيطية الأساسية لأجهزة المختبر: القوارير، والكؤوس، والسحاحات، وتجميعات الأنابيب.",
+      "scopeWarning": "يغطي أجهزة المختبر القياسية. للحصول على مخططات المعدات المتخصصة، استخدم أدوات التوضيح المخصصة وقم بالاستيراد كـ PDF.",
+      "defaultCaption": "إعداد مختبر بسيط."
     },
     "syntax-trees": {
-      "displayName": "Syntax / Linguistic Trees",
-      "description": "Phrase-structure and dependency trees for linguistics. forest native.",
-      "defaultCaption": "Phrase-structure tree."
+      "displayName": "تركيب الجملة/الأشجار اللغوية",
+      "description": "بنية العبارات وأشجار التبعية في علم اللغة. مواطن الغابة.",
+      "defaultCaption": "شجرة بنية العبارة."
     },
     "concept-maps": {
-      "displayName": "Concept Maps & Argument Diagrams",
-      "description": "Concept maps, mind maps, and argumentative structure diagrams.",
-      "defaultCaption": "Concept map."
+      "displayName": "خرائط المفاهيم ومخططات الوسيطات",
+      "description": "خرائط المفاهيم، والخرائط الذهنية، ومخططات البنية الجدلية.",
+      "defaultCaption": "خريطة المفاهيم."
     },
     "visual-equations": {
-      "displayName": "Visual Equations",
-      "description": "Build mathematical equations, expressions, and formulas with a visual editor. Outputs LaTeX native.",
-      "defaultCaption": "Quadratic formula and quadratic form."
+      "displayName": "المعادلات البصرية",
+      "description": "إنشاء معادلات رياضية وتعبيرات وصيغ باستخدام محرر مرئي. مخرجات LaTeX أصلية.",
+      "defaultCaption": "الصيغة التربيعية والصيغة التربيعية."
     },
     "matrices-determinants": {
-      "displayName": "Matrices & Determinants",
-      "description": "Create matrices and determinants of any size with visual cell editing.",
-      "defaultCaption": "3D rotation matrix around the $z$-axis by angle $\\theta$."
+      "displayName": "المصفوفات والمحددات",
+      "description": "إنشاء مصفوفات ومحددات بأي حجم باستخدام تحرير الخلايا المرئية.",
+      "defaultCaption": "مصفوفة دوران ثلاثية الأبعاد حول المحور $z$- بزاوية $\\theta$."
     },
     "systems-of-equations": {
-      "displayName": "Systems of Equations",
-      "description": "Build systems of linear or nonlinear equations with aligned formatting.",
-      "defaultCaption": "System of three linear equations (fluid flow balance)."
+      "displayName": "أنظمة المعادلات",
+      "description": "إنشاء أنظمة للمعادلات الخطية أو غير الخطية بتنسيق محاذٍ.",
+      "defaultCaption": "نظام المعادلات الخطية الثلاث (توازن تدفق الموائع)."
     },
     "piecewise-functions": {
-      "displayName": "Piecewise Functions",
-      "description": "Define functions by cases or parts with a visual row editor.",
-      "defaultCaption": "Heaviside step function and ReLU activation function."
+      "displayName": "الوظائف الجزئية",
+      "description": "حدد الوظائف حسب الحالات أو الأجزاء باستخدام محرر الصفوف المرئية.",
+      "defaultCaption": "وظيفة خطوة هيفيسايد ووظيفة تنشيط ReLU."
     },
     "vectors-fields": {
-      "displayName": "Vectors & Simple Fields",
-      "description": "Draw vectors, vector decomposition, and simple field representations.",
-      "defaultCaption": "Vector addition — parallelogram law: $\\vec{R} = \\vec{A} + \\vec{B}$."
+      "displayName": "المتجهات والحقول البسيطة",
+      "description": "ارسم المتجهات، وتحلل المتجهات، وتمثيلات الحقول البسيطة.",
+      "defaultCaption": "إضافة المتجهات – قانون متوازي الأضلاع: $\\vec{R} = \\vec{A} + \\vec{B}$."
     },
     "free-body-diagrams": {
-      "displayName": "Free Body Diagrams",
-      "description": "Build free body diagrams with forces, mass blocks, and labeled arrows.",
-      "defaultCaption": "Free body diagram — block on surface with applied force at angle $\\alpha$."
+      "displayName": "مخططات الجسم المجانية",
+      "description": "قم ببناء مخططات للجسم الحر باستخدام القوى وكتل الكتلة والأسهم المميزة.",
+      "defaultCaption": "مخطط الجسم الحر — كتلة على السطح مع القوة المطبقة بزاوية $\\alpha$."
     },
     "inclined-plane-pulleys": {
-      "displayName": "Inclined Planes, Pulleys & Springs",
-      "description": "Mechanical systems: inclined planes, pulley setups, and spring-mass systems.",
-      "scopeWarning": "Generates accurate schematic diagrams. Highly complex multi-pulley systems may need manual TikZ adjustments.",
-      "defaultCaption": "Free-body diagram on inclined plane (angle $\\theta$)."
+      "displayName": "المستويات المائلة والبكرات والينابيع",
+      "description": "الأنظمة الميكانيكية: المستويات المائلة، وأنظمة البكرة، وأنظمة الكتلة الزنبركية.",
+      "scopeWarning": "ينشئ مخططات تخطيطية دقيقة. قد تحتاج الأنظمة متعددة البكرات شديدة التعقيد إلى تعديلات TikZ اليدوية.",
+      "defaultCaption": "مخطط الجسم الحر على المستوى المائل (الزاوية $\\theta$)."
     },
     "wave-oscillation": {
-      "displayName": "Wave & Oscillation Diagrams",
-      "description": "Sinusoidal waves, damped oscillations, and wave superposition. Covers SHM, transverse/longitudinal waves, and interference patterns.",
-      "defaultCaption": "Sinusoidal wave $y = A\\sin(\\omega t)$ with damped envelope."
+      "displayName": "مخططات الموجة والتذبذبات",
+      "description": "الموجات الجيبية والاهتزازات المخمده وتراكب الموجات. يغطي SHM والموجات المستعرضة/الطولية وأنماط التداخل.",
+      "defaultCaption": "موجة جيبية $y = A\\sin(\\omega t)$ مع غلاف مخمد."
     },
     "geometric-optics": {
-      "displayName": "Geometric Optics",
-      "description": "Lenses, mirrors, ray diagrams, and refraction diagrams.",
-      "scopeWarning": "Suitable for standard ray diagrams. Complex optical systems with multiple elements may need manual adjustment.",
-      "defaultCaption": "Converging thin lens — three principal ray construction."
+      "displayName": "البصريات الهندسية",
+      "description": "العدسات والمرايا ومخططات الأشعة ومخططات الانكسار.",
+      "scopeWarning": "مناسب لمخططات الأشعة القياسية. قد تحتاج الأنظمة البصرية المعقدة ذات العناصر المتعددة إلى تعديل يدوي.",
+      "defaultCaption": "عدسة رفيعة متقاربة — بناء ثلاثي للأشعة الرئيسية."
     },
     "gantt-charts": {
-      "displayName": "Gantt Charts",
-      "description": "Research and project Gantt charts with tasks, groups, milestones, and dependencies. pgfgantt native.",
-      "defaultCaption": "Doctoral research schedule by semester."
+      "displayName": "مخططات جانت",
+      "description": "ابحث وقم بإنشاء مخططات جانت مع المهام والمجموعات والمراحل الرئيسية والتبعيات. pgfgantt أصلي.",
+      "defaultCaption": "جدول أبحاث الدكتوراه حسب الفصل الدراسي."
     },
     "timelines": {
-      "displayName": "Timelines",
-      "description": "Historical, research, and narrative timelines with labeled events.",
-      "defaultCaption": "Key milestones in molecular biology (1944--2003)."
+      "displayName": "الجداول الزمنية",
+      "description": "الجداول الزمنية التاريخية والبحثية والسردية مع الأحداث المصنفة.",
+      "defaultCaption": "المعالم الرئيسية في علم الأحياء الجزيئي (1944--2003)."
     },
     "function-plots-2d": {
-      "displayName": "2D Function Plots",
-      "description": "Plot mathematical functions with labeled axes, grid, and legend. PGFPlots native.",
-      "defaultCaption": "Trigonometric functions $\\sin x$ and $\\cos x$."
+      "displayName": "مخططات دالة ثنائية الأبعاد",
+      "description": "ارسم الدوال الرياضية باستخدام المحاور والشبكة ووسيلة الإيضاح. PGFPlots أصلي.",
+      "defaultCaption": "الدوال المثلثية $\\sin x$ و$\\cos x$."
     },
     "parametric-polar-plots": {
-      "displayName": "Parametric & Polar Plots",
-      "description": "Parametric curves and polar function plots.",
-      "defaultCaption": "Lissajous curve $(\\cos 2t,\\, \\sin 3t)$."
+      "displayName": "المؤامرات البارامترية والقطبية",
+      "description": "المنحنيات البارامترية ومخططات الدوال القطبية.",
+      "defaultCaption": "منحنى ليساجوس $(\\cos 2t,\\, \\sin 3t)$."
     },
     "basic-statistics": {
-      "displayName": "Basic Statistics Charts",
-      "description": "Bar charts, histograms, and scatter plots from tabular data.",
-      "defaultCaption": "Comparative bar chart — measurement results by experimental group."
+      "displayName": "مخططات الإحصائيات الأساسية",
+      "description": "المخططات الشريطية، والرسوم البيانية، والمؤامرات المبعثرة من البيانات الجدولية.",
+      "defaultCaption": "مخطط شريطي مقارن — نتائج القياس حسب المجموعة التجريبية."
     },
     "statistical-distributions": {
-      "displayName": "Statistical Distributions",
-      "description": "Normal, t, chi-squared, and other distributions with shaded regions.",
-      "defaultCaption": "Standard normal distribution with 95\\% confidence interval shaded."
+      "displayName": "التوزيعات الإحصائية",
+      "description": "التوزيعات العادية، وt، وكاي تربيع، وغيرها من التوزيعات ذات المناطق المظللة.",
+      "defaultCaption": "التوزيع الطبيعي القياسي بفاصل ثقة 95\\% مظلل."
     },
     "kaplan-meier": {
-      "displayName": "Kaplan-Meier Survival Curves",
-      "description": "Step-function survival curves for clinical and epidemiological studies.",
-      "scopeWarning": "Enter pre-computed KM estimates (from R survfit, Stata stcurve, or SPSS) as data points forming a step function. Statistical tests must be done externally.",
-      "defaultCaption": "Kaplan--Meier overall survival curves for adjuvant vs.\\ standard chemotherapy ($n{=}200$; log-rank $p{=}0.008$)."
+      "displayName": "منحنيات بقاء كابلان ماير",
+      "description": "منحنيات البقاء على قيد الحياة ذات الخطوة والوظيفة للدراسات السريرية والوبائية.",
+      "scopeWarning": "تقديرات Enter KM المحسوبة مسبقًا (من R survfit أو Stata stcurve أو SPSS) كنقاط بيانات تشكل دالة خطوة. ويجب إجراء الاختبارات الإحصائية خارجيًا.",
+      "defaultCaption": "منحنيات كابلان--ماير الشاملة للبقاء على قيد الحياة للعلاج الكيميائي المساعد مقابل العلاج الكيميائي القياسي ($n{=}200$؛ رتبة السجل $p{=}0.008$)."
     },
     "network-graph": {
-      "displayName": "Network / Social Graphs",
-      "description": "Co-authorship, citation, or social influence networks with community clustering.",
-      "scopeWarning": "Suitable for illustrative networks (≤ 15 nodes). For large-scale visualization, use Gephi or NetworkX and import as PDF.",
-      "defaultCaption": "Co-authorship network — two research clusters connected by a bridge author."
+      "displayName": "الرسوم البيانية للشبكة/الشبكات الاجتماعية",
+      "description": "شبكات التأليف المشترك أو الاستشهاد أو التأثير الاجتماعي مع مجموعات المجتمع.",
+      "scopeWarning": "مناسب للشبكات التوضيحية (≥ 15 عقدة). للحصول على تصور واسع النطاق، استخدم Gephi أو NetworkX واستورد كـ PDF.",
+      "defaultCaption": "شبكة التأليف المشترك — مجموعتان بحثيتان متصلتان بواسطة مؤلف جسر."
     },
     "organic-chemistry-extended": {
-      "displayName": "Extended Organic Chemistry",
-      "description": "Organic structures with rings, functional groups, and stereocentres. ChemFig native.",
-      "scopeWarning": "Complex multi-ring or stereo structures may need manual ChemFig adjustment. For publication-quality structures, use ChemDraw and import as PDF.",
-      "defaultCaption": "Caffeine (1,3,7-trimethylxanthine) structural formula."
+      "displayName": "الكيمياء العضوية الموسعة",
+      "description": "الهياكل العضوية ذات الحلقات والمجموعات الوظيفية والمراكز المجسمة. ChemFig أصلي.",
+      "scopeWarning": "قد تحتاج الهياكل المعقدة متعددة الحلقات أو الاستريو إلى تعديل ChemFig يدويًا. بالنسبة إلى بنيات جودة النشر، استخدم ChemDraw وقم بالاستيراد كـ PDF.",
+      "defaultCaption": "الصيغة البنائية للكافيين (1,3,7-تريميثيلكسانثين)."
     },
     "reaction-mechanisms": {
-      "displayName": "Basic Reaction Mechanisms",
-      "description": "Reaction mechanisms including C-C bond forming reactions, substitutions, and eliminations.",
-      "scopeWarning": "Suitable for standard mechanisms in theses. Complex multi-step mechanisms with curved arrows require manual ChemFig adjustment.",
-      "defaultCaption": "Aldol condensation: base-catalysed formation of a $\\beta$-hydroxy carbonyl compound."
+      "displayName": "آليات التفاعل الأساسية",
+      "description": "آليات التفاعل بما في ذلك تفاعلات تشكيل رابطة C-C، والاستبدالات، والحذف.",
+      "scopeWarning": "مناسب للآليات القياسية في الأطروحات. تتطلب الآليات المعقدة متعددة الخطوات ذات الأسهم المنحنية تعديلًا يدويًا لـ ChemFig.",
+      "defaultCaption": "تكاثف ألدول: تكوين قاعدة محفزة لمركب $\\beta$-هيدروكسي كربونيل."
     },
     "er-diagrams": {
-      "displayName": "ER Diagrams",
-      "description": "Entity-relationship diagrams for database design. TikZ native.",
-      "scopeWarning": "Suitable for standard ER diagrams in theses. Complex schemas with many entities benefit from Draw.io exported as PDF.",
-      "defaultCaption": "ER diagram for a university course-enrollment system."
+      "displayName": "مخططات ER",
+      "description": "مخططات العلاقة بين الكيان لتصميم قاعدة البيانات. TikZ أصلي.",
+      "scopeWarning": "مناسب لمخططات ER القياسية في الأطروحات. تستفيد المخططات المعقدة التي تحتوي على العديد من الكيانات من Draw.io الذي تم تصديره بتنسيق PDF.",
+      "defaultCaption": "مخطط ER لنظام التسجيل في المقررات الجامعية."
     },
     "state-machines": {
-      "displayName": "State Machines",
-      "description": "Finite state machines and automata with states, transitions, and labels.",
-      "scopeWarning": "Suitable for DFA/NFA and reactive system diagrams in theses. For large automata, generate from Graphviz/PlantUML and import as PDF.",
-      "defaultCaption": "Traffic-light finite state machine (timer-driven)."
+      "displayName": "أجهزة الحالة",
+      "description": "آلات الحالة المحدودة والأتمتة ذات الحالات والانتقالات والتسميات.",
+      "scopeWarning": "مناسب لـ DFA/NFA ومخططات النظام التفاعلي في الأطروحات. بالنسبة للأتمتة الكبيرة، أنشئ من Graphviz/PlantUML واستورده كـ PDF.",
+      "defaultCaption": "آلة الحالة المحدودة لإشارة المرور (تعمل بمؤقت)."
     },
     "markov-chains": {
-      "displayName": "Markov Chains",
-      "description": "Markov chain diagrams with states and transition probabilities.",
-      "scopeWarning": "Suitable for illustrative Markov chains in theses. For inference or simulation, use R/Python and import results as figures.",
-      "defaultCaption": "Weather Markov chain (Sunny / Cloudy / Rainy)."
+      "displayName": "سلاسل ماركوف",
+      "description": "مخططات سلسلة ماركوف مع الحالات واحتمالات التحول.",
+      "scopeWarning": "مناسبة لسلاسل ماركوف التوضيحية في الأطروحات. للاستدلال أو المحاكاة، استخدم R/Python واستورد النتائج كأرقام.",
+      "defaultCaption": "حالة الطقس سلسلة ماركوف (مشمس / غائم / ممطر)."
     },
     "bode-nyquist": {
-      "displayName": "Bode / Nyquist Diagrams",
-      "description": "Frequency response: Bode magnitude + phase, or Nyquist plot. Second-order transfer functions.",
-      "scopeWarning": "Enter your system transfer function as a pgfplots expression. Compute poles/zeros in MATLAB/Python first.",
-      "defaultCaption": "Bode plot of $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
+      "displayName": "مخططات بود / نيكويست",
+      "description": "استجابة التردد: حجم بود + الطور، أو مخطط نيكويست. وظائف النقل من الدرجة الثانية.",
+      "scopeWarning": "Enter تعمل وظيفة نقل النظام كتعبير pgfplots. حساب الأقطاب/الأصفار في MATLAB/Python أولاً.",
+      "defaultCaption": "مؤامرة تبشر بـ $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$، $\\zeta{=}0.3$)."
     },
     "plots-3d": {
-      "displayName": "3D Scientific Plots",
-      "description": "3D surfaces, wireframes, and contour plots. PGFPlots native.",
-      "scopeWarning": "3D plots compile slowly for fine meshes. Keep samples ≤ 25×25 for reasonable compile time.",
-      "defaultCaption": "Standard bivariate normal density $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
+      "displayName": "مؤامرات علمية ثلاثية الأبعاد",
+      "description": "الأسطح ثلاثية الأبعاد والإطارات السلكية والمخططات الكنتورية. PGFPlots أصلي.",
+      "scopeWarning": "يتم تجميع المخططات ثلاثية الأبعاد ببطء للحصول على شبكات دقيقة. احتفظ بالعينات ≥ 25×25 لوقت تجميع معقول.",
+      "defaultCaption": "الكثافة الطبيعية القياسية ثنائية المتغير $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
     },
     "phase-diagrams": {
-      "displayName": "Phase Diagrams",
-      "description": "Phase portraits, nullclines, and stability diagrams for dynamical systems.",
-      "scopeWarning": "Suitable for 2D phase planes and nullcline plots. Full vector-field arrows require manual pgfplots quiver adjustments.",
-      "defaultCaption": "Lotka--Volterra phase plane: prey $x$ vs predator $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
+      "displayName": "مخططات المرحلة",
+      "description": "صور الطور، والخطوط الفارغة، ومخططات الاستقرار للأنظمة الديناميكية.",
+      "scopeWarning": "مناسب لطائرات الطور ثنائية الأبعاد والمؤامرات الخالية من الخط. تتطلب أسهم حقل المتجهات الكاملة تعديلات يدوية على جعبة pgfplots.",
+      "defaultCaption": "لوتكا--مستوى طور فولتيرا: الفريسة $x$ مقابل المفترس $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
     },
     "heat-maps": {
-      "displayName": "Correlation Heat Maps",
-      "description": "Correlation matrices and heat maps using pgfplots matrix plot. Values between -1 and 1, color-mapped.",
-      "scopeWarning": "Suitable for small matrices (≤ 10×10). Compute correlations in R/Python first, then enter the values here.",
-      "defaultCaption": "Pearson correlation matrix for four psychometric variables."
+      "displayName": "خرائط حرارة الارتباط",
+      "description": "مصفوفات الارتباط والخرائط الحرارية باستخدام مؤامرة مصفوفة pgfplots. القيم بين -1 و1، محددة الألوان.",
+      "scopeWarning": "مناسب للمصفوفات الصغيرة (≥ 10×10). قم بحساب الارتباطات في R/Python أولاً، ثم أدخل القيم هنا.",
+      "defaultCaption": "مصفوفة ارتباط بيرسون لأربعة متغيرات سيكومترية."
     },
     "supply-demand": {
-      "displayName": "Supply & Demand Curves",
-      "description": "Supply and demand with equilibrium, consumer/producer surplus, and optional curve shifts.",
-      "scopeWarning": "Suitable for illustrative partial-equilibrium analysis in theses. Non-linear elasticity curves may need manual pgfplots adjustment.",
-      "defaultCaption": "Supply and demand: original equilibrium $E_0$ and demand shift $D \\to D'$ after income increase."
+      "displayName": "منحنيات العرض والطلب",
+      "description": "العرض والطلب مع التوازن، وفائض المستهلك/المنتج، وتحولات المنحنى الاختيارية.",
+      "scopeWarning": "مناسبة لتحليل التوازن الجزئي التوضيحي في الأطروحات. قد تحتاج منحنيات المرونة غير الخطية إلى تعديل pgfplots يدويًا.",
+      "defaultCaption": "العرض والطلب: التوازن الأصلي $E_0$ وتحول الطلب $D \\to D'$ بعد زيادة الدخل."
     },
     "uml-class-diagrams": {
-      "displayName": "UML Class Diagrams",
-      "description": "UML class diagrams with inheritance, interfaces, composition, and association.",
-      "scopeWarning": "Generates simplified class boxes. For full UML compliance, use PlantUML or draw.io and import as PDF.",
-      "defaultCaption": "Repository pattern with Observer: \\\\ $<<$interface$>>$ classes, inheritance and composition."
+      "displayName": "مخططات فئة UML",
+      "description": "مخططات فئة UML مع الوراثة والواجهات والتركيب والارتباط.",
+      "scopeWarning": "إنشاء مربعات فئة مبسطة. للحصول على الامتثال الكامل لـ UML، استخدم PlantUML أو draw.io وقم بالاستيراد كـ PDF.",
+      "defaultCaption": "نمط المستودع مع Observer: فئات $<<$interface$>>$ والميراث والتكوين."
     },
     "time-series": {
-      "displayName": "Time Series Plots",
-      "description": "Time series with trend, confidence band, and annotated events. Ideal for longitudinal data in economics, ecology, and clinical research.",
-      "scopeWarning": "Enter data points manually. For large or complex time series (ARIMA, seasonal), generate in R/Python and import as PDF.",
-      "defaultCaption": "Monthly CO$_2$ concentration (ppm) with long-term trend and $\\pm$2\\,SD band."
+      "displayName": "مخططات السلاسل الزمنية",
+      "description": "سلسلة زمنية تحتوي على الاتجاه ونطاق الثقة والأحداث المشروحة. مثالي للبيانات الطولية في الاقتصاد والبيئة والأبحاث السريرية.",
+      "scopeWarning": "نقاط بيانات Enter يدويًا. بالنسبة للسلاسل الزمنية الكبيرة أو المعقدة (ARIMA، الموسمية)، أنشئ في R/Python واستورد كـ PDF.",
+      "defaultCaption": "تركيز CO$_2$ شهريًا (جزء في المليون) مع الاتجاه طويل المدى ونطاق $\\pm$2\\,SD."
     },
     "genealogy": {
-      "displayName": "Genealogy / Family Trees",
-      "description": "Family trees, dynasties, and clinical pedigrees with generations and relationship markers.",
-      "scopeWarning": "Suitable for simplified family trees. For clinical genetic pedigrees with standard symbols (ACMG/AMP), use dedicated pedigree software.",
-      "defaultCaption": "Family tree."
+      "displayName": "علم الأنساب/أشجار العائلة",
+      "description": "أشجار العائلة والسلالات والنسب السريرية مع الأجيال وعلامات العلاقة.",
+      "scopeWarning": "مناسب لأشجار العائلة المبسطة. بالنسبة للنسب الجينية السريرية ذات الرموز القياسية (ACMG/AMP)، استخدم برنامج نسب مخصص.",
+      "defaultCaption": "شجرة العائلة."
     },
     "parallel-coordinates": {
-      "displayName": "Parallel Coordinates / Criteria Matrix",
-      "description": "Parallel coordinate plots for multi-criteria comparison of alternatives across normalised dimensions (0--10 scale).",
-      "scopeWarning": "Normalise all criteria to a common scale (e.g. 0--10) before entering values. For many alternatives (>6), use Python/R and import as PDF.",
-      "defaultCaption": "Parallel coordinate plot comparing five software solutions on four criteria."
+      "displayName": "الإحداثيات الموازية / مصفوفة المعايير",
+      "description": "مخططات الإحداثيات المتوازية لمقارنة البدائل متعددة المعايير عبر الأبعاد الطبيعية (مقياس 0-10).",
+      "scopeWarning": "قم بتطبيع كافة المعايير إلى مقياس مشترك (على سبيل المثال 0--10) قبل إدخال القيم. بالنسبة للعديد من البدائل (>6)، استخدم Python/R واستورد كـ PDF.",
+      "defaultCaption": "مخطط إحداثي متوازي يقارن خمسة حلول برمجية على أربعة معايير."
     },
     "energy-band-diagrams": {
-      "displayName": "Energy / Band Diagrams",
-      "description": "Energy level diagrams, band gaps, and semiconductor band diagrams for physics and materials science.",
-      "scopeWarning": "Energy values are illustrative. Replace with your material's actual band gap and Fermi level values from literature or calculation.",
-      "defaultCaption": "Semiconductor band diagram."
+      "displayName": "مخططات الطاقة/النطاق",
+      "description": "مخططات مستوى الطاقة، وفجوات النطاق، ومخططات نطاق أشباه الموصلات للفيزياء وعلوم المواد.",
+      "scopeWarning": "قيم الطاقة توضيحية. استبدل بفجوة النطاق الفعلية للمادة الخاصة بك وقيم مستوى فيرمي من الأدبيات أو الحسابات.",
+      "defaultCaption": "مخطط نطاق أشباه الموصلات."
     },
     "decision-tree": {
-      "displayName": "Decision Trees",
-      "description": "Decision tree diagrams with conditions, branches, and leaf outcomes. Covers classification trees, CART, and clinical decision rules.",
-      "scopeWarning": "Enter tree structure manually. For automatic tree generation from data, use scikit-learn/rpart and export the tree, then reproduce here for publication.",
-      "defaultCaption": "Decision tree."
+      "displayName": "أشجار القرار",
+      "description": "مخططات شجرة القرار مع الشروط والفروع ونتائج الأوراق. يغطي أشجار التصنيف، CART، وقواعد القرار السريري.",
+      "scopeWarning": "هيكل شجرة Enter يدويًا. لإنشاء شجرة تلقائيًا من البيانات، استخدم scikit-learn/rpart وقم بتصدير الشجرة، ثم قم بإعادة إنتاجها هنا للنشر.",
+      "defaultCaption": "شجرة القرار."
     },
     "roc-curve": {
-      "displayName": "ROC Curves",
-      "description": "Receiver operating characteristic curves for classifier evaluation. Supports multiple classifiers with AUC annotation.",
-      "scopeWarning": "Enter pre-computed TPR/FPR values from your statistical software (sklearn, R pROC). This plugin renders the curve; model training must be done externally.",
-      "defaultCaption": "ROC curves (AUC shown in legend)."
+      "displayName": "منحنيات ROC",
+      "description": "منحنيات تشغيل المتلقي المميزة لتقييم المصنف. يدعم مصنفات متعددة مع تعليق توضيحي AUC.",
+      "scopeWarning": "قيم Enter TPR/FPR المحسوبة مسبقًا من برنامجك الإحصائي (sklearn، R pROC). يعرض هذا البرنامج المساعد المنحنى؛ يجب أن يتم التدريب النموذجي خارجيًا.",
+      "defaultCaption": "منحنيات ROC (AUC موضحة في وسيلة الإيضاح)."
     },
     "population-pyramid": {
-      "displayName": "Population Pyramid",
-      "description": "Age-sex population pyramid for demographic analysis. Shows male/female population distributions by age group.",
-      "scopeWarning": "Enter census data manually. For large datasets, generate the pyramid in R/Python and import as PDF, or use this plugin for illustrative sub-populations.",
-      "defaultCaption": "Population pyramid."
+      "displayName": "الهرم السكاني",
+      "description": "الهرم السكاني للعمر والجنس للتحليل الديموغرافي. يُظهر توزيعات السكان من الذكور والإناث حسب الفئة العمرية.",
+      "scopeWarning": "بيانات التعداد Enter يدويًا. بالنسبة لمجموعات البيانات الكبيرة، أنشئ الهرم في R/Python واستورده كـ PDF، أو استخدم هذا البرنامج الإضافي للتجمعات السكانية الفرعية التوضيحية.",
+      "defaultCaption": "الهرم السكاني."
     },
     "error-bars": {
-      "displayName": "Error Bars & Confidence Intervals",
-      "description": "Line or bar plots with error bars for means ± SD/SE/CI. Essential for presenting experimental or survey results.",
-      "scopeWarning": "Enter means and error values (SD, SE, or 95% CI half-width) computed from your data. Raw data processing must be done externally.",
-      "defaultCaption": "Mean values with 95\\% confidence intervals."
+      "displayName": "أشرطة الخطأ وفواصل الثقة",
+      "description": "مخططات خطية أو شريطية تحتوي على أشرطة خطأ للوسائل ± SD/SE/CI. ضروري لعرض نتائج التجارب أو الاستطلاعات.",
+      "scopeWarning": "وسائل Enter وقيم الخطأ (SD أو SE أو 95% CI بنصف العرض) المحسوبة من بياناتك. يجب أن تتم معالجة البيانات الأولية خارجيًا.",
+      "defaultCaption": "القيم المتوسطة بفواصل ثقة 95\\%."
     },
     "causal-dag": {
-      "displayName": "Causal DAG / Path Diagrams",
-      "description": "Directed acyclic graphs (DAGs) for causal inference frameworks, structural equation models, and mediation analysis.",
-      "scopeWarning": "Suitable for causal diagrams up to ~10 variables. For complex SEM or large DAGs, use dagitty.net or lavaan and import the diagram.",
-      "defaultCaption": "Causal directed acyclic graph (DAG)."
+      "displayName": "السببية DAG / مخططات المسار",
+      "description": "رسوم بيانية غير دورية موجهة (DAGs) لأطر الاستدلال السببي، ونماذج المعادلات الهيكلية، وتحليل الوساطة.",
+      "scopeWarning": "مناسب للمخططات السببية التي تصل إلى 10 متغيرات تقريبًا. بالنسبة إلى SEM المعقدة أو DAGs الكبيرة، استخدم dagitty.net أو avaan واستورد الرسم التخطيطي.",
+      "defaultCaption": "الرسم البياني السببي غير الحلقي الموجه (DAG)."
     },
     "bar-charts": {
-      "displayName": "Bar Charts & Histograms",
-      "description": "Grouped and stacked bar charts, frequency histograms for descriptive statistics.",
-      "scopeWarning": "Enter values manually. For charts from large datasets, generate in R/Python and import as PDF.",
-      "defaultCaption": "Grouped bar chart — mean response by condition and time point ($\\pm$\\,SD)."
+      "displayName": "المخططات الشريطية والرسوم البيانية",
+      "description": "مخططات شريطية مجمعة ومكدسة، ومخططات تكرارية للإحصائيات الوصفية.",
+      "scopeWarning": "قيم Enter يدويًا. بالنسبة للمخططات من مجموعات البيانات الكبيرة، أنشئها في R/Python واستوردها كـ PDF.",
+      "defaultCaption": "مخطط شريطي مجمّع — متوسط الاستجابة حسب الحالة والنقطة الزمنية ($\\pm$\\,SD)."
     },
     "box-violin-plots": {
-      "displayName": "Box Plots & Distribution Comparisons",
-      "description": "Box-and-whisker plots with medians, quartiles, and outliers for comparing distributions.",
-      "scopeWarning": "Enter pre-computed statistics (median, Q1, Q3) from R/Python. Each data point encodes: x=group position, y=median, error=IQR half-range.",
-      "defaultCaption": "Distribution of test scores across three teaching conditions (box: Q1--Q3; whiskers: 1.5$\\times$IQR)."
+      "displayName": "مخططات الصندوق ومقارنات التوزيع",
+      "description": "مخططات الصندوق والطرفين مع المتوسطات والربيعية والقيم المتطرفة لمقارنة التوزيعات.",
+      "scopeWarning": "إحصائيات Enter المحسوبة مسبقًا (الوسيط، Q1، Q3) من R/Python. تقوم كل نقطة بيانات بتشفير: x=موضع المجموعة، y=الوسيط، الخطأ=IQR نصف النطاق.",
+      "defaultCaption": "توزيع درجات الاختبار عبر ثلاثة شروط تعليمية (المربع: Q1--Q3؛ الشعيرات: 1.5$\\times$IQR)."
     },
     "scatter-regression": {
-      "displayName": "Scatter Plots with Regression",
-      "description": "Scatter plot with linear regression line and optional confidence band.",
-      "scopeWarning": "Compute slope, intercept, and CI band in your statistical software. Enter the values here for publication-quality rendering.",
-      "defaultCaption": "BMI vs systolic blood pressure: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
+      "displayName": "المؤامرات المبعثرة مع الانحدار",
+      "description": "مخطط مبعثر مع خط انحدار خطي ونطاق ثقة اختياري.",
+      "scopeWarning": "حساب الميل والتقاطع ونطاق CI في برنامجك الإحصائي. Enter القيم هنا لعرض جودة النشر.",
+      "defaultCaption": "BMI مقابل ضغط الدم الانقباضي: $\\hat{y} = 89.4 + 1.83x$، $R^2{=}0.74$، $p{<}0.001$ ($n{=}120$)."
     },
     "bayesian-networks": {
-      "displayName": "Bayesian Networks",
-      "description": "Directed acyclic graphs for Bayesian networks: latent cause nodes (ellipses) with observed evidence nodes (rectangles).",
-      "scopeWarning": "Suitable for illustrative Bayesian networks in theses. For inference, parameter learning, or dense graphs, use pgmpy, BayesFusion, GeNIe, or BUGS and import the final PDF/SVG.",
-      "defaultCaption": "Bayesian network for differential diagnosis of respiratory illness."
+      "displayName": "الشبكات الافتراضية",
+      "description": "رسوم بيانية غير دورية موجهة للشبكات الافتراضية: عقد السبب الكامن (علامات الحذف) مع عقد الأدلة الملحوظة (المستطيلات).",
+      "scopeWarning": "مناسبة للشبكات البايزية التوضيحية في الأطروحات. للاستدلال أو تعلم المعلمات أو الرسوم البيانية الكثيفة، استخدم pgmpy أو BayesFusion أو GeNIe أو BUGS واستورد PDF/SVG النهائي.",
+      "defaultCaption": "شبكة بايزي للتشخيص التفريقي لأمراض الجهاز التنفسي."
     },
     "sem-path-diagrams": {
-      "displayName": "SEM / Path Diagrams",
-      "description": "Structural equation model path diagrams with latent variables and measurement models.",
-      "scopeWarning": "Suitable for thesis-level SEM diagrams. For estimation, fit statistics, and standardized reports, use lavaan/R, Mplus, or AMOS and import the final diagram/table as PDF.",
-      "defaultCaption": "Technology Acceptance Model (TAM): perceived usefulness and ease of use predicting behavioural intention."
+      "displayName": "SEM / مخططات المسار",
+      "description": "مخططات مسار نموذج المعادلة الهيكلية مع المتغيرات الكامنة ونماذج القياس.",
+      "scopeWarning": "مناسب للرسوم البيانية SEM على مستوى الأطروحة. للتقدير وإحصائيات الملاءمة والتقارير الموحدة، استخدم avaan/R أو Mplus أو AMOS واستورد الرسم التخطيطي/الجدول النهائي بتنسيق PDF.",
+      "defaultCaption": "نموذج قبول التكنولوجيا (TAM): توقع الفائدة المدركة وسهولة الاستخدام بالنية السلوكية."
     },
     "economic-causal": {
-      "displayName": "Economic Causal Diagrams",
-      "description": "Causal loop diagrams (CLD) with reinforcing and balancing feedback loops.",
-      "scopeWarning": "Suitable for simple causal loop models. For full system dynamics with stocks, flows, delays, or simulation, use Vensim, Stella, or AnyLogic and import the final PDF/SVG.",
-      "defaultCaption": "Wage--price spiral: reinforcing ($R$) and balancing ($B$) feedback loops."
+      "displayName": "المخططات السببية الاقتصادية",
+      "description": "مخططات الحلقة السببية (CLD) مع حلقات التغذية الراجعة المعززة والمتوازنة.",
+      "scopeWarning": "مناسب لنماذج الحلقات السببية البسيطة. للحصول على ديناميكيات النظام الكاملة فيما يتعلق بالمخزونات أو التدفقات أو التأخير أو المحاكاة، استخدم Vensim أو Stella أو AnyLogic واستورد PDF/SVG النهائي.",
+      "defaultCaption": "دوامة الأجور والأسعار: تعزيز حلقات ردود الفعل ($R$) وموازنة ($B$)."
     },
     "legal-procedural": {
-      "displayName": "Legal / Procedural Diagrams",
-      "description": "Flowcharts for legal and administrative procedures: judicial, regulatory, and compliance workflows.",
-      "scopeWarning": "Suitable for standard legal/administrative process flows in theses. Complex multi-party or multi-jurisdiction procedures are better maintained in BPMN/draw.io and imported as PDF.",
-      "defaultCaption": "Criminal procedure: from complaint to verdict."
+      "displayName": "المخططات القانونية / الإجرائية",
+      "description": "مخططات انسيابية للإجراءات القانونية والإدارية: سير العمل القضائي والتنظيمي والامتثال.",
+      "scopeWarning": "مناسب لسير العمليات القانونية/الإدارية القياسية في الأطروحات. من الأفضل الحفاظ على الإجراءات المعقدة متعددة الأحزاب أو الولايات القضائية المتعددة في BPMN/draw.io واستيرادها كـ PDF.",
+      "defaultCaption": "الإجراءات الجنائية: من الشكوى إلى الحكم."
     },
     "pedagogical-diagrams": {
-      "displayName": "Pedagogical Diagrams",
-      "description": "Bloom's taxonomy, learning outcome hierarchies, and curriculum maps for education theses.",
-      "scopeWarning": "Covers common pedagogical diagram patterns. For complex instructional-design models, keep the authoritative diagram in draw.io/Figma and import the final PDF/SVG.",
-      "defaultCaption": "Revised Bloom's taxonomy — six cognitive levels with representative verbs (Anderson \\& Krathwohl, 2001)."
+      "displayName": "المخططات التربوية",
+      "description": "تصنيف بلوم، والتسلسلات الهرمية لنتائج التعلم، وخرائط المناهج الدراسية للأطروحات التعليمية.",
+      "scopeWarning": "يغطي أنماط المخططات التربوية الشائعة. بالنسبة لنماذج التصميم التعليمي المعقدة، احتفظ بالمخطط الرسمي في draw.io/Figma وقم باستيراد PDF/SVG النهائي.",
+      "defaultCaption": "تصنيف بلوم المنقح — ستة مستويات معرفية مع أفعال تمثيلية (Anderson \\& Krathwohl, 2001)."
     }
   }
 }

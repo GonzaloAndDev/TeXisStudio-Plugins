@@ -1,366 +1,366 @@
 {
   "plugins": {
     "phylogenetic-trees": {
-      "displayName": "Simple Phylogenetic Trees",
-      "description": "Build phylogenetic and taxonomic trees with labeled nodes and branch lengths.",
-      "scopeWarning": "Suitable for simplified phylogenies in theses. For complex phylogenetics with statistical support, use FigTree/iTOL and import as PDF.",
-      "defaultCaption": "Simplified phylogeny of selected vertebrate classes."
+      "displayName": "Arbori filogenetici simpli",
+      "description": "Construiți arbori filogenetici și taxonomici cu noduri etichetate și lungimi ale ramurilor.",
+      "scopeWarning": "Potrivit pentru filogenii simplificate din teze. Pentru filogenetică complexă cu suport statistic, utilizați FigTree/iTOL și importați ca PDF.",
+      "defaultCaption": "Filogenie simplificată a claselor de vertebrate selectate."
     },
     "dna-rna-sequences": {
-      "displayName": "DNA / RNA / Protein Sequences",
-      "description": "Display biological sequences with color-coded bases, codon highlighting, and alignment marks.",
-      "defaultCaption": "Start codon and reading frame of a short mRNA sequence."
+      "displayName": "DNA / RNA / Secvențe de proteine",
+      "description": "Afișați secvențe biologice cu baze codificate în culori, evidențiere a codonilor și semne de aliniere.",
+      "defaultCaption": "Codonul de pornire și cadrul de citire al unei secvențe scurte de ARNm."
     },
     "biomedical-flow": {
-      "displayName": "Biomedical Flow Diagrams",
-      "description": "Biological and clinical process flows — signaling pathways, metabolic steps, treatment algorithms.",
-      "defaultCaption": "MAPK/ERK signalling cascade with feedback inhibition."
+      "displayName": "Diagrame de flux biomedicale",
+      "description": "Fluxul proceselor biologice și clinice — căi de semnalizare, pași metabolici, algoritmi de tratament.",
+      "defaultCaption": "Cascada de semnalizare MAPK/ERK cu inhibare a feedback-ului."
     },
     "consort-flow": {
-      "displayName": "CONSORT / Clinical Trial Flow",
-      "description": "CONSORT-style flow diagrams for randomized clinical trials — enrollment, allocation, follow-up, analysis.",
-      "defaultCaption": "CONSORT 2010 flow diagram."
+      "displayName": "CONSORT / Fluxul studiilor clinice",
+      "description": "Diagrame de flux în stil CONSORT- pentru studiile clinice randomizate — înscriere, alocare, urmărire, analiză.",
+      "defaultCaption": "Diagrama fluxului CONSORT 2010."
     },
     "biological-pathways": {
-      "displayName": "Schematic Biological Pathways",
-      "description": "Simplified metabolic and signaling pathway schemes for thesis figures.",
-      "scopeWarning": "Suitable for simplified pathway diagrams in theses and reports. Not a substitute for KEGG, Reactome, or professional pathway visualization tools.",
-      "defaultCaption": "Central carbon metabolism: glycolysis and TCA cycle entry."
+      "displayName": "Căi biologice schematice",
+      "description": "Scheme de căi metabolice și de semnalizare simplificate pentru figurile tezei.",
+      "scopeWarning": "Potrivit pentru diagramele de parcurs simplificate din teze și rapoarte. Nu este un înlocuitor pentru KEGG, Reactome sau instrumentele profesionale de vizualizare a căii.",
+      "defaultCaption": "Metabolismul central al carbonului: glicoliză și intrarea în ciclul TCA."
     },
     "chemical-formulas": {
-      "displayName": "Chemical Formulas",
-      "description": "Write chemical formulas with charges, states, and subscripts. Uses mhchem — LaTeX native.",
-      "defaultCaption": "Selected inorganic formulas with oxidation states and phases."
+      "displayName": "Formulele chimice",
+      "description": "Scrieți formule chimice cu sarcini, stări și indice. Utilizează mhchem — LaTeX nativ.",
+      "defaultCaption": "Formule anorganice selectate cu stări și faze de oxidare."
     },
     "chemical-reactions": {
-      "displayName": "Chemical Reactions",
-      "description": "Build chemical reaction equations with arrows, conditions, and catalysts. Uses mhchem.",
-      "defaultCaption": "Acid--base neutralisation and combustion reactions."
+      "displayName": "Reacții chimice",
+      "description": "Construiți ecuații ale reacțiilor chimice cu săgeți, condiții și catalizatori. Utilizează mhchem.",
+      "defaultCaption": "Reacții de neutralizare acid-bazică și combustie."
     },
     "reaction-equilibria": {
-      "displayName": "Reaction Equilibria & Conditions",
-      "description": "Chemical equilibrium reactions with conditions above/below the arrow. Uses mhchem.",
-      "defaultCaption": "Haber process and esterification equilibria."
+      "displayName": "Echilibre și condiții de reacție",
+      "description": "Reacții de echilibru chimic cu condiții deasupra/sub săgeată. Utilizează mhchem.",
+      "defaultCaption": "Procesul Haber și echilibrele de esterificare."
     },
     "chemical-structures": {
-      "displayName": "Chemical Structures",
-      "description": "Simple organic structures and ring systems using ChemFig. Benzene, functional groups, ring compounds.",
-      "scopeWarning": "Suitable for simple organic structures in theses. Complex multi-ring systems may need manual ChemFig adjustment. For full structural chemistry, use ChemDraw and import as PDF/SVG.",
-      "defaultCaption": "Aspirin (acetylsalicylic acid) structural formula."
+      "displayName": "Structuri chimice",
+      "description": "Structuri organice simple și sisteme inelare folosind ChemFig. Benzen, grupări funcționale, compuși ciclici.",
+      "scopeWarning": "Potrivit pentru structuri organice simple din teze. Sistemele complexe cu inele multiple pot necesita ajustare manuală ChemFig. Pentru chimie structurală completă, utilizați ChemDraw și importați ca PDF/SVG.",
+      "defaultCaption": "Formulă structurală a aspirinei (acid acetilsalicilic)."
     },
     "basic-electrical-circuits": {
-      "displayName": "Basic Electrical Circuits",
-      "description": "Visual circuit builder: resistors, capacitors, inductors, sources, switches, diodes. CircuiTikZ native.",
-      "defaultCaption": "RC low-pass filter circuit with voltage divider."
+      "displayName": "Circuite electrice de bază",
+      "description": "Constructor de circuite vizuale: rezistențe, condensatoare, inductori, surse, comutatoare, diode. CircuiTikZ nativ.",
+      "defaultCaption": "Circuit de filtru trece-jos RC cu divizor de tensiune."
     },
     "block-diagrams-control": {
-      "displayName": "Block Diagrams / Control Systems",
-      "description": "Control system block diagrams with transfer functions, summing junctions, and feedback loops.",
-      "defaultCaption": "PID closed-loop control system block diagram."
+      "displayName": "Diagrame bloc/Sisteme de control",
+      "description": "Controlați diagramele bloc ale sistemului cu funcții de transfer, joncțiuni de însumare și bucle de feedback.",
+      "defaultCaption": "Schema bloc al sistemului de control în buclă închisă PID."
     },
     "flowcharts": {
-      "displayName": "Flowcharts",
-      "description": "Academic and process flowcharts with decision diamonds, process boxes, and connector arrows.",
-      "defaultCaption": "Research methodology flowchart."
+      "displayName": "Diagrame de flux",
+      "description": "Diagrame academice și de proces cu diamante de decizie, casete de proces și săgeți conector.",
+      "defaultCaption": "Diagrama fluxului metodologiei de cercetare."
     },
     "software-architecture": {
-      "displayName": "Software / System Architecture",
-      "description": "Component, layer, and system architecture diagrams.",
-      "scopeWarning": "Suitable for standard architecture overviews. For complex UML or deployment diagrams, use Draw.io and import as PDF.",
-      "defaultCaption": "Three-tier web application architecture."
+      "displayName": "Arhitectura software/sistem",
+      "description": "Diagrame de arhitectură a componentelor, a straturilor și a sistemului.",
+      "scopeWarning": "Potrivit pentru prezentarea arhitecturii standard. Pentru UML sau diagrame de implementare complexe, utilizați Draw.io și importați ca PDF.",
+      "defaultCaption": "Arhitectură de aplicații web cu trei niveluri."
     },
     "venn-set-diagrams": {
-      "displayName": "Venn / Set Diagrams",
-      "description": "Create Venn diagrams and set-theory diagrams with labeled circles and intersections.",
-      "defaultCaption": "Three-set Venn diagram showing mixed-methods research design."
+      "displayName": "Venn / Set Diagrame",
+      "description": "Creați diagrame Venn și diagrame de teorie a mulțimilor cu cercuri și intersecții etichetate.",
+      "defaultCaption": "Diagrama Venn în trei seturi care arată designul de cercetare cu metode mixte."
     },
     "plane-geometry": {
-      "displayName": "Plane Geometry",
-      "description": "Geometric shapes: triangles, polygons, circles, angles, perpendiculars, parallels.",
-      "defaultCaption": "Right triangle with altitude from hypotenuse — geometric mean relations."
+      "displayName": "Geometrie plană",
+      "description": "Forme geometrice: triunghiuri, poligoane, cercuri, unghiuri, perpendiculare, paralele.",
+      "defaultCaption": "Triunghi dreptunghic cu altitudinea de la ipotenuză — relații medii geometrice."
     },
     "analytic-geometry": {
-      "displayName": "Analytic Geometry",
-      "description": "Coordinate systems with curves, lines, tangents, and labeled points.",
-      "defaultCaption": "Parabola $f(x)=x^2-2x-3$ with roots, vertex, and tangent at $x=2$."
+      "displayName": "Geometrie analitică",
+      "description": "Sisteme de coordonate cu curbe, linii, tangente și puncte etichetate.",
+      "defaultCaption": "Parabola $f(x)=x^2-2x-3$ cu rădăcini, vârfuri și tangentă la $x=2$."
     },
     "probability-trees": {
-      "displayName": "Probability Trees",
-      "description": "Visual probability trees with branch probabilities and outcomes. forest native.",
-      "defaultCaption": "Probability tree — two coin flips."
+      "displayName": "Arborele de probabilitate",
+      "description": "Arbori de probabilitate vizuală cu probabilități și rezultate ale ramurilor. pădure autohtonă.",
+      "defaultCaption": "Arborele probabilității — două aruncări de monede."
     },
     "lab-setups": {
-      "displayName": "Simple Lab Setups",
-      "description": "Basic laboratory apparatus diagrams: flasks, beakers, burettes, tube assemblies.",
-      "scopeWarning": "Covers standard lab apparatus. For specialized equipment diagrams, use dedicated illustration tools and import as PDF.",
-      "defaultCaption": "Simple laboratory setup."
+      "displayName": "Configurații simple de laborator",
+      "description": "Diagrame de bază ale aparatelor de laborator: baloane, pahare, biurete, ansambluri de tuburi.",
+      "scopeWarning": "Acopera aparatele standard de laborator. Pentru diagramele echipamentelor specializate, utilizați instrumente de ilustrare dedicate și importați ca PDF.",
+      "defaultCaption": "Configurare simplă de laborator."
     },
     "syntax-trees": {
-      "displayName": "Syntax / Linguistic Trees",
-      "description": "Phrase-structure and dependency trees for linguistics. forest native.",
-      "defaultCaption": "Phrase-structure tree."
+      "displayName": "Sintaxă/Arbori lingvistici",
+      "description": "Structură de fraze și arbori de dependență pentru lingvistică. pădure autohtonă.",
+      "defaultCaption": "Arborele cu structură a frazei."
     },
     "concept-maps": {
-      "displayName": "Concept Maps & Argument Diagrams",
-      "description": "Concept maps, mind maps, and argumentative structure diagrams.",
-      "defaultCaption": "Concept map."
+      "displayName": "Hărți conceptuale și diagrame de argument",
+      "description": "Hărți conceptuale, hărți mentale și diagrame cu structură argumentativă.",
+      "defaultCaption": "Hartă conceptuală."
     },
     "visual-equations": {
-      "displayName": "Visual Equations",
-      "description": "Build mathematical equations, expressions, and formulas with a visual editor. Outputs LaTeX native.",
-      "defaultCaption": "Quadratic formula and quadratic form."
+      "displayName": "Ecuații vizuale",
+      "description": "Construiți ecuații, expresii și formule matematice cu un editor vizual. Emite LaTeX nativ.",
+      "defaultCaption": "Formulă pătratică și formă pătratică."
     },
     "matrices-determinants": {
-      "displayName": "Matrices & Determinants",
-      "description": "Create matrices and determinants of any size with visual cell editing.",
-      "defaultCaption": "3D rotation matrix around the $z$-axis by angle $\\theta$."
+      "displayName": "Matrici și determinanți",
+      "description": "Creați matrici și determinanți de orice dimensiune cu editarea vizuală a celulelor.",
+      "defaultCaption": "Matrice de rotație 3D în jurul axei $z$- după unghiul $\\theta$."
     },
     "systems-of-equations": {
-      "displayName": "Systems of Equations",
-      "description": "Build systems of linear or nonlinear equations with aligned formatting.",
-      "defaultCaption": "System of three linear equations (fluid flow balance)."
+      "displayName": "Sisteme de ecuații",
+      "description": "Construiți sisteme de ecuații liniare sau neliniare cu formatare aliniată.",
+      "defaultCaption": "Sistem de trei ecuații liniare (bilanțul fluxului de fluid)."
     },
     "piecewise-functions": {
-      "displayName": "Piecewise Functions",
-      "description": "Define functions by cases or parts with a visual row editor.",
-      "defaultCaption": "Heaviside step function and ReLU activation function."
+      "displayName": "Funcții pe bucăți",
+      "description": "Definiți funcțiile după cazuri sau părți cu un editor vizual de rânduri.",
+      "defaultCaption": "Funcția Heaviside Step și funcția de activare ReLU."
     },
     "vectors-fields": {
-      "displayName": "Vectors & Simple Fields",
-      "description": "Draw vectors, vector decomposition, and simple field representations.",
-      "defaultCaption": "Vector addition — parallelogram law: $\\vec{R} = \\vec{A} + \\vec{B}$."
+      "displayName": "Vectori și câmpuri simple",
+      "description": "Desenați vectori, descompunere vectorială și reprezentări simple de câmp.",
+      "defaultCaption": "Adunarea vectorială — legea paralelogramului: $\\vec{R} = \\vec{A} + \\vec{B}$."
     },
     "free-body-diagrams": {
-      "displayName": "Free Body Diagrams",
-      "description": "Build free body diagrams with forces, mass blocks, and labeled arrows.",
-      "defaultCaption": "Free body diagram — block on surface with applied force at angle $\\alpha$."
+      "displayName": "Diagramele corpului liber",
+      "description": "Construiți diagrame cu corpuri libere cu forțe, blocuri de masă și săgeți etichetate.",
+      "defaultCaption": "Diagrama corpului liber — bloc pe suprafață cu forță aplicată la unghiul $\\alpha$."
     },
     "inclined-plane-pulleys": {
-      "displayName": "Inclined Planes, Pulleys & Springs",
-      "description": "Mechanical systems: inclined planes, pulley setups, and spring-mass systems.",
-      "scopeWarning": "Generates accurate schematic diagrams. Highly complex multi-pulley systems may need manual TikZ adjustments.",
-      "defaultCaption": "Free-body diagram on inclined plane (angle $\\theta$)."
+      "displayName": "Planuri înclinate, scripete și arcuri",
+      "description": "Sisteme mecanice: planuri înclinate, configurații cu scripete și sisteme arc-masă.",
+      "scopeWarning": "Generează diagrame schematice precise. Sistemele foarte complexe cu mai multe scripete pot necesita ajustări manuale TikZ.",
+      "defaultCaption": "Diagrama cu corp liber pe plan înclinat (unghiul $\\theta$)."
     },
     "wave-oscillation": {
-      "displayName": "Wave & Oscillation Diagrams",
-      "description": "Sinusoidal waves, damped oscillations, and wave superposition. Covers SHM, transverse/longitudinal waves, and interference patterns.",
-      "defaultCaption": "Sinusoidal wave $y = A\\sin(\\omega t)$ with damped envelope."
+      "displayName": "Diagrame unde și oscilații",
+      "description": "Unde sinusoidale, oscilații amortizate și suprapunerea undelor. Acoperă SHM, undele transversale/longitudinale și modelele de interferență.",
+      "defaultCaption": "Undă sinusoidală $y = A\\sin(\\omega t)$ cu anvelopă amortizată."
     },
     "geometric-optics": {
-      "displayName": "Geometric Optics",
-      "description": "Lenses, mirrors, ray diagrams, and refraction diagrams.",
-      "scopeWarning": "Suitable for standard ray diagrams. Complex optical systems with multiple elements may need manual adjustment.",
-      "defaultCaption": "Converging thin lens — three principal ray construction."
+      "displayName": "Optică geometrică",
+      "description": "Lentile, oglinzi, diagrame cu raze și diagrame de refracție.",
+      "scopeWarning": "Potrivit pentru diagramele cu raze standard. Sistemele optice complexe cu mai multe elemente pot necesita ajustare manuală.",
+      "defaultCaption": "Lentilă subțire convergentă — construcție cu trei raze principale."
     },
     "gantt-charts": {
-      "displayName": "Gantt Charts",
-      "description": "Research and project Gantt charts with tasks, groups, milestones, and dependencies. pgfgantt native.",
-      "defaultCaption": "Doctoral research schedule by semester."
+      "displayName": "Diagrame Gantt",
+      "description": "Cercetați și proiectați diagrame Gantt cu sarcini, grupuri, repere și dependențe. pgfgantt nativ.",
+      "defaultCaption": "Program de cercetare doctorală pe semestru."
     },
     "timelines": {
-      "displayName": "Timelines",
-      "description": "Historical, research, and narrative timelines with labeled events.",
-      "defaultCaption": "Key milestones in molecular biology (1944--2003)."
+      "displayName": "Cronologie",
+      "description": "Cronologie istorice, de cercetare și narative cu evenimente etichetate.",
+      "defaultCaption": "Etape cheie în biologia moleculară (1944--2003)."
     },
     "function-plots-2d": {
-      "displayName": "2D Function Plots",
-      "description": "Plot mathematical functions with labeled axes, grid, and legend. PGFPlots native.",
-      "defaultCaption": "Trigonometric functions $\\sin x$ and $\\cos x$."
+      "displayName": "Ploturi de funcții 2D",
+      "description": "Tratați funcțiile matematice cu axe, grilă și legendă etichetate. PGFPlots nativ.",
+      "defaultCaption": "Funcțiile trigonometrice $\\sin x$ și $\\cos x$."
     },
     "parametric-polar-plots": {
-      "displayName": "Parametric & Polar Plots",
-      "description": "Parametric curves and polar function plots.",
-      "defaultCaption": "Lissajous curve $(\\cos 2t,\\, \\sin 3t)$."
+      "displayName": "Diagrame parametrice și polare",
+      "description": "Curbe parametrice și diagrame cu funcții polare.",
+      "defaultCaption": "Curba Lissajous $(\\cos 2t,\\, \\sin 3t)$."
     },
     "basic-statistics": {
-      "displayName": "Basic Statistics Charts",
-      "description": "Bar charts, histograms, and scatter plots from tabular data.",
-      "defaultCaption": "Comparative bar chart — measurement results by experimental group."
+      "displayName": "Diagrame statistice de bază",
+      "description": "Diagrame cu bare, histograme și diagrame de dispersie din date tabelare.",
+      "defaultCaption": "Diagramă cu bare comparativă — rezultatele măsurătorilor în funcție de grupul experimental."
     },
     "statistical-distributions": {
-      "displayName": "Statistical Distributions",
-      "description": "Normal, t, chi-squared, and other distributions with shaded regions.",
-      "defaultCaption": "Standard normal distribution with 95\\% confidence interval shaded."
+      "displayName": "Distribuții statistice",
+      "description": "Normal, t, chi-pătrat și alte distribuții cu regiuni umbrite.",
+      "defaultCaption": "Distribuție normală standard cu interval de încredere de 95\\% umbrit."
     },
     "kaplan-meier": {
-      "displayName": "Kaplan-Meier Survival Curves",
-      "description": "Step-function survival curves for clinical and epidemiological studies.",
-      "scopeWarning": "Enter pre-computed KM estimates (from R survfit, Stata stcurve, or SPSS) as data points forming a step function. Statistical tests must be done externally.",
-      "defaultCaption": "Kaplan--Meier overall survival curves for adjuvant vs.\\ standard chemotherapy ($n{=}200$; log-rank $p{=}0.008$)."
+      "displayName": "Curbe de supraviețuire Kaplan-Meier",
+      "description": "Curbe de supraviețuire în funcție de trepte pentru studii clinice și epidemiologice.",
+      "scopeWarning": "Estimările KM precalculate de Enter (de la R survfit, Stata stcurve sau SPSS) ca puncte de date formând o funcție de pas. Testele statistice trebuie făcute extern.",
+      "defaultCaption": "Kaplan--Curbele de supraviețuire globală Meier pentru chimioterapie adjuvantă vs.\\ standard ($n{=}200$; log-rank $p{=}0.008$)."
     },
     "network-graph": {
-      "displayName": "Network / Social Graphs",
-      "description": "Co-authorship, citation, or social influence networks with community clustering.",
-      "scopeWarning": "Suitable for illustrative networks (≤ 15 nodes). For large-scale visualization, use Gephi or NetworkX and import as PDF.",
-      "defaultCaption": "Co-authorship network — two research clusters connected by a bridge author."
+      "displayName": "Rețea / Grafice sociale",
+      "description": "Rețele de coautor, citare sau influență socială cu gruparea comunității.",
+      "scopeWarning": "Potrivit pentru rețele ilustrative (≤ 15 noduri). Pentru vizualizarea la scară largă, utilizați Gephi sau NetworkX și importați ca PDF.",
+      "defaultCaption": "Rețea de co-autorare — două grupuri de cercetare conectate de un autor de legătură."
     },
     "organic-chemistry-extended": {
-      "displayName": "Extended Organic Chemistry",
-      "description": "Organic structures with rings, functional groups, and stereocentres. ChemFig native.",
-      "scopeWarning": "Complex multi-ring or stereo structures may need manual ChemFig adjustment. For publication-quality structures, use ChemDraw and import as PDF.",
-      "defaultCaption": "Caffeine (1,3,7-trimethylxanthine) structural formula."
+      "displayName": "Chimie organică extinsă",
+      "description": "Structuri organice cu inele, grupuri funcționale și stereocentri. nativ ChemFig.",
+      "scopeWarning": "Este posibil ca structurile complexe cu inele multiple sau stereo să necesite o ajustare manuală ChemFig. Pentru structuri de calitate publică, utilizați ChemDraw și importați ca PDF.",
+      "defaultCaption": "Formulă structurală a cofeinei (1,3,7-trimetilxantina)."
     },
     "reaction-mechanisms": {
-      "displayName": "Basic Reaction Mechanisms",
-      "description": "Reaction mechanisms including C-C bond forming reactions, substitutions, and eliminations.",
-      "scopeWarning": "Suitable for standard mechanisms in theses. Complex multi-step mechanisms with curved arrows require manual ChemFig adjustment.",
-      "defaultCaption": "Aldol condensation: base-catalysed formation of a $\\beta$-hydroxy carbonyl compound."
+      "displayName": "Mecanisme de reacție de bază",
+      "description": "Mecanisme de reacție, inclusiv reacții de formare a legăturilor C-C, substituții și eliminări.",
+      "scopeWarning": "Potrivit pentru mecanismele standard din teze. Mecanismele complexe în mai multe etape cu săgeți curbate necesită reglare manuală ChemFig.",
+      "defaultCaption": "Condensarea aldolică: formarea catalizată de baze a unui compus $\\beta$-hidroxi carbonil."
     },
     "er-diagrams": {
-      "displayName": "ER Diagrams",
-      "description": "Entity-relationship diagrams for database design. TikZ native.",
-      "scopeWarning": "Suitable for standard ER diagrams in theses. Complex schemas with many entities benefit from Draw.io exported as PDF.",
-      "defaultCaption": "ER diagram for a university course-enrollment system."
+      "displayName": "Diagrame ER",
+      "description": "Diagrame entitate-relație pentru proiectarea bazelor de date. Nativ TikZ.",
+      "scopeWarning": "Potrivit pentru diagramele standard ER din teze. Schemele complexe cu multe entități beneficiază de Draw.io exportat ca PDF.",
+      "defaultCaption": "Diagrama ER pentru un sistem de înscriere la cursuri universitare."
     },
     "state-machines": {
-      "displayName": "State Machines",
-      "description": "Finite state machines and automata with states, transitions, and labels.",
-      "scopeWarning": "Suitable for DFA/NFA and reactive system diagrams in theses. For large automata, generate from Graphviz/PlantUML and import as PDF.",
-      "defaultCaption": "Traffic-light finite state machine (timer-driven)."
+      "displayName": "Mașini de stat",
+      "description": "Mașini cu stări finite și automate cu stări, tranziții și etichete.",
+      "scopeWarning": "Potrivit pentru DFA/NFA și diagramele sistemului reactiv din teze. Pentru automate mari, generați din Graphviz/PlantUML și importați ca PDF.",
+      "defaultCaption": "Mașină de semafor cu stări finite (acţionată de temporizator)."
     },
     "markov-chains": {
-      "displayName": "Markov Chains",
-      "description": "Markov chain diagrams with states and transition probabilities.",
-      "scopeWarning": "Suitable for illustrative Markov chains in theses. For inference or simulation, use R/Python and import results as figures.",
-      "defaultCaption": "Weather Markov chain (Sunny / Cloudy / Rainy)."
+      "displayName": "Lanțuri Markov",
+      "description": "Diagrame în lanț Markov cu stări și probabilități de tranziție.",
+      "scopeWarning": "Potrivit pentru lanțurile Markov ilustrative din teze. Pentru inferență sau simulare, utilizați R/Python și importați rezultatele ca cifre.",
+      "defaultCaption": "Vremea lanț Markov (însorit / înnorat / ploios)."
     },
     "bode-nyquist": {
-      "displayName": "Bode / Nyquist Diagrams",
-      "description": "Frequency response: Bode magnitude + phase, or Nyquist plot. Second-order transfer functions.",
-      "scopeWarning": "Enter your system transfer function as a pgfplots expression. Compute poles/zeros in MATLAB/Python first.",
-      "defaultCaption": "Bode plot of $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
+      "displayName": "Diagrame Bode/Nyquist",
+      "description": "Răspunsul în frecvență: magnitudinea Bode + fază sau diagrama Nyquist. Funcții de transfer de ordinul doi.",
+      "scopeWarning": "Enter funcția de transfer al sistemului dvs. ca o expresie pgfplots. Calculați mai întâi polii/zerourile în MATLAB/Python.",
+      "defaultCaption": "Intrigă Bode pentru $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
     },
     "plots-3d": {
-      "displayName": "3D Scientific Plots",
-      "description": "3D surfaces, wireframes, and contour plots. PGFPlots native.",
-      "scopeWarning": "3D plots compile slowly for fine meshes. Keep samples ≤ 25×25 for reasonable compile time.",
-      "defaultCaption": "Standard bivariate normal density $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
+      "displayName": "Ploturi științifice 3D",
+      "description": "Suprafețe 3D, cadru electric și diagrame de contur. PGFPlots nativ.",
+      "scopeWarning": "Ploturile 3D se compilează lent pentru ochiuri fine. Păstrați mostre ≤ 25×25 pentru un timp de compilare rezonabil.",
+      "defaultCaption": "Densitate normală bivariată standard $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
     },
     "phase-diagrams": {
-      "displayName": "Phase Diagrams",
-      "description": "Phase portraits, nullclines, and stability diagrams for dynamical systems.",
-      "scopeWarning": "Suitable for 2D phase planes and nullcline plots. Full vector-field arrows require manual pgfplots quiver adjustments.",
-      "defaultCaption": "Lotka--Volterra phase plane: prey $x$ vs predator $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
+      "displayName": "Diagrame de fază",
+      "description": "Portrete de fază, nulclines și diagrame de stabilitate pentru sisteme dinamice.",
+      "scopeWarning": "Potrivit pentru planuri de fază 2D și diagrame cu nulcline. Săgețile cu câmp vectorial complet necesită ajustări manuale ale tolbei pgfplots.",
+      "defaultCaption": "Lotka--Plan de fază Volterra: prada $x$ vs prădătorul $y$ nullclines ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)."
     },
     "heat-maps": {
-      "displayName": "Correlation Heat Maps",
-      "description": "Correlation matrices and heat maps using pgfplots matrix plot. Values between -1 and 1, color-mapped.",
-      "scopeWarning": "Suitable for small matrices (≤ 10×10). Compute correlations in R/Python first, then enter the values here.",
-      "defaultCaption": "Pearson correlation matrix for four psychometric variables."
+      "displayName": "Hărți termice de corelație",
+      "description": "Matrice de corelație și hărți termice folosind diagrama matriceală pgfplots. Valori între -1 și 1, mapate în culori.",
+      "scopeWarning": "Potrivit pentru matrici mici (≤ 10×10). Mai întâi, calculați corelațiile în R/Python, apoi introduceți valorile aici.",
+      "defaultCaption": "Matrice de corelație Pearson pentru patru variabile psihometrice."
     },
     "supply-demand": {
-      "displayName": "Supply & Demand Curves",
-      "description": "Supply and demand with equilibrium, consumer/producer surplus, and optional curve shifts.",
-      "scopeWarning": "Suitable for illustrative partial-equilibrium analysis in theses. Non-linear elasticity curves may need manual pgfplots adjustment.",
-      "defaultCaption": "Supply and demand: original equilibrium $E_0$ and demand shift $D \\to D'$ after income increase."
+      "displayName": "Curbe de ofertă și cerere",
+      "description": "Ofertă și cerere cu echilibru, surplus de consumator/producător și deplasări opționale ale curbei.",
+      "scopeWarning": "Potrivit pentru analiza ilustrativă a echilibrului parțial în teze. Curbele de elasticitate neliniare pot necesita ajustare manuală a pgfplots.",
+      "defaultCaption": "Ofertă și cerere: echilibrul inițial $E_0$ și schimbarea cererii $D \\to D'$ după creșterea veniturilor."
     },
     "uml-class-diagrams": {
-      "displayName": "UML Class Diagrams",
-      "description": "UML class diagrams with inheritance, interfaces, composition, and association.",
-      "scopeWarning": "Generates simplified class boxes. For full UML compliance, use PlantUML or draw.io and import as PDF.",
-      "defaultCaption": "Repository pattern with Observer: \\\\ $<<$interface$>>$ classes, inheritance and composition."
+      "displayName": "Diagrame de clasă UML",
+      "description": "Diagrame de clasă UML cu moștenire, interfețe, compoziție și asociere.",
+      "scopeWarning": "Generează casete de clasă simplificate. Pentru conformitatea totală cu UML, utilizați PlantUML sau draw.io și importați ca PDF.",
+      "defaultCaption": "Model de depozit cu Observer: $<<$interface$>>$ clase, moștenire și compoziție."
     },
     "time-series": {
-      "displayName": "Time Series Plots",
-      "description": "Time series with trend, confidence band, and annotated events. Ideal for longitudinal data in economics, ecology, and clinical research.",
-      "scopeWarning": "Enter data points manually. For large or complex time series (ARIMA, seasonal), generate in R/Python and import as PDF.",
-      "defaultCaption": "Monthly CO$_2$ concentration (ppm) with long-term trend and $\\pm$2\\,SD band."
+      "displayName": "Ploturi din seria temporală",
+      "description": "Serii temporale cu tendințe, interval de încredere și evenimente adnotate. Ideal pentru date longitudinale în economie, ecologie și cercetare clinică.",
+      "scopeWarning": "Punctele de date Enter manual. Pentru serii temporale mari sau complexe (ARIMA, sezonier), generați în R/Python și importați ca PDF.",
+      "defaultCaption": "Concentrația lunară CO$_2$ (ppm) cu tendință pe termen lung și banda $\\pm$2\\,SD."
     },
     "genealogy": {
-      "displayName": "Genealogy / Family Trees",
-      "description": "Family trees, dynasties, and clinical pedigrees with generations and relationship markers.",
-      "scopeWarning": "Suitable for simplified family trees. For clinical genetic pedigrees with standard symbols (ACMG/AMP), use dedicated pedigree software.",
-      "defaultCaption": "Family tree."
+      "displayName": "Genealogie/Arborele genealogic",
+      "description": "Arborii genealogici, dinastii și pedigree clinice cu generații și indicatori de relație.",
+      "scopeWarning": "Potrivit pentru arbori genealogic simplificați. Pentru pedigree genetice clinice cu simboluri standard (ACMG/AMP), utilizați software dedicat pentru pedigree.",
+      "defaultCaption": "Arborele genealogic."
     },
     "parallel-coordinates": {
-      "displayName": "Parallel Coordinates / Criteria Matrix",
-      "description": "Parallel coordinate plots for multi-criteria comparison of alternatives across normalised dimensions (0--10 scale).",
-      "scopeWarning": "Normalise all criteria to a common scale (e.g. 0--10) before entering values. For many alternatives (>6), use Python/R and import as PDF.",
-      "defaultCaption": "Parallel coordinate plot comparing five software solutions on four criteria."
+      "displayName": "Coordonate paralele/Matricea criteriilor",
+      "description": "Diagrame de coordonate paralele pentru compararea cu mai multe criterii a alternativelor pe dimensiuni normalizate (scara 0--10).",
+      "scopeWarning": "Normalizați toate criteriile la o scară comună (de exemplu, 0--10) înainte de a introduce valori. Pentru multe alternative (>6), utilizați Python/R și importați ca PDF.",
+      "defaultCaption": "Plot de coordonate paralele care compară cinci soluții software pe patru criterii."
     },
     "energy-band-diagrams": {
-      "displayName": "Energy / Band Diagrams",
-      "description": "Energy level diagrams, band gaps, and semiconductor band diagrams for physics and materials science.",
-      "scopeWarning": "Energy values are illustrative. Replace with your material's actual band gap and Fermi level values from literature or calculation.",
-      "defaultCaption": "Semiconductor band diagram."
+      "displayName": "Energie/Diagrame benzi",
+      "description": "Diagrame ale nivelului de energie, benzi interzise și diagrame cu benzi semiconductoare pentru fizică și știința materialelor.",
+      "scopeWarning": "Valorile energetice sunt ilustrative. Înlocuiți-l cu banda interzisă reală a materialului dvs. și cu valorile nivelului Fermi din literatură sau calcul.",
+      "defaultCaption": "Diagrama benzii semiconductoare."
     },
     "decision-tree": {
-      "displayName": "Decision Trees",
-      "description": "Decision tree diagrams with conditions, branches, and leaf outcomes. Covers classification trees, CART, and clinical decision rules.",
-      "scopeWarning": "Enter tree structure manually. For automatic tree generation from data, use scikit-learn/rpart and export the tree, then reproduce here for publication.",
-      "defaultCaption": "Decision tree."
+      "displayName": "Arborele de decizie",
+      "description": "Diagrame arbore de decizie cu condiții, ramuri și rezultate ale frunzelor. Acoperă arbori de clasificare, CART și reguli de decizie clinică.",
+      "scopeWarning": "Enter structura arborelui manual. Pentru generarea automată a arborelui din date, utilizați scikit-learn/rpart și exportați arborele, apoi reproduceți aici pentru publicare.",
+      "defaultCaption": "Arborele decizional."
     },
     "roc-curve": {
-      "displayName": "ROC Curves",
-      "description": "Receiver operating characteristic curves for classifier evaluation. Supports multiple classifiers with AUC annotation.",
-      "scopeWarning": "Enter pre-computed TPR/FPR values from your statistical software (sklearn, R pROC). This plugin renders the curve; model training must be done externally.",
-      "defaultCaption": "ROC curves (AUC shown in legend)."
+      "displayName": "Curbe ROC",
+      "description": "Curbe caracteristice de funcționare ale receptorului pentru evaluarea clasificatorului. Acceptă mai multe clasificatoare cu adnotare AUC.",
+      "scopeWarning": "Enter a precalculat valorile TPR/FPR din software-ul dvs. de statistică (sklearn, R pROC). Acest plugin redă curba; formarea modelului trebuie făcută extern.",
+      "defaultCaption": "Curbele ROC (AUC prezentate în legendă)."
     },
     "population-pyramid": {
-      "displayName": "Population Pyramid",
-      "description": "Age-sex population pyramid for demographic analysis. Shows male/female population distributions by age group.",
-      "scopeWarning": "Enter census data manually. For large datasets, generate the pyramid in R/Python and import as PDF, or use this plugin for illustrative sub-populations.",
-      "defaultCaption": "Population pyramid."
+      "displayName": "Piramida populației",
+      "description": "Piramida populației vârstă-sex pentru analiza demografică. Afișează distribuția populației de sex masculin/feminin pe grupe de vârstă.",
+      "scopeWarning": "Datele recensământului Enter manual. Pentru seturi de date mari, generați piramida în R/Python și importați-o ca PDF sau utilizați acest plugin pentru subpopulații ilustrative.",
+      "defaultCaption": "Piramida populației."
     },
     "error-bars": {
-      "displayName": "Error Bars & Confidence Intervals",
-      "description": "Line or bar plots with error bars for means ± SD/SE/CI. Essential for presenting experimental or survey results.",
-      "scopeWarning": "Enter means and error values (SD, SE, or 95% CI half-width) computed from your data. Raw data processing must be done externally.",
-      "defaultCaption": "Mean values with 95\\% confidence intervals."
+      "displayName": "Bare de eroare și intervale de încredere",
+      "description": "Grafice cu linii sau bare cu bare de eroare pentru medii ± SD/SE/CI. Esențial pentru prezentarea rezultatelor experimentale sau ale sondajului.",
+      "scopeWarning": "Media Enter și valorile de eroare (SD, SE sau 95% CI jumătate lățime) calculate din datele dvs. Prelucrarea datelor brute trebuie efectuată extern.",
+      "defaultCaption": "Valori medii cu intervale de încredere de 95\\%."
     },
     "causal-dag": {
-      "displayName": "Causal DAG / Path Diagrams",
-      "description": "Directed acyclic graphs (DAGs) for causal inference frameworks, structural equation models, and mediation analysis.",
-      "scopeWarning": "Suitable for causal diagrams up to ~10 variables. For complex SEM or large DAGs, use dagitty.net or lavaan and import the diagram.",
-      "defaultCaption": "Causal directed acyclic graph (DAG)."
+      "displayName": "DAG cauzal/Diagrame de traseu",
+      "description": "Grafice aciclice direcționate (DAG) pentru cadre de inferență cauzală, modele de ecuații structurale și analiza medierii.",
+      "scopeWarning": "Potrivit pentru diagrame cauzale de până la ~10 variabile. Pentru SEM complexe sau DAG-uri mari, utilizați dagitty.net sau lavaan și importați diagrama.",
+      "defaultCaption": "Grafic aciclic direcționat cauzal (DAG)."
     },
     "bar-charts": {
-      "displayName": "Bar Charts & Histograms",
-      "description": "Grouped and stacked bar charts, frequency histograms for descriptive statistics.",
-      "scopeWarning": "Enter values manually. For charts from large datasets, generate in R/Python and import as PDF.",
-      "defaultCaption": "Grouped bar chart — mean response by condition and time point ($\\pm$\\,SD)."
+      "displayName": "Diagrame cu bare și histograme",
+      "description": "Diagrame cu bare grupate și stivuite, histograme de frecvență pentru statistici descriptive.",
+      "scopeWarning": "Valoare Enter manual. Pentru diagrame din seturi mari de date, generați în R/Python și importați ca PDF.",
+      "defaultCaption": "Diagramă cu bare grupate — răspunsul mediu în funcție de condiție și punct de timp ($\\pm$\\,SD)."
     },
     "box-violin-plots": {
-      "displayName": "Box Plots & Distribution Comparisons",
-      "description": "Box-and-whisker plots with medians, quartiles, and outliers for comparing distributions.",
-      "scopeWarning": "Enter pre-computed statistics (median, Q1, Q3) from R/Python. Each data point encodes: x=group position, y=median, error=IQR half-range.",
-      "defaultCaption": "Distribution of test scores across three teaching conditions (box: Q1--Q3; whiskers: 1.5$\\times$IQR)."
+      "displayName": "Digrame cu casete și comparații de distribuție",
+      "description": "Diagrame tip cutie și mustață cu mediane, quartile și valori aberante pentru compararea distribuțiilor.",
+      "scopeWarning": "Enter statistici precalculate (mediană, Q1, Q3) de la R/Python. Fiecare punct de date codifică: x=poziția grupului, y=mediană, eroare=IQR jumătate de interval.",
+      "defaultCaption": "Distribuirea scorurilor la test în trei condiții de predare (caseta: Q1--Q3; mustăți: 1,5$\\times$IQR)."
     },
     "scatter-regression": {
-      "displayName": "Scatter Plots with Regression",
-      "description": "Scatter plot with linear regression line and optional confidence band.",
-      "scopeWarning": "Compute slope, intercept, and CI band in your statistical software. Enter the values here for publication-quality rendering.",
-      "defaultCaption": "BMI vs systolic blood pressure: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
+      "displayName": "Diagrame de dispersie cu regresie",
+      "description": "Grafic de dispersie cu linie de regresie liniară și bandă de încredere opțională.",
+      "scopeWarning": "Calculați panta, interceptarea și banda CI în software-ul dvs. de statistică. Enter valorile de aici pentru redarea la calitatea publicării.",
+      "defaultCaption": "BMI față de tensiunea arterială sistolică: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
     },
     "bayesian-networks": {
-      "displayName": "Bayesian Networks",
-      "description": "Directed acyclic graphs for Bayesian networks: latent cause nodes (ellipses) with observed evidence nodes (rectangles).",
-      "scopeWarning": "Suitable for illustrative Bayesian networks in theses. For inference, parameter learning, or dense graphs, use pgmpy, BayesFusion, GeNIe, or BUGS and import the final PDF/SVG.",
-      "defaultCaption": "Bayesian network for differential diagnosis of respiratory illness."
+      "displayName": "Rețele Bayesiane",
+      "description": "Grafice aciclice direcționate pentru rețele bayesiene: noduri de cauză latentă (elipse) cu noduri de dovezi observate (dreptunghiuri).",
+      "scopeWarning": "Potrivit pentru rețele bayesiene ilustrative din teze. Pentru inferență, învățare a parametrilor sau grafice dense, utilizați pgmpy, BayesFusion, GeNIe sau BUGS și importați PDF/SVG final.",
+      "defaultCaption": "Rețea bayesiană pentru diagnosticul diferențial al bolilor respiratorii."
     },
     "sem-path-diagrams": {
-      "displayName": "SEM / Path Diagrams",
-      "description": "Structural equation model path diagrams with latent variables and measurement models.",
-      "scopeWarning": "Suitable for thesis-level SEM diagrams. For estimation, fit statistics, and standardized reports, use lavaan/R, Mplus, or AMOS and import the final diagram/table as PDF.",
-      "defaultCaption": "Technology Acceptance Model (TAM): perceived usefulness and ease of use predicting behavioural intention."
+      "displayName": "SEM / Diagrame de traseu",
+      "description": "Diagrame de traseu al modelului de ecuație structurală cu variabile latente și modele de măsurare.",
+      "scopeWarning": "Potrivit pentru diagramele SEM la nivel de teză. Pentru estimare, statistici de potrivire și rapoarte standardizate, utilizați lavaan/R, Mplus sau AMOS și importați diagrama/tabelul final ca PDF.",
+      "defaultCaption": "Model de acceptare a tehnologiei (TAM): utilitatea percepută și ușurința de utilizare care prezic intenția comportamentală."
     },
     "economic-causal": {
-      "displayName": "Economic Causal Diagrams",
-      "description": "Causal loop diagrams (CLD) with reinforcing and balancing feedback loops.",
-      "scopeWarning": "Suitable for simple causal loop models. For full system dynamics with stocks, flows, delays, or simulation, use Vensim, Stella, or AnyLogic and import the final PDF/SVG.",
-      "defaultCaption": "Wage--price spiral: reinforcing ($R$) and balancing ($B$) feedback loops."
+      "displayName": "Diagrame cauzale economice",
+      "description": "Diagrame de buclă cauzală (CLD) cu bucle de feedback de consolidare și echilibrare.",
+      "scopeWarning": "Potrivit pentru modele de buclă cauzală simple. Pentru o dinamică completă a sistemului cu stocuri, fluxuri, întârzieri sau simulare, utilizați Vensim, Stella sau AnyLogic și importați PDF/SVG final.",
+      "defaultCaption": "Salariu--spirala prețurilor: bucle de feedback de consolidare ($R$) și de echilibrare ($B$)."
     },
     "legal-procedural": {
-      "displayName": "Legal / Procedural Diagrams",
-      "description": "Flowcharts for legal and administrative procedures: judicial, regulatory, and compliance workflows.",
-      "scopeWarning": "Suitable for standard legal/administrative process flows in theses. Complex multi-party or multi-jurisdiction procedures are better maintained in BPMN/draw.io and imported as PDF.",
-      "defaultCaption": "Criminal procedure: from complaint to verdict."
+      "displayName": "Diagrame juridice/procedurale",
+      "description": "Diagrame de flux pentru procedurile legale și administrative: fluxuri de lucru judiciare, de reglementare și de conformitate.",
+      "scopeWarning": "Potrivit pentru fluxurile standard de procese juridice/administrative din teze. Procedurile complexe cu mai multe părți sau cu mai multe jurisdicții sunt mai bine întreținute în BPMN/draw.io și importate ca PDF.",
+      "defaultCaption": "Procedura penală: de la plângere la verdict."
     },
     "pedagogical-diagrams": {
-      "displayName": "Pedagogical Diagrams",
-      "description": "Bloom's taxonomy, learning outcome hierarchies, and curriculum maps for education theses.",
-      "scopeWarning": "Covers common pedagogical diagram patterns. For complex instructional-design models, keep the authoritative diagram in draw.io/Figma and import the final PDF/SVG.",
-      "defaultCaption": "Revised Bloom's taxonomy — six cognitive levels with representative verbs (Anderson \\& Krathwohl, 2001)."
+      "displayName": "Diagrame pedagogice",
+      "description": "Taxonomia lui Bloom, ierarhiile rezultatelor învățării și hărțile curriculumului pentru tezele educaționale.",
+      "scopeWarning": "Acopera modelele de diagrame pedagogice comune. Pentru modele complexe de proiectare instrucțională, păstrați diagrama autorizată în draw.io/Figma și importați PDF/SVG final.",
+      "defaultCaption": "Taxonomia lui Bloom revizuită — șase niveluri cognitive cu verbe reprezentative (Anderson \\& Krathwohl, 2001)."
     }
   }
 }

@@ -258,7 +258,7 @@
       "displayName": "Diagramas de clases UML",
       "description": "Diagramas de clases UML con herencia, interfaces, composición y asociación.",
       "scopeWarning": "Genera cajas de clase simplificadas. Para cumplimiento UML completo, usa PlantUML o draw.io e importa como PDF.",
-      "defaultCaption": "Patrón Repository con Observer: clases $<<$interface$>>$, herencia y composición."
+      "defaultCaption": "Patrón Repositorio con Observer: clases $<<$interface$>>$, herencia y composición."
     },
     "time-series": {
       "displayName": "Gráficas de series de tiempo",
