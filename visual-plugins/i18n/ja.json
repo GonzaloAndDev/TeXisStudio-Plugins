@@ -18,14 +18,14 @@
     },
     "consort-flow": {
       "displayName": "CONSORT / 臨床試験の流れ",
-      "description": "ランダム化臨床試験の CONSORT スタイルのフロー図 - 登録、割り当て、追跡調査、分析。",
+      "description": "ランダム化臨床試験の CONSORT- スタイルのフロー図 - 登録、割り当て、追跡調査、分析。",
       "defaultCaption": "CONSORT 2010 のフロー図。"
     },
     "biological-pathways": {
       "displayName": "概略的な生物学的経路",
       "description": "論文数値のための簡略化された代謝およびシグナル伝達経路スキーム。",
       "scopeWarning": "論文やレポートの簡略化されたパスウェイ図に適しています。 KEGG、Reactome、または専門的な経路視覚化ツールの代替品ではありません。",
-      "defaultCaption": "中心炭素代謝: 解糖と TCA サイクルの開始。"
+      "defaultCaption": "中心炭素代謝: 解糖系と TCA サイクルの開始。"
     },
     "chemical-formulas": {
       "displayName": "化学式",
@@ -40,12 +40,12 @@
     "reaction-equilibria": {
       "displayName": "反応平衡と条件",
       "description": "矢印の上/下の条件での化学平衡反応。 mhchem を使用します。",
-      "defaultCaption": "ハーバー法とエステル化平衡。"
+      "defaultCaption": "ハーバープロセスとエステル化平衡。"
     },
     "chemical-structures": {
       "displayName": "化学構造",
-      "description": "ChemFig を使用した単純な有機構造と環システム。ベンゼン、官能基、環化合物。",
-      "scopeWarning": "論文内の単純な有機構造に適しています。複雑なマルチリング システムでは、手動で ChemFig を調整する必要がある場合があります。完全な構造化学については、ChemDraw を使用し、PDF/SVG としてインポートします。",
+      "description": "ChemFig を使用した単純な有機構造と環系。ベンゼン、官能基、環化合物。",
+      "scopeWarning": "論文内の単純な有機構造に適しています。複雑なマルチリング システムでは、手動による ChemFig 調整が必要になる場合があります。完全な構造化学については、ChemDraw を使用し、PDF/SVG としてインポートします。",
       "defaultCaption": "アスピリン (アセチルサリチル酸) の構造式。"
     },
     "basic-electrical-circuits": {
@@ -66,7 +66,7 @@
     "software-architecture": {
       "displayName": "ソフトウェア / システム アーキテクチャ",
       "description": "コンポーネント、レイヤー、およびシステム アーキテクチャ図。",
-      "scopeWarning": "標準的なアーキテクチャの概要に適しています。複雑な UML または展開図の場合は、Draw.io を使用して、PDF としてインポートします。",
+      "scopeWarning": "標準的なアーキテクチャの概要に適しています。複雑な UML または展開図の場合は、Draw.io を使用して PDF としてインポートします。",
       "defaultCaption": "3 層 Web アプリケーション アーキテクチャ。"
     },
     "venn-set-diagrams": {
@@ -90,13 +90,13 @@
       "defaultCaption": "確率ツリー — 2 回のコイン投げ。"
     },
     "lab-setups": {
-      "displayName": "簡単なラボ設定",
+      "displayName": "簡単なラボのセットアップ",
       "description": "基本的な実験器具の図: フラスコ、ビーカー、ビュレット、チューブ アセンブリ。",
       "scopeWarning": "標準的な実験装置をカバーします。特殊な機器図の場合は、専用のイラストツールを使用し、PDF としてインポートします。",
       "defaultCaption": "簡単な実験室のセットアップ。"
     },
     "syntax-trees": {
-      "displayName": "構文 / 言語ツリー",
+      "displayName": "構文/言語ツリー",
       "description": "言語学の句構造と依存関係ツリー。森林出身。",
       "defaultCaption": "フレーズ構造ツリー。"
     },
@@ -112,8 +112,8 @@
     },
     "matrices-determinants": {
       "displayName": "行列と行列式",
-      "description": "ビジュアルセル編集により、任意のサイズの行列と行列式を作成します。",
-      "defaultCaption": "角度 $\\theta$ による $z$ 軸の周りの 3D 回転行列。"
+      "description": "ビジュアルセル編集を使用して、任意のサイズの行列と行列式を作成します。",
+      "defaultCaption": "角度 $\\theta$ による $z$- 軸の周りの 3D 回転行列。"
     },
     "systems-of-equations": {
       "displayName": "連立方程式",
@@ -123,7 +123,7 @@
     "piecewise-functions": {
       "displayName": "区分関数",
       "description": "ビジュアル行エディターを使用して、ケースまたはパーツごとに関数を定義します。",
-      "defaultCaption": "ヘヴィサイド ステップ関数と ReLU 活性化関数。"
+      "defaultCaption": "ヘビサイド ステップ関数と ReLU 活性化関数。"
     },
     "vectors-fields": {
       "displayName": "ベクトルと単純なフィールド",
@@ -143,7 +143,7 @@
     },
     "wave-oscillation": {
       "displayName": "波動図と振動図",
-      "description": "正弦波、減衰振動、および波の重ね合わせ。 SHM、横波/縦波、干渉パターンをカバーします。",
+      "description": "正弦波、減衰振動、および波の重ね合わせ。 SHM、横波/縦波、干渉縞をカバーします。",
       "defaultCaption": "減衰エンベロープを備えた正弦波 $y = A\\sin(\\omega t)$。"
     },
     "geometric-optics": {
@@ -184,8 +184,8 @@
     },
     "kaplan-meier": {
       "displayName": "カプランマイヤー生存曲線",
-      "description": "臨床研究および疫学研究のためのステップ関数生存曲線。",
-      "scopeWarning": "事前に計算された KM 推定値 (R survfit、Stata stcurve、または SPSS から) をステップ関数を形成するデータ ポイントとして入力します。統計的テストは外部で行う必要があります。",
+      "description": "臨床研究および疫学研究の段階関数生存曲線。",
+      "scopeWarning": "Enter は、ステップ関数を形成するデータ ポイントとして、KM 推定値 (R survfit、Stata stcurve、または SPSS から) を事前に計算しました。統計的テストは外部で行う必要があります。",
       "defaultCaption": "カプラン -- 補助化学療法と標準化学療法のマイヤー全生存曲線 ($n{=}200$; ログランク $p{=}0.008$)。"
     },
     "network-graph": {
@@ -197,37 +197,37 @@
     "organic-chemistry-extended": {
       "displayName": "拡張有機化学",
       "description": "環、官能基、立体中心を含む有機構造。 ChemFig ネイティブ。",
-      "scopeWarning": "複雑なマルチリングまたはステレオ構造では、ChemFig を手動で調整する必要がある場合があります。出版品質の構造の場合は、ChemDraw を使用し、PDF としてインポートします。",
+      "scopeWarning": "複雑なマルチリングまたはステレオ構造では、手動による ChemFig 調整が必要な場合があります。出版品質の構造の場合は、ChemDraw を使用し、PDF としてインポートします。",
       "defaultCaption": "カフェイン (1,3,7-トリメチルキサンチン) の構造式。"
     },
     "reaction-mechanisms": {
       "displayName": "基本的な反応メカニズム",
       "description": "C-C 結合形成反応、置換、脱離などの反応機構。",
-      "scopeWarning": "論文の標準メカニズムに適しています。湾曲した矢印を備えた複雑な多段階機構では、手動で ChemFig を調整する必要があります。",
+      "scopeWarning": "論文の標準メカニズムに適しています。湾曲した矢印を備えた複雑なマルチステップ機構では、ChemFig を手動で調整する必要があります。",
       "defaultCaption": "アルドール縮合: 塩基触媒による $\\beta$-ヒドロキシカルボニル化合物の形成。"
     },
     "er-diagrams": {
-      "displayName": "ER 図",
+      "displayName": "ER の図",
       "description": "データベース設計のためのエンティティ関係図。 TikZ ネイティブ。",
       "scopeWarning": "論文の標準的な ER 図に適しています。多くのエンティティを含む複雑なスキーマは、PDF としてエクスポートされた Draw.io の恩恵を受けます。",
       "defaultCaption": "大学のコース登録システムの ER 図。"
     },
     "state-machines": {
       "displayName": "ステートマシン",
-      "description": "状態、遷移、ラベルを持つ有限状態マシンとオートマトン。",
-      "scopeWarning": "論文の DFA/NFA およびリアクティブ システム図に適しています。大きなオートマトンの場合は、Graphviz/PlantUML から生成し、PDF としてインポートします。",
+      "description": "状態、遷移、ラベルを備えた有限状態マシンとオートマトン。",
+      "scopeWarning": "論文の DFA/NFA およびリアクティブ システム図に適しています。大規模なオートマトンの場合は、Graphviz/PlantUML から生成し、PDF としてインポートします。",
       "defaultCaption": "信号機の有限状態マシン (タイマー駆動)。"
     },
     "markov-chains": {
       "displayName": "マルコフチェーン",
       "description": "状態と遷移確率を含むマルコフ連鎖図。",
-      "scopeWarning": "論文でマルコフ連鎖を説明するのに適しています。推論またはシミュレーションの場合は、R/Python を使用し、結果を図としてインポートします。",
+      "scopeWarning": "論文のマルコフ連鎖の説明に適しています。推論またはシミュレーションには、R/Python を使用し、結果を図としてインポートします。",
       "defaultCaption": "天気マルコフ連鎖 (晴れ / 曇り / 雨)。"
     },
     "bode-nyquist": {
       "displayName": "ボード線図/ナイキスト線図",
       "description": "周波数応答: ボード振幅 + 位相、またはナイキスト プロット。 2 次伝達関数。",
-      "scopeWarning": "システム伝達関数を pgfplots 式として入力します。最初に MATLAB/Python の極/零点を計算します。",
+      "scopeWarning": "Enter システム伝達関数を pgfplots 式として使用します。最初に MATLAB/Python の極/零点を計算します。",
       "defaultCaption": "$G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$、$\\zeta{=}0.3$) のボード線図。"
     },
     "plots-3d": {
@@ -245,7 +245,7 @@
     "heat-maps": {
       "displayName": "相関ヒート マップ",
       "description": "pgfplots 行列プロットを使用した相関行列とヒート マップ。 -1 から 1 までの値、カラーマップ。",
-      "scopeWarning": "小さな行列 (≤ 10×10) に適しています。まず R/Python で相関を計算し、次にここに値を入力します。",
+      "scopeWarning": "小さな行列 (≤ 10×10) に適しています。まず R/Python で相関を計算してから、ここに値を入力します。",
       "defaultCaption": "4 つの心理測定変数のピアソン相関行列。"
     },
     "supply-demand": {
@@ -258,13 +258,13 @@
       "displayName": "UML クラス図",
       "description": "継承、インターフェイス、構成、および関連付けを含む UML クラス図。",
       "scopeWarning": "簡略化されたクラス ボックスを生成します。 UML に完全に準拠するには、PlantUML またはdraw.io を使用し、PDF としてインポートします。",
-      "defaultCaption": "オブザーバーを使用したリポジトリ パターン: \\\\ $<<$interface$>>$ クラス、継承および合成。"
+      "defaultCaption": "オブザーバーを使用したリポジトリ パターン: $<<$interface$>>$ クラス、継承および合成。"
     },
     "time-series": {
       "displayName": "時系列プロット",
       "description": "傾向、信頼帯、および注釈付きイベントを含む時系列。経済学、生態学、臨床研究における長期的なデータに最適です。",
-      "scopeWarning": "データポイントを手動で入力します。大規模または複雑な時系列 (ARIMA、季節性) の場合は、R/Python で生成し、PDF としてインポートします。",
-      "defaultCaption": "長期傾向と $\\pm$2\\、SD バンドを含む毎月の CO$_2$ 濃度 (ppm)。"
+      "scopeWarning": "Enter データ ポイントを手動で。大規模または複雑な時系列 (ARIMA、季節性) の場合は、R/Python で生成し、PDF としてインポートします。",
+      "defaultCaption": "長期傾向と $\\pm$2\\、SD バンドを含む月間 CO$_2$ 濃度 (ppm)。"
     },
     "genealogy": {
       "displayName": "系図 / 家系図",
@@ -279,75 +279,75 @@
       "defaultCaption": "4 つの基準で 5 つのソフトウェア ソリューションを比較した平行座標プロット。"
     },
     "energy-band-diagrams": {
-      "displayName": "エネルギー/バンド図",
+      "displayName": "エネルギー / バンド図",
       "description": "物理学および材料科学のエネルギー準位図、バンド ギャップ、半導体バンド図。",
       "scopeWarning": "エネルギー値は例示です。文献または計算から得た、材料の実際のバンドギャップとフェルミ準位の値に置き換えてください。",
       "defaultCaption": "半導体バンド図。"
     },
     "decision-tree": {
       "displayName": "デシジョン ツリー",
-      "description": "条件、分岐、および葉の結果を含む意思決定木図。分類ツリー、CART、臨床意思決定ルールについて説明します。",
-      "scopeWarning": "ツリー構造を手動で入力します。データからツリーを自動生成するには、scikit-learn/rpart を使用してツリーをエクスポートし、公開するためにここで複製します。",
+      "description": "条件、分岐、および葉の結果を含むデシジョン ツリー ダイアグラム。分類ツリー、CART、臨床意思決定ルールをカバーします。",
+      "scopeWarning": "Enter ツリー構造を手動で。データからツリーを自動生成するには、scikit-learn/rpart を使用してツリーをエクスポートし、公開するためにここで複製します。",
       "defaultCaption": "デシジョン ツリー。"
     },
     "roc-curve": {
       "displayName": "ROC カーブ",
-      "description": "分類子評価のための受信機動作特性曲線。 AUC アノテーションを持つ複数の分類子をサポートします。",
-      "scopeWarning": "統計ソフトウェア (sklearn、R pROC) から事前に計算された TPR/FPR 値を入力します。このプラグインは曲線をレンダリングします。モデルのトレーニングは外部で行う必要があります。",
+      "description": "分類子評価用の受信機動作特性曲線。 AUC アノテーションを使用して複数の分類子をサポートします。",
+      "scopeWarning": "Enter は、統計ソフトウェア (sklearn、R pROC) から事前に計算された TPR/FPR 値です。このプラグインは曲線をレンダリングします。モデルのトレーニングは外部で行う必要があります。",
       "defaultCaption": "ROC カーブ (凡例には AUC を表示)。"
     },
     "population-pyramid": {
       "displayName": "人口ピラミッド",
       "description": "人口統計分析用の年齢性別人口ピラミッド。年齢グループごとの男性/女性の人口分布を示します。",
-      "scopeWarning": "国勢調査データを手動で入力します。大規模なデータセットの場合は、R/Python でピラミッドを生成し、PDF としてインポートするか、このプラグインを例示的な部分母集団に使用します。",
+      "scopeWarning": "Enter の国勢調査データを手動で。大規模なデータセットの場合は、R/Python でピラミッドを生成し、PDF としてインポートするか、このプラグインを例示的な部分母集団に使用します。",
       "defaultCaption": "人口ピラミッド。"
     },
     "error-bars": {
-      "displayName": "誤差範囲と信頼区間",
-      "description": "平均値 ± SD/SE/CI のエラーバー付きの折れ線または棒グラフ。実験や調査の結果を提示する場合に必須です。",
-      "scopeWarning": "データから計算された平均値と誤差値 (SD、SE、または 95% CI 半角) を入力します。生データの処理は外部で行う必要があります。",
+      "displayName": "エラーバーと信頼区間",
+      "description": "平均値 ± SD/SE/CI の誤差範囲を含む線または棒プロット。実験や調査の結果を提示するのに不可欠です。",
+      "scopeWarning": "Enter は、データから計算された平均値と誤差値 (SD、SE、または 95% CI 半角) です。生データの処理は外部で行う必要があります。",
       "defaultCaption": "95\\% 信頼区間の平均値。"
     },
     "causal-dag": {
       "displayName": "因果関係 DAG / パス図",
       "description": "因果推論フレームワーク、構造方程式モデル、媒介分析用の有向非巡回グラフ (DAG)。",
-      "scopeWarning": "最大 10 個の変数までの因果関係図に適しています。複雑な SEM または大規模な DAG の場合は、dagitty.net または lavaan を使用して図をインポートします。",
+      "scopeWarning": "変数が最大 10 個までの因果関係図に適しています。複雑な SEM または大規模な DAG の場合は、dagitty.net または lavaan を使用して図をインポートします。",
       "defaultCaption": "因果有向非巡回グラフ (DAG)。"
     },
     "bar-charts": {
       "displayName": "棒グラフとヒストグラム",
       "description": "グループ化および積み上げ棒グラフ、記述統計の頻度ヒストグラム。",
-      "scopeWarning": "値を手動で入力します。大規模なデータセットからのチャートの場合は、R/Python で生成し、PDF としてインポートします。",
+      "scopeWarning": "Enter 値を手動で。大規模なデータセットからのチャートの場合は、R/Python で生成し、PDF としてインポートします。",
       "defaultCaption": "グループ化された棒グラフ — 条件および時点別の平均応答 ($\\pm$\\,SD)。"
     },
     "box-violin-plots": {
       "displayName": "箱ひげ図と分布の比較",
       "description": "分布を比較するための中央値、四分位数、外れ値を含む箱ひげ図。",
-      "scopeWarning": "R/Python から事前に計算された統計 (中央値、Q1、Q3) を入力します。各データ ポイントは、x=グループ位置、y=中央値、誤差=IQR 半範囲をエンコードします。",
-      "defaultCaption": "3 つの指導条件にわたるテストスコアの分布 (ボックス: Q1--Q3; ひげ: 1.5$\\times$IQR)。"
+      "scopeWarning": "Enter は、R/Python から事前に計算された統計 (中央値、Q1、Q3)。各データ ポイントは、x=グループ位置、y=中央値、誤差=IQR 半範囲をエンコードします。",
+      "defaultCaption": "3 つの教育条件にわたるテストスコアの分布 (ボックス: Q1--Q3; ひげ: 1.5$\\times$IQR)。"
     },
     "scatter-regression": {
       "displayName": "回帰を使用した散布図",
       "description": "線形回帰直線とオプションの信頼帯を含む散布図。",
-      "scopeWarning": "統計ソフトウェアで傾き、切片、CI バンドを計算します。出版品質のレンダリングを行うには、ここに値を入力します。",
+      "scopeWarning": "統計ソフトウェアで傾き、切片、CI バンドを計算します。 Enter は出版品質のレンダリングのための値です。",
       "defaultCaption": "BMI 対 最高血圧: $\\hat{y} = 89.4 + 1.83x$、$R^2{=}0.74$、$p{<}0.001$ ($n{=}120$)。"
     },
     "bayesian-networks": {
       "displayName": "ベイジアン ネットワーク",
       "description": "ベイジアン ネットワークの有向非巡回グラフ: 潜在原因ノード (楕円) と観察された証拠ノード (長方形)。",
-      "scopeWarning": "論文でのベイジアン ネットワークの説明に適しています。推論、パラメータ学習、または密なグラフの場合は、pgmpy、BayesFusion、GeNIe、または BUGS を使用し、最終的な PDF/SVG をインポートします。",
+      "scopeWarning": "論文でのベイジアン ネットワークの説明に適しています。推論、パラメータ学習、または密グラフの場合は、pgmpy、BayesFusion、GeNIe、または BUGS を使用し、最終的な PDF/SVG をインポートします。",
       "defaultCaption": "呼吸器疾患の鑑別診断のためのベイジアン ネットワーク"
     },
     "sem-path-diagrams": {
       "displayName": "SEM / パス図",
       "description": "潜在変数と測定モデルを含む構造方程式モデルのパス図。",
       "scopeWarning": "論文レベルの SEM 図に適しています。推定、適合統計、および標準化されたレポートには、lavaan/R、Mplus、または AMOS を使用し、最終的な図/表を PDF としてインポートします。",
-      "defaultCaption": "テクノロジー アクセプタンス モデル (TAM): 行動の意図を予測する、認識された有用性と使いやすさ。"
+      "defaultCaption": "テクノロジー受容モデル (TAM): 行動意図を予測する認識された有用性と使いやすさ。"
     },
     "economic-causal": {
       "displayName": "経済因果関係図",
-      "description": "強化およびバランスの取れたフィードバック ループを備えた因果ループ図 (CLD)。",
-      "scopeWarning": "単純な因果ループ モデルに適しています。ストック、フロー、遅延、またはシミュレーションを含む完全なシステム ダイナミクスの場合は、Vensim、Stella、または AnyLogic を使用し、最終的な PDF/SVG をインポートします。",
+      "description": "フィードバック ループを強化し、バランスをとった因果関係ループ図 (CLD)。",
+      "scopeWarning": "単純な因果ループ モデルに適しています。ストック、フロー、遅延、またはシミュレーションを含む完全なシステム ダイナミクスの場合は、Vensim、Stella、または AnyLogic を使用して、最終的な PDF/SVG をインポートします。",
       "defaultCaption": "賃金-価格スパイラル: フィードバック ループの強化 ($R$) とバランス調整 ($B$)。"
     },
     "legal-procedural": {

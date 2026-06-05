@@ -3,7 +3,7 @@
     "phylogenetic-trees": {
       "displayName": "Einfache phylogenetische Bäume",
       "description": "Erstellen Sie phylogenetische und taxonomische Bäume mit beschrifteten Knoten und Zweiglängen.",
-      "scopeWarning": "Geeignet für vereinfachte Phylogenien in Abschlussarbeiten. Für komplexe Phylogenetik mit statistischer Unterstützung verwenden Sie FigTree/iTOL und importieren Sie als PDF.",
+      "scopeWarning": "Geeignet für vereinfachte Phylogenien in Abschlussarbeiten. Für komplexe Phylogenetik mit statistischer Unterstützung verwenden Sie FigTree/iTOL und importieren Sie es als PDF.",
       "defaultCaption": "Vereinfachte Phylogenie ausgewählter Wirbeltierklassen."
     },
     "dna-rna-sequences": {
@@ -18,13 +18,13 @@
     },
     "consort-flow": {
       "displayName": "CONSORT / Ablauf klinischer Studien",
-      "description": "Flussdiagramme im CONSORT-Stil für randomisierte klinische Studien – Registrierung, Zuteilung, Nachverfolgung, Analyse.",
+      "description": "Flussdiagramme im CONSORT--Stil für randomisierte klinische Studien – Registrierung, Zuordnung, Nachverfolgung, Analyse.",
       "defaultCaption": "CONSORT 2010-Flussdiagramm."
     },
     "biological-pathways": {
       "displayName": "Schematische biologische Wege",
       "description": "Vereinfachte Stoffwechsel- und Signalwegschemata für Thesenfiguren.",
-      "scopeWarning": "Geeignet für vereinfachte Pfaddiagramme in Abschlussarbeiten und Berichten. Kein Ersatz für KEGG, Reactome oder professionelle Wegevisualisierungstools.",
+      "scopeWarning": "Geeignet für vereinfachte Pfaddiagramme in Abschlussarbeiten und Berichten. Kein Ersatz für KEGG, Reactome oder professionelle Pfadvisualisierungstools.",
       "defaultCaption": "Zentraler Kohlenstoffstoffwechsel: Glykolyse und Eintritt in den TCA-Zyklus."
     },
     "chemical-formulas": {
@@ -44,19 +44,19 @@
     },
     "chemical-structures": {
       "displayName": "Chemische Strukturen",
-      "description": "Einfache organische Strukturen und Ringsysteme mit ChemFig. Benzol, funktionelle Gruppen, Ringverbindungen.",
-      "scopeWarning": "Geeignet für einfache organische Strukturen in Abschlussarbeiten. Komplexe Mehrringsysteme erfordern möglicherweise eine manuelle ChemFig-Einstellung. Für eine vollständige Strukturchemie verwenden Sie ChemDraw und importieren Sie es als PDF/SVG.",
+      "description": "Einfache organische Strukturen und Ringsysteme mit ChemAbb. Benzol, funktionelle Gruppen, Ringverbindungen.",
+      "scopeWarning": "Geeignet für einfache organische Strukturen in Abschlussarbeiten. Komplexe Mehrringsysteme erfordern möglicherweise eine manuelle ChemFig-Anpassung. Für eine vollständige Strukturchemie verwenden Sie ChemDraw und importieren Sie es als PDF/SVG.",
       "defaultCaption": "Strukturformel von Aspirin (Acetylsalicylsäure)."
     },
     "basic-electrical-circuits": {
       "displayName": "Grundlegende elektrische Schaltkreise",
       "description": "Visual Circuit Builder: Widerstände, Kondensatoren, Induktivitäten, Quellen, Schalter, Dioden. CircuiTikZ nativ.",
-      "defaultCaption": "RC-Tiefpassfilterschaltung mit Spannungsteiler."
+      "defaultCaption": "RC Tiefpassfilterschaltung mit Spannungsteiler."
     },
     "block-diagrams-control": {
       "displayName": "Blockdiagramme/Steuerungssysteme",
       "description": "Blockdiagramme des Steuerungssystems mit Übertragungsfunktionen, Summierungsknoten und Rückkopplungsschleifen.",
-      "defaultCaption": "Blockdiagramm des PID-Regelsystems."
+      "defaultCaption": "Blockdiagramm des PID-Regelungssystems."
     },
     "flowcharts": {
       "displayName": "Flussdiagramme",
@@ -70,7 +70,7 @@
       "defaultCaption": "Dreistufige Webanwendungsarchitektur."
     },
     "venn-set-diagrams": {
-      "displayName": "Venn / Set-Diagramme",
+      "displayName": "Venn / Diagramme festlegen",
       "description": "Erstellen Sie Venn-Diagramme und mengentheoretische Diagramme mit beschrifteten Kreisen und Schnittpunkten.",
       "defaultCaption": "Venn-Diagramm mit drei Sätzen, das das Forschungsdesign mit gemischten Methoden zeigt."
     },
@@ -113,16 +113,16 @@
     "matrices-determinants": {
       "displayName": "Matrizen und Determinanten",
       "description": "Erstellen Sie Matrizen und Determinanten jeder Größe mit visueller Zellbearbeitung.",
-      "defaultCaption": "3D-Rotationsmatrix um die $z$-Achse um den Winkel $\\theta$."
+      "defaultCaption": "3D-Rotationsmatrix um die $z$--Achse um den Winkel $\\theta$."
     },
     "systems-of-equations": {
       "displayName": "Gleichungssysteme",
       "description": "Erstellen Sie Systeme linearer oder nichtlinearer Gleichungen mit ausgerichteter Formatierung.",
-      "defaultCaption": "System aus drei linearen Gleichungen (Flüssigkeitsströmungsbilanz)."
+      "defaultCaption": "System aus drei linearen Gleichungen (Fluidströmungsbilanz)."
     },
     "piecewise-functions": {
       "displayName": "Stückweise Funktionen",
-      "description": "Funktionen nach Fällen oder Teilen mit einem visuellen Zeileneditor definieren.",
+      "description": "Definieren Sie Funktionen nach Fällen oder Teilen mit einem visuellen Zeileneditor.",
       "defaultCaption": "Heaviside-Schrittfunktion und ReLU-Aktivierungsfunktion."
     },
     "vectors-fields": {
@@ -138,19 +138,19 @@
     "inclined-plane-pulleys": {
       "displayName": "Schiefe Ebenen, Riemenscheiben und Federn",
       "description": "Mechanische Systeme: schiefe Ebenen, Riemenscheibenanordnungen und Feder-Masse-Systeme.",
-      "scopeWarning": "Erzeugt genaue schematische Diagramme. Bei hochkomplexen Systemen mit mehreren Riemenscheiben sind möglicherweise manuelle TikZ-Anpassungen erforderlich.",
+      "scopeWarning": "Erzeugt genaue schematische Diagramme. Hochkomplexe Systeme mit mehreren Riemenscheiben erfordern möglicherweise manuelle TikZ-Anpassungen.",
       "defaultCaption": "Freikörperdiagramm auf schiefer Ebene (Winkel $\\theta$)."
     },
     "wave-oscillation": {
-      "displayName": "Wellen- und Schwingungsdiagramme",
-      "description": "Sinusförmige Wellen, gedämpfte Schwingungen und Wellenüberlagerung. Deckt SHM, Transversal-/Longitudinalwellen und Interferenzmuster ab.",
+      "displayName": "Wellen- und Oszillationsdiagramme",
+      "description": "Sinusförmige Wellen, gedämpfte Schwingungen und Wellenüberlagerung. Behandelt SHM, Transversal-/Longitudinalwellen und Interferenzmuster.",
       "defaultCaption": "Sinuswelle $y = A\\sin(\\omega t)$ mit gedämpfter Hüllkurve."
     },
     "geometric-optics": {
       "displayName": "Geometrische Optik",
       "description": "Linsen, Spiegel, Strahlendiagramme und Brechungsdiagramme.",
       "scopeWarning": "Geeignet für Standardstrahldiagramme. Komplexe optische Systeme mit mehreren Elementen müssen möglicherweise manuell angepasst werden.",
-      "defaultCaption": "Dünne Sammellinse – Drei-Hauptstrahl-Konstruktion."
+      "defaultCaption": "Dünne Sammellinse – Konstruktion mit drei Hauptstrahlen."
     },
     "gantt-charts": {
       "displayName": "Gantt-Diagramme",
@@ -180,61 +180,61 @@
     "statistical-distributions": {
       "displayName": "Statistische Verteilungen",
       "description": "Normal-, t-, Chi-Quadrat- und andere Verteilungen mit schattierten Bereichen.",
-      "defaultCaption": "Standardnormalverteilung mit schattiertem 95-%-Konfidenzintervall."
+      "defaultCaption": "Standardnormalverteilung mit schattiertem 95 %-Konfidenzintervall."
     },
     "kaplan-meier": {
       "displayName": "Kaplan-Meier-Überlebenskurven",
       "description": "Stufenfunktions-Überlebenskurven für klinische und epidemiologische Studien.",
-      "scopeWarning": "Geben Sie vorberechnete KM-Schätzungen (aus R survfit, Stata stcurve oder SPSS) als Datenpunkte ein, die eine Schrittfunktion bilden. Statistische Tests müssen extern durchgeführt werden.",
+      "scopeWarning": "Enter vorberechnete KM-Schätzungen (aus R survfit, Stata stcurve oder SPSS) als Datenpunkte, die eine Schrittfunktion bilden. Statistische Tests müssen extern durchgeführt werden.",
       "defaultCaption": "Kaplan--Meier-Gesamtüberlebenskurven für adjuvante vs. Standard-Chemotherapie ($n{=}200$; Log-Rank $p{=}0.008$)."
     },
     "network-graph": {
       "displayName": "Netzwerk-/Sozialdiagramme",
-      "description": "Co-Autorenschaft, Zitat oder soziale Einflussnetzwerke mit Community-Clustering.",
+      "description": "Co-Autorenschaft, Zitierung oder soziale Einflussnetzwerke mit Community-Clustering.",
       "scopeWarning": "Geeignet für illustrative Netzwerke (≤ 15 Knoten). Für großflächige Visualisierung verwenden Sie Gephi oder NetworkX und importieren Sie als PDF.",
       "defaultCaption": "Co-Autorennetzwerk – zwei Forschungscluster, die durch einen Brückenautor verbunden sind."
     },
     "organic-chemistry-extended": {
       "displayName": "Erweiterte Organische Chemie",
       "description": "Organische Strukturen mit Ringen, funktionellen Gruppen und Stereozentren. ChemFig nativ.",
-      "scopeWarning": "Komplexe Multi-Ring- oder Stereostrukturen erfordern möglicherweise eine manuelle ChemFig-Anpassung. Für Strukturen in Publikationsqualität verwenden Sie ChemDraw und importieren Sie als PDF.",
+      "scopeWarning": "Komplexe Mehrring- oder Stereostrukturen erfordern möglicherweise eine manuelle ChemFig-Anpassung. Für Strukturen in Publikationsqualität verwenden Sie ChemDraw und importieren Sie als PDF.",
       "defaultCaption": "Strukturformel von Koffein (1,3,7-Trimethylxanthin)."
     },
     "reaction-mechanisms": {
       "displayName": "Grundlegende Reaktionsmechanismen",
       "description": "Reaktionsmechanismen, einschließlich C-C-Bindungsbildungsreaktionen, Substitutionen und Eliminierungen.",
-      "scopeWarning": "Geeignet für Standardmechanismen in Abschlussarbeiten. Komplexe mehrstufige Mechanismen mit gebogenen Pfeilen erfordern eine manuelle ChemFig-Einstellung.",
-      "defaultCaption": "Aldolkondensation: basenkatalysierte Bildung einer $\\beta$-Hydroxycarbonylverbindung."
+      "scopeWarning": "Geeignet für Standardmechanismen in Abschlussarbeiten. Komplexe mehrstufige Mechanismen mit gebogenen Pfeilen erfordern eine manuelle ChemFig-Anpassung.",
+      "defaultCaption": "Aldolkondensation: basenkatalysierte Bildung einer $\\beta$-hydroxycarbonylverbindung."
     },
     "er-diagrams": {
       "displayName": "ER-Diagramme",
       "description": "Entity-Relationship-Diagramme für den Datenbankentwurf. TikZ nativ.",
-      "scopeWarning": "Geeignet für Standard-ER-Diagramme in Abschlussarbeiten. Komplexe Schemata mit vielen Entitäten profitieren vom Export von Draw.io als PDF.",
+      "scopeWarning": "Geeignet für Standard-ER-Diagramme in Thesen. Komplexe Schemata mit vielen Entitäten profitieren vom Export von Draw.io als PDF.",
       "defaultCaption": "ER-Diagramm für ein System zur Einschreibung von Universitätskursen."
     },
     "state-machines": {
       "displayName": "Zustandsmaschinen",
-      "description": "Finite-State-Maschinen und Automaten mit Zuständen, Übergängen und Beschriftungen.",
-      "scopeWarning": "Geeignet für DFA/NFA und reaktive Systemdiagramme in Abschlussarbeiten. Für große Automaten aus Graphviz/PlantUML generieren und als PDF importieren.",
+      "description": "Endzustandsmaschinen und Automaten mit Zuständen, Übergängen und Beschriftungen.",
+      "scopeWarning": "Geeignet für DFA/NFA und reaktive Systemdiagramme in Thesen. Für große Automaten aus Graphviz/PlantUML generieren und als PDF importieren.",
       "defaultCaption": "Ampel-Endzustandsmaschine (timergesteuert)."
     },
     "markov-chains": {
       "displayName": "Markov-Ketten",
       "description": "Markov-Kettendiagramme mit Zuständen und Übergangswahrscheinlichkeiten.",
-      "scopeWarning": "Geeignet für illustrative Markov-Ketten in Abschlussarbeiten. Verwenden Sie für Schlussfolgerungen oder Simulationen R/Python und importieren Sie die Ergebnisse als Zahlen.",
+      "scopeWarning": "Geeignet für illustrative Markov-Ketten in Abschlussarbeiten. Für Schlussfolgerungen oder Simulationen verwenden Sie R/Python und importieren Sie die Ergebnisse als Zahlen.",
       "defaultCaption": "Wetter Markov-Kette (sonnig / bewölkt / regnerisch)."
     },
     "bode-nyquist": {
       "displayName": "Bode-/Nyquist-Diagramme",
       "description": "Frequenzgang: Bode-Magnitude + Phase oder Nyquist-Diagramm. Übertragungsfunktionen zweiter Ordnung.",
-      "scopeWarning": "Geben Sie Ihre Systemübertragungsfunktion als pgfplots-Ausdruck ein. Berechnen Sie zuerst Pole/Nullen in MATLAB/Python.",
+      "scopeWarning": "Geben Sie Ihre Systemübertragungsfunktion als pgfplots-Ausdruck ein. Berechnen Sie Pole und Nullstellen zuerst in MATLAB/Python.",
       "defaultCaption": "Bode-Diagramm von $G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$ ($\\omega_n{=}10$, $\\zeta{=}0.3$)."
     },
     "plots-3d": {
       "displayName": "Wissenschaftliche 3D-Diagramme",
       "description": "3D-Oberflächen, Drahtmodelle und Konturdiagramme. PGFPlots nativ.",
       "scopeWarning": "3D-Plots werden für feine Netze langsam kompiliert. Halten Sie Proben ≤ 25×25 für eine angemessene Kompilierungszeit bereit.",
-      "defaultCaption": "Standardmäßige bivariate Normaldichte $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
+      "defaultCaption": "Standard bivariate Normaldichte $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$."
     },
     "phase-diagrams": {
       "displayName": "Phasendiagramme",
@@ -256,14 +256,14 @@
     },
     "uml-class-diagrams": {
       "displayName": "UML-Klassendiagramme",
-      "description": "UML-Klassendiagramme mit Vererbung, Schnittstellen, Zusammensetzung und Zuordnung.",
+      "description": "UML-Klassendiagramme mit Vererbung, Schnittstellen, Zusammensetzung und Assoziation.",
       "scopeWarning": "Erzeugt vereinfachte Klassenboxen. Für vollständige UML-Konformität verwenden Sie PlantUML oder draw.io und importieren Sie als PDF.",
-      "defaultCaption": "Repository-Muster mit Observer: \\\\ $<<$interface$>>$ Klassen, Vererbung und Zusammensetzung."
+      "defaultCaption": "Repository-Muster mit Observer: $<<$interface$>>$-Klassen, Vererbung und Zusammensetzung."
     },
     "time-series": {
       "displayName": "Zeitreihendiagramme",
-      "description": "Zeitreihen mit Trend, Konfidenzband und kommentierten Ereignissen. Ideal für Längsschnittdaten in Ökonomie, Ökologie und klinischer Forschung.",
-      "scopeWarning": "Geben Sie Datenpunkte manuell ein. Für große oder komplexe Zeitreihen (ARIMA, saisonal) in R/Python generieren und als PDF importieren.",
+      "description": "Zeitreihen mit Trend, Konfidenzband und kommentierten Ereignissen. Ideal für Längsschnittdaten in den Bereichen Ökonomie, Ökologie und klinische Forschung.",
+      "scopeWarning": "Enter-Datenpunkte manuell. Generieren Sie große oder komplexe Zeitreihen (ARIMA, saisonal) in R/Python und importieren Sie sie als PDF.",
       "defaultCaption": "Monatliche CO$_2$-Konzentration (ppm) mit langfristigem Trend und $\\pm$2\\,SD-Band."
     },
     "genealogy": {
@@ -274,7 +274,7 @@
     },
     "parallel-coordinates": {
       "displayName": "Parallelkoordinaten/Kriterienmatrix",
-      "description": "Parallele Koordinatendiagramme für den Multikriterien-Vergleich von Alternativen über normalisierte Dimensionen hinweg (Skala 0–10).",
+      "description": "Parallele Koordinatendiagramme für den Multikriterien-Vergleich von Alternativen über normalisierte Dimensionen (Skala 0–10).",
       "scopeWarning": "Normalisieren Sie alle Kriterien auf eine gemeinsame Skala (z. B. 0–10), bevor Sie Werte eingeben. Für viele Alternativen (>6) verwenden Sie Python/R und importieren Sie als PDF.",
       "defaultCaption": "Parallelkoordinatendiagramm zum Vergleich von fünf Softwarelösungen anhand von vier Kriterien."
     },
@@ -287,25 +287,25 @@
     "decision-tree": {
       "displayName": "Entscheidungsbäume",
       "description": "Entscheidungsbaumdiagramme mit Bedingungen, Zweigen und Blattergebnissen. Behandelt Klassifizierungsbäume, CART und klinische Entscheidungsregeln.",
-      "scopeWarning": "Baumstruktur manuell eingeben. Für die automatische Baumgenerierung aus Daten verwenden Sie scikit-learn/rpart, exportieren den Baum und reproduzieren ihn dann hier zur Veröffentlichung.",
+      "scopeWarning": "Enter-Baumstruktur manuell. Für die automatische Baumgenerierung aus Daten verwenden Sie scikit-learn/rpart, exportieren den Baum und reproduzieren ihn dann hier zur Veröffentlichung.",
       "defaultCaption": "Entscheidungsbaum."
     },
     "roc-curve": {
       "displayName": "ROC-Kurven",
       "description": "Betriebskennlinien des Empfängers für die Klassifikatorauswertung. Unterstützt mehrere Klassifikatoren mit AUC-Annotation.",
-      "scopeWarning": "Geben Sie vorberechnete TPR/FPR-Werte aus Ihrer Statistiksoftware (sklearn, R pROC) ein. Dieses Plugin rendert die Kurve; Das Modelltraining muss extern erfolgen.",
+      "scopeWarning": "Enter vorberechnete TPR/FPR-Werte aus Ihrer Statistiksoftware (sklearn, R pROC). Dieses Plugin rendert die Kurve; Das Modelltraining muss extern erfolgen.",
       "defaultCaption": "ROC-Kurven (AUC in der Legende dargestellt)."
     },
     "population-pyramid": {
       "displayName": "Bevölkerungspyramide",
       "description": "Bevölkerungspyramide nach Alter und Geschlecht für die demografische Analyse. Zeigt die Verteilung der männlichen/weiblichen Bevölkerung nach Altersgruppe.",
-      "scopeWarning": "Geben Sie Volkszählungsdaten manuell ein. Generieren Sie für große Datensätze die Pyramide in R/Python und importieren Sie sie als PDF, oder verwenden Sie dieses Plugin für veranschaulichende Teilpopulationen.",
+      "scopeWarning": "Enter Volkszählungsdaten manuell. Generieren Sie für große Datensätze die Pyramide in R/Python und importieren Sie sie als PDF, oder verwenden Sie dieses Plugin für veranschaulichende Teilpopulationen.",
       "defaultCaption": "Bevölkerungspyramide."
     },
     "error-bars": {
       "displayName": "Fehlerbalken und Konfidenzintervalle",
       "description": "Linien- oder Balkendiagramme mit Fehlerbalken für Mittelwerte ± SD/SE/CI. Unverzichtbar für die Präsentation von Versuchs- oder Umfrageergebnissen.",
-      "scopeWarning": "Geben Sie Mittel- und Fehlerwerte (SD, SE oder 95 % CI-Halbwertsbreite) ein, die aus Ihren Daten berechnet wurden. Die Rohdatenverarbeitung muss extern erfolgen.",
+      "scopeWarning": "Enter-Mittelwerte und Fehlerwerte (SD, SE oder 95 % CI-Halbwertsbreite), berechnet aus Ihren Daten. Die Rohdatenverarbeitung muss extern erfolgen.",
       "defaultCaption": "Mittelwerte mit 95%-Konfidenzintervallen."
     },
     "causal-dag": {
@@ -317,19 +317,19 @@
     "bar-charts": {
       "displayName": "Balkendiagramme und Histogramme",
       "description": "Gruppierte und gestapelte Balkendiagramme, Häufigkeitshistogramme für deskriptive Statistiken.",
-      "scopeWarning": "Werte manuell eingeben. Generieren Sie Diagramme aus großen Datensätzen in R/Python und importieren Sie sie als PDF.",
+      "scopeWarning": "Enter-Werte manuell eingeben. Erstellen Sie Diagramme aus großen Datensätzen in R/Python und importieren Sie sie als PDF.",
       "defaultCaption": "Gruppiertes Balkendiagramm – mittlere Reaktion nach Bedingung und Zeitpunkt ($\\pm$\\,SD)."
     },
     "box-violin-plots": {
       "displayName": "Boxplots und Verteilungsvergleiche",
       "description": "Box-and-Whisker-Diagramme mit Medianen, Quartilen und Ausreißern zum Vergleich von Verteilungen.",
-      "scopeWarning": "Geben Sie vorberechnete Statistiken (Median, Q1, Q3) von R/Python ein. Jeder Datenpunkt kodiert: x=Gruppenposition, y=Median, Fehler=IQR Halbbereich.",
-      "defaultCaption": "Verteilung der Testergebnisse auf drei Unterrichtsbedingungen (Box: Q1–Q3; Whiskers: 1,5$\\times$IQR)."
+      "scopeWarning": "Enter vorberechnete Statistiken (Median, Q1, Q3) von R/Python. Jeder Datenpunkt kodiert: x=Gruppenposition, y=Median, Fehler=IQR Halbbereich.",
+      "defaultCaption": "Verteilung der Testergebnisse auf drei Unterrichtsbedingungen (Box: Q1--Q3; Whiskers: 1,5$\\times$IQR)."
     },
     "scatter-regression": {
       "displayName": "Streudiagramme mit Regression",
       "description": "Streudiagramm mit linearer Regressionslinie und optionalem Konfidenzband.",
-      "scopeWarning": "Berechnen Sie Steigung, Achsenabschnitt und CI-Band in Ihrer Statistiksoftware. Geben Sie hier die Werte für die Wiedergabe in Publikationsqualität ein.",
+      "scopeWarning": "Berechnen Sie Steigung, Achsenabschnitt und CI-Band in Ihrer Statistiksoftware. Enter die Werte hier für die Wiedergabe in Publikationsqualität.",
       "defaultCaption": "BMI vs. systolischer Blutdruck: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
     },
     "bayesian-networks": {
@@ -342,18 +342,18 @@
       "displayName": "SEM / Pfaddiagramme",
       "description": "Pfaddiagramme des Strukturgleichungsmodells mit latenten Variablen und Messmodellen.",
       "scopeWarning": "Geeignet für SEM-Diagramme auf Thesenniveau. Für Schätzungen, Anpassungsstatistiken und standardisierte Berichte verwenden Sie lavaan/R, Mplus oder AMOS und importieren Sie das endgültige Diagramm/die endgültige Tabelle als PDF.",
-      "defaultCaption": "Technology Acceptance Model (TAM): wahrgenommene Nützlichkeit und Benutzerfreundlichkeit, die Verhaltensabsichten vorhersagen."
+      "defaultCaption": "Technologieakzeptanzmodell (TAM): wahrgenommene Nützlichkeit und Benutzerfreundlichkeit zur Vorhersage der Verhaltensabsicht."
     },
     "economic-causal": {
-      "displayName": "Wirtschaftliche Kausaldiagramme",
-      "description": "Kausalschleifendiagramme (Causal Loop Diagramme, CLD) mit verstärkenden und ausgleichenden Rückkopplungsschleifen.",
-      "scopeWarning": "Geeignet für einfache Kausalschleifenmodelle. Für eine vollständige Systemdynamik mit Beständen, Flüssen, Verzögerungen oder Simulation verwenden Sie Vensim, Stella oder AnyLogic und importieren Sie das endgültige PDF/SVG.",
-      "defaultCaption": "Lohn-Preis-Spirale: Rückkopplungsschleifen verstärken ($R$) und ausgleichen ($B$)."
+      "displayName": "Ökonomische Kausaldiagramme",
+      "description": "Kausalschleifendiagramme (CLD) mit verstärkenden und ausgleichenden Rückkopplungsschleifen.",
+      "scopeWarning": "Geeignet für einfache Kausalschleifenmodelle. Für eine vollständige Systemdynamik mit Beständen, Flüssen, Verzögerungen oder Simulationen verwenden Sie Vensim, Stella oder AnyLogic und importieren Sie den endgültigen PDF/SVG.",
+      "defaultCaption": "Lohn-Preis-Spirale: Verstärkung ($R$) und Ausgleich ($B$) von Rückkopplungsschleifen."
     },
     "legal-procedural": {
       "displayName": "Rechts-/Verfahrensdiagramme",
       "description": "Flussdiagramme für rechtliche und administrative Verfahren: Arbeitsabläufe in den Bereichen Justiz, Regulierung und Compliance.",
-      "scopeWarning": "Geeignet für standardmäßige juristische/administrative Prozessabläufe in Abschlussarbeiten. Komplexe Verfahren mit mehreren Parteien oder mehreren Gerichtsbarkeiten lassen sich besser in BPMN/draw.io pflegen und als PDF importieren.",
+      "scopeWarning": "Geeignet für standardmäßige juristische/administrative Prozessabläufe in Abschlussarbeiten. Komplexe Verfahren mit mehreren Parteien oder mehreren Gerichtsbarkeiten werden in BPMN/draw.io besser verwaltet und als PDF importiert.",
       "defaultCaption": "Strafverfahren: von der Klage bis zum Urteil."
     },
     "pedagogical-diagrams": {

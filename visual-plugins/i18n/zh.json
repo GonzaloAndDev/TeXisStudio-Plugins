@@ -14,11 +14,11 @@
     "biomedical-flow": {
       "displayName": "生物医学流程图",
       "description": "生物和临床流程——信号通路、代谢步骤、治疗算法。",
-      "defaultCaption": "具有反馈抑制功能的 MAPK/ERK 信号级联反应。"
+      "defaultCaption": "具有反馈抑制功能的 MAPK/ERK 信号级联。"
     },
     "consort-flow": {
       "displayName": "CONSORT / 临床试验流程",
-      "description": "CONSORT 式随机临床试验流程图 - 入组、分配、随访、分析。",
+      "description": "CONSORT-style 随机临床试验流程图 - 入组、分配、随访、分析。",
       "defaultCaption": "CONSORT 2010 流程图。"
     },
     "biological-pathways": {
@@ -44,14 +44,14 @@
     },
     "chemical-structures": {
       "displayName": "化学结构",
-      "description": "使用 ChemFig 的简单有机结构和环系。苯、官能团、环状化合物。",
+      "description": "使用 ChemFig 的简单有机结构和环系统。苯、官能团、环状化合物。",
       "scopeWarning": "适合论文中的简单有机结构。复杂的多环系统可能需要手动 ChemFig 调整。对于完整的结构化学，请使用 ChemDraw 并导入为 PDF/SVG。",
       "defaultCaption": "阿司匹林（乙酰水杨酸）结构式。"
     },
     "basic-electrical-circuits": {
       "displayName": "基本电路",
       "description": "可视化电路构建器：电阻器、电容器、电感器、电源、开关、二极管。 CircuiTikZ 原生。",
-      "defaultCaption": "带分压器的RC低通滤波器电路。"
+      "defaultCaption": "RC带分压器的低通滤波器电路。"
     },
     "block-diagrams-control": {
       "displayName": "框图/控制系统",
@@ -86,7 +86,7 @@
     },
     "probability-trees": {
       "displayName": "概率树",
-      "description": "具有分支概率和结果的视觉概率树。森林本地人。",
+      "description": "具有分支概率和结果的可视概率树。森林原住民。",
       "defaultCaption": "概率树——两次抛硬币。"
     },
     "lab-setups": {
@@ -97,7 +97,7 @@
     },
     "syntax-trees": {
       "displayName": "语法/语言树",
-      "description": "语言学的短语结构和依存关系树。森林原生。",
+      "description": "语言学的短语结构和依存树。森林本地人。",
       "defaultCaption": "短语结构树。"
     },
     "concept-maps": {
@@ -113,7 +113,7 @@
     "matrices-determinants": {
       "displayName": "矩阵和行列式",
       "description": "通过可视化单元格编辑创建任意大小的矩阵和行列式。",
-      "defaultCaption": "绕 $z$ 轴按角度 $\\theta$ 的 3D 旋转矩阵。"
+      "defaultCaption": "绕 $z$- 轴按角度 $\\theta$ 的 3D 旋转矩阵。"
     },
     "systems-of-equations": {
       "displayName": "方程组",
@@ -122,7 +122,7 @@
     },
     "piecewise-functions": {
       "displayName": "分段函数",
-      "description": "使用可视化行编辑器按案例或部件定义功能。",
+      "description": "使用可视化行编辑器按案例或部件定义函数。",
       "defaultCaption": "Heaviside 阶跃函数和 ReLU 激活函数。"
     },
     "vectors-fields": {
@@ -143,7 +143,7 @@
     },
     "wave-oscillation": {
       "displayName": "波浪和振荡图",
-      "description": "正弦波、阻尼振荡和波叠加。涵盖 SHM、横波/纵波和干涉图样。",
+      "description": "正弦波、阻尼振荡和波叠加。涵盖SHM、横波/纵波、干涉图样。",
       "defaultCaption": "具有阻尼包络的正弦波 $y = A\\sin(\\omega t)$。"
     },
     "geometric-optics": {
@@ -164,34 +164,34 @@
     },
     "function-plots-2d": {
       "displayName": "二维函数图",
-      "description": "使用标记的轴、网格和图例绘制数学函数。 PGFPlots 原生。",
+      "description": "使用标记的轴、网格和图例绘制数学函数。原生 PGFP 绘图。",
       "defaultCaption": "三角函数$\\sin x$和$\\cos x$。"
     },
     "parametric-polar-plots": {
       "displayName": "参数图和极坐标图",
       "description": "参数曲线和极坐标函数图。",
-      "defaultCaption": "利萨如曲线 $(\\cos 2t,\\, \\sin 3t)$。"
+      "defaultCaption": "利萨如曲线$(\\cos 2t,\\, \\sin 3t)$。"
     },
     "basic-statistics": {
       "displayName": "基本统计图表",
       "description": "表格数据的条形图、直方图和散点图。",
-      "defaultCaption": "比较条形图——实验组的测量结果。"
+      "defaultCaption": "比较条形图 - 实验组的测量结果。"
     },
     "statistical-distributions": {
       "displayName": "统计分布",
       "description": "正态分布、t 分布、卡方分布和其他带有阴影区域的分布。",
-      "defaultCaption": "标准正态分布，95\\% 置信区间用阴影表示。"
+      "defaultCaption": "带阴影的标准正态分布，置信区间为 95\\%。"
     },
     "kaplan-meier": {
       "displayName": "Kaplan-Meier 生存曲线",
       "description": "临床和流行病学研究的阶跃函数生存曲线。",
-      "scopeWarning": "输入预先计算的 KM 估计值（来自 R survfit、Stata stcurve 或 SPSS）作为形成阶跃函数的数据点。统计测试必须在外部完成。",
+      "scopeWarning": "Enter 预先计算的 KM 估计值（来自 R survfit、Stata stcurve 或 SPSS）作为形成阶跃函数的数据点。统计测试必须在外部完成。",
       "defaultCaption": "Kaplan--Meier 辅助化疗与标准化疗的总体生存曲线（$n{=}200$；对数秩 $p{=}0.008$）。"
     },
     "network-graph": {
       "displayName": "网络/社交图",
       "description": "具有社区聚类的共同作者、引用或社会影响力网络。",
-      "scopeWarning": "适合说明性网络（≤ 15 个节点）。对于大规模可视化，请使用 Gephi 或 NetworkX 并导入为 PDF。",
+      "scopeWarning": "适用于说明性网络（≤ 15 个节点）。对于大规模可视化，请使用 Gephi 或 NetworkX 并导入为 PDF。",
       "defaultCaption": "共同作者网络 - 由桥梁作者连接的两个研究集群。"
     },
     "organic-chemistry-extended": {
@@ -202,12 +202,12 @@
     },
     "reaction-mechanisms": {
       "displayName": "基本反应机制",
-      "description": "反应机制包括C-C键形成反应、取代和消除。",
-      "scopeWarning": "适用于论文中的标准机制。带有弯曲箭头的复杂多步机构需要手动 ChemFig 调整。",
-      "defaultCaption": "羟醛缩合：碱催化形成 $\\beta$-羟基羰基化合物。"
+      "description": "反应机制包括 C-C 键形成反应、取代和消除。",
+      "scopeWarning": "适合论文中的标准机制。带有弯曲箭头的复杂多步机制需要手动 ChemFig 调整。",
+      "defaultCaption": "羟醛缩合：碱催化形成 $\\beta$- 羟基羰基化合物。"
     },
     "er-diagrams": {
-      "displayName": "ER图",
+      "displayName": "ER 图表",
       "description": "数据库设计的实体关系图。 TikZ 原生。",
       "scopeWarning": "适用于论文中的标准ER图。具有许多实体的复杂模式受益于导出为 PDF 的 Draw.io。",
       "defaultCaption": "大学课程注册系统的 ER 图。"
@@ -215,24 +215,24 @@
     "state-machines": {
       "displayName": "状态机",
       "description": "具有状态、转换和标签的有限状态机和自动机。",
-      "scopeWarning": "适用于论文中的DFA/NFA和反应式系统图。对于大型自动机，从 Graphviz/PlantUML 生成并导入为 PDF。",
+      "scopeWarning": "适用于论文中的DFA/NFA和反应系统图。对于大型自动机，从 Graphviz/PlantUML 生成并导入为 PDF。",
       "defaultCaption": "交通灯有限状态机（定时器驱动）。"
     },
     "markov-chains": {
       "displayName": "马尔可夫链",
       "description": "带有状态和转移概率的马尔可夫链图。",
-      "scopeWarning": "适用于论文中的说明性马尔可夫链。对于推理或模拟，请使用 R/Python 并将结果导入为图形。",
+      "scopeWarning": "适合论文中说明性的马尔可夫链。对于推理或模拟，请使用 R/Python 并将结果导入为图形。",
       "defaultCaption": "天气马尔可夫链（晴天/阴天/雨天）。"
     },
     "bode-nyquist": {
       "displayName": "伯德图/奈奎斯特图",
       "description": "频率响应：伯德幅度+相位，或奈奎斯特图。二阶传递函数。",
-      "scopeWarning": "输入您的系统传递函数作为 pgfplots 表达式。首先计算 MATLAB/Python 中的极点/零点。",
+      "scopeWarning": "Enter 您的系统传递函数作为 pgfplots 表达式。首先计算 MATLAB/Python 中的极点/零点。",
       "defaultCaption": "$G(j\\omega) = \\frac{\\omega_n^2}{(j\\omega)^2 + 2\\zeta\\omega_n(j\\omega) + \\omega_n^2}$（$\\omega_n{=}10$、$\\zeta{=}0.3$）的波特图。"
     },
     "plots-3d": {
       "displayName": "3D 科学绘图",
-      "description": "3D 曲面、线框图和等高线图。 PGFPlots 原生。",
+      "description": "3D 曲面、线框图和等高线图。原生 PGFP 绘图。",
       "scopeWarning": "3D 绘图对于精细网格的编译速度较慢。保持样本≤25×25以获得合理的编译时间。",
       "defaultCaption": "标准二元正态密度 $f(x,y) = \\frac{1}{2\\pi}e^{-\\frac{x^2+y^2}{2}}$。"
     },
@@ -240,7 +240,7 @@
       "displayName": "相图",
       "description": "动态系统的相图、零斜线和稳定性图。",
       "scopeWarning": "适用于二维相平面和零斜线图。全矢量场箭头需要手动 pgfplots 箭袋调整。",
-      "defaultCaption": "Lotka--Volterra 相平面：猎物 $x$ 与捕食者 $y$ 零斜线 ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)。"
+      "defaultCaption": "Lotka--Volterra 相面：猎物 $x$ 与捕食者 $y$ 零斜线 ($\\alpha{=}1,\\beta{=}0.5,\\gamma{=}0.75,\\delta{=}0.25$)。"
     },
     "heat-maps": {
       "displayName": "相关热图",
@@ -255,21 +255,21 @@
       "defaultCaption": "供给和需求：原始均衡$E_0$，收入增加后需求转移$D \\to D'$。"
     },
     "uml-class-diagrams": {
-      "displayName": "UML类图",
+      "displayName": "UML 类图",
       "description": "UML 类图，包含继承、接口、组合和关联。",
-      "scopeWarning": "生成简化的类框。为了完全符合UML，请使用PlantUML或draw.io并导入为PDF。",
-      "defaultCaption": "带有观察者的存储库模式：\\\\ $<<$interface$>>$ 类、继承和组合。"
+      "scopeWarning": "生成简化的类框。为了完全符合 UML，请使用 PlantUML 或 draw.io 并导入为 PDF。",
+      "defaultCaption": "带有观察者的存储库模式：$<<$interface$>>$ 类、继承和组合。"
     },
     "time-series": {
       "displayName": "时间序列图",
       "description": "具有趋势、置信带和注释事件的时间序列。非常适合经济学、生态学和临床研究中的纵向数据。",
-      "scopeWarning": "手动输入数据点。对于大型或复杂的时间序列（ARIMA、季节性），在 R/Python 中生成并导入为 PDF。",
+      "scopeWarning": "手动 Enter 数据点。对于大型或复杂的时间序列（ARIMA、季节性），以 R/Python 生成并导入为 PDF。",
       "defaultCaption": "每月 CO$_2$ 浓度 (ppm) 以及长期趋势和 $\\pm$2\\,SD 波段。"
     },
     "genealogy": {
       "displayName": "家谱/家谱",
       "description": "家谱、朝代和带有世代和关系标记的临床谱系。",
-      "scopeWarning": "适用于简化的家谱。对于带有标准符号（ACMG/AMP）的临床遗传谱系，请使用专用谱系软件。",
+      "scopeWarning": "适合简化的家谱。对于带有标准符号（ACMG/AMP）的临床遗传谱系，请使用专用谱系软件。",
       "defaultCaption": "家谱。"
     },
     "parallel-coordinates": {
@@ -286,27 +286,27 @@
     },
     "decision-tree": {
       "displayName": "决策树",
-      "description": "带有条件、分支和叶子结果的决策树图。涵盖分类树、CART 和临床决策规则。",
-      "scopeWarning": "手动输入树结构。要从数据自动生成树，请使用 scikit-learn/rpart 并导出树，然后在此处复制以进行发布。",
+      "description": "带有条件、分支和叶子结果的决策树图。涵盖分类树、CART和临床决策规则。",
+      "scopeWarning": "手动构建Enter树形结构。要从数据自动生成树，请使用 scikit-learn/rpart 并导出树，然后在此处复制以进行发布。",
       "defaultCaption": "决策树。"
     },
     "roc-curve": {
       "displayName": "ROC 曲线",
-      "description": "用于分类器评估的接收器操作特征曲线。支持带有AUC注释的多个分类器。",
-      "scopeWarning": "输入从统计软件（sklearn、R pROC）预先计算的 TPR/FPR 值。该插件渲染曲线；模型训练必须在外部完成。",
+      "description": "用于分类器评估的接收器操作特征曲线。支持带有 AUC 注释的多个分类器。",
+      "scopeWarning": "Enter 通过统计软件（sklearn、R pROC）预先计算出 TPR/FPR 值。该插件渲染曲线；模型训练必须在外部完成。",
       "defaultCaption": "ROC 曲线（图例中显示 AUC）。"
     },
     "population-pyramid": {
       "displayName": "人口金字塔",
-      "description": "用于人口分析的年龄性别人口金字塔。按年龄组显示男性/女性人口分布。",
-      "scopeWarning": "手动输入人口普查数据。对于大型数据集，在 R/Python 中生成金字塔并导入为 PDF，或使用此插件来说明子群体。",
+      "description": "用于人口分析的年龄-性别人口金字塔。按年龄组显示男性/女性人口分布。",
+      "scopeWarning": "Enter 手动人口普查数据。对于大型数据集，请在 R/Python 中生成金字塔并导入为 PDF，或使用此插件来说明子群体。",
       "defaultCaption": "人口金字塔。"
     },
     "error-bars": {
       "displayName": "误差线和置信区间",
       "description": "带有误差线的折线图或条形图，表示平均值 ± SD/SE/CI。对于展示实验或调查结果至关重要。",
-      "scopeWarning": "输入根据数据计算得出的平均值和误差值（SD、SE 或 95% CI 半角）。原始数据处理必须在外部完成。",
-      "defaultCaption": "具有 95\\% 置信区间的平均值。"
+      "scopeWarning": "Enter 表示根据您的数据计算得出的误差值（SD、SE 或 95% CI 半角）。原始数据处理必须在外部完成。",
+      "defaultCaption": "具有 95% 置信区间的平均值。"
     },
     "causal-dag": {
       "displayName": "因果DAG/路径图",
@@ -317,19 +317,19 @@
     "bar-charts": {
       "displayName": "条形图和直方图",
       "description": "分组和堆叠条形图、用于描述性统计的频率直方图。",
-      "scopeWarning": "手动输入值。对于来自大型数据集的图表，在 R/Python 中生成并导入为 PDF。",
-      "defaultCaption": "分组条形图 - 按条件和时间点划分的平均响应 ($\\pm$\\,SD)。"
+      "scopeWarning": "手动设置 Enter 值。对于来自大型数据集的图表，以 R/Python 生成并导入为 PDF。",
+      "defaultCaption": "分组条形图 - 按条件和时间点的平均响应 ($\\pm$\\,SD)。"
     },
     "box-violin-plots": {
       "displayName": "箱线图和分布比较",
       "description": "带有中位数、四分位数和异常值的箱须图，用于比较分布。",
-      "scopeWarning": "输入来自 R/Python 的预先计算的统计数据（中位数、Q1、Q3）。每个数据点编码：x=组位置，y=中值，误差=IQR半范围。",
+      "scopeWarning": "Enter 根据 R/Python 预先计算的统计数据（中位数、Q1、Q3）。每个数据点编码：x=组位置，y=中值，error=IQR 半范围。",
       "defaultCaption": "三种教学条件下测试成绩的分布（方框：Q1--Q3；胡须：1.5$\\times$IQR）。"
     },
     "scatter-regression": {
-      "displayName": "回归散点图",
+      "displayName": "带有回归的散点图",
       "description": "具有线性回归线和可选置信带的散点图。",
-      "scopeWarning": "在统计软件中计算斜率、截距和 CI 频带。在此处输入出版物质量渲染的值。",
+      "scopeWarning": "在统计软件中计算斜率、截距和 CI 频带。 Enter 此处的值用于出版物质量渲染。",
       "defaultCaption": "BMI 与收缩压：$\\hat{y} = 89.4 + 1.83x$、$R^2{=}0.74$、$p{<}0.001$ ($n{=}120$)。"
     },
     "bayesian-networks": {
@@ -339,28 +339,28 @@
       "defaultCaption": "用于呼吸系统疾病鉴别诊断的贝叶斯网络。"
     },
     "sem-path-diagrams": {
-      "displayName": "SEM / 路径图",
+      "displayName": "SEM /路径图",
       "description": "具有潜在变量和测量模型的结构方程模型路径图。",
       "scopeWarning": "适用于论文级别的 SEM 图。对于估计、拟合统计和标准化报告，请使用 lavaan/R、Mplus 或 AMOS 并将最终图表/表格导入为 PDF。",
       "defaultCaption": "技术接受模型 (TAM)：感知有用性和易用性，预测行为意图。"
     },
     "economic-causal": {
       "displayName": "经济因果图",
-      "description": "具有强化和平衡反馈循环的因果循环图 (CLD)。",
+      "description": "因果循环图（CLD），具有增强和平衡反馈循环。",
       "scopeWarning": "适用于简单的因果循环模型。对于包含库存、流量、延迟或模拟的完整系统动态，请使用 Vensim、Stella 或 AnyLogic 并导入最终的 PDF/SVG。",
       "defaultCaption": "工资-价格螺旋：强化（$R$）和平衡（$B$）反馈循环。"
     },
     "legal-procedural": {
       "displayName": "法律/程序图",
       "description": "法律和行政程序流程图：司法、监管和合规工作流程。",
-      "scopeWarning": "适合论文中的标准法律/行政流程。复杂的多方或多管辖区程序可以在 BPMN/draw.io 中更好地维护，并作为 PDF 导入。",
+      "scopeWarning": "适用于论文中的标准法律/行政流程。复杂的多方或多管辖区程序可以在 BPMN/draw.io 中更好地维护并作为 PDF 导入。",
       "defaultCaption": "刑事诉讼程序：从投诉到判决。"
     },
     "pedagogical-diagrams": {
       "displayName": "教学图",
       "description": "布鲁姆的分类法、学习成果层次结构和教育论文的课程图。",
-      "scopeWarning": "涵盖常见的教学图表模式。对于复杂的教学设计模型，将权威图保留在draw.io/Figma中并导入最终的PDF/SVG。",
-      "defaultCaption": "修订了布鲁姆的分类法 - 具有代表性动词的六个认知水平（Anderson & Krathwohl，2001）。"
+      "scopeWarning": "涵盖常见的教学图表模式。对于复杂的教学设计模型，请将权威图保留在draw.io/Figma中并导入最终的PDF/SVG。",
+      "defaultCaption": "修订了布鲁姆的分类法 - 具有代表性动词的六个认知级别（Anderson & Krathwohl，2001）。"
     }
   }
 }
