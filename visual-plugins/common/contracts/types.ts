@@ -26,7 +26,8 @@ export type VisualEditorEngineId =
   | "timeline-gantt-engine"
   | "table-data-engine"
   | "tree-forest-engine"
-  | "circuitikz-engine";
+  | "circuitikz-engine"
+  | "chemistry-engine";
 
 export type PluginCategory =
   | "mathematics"

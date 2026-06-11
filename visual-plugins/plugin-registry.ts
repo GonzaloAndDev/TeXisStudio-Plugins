@@ -73,9 +73,9 @@ export const PLUGIN_REGISTRY: PluginRegistryEntry[] = [
   { plugin: SoftwareArchitecturePlugin,    category: "engineering-cs",    qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
   { plugin: GanttPlugin,                   category: "engineering-cs",    qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
   //   Chemistry
-  { plugin: ChemicalFormulasPlugin,        category: "chemistry",         qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
-  { plugin: ChemicalReactionsPlugin,       category: "chemistry",         qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
-  { plugin: ReactionEquilibriaPlugin,      category: "chemistry",         qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
+  { plugin: ChemicalFormulasPlugin,        category: "chemistry",         qualityLevel: "official-core",     userLevel: "intermediate", editorType: "visual-assisted" },
+  { plugin: ChemicalReactionsPlugin,       category: "chemistry",         qualityLevel: "official-core",     userLevel: "intermediate", editorType: "visual-assisted" },
+  { plugin: ReactionEquilibriaPlugin,      category: "chemistry",         qualityLevel: "official-core",     userLevel: "intermediate", editorType: "visual-assisted" },
   { plugin: ChemicalStructuresPlugin,      category: "chemistry",         qualityLevel: "official-core",     userLevel: "advanced",     editorType: "advanced"        },
   { plugin: LabSetupPlugin,                category: "chemistry",         qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
   //   Biology / Medicine
