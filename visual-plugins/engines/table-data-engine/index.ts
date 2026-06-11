@@ -1,4 +1,5 @@
 export type { ColumnType, TableExportTarget, DataColumn, DataRow, TableDataDocument } from "./types.js";
+export { serializeTableData } from "./serializer.js";
 
 export const TABLE_DATA_ENGINE_ID = "table-data-engine" as const;
 
