@@ -67,7 +67,7 @@ export const PLUGIN_REGISTRY: PluginRegistryEntry[] = [
   { plugin: WaveOscillationPlugin,         category: "physics",           qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
   { plugin: GeometricOpticsPlugin,         category: "physics",           qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
   //   Engineering / CS
-  { plugin: BasicCircuitsPlugin,           category: "engineering-cs",    qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
+  { plugin: BasicCircuitsPlugin,           category: "engineering-cs",    qualityLevel: "official-core",     userLevel: "intermediate", editorType: "visual-assisted" },
   { plugin: BlockDiagramPlugin,            category: "engineering-cs",    qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
   { plugin: FlowchartPlugin,               category: "engineering-cs",    qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
   { plugin: SoftwareArchitecturePlugin,    category: "engineering-cs",    qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
