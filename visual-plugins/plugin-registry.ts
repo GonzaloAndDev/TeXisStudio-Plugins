@@ -1,4 +1,4 @@
-import type { VisualDiagramPlugin, PluginCategory, QualityLevel } from "./common/contracts/index.js";
+import type { VisualDiagramPlugin, PluginCategory, QualityLevel, UserLevel, EditorType } from "./common/contracts/index.js";
 
 // Core (35)
 import {
@@ -39,82 +39,92 @@ export interface PluginRegistryEntry {
   plugin: new () => VisualDiagramPlugin;
   category: PluginCategory;
   qualityLevel: QualityLevel;
+  /** User-facing difficulty. Drives labels in the figure picker (Fácil / Intermedio / Avanzado). */
+  userLevel: UserLevel;
+  /** How the user interacts with this plugin. Determines which visual editor panel is shown. */
+  editorType: EditorType;
 }
 
 export const PLUGIN_REGISTRY: PluginRegistryEntry[] = [
   // ── official-core ────────────────────────────────────────────
-  { plugin: VisualEquationsPlugin,      category: "mathematics",       qualityLevel: "official-core" },
-  { plugin: MatricesPlugin,             category: "mathematics",       qualityLevel: "official-core" },
-  { plugin: SystemOfEquationsPlugin,    category: "mathematics",       qualityLevel: "official-core" },
-  { plugin: PiecewiseFunctionsPlugin,   category: "mathematics",       qualityLevel: "official-core" },
-  { plugin: VennDiagramPlugin,          category: "mathematics",       qualityLevel: "official-core" },
-  { plugin: PlaneGeometryPlugin,        category: "mathematics",       qualityLevel: "official-core" },
-  { plugin: AnalyticGeometryPlugin,     category: "mathematics",       qualityLevel: "official-core" },
-  { plugin: FunctionPlots2DPlugin,      category: "mathematics",       qualityLevel: "official-core" },
-  { plugin: ParametricPolarPlugin,      category: "mathematics",       qualityLevel: "official-core" },
-  { plugin: BasicStatisticsPlugin,      category: "mathematics",       qualityLevel: "official-core" },
-  { plugin: StatisticalDistributionsPlugin, category: "mathematics",   qualityLevel: "official-core" },
-  { plugin: ProbabilityTreesPlugin,     category: "mathematics",       qualityLevel: "official-core" },
-  { plugin: VectorsPlugin,              category: "physics",           qualityLevel: "official-core" },
-  { plugin: FreeBodyDiagramPlugin,      category: "physics",           qualityLevel: "official-core" },
-  { plugin: InclinedPlanePlugin,        category: "physics",           qualityLevel: "official-core" },
-  { plugin: WaveOscillationPlugin,      category: "physics",           qualityLevel: "official-core" },
-  { plugin: GeometricOpticsPlugin,      category: "physics",           qualityLevel: "official-core" },
-  { plugin: BasicCircuitsPlugin,        category: "engineering-cs",    qualityLevel: "official-core" },
-  { plugin: BlockDiagramPlugin,         category: "engineering-cs",    qualityLevel: "official-core" },
-  { plugin: FlowchartPlugin,            category: "engineering-cs",    qualityLevel: "official-core" },
-  { plugin: SoftwareArchitecturePlugin, category: "engineering-cs",    qualityLevel: "official-core" },
-  { plugin: GanttPlugin,                category: "engineering-cs",    qualityLevel: "official-core" },
-  { plugin: ChemicalFormulasPlugin,     category: "chemistry",         qualityLevel: "official-core" },
-  { plugin: ChemicalReactionsPlugin,    category: "chemistry",         qualityLevel: "official-core" },
-  { plugin: ReactionEquilibriaPlugin,   category: "chemistry",         qualityLevel: "official-core" },
-  { plugin: ChemicalStructuresPlugin,   category: "chemistry",         qualityLevel: "official-core" },
-  { plugin: LabSetupPlugin,             category: "chemistry",         qualityLevel: "official-core" },
-  { plugin: PhylogeneticTreesPlugin,    category: "biology-medicine",  qualityLevel: "official-core" },
-  { plugin: SequencesPlugin,            category: "biology-medicine",  qualityLevel: "official-core" },
-  { plugin: BiomedicalFlowPlugin,       category: "biology-medicine",  qualityLevel: "official-core" },
-  { plugin: CONSORTFlowPlugin,          category: "biology-medicine",  qualityLevel: "official-core" },
-  { plugin: BiologicalPathwaysPlugin,   category: "biology-medicine",  qualityLevel: "official-core" },
-  { plugin: TimelinePlugin,             category: "humanities-social", qualityLevel: "official-core" },
-  { plugin: SyntaxTreesPlugin,          category: "humanities-social", qualityLevel: "official-core" },
-  { plugin: ConceptMapsPlugin,          category: "humanities-social", qualityLevel: "official-core" },
+  //   Mathematics
+  { plugin: VisualEquationsPlugin,         category: "mathematics",       qualityLevel: "official-core",     userLevel: "intermediate", editorType: "visual-assisted" },
+  { plugin: MatricesPlugin,                category: "mathematics",       qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
+  { plugin: SystemOfEquationsPlugin,       category: "mathematics",       qualityLevel: "official-core",     userLevel: "intermediate", editorType: "visual-assisted" },
+  { plugin: PiecewiseFunctionsPlugin,      category: "mathematics",       qualityLevel: "official-core",     userLevel: "intermediate", editorType: "visual-assisted" },
+  { plugin: VennDiagramPlugin,             category: "mathematics",       qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
+  { plugin: PlaneGeometryPlugin,           category: "mathematics",       qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
+  { plugin: AnalyticGeometryPlugin,        category: "mathematics",       qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
+  { plugin: FunctionPlots2DPlugin,         category: "mathematics",       qualityLevel: "official-core",     userLevel: "easy",         editorType: "visual-assisted" },
+  { plugin: ParametricPolarPlugin,         category: "mathematics",       qualityLevel: "official-core",     userLevel: "advanced",     editorType: "advanced"        },
+  { plugin: BasicStatisticsPlugin,         category: "mathematics",       qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
+  { plugin: StatisticalDistributionsPlugin,category: "mathematics",       qualityLevel: "official-core",     userLevel: "intermediate", editorType: "visual-assisted" },
+  { plugin: ProbabilityTreesPlugin,        category: "mathematics",       qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
+  //   Physics
+  { plugin: VectorsPlugin,                 category: "physics",           qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
+  { plugin: FreeBodyDiagramPlugin,         category: "physics",           qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
+  { plugin: InclinedPlanePlugin,           category: "physics",           qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
+  { plugin: WaveOscillationPlugin,         category: "physics",           qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
+  { plugin: GeometricOpticsPlugin,         category: "physics",           qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
+  //   Engineering / CS
+  { plugin: BasicCircuitsPlugin,           category: "engineering-cs",    qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
+  { plugin: BlockDiagramPlugin,            category: "engineering-cs",    qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
+  { plugin: FlowchartPlugin,               category: "engineering-cs",    qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
+  { plugin: SoftwareArchitecturePlugin,    category: "engineering-cs",    qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
+  { plugin: GanttPlugin,                   category: "engineering-cs",    qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
+  //   Chemistry
+  { plugin: ChemicalFormulasPlugin,        category: "chemistry",         qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
+  { plugin: ChemicalReactionsPlugin,       category: "chemistry",         qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
+  { plugin: ReactionEquilibriaPlugin,      category: "chemistry",         qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
+  { plugin: ChemicalStructuresPlugin,      category: "chemistry",         qualityLevel: "official-core",     userLevel: "advanced",     editorType: "advanced"        },
+  { plugin: LabSetupPlugin,                category: "chemistry",         qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
+  //   Biology / Medicine
+  { plugin: PhylogeneticTreesPlugin,       category: "biology-medicine",  qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
+  { plugin: SequencesPlugin,               category: "biology-medicine",  qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
+  { plugin: BiomedicalFlowPlugin,          category: "biology-medicine",  qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
+  { plugin: CONSORTFlowPlugin,             category: "biology-medicine",  qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
+  { plugin: BiologicalPathwaysPlugin,      category: "biology-medicine",  qualityLevel: "official-core",     userLevel: "intermediate", editorType: "visual-assisted" },
+  //   Humanities / Social
+  { plugin: TimelinePlugin,                category: "humanities-social", qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
+  { plugin: SyntaxTreesPlugin,             category: "humanities-social", qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
+  { plugin: ConceptMapsPlugin,             category: "humanities-social", qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },
   // ── official-extended ───────────────────────────────────────
-  { plugin: Plots3DPlugin,              category: "mathematics",       qualityLevel: "official-extended" },
-  { plugin: PhaseDiagramsPlugin,        category: "mathematics",       qualityLevel: "official-extended" },
-  { plugin: HeatMapsPlugin,             category: "mathematics",       qualityLevel: "official-extended" },
-  { plugin: BarChartsPlugin,            category: "mathematics",       qualityLevel: "official-extended" },
-  { plugin: BoxViolinPlotsPlugin,       category: "mathematics",       qualityLevel: "official-extended" },
-  { plugin: ScatterRegressionPlugin,    category: "mathematics",       qualityLevel: "official-extended" },
-  { plugin: ERDiagramPlugin,            category: "engineering-cs",    qualityLevel: "official-extended" },
-  { plugin: StateMachinePlugin,         category: "engineering-cs",    qualityLevel: "official-extended" },
-  { plugin: MarkovChainsPlugin,         category: "mathematics",       qualityLevel: "official-extended" },
-  { plugin: BodeNyquistPlugin,          category: "engineering-cs",    qualityLevel: "official-extended" },
-  { plugin: SupplyDemandPlugin,          category: "humanities-social", qualityLevel: "official-extended" },
-  { plugin: UMLClassDiagramPlugin,      category: "engineering-cs",    qualityLevel: "official-extended" },
-  { plugin: DecisionTreePlugin,         category: "mathematics",       qualityLevel: "official-extended" },
-  { plugin: ROCCurvePlugin,             category: "mathematics",       qualityLevel: "official-extended" },
-  { plugin: PopulationPyramidPlugin,    category: "humanities-social", qualityLevel: "official-extended" },
-  { plugin: ErrorBarsPlugin,            category: "mathematics",       qualityLevel: "official-extended" },
-  { plugin: CausalDAGPlugin,            category: "humanities-social", qualityLevel: "official-extended" },
-  { plugin: TimeSeriesPlugin,           category: "mathematics",       qualityLevel: "official-extended" },
-  { plugin: GenealogyPlugin,            category: "humanities-social", qualityLevel: "official-extended" },
-  { plugin: ParallelCoordinatesPlugin,  category: "mathematics",       qualityLevel: "official-extended" },
-  { plugin: EnergyBandPlugin,           category: "physics",           qualityLevel: "official-extended" },
-  { plugin: OrganicChemistryPlugin,     category: "chemistry",         qualityLevel: "official-extended" },
-  { plugin: ReactionMechanismsPlugin,   category: "chemistry",         qualityLevel: "official-extended" },
-  { plugin: KaplanMeierPlugin,          category: "biology-medicine",  qualityLevel: "official-extended" },
-  { plugin: NetworkGraphPlugin,         category: "engineering-cs",    qualityLevel: "official-extended" },
+  { plugin: Plots3DPlugin,                 category: "mathematics",       qualityLevel: "official-extended", userLevel: "advanced",     editorType: "advanced"        },
+  { plugin: PhaseDiagramsPlugin,           category: "mathematics",       qualityLevel: "official-extended", userLevel: "advanced",     editorType: "advanced"        },
+  { plugin: HeatMapsPlugin,                category: "mathematics",       qualityLevel: "official-extended", userLevel: "intermediate", editorType: "visual-assisted" },
+  { plugin: BarChartsPlugin,               category: "mathematics",       qualityLevel: "official-extended", userLevel: "easy",         editorType: "fully-visual"    },
+  { plugin: BoxViolinPlotsPlugin,          category: "mathematics",       qualityLevel: "official-extended", userLevel: "intermediate", editorType: "visual-assisted" },
+  { plugin: ScatterRegressionPlugin,       category: "mathematics",       qualityLevel: "official-extended", userLevel: "intermediate", editorType: "visual-assisted" },
+  { plugin: ERDiagramPlugin,               category: "engineering-cs",    qualityLevel: "official-extended", userLevel: "intermediate", editorType: "fully-visual"    },
+  { plugin: StateMachinePlugin,            category: "engineering-cs",    qualityLevel: "official-extended", userLevel: "intermediate", editorType: "fully-visual"    },
+  { plugin: MarkovChainsPlugin,            category: "mathematics",       qualityLevel: "official-extended", userLevel: "intermediate", editorType: "fully-visual"    },
+  { plugin: BodeNyquistPlugin,             category: "engineering-cs",    qualityLevel: "official-extended", userLevel: "advanced",     editorType: "advanced"        },
+  { plugin: SupplyDemandPlugin,            category: "humanities-social", qualityLevel: "official-extended", userLevel: "easy",         editorType: "visual-assisted" },
+  { plugin: UMLClassDiagramPlugin,         category: "engineering-cs",    qualityLevel: "official-extended", userLevel: "intermediate", editorType: "fully-visual"    },
+  { plugin: DecisionTreePlugin,            category: "mathematics",       qualityLevel: "official-extended", userLevel: "easy",         editorType: "fully-visual"    },
+  { plugin: ROCCurvePlugin,                category: "mathematics",       qualityLevel: "official-extended", userLevel: "advanced",     editorType: "visual-assisted" },
+  { plugin: PopulationPyramidPlugin,       category: "humanities-social", qualityLevel: "official-extended", userLevel: "easy",         editorType: "fully-visual"    },
+  { plugin: ErrorBarsPlugin,               category: "mathematics",       qualityLevel: "official-extended", userLevel: "intermediate", editorType: "visual-assisted" },
+  { plugin: CausalDAGPlugin,               category: "humanities-social", qualityLevel: "official-extended", userLevel: "intermediate", editorType: "fully-visual"    },
+  { plugin: TimeSeriesPlugin,              category: "mathematics",       qualityLevel: "official-extended", userLevel: "easy",         editorType: "fully-visual"    },
+  { plugin: GenealogyPlugin,               category: "humanities-social", qualityLevel: "official-extended", userLevel: "easy",         editorType: "fully-visual"    },
+  { plugin: ParallelCoordinatesPlugin,     category: "mathematics",       qualityLevel: "official-extended", userLevel: "advanced",     editorType: "visual-assisted" },
+  { plugin: EnergyBandPlugin,              category: "physics",           qualityLevel: "official-extended", userLevel: "advanced",     editorType: "advanced"        },
+  { plugin: OrganicChemistryPlugin,        category: "chemistry",         qualityLevel: "official-extended", userLevel: "advanced",     editorType: "advanced"        },
+  { plugin: ReactionMechanismsPlugin,      category: "chemistry",         qualityLevel: "official-extended", userLevel: "advanced",     editorType: "advanced"        },
+  { plugin: KaplanMeierPlugin,             category: "biology-medicine",  qualityLevel: "official-extended", userLevel: "intermediate", editorType: "visual-assisted" },
+  { plugin: NetworkGraphPlugin,            category: "engineering-cs",    qualityLevel: "official-extended", userLevel: "intermediate", editorType: "fully-visual"    },
   // ── experimental ────────────────────────────────────────────
-  { plugin: AnatomicalDiagramsPlugin,   category: "biology-medicine",  qualityLevel: "experimental" },
-  { plugin: BiomedicalIllustrationPlugin, category: "biology-medicine", qualityLevel: "experimental" },
-  { plugin: CellDiagramsPlugin,         category: "biology-medicine",  qualityLevel: "experimental" },
-  { plugin: GeographicMapsPlugin,       category: "humanities-social", qualityLevel: "experimental" },
-  { plugin: LilyPondScoresPlugin,       category: "arts-visual",       qualityLevel: "experimental" },
-  { plugin: LegalProceduralPlugin,      category: "humanities-social", qualityLevel: "experimental" },
-  { plugin: EconomicCausalPlugin,       category: "humanities-social", qualityLevel: "experimental" },
-  { plugin: SEMPathPlugin,              category: "humanities-social", qualityLevel: "experimental" },
-  { plugin: BayesianNetworksPlugin,     category: "mathematics",       qualityLevel: "experimental" },
-  { plugin: PedagogicalDiagramsPlugin,  category: "humanities-social", qualityLevel: "experimental" },
+  { plugin: AnatomicalDiagramsPlugin,      category: "biology-medicine",  qualityLevel: "experimental",      userLevel: "advanced",     editorType: "advanced"        },
+  { plugin: BiomedicalIllustrationPlugin,  category: "biology-medicine",  qualityLevel: "experimental",      userLevel: "advanced",     editorType: "advanced"        },
+  { plugin: CellDiagramsPlugin,            category: "biology-medicine",  qualityLevel: "experimental",      userLevel: "advanced",     editorType: "advanced"        },
+  { plugin: GeographicMapsPlugin,          category: "humanities-social", qualityLevel: "experimental",      userLevel: "advanced",     editorType: "external-bridge" },
+  { plugin: LilyPondScoresPlugin,          category: "arts-visual",       qualityLevel: "experimental",      userLevel: "advanced",     editorType: "external-bridge" },
+  { plugin: LegalProceduralPlugin,         category: "humanities-social", qualityLevel: "experimental",      userLevel: "advanced",     editorType: "advanced"        },
+  { plugin: EconomicCausalPlugin,          category: "humanities-social", qualityLevel: "experimental",      userLevel: "advanced",     editorType: "visual-assisted" },
+  { plugin: SEMPathPlugin,                 category: "humanities-social", qualityLevel: "experimental",      userLevel: "advanced",     editorType: "advanced"        },
+  { plugin: BayesianNetworksPlugin,        category: "mathematics",       qualityLevel: "experimental",      userLevel: "advanced",     editorType: "visual-assisted" },
+  { plugin: PedagogicalDiagramsPlugin,     category: "humanities-social", qualityLevel: "experimental",      userLevel: "intermediate", editorType: "visual-assisted" },
 ];
 
 export function getPluginsByCategory(category: PluginCategory): PluginRegistryEntry[] {
@@ -125,10 +135,23 @@ export function getPluginsByQuality(level: QualityLevel): PluginRegistryEntry[] 
   return PLUGIN_REGISTRY.filter(e => e.qualityLevel === level);
 }
 
+export function getPluginsByUserLevel(level: UserLevel): PluginRegistryEntry[] {
+  return PLUGIN_REGISTRY.filter(e => e.userLevel === level);
+}
+
 export function instantiatePlugin(pluginId: string): VisualDiagramPlugin | null {
   for (const entry of PLUGIN_REGISTRY) {
     const instance = new entry.plugin();
     if (instance.pluginId === pluginId) return instance;
   }
   return null;
+}
+
+/** Returns registry metadata (without instantiating) for a given pluginId. */
+export function getRegistryEntry(pluginId: string): PluginRegistryEntry | undefined {
+  for (const entry of PLUGIN_REGISTRY) {
+    const instance = new entry.plugin();
+    if (instance.pluginId === pluginId) return entry;
+  }
+  return undefined;
 }

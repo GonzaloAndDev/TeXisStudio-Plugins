@@ -1,6 +1,9 @@
 export type {
   OutputFormat,
   QualityLevel,
+  UserLevel,
+  EditorType,
+  VisualEditorEngineId,
   PluginCategory,
   ValidationIssue,
   ValidationResult,

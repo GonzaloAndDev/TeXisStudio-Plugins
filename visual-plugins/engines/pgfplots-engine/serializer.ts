@@ -44,7 +44,24 @@ function compactOptions(parts: Array<string | undefined>): string {
     .join(", ");
 }
 
-function seriesCoords(s: DataSeries): string {
+/** Returns a safe color name for fill/draw — rejects empty strings, preserves compound
+ *  xcolor expressions like "blue!60" without appending another mix percentage. */
+function safeColor(raw: string | undefined): string {
+  return raw?.trim() || "blue";
+}
+
+/** Serializes one data point as a PGFPlots coordinate pair.
+ *  xbar expects (value, position) — i.e. (y, x) — so horizontal bars transpose. */
+function serializePoint(d: { x: number; y: number }, direction: "xbar" | "ybar"): string {
+  return direction === "xbar" ? `(${d.y}, ${d.x})` : `(${d.x}, ${d.y})`;
+}
+
+interface SeriesContext {
+  /** Whether the document uses horizontal bars (xbar) or vertical (ybar). */
+  barDirection: "ybar" | "xbar";
+}
+
+function seriesCoords(s: DataSeries, ctx: SeriesContext = { barDirection: "ybar" }): string {
   const lines: string[] = [];
 
   // ── Heatmap ──────────────────────────────────────────────────────────────
@@ -74,7 +91,7 @@ function seriesCoords(s: DataSeries): string {
     if (!s.data || s.data.length === 0) {
       lines.push("  % boxplot: no data provided");
     } else {
-      const color = s.color ?? "blue";
+      const color = safeColor(s.color);
       s.data.forEach(d => {
         const med = d.y;
         const iqr = d.error ?? 5;
@@ -90,7 +107,7 @@ function seriesCoords(s: DataSeries): string {
           `      median=${med.toFixed(2)},`,
           `      upper quartile=${q3.toFixed(2)},`,
           `      upper whisker=${whiskerHigh.toFixed(2)}`,
-          `    }, fill=${color}!20, draw=${color}`,
+          `    }, fill=${color}, fill opacity=0.2, draw=${color}`,
           `  ] coordinates {};`,
         );
       });
@@ -114,7 +131,36 @@ function seriesCoords(s: DataSeries): string {
     return lines.join("\n");
   }
 
-  // ── Function / scatter / bar / other ────────────────────────────────────
+  // ── Bar chart ────────────────────────────────────────────────────────────
+  if (s.plotType === "bar") {
+    if (!s.data || s.data.length === 0) {
+      lines.push("  % bar: no data provided");
+    } else {
+      const color = safeColor(s.color);
+      const direction = ctx.barDirection;
+      const coords = s.data.map(d => serializePoint(d, direction)).join(" ");
+      lines.push(`  \\addplot[${direction}, fill=${color}, fill opacity=0.4, draw=${color}] coordinates { ${coords} };`);
+      if (s.label) lines.push(`  \\addlegendentry{${escapeLabel(s.label)}}`);
+    }
+    return lines.join("\n");
+  }
+
+  // ── Histogram ────────────────────────────────────────────────────────────
+  if (s.plotType === "histogram") {
+    if (!s.data || s.data.length === 0) {
+      lines.push("  % histogram: no data provided");
+    } else {
+      const color = safeColor(s.color);
+      const direction = ctx.barDirection === "xbar" ? "xbar interval" : "ybar interval";
+      const baseDir = ctx.barDirection;
+      const coords = s.data.map(d => serializePoint(d, baseDir)).join(" ");
+      lines.push(`  \\addplot[${direction}, fill=${color}, fill opacity=0.4, draw=${color}] coordinates { ${coords} };`);
+      if (s.label) lines.push(`  \\addlegendentry{${escapeLabel(s.label)}}`);
+    }
+    return lines.join("\n");
+  }
+
+  // ── Function / scatter / other ───────────────────────────────────────────
   if (s.expression) {
     const domain = s.domain ? `domain=${s.domain[0]}:${s.domain[1]}` : undefined;
     const opts = seriesOptions(s);
@@ -149,10 +195,16 @@ function seriesCoords(s: DataSeries): string {
 }
 
 export function serializePGFPlots(doc: PGFPlotsDocument): string {
-  const hasHeatmap = doc.series.some(s => s.plotType === "heatmap");
-  const hasBoxplot = doc.series.some(s => s.plotType === "boxplot");
+  const hasHeatmap   = doc.series.some(s => s.plotType === "heatmap");
+  const hasBoxplot   = doc.series.some(s => s.plotType === "boxplot");
+  const hasBar       = doc.series.some(s => s.plotType === "bar");
+  const hasHistogram = doc.series.some(s => s.plotType === "histogram");
 
-  // For heatmap: use a special axis type; for boxplot: use boxplot axis
+  // Detect legacy horizontal-bar documents via pgfplotsOptions so bar/histogram
+  // series emit xbar/xbar interval instead of ybar/ybar interval.
+  const horizontalBars = /(?:^|,)\s*xbar(?:\s|,|$)/.test(doc.pgfplotsOptions ?? "");
+  const barCtx: SeriesContext = { barDirection: horizontalBars ? "xbar" : "ybar" };
+
   let env = axisEnv(doc.xScale, doc.yScale);
   const axisOpts: string[] = [];
 
@@ -165,7 +217,6 @@ export function serializePGFPlots(doc: PGFPlotsDocument): string {
   if (doc.showLegend) axisOpts.push("legend pos=north west");
 
   if (hasHeatmap) {
-    // Heatmap: colorbar, inline red-white-blue colormap (no library needed)
     axisOpts.push("colorbar");
     axisOpts.push("colormap={bwr}{rgb255=(0,0,180); rgb255=(255,255,255); rgb255=(180,0,0)}");
     axisOpts.push("point meta min=-1, point meta max=1");
@@ -180,12 +231,15 @@ export function serializePGFPlots(doc: PGFPlotsDocument): string {
     axisOpts.push("xtick=\\empty");
   }
 
+  if (hasBar || hasHistogram) {
+    axisOpts.push("bar width=0.4cm");
+  }
+
   if (doc.pgfplotsOptions) axisOpts.push(doc.pgfplotsOptions);
 
   const axisOptsStr = axisOpts.length > 0 ? `[\n    ${axisOpts.join(",\n    ")}\n  ]` : "";
-  const plots = doc.series.map(seriesCoords).join("\n");
+  const plots = doc.series.map(s => seriesCoords(s, barCtx)).join("\n");
 
-  // Heatmap and boxplot need the boxplot library
   const extraSetup: string[] = [];
   if (hasBoxplot) extraSetup.push("\\usepgfplotslibrary{statistics}");
 

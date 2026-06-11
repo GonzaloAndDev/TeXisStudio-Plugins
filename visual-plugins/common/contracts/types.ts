@@ -2,6 +2,32 @@ export type OutputFormat = "latex" | "pdf" | "svg" | "png";
 
 export type QualityLevel = "official-core" | "official-extended" | "experimental";
 
+/** User-facing difficulty label shown in the figure picker. */
+export type UserLevel = "easy" | "intermediate" | "advanced";
+
+/**
+ * How much LaTeX knowledge the user needs to work with this plugin:
+ * - fully-visual   → no LaTeX at all; GUI controls everything
+ * - visual-assisted → forms/tables; some optional technical fields
+ * - advanced        → requires understanding of LaTeX syntax
+ * - external-bridge → directs the user to external specialised software
+ */
+export type EditorType =
+  | "fully-visual"
+  | "visual-assisted"
+  | "advanced"
+  | "external-bridge";
+
+/** Engine IDs that have a registered visual editor in the app. */
+export type VisualEditorEngineId =
+  | "graph-node-engine"
+  | "pgfplots-engine"
+  | "math-engine"
+  | "timeline-gantt-engine"
+  | "table-data-engine"
+  | "tree-forest-engine"
+  | "circuitikz-engine";
+
 export type PluginCategory =
   | "mathematics"
   | "physics"
