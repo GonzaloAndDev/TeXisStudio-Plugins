@@ -75,3 +75,87 @@ export interface EngineInput {
   source?: EditableSource;
   options?: Record<string, unknown>;
 }
+
+// ── Visual editor public contract ────────────────────────────────────────────
+
+/**
+ * Capabilities that a visual editor implementation can declare.
+ * Used by VisualEditorShell and VisualEditorRouter to enable/disable
+ * toolbar affordances without hard-coding per-engine conditionals.
+ */
+export interface EditorCapabilities {
+  /** Editor supports undo/redo via useDocumentHistory. Always true for editors wrapped in VisualEditorShell. */
+  historySupported: boolean;
+  /** Editor can restore a built-in minimal working example. */
+  restoreSupported: boolean;
+  /** Editor exposes a "Switch to LaTeX source" mode for power users. */
+  advancedCodeSupported: boolean;
+  /** Editor shows a real-time preview of the generated figure. */
+  previewSupported: boolean;
+}
+
+/**
+ * A named field that advanced users can inspect or override directly
+ * (e.g. pgfplotsOptions, tikzOptions). Shown in an "Advanced" collapsible.
+ */
+export interface TechnicalField {
+  key: string;
+  label: string;
+  description?: string;
+  type: "string" | "number" | "boolean" | "textarea";
+}
+
+/**
+ * Public metadata that each visual editor declares.
+ * Consumed by VisualEditorRouter to configure the surrounding shell,
+ * by FigureEditModal to decide which tabs to show, and by the help system
+ * to route the user to the right documentation section.
+ *
+ * Register metadata via registerEditorMetadata() in each engine's index.ts.
+ */
+export interface PluginEditingMetadata {
+  /** The engine ID this metadata applies to. Must match VisualEditorEngineId. */
+  engineId: string;
+
+  /** Which help center section to open when the user clicks "?" in this editor. */
+  helpTopic: "start" | "figures" | "latex" | "errors" | "faq";
+
+  /** Capabilities declared by this editor. */
+  capabilities: EditorCapabilities;
+
+  /**
+   * Technical fields shown in an "Advanced" collapsible in the editor shell.
+   * Empty array means no advanced panel is shown.
+   */
+  technicalFields: TechnicalField[];
+
+  /**
+   * Returns a minimal working example document for the "restore example" action.
+   * Must return a plain object compatible with the engine's document schema.
+   */
+  defaultDoc: () => unknown;
+
+  /**
+   * Optional human-readable description of what the editor covers.
+   * Shown as a subtitle in the visual editor tab.
+   */
+  description?: string;
+}
+
+/** Registry for editor metadata, keyed by engineId. */
+const _editorMetadataRegistry: Map<string, PluginEditingMetadata> = new Map();
+
+/** Register metadata for a visual editor engine. Call this from each engine's index.ts. */
+export function registerEditorMetadata(meta: PluginEditingMetadata): void {
+  _editorMetadataRegistry.set(meta.engineId, meta);
+}
+
+/** Look up metadata for a given engineId. Returns undefined if not registered. */
+export function getEditorMetadata(engineId: string): PluginEditingMetadata | undefined {
+  return _editorMetadataRegistry.get(engineId);
+}
+
+/** All registered editor metadata entries. */
+export function getAllEditorMetadata(): PluginEditingMetadata[] {
+  return Array.from(_editorMetadataRegistry.values());
+}

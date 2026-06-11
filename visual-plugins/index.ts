@@ -10,6 +10,14 @@ export type {
   UserLevel,
   EditorType,
   VisualEditorEngineId,
+  EditorCapabilities,
+  TechnicalField,
+  PluginEditingMetadata,
+} from "./common/contracts/index.js";
+export {
+  registerEditorMetadata,
+  getEditorMetadata,
+  getAllEditorMetadata,
 } from "./common/contracts/index.js";
 export { buildLatexInputBlock } from "./common/export/latex-block.js";
 export { setPluginLocale } from "./i18n/index.js";
