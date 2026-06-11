@@ -10,3 +10,4 @@ import "./graph-node-engine/metadata.js";
 import "./timeline-gantt-engine/metadata.js";
 import "./table-data-engine/metadata.js";
 import "./tree-forest-engine/metadata.js";
+import "./math-engine/metadata.js";
