@@ -11,3 +11,6 @@ import "./timeline-gantt-engine/metadata.js";
 import "./table-data-engine/metadata.js";
 import "./tree-forest-engine/metadata.js";
 import "./math-engine/metadata.js";
+import "./chemistry-engine/metadata.js";
+import "./circuitikz-engine/metadata.js";
+import "./tikz-shape-engine/metadata.js";
