@@ -1,4 +1,4 @@
-import type { TableDataDocument, DataColumn, DataRow } from "./types.js";
+import type { TableDataDocument, DataColumn } from "./types.js";
 
 function escapeLatex(str: string): string {
   return str
