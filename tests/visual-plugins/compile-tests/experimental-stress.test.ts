@@ -35,6 +35,10 @@ describe(`Experimental plugins stress test (${expEntries.length} plugins)`, () =
     it(`[create+validate] ${plugin.displayName}`, { timeout: 10_000 }, async () => {
       const r = await plugin.create();
       expect(r.latexBlock.trim().length, "latexBlock no vacío").toBeGreaterThan(10);
+      // texContent: cuerpo desnudo (no float, no auto-\input). Ver regresión en core-plugins-stress.
+      expect(r.texContent.trim().length, "texContent no vacío").toBeGreaterThan(10);
+      expect(r.texContent, "texContent debe ser el cuerpo, no un float figure").not.toContain("\\begin{figure}");
+      expect(r.texContent, "texContent no debe \\input-se a sí mismo").not.toContain("\\input{");
       expect(r.figureId).toMatch(/^fig_/);
       const val = await plugin.validate(r);
       const errs = val.issues.filter(i => i.severity === "error");
