@@ -160,6 +160,7 @@ export abstract class BasePlugin<TDoc extends EngineDocument> implements VisualD
       pluginId: this.pluginId,
       engineId: this.engineId,
       latexBlock,
+      texContent,
       requiredPackages,
       sourcePath: `${figurePath(figureId)}/source.json`,
       outputPaths: { tex: texPath },

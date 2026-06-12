@@ -67,6 +67,14 @@ describe(`Core plugins stress test (${coreEntries.length} plugins)`, () => {
       // latexBlock tiene contenido
       expect(result.latexBlock.trim().length, "latexBlock no debe estar vacío").toBeGreaterThan(10);
 
+      // texContent (cuerpo desnudo que va a output.tex) debe estar presente y
+      // NO ser un float `figure`: si lo fuera, el wrapper `\input`-aría un
+      // float dentro de otro float (recursión) y el snippet preview en
+      // standalone fallaría con "missing \item". Regresión histórica.
+      expect(result.texContent.trim().length, "texContent no debe estar vacío").toBeGreaterThan(10);
+      expect(result.texContent, "texContent debe ser el cuerpo, no un float figure").not.toContain("\\begin{figure}");
+      expect(result.texContent, "texContent no debe \\input-se a sí mismo").not.toContain("\\input{");
+
       // figureId generado
       expect(result.figureId, "figureId debe tener el prefijo fig_").toMatch(/^fig_/);
 

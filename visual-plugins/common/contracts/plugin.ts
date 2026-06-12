@@ -8,7 +8,13 @@ export interface VisualFigureResult {
   figureId: string;
   pluginId: string;
   engineId: string;
+  /** The full LaTeX block (figure float) to insert into the document.
+   *  For engine-based figures this is a wrapper that `\input`s output.tex. */
   latexBlock: string;
+  /** The bare figure body (e.g. the `tikzpicture`/`axis` content) that must
+   *  be written to output.tex. This is what `latexBlock` references via
+   *  `\input`, and what the standalone snippet preview compiles. */
+  texContent: string;
   requiredPackages: readonly string[];
   sourcePath: string;
   outputPaths: {

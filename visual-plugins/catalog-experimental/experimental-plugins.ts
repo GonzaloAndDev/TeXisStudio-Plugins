@@ -55,6 +55,14 @@ abstract class ImportBridgePlugin implements VisualDiagramPlugin {
     // Generates a compilable figure block with a gray fbox placeholder.
     // The user should use the "raw LaTeX override" to replace the fbox
     // with \includegraphics{} or the actual figure content.
+    // The bare body (no figure float) so it is previewable in `standalone`.
+    const texContent = [
+      `\\fbox{\\begin{minipage}{0.75\\textwidth}\\centering\\vspace{1.5cm}`,
+      `    \\textit{${hint}}\\\\[0.8em]`,
+      `    \\scriptsize{Replace this placeholder using the figure editor.}`,
+      `\\vspace{1.5cm}\\end{minipage}}`,
+    ].join("\n");
+
     const latexBlock = [
       `% texisstudio-figure-id: ${id}`,
       `\\begin{figure}[htbp]`,
@@ -72,6 +80,7 @@ abstract class ImportBridgePlugin implements VisualDiagramPlugin {
     return {
       figureId: id, pluginId: this.pluginId, engineId: this.engineId,
       latexBlock,
+      texContent,
       requiredPackages: this.requiredPackages,
       sourcePath: `texisstudio-assets/figures/${id}/source.json`,
       outputPaths: {},
