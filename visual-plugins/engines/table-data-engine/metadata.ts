@@ -28,5 +28,5 @@ registerEditorMetadata({
   },
   technicalFields: [],
   defaultDoc: () => DEFAULT_DOC,
-  description: "Data tables exportable to booktabs, longtable, or PGFPlots data",
+  descriptionKey: "visual_editor.engines.table_data.description",
 });

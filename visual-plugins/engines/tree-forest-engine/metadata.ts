@@ -30,11 +30,11 @@ registerEditorMetadata({
   technicalFields: [
     {
       key: "forestOptions",
-      label: "Forest options",
-      description: "Extra options passed to the forest environment (e.g. forked edges, edge label style)",
+      labelKey: "visual_editor.fields.forest_options.label",
+      descriptionKey: "visual_editor.fields.forest_options.description",
       type: "textarea",
     },
   ],
   defaultDoc: () => DEFAULT_DOC,
-  description: "Hierarchical trees: syntax, taxonomic, phylogenetic, decision, and probability trees",
+  descriptionKey: "visual_editor.engines.tree_forest.description",
 });

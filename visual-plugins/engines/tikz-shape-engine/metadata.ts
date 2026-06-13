@@ -13,8 +13,8 @@ registerEditorMetadata({
   technicalFields: [
     {
       key: "tikzLibraries",
-      label: "TikZ libraries",
-      description: "Comma-separated list of extra TikZ libraries (e.g. arrows.meta, patterns).",
+      labelKey: "visual_editor.fields.tikz_libraries.label",
+      descriptionKey: "visual_editor.fields.tikz_libraries.description",
       type: "string",
     },
   ],

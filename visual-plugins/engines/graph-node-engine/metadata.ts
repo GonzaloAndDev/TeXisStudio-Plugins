@@ -30,11 +30,11 @@ registerEditorMetadata({
   technicalFields: [
     {
       key: "tikzLibraries",
-      label: "TikZ libraries",
-      description: "Comma-separated list of extra TikZ libraries to load (e.g. calc, shapes.geometric)",
+      labelKey: "visual_editor.fields.tikz_libraries.label",
+      descriptionKey: "visual_editor.fields.tikz_libraries.description",
       type: "string",
     },
   ],
   defaultDoc: () => DEFAULT_DOC,
-  description: "Directed and undirected graphs: nodes, edges, shapes, and arc styles",
+  descriptionKey: "visual_editor.engines.graph_node.description",
 });

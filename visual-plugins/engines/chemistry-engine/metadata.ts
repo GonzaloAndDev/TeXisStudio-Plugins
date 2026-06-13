@@ -13,8 +13,8 @@ registerEditorMetadata({
   technicalFields: [
     {
       key: "preferredOutput",
-      label: "Output mode",
-      description: "mhchem: \\ce{...} inline. chemfig: bond-angle structures.",
+      labelKey: "visual_editor.fields.chemistry_output.label",
+      descriptionKey: "visual_editor.fields.chemistry_output.description",
       type: "string",
     },
   ],

@@ -25,5 +25,5 @@ registerEditorMetadata({
   },
   technicalFields: [],
   defaultDoc: () => DEFAULT_DOC,
-  description: "Gantt charts and timelines with groups, tasks, and dependencies",
+  descriptionKey: "visual_editor.engines.timeline_gantt.description",
 });

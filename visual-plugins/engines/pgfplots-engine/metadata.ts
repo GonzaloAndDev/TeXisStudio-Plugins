@@ -32,11 +32,11 @@ registerEditorMetadata({
   technicalFields: [
     {
       key: "pgfplotsOptions",
-      label: "pgfplotsOptions",
-      description: "Extra options injected into \\begin{axis}[…]. For example: xbar, compat=1.18",
+      labelKey: "visual_editor.fields.pgfplots_options.label",
+      descriptionKey: "visual_editor.fields.pgfplots_options.description",
       type: "textarea",
     },
   ],
   defaultDoc: () => DEFAULT_DOC,
-  description: "Plots, histograms, bar charts, scatter plots, and heat maps via PGFPlots",
+  descriptionKey: "visual_editor.engines.pgfplots.description",
 });

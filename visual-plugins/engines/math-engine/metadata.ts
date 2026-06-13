@@ -13,8 +13,8 @@ registerEditorMetadata({
   technicalFields: [
     {
       key: "label",
-      label: "\\label{...}",
-      description: "Etiqueta para referencias cruzadas (p. ej. eq:cuadratica). Vacío = sin etiqueta.",
+      labelKey: "visual_editor.fields.math_label.label",
+      descriptionKey: "visual_editor.fields.math_label.description",
       type: "string",
     },
   ],

@@ -13,8 +13,8 @@ registerEditorMetadata({
   technicalFields: [
     {
       key: "americanStyle",
-      label: "American style",
-      description: "true = American component symbols (IEEE); false = European (IEC).",
+      labelKey: "visual_editor.fields.circuit_style.label",
+      descriptionKey: "visual_editor.fields.circuit_style.description",
       type: "boolean",
     },
   ],

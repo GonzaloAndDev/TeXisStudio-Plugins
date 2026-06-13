@@ -101,8 +101,8 @@ export interface EditorCapabilities {
  */
 export interface TechnicalField {
   key: string;
-  label: string;
-  description?: string;
+  labelKey: string;
+  descriptionKey?: string;
   type: "string" | "number" | "boolean" | "textarea";
 }
 
@@ -140,7 +140,7 @@ export interface PluginEditingMetadata {
    * Optional human-readable description of what the editor covers.
    * Shown as a subtitle in the visual editor tab.
    */
-  description?: string;
+  descriptionKey?: string;
 }
 
 /** Registry for editor metadata, keyed by engineId. */

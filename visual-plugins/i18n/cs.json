@@ -70,7 +70,7 @@
       "defaultCaption": "Třívrstvá architektura webových aplikací."
     },
     "venn-set-diagrams": {
-      "displayName": "Venn / Set Diagrams",
+      "displayName": "Venn / Set diagramy",
       "description": "Vytvářejte Vennovy diagramy a diagramy teorie množin s označenými kružnicemi a průniky.",
       "defaultCaption": "Třísouborový Vennův diagram znázorňující návrh výzkumu se smíšenými metodami."
     },
@@ -131,7 +131,7 @@
       "defaultCaption": "Sčítání vektorů — zákon rovnoběžníku: $\\vec{R} = \\vec{A} + \\vec{B}$."
     },
     "free-body-diagrams": {
-      "displayName": "Free Body Diagrams",
+      "displayName": "Volné tělesné diagramy",
       "description": "Vytvářejte volné diagramy těles se silami, bloky hmotnosti a označenými šipkami.",
       "defaultCaption": "Schéma volného těla – blok na povrchu s aplikovanou silou pod úhlem $\\alpha$."
     },
@@ -333,7 +333,7 @@
       "defaultCaption": "BMI vs systolický krevní tlak: $\\hat{y} = 89.4 + 1.83x$, $R^2{=}0.74$, $p{<}0.001$ ($n{=}120$)."
     },
     "bayesian-networks": {
-      "displayName": "Bayesian Networks",
+      "displayName": "Bayesovské sítě",
       "description": "Směrované acyklické grafy pro Bayesovské sítě: uzly latentní příčiny (elipsy) s pozorovanými důkazními uzly (obdélníky).",
       "scopeWarning": "Vhodné pro názorné bayesovské sítě v diplomových pracích. Pro odvození, učení parametrů nebo husté grafy použijte pgmpy, BayesFusion, GeNIe nebo BUGS a importujte finální PDF/SVG.",
       "defaultCaption": "Bayesovská síť pro diferenciální diagnostiku respiračních onemocnění."
