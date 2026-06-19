@@ -68,22 +68,39 @@ function seriesCoords(s: DataSeries, ctx: SeriesContext = { barDirection: "ybar"
   // `matrix plot*` tesela una grilla regular: cada (x,y) se vuelve una celda
   // coloreada por su `meta`, alineada correctamente sea cual sea la escala de
   // ejes (a diferencia de marcadores cuadrados de tamaño fijo en pt, que dejan
-  // huecos/solapes). Requiere `mesh/cols` = nº de columnas de la grilla.
+  // huecos/solapes). Requiere `mesh/cols` = nº de columnas y una grilla
+  // RECTANGULAR COMPLETA (cols×rows puntos); si no, matrix plot no compila.
+  //
+  // Por estabilidad: si los datos no forman una grilla completa (p. ej. el
+  // usuario borró una celda en el editor), caemos a marcadores cuadrados —
+  // menos elegante, pero RENDERIZA en vez de romper la compilación.
   if (s.plotType === "heatmap") {
     if (!s.data || s.data.length === 0) {
       lines.push("  % heatmap: no data provided");
     } else {
       const cols = new Set(s.data.map(d => d.x)).size || 1;
+      const rows = new Set(s.data.map(d => d.y)).size || 1;
+      const isCompleteGrid = cols * rows === s.data.length;
       const coords = s.data.map(d => {
         const meta = d.meta ?? d.y;
         return `(${d.x}, ${d.y}) [${meta.toFixed(3)}]`;
       }).join(" ");
-      lines.push(
-        `  \\addplot[`,
-        `    matrix plot*, point meta=explicit, mesh/cols=${cols},`,
-        `    mesh/ordering=rowwise`,
-        `  ] coordinates { ${coords} };`,
-      );
+      if (isCompleteGrid) {
+        lines.push(
+          `  \\addplot[`,
+          `    matrix plot*, point meta=explicit, mesh/cols=${cols},`,
+          `    mesh/ordering=rowwise`,
+          `  ] coordinates { ${coords} };`,
+        );
+      } else {
+        // Grilla incompleta → marcadores cuadrados (tolerante a huecos).
+        lines.push(
+          `  \\addplot[`,
+          `    scatter, only marks, mark=square*, mark size=10pt,`,
+          `    point meta=explicit`,
+          `  ] coordinates { ${coords} };`,
+        );
+      }
       if (s.label) lines.push(`  \\addlegendentry{${escapeLabel(s.label)}}`);
     }
     return lines.join("\n");

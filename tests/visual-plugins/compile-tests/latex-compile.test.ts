@@ -217,6 +217,28 @@ describe("LaTeX compile — PGFPlotsEngine", () => {
     expect(result.ok, result.errors.join("\n")).toBe(true);
   });
 
+  it("heatmap falls back to markers (compiles) when the grid is incomplete", async () => {
+    // 3×3 menos una celda → grilla incompleta: matrix plot rompería, debe caer
+    // a marcadores y seguir compilando.
+    const data = [];
+    for (let y = 0; y < 3; y++) for (let x = 0; x < 3; x++) {
+      if (x === 2 && y === 2) continue; // hueco
+      data.push({ x, y, meta: 0.3 });
+    }
+    const doc: PGFPlotsDocument = {
+      engineId: "pgfplots-engine", version: "1.0.0",
+      series: [{ id: "corr", label: "", plotType: "heatmap", data }],
+      xLabel: "", yLabel: "", xScale: "linear", yScale: "linear",
+      showLegend: false, grid: false,
+    };
+    const { content } = await eng.export(doc, "latex");
+    expect(content).not.toContain("matrix plot*"); // grilla incompleta → no matrix plot
+    expect(content).toContain("mark=square*");
+    const result = compileLatexFragment(content as string, { packages: ["pgfplots", "tikz"] });
+    if (skip(result, "PGFPlots heatmap fallback")) return;
+    expect(result.ok, result.errors.join("\n")).toBe(true);
+  });
+
   it("compiles a boxplot from an explicit five-number summary", async () => {
     const doc: PGFPlotsDocument = {
       engineId: "pgfplots-engine", version: "1.0.0",
