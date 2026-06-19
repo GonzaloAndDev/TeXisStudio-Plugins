@@ -21,6 +21,7 @@ import { CircuiTikZEngine } from "../../../visual-plugins/engines/circuitikz-eng
 import { ChemistryEngine } from "../../../visual-plugins/engines/chemistry-engine/engine.js";
 import { TreeForestEngine } from "../../../visual-plugins/engines/tree-forest-engine/engine.js";
 import { TimelineGanttEngine } from "../../../visual-plugins/engines/timeline-gantt-engine/engine.js";
+import { NotationEngine } from "../../../visual-plugins/engines/notation-engine/engine.js";
 import type { MathEngineDocument } from "../../../visual-plugins/engines/math-engine/types.js";
 import type { TikzShapeDocument } from "../../../visual-plugins/engines/tikz-shape-engine/types.js";
 import type { PGFPlotsDocument } from "../../../visual-plugins/engines/pgfplots-engine/types.js";
@@ -266,6 +267,9 @@ describe("LaTeX compile — CircuiTikZEngine", () => {
       americanStyle: true,
     };
     const { content } = await eng.export(doc, "latex");
+    // Las conexiones (cables) deben aparecer en la salida — antes se ignoraban.
+    expect(content as string).toContain("(B) to[short] (C)");
+    expect(content as string).toContain("(C) to[short] (D)");
     const structural = validateLatexStructure(content as string);
     expect(structural.valid).toBe(true);
     const result = compileLatexFragment(content as string, { packages: ["circuitikz"] });
@@ -386,6 +390,39 @@ describe("LaTeX compile — TimelineGanttEngine", () => {
     expect(structural.valid).toBe(true);
     const result = compileLatexFragment(content as string, { packages: ["tikz"] });
     if (skip(result, "Timeline TikZ")) return;
+    expect(result.ok, result.errors.join("\n")).toBe(true);
+  });
+});
+
+// ── Notation Engine ──────────────────────────────────────────────────────────
+
+describe("LaTeX compile — NotationEngine", () => {
+  const eng = new NotationEngine();
+
+  it("compiles an algorithm (algorithm + algpseudocode)", async () => {
+    const doc = {
+      engineId: "notation-engine", version: "1.0.0",
+      type: "algorithm", title: "Búsqueda binaria", label: "alg:bsearch",
+      numbered: true,
+      content: [
+        "\\State $lo \\gets 0$",
+        "\\State $hi \\gets n - 1$",
+        "\\While{$lo \\leq hi$}",
+        "  \\State $mid \\gets \\lfloor (lo+hi)/2 \\rfloor$",
+        "\\EndWhile",
+        "\\State \\Return $-1$",
+      ].join("\n"),
+    } as const;
+    const { content, requiredPackages } = await eng.export(doc as never, "latex");
+    // El paquete declarado debe casar con la sintaxis del cuerpo (algorithmic),
+    // no con algorithm2e (que no define `algorithmic`).
+    expect(requiredPackages).toContain("algpseudocode");
+    expect(requiredPackages).not.toContain("algorithm2e");
+    expect(content as string).not.toContain("\\begin{algorithm}*");
+    const structural = validateLatexStructure(content as string);
+    expect(structural.valid).toBe(true);
+    const result = compileLatexFragment(content as string, { packages: requiredPackages });
+    if (skip(result, "Notation algorithm")) return;
     expect(result.ok, result.errors.join("\n")).toBe(true);
   });
 });

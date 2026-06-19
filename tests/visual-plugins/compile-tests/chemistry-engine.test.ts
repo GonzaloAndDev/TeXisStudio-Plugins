@@ -32,7 +32,7 @@ describe("serializeReaction", () => {
     expect(result).toContain("H2O");
   });
 
-  it("serializes equilibrium reaction", () => {
+  it("serializes equilibrium reaction — keeps <=> with conditions", () => {
     const result = serializeReaction({
       type: "reaction",
       reactants: [{ type: "formula", text: "N2" }, { type: "formula", text: "3H2" }],
@@ -40,8 +40,10 @@ describe("serializeReaction", () => {
       arrow: "<=>",
       conditionsAbove: "450 °C",
     });
-    // Degree symbol is wrapped in inline math so it compiles in mhchem's text-mode arrow label.
-    expect(result).toContain("->[450 $^{\\circ}$C]");
+    // mhchem soporta condiciones sobre cualquier flecha: el equilibrio debe
+    // seguir siendo <=>, no degradarse a -> (que sería químicamente erróneo).
+    expect(result).toContain("<=>[450 $^{\\circ}$C]");
+    expect(result).not.toContain("->[450");
   });
 
   it("normalizes LaTeX degree commands for mhchem labels", () => {

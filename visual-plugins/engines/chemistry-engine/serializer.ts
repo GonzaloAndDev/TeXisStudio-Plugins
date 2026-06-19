@@ -31,10 +31,15 @@ export function serializeReaction(r: ChemReaction): string {
   const above = sanitizeCondition(r.conditionsAbove ?? r.catalyst ?? "");
   const below  = sanitizeCondition(r.conditionsBelow ?? "");
 
+  // mhchem acepta condiciones sobre/bajo CUALQUIER flecha: `<arrow>[above][below]`.
+  // Antes se forzaba `->` cuando había condiciones, lo que convertía un
+  // equilibrio (`<=>`) en una reacción unidireccional — químicamente erróneo
+  // (p. ej. el proceso Haber). Respetamos siempre el tipo de flecha del doc.
+  const arrow = r.arrow || "->";
   if (above || below) {
-    return `\\ce{${reactants} ->[${above}][${below}] ${products}}`;
+    return `\\ce{${reactants} ${arrow}[${above}][${below}] ${products}}`;
   }
-  return `\\ce{${reactants} ${r.arrow} ${products}}`;
+  return `\\ce{${reactants} ${arrow} ${products}}`;
 }
 
 export function serializeElements(elements: ChemElement[]): string[] {

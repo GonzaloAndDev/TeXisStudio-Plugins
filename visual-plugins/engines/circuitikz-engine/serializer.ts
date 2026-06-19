@@ -1,4 +1,4 @@
-import type { CircuiTikZDocument, CircuitComponent, CircuitNode } from "./types.js";
+import type { CircuiTikZDocument, CircuitComponent, CircuitNode, CircuitConnection } from "./types.js";
 
 const COMPONENT_MAP: Record<string, string> = {
   resistor:        "R",
@@ -64,15 +64,23 @@ function nodeStr(n: CircuitNode): string {
   return `  \\node[coordinate] (${n.id}) at (${n.x}, ${n.y})${label} {};`;
 }
 
+/** Plain wire between two nodes. Antes los `connections` eran editables en la
+ *  UI pero NUNCA se serializaban → los cables desaparecían del PDF. */
+function connectionStr(c: CircuitConnection): string {
+  return `  \\draw (${c.from}) to[short] (${c.to});`;
+}
+
 export function serializeCircuit(doc: CircuiTikZDocument): string {
   const style = doc.americanStyle ? "[american]" : "[european]";
   const nodes = doc.nodes.map(nodeStr);
   const comps = doc.components.map(componentStr);
+  const wires = (doc.connections ?? []).map(connectionStr);
 
   return [
     `\\begin{circuitikz}${style}`,
     ...nodes,
     ...comps,
+    ...wires,
     `\\end{circuitikz}`,
   ].join("\n");
 }

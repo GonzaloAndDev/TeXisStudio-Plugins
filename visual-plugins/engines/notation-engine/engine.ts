@@ -9,8 +9,12 @@ const ENV_MAP: Record<string, [string, string[]]> = {
   definition:  ["definition",  ["amsthm"]],
   remark:      ["remark",      ["amsthm"]],
   proof:       ["proof",       ["amsthm"]],
-  algorithm:   ["algorithm",   ["algorithm2e"]],
-  pseudocode:  ["algorithm",   ["algorithm2e"]],
+  // El cuerpo se genera con \begin{algorithmic}[1] (sintaxis de algpseudocode/
+  // algorithmicx), NO con algorithm2e (paquete incompatible que NO define
+  // `algorithmic` → el documento no compilaba). El float `algorithm` lo aporta
+  // el paquete `algorithm`.
+  algorithm:   ["algorithm",   ["algorithm", "algpseudocode"]],
+  pseudocode:  ["algorithm",   ["algorithm", "algpseudocode"]],
   code:        ["lstlisting",  ["listings"]],
   glossary:    ["description", []],
   nomenclature:["nomenclature",["nomencl"]],
@@ -28,14 +32,17 @@ function generateLatex(doc: NotationDocument): string {
   }
 
   if (doc.type === "algorithm" || doc.type === "pseudocode") {
+    // `algorithm*` no es "sin numerar" (es el float a doble columna); usar el
+    // sufijo estrella aquí rompía el entorno. El float `algorithm` siempre va
+    // sin estrella; la numeración del algoritmo la gobierna \caption.
     return [
-      `\\begin{algorithm}${numbered}`,
+      `\\begin{algorithm}`,
       doc.title ? `\\caption{${doc.title}}` : "",
       label,
       `\\begin{algorithmic}[1]`,
       doc.content,
       `\\end{algorithmic}`,
-      `\\end{algorithm}${numbered}`,
+      `\\end{algorithm}`,
     ].filter(Boolean).join("\n");
   }
 
