@@ -511,6 +511,24 @@ describe("LaTeX compile — TableDataEngine", () => {
 describe("LaTeX compile — NotationEngine", () => {
   const eng = new NotationEngine();
 
+  it("compiles a code listing with caption, label and line numbers", async () => {
+    const doc = {
+      engineId: "notation-engine", version: "1.0.0",
+      type: "code", title: "Hola mundo", label: "lst:hello",
+      language: "Python", numbered: true,
+      content: "def main():\n    print('hi')",
+    } as const;
+    const { content, requiredPackages } = await eng.export(doc as never, "latex");
+    expect(content as string).toContain("caption={Hola mundo}");
+    expect(content as string).toContain("label={lst:hello}");
+    expect(content as string).toContain("numbers=left");
+    const structural = validateLatexStructure(content as string);
+    expect(structural.valid).toBe(true);
+    const result = compileLatexFragment(content as string, { packages: requiredPackages });
+    if (skip(result, "Notation code listing")) return;
+    expect(result.ok, result.errors.join("\n")).toBe(true);
+  });
+
   it("compiles an algorithm (algorithm + algpseudocode)", async () => {
     const doc = {
       engineId: "notation-engine", version: "1.0.0",

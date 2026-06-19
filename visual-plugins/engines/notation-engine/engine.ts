@@ -27,8 +27,16 @@ function generateLatex(doc: NotationDocument): string {
   const label = doc.label ? `\\label{${doc.label}}\n` : "";
 
   if (doc.type === "code") {
-    const lang = doc.language ? `[language=${doc.language}]` : "";
-    return `\\begin{lstlisting}${lang}\n${doc.content}\n\\end{lstlisting}`;
+    // Antes el modo código ignoraba title/label/numbered. listings soporta
+    // caption (título de flotante referenciable), label (para \ref) y
+    // numbers=left (numeración de líneas) como opciones del entorno.
+    const opts: string[] = [];
+    if (doc.language) opts.push(`language=${doc.language}`);
+    if (doc.title) opts.push(`caption={${doc.title}}`);
+    if (doc.label) opts.push(`label={${doc.label}}`);
+    if (doc.numbered) opts.push("numbers=left");
+    const optStr = opts.length > 0 ? `[${opts.join(", ")}]` : "";
+    return `\\begin{lstlisting}${optStr}\n${doc.content}\n\\end{lstlisting}`;
   }
 
   if (doc.type === "algorithm" || doc.type === "pseudocode") {
