@@ -10,11 +10,25 @@ export interface DataSeries {
   id: string;
   label: string;
   plotType: PlotType;
-  data?: Array<{ x: number; y: number; error?: number; meta?: number }>;
+  data?: DataPoint[];
   expression?: string;
   domain?: [number, number];
   color?: string;
   mark?: string;
+}
+
+/** Un punto de datos. Para boxplot, el resumen de cinco números
+ *  (q1/q3/whiskers) es opcional: si se da, se usa tal cual; si no, se deriva
+ *  de `y` (mediana) ± `error` para mantener compatibilidad hacia atrás. */
+export interface DataPoint {
+  x: number;
+  y: number;
+  error?: number;
+  meta?: number;
+  q1?: number;
+  q3?: number;
+  whiskerMin?: number;
+  whiskerMax?: number;
 }
 
 export interface PGFPlotsDocument {

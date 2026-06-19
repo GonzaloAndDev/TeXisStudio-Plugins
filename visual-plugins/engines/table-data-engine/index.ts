@@ -7,5 +7,5 @@ export const TABLE_DATA_ENGINE_META = {
   engineId: TABLE_DATA_ENGINE_ID,
   displayName: "Table / Data Engine",
   supportedOutputs: ["latex"] as const,
-  requiredPackages: ["booktabs", "longtable"] as const,
+  requiredPackages: ["booktabs", "longtable", "siunitx"] as const,
 } as const;

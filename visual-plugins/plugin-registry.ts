@@ -76,7 +76,7 @@ export const PLUGIN_REGISTRY: PluginRegistryEntry[] = [
   { plugin: ChemicalFormulasPlugin,        category: "chemistry",         qualityLevel: "official-core",     userLevel: "intermediate", editorType: "visual-assisted" },
   { plugin: ChemicalReactionsPlugin,       category: "chemistry",         qualityLevel: "official-core",     userLevel: "intermediate", editorType: "visual-assisted" },
   { plugin: ReactionEquilibriaPlugin,      category: "chemistry",         qualityLevel: "official-core",     userLevel: "intermediate", editorType: "visual-assisted" },
-  { plugin: ChemicalStructuresPlugin,      category: "chemistry",         qualityLevel: "official-core",     userLevel: "advanced",     editorType: "advanced"        },
+  { plugin: ChemicalStructuresPlugin,      category: "chemistry",         qualityLevel: "official-core",     userLevel: "intermediate", editorType: "visual-assisted" },
   { plugin: LabSetupPlugin,                category: "chemistry",         qualityLevel: "official-core",     userLevel: "intermediate", editorType: "advanced"        },
   //   Biology / Medicine
   { plugin: PhylogeneticTreesPlugin,       category: "biology-medicine",  qualityLevel: "official-core",     userLevel: "easy",         editorType: "fully-visual"    },

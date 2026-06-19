@@ -19,9 +19,20 @@ export interface ChemReaction {
   catalyst?: string;
 }
 
+/** Plantillas de estructura con chemfig verificado (todas compiladas en test).
+ *  Cubren anillos, aromáticos sustituidos y moléculas comunes de tesis. */
+export type ChemStructureTemplate =
+  | "benzene" | "cyclohexane" | "cyclopentane" | "naphthalene"
+  | "phenol" | "toluene" | "aniline" | "benzoic-acid"
+  | "methane" | "ethanol" | "acetic-acid" | "glucose-chain";
+
 export interface ChemStructure {
   type: "structure";
+  /** Plantilla chemfig integrada. Si se da (y no hay chemfigSource), el motor
+   *  emite el chemfig verificado correspondiente. */
+  template?: ChemStructureTemplate;
   smiles?: string;
+  /** chemfig crudo. Escape hatch para usuarios avanzados; tiene prioridad. */
   chemfigSource?: string;
   description?: string;
 }

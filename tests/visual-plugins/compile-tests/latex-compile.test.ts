@@ -22,6 +22,10 @@ import { ChemistryEngine } from "../../../visual-plugins/engines/chemistry-engin
 import { TreeForestEngine } from "../../../visual-plugins/engines/tree-forest-engine/engine.js";
 import { TimelineGanttEngine } from "../../../visual-plugins/engines/timeline-gantt-engine/engine.js";
 import { NotationEngine } from "../../../visual-plugins/engines/notation-engine/engine.js";
+import { serializeTableData } from "../../../visual-plugins/engines/table-data-engine/serializer.js";
+import { CHEMFIG_TEMPLATES, serializeStructure } from "../../../visual-plugins/engines/chemistry-engine/serializer.js";
+import type { ChemStructureTemplate } from "../../../visual-plugins/engines/chemistry-engine/types.js";
+import type { TableDataDocument } from "../../../visual-plugins/engines/table-data-engine/types.js";
 import type { MathEngineDocument } from "../../../visual-plugins/engines/math-engine/types.js";
 import type { TikzShapeDocument } from "../../../visual-plugins/engines/tikz-shape-engine/types.js";
 import type { PGFPlotsDocument } from "../../../visual-plugins/engines/pgfplots-engine/types.js";
@@ -189,6 +193,50 @@ describe("LaTeX compile — PGFPlotsEngine", () => {
     expect(content).toContain("\\addplot3[surf, samples=20, domain=-3:3, domain y=-3:3]");
     expect(content).not.toContain(", ,");
   });
+
+  it("compiles a correlation heatmap as a real matrix plot", async () => {
+    // Grilla 3×3 (matriz de correlación). meta ∈ [-1,1].
+    const data = [];
+    for (let y = 0; y < 3; y++) for (let x = 0; x < 3; x++) {
+      data.push({ x, y, meta: x === y ? 1 : (x + y) % 2 === 0 ? 0.5 : -0.4 });
+    }
+    const doc: PGFPlotsDocument = {
+      engineId: "pgfplots-engine", version: "1.0.0",
+      series: [{ id: "corr", label: "", plotType: "heatmap", data }],
+      xLabel: "", yLabel: "", xScale: "linear", yScale: "linear",
+      showLegend: false, grid: false,
+    };
+    const { content } = await eng.export(doc, "latex");
+    expect(content).toContain("matrix plot*");
+    expect(content).toContain("mesh/cols=3");
+    expect(content).not.toContain("mark size=20pt"); // ya no usa marcadores fijos
+    const structural = validateLatexStructure(content as string);
+    expect(structural.valid).toBe(true);
+    const result = compileLatexFragment(content as string, { packages: ["pgfplots", "tikz"] });
+    if (skip(result, "PGFPlots heatmap matrix")) return;
+    expect(result.ok, result.errors.join("\n")).toBe(true);
+  });
+
+  it("compiles a boxplot from an explicit five-number summary", async () => {
+    const doc: PGFPlotsDocument = {
+      engineId: "pgfplots-engine", version: "1.0.0",
+      series: [{ id: "bx", label: "Grupo A", plotType: "boxplot", color: "blue",
+        data: [{ x: 1, y: 50, q1: 40, q3: 65, whiskerMin: 20, whiskerMax: 90 }] }],
+      xLabel: "", yLabel: "valor", xScale: "linear", yScale: "linear",
+      showLegend: false, grid: "major",
+    };
+    const { content } = await eng.export(doc, "latex");
+    // Debe usar los cuartiles EXPLÍCITOS, no derivarlos de y±error.
+    expect(content).toContain("lower quartile=40.00");
+    expect(content).toContain("upper quartile=65.00");
+    expect(content).toContain("lower whisker=20.00");
+    expect(content).toContain("upper whisker=90.00");
+    const structural = validateLatexStructure(content as string);
+    expect(structural.valid).toBe(true);
+    const result = compileLatexFragment(content as string, { packages: ["pgfplots", "tikz"] });
+    if (skip(result, "PGFPlots boxplot explicit")) return;
+    expect(result.ok, result.errors.join("\n")).toBe(true);
+  });
 });
 
 // ── Graph-Node Engine ────────────────────────────────────────────────────────
@@ -322,6 +370,19 @@ describe("LaTeX compile — ChemistryEngine", () => {
     if (skip(result, "Chemistry equilibrium")) return;
     expect(result.ok, result.errors.join("\n")).toBe(true);
   });
+
+  // Cada plantilla chemfig integrada DEBE compilar — si una falla, no debe
+  // shippear. Esto garantiza que el catálogo de estructuras es estable.
+  const templates = Object.keys(CHEMFIG_TEMPLATES) as ChemStructureTemplate[];
+  it.each(templates)("compiles chemfig template: %s", (tpl) => {
+    const out = serializeStructure({ type: "structure", template: tpl });
+    expect(out.startsWith("\\chemfig{")).toBe(true);
+    const structural = validateLatexStructure(out);
+    expect(structural.valid).toBe(true);
+    const result = compileLatexFragment(out, { packages: ["chemfig"] });
+    if (skip(result, `chemfig ${tpl}`)) return;
+    expect(result.ok, result.errors.join("\n")).toBe(true);
+  });
 });
 
 // ── Tree/Forest Engine ───────────────────────────────────────────────────────
@@ -390,6 +451,35 @@ describe("LaTeX compile — TimelineGanttEngine", () => {
     expect(structural.valid).toBe(true);
     const result = compileLatexFragment(content as string, { packages: ["tikz"] });
     if (skip(result, "Timeline TikZ")) return;
+    expect(result.ok, result.errors.join("\n")).toBe(true);
+  });
+});
+
+// ── Table/Data Engine ────────────────────────────────────────────────────────
+
+describe("LaTeX compile — TableDataEngine", () => {
+  it("compiles a booktabs table with a siunitx S (decimal) column", () => {
+    const doc: TableDataDocument = {
+      engineId: "table-data-engine", version: "1.0.0",
+      exportTarget: "booktabs", booktabsStyle: true,
+      columns: [
+        { id: "name", header: "Muestra", type: "label" },
+        { id: "mass", header: "Masa", unit: "g", type: "number", align: "decimal" },
+        { id: "err",  header: "Error", type: "number", align: "right" },
+      ],
+      rows: [
+        { name: "A", mass: 1.5, err: 0.02 },
+        { name: "B", mass: 12.25, err: 0.1 },
+        { name: "C", mass: 100, err: "" }, // celda vacía en columna S → {}
+      ],
+    };
+    const content = serializeTableData(doc);
+    expect(content).toContain("\\begin{tabular}{lSr}"); // S = columna decimal
+    expect(content).toContain("{Masa (g)}"); // encabezado S entre llaves
+    const structural = validateLatexStructure(content);
+    expect(structural.valid).toBe(true);
+    const result = compileLatexFragment(content, { packages: ["booktabs", "siunitx"] });
+    if (skip(result, "TableData siunitx")) return;
     expect(result.ok, result.errors.join("\n")).toBe(true);
   });
 });

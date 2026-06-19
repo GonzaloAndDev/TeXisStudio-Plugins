@@ -1,4 +1,33 @@
-import type { ChemFormula, ChemReaction, ChemElement } from "./types.js";
+import type { ChemFormula, ChemReaction, ChemElement, ChemStructure, ChemStructureTemplate } from "./types.js";
+
+/** Biblioteca de estructuras chemfig verificadas (cada una compila — ver
+ *  el compile-test que las recorre todas). El cuerpo va dentro de \chemfig{…}.
+ *  Son las estructuras orgánicas y anillos más usados en tesis; para algo
+ *  fuera de catálogo, el usuario puede pasar chemfigSource crudo. */
+export const CHEMFIG_TEMPLATES: Record<ChemStructureTemplate, string> = {
+  benzene:       "*6(=-=-=-)",
+  cyclohexane:   "*6(------)",
+  cyclopentane:  "*5(-----)",
+  naphthalene:   "*6(-=-(*6(-=-=-))=-=)",
+  phenol:        "*6(=-=(-OH)-=-)",
+  toluene:       "*6(=-=(-CH_3)-=-)",
+  aniline:       "*6(=-=(-NH_2)-=-)",
+  "benzoic-acid":"*6(=-=(-C(=[2]O)-OH)-=-)",
+  methane:       "CH_4",
+  ethanol:       "CH_3-CH_2-OH",
+  "acetic-acid": "CH_3-C(=[2]O)-OH",
+  "glucose-chain":"H-[2]C(-[6]OH)(-[7]H)-C(-[6]OH)(-[7]H)-C(-[6]OH)(-[7]H)-C(-[6]OH)(-[7]H)-C(-[6]OH)(-[7]H)-CHO",
+};
+
+/** Serializa una estructura: chemfigSource crudo (prioridad) → plantilla
+ *  integrada → comentario de fallback si no hay nada utilizable. */
+export function serializeStructure(s: ChemStructure): string {
+  if (s.chemfigSource && s.chemfigSource.trim()) return s.chemfigSource;
+  if (s.template && CHEMFIG_TEMPLATES[s.template]) {
+    return `\\chemfig{${CHEMFIG_TEMPLATES[s.template]}}`;
+  }
+  return `% structure: ${s.description ?? "define a template or chemfigSource"}`;
+}
 
 /** Strip characters that have special meaning inside \ce{}: % starts a comment
  *  and & is a bond-table alignment tab in mhchem v4. Neither belongs in a
@@ -50,8 +79,7 @@ export function serializeElements(elements: ChemElement[]): string[] {
       case "reaction":
         return serializeReaction(el);
       case "structure":
-        if (el.chemfigSource) return el.chemfigSource;
-        return `% structure: ${el.description ?? "see source.json"}`;
+        return serializeStructure(el);
     }
   });
 }

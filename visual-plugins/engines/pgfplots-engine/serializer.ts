@@ -65,20 +65,23 @@ function seriesCoords(s: DataSeries, ctx: SeriesContext = { barDirection: "ybar"
   const lines: string[] = [];
 
   // ── Heatmap ──────────────────────────────────────────────────────────────
-  // Uses scatter+only marks+square mark with explicit point meta for color.
-  // Each data point: (x,y) [meta_value] — meta drives the colormap.
+  // `matrix plot*` tesela una grilla regular: cada (x,y) se vuelve una celda
+  // coloreada por su `meta`, alineada correctamente sea cual sea la escala de
+  // ejes (a diferencia de marcadores cuadrados de tamaño fijo en pt, que dejan
+  // huecos/solapes). Requiere `mesh/cols` = nº de columnas de la grilla.
   if (s.plotType === "heatmap") {
     if (!s.data || s.data.length === 0) {
       lines.push("  % heatmap: no data provided");
     } else {
+      const cols = new Set(s.data.map(d => d.x)).size || 1;
       const coords = s.data.map(d => {
         const meta = d.meta ?? d.y;
         return `(${d.x}, ${d.y}) [${meta.toFixed(3)}]`;
       }).join(" ");
       lines.push(
         `  \\addplot[`,
-        `    scatter, only marks, mark=square*, mark size=20pt,`,
-        `    point meta=explicit`,
+        `    matrix plot*, point meta=explicit, mesh/cols=${cols},`,
+        `    mesh/ordering=rowwise`,
         `  ] coordinates { ${coords} };`,
       );
       if (s.label) lines.push(`  \\addlegendentry{${escapeLabel(s.label)}}`);
@@ -87,6 +90,10 @@ function seriesCoords(s: DataSeries, ctx: SeriesContext = { barDirection: "ybar"
   }
 
   // ── Boxplot ─────────────────────────────────────────────────────────────
+  // Usa el resumen de cinco números explícito (q1/median/q3/whiskers) cuando
+  // está disponible; si no, lo deriva de y (mediana) ± error como aproximación
+  // compatible. Los bigotes por defecto se calculan con el IQR REAL (q3−q1),
+  // no con `error` (antes producía bigotes incorrectos al dar q1/q3 explícitos).
   if (s.plotType === "boxplot") {
     if (!s.data || s.data.length === 0) {
       lines.push("  % boxplot: no data provided");
@@ -94,11 +101,12 @@ function seriesCoords(s: DataSeries, ctx: SeriesContext = { barDirection: "ybar"
       const color = safeColor(s.color);
       s.data.forEach(d => {
         const med = d.y;
-        const iqr = d.error ?? 5;
-        const q1 = med - iqr;
-        const q3 = med + iqr;
-        const whiskerLow  = q1 - 1.5 * iqr;
-        const whiskerHigh = q3 + 1.5 * iqr;
+        const spread = d.error ?? 5;
+        const q1 = d.q1 ?? (med - spread);
+        const q3 = d.q3 ?? (med + spread);
+        const iqr = q3 - q1;
+        const whiskerLow  = d.whiskerMin ?? (q1 - 1.5 * iqr);
+        const whiskerHigh = d.whiskerMax ?? (q3 + 1.5 * iqr);
         lines.push(
           `  \\addplot+[`,
           `    boxplot prepared={`,
