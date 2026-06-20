@@ -121,7 +121,9 @@ export function serializeGraphNode(doc: GraphNodeDocument): string {
   const usesGeometric = doc.nodes.some(n => GEOMETRIC_SHAPES.includes(n.shape));
   const autoLibs: string[] = ["arrows.meta", "positioning"];
   if (usesGeometric) autoLibs.push("shapes.geometric");
-  const libs = [...new Set([...autoLibs, ...doc.tikzLibraries])];
+  // `tikzLibraries` es opcional en el doc: defensivo ante docs migrados o
+  // editados a mano que no lo traigan (sin esto, el spread lanzaba TypeError).
+  const libs = [...new Set([...autoLibs, ...(doc.tikzLibraries ?? [])])];
   const libStr = `\\usetikzlibrary{${libs.join(",")}}`;
 
   return [

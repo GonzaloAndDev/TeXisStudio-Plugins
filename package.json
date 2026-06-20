@@ -16,6 +16,7 @@
     "test:compile": "vitest run tests/visual-plugins/compile-tests",
     "test:manifest": "vitest run tests/visual-plugins/manifest-tests",
     "test:export": "vitest run tests/visual-plugins/export-tests",
+    "test:stress": "TEXIS_STRESS=1 vitest run tests/stress",
     "lint": "eslint visual-plugins tests",
     "typecheck": "tsc --noEmit"
   },
