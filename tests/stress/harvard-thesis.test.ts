@@ -13,7 +13,7 @@
  */
 import { describe, it, expect } from "vitest";
 import { spawnSync } from "node:child_process";
-import { mkdtempSync, writeFileSync, existsSync, statSync, readFileSync } from "node:fs";
+import { mkdtempSync, mkdirSync, writeFileSync, existsSync, statSync, readFileSync } from "node:fs";
 import { deflateSync } from "node:zlib";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -125,7 +125,11 @@ describe("STRESS — Harvard PhD thesis kitchen-sink", () => {
     const mAlign = math.generateLatex({ engineId: "math-engine", version: "1.0.0", mode: "align", numbered: true, tree: [{ type: "symbol", content: "\\nabla \\cdot \\mathbf{E} &= \\frac{\\rho}{\\varepsilon_0}" }, { type: "symbol", content: "\\nabla \\times \\mathbf{B} &= \\mu_0\\mathbf{J} + \\mu_0\\varepsilon_0 \\frac{\\partial \\mathbf{E}}{\\partial t}" }] });
     const mSys = math.generateLatex({ engineId: "math-engine", version: "1.0.0", mode: "system", numbered: true, tree: [], equations: ["2x_1+3x_2-x_3 &= 4", "x_1-x_2+2x_3 &= 1"], variables: ["x_1", "x_2", "x_3"] } as never);
 
-    const dir = mkdtempSync(join(tmpdir(), "texis-stress-"));
+    // Si se pasa TEXIS_STRESS_OUT, se escribe en esa carpeta PERSISTENTE (no se
+    // borra) para poder abrir el PDF resultante. Si no, un temp efímero.
+    const dir = process.env.TEXIS_STRESS_OUT
+      ? (mkdirSync(process.env.TEXIS_STRESS_OUT, { recursive: true }), process.env.TEXIS_STRESS_OUT)
+      : mkdtempSync(join(tmpdir(), "texis-stress-"));
     writeFileSync(join(dir, "plot.png"), makePng(96, 64, [40, 90, 160]));
 
     const figBlock = (f: { caption: string; label: string; tex: string }) =>
