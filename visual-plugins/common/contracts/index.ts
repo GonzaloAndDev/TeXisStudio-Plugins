@@ -25,3 +25,14 @@ export {
 export type { EngineDocument, VisualEngine } from "./engine.js";
 
 export type { VisualFigureResult, VisualDiagramPlugin } from "./plugin.js";
+
+export {
+  DOCUMENT_CONTRIBUTION_VERSION,
+  toDocumentContribution,
+  validateDocumentContribution,
+} from "./contribution.js";
+export type {
+  ContributionAsset,
+  ContributionTrust,
+  DocumentContribution,
+} from "./contribution.js";

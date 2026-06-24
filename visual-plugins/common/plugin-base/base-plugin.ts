@@ -9,6 +9,10 @@ import type {
   EngineDocument,
   OutputFormat,
 } from "../contracts/index.js";
+import {
+  toDocumentContribution,
+  validateDocumentContribution,
+} from "../contracts/contribution.js";
 import type { FigureManifest } from "../manifest/schema.js";
 import { figurePath } from "../manifest/schema.js";
 import { buildLatexInputBlock, buildInlineEquationBlock, buildDisplayMathBlock, buildRawBlock } from "../export/latex-block.js";
@@ -128,6 +132,11 @@ export abstract class BasePlugin<TDoc extends EngineDocument> implements VisualD
 
     const structural = validateLatexStructure(result.latexBlock);
     issues.push(...structural.issues);
+    const contribution = toDocumentContribution(
+      result,
+      this.qualityLevel === "experimental" ? "experimental" : "official",
+    );
+    issues.push(...validateDocumentContribution(contribution).issues);
 
     if (result.requiredPackages.length === 0) {
       issues.push({ code: "NO_PACKAGES", message: "Plugin declares no required LaTeX packages.", severity: "warning" });
