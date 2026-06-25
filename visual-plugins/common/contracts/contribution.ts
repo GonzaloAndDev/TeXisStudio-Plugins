@@ -36,7 +36,9 @@ const FORBIDDEN_COMMANDS: ReadonlyArray<[RegExp, string]> = [
 ];
 
 function isUnsafePath(path: string): boolean {
-  const normalized = path.trim().replaceAll("\\", "/");
+  // `split/join` en vez de `replaceAll` para compatibilidad con consumidores
+  // que compilan a ES2020 (la app de escritorio) sin bajar la seguridad.
+  const normalized = path.trim().split("\\").join("/");
   return (
     normalized.startsWith("/") ||
     normalized.startsWith("~/") ||
