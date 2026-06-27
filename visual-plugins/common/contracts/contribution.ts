@@ -35,16 +35,41 @@ const FORBIDDEN_COMMANDS: ReadonlyArray<[RegExp, string]> = [
   [/\\usepackage\b/i, "PREAMBLE_MUTATION"],
 ];
 
-function isUnsafePath(path: string): boolean {
+function normalizePath(path: string): string {
   // `split/join` en vez de `replaceAll` para compatibilidad con consumidores
   // que compilan a ES2020 (la app de escritorio) sin bajar la seguridad.
-  const normalized = path.trim().split("\\").join("/");
+  return path.trim().split("\\").join("/");
+}
+
+function isUnsafePath(path: string): boolean {
+  const normalized = normalizePath(path);
   return (
     normalized.startsWith("/") ||
     normalized.startsWith("~/") ||
     /^[a-z]:\//i.test(normalized) ||
     normalized.split("/").includes("..")
   );
+}
+
+// Raíz de la carpeta propiedad de cada contribución. Debe coincidir con
+// `figurePath()` en `../manifest/schema.ts` (texisstudio-assets/figures/<id>).
+// Se define aquí para que el contrato —la frontera serializable— sea
+// autocontenido y no dependa de la capa de manifiesto.
+const OWNED_ASSET_ROOT = "texisstudio-assets/figures";
+
+/** Prefijo exclusivo de los assets de una contribución: `…/figures/<id>/`. */
+function ownedPrefix(contributionId: string): string {
+  return `${OWNED_ASSET_ROOT}/${contributionId}/`;
+}
+
+/**
+ * Verdadero si `path` vive dentro de la carpeta propiedad de la contribución.
+ * Hace cumplir el contrato "owned artifacts": un plugin no puede declarar ni
+ * referenciar archivos del proyecto (p. ej. `content/sections/intro.tex`) ni de
+ * otra contribución, solo los suyos bajo `texisstudio-assets/figures/<id>/`.
+ */
+function isWithinOwnedFolder(path: string, contributionId: string): boolean {
+  return normalizePath(path).startsWith(ownedPrefix(contributionId));
 }
 
 function latexPaths(source: string): string[] {
@@ -87,12 +112,19 @@ export function validateDocumentContribution(
     }
   }
 
+  const owned = ownedPrefix(contribution.contributionId);
   const declaredPaths = new Set(contribution.assets.map((asset) => asset.path));
   for (const asset of contribution.assets) {
     if (isUnsafePath(asset.path)) {
       issues.push({
         code: "UNSAFE_ASSET_PATH",
         message: `Asset path must be project-relative: ${asset.path}`,
+        severity: "error",
+      });
+    } else if (!isWithinOwnedFolder(asset.path, contribution.contributionId)) {
+      issues.push({
+        code: "ASSET_OUTSIDE_OWNED_FOLDER",
+        message: `Asset must live under the contribution's own folder ${owned}: ${asset.path}`,
         severity: "error",
       });
     }
@@ -104,7 +136,16 @@ export function validateDocumentContribution(
         message: `LaTeX path must be project-relative: ${path}`,
         severity: "error",
       });
-    } else if (!declaredPaths.has(path)) {
+      continue;
+    }
+    if (!isWithinOwnedFolder(path, contribution.contributionId)) {
+      issues.push({
+        code: "LATEX_OUTSIDE_OWNED_FOLDER",
+        message: `LaTeX may only reference the contribution's own folder ${owned}: ${path}`,
+        severity: "error",
+      });
+    }
+    if (!declaredPaths.has(path)) {
       issues.push({
         code: "UNDECLARED_ASSET",
         message: `LaTeX references an undeclared plugin asset: ${path}`,
